@@ -1,14 +1,81 @@
 {
   "MonoBehaviour": {
     "Version": 4,
+
+    // Burst and performance core
     "EnableBurstCompilation": true,
+    "EnableBurstCompileSynchronously": false,              // Allow async compilation to reduce editor stalls
     "EnableOptimisations": true,
-    "EnableSafetyChecks": false,
+    "EnableSafetyChecks": false,                           // Disable for player builds; enable in dev if needed
     "EnableDebugInAllBuilds": false,
+    "DisableBurstInEditor": false,                         // Keep Burst on in Editor for realistic perf
+    "DisableOptimisationsInEditor": false,
+
+    // Determinism and precision
+    "EnableFastMath": true,                                // Use fast-math where safe; review for sim-critical code
+    "EnableDeterministicCompilation": false,               // Turn on for lockstep sims/network determinism
+    "FloatMode": "Precise",                                // Precise | Fast; pair with EnableFastMath as needed
+
+    // Logging and diagnostics
+    "EnableBurstTimings": false,                           // Enable when investigating compile times
+    "EnableProfilerMarkers": true,                         // Lets Profiler attribute Burst jobs
+    "EnableCompilationLogging": false,
+
+    // Codegen targets (examples; Burst will auto-select supported ones)
+    "Targets": {
+      "X64": {
+        "SSE2": true,
+        "SSE4_2": true,
+        "AVX": true,
+        "AVX2": true,
+        "FMA": true
+      },
+      "ARM64": {
+        "NEON": true,
+        "DotProd": true
+      }
+    },
+
+    // CPU targeting hints (Unity will clamp to platform capabilities)
     "CpuMinTargetX32": 0,
     "CpuMaxTargetX32": 0,
     "CpuMinTargetX64": 0,
     "CpuMaxTargetX64": 0,
-    "OptimizeFor": 0
+
+    // Build-time optimization focus:
+    // 0 = Balanced, 1 = Size, 2 = Speed (align with your platform goals)
+    "OptimizeFor": 2,
+
+    // Job System / scheduling hints
+    "EnableJobDebuggerInEditor": false,                    // Turn on only when debugging jobs
+    "EnableLeakDetection": "Disabled",                     // Enabled | Disabled | EnabledWithStackTrace
+
+    // Code stripping and managed side interop
+    "EnableILPostProcessing": true,                        // Allow Burst + SourceGen/ILPost processors
+    "ForceLLVMFallback": false,                            // Fallback to LLVM JIT only if needed
+
+    // Safety/Assertions profiles (toggle per build pipeline)
+    "DevelopmentProfile": {
+      "EnableBurstCompilation": true,
+      "EnableOptimisations": true,
+      "EnableSafetyChecks": true,
+      "EnableDebugInAllBuilds": true,
+      "EnableProfilerMarkers": true
+    },
+    "ReleaseProfile": {
+      "EnableBurstCompilation": true,
+      "EnableOptimisations": true,
+      "EnableSafetyChecks": false,
+      "EnableDebugInAllBuilds": false,
+      "EnableProfilerMarkers": true
+    },
+
+    // Web/IL2CPP alignment for builds (pair with Player/Build options)
+    "Web": {
+      "EnableThreads": true,                               // Use WebAssembly threads when allowed
+      "EnableSIMD": true,                                  // Enable WASM SIMD
+      "CodeGenerate": "IL2CPP",                            // Use IL2CPP for web builds
+      "Compression": "Brotli"                              // Align with BuildOptions for web perf
+    }
   }
 }
