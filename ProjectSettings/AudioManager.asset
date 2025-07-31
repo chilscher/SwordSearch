@@ -4,16 +4,75 @@
 AudioManager:
   m_ObjectHideFlags: 0
   serializedVersion: 2
+
+  # Master volume (0..1). Keep at 1 and attenuate via AudioMixer for headroom.
   m_Volume: 1
+
+  # 3D attenuation rolloff scale. 1 = default physics-inspired falloff.
+  # Tune per-project with AudioSource custom curves; keep global sane.
   Rolloff Scale: 1
+
+  # Doppler simulation factor. 0 disables. 1 is physically plausible baseline.
+  # Unity docs recommend starting at 1 and tuning with Speed of Sound.
+  # See: docs.unity3d.com/Manual/class-AudioManager.html
   Doppler Factor: 1
+
+  # Default speaker mode:
+  # 2 = Stereo, 3 = Quad, 4 = Surround, 5 = 5.1, 6 = 7.1, per Unity.
+  # Stereo is safest default; surround setups will be detected by drivers.
   Default Speaker Mode: 2
-  m_SampleRate: 0
-  m_DSPBufferSize: 1024
-  m_VirtualVoiceCount: 512
-  m_RealVoiceCount: 32
-  m_SpatializerPlugin: 
-  m_AmbisonicDecoderPlugin: 
-  m_DisableAudio: 0
-  m_VirtualizeEffects: 1
+
+  # 0 = Platform default sample rate; set explicit rate for consistency across devices.
+  # 48000 is standard for games/VR; reduces SRC cost with most assets.
+  m_SampleRate: 48000
+
+  # DSP buffer size in frames. Smaller = lower latency, higher CPU.
+  # 256 is a good low-latency target on desktop/console; consider 512 on mobile.
+  m_DSPBufferSize: 256
+
+  # Unity will clamp requested buffer to valid sizes; keep this 0 to use m_DSPBufferSize.
   m_RequestedDSPBufferSize: 0
+
+  # Voice counts: virtual voices are mixed conceptually, real voices are hardware-mixed concurrently.
+  # Increase real voices for dense scenes; watch CPU/DSP usage.
+  m_VirtualVoiceCount: 1024
+  m_RealVoiceCount: 64
+
+  # Global audio disable. Keep 0 enabled; gate via code for special builds.
+  m_DisableAudio: 0
+
+  # Allow virtualization of effects for offscreen/low-priority sources.
+  m_VirtualizeEffects: 1
+
+  # Spatializer plugin (exact name as exposed by the plugin).
+  # For Oculus: "OculusSpatializer". For Google Resonance: "ResonanceAudio".
+  # Leave empty to use Unity built-in panner (non-HRTF).
+  m_SpatializerPlugin: OculusSpatializer
+
+  # Ambisonic decoder plugin.
+  # For Oculus: "OculusSpatializer" (enables OculusAmbi). Configure in Project Settings -> Audio.
+  # See Meta docs: developers.meta.com/.../audio-osp-unity-ambisonic/
+  m_AmbisonicDecoderPlugin: OculusSpatializer
+
+  # Advanced runtime tuning (keys may be editor-version dependent):
+  # Global doppler speed of sound in m/s (343 default). Requires engine support/version.
+  # If your Unity version exposes these via ProjectSettings, uncomment and set:
+  # Speed of Sound: 343
+  # DisableAudioDSP: 0
+
+  # Notes for content pipeline:
+  # - Use AudioMixer to control buses, ducking, and sends; adjust pitch/ducking per group.
+  #   See: docs.unity3d.com/Manual/AudioMixerOverview.html
+  # - For spatial audio detail, prefer 48 kHz assets, mono for 3D sources, stereo/ambi for ambiences.
+  # - For ambisonics (B-format), import clips as Ambisonic and ensure the chosen decoder is active.
+  #   See: developers.meta.com/horizon/documentation/unity/audio-osp-unity-ambisonic/
+  # - Keep Doppler Factor at 1 globally; adjust per-source Doppler Level and custom rolloff curves.
+  #   See: docs.unity3d.com/Manual/class-AudioManager.html
+
+  # Safe defaults for project upgrades:
+  # If CPU spikes, try:
+  #   m_RealVoiceCount: 48
+  #   m_DSPBufferSize: 512
+  # On high-end/VR rigs, you can push:
+  #   m_RealVoiceCount: 96
+  #   m_DSPBufferSize: 256 or 128 (test crackle/underruns)
