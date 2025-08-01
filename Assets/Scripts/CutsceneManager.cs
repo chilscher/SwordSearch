@@ -1335,7 +1335,10 @@ public class CutsceneManager : MonoBehaviour{
             PlayAnimation("Player", "Idle");
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("Okay, this glowy rock must be what we're here for!", DialogueStep.Emotion.Happy);
+            AdvanceConditionDialogue_PlayerTalking("Okay, this glowing thing must be what we're here for!", DialogueStep.Emotion.Happy);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("It looks like some kind of tool... Maybe a trowel?", DialogueStep.Emotion.Questioning);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("It looks like there's a book on the table...", DialogueStep.Emotion.Normal);
@@ -1380,7 +1383,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("Alright, Spellbook! Tell me what you want me to do, and then let's get out of here!", DialogueStep.Emotion.Worried);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("Ink forms into new words,\n\"TOUCH THE ROCK\".", "Magic Book", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("Ink forms into new words,\n\"TOUCH THE TROWEL\".", "Magic Book", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("Touch it, are you crazy?? It'd turn me into a skeleton or something!", DialogueStep.Emotion.Angry);
@@ -1428,6 +1431,9 @@ public class CutsceneManager : MonoBehaviour{
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("That cyclops could wake up any minute! Let's get out of here!", DialogueStep.Emotion.Worried);
         }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_NobodyTalking(true);
+        }  
         else if (++i == cutsceneStep) {
             FlipDirection("Player");
             PlayAnimationAndMoveThenIdle("Player", "Walk While Holding Book Flipped", -536, 1675, 5f);
