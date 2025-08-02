@@ -2875,6 +2875,11 @@ public class CutsceneManager : MonoBehaviour{
         }
     }
 
+    public void ClickedBackButtonl() {
+        StaticVariables.hasCompletedStage = false;
+        StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
+    }
+
 }
 
 

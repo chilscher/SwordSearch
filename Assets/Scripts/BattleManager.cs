@@ -881,7 +881,6 @@ public class AttackData {
         if (type == BattleManager.PowerupTypes.Fire)
             str *= StaticVariables.fireDamageMultiplier;
         strength = str;
-        strength = 135;
     }
 
     public void SetPowerupType() {

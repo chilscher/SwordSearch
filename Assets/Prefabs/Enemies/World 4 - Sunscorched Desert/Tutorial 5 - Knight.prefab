@@ -113,7 +113,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battleManager: {fileID: 0}
   data: {fileID: 0}
-  burnDamageQueue: 
 --- !u!114 &815226952419649514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,7 +165,7 @@ MonoBehaviour:
     talker: {fileID: 0}
     name: 
     emotion: 0
-    description: There's some pyramid-looking structure in the distance! That's probably
+    description: There's a pyramid-looking structure in the distance! That's probably
       a good place to start looking.
   - type: 1
     talker: {fileID: 0}
@@ -242,8 +241,8 @@ MonoBehaviour:
     talker: {fileID: 0}
     name: Artis
     emotion: 1
-    description: My Dear <playername>, wait! I cannot allow you to go into that town
-      when you are so clearly in distress!
+    description: My Dear <playername>, wait! I cannot allow you to go off on your
+      own, when you are so clearly in distress!
   - type: 0
     talker: {fileID: 0}
     name: 
