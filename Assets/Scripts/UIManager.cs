@@ -6,6 +6,7 @@ using DG.Tweening;
 using System.Dynamic;
 using TMPro;
 using MyBox;
+//using System.Numerics;
 
 public class UIManager : MonoBehaviour {
     private Transform enemyObject;
@@ -17,7 +18,7 @@ public class UIManager : MonoBehaviour {
     private bool movingBook = false;
     private List<GameObject> animatedObjectsInWindow = new List<GameObject>();
     private bool turningPage = false;
-    private List<Image> wordStrengthIconImages = new List<Image>();
+    //private List<Image> wordStrengthIconImages = new List<Image>();
     private Image enemyTimerBarImage;
     private Color defaultEnemyTimerBarColor;
     [HideInInspector] public BoulderGroup shownBoulders = null;
@@ -26,19 +27,17 @@ public class UIManager : MonoBehaviour {
     public TextMeshProUGUI wordDisplay;
     public Image countdownNumber;
     public GameObject countdownDivider;
-    public Image wordStrengthImageSingle;
-    public Image wordStrengthImageOnes;
-    public Image wordStrengthImageTens;
+    public Image strengthIcon1Digit;
+    public Image strengthIcon2DigitOnes;
+    public Image strengthIcon2DigitTens;
+    public Image strengthIcon3DigitOnes;
+    public Image strengthIcon3DigitTens;
+    public Image strengthIcon3DigitHundreds;
     public GameObject wordStrengthDivider;
-    public List<GameObject> wordStrengthIconGameObjects;
+    //public List<GameObject> wordStrengthIconGameObjects;
+    public GameObject wordStrengthIcon;
 
     public List<AnimatedPowerupBackground> animatedPowerupBackgrounds;
-    //public GameObject wordStrengthIconSingle;
-    //public GameObject wordStrengthIconDouble;
-    //public GameObject wordStrengthIconTriple;
-    //public GameObject wordStrengthIconQuadruple;
-    //public GameObject wordStrengthIconQuintuple;
-    //public GameObject wordStrengthIconSextuple;
 
 
     [Header("Colors")]
@@ -52,23 +51,35 @@ public class UIManager : MonoBehaviour {
     [Header("Player and Enemy")]
     public Animator playerAnimator;
     public Transform playerObject;
+    public GameObject playerHealTripleDigitPrefab;
     public GameObject playerHealDoubleDigitPrefab;
     public GameObject playerHealSingleDigitPrefab;
+    public GameObject playerDamageTripleDigitPrefab;
     public GameObject playerDamageDoubleDigitPrefab;
     public GameObject playerDamageSingleDigitPrefab;
     public Transform enemyParentParent;
+    public GameObject enemyHealTripleDigitPrefab;
     public GameObject enemyHealDoubleDigitPrefab;
     public GameObject enemyHealSingleDigitPrefab;
+    public GameObject enemyDamageTripleDigitPrefab;
     public GameObject enemyDamageDoubleDigitPrefab;
     public GameObject enemyDamageSingleDigitPrefab;
 
     [Header("Health Display")]
+    public Image playerHP4DigitThousands;
+    public Image playerHP4DigitHundreds;
+    public Image playerHP4DigitTens;
+    public Image playerHP4DigitOnes;
     public Image playerHP3DigitHundreds;
     public Image playerHP3DigitTens;
     public Image playerHP3DigitOnes;
     public Image playerHP2DigitTens;
     public Image playerHP2DigitOnes;
     public Image playerHP1DigitOnes;
+    public Image enemyHP4DigitThousands;
+    public Image enemyHP4DigitHundreds;
+    public Image enemyHP4DigitTens;
+    public Image enemyHP4DigitOnes;
     public Image enemyHP3DigitHundreds;
     public Image enemyHP3DigitTens;
     public Image enemyHP3DigitOnes;
@@ -81,16 +92,16 @@ public class UIManager : MonoBehaviour {
     public Transform enemyTimerBar;
     public Transform enemyStunBar;
     public Animator enemyStunBarAnimation;
-    public GameObject burnDisplay1;
-    public GameObject burnDisplay2;
-    public GameObject burnDisplay3;
-    public GameObject burnDisplay4;
-    public GameObject burnDisplay5;
-    public GameObject pebbleDisplay1;
-    public GameObject pebbleDisplay2;
-    public GameObject pebbleDisplay3;
-    public GameObject pebbleDisplay4;
-    public GameObject pebbleDisplay5;
+    //public GameObject burnDisplay1;
+    //public GameObject burnDisplay2;
+    //public GameObject burnDisplay3;
+    //public GameObject burnDisplay4;
+    //public GameObject burnDisplay5;
+    //public GameObject pebbleDisplay1;
+    //public GameObject pebbleDisplay2;
+    //public GameObject pebbleDisplay3;
+    //public GameObject pebbleDisplay4;
+    //public GameObject pebbleDisplay5;
     public RectTransform copycatBar;
 
     [Header("Misc")]
@@ -135,21 +146,65 @@ public class UIManager : MonoBehaviour {
         enemyTimerBarImage = enemyTimerBar.GetComponent<Image>();
         defaultEnemyTimerBarColor = enemyTimerBarImage.color;
 
-        SetupStrengthIcons();
+        //SetupStrengthIcons();
         SetOriginalPowerupBackgroundTransparencies();
         if (battleManager.enemyData.isCopycat)
             ShowCopycatBuildup();
     }
 
-    private void SetupStrengthIcons() {
-        foreach (GameObject go in wordStrengthIconGameObjects) {
-            foreach (Transform t in go.transform)
-                wordStrengthIconImages.Add(t.GetComponent<Image>());
-        }
-    }
+    //private void SetupStrengthIcons() {
+    //    foreach (GameObject go in wordStrengthIconGameObjects) {
+    //        foreach (Transform t in go.transform)
+    //            wordStrengthIconImages.Add(t.GetComponent<Image>());
+    //    }
+    //}
 
 
     public void DisplayHealths(int playerHealth, int enemyHealth) {
+        Vector4 playerHP = GetDigitsFromInt(playerHealth);
+        Vector4 enemyHP = GetDigitsFromInt(enemyHealth);
+
+        playerHP1DigitOnes.sprite = numberSprites[(int)playerHP[0]];
+        playerHP2DigitOnes.sprite = numberSprites[(int)playerHP[0]];
+        playerHP2DigitTens.sprite = numberSprites[(int)playerHP[1]];
+        playerHP3DigitOnes.sprite = numberSprites[(int)playerHP[0]];
+        playerHP3DigitTens.sprite = numberSprites[(int)playerHP[1]];
+        playerHP3DigitHundreds.sprite = numberSprites[(int)playerHP[2]];
+        playerHP4DigitOnes.sprite = numberSprites[(int)playerHP[0]];
+        playerHP4DigitTens.sprite = numberSprites[(int)playerHP[1]];
+        playerHP4DigitHundreds.sprite = numberSprites[(int)playerHP[2]];
+        playerHP4DigitThousands.sprite = numberSprites[(int)playerHP[3]];
+        playerHP1DigitOnes.transform.parent.gameObject.SetActive(playerHealth <= 9);
+        playerHP2DigitOnes.transform.parent.gameObject.SetActive((playerHealth >= 10) && (playerHealth <= 99));
+        playerHP3DigitOnes.transform.parent.gameObject.SetActive((playerHealth >= 100) && (playerHealth <= 999));
+        playerHP4DigitOnes.transform.parent.gameObject.SetActive(playerHealth >= 1000);
+
+        enemyHP1DigitOnes.sprite = numberSprites[(int)enemyHP[0]];
+        enemyHP2DigitOnes.sprite = numberSprites[(int)enemyHP[0]];
+        enemyHP2DigitTens.sprite = numberSprites[(int)enemyHP[1]];
+        enemyHP3DigitOnes.sprite = numberSprites[(int)enemyHP[0]];
+        enemyHP3DigitTens.sprite = numberSprites[(int)enemyHP[1]];
+        enemyHP3DigitHundreds.sprite = numberSprites[(int)enemyHP[2]];
+        enemyHP4DigitOnes.sprite = numberSprites[(int)enemyHP[0]];
+        enemyHP4DigitTens.sprite = numberSprites[(int)enemyHP[1]];
+        enemyHP4DigitHundreds.sprite = numberSprites[(int)enemyHP[2]];
+        enemyHP4DigitThousands.sprite = numberSprites[(int)enemyHP[3]];
+        enemyHP1DigitOnes.transform.parent.gameObject.SetActive(enemyHealth <= 9);
+        enemyHP2DigitOnes.transform.parent.gameObject.SetActive((enemyHealth >= 10) && (enemyHealth <= 99));
+        enemyHP3DigitOnes.transform.parent.gameObject.SetActive((enemyHealth >= 100) && (enemyHealth <= 999));
+        enemyHP4DigitOnes.transform.parent.gameObject.SetActive(enemyHealth >= 1000);
+        
+        /*
+        if (playerHealth >= 1000)
+        {
+            playerHP4DigitOnes.sprite = numberSprites[(int)playerHP[0]];
+            playerHP4DigitTens.sprite = numberSprites[(int)playerHP[1]];
+            playerHP4DigitHundreds.sprite = numberSprites[(int)playerHP[2]];
+            playerHP4DigitThousands.sprite = numberSprites[(int)playerHP[3]];
+            playerHP1DigitOnes.transform.parent.gameObject.SetActive(false);
+            playerHP2DigitOnes.transform.parent.gameObject.SetActive(false);
+            playerHP3DigitOnes.transform.parent.gameObject.SetActive(false);
+        }
         if (playerHealth < 10) {
             playerHP1DigitOnes.sprite = numberSprites[playerHealth];
             playerHP1DigitOnes.transform.parent.gameObject.SetActive(true);
@@ -197,6 +252,7 @@ public class UIManager : MonoBehaviour {
             enemyHP2DigitOnes.transform.parent.gameObject.SetActive(false);
             enemyHP3DigitOnes.transform.parent.gameObject.SetActive(true);
         }
+        */
     }
 
     public void ShowPlayerTakingDamage(int amount, bool stillAlive, bool showDamageAnimation = true, bool showZeroDamage = false) {
@@ -204,7 +260,7 @@ public class UIManager : MonoBehaviour {
             amount = 0;
         else if (amount < 1)
             return;
-        ShowNumbersAsChild(playerDamageSingleDigitPrefab, playerDamageDoubleDigitPrefab, playerObject, amount);
+        ShowNumbersAsChild(playerDamageSingleDigitPrefab, playerDamageDoubleDigitPrefab, playerDamageTripleDigitPrefab, playerObject, amount);
         if (!showDamageAnimation)
             return;
         if (stillAlive)
@@ -214,11 +270,11 @@ public class UIManager : MonoBehaviour {
     }
 
     public void ShowPlayerGettingHealed(int amount) {
-        ShowNumbersAsChild(playerHealSingleDigitPrefab, playerHealDoubleDigitPrefab, playerObject, amount);
+        ShowNumbersAsChild(playerHealSingleDigitPrefab, playerHealDoubleDigitPrefab, playerHealTripleDigitPrefab, playerObject, amount);
     }
 
     public void ShowEnemyTakingDamage(int amount, bool stillAlive) {
-        ShowNumbersAsChild(enemyDamageSingleDigitPrefab, enemyDamageDoubleDigitPrefab, enemyParentParent, amount);
+        ShowNumbersAsChild(enemyDamageSingleDigitPrefab, enemyDamageDoubleDigitPrefab, enemyDamageTripleDigitPrefab, enemyParentParent, amount);
         if (battleManager.enemyData.isHorde) {
             int i = 0;
             foreach (Animator anim in enemyHordeAnimators) {
@@ -246,20 +302,26 @@ public class UIManager : MonoBehaviour {
 
 
     public void ShowEnemyGettingHealed(int amount) {
-        ShowNumbersAsChild(enemyHealSingleDigitPrefab, enemyHealDoubleDigitPrefab, enemyParentParent, amount);
+        ShowNumbersAsChild(enemyHealSingleDigitPrefab, enemyHealDoubleDigitPrefab, enemyHealTripleDigitPrefab, enemyParentParent, amount);
 
     }
 
-    private void ShowNumbersAsChild(GameObject singleDigitPrefab, GameObject doubleDigitPrefab, Transform parent, int amount) {
-        if (amount < 10) {
-            GameObject obj = Instantiate(singleDigitPrefab, parent);
-            obj.transform.Find("Ones").GetComponent<Image>().sprite = numberSprites[amount];
+    private void ShowNumbersAsChild(GameObject singleDigitPrefab, GameObject doubleDigitPrefab, GameObject tripleDigitPrefab, Transform parent, int amount) { 
+        Vector4 digits = GetDigitsFromInt(amount);
+        if (amount >= 100) {
+            GameObject obj = Instantiate(tripleDigitPrefab, parent);
+            obj.transform.Find("Ones").GetComponent<Image>().sprite = numberSprites[(int)digits[0]];
+            obj.transform.Find("Tens").GetComponent<Image>().sprite = numberSprites[(int)digits[1]];
+            obj.transform.Find("Hundreds").GetComponent<Image>().sprite = numberSprites[(int)digits[2]];
         }
-        else {
-            Vector2 temp = GetTensAndOnes(amount);
+        else if (amount >= 10) {
             GameObject obj = Instantiate(doubleDigitPrefab, parent);
-            obj.transform.Find("Ones").GetComponent<Image>().sprite = numberSprites[(int)temp[1]];
-            obj.transform.Find("Tens").GetComponent<Image>().sprite = numberSprites[(int)temp[0]];
+            obj.transform.Find("Ones").GetComponent<Image>().sprite = numberSprites[(int)digits[0]];
+            obj.transform.Find("Tens").GetComponent<Image>().sprite = numberSprites[(int)digits[1]];
+        }
+        else{
+            GameObject obj = Instantiate(singleDigitPrefab, parent);
+            obj.transform.Find("Ones").GetComponent<Image>().sprite = numberSprites[(int)digits[0]];
         }
     }
 
@@ -318,49 +380,120 @@ public class UIManager : MonoBehaviour {
     }
 
     public void UpdateWordStrengthDisplay(int strength) {
-        if (strength < 10) {
-            wordStrengthImageSingle.sprite = numberSprites[strength];
-            wordStrengthImageSingle.gameObject.SetActive(true);
-            wordStrengthImageOnes.gameObject.SetActive(false);
-            wordStrengthImageTens.gameObject.SetActive(false);
+        Vector4 digits = GetDigitsFromInt(strength);
+        strengthIcon3DigitOnes.sprite = numberSprites[(int)digits[0]];
+        strengthIcon3DigitTens.sprite = numberSprites[(int)digits[1]];
+        strengthIcon3DigitHundreds.sprite = numberSprites[(int)digits[2]];
+        strengthIcon2DigitOnes.sprite = numberSprites[(int)digits[0]];
+        strengthIcon2DigitTens.sprite = numberSprites[(int)digits[1]];
+        strengthIcon1Digit.sprite = numberSprites[(int)digits[0]];
+        strengthIcon1Digit.transform.parent.gameObject.SetActive(strength <= 9);
+        strengthIcon2DigitOnes.transform.parent.gameObject.SetActive((strength >= 10) && (strength <= 99));
+        strengthIcon3DigitOnes.transform.parent.gameObject.SetActive(strength >= 100);
+        /*
+        if (strength >= 100)
+        {
+            Vector3 str = GetHundredsTensAndOnes(strength);
+            strengthIconTripleDigitOnes.sprite = numberSprites[(int)str[2]];
+            strengthIconTripleDigitTens.sprite = numberSprites[(int)str[1]];
+            strengthIconTripleDigitHundreds.sprite = numberSprites[(int)str[0]];
+            strengthIconSingleDigit.gameObject.SetActive(false);
+            strengthIconDoubleDigitOnes.gameObject.SetActive(false);
+            strengthIconDoubleDigitTens.gameObject.SetActive(false);
+            strengthIconTripleDigitOnes.gameObject.SetActive(true);
+            strengthIconTripleDigitTens.gameObject.SetActive(true);
+            strengthIconTripleDigitHundreds.gameObject.SetActive(true);
+
         }
-        else {
+        else if (strength >= 10)
+        {
             Vector2 str = GetTensAndOnes(strength);
-            wordStrengthImageOnes.sprite = numberSprites[(int)str[1]];
-            wordStrengthImageTens.sprite = numberSprites[(int)str[0]];
-            wordStrengthImageSingle.gameObject.SetActive(false);
-            wordStrengthImageOnes.gameObject.SetActive(true);
-            wordStrengthImageTens.gameObject.SetActive(true);
+            strengthIconDoubleDigitOnes.sprite = numberSprites[(int)str[1]];
+            strengthIconDoubleDigitTens.sprite = numberSprites[(int)str[0]];
+            strengthIconSingleDigit.gameObject.SetActive(false);
+            strengthIconDoubleDigitOnes.gameObject.SetActive(true);
+            strengthIconDoubleDigitTens.gameObject.SetActive(true);
+            strengthIconTripleDigitOnes.gameObject.SetActive(false);
+            strengthIconTripleDigitTens.gameObject.SetActive(false);
+            strengthIconTripleDigitHundreds.gameObject.SetActive(false);
         }
+        else
+        {
+            strengthIconSingleDigit.sprite = numberSprites[strength];
+            strengthIconSingleDigit.gameObject.SetActive(true);
+            strengthIconDoubleDigitOnes.gameObject.SetActive(false);
+            strengthIconDoubleDigitTens.gameObject.SetActive(false);
+            strengthIconTripleDigitOnes.gameObject.SetActive(false);
+            strengthIconTripleDigitTens.gameObject.SetActive(false);
+            strengthIconTripleDigitHundreds.gameObject.SetActive(false);
+        }
+        */
         Color numberColor = Color.white;
         if ((battleManager.isWaterInPuzzleArea) && (strength > 0))
             numberColor = waterPowerupStrengthColor;
-        wordStrengthImageSingle.color = numberColor;
-        wordStrengthImageOnes.color = numberColor;
-        wordStrengthImageTens.color = numberColor;
+        strengthIcon1Digit.color = numberColor;
+        strengthIcon2DigitOnes.color = numberColor;
+        strengthIcon2DigitTens.color = numberColor;
+        strengthIcon3DigitOnes.color = numberColor;
+        strengthIcon3DigitTens.color = numberColor;
+        strengthIcon3DigitHundreds.color = numberColor;
     }
-
+/*
     private Vector2 GetTensAndOnes(int val) {
+        if (val > 99)
+            return new Vector2(9, 9);
         int tens = (val / 10);
         int ones = val - (tens * 10);
-        if (val > 99) {
-            ones = 9;
-            tens = 9;
-        }
         return new Vector2(tens, ones);
+    }
+    */
+    private Vector4 GetDigitsFromInt(int val){
+        //returns in the order ones - tens - hundres - thousands
+        int thousands = 0;
+        int hundreds = 0;
+        int tens = 0;
+        int ones = 0;
+        if (val > 9999)
+            return new Vector4(9, 9, 9, 9);
+        int remainder = val;
+        if (val > 999) {
+            thousands = remainder / 1000;
+            remainder -= (thousands * 1000);
+        }
+        if (val > 99) {
+            hundreds = remainder / 100;
+            remainder -= (hundreds * 100);
+        }
+        if (val > 9) {
+            tens = remainder / 10;
+            remainder -= (tens * 10);
+        }
+        ones = remainder;
+        //print(ones);
+        //print(tens);
+        //print(hundreds);
+        //print(thousands);
+        return new Vector4(ones, tens, hundreds, thousands);
+        //thousands = val / 1000;
+        //remainder
+    }
+    /*
+    private Vector4 GetThousandsHundredsTensAndOnes(int val){
+        if (val > 9999)
+            return new Vector4(9, 9, 9, 9);
+        int thousands = val / 1000;
+        Vector3 hto = GetHundredsTensAndOnes(val - thousands);
+        return new Vector4(thousands, hto[0], hto[1], hto[2]);
     }
 
     private Vector3 GetHundredsTensAndOnes(int val) {
+        if (val > 999)
+            return new Vector3(9, 9, 9);
         int hundreds = val / 100;
-        int tens = (val - (hundreds * 100)) / 10;
-        int ones = val - ((hundreds * 100) + (tens * 10));
-        if (val > 999) {
-            ones = 9;
-            tens = 9;
-            hundreds = 9;
-        }
-        return new Vector3(hundreds, tens, ones);
+        Vector2 to = GetTensAndOnes(val - hundreds);
+        return new Vector3(hundreds, to[0], to[1]);
     }
+    */
 
     public void UpdateCountdownDisplay(int countdown) {
         if (countdown > 9)
@@ -470,7 +603,9 @@ public class UIManager : MonoBehaviour {
         }
     }
 
-    public void ShowBurnCount() {
+    /*
+    public void ShowBurnCount()
+    {
         int burns = 0;
         if (battleManager.enemyData.isHorde)
             burns = battleManager.enemyHordeAttackAnimatorFunctions[0].burnDamageQueue.Count;
@@ -493,6 +628,7 @@ public class UIManager : MonoBehaviour {
         if (burns > 4)
             burnDisplay5.SetActive(true);
     }
+    */
 
     public void CoverPageWithBoulders() {
         //pick a random boulder from the children
@@ -633,16 +769,16 @@ public class UIManager : MonoBehaviour {
 
     public void SetAllAnimationStates(bool state) {
         //to add, elemental powerup backgrounds
-        ChangeAnimationStateIfObjectIsActive(burnDisplay1, state);
-        ChangeAnimationStateIfObjectIsActive(burnDisplay2, state);
-        ChangeAnimationStateIfObjectIsActive(burnDisplay3, state);
-        ChangeAnimationStateIfObjectIsActive(burnDisplay4, state);
-        ChangeAnimationStateIfObjectIsActive(burnDisplay5, state);
-        ChangeChildAnimationStateIfObjectIsActive(pebbleDisplay1, state);
-        ChangeChildAnimationStateIfObjectIsActive(pebbleDisplay2, state);
-        ChangeChildAnimationStateIfObjectIsActive(pebbleDisplay3, state);
-        ChangeChildAnimationStateIfObjectIsActive(pebbleDisplay4, state);
-        ChangeChildAnimationStateIfObjectIsActive(pebbleDisplay5, state);
+        //ChangeAnimationStateIfObjectIsActive(burnDisplay1, state);
+        //ChangeAnimationStateIfObjectIsActive(burnDisplay2, state);
+        //ChangeAnimationStateIfObjectIsActive(burnDisplay3, state);
+        //ChangeAnimationStateIfObjectIsActive(burnDisplay4, state);
+        //ChangeAnimationStateIfObjectIsActive(burnDisplay5, state);
+        //ChangeChildAnimationStateIfObjectIsActive(pebbleDisplay1, state);
+        //ChangeChildAnimationStateIfObjectIsActive(pebbleDisplay2, state);
+        //ChangeChildAnimationStateIfObjectIsActive(pebbleDisplay3, state);
+        //ChangeChildAnimationStateIfObjectIsActive(pebbleDisplay4, state);
+        //ChangeChildAnimationStateIfObjectIsActive(pebbleDisplay5, state);
         ChangeAnimationStateIfObjectIsActive(waterBuffTop.gameObject, state);
         ChangeAnimationStateIfObjectIsActive(enemyStunBarAnimation, state);
         ChangeAnimationStateIfObjectIsActive(battleManager.playerAnimatorFunctions.deathBubble, state);

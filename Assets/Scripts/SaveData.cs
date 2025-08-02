@@ -17,11 +17,12 @@ public class SaveData{
     public string difficultyMode;
     public bool hasTalkedToNewestEnemy;
     public float gameVersionNumber;
+    public string buffedType;
 
     // ---------------------------------------------------
     //ALL OF THE FUNCTIONS THAT ARE USED TO SAVE PLAYER DATA
     // ---------------------------------------------------
-    
+
     public SaveData() {
         worldProgress = StaticVariables.highestBeatenStage.world;
         stageProgress = StaticVariables.highestBeatenStage.stage;
@@ -46,6 +47,16 @@ public class SaveData{
                 difficultyMode = "hard";
                 break;
         }
+        buffedType = StaticVariables.buffedType switch {
+            (BattleManager.PowerupTypes.Water) => "water",
+            (BattleManager.PowerupTypes.Heal) => "heal",
+            (BattleManager.PowerupTypes.Earth) => "earth",
+            (BattleManager.PowerupTypes.Fire) => "fire",
+            (BattleManager.PowerupTypes.Lightning) => "lightning",
+            (BattleManager.PowerupTypes.Dark) => "dark",
+            (BattleManager.PowerupTypes.Sword) => "sword",
+            _ => "none",
+        };
         gameVersionNumber = StaticVariables.gameVersionNumber;
     }
 
@@ -74,6 +85,16 @@ public class SaveData{
                 StaticVariables.difficultyMode = StaticVariables.DifficultyMode.Hard;
                 break;
         }
+        StaticVariables.buffedType = buffedType switch {
+            "water" => (BattleManager.PowerupTypes.Water),
+            "heal" => (BattleManager.PowerupTypes.Heal),
+            "earth" => (BattleManager.PowerupTypes.Earth),
+            "fire" => (BattleManager.PowerupTypes.Fire),
+            "lightning" => (BattleManager.PowerupTypes.Lightning),
+            "dark" => (BattleManager.PowerupTypes.Dark),
+            "sword" => (BattleManager.PowerupTypes.Sword),
+            _ => BattleManager.PowerupTypes.None,
+        };
         StaticVariables.hasTalkedToNewestEnemy = hasTalkedToNewestEnemy;
         StaticVariables.gameVersionNumber = gameVersionNumber; //if there is no saved version number, it defaults to 0
     }

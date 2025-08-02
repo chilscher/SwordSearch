@@ -160,8 +160,23 @@ MonoBehaviour:
   - type: 0
     talker: {fileID: 0}
     name: 
+    emotion: 1
+    description: That stupid knight has my blood boiling!
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 2
+    description: I really hope we don't cross paths again. What a jerk!
+  - type: 0
+    talker: {fileID: 0}
+    name: 
     emotion: 5
-    description: Hmm... It looks like I've reached the end of the playtest.
+    description: Oh, what's this now?
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 5
+    description: It looks like I've reached the end of the playtest.
   - type: 0
     talker: {fileID: 0}
     name: 

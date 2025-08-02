@@ -128,9 +128,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBattleable: 1
   nameOverride: Knight
-  startingHealth: 100
+  startingHealth: 200
   attackOrder:
-    Value: []
+    Value:
+    - attackSpeed: 5
+      attackDamage: 3
+      isSpecial: 0
+      specialType: 0
+      specialColor: {r: 0, g: 0, b: 0, a: 0}
   isDraconic: 0
   isHorde: 0
   isNearWater: 0
@@ -244,20 +249,4 @@ MonoBehaviour:
     name: 
     emotion: 1
     description: I'm not your damsel! Let me go!
-  victoryDialogueSteps:
-  - type: 0
-    talker: {fileID: 0}
-    name: 
-    emotion: 1
-    description: Do you believe I'm capable now?
-  - type: 4
-    talker: {fileID: 0}
-    name: Artis
-    emotion: 2
-    description: Urk! Yes, you make a convincing argument...
-  - type: 0
-    talker: {fileID: 0}
-    name: 
-    emotion: 0
-    description: Good luck on your top-secret mission, and I hope we don't cross
-      paths again.
+  victoryDialogueSteps: []

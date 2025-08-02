@@ -29,6 +29,7 @@ public static class TextFormatter{
         output = output.Replace("<lightning>", "<color=#" + StaticVariables.lightningPowerupColor.ToHexString() + ">");
         output = output.Replace("<dark>", "<color=#" + StaticVariables.darknessPowerupColor.ToHexString() + ">");
         output = output.Replace("<sword>", "<color=#" + StaticVariables.swordPowerupColor.ToHexString() + ">");
+        output = output.Replace("<charred>", "<color=#" + Color.grey.ToHexString() + ">");
         output = output.Replace("<>", "</color>");
         
         output = output.Replace("<playername>", StaticVariables.playerName);

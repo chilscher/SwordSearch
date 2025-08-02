@@ -28,6 +28,7 @@ public class ReadingOption : MonoBehaviour{
         StaticVariables.buffedType = powerupType;
         FindObjectOfType<InteractOverlayManager>().UpdateBookSelection();
         interactOverlayManager.isMovingBookDescriptions = true;
+        SaveSystem.SaveGame();
     }
 
     private void ShowActive(bool b){

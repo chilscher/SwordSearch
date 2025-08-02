@@ -8,9 +8,9 @@ public class EnemyAttackAnimatorFunctions : MonoBehaviour{
 
     public BattleManager battleManager;
     public EnemyData data;
-    public List<int> burnDamageQueue = new List<int>();
-    private int cyclesBetweenBurns = 4;
-    private int cyclesLeftUntilBurn = 0;
+    //public List<int> burnDamageQueue = new List<int>();
+    //private int cyclesBetweenBurns = 4;
+    //private int cyclesLeftUntilBurn = 0;
 
     public void DoEnemyAttackEffect(){
         battleManager.DoEnemyAttackEffect(this);
@@ -32,10 +32,13 @@ public class EnemyAttackAnimatorFunctions : MonoBehaviour{
     //    }
     }
 
-    public void AddBurnDamageToQueue(int damage, int count){
+    /*
+    public void AddBurnDamageToQueue(int damage, int count)
+    {
         if (burnDamageQueue.Count == 0)
             cyclesLeftUntilBurn = cyclesBetweenBurns;
-        for (int i =0; i<count; i++){
+        for (int i = 0; i < count; i++)
+        {
             burnDamageQueue.Add(damage);
             burnDamageQueue.Sort();
             burnDamageQueue.Reverse();
@@ -55,10 +58,11 @@ public class EnemyAttackAnimatorFunctions : MonoBehaviour{
                 burnDamage *= battleManager.currentHordeEnemyCount;
             battleManager.DamageEnemyHealth(burnDamage);
             burnDamageQueue.RemoveAt(0);
-            battleManager.uiManager.ShowBurnCount();
+            //battleManager.uiManager.ShowBurnCount();
             cyclesLeftUntilBurn = cyclesBetweenBurns;
         }
     }
+    */
 
     public void DeathAnimationFinished(){
         battleManager.EnemyDeathAnimationFinished();

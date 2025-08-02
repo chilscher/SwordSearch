@@ -19,7 +19,7 @@ public class TutorialManager : BattleManager {
     private char[,] startingPowerups3 = {{'-', 'F', '-', '-', '-'}, {'-', '-', '-', '-', 'X'}, {'-', '-', '-', '-', '-'}, {'-', '-', '-', 'F', '-'}, {'-', '-', '-', '-', '-'}, {'-', '-', '-', '-', '-'}, {'-', '-', '-', '-', '-'}};
 
 
-    private enum Cond{Click, CompleteWord, ReleaseFinger, SubmitWord, EnemyTakesDamage, EnemyDies, SubmitAnyWord, EnemyAttacks, PlayerTakesDamage, TurnPage, TurnPageEnds, NormalBattle, SubmitHealingWord, PlayerGetsHealed, SubmitWaterWord, WaterFillsPage, WaterDrains, SubmitEarthWord};
+    private enum Cond{Click, CompleteWord, ReleaseFinger, SubmitWord, EnemyTakesDamage, EnemyDies, SubmitAnyWord, EnemyAttacks, PlayerTakesDamage, TurnPage, TurnPageEnds, NormalBattle, SubmitHealingWord, PlayerGetsHealed, SubmitWaterWord, WaterFillsPage, WaterDrains, SubmitEarthWord, SubmitFireWord};
     private Cond advanceCondition;
     private char[] requiredWord;
     private bool canEnemyTakeDamage = false;
@@ -326,7 +326,7 @@ public class TutorialManager : BattleManager {
             highlightAttackStrength.SetActive(true);
             canShowStrength = true;
             UpdateSubmitVisuals();
-            uiManager.wordStrengthIconGameObjects[0].SetActive(true);
+            uiManager.wordStrengthIcon.SetActive(true);
             advanceCondition = Cond.Click;
         }
         else if (++i == tutorialStep){
@@ -732,74 +732,72 @@ public class TutorialManager : BattleManager {
         tutorialStep ++;
         int i = 0;
         if (++i == tutorialStep){
-            ShowTutorialShadowForLetters(true);
+            ShowTutorialShadow();
             DisplayPlayerTalking("All right! I can finally let loose with some <fire>fireballs<>!", DialogueStep.Emotion.Normal);
             LoadCustomPuzzle(startingLayout6);
             puzzleGenerator.SetCustomPowerups(startingPowerups3);
             advanceCondition = Cond.Click;
         }
         else if (++i == tutorialStep){
-            DisplayPlayerTalking("This guy says the heat doesn't bother him... Why don't we put that to the test?", DialogueStep.Emotion.Worried);
+            DisplayPlayerTalking("<damage>This bigot<> says the heat doesn't bother him...", DialogueStep.Emotion.Questioning);
             advanceCondition = Cond.Click;
         }
         else if (++i == tutorialStep){
-            DisplayText("<fire>Fire<> is a powerful element!");
+            DisplayPlayerTalking("Why don't we put that to the test?", DialogueStep.Emotion.Happy);
             advanceCondition = Cond.Click;
         }
         else if (++i == tutorialStep){
-            DisplayText("Making an word using the <fire>element of fire<> will <damage>triple the damage<> of that attack!");
-            advanceCondition = Cond.Click;
-        }
-        //have the player make a word
-        //after, highlight the burnt letters and explain the mechanic
-        //using the element of fire is risky... if you're not careful, you might not have many letters available next time you turn the page!
-        //then normal battle
-        
-        
-        
-        //else if (++i == tutorialStep){
-        //    DisplayPlayerTalking("I'm sure a little heat might be !", DialogueStep.Emotion.Normal);
-        //    advanceCondition = Cond.Click;
-        //}
-        else if (++i == tutorialStep){
-            DisplayText("From now on, <earth>earth powerups<> will appear!");
-            puzzleGenerator.letterSpaces[0,1].ToggleTutorialSelector(true);
-            puzzleGenerator.letterSpaces[3,3].ToggleTutorialSelector(true);
-            if (StaticVariables.buffedType == BattleManager.PowerupTypes.Fire)
-                puzzleGenerator.letterSpaces[1,4].ToggleTutorialSelector(true);
+            DisplayText("<fire>Fire<> is an incredibly powerful element!");
             advanceCondition = Cond.Click;
         }
         else if (++i == tutorialStep){
-            HideTutorialShadowForLetters();
-            DisplayText("Try making an attack with one of the <earth>earth powerups<>!");
-            puzzleGenerator.letterSpaces[0,1].ToggleTutorialSelector(false);
-            puzzleGenerator.letterSpaces[3,3].ToggleTutorialSelector(false);
-            advanceCondition = Cond.SubmitEarthWord;
+            DisplayText("Words made using the <fire>element of fire<> will deal <damage>triple the normal damage<>!");
+            advanceCondition = Cond.Click;
+        }
+        else if (++i == tutorialStep){
+            HideTutorialShadow();
+            DisplayText("Try it out! Make an attack using the <fire>power of fire<>.");
+            advanceCondition = Cond.SubmitFireWord;
         }
         else if (++i == tutorialStep){
             DisplayText("");
             advanceCondition = Cond.EnemyTakesDamage;
         }
         else if (++i == tutorialStep){
-            ShowTutorialShadow();
-            DisplayText("After using the <earth>power of earth<>, the book's page is surrounded by rocks.");
+            ShowTutorialShadowForLetters();
+            DisplayText("Using the <fire>power of fire<> does come with a downside, however.");
             advanceCondition = Cond.Click;
         }
         else if (++i == tutorialStep){
-            DisplayText("The rocks empower your next word, acting as if it was <damage>2 letters longer<>!");
+            DisplayText("All of the letters you used to make the attack are now <charred>charred<>!");
+            foreach (LetterSpace ls in puzzleGenerator.letterSpaces) {
+                if (ls.isCharred)
+                    ls.ToggleTutorialSelector(true);
+            }
             advanceCondition = Cond.Click;
         }
         else if (++i == tutorialStep){
-            DisplayText("Longer words get <damage>exponentially<> more benefit from the <earth>rocks'<> effect!");
+            DisplayText("A <charred>charred letter<> won't refresh the next time you turn to a new page.");
             advanceCondition = Cond.Click;
         }
         else if (++i == tutorialStep){
-            DisplayText("Use the <earth>power of earth<> and some long words to defeat the rabbits!");
+            DisplayText("The <fire>power of fire<> has the potential to deal a ton of damage, but using it is a risky choice.");
+            foreach (LetterSpace ls in puzzleGenerator.letterSpaces) {
+                if (ls.isCharred)
+                    ls.ToggleTutorialSelector(false);
+            }
             advanceCondition = Cond.Click;
         }
         else if (++i == tutorialStep){
-            HideTutorialShadow();
-            StaticVariables.buffedType = PowerupTypes.Earth;
+            DisplayText("You might end up in a situation where you have few letters to choose from.");
+            advanceCondition = Cond.Click;
+        }
+        else if (++i == tutorialStep){
+            DisplayText("Keep that in mind as you continue to battle the knight!");
+            advanceCondition = Cond.Click;
+        }
+        else if (++i == tutorialStep){
+            HideTutorialShadowForLetters();
             canEnemyDie = true;
             StaticVariables.powerupsPerPuzzle = 3;
             StaticVariables.healActive = true;
@@ -816,19 +814,23 @@ public class TutorialManager : BattleManager {
         else if (++i == tutorialStep){
             ShowTutorialShadow();
             MoveDialogueBoxOnScreen();
-            DisplayEnemyTalking("Is she using <earth>earth magic<>?", enemyData, DialogueStep.Emotion.Custom1, "Hopsy");
+            DisplayPlayerTalking("I can handle myself out here!", DialogueStep.Emotion.Angry);
             advanceCondition = Cond.Click;
         }
         else if (++i == tutorialStep){
-            DisplayEnemyTalking("Oh, no! What will <earth>earth magic<> do to my carrots??", enemyData, DialogueStep.Emotion.Custom2, "Fopsy");
+            DisplayPlayerTalking("Oh, whatever! I don't have to prove anything to you!", DialogueStep.Emotion.Angry);
             advanceCondition = Cond.Click;
         }
         else if (++i == tutorialStep){
-            DisplayEnemyTalking("Don't you mean OUR carrots?", enemyData, DialogueStep.Emotion.Custom3, "Hopsy");
+            DisplayEnemyTalking("Ugh...", enemyData, DialogueStep.Emotion.Defeated, "Artis");
             advanceCondition = Cond.Click;
         }
         else if (++i == tutorialStep){
-            DisplayEnemyTalking("Oh, get over yourself, Hopsy!", enemyData, DialogueStep.Emotion.Custom2, "Fopsy");
+            DisplayEnemyTalking("Despite being a woman, you are quite capable in battle...", enemyData, DialogueStep.Emotion.Defeated, "Artis");
+            advanceCondition = Cond.Click;
+        }
+        else if (++i == tutorialStep){
+            DisplayPlayerTalking("Unbelievable! Good luck on your stupid quest, I'm out of here!", DialogueStep.Emotion.Angry);
             advanceCondition = Cond.Click;
         }
         else if (++i == tutorialStep){
@@ -895,11 +897,12 @@ public class TutorialManager : BattleManager {
 
     private void HideStrength(){
         uiManager.wordStrengthDivider.SetActive(false);
-        uiManager.wordStrengthImageOnes.gameObject.SetActive(false);
-        uiManager.wordStrengthImageTens.gameObject.SetActive(false);
-        uiManager.wordStrengthImageSingle.gameObject.SetActive(false);
-        foreach (GameObject go in uiManager.wordStrengthIconGameObjects)
-            go.SetActive(false);
+        uiManager.strengthIcon3DigitOnes.transform.parent.gameObject.SetActive(false);
+        uiManager.strengthIcon2DigitOnes.transform.parent.gameObject.SetActive(false);
+        uiManager.strengthIcon1Digit.transform.parent.gameObject.SetActive(false);
+        uiManager.wordStrengthIcon.SetActive(false);
+        //foreach (GameObject go in uiManager.wordStrengthIconGameObjects)
+        //    go.SetActive(false);
     }
 
     private void HideHealthDisplays(){
@@ -994,7 +997,9 @@ public class TutorialManager : BattleManager {
             case (Cond.SubmitWaterWord):
                 return true;            
             case (Cond.SubmitEarthWord):
-                return true;        
+                return true;           
+            case (Cond.SubmitFireWord):
+                return true;       
             case (Cond.WaterDrains):
                 return true;              
         }
@@ -1077,7 +1082,15 @@ public class TutorialManager : BattleManager {
                 }
                 else
                     ClearWord(false);
-                break;      
+                break;   
+            case (Cond.SubmitFireWord):
+                if((inProgressWord.isValidWord) && (inProgressWord.type == BattleManager.PowerupTypes.Fire)){
+                    base.ProcessFingerRelease();
+                    AdvanceTutorialStep();
+                }
+                else
+                    ClearWord(false);
+                break;    
             default:
                 base.ProcessFingerRelease();
                 break;
