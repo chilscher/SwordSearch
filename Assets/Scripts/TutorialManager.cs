@@ -12,9 +12,11 @@ public class TutorialManager : BattleManager {
     private char[,] startingLayout3 = {{'O', 'G', 'E', 'N', 'N'}, {'F', 'R', 'I', 'L', 'U'}, {'E', 'A', 'O', 'Z', 'P'}, {'T', 'N', 'E', 'I', 'M'}, {' ', ' ', ' ', ' ', ' '}, {' ', ' ', ' ', ' ', ' '}, {' ', ' ', ' ', ' ', ' '}};
     private char[,] startingLayout4 = {{'C', 'A', 'L', 'D', 'E'}, {'E', 'S', 'I', 'N', 'M'}, {'T', 'A', 'E', 'B', 'R'}, {'T', 'K', 'C', 'O', 'L'}, {' ', ' ', ' ', ' ', ' '}, {' ', ' ', ' ', ' ', ' '}, {' ', ' ', ' ', ' ', ' '}};
     private char[,] startingLayout5 = {{'B', 'R', 'X', 'A', 'F'}, {'A', 'N', 'E', 'D', 'U'}, {'L', 'I', 'A', 'L', 'T'}, {'G', 'O', 'W', 'E', 'I'}, {' ', ' ', ' ', ' ', ' '}, {' ', ' ', ' ', ' ', ' '}, {' ', ' ', ' ', ' ', ' '}};
+    private char[,] startingLayout6 = {{'B', 'R', 'X', 'A', 'F'}, {'A', 'N', 'E', 'D', 'U'}, {'L', 'I', 'A', 'L', 'T'}, {'G', 'O', 'W', 'E', 'I'}, {' ', ' ', ' ', ' ', ' '}, {' ', ' ', ' ', ' ', ' '}, {' ', ' ', ' ', ' ', ' '}};
 
     private char[,] startingPowerups1 = {{'-', '-', '-', '-', '-'}, {'-', 'H', '-', '-', '-'}, {'-', '-', '-', '-', '-'}, {'-', '-', '-', 'W', '-'}, {'-', '-', '-', '-', '-'}, {'-', '-', '-', '-', '-'}, {'-', '-', '-', '-', '-'}};
     private char[,] startingPowerups2 = {{'-', 'E', '-', '-', '-'}, {'-', '-', '-', '-', '-'}, {'-', '-', '-', '-', '-'}, {'-', '-', '-', 'E', '-'}, {'-', '-', '-', '-', '-'}, {'-', '-', '-', '-', '-'}, {'-', '-', '-', '-', '-'}};
+    private char[,] startingPowerups3 = {{'-', 'F', '-', '-', '-'}, {'-', '-', '-', '-', 'X'}, {'-', '-', '-', '-', '-'}, {'-', '-', '-', 'F', '-'}, {'-', '-', '-', '-', '-'}, {'-', '-', '-', '-', '-'}, {'-', '-', '-', '-', '-'}};
 
 
     private enum Cond{Click, CompleteWord, ReleaseFinger, SubmitWord, EnemyTakesDamage, EnemyDies, SubmitAnyWord, EnemyAttacks, PlayerTakesDamage, TurnPage, TurnPageEnds, NormalBattle, SubmitHealingWord, PlayerGetsHealed, SubmitWaterWord, WaterFillsPage, WaterDrains, SubmitEarthWord};
@@ -73,6 +75,9 @@ public class TutorialManager : BattleManager {
             case (4):
                 SetupTutorial4();
                 break;
+            case (5):
+                SetupTutorial5();
+                break;
         }
         SetupDialogueManager();
         UpdateSubmitVisuals();
@@ -88,7 +93,7 @@ public class TutorialManager : BattleManager {
     string n = split[1];
     tutorialNumber = int.Parse(n);
     //print(tutorialNumber);
-    if ((tutorialNumber > 4) || (tutorialNumber < 1))
+    if ((tutorialNumber > 5) || (tutorialNumber < 1))
         print("tutorial number is wrong! number is " + tutorialNumber + ", retrieved from enemy name " + name);
 }
 
@@ -145,6 +150,22 @@ public class TutorialManager : BattleManager {
         canEnemyDie = false;
         uiManager.earthBuffBottom.gameObject.SetActive(true);
     }
+    
+    private void SetupTutorial5(){
+        StaticVariables.powerupsPerPuzzle = 0;
+        //StaticVariables.waterActive = false;
+        //StaticVariables.healActive = false;
+        puzzleGenerator.SetPowerupTypeList();
+        canEnemyTakeDamage = true;
+        canCountdown = true;
+        canQueueAttack = false;
+        canShowStrength = true;
+        canShowCountdown = true;
+        canShowPlayerHealth = true;
+        canShowEnemyHealth = true;
+        canEnemyDie = false;
+        uiManager.earthBuffBottom.gameObject.SetActive(true);
+    }
 
     public override void QueueEnemyAttack(){
         if (canQueueAttack)
@@ -173,6 +194,9 @@ public class TutorialManager : BattleManager {
                 break;
             case (4):
                 AdvanceTutorial4();
+                break;
+            case (5):
+                AdvanceTutorial5();
                 break;
         }
         switch (advanceCondition){
@@ -634,6 +658,115 @@ public class TutorialManager : BattleManager {
             DisplayText("From now on, <earth>earth powerups<> will appear!");
             puzzleGenerator.letterSpaces[0,1].ToggleTutorialSelector(true);
             puzzleGenerator.letterSpaces[3,3].ToggleTutorialSelector(true);
+            advanceCondition = Cond.Click;
+        }
+        else if (++i == tutorialStep){
+            HideTutorialShadowForLetters();
+            DisplayText("Try making an attack with one of the <earth>earth powerups<>!");
+            puzzleGenerator.letterSpaces[0,1].ToggleTutorialSelector(false);
+            puzzleGenerator.letterSpaces[3,3].ToggleTutorialSelector(false);
+            advanceCondition = Cond.SubmitEarthWord;
+        }
+        else if (++i == tutorialStep){
+            DisplayText("");
+            advanceCondition = Cond.EnemyTakesDamage;
+        }
+        else if (++i == tutorialStep){
+            ShowTutorialShadow();
+            DisplayText("After using the <earth>power of earth<>, the book's page is surrounded by rocks.");
+            advanceCondition = Cond.Click;
+        }
+        else if (++i == tutorialStep){
+            DisplayText("The rocks empower your next word, acting as if it was <damage>2 letters longer<>!");
+            advanceCondition = Cond.Click;
+        }
+        else if (++i == tutorialStep){
+            DisplayText("Longer words get <damage>exponentially<> more benefit from the <earth>rocks'<> effect!");
+            advanceCondition = Cond.Click;
+        }
+        else if (++i == tutorialStep){
+            DisplayText("Use the <earth>power of earth<> and some long words to defeat the rabbits!");
+            advanceCondition = Cond.Click;
+        }
+        else if (++i == tutorialStep){
+            HideTutorialShadow();
+            StaticVariables.buffedType = PowerupTypes.Earth;
+            canEnemyDie = true;
+            StaticVariables.powerupsPerPuzzle = 3;
+            StaticVariables.healActive = true;
+            ExpandToFullPuzzle();
+            puzzleGenerator.SetPowerupTypeList();
+            canQueueAttack = true;
+            QueueEnemyAttack();
+            advanceCondition = Cond.NormalBattle;
+        }
+        else if (++i == tutorialStep){
+            DisplayText("");
+            advanceCondition = Cond.EnemyDies;
+        }
+        else if (++i == tutorialStep){
+            ShowTutorialShadow();
+            MoveDialogueBoxOnScreen();
+            DisplayEnemyTalking("Is she using <earth>earth magic<>?", enemyData, DialogueStep.Emotion.Custom1, "Hopsy");
+            advanceCondition = Cond.Click;
+        }
+        else if (++i == tutorialStep){
+            DisplayEnemyTalking("Oh, no! What will <earth>earth magic<> do to my carrots??", enemyData, DialogueStep.Emotion.Custom2, "Fopsy");
+            advanceCondition = Cond.Click;
+        }
+        else if (++i == tutorialStep){
+            DisplayEnemyTalking("Don't you mean OUR carrots?", enemyData, DialogueStep.Emotion.Custom3, "Hopsy");
+            advanceCondition = Cond.Click;
+        }
+        else if (++i == tutorialStep){
+            DisplayEnemyTalking("Oh, get over yourself, Hopsy!", enemyData, DialogueStep.Emotion.Custom2, "Fopsy");
+            advanceCondition = Cond.Click;
+        }
+        else if (++i == tutorialStep){
+            uiManager.EndDialogue();
+        }
+    }
+    
+    
+    private void AdvanceTutorial5(){
+        tutorialStep ++;
+        int i = 0;
+        if (++i == tutorialStep){
+            ShowTutorialShadowForLetters(true);
+            DisplayPlayerTalking("All right! I can finally let loose with some <fire>fireballs<>!", DialogueStep.Emotion.Normal);
+            LoadCustomPuzzle(startingLayout6);
+            puzzleGenerator.SetCustomPowerups(startingPowerups3);
+            advanceCondition = Cond.Click;
+        }
+        else if (++i == tutorialStep){
+            DisplayPlayerTalking("This guy says the heat doesn't bother him... Why don't we put that to the test?", DialogueStep.Emotion.Worried);
+            advanceCondition = Cond.Click;
+        }
+        else if (++i == tutorialStep){
+            DisplayText("<fire>Fire<> is a powerful element!");
+            advanceCondition = Cond.Click;
+        }
+        else if (++i == tutorialStep){
+            DisplayText("Making an word using the <fire>element of fire<> will <damage>triple the damage<> of that attack!");
+            advanceCondition = Cond.Click;
+        }
+        //have the player make a word
+        //after, highlight the burnt letters and explain the mechanic
+        //using the element of fire is risky... if you're not careful, you might not have many letters available next time you turn the page!
+        //then normal battle
+        
+        
+        
+        //else if (++i == tutorialStep){
+        //    DisplayPlayerTalking("I'm sure a little heat might be !", DialogueStep.Emotion.Normal);
+        //    advanceCondition = Cond.Click;
+        //}
+        else if (++i == tutorialStep){
+            DisplayText("From now on, <earth>earth powerups<> will appear!");
+            puzzleGenerator.letterSpaces[0,1].ToggleTutorialSelector(true);
+            puzzleGenerator.letterSpaces[3,3].ToggleTutorialSelector(true);
+            if (StaticVariables.buffedType == BattleManager.PowerupTypes.Fire)
+                puzzleGenerator.letterSpaces[1,4].ToggleTutorialSelector(true);
             advanceCondition = Cond.Click;
         }
         else if (++i == tutorialStep){

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 815226952419649515}
   - component: {fileID: 815226952419649514}
   m_Layer: 0
-  m_Name: Knight
+  m_Name: Tutorial 5 - Knight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBattleable: 1
-  nameOverride: Artis
+  nameOverride: Knight
   startingHealth: 100
   attackOrder:
     Value: []
@@ -163,7 +163,7 @@ MonoBehaviour:
     emotion: 0
     description: There's some pyramid-looking structure in the distance! That's probably
       a good place to start looking.
-  - type: 4
+  - type: 1
     talker: {fileID: 0}
     name: Knight
     emotion: 7
@@ -174,9 +174,9 @@ MonoBehaviour:
     emotion: 7
     description: Oh! I didn't expect to find a knight in sweltering armor out here
       in the desert!
-  - type: 1
+  - type: 4
     talker: {fileID: 0}
-    name: 
+    name: Artis
     emotion: 7
     description: The heat will not bother me! For I am Artis, knight of the Academy!
   - type: 0
@@ -184,9 +184,9 @@ MonoBehaviour:
     name: 
     emotion: 5
     description: Oh, what brings an Academic out to the desert, so far from Duskvale?
-  - type: 1
+  - type: 4
     talker: {fileID: 0}
-    name: 
+    name: Artis
     emotion: 0
     description: 'I have come here on a quest! I''m afraid I shan''t divulge the
       details, Milady. '
@@ -196,19 +196,19 @@ MonoBehaviour:
     emotion: 2
     description: Ugh, please don't call me that. Aren't you aware of the connotations?
       My name is <playername>.
-  - type: 1
+  - type: 4
     talker: {fileID: 0}
-    name: 
+    name: Artis
     emotion: 0
     description: My apologies, My Dear <playername>.
   - type: 0
     talker: {fileID: 0}
     name: 
     emotion: 1
-    description: My Dear?? That's not much of an improvement...
-  - type: 1
+    description: '"My Dear"?? That''s not much of an improvement!'
+  - type: 4
     talker: {fileID: 0}
-    name: 
+    name: Artis
     emotion: 0
     description: Why are you out here? The desert presents many dangers for one such
       as yourself.
@@ -218,9 +218,9 @@ MonoBehaviour:
     emotion: 1
     description: I'll have you know I'm very capable! Just yesterday I beat a science
       wizard and a swarm of talking rabbits!
-  - type: 1
+  - type: 4
     talker: {fileID: 0}
-    name: 
+    name: Artis
     emotion: 0
     description: My Dear <playername>, I think you may be suffering from heatstroke.
   - type: 0
@@ -233,9 +233,9 @@ MonoBehaviour:
     name: 
     emotion: 0
     description: I'm here on my own quest anyway! And I'll be going now.
-  - type: 1
+  - type: 4
     talker: {fileID: 0}
-    name: 
+    name: Artis
     emotion: 1
     description: My Dear <playername>, wait! I cannot allow you to go into that town
       when you are so clearly in distress!
@@ -250,9 +250,9 @@ MonoBehaviour:
     name: 
     emotion: 1
     description: Do you believe I'm capable now?
-  - type: 1
+  - type: 4
     talker: {fileID: 0}
-    name: 
+    name: Artis
     emotion: 2
     description: Urk! Yes, you make a convincing argument...
   - type: 0

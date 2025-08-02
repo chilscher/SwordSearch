@@ -84,6 +84,9 @@ public class PuzzleGenerator : MonoBehaviour {
                     case ('S'):
                         letterSpaces[i,j].powerupType = BattleManager.PowerupTypes.Sword;
                         break;
+                    case ('X'):
+                        letterSpaces[i,j].powerupType = StaticVariables.buffedType;
+                        break;
 
                 }
                 letterSpaces[i,j].ShowPowerup();

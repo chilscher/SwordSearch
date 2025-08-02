@@ -141,7 +141,7 @@ public class BattleManager : MonoBehaviour {
         CalculateHordeEnemiesLeft();
         uiManager.ShowEnemyTakingDamage(amount, enemyHealth > 0);
         uiManager.DisplayHealths(playerHealth, enemyHealth);
-        if (enemyHealth == 0){
+        if (enemyHealth <= 0){
             stopNextAttack = true;
             uiManager.PauseEnemyAttackBar();
             uiManager.PauseWaterDrain();
@@ -175,7 +175,7 @@ public class BattleManager : MonoBehaviour {
                 break;
             case StaticVariables.DifficultyMode.Easy:
                 float a = (amount * 0.7f);
-                if (a < 1)
+                if ((a < 1) && (a > 0))
                     a = 1;
                 DamagePlayerHealth((int)a);
                 break;

@@ -259,7 +259,7 @@ MonoBehaviour:
   forest2_pt1: {fileID: 7543067620809557234, guid: 79ad646e2c66e304e9571150ce495a0e, type: 3}
   forest2_pt2: {fileID: 7543067620809557234, guid: 88fde22e1787cd548856f982f2d53b85, type: 3}
   forest3: {fileID: 7543067620809557234, guid: 22810d6dd6bbda9438ed0a9db61425de, type: 3}
-  desert1: {fileID: 0}
+  desert1: {fileID: 7543067620809557234, guid: b19c1a6fb66f25341a3db6dcd07b19c7, type: 3}
   desert2: {fileID: 0}
 --- !u!1 &268916322
 GameObject:

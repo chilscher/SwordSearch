@@ -128,16 +128,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBattleable: 1
   nameOverride: 
-  startingHealth: 20
+  startingHealth: 5000
   attackOrder:
-    Value: []
+    Value:
+    - attackSpeed: 10
+      attackDamage: 0
+      isSpecial: 0
+      specialType: 0
+      specialColor: {r: 0, g: 0, b: 0, a: 0}
   isDraconic: 0
   isHorde: 0
-  isHoly: 0
-  isDark: 0
   isNearWater: 0
-  canApplyDebuff: 0
+  throwsRocks: 0
   isWaterDangerous: 0
+  isCopycat: 0
+  healsSelf: 0
+  canBurn: 0
   normal: {fileID: -1390840257, guid: 9a3b7e10e1efd8e429c972fef80a53f9, type: 3}
   angry: {fileID: 0}
   defeated: {fileID: 0}
@@ -150,5 +156,87 @@ MonoBehaviour:
   custom1: {fileID: 0}
   custom2: {fileID: 0}
   custom3: {fileID: 0}
-  overworldDialogueSteps: []
-  victoryDialogueSteps: []
+  overworldDialogueSteps:
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 5
+    description: Hmm... It looks like I've reached the end of the playtest.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 2
+    description: That's unfortunate. I was hoping I'd be able to make it to that
+      big pyramid first.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 5
+    description: I wonder if the sword of dragonslaying is actually in there?
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 6
+    description: There's no way that would be the end of the story already! It'd
+      be such a disappointing ending.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 4
+    description: There are so many mysteries left to uncover! So many things left
+      to do!
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: Maybe I'll get to go to Duskvale at some point, and see some of
+      the devastation there.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 7
+    description: Maybe I'll even meet that Lich King some day!
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 5
+    description: What to do, what to do...
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 2
+    description: Too bad that big button on the bottom of the main menu doesn't work.
+      It's supposed to be something called "Endless Mode"!
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: Oh well, in the meantime at least I can play around with all my
+      fun powerups!
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 4
+    description: It looks like this next enemy is harmless and has a load of health,
+      too! What a great coincidence!
+  victoryDialogueSteps:
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 4
+    description: That was fun! How did I manage to do 5000 damage, anyway?
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 5
+    description: Too bad the game will freeze up if I try to fight the next enemy...
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 5
+    description: I guess there's not much left for me to do...
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 4
+    description: Except fight it again!

@@ -16636,6 +16636,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2708877614081805339, guid: d1cf0ee7e00470f469a438f7c19f7c40, type: 3}
+      propertyPath: battleData.enemyPrefab
+      value: 
+      objectReference: {fileID: 1107962101534003457, guid: b7704cd355ec8d7489d4c1b90d6ec069, type: 3}
+    - target: {fileID: 2708877614081805339, guid: d1cf0ee7e00470f469a438f7c19f7c40, type: 3}
+      propertyPath: battleData.backgroundPrefab
+      value: 
+      objectReference: {fileID: 7543067620809557234, guid: 882802f3deaf0af41855a836d0776af5, type: 3}
     - target: {fileID: 8331165739053312393, guid: d1cf0ee7e00470f469a438f7c19f7c40, type: 3}
       propertyPath: m_Name
       value: Enemy 2
@@ -47037,8 +47045,7 @@ MonoBehaviour:
   - {fileID: 1343501815}
   - {fileID: 2003377217}
   sceneHeader: {fileID: 223357309}
-  playerWalkSpeed: 1000
-  minTimeToMove: 1
+  playerStepDuration: 0.2
   thisWorldNum: 4
   powerupsPerPuzzle: 3
   healActive: 1
@@ -68789,9 +68796,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2708877614081805339, guid: 0af3fa0e138bb1d4b98f60e151d93f72, type: 3}
+      propertyPath: type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708877614081805339, guid: 0af3fa0e138bb1d4b98f60e151d93f72, type: 3}
       propertyPath: battleData.enemyPrefab
       value: 
-      objectReference: {fileID: 815226952419649516, guid: 11ea33c7ab827ad4bb1e3e3bddd327ab, type: 3}
+      objectReference: {fileID: 815226952419649516, guid: b63fcab39e536d94a93dec9ee86e4461, type: 3}
+    - target: {fileID: 2708877614081805339, guid: 0af3fa0e138bb1d4b98f60e151d93f72, type: 3}
+      propertyPath: battleData.backgroundPrefab
+      value: 
+      objectReference: {fileID: 7543067620809557234, guid: 8f70e44c32a1d7343b16058224a2a083, type: 3}
     - target: {fileID: 8331165739053312393, guid: 0af3fa0e138bb1d4b98f60e151d93f72, type: 3}
       propertyPath: m_Name
       value: Enemy 1

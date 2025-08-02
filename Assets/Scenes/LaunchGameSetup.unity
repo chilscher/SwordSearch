@@ -212,7 +212,7 @@ MonoBehaviour:
   - {fileID: 1107962101534003457, guid: cb88c9784fe00bd40aa0649daa8ec38e, type: 3}
   desertEnemies:
   - {fileID: 1107962101534003457, guid: cb88c9784fe00bd40aa0649daa8ec38e, type: 3}
-  - {fileID: 815226952419649516, guid: 11ea33c7ab827ad4bb1e3e3bddd327ab, type: 3}
+  - {fileID: 815226952419649516, guid: b63fcab39e536d94a93dec9ee86e4461, type: 3}
   - {fileID: 1107962101534003457, guid: b7704cd355ec8d7489d4c1b90d6ec069, type: 3}
   - {fileID: 1107962101534003457, guid: 6f8f4c2b644e7f1478d21104450cf07b, type: 3}
   - {fileID: 1107962101534003457, guid: 0a732eed92775224a94b0b9e05132bef, type: 3}

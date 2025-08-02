@@ -126,6 +126,8 @@ public class CutsceneManager : MonoBehaviour{
 
     private void SetupDesert1(){
         SetCutsceneBackground(desert1);
+        PlayAnimation("Player", "Walk");
+        MoveEverythingExceptPlayer(-1050, 0, 3f);
     }
 
     private void SetupDesert2(){
@@ -1077,7 +1079,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("You're right! I'd better get going!", DialogueStep.Emotion.Surprised);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_NobodyTalking();
+            AdvanceConditionDialogue_NobodyTalking(true);
         }    
         else if (++i == cutsceneStep){
             PlayAnimation("Player", "Put Away Bag");
@@ -2523,9 +2525,89 @@ public class CutsceneManager : MonoBehaviour{
     private void DoDesert1Step(){   
         int i = 0;
         if (++i == cutsceneStep){
+            MoveObject("Player", 190, 2137, 3f);
+            AdvanceConditionWait(3f);
         }
         else if (++i == cutsceneStep){
+            PlayAnimation("Player", "Idle");
+            AdvanceConditionDialogue_PlayerTalking("Well that was quite a journey, but we finally made it to the edge of the forest!", DialogueStep.Emotion.Happy);
         } 
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("I can see the desert sands up ahead... And then our adventure might be over soon.", DialogueStep.Emotion.Normal);
+        } 
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_NobodyTalking();
+        }  
+        else if (++i == cutsceneStep){
+            AdvanceConditionWait(1.5f);
+            PlayAnimation("Player", "Take Out Book");
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("None of this would have been possible without your help.", DialogueStep.Emotion.Happy);
+        } 
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("Thanks to you, I can use four different types of magic now! Four!!", DialogueStep.Emotion.Happy);
+        } 
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("For the first time, words of praise appear, \"WELL DONE. FEW IN HISTORY HAVE CONTROLLED FOUR ELEMENTS\".", "Magic Book", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("To be honest, I'm getting a little concerned about managing all of these different powers.", DialogueStep.Emotion.Worried);
+        } 
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("I want to use each one to its fullest potential!", DialogueStep.Emotion.Normal);
+        } 
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("But I've been thinking about the nature of magic, and I might have a solution.", DialogueStep.Emotion.Normal);
+        } 
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("Each element is connected to a field of study, right?", DialogueStep.Emotion.Questioning);
+        } 
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("Do you think I could strengthen my fire abilities by reading a book about science?", DialogueStep.Emotion.Questioning);
+        } 
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("I have plenty of books for the other disciplines, too.", DialogueStep.Emotion.Normal);
+        } 
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("They should all still be in that magic pouch Eldric gave me.", DialogueStep.Emotion.Normal);
+        } 
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("What do you think?", DialogueStep.Emotion.Questioning);
+        } 
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("The book pauses for a minute, then spells out,\n\"THAT IS A PLAUSIBLE IDEA WORTH TESTING\".", "Magic Book", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("I'm glad you think so!", DialogueStep.Emotion.Happy);
+        } 
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("I'll have to pick something good to read...", DialogueStep.Emotion.Questioning);
+        } 
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("But in the meantime, we should keep going. That dragon-killing sword is somewhere in this desert!", DialogueStep.Emotion.Normal);
+        } 
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_NobodyTalking(true);
+        }    
+        else if (++i == cutsceneStep){
+            PlayAnimation("Player", "Put Away Book");
+            AdvanceConditionWait(1.6f);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionWait(2f);
+            PlayAnimationAndMoveThenIdle("Player", "Walk", 900, 2137, 5f);
+        }
+        else if (++i == cutsceneStep){
+            StaticVariables.hasCompletedStage = true;
+            StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
+        }
+        //else if (++i == cutsceneStep){
+        //    DisplayNobodyTalking();
+        //    PlayAnimation("Player", "Put Away Book");
+        //    StaticVariables.hasCompletedStage = true;
+        //    StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
+        //}
     }
 
     private void DoDesert2Step(){   
