@@ -91,7 +91,7 @@ public class ReadingOption : MonoBehaviour{
     }
 
     public void ShowBookName(){
-        bookName.text = bookData.name.ToUpper();
+        bookName.text = bookData.name.ToUpper().Replace(" ", "  ");
     }
 
     private string GetPowerupSummary(){

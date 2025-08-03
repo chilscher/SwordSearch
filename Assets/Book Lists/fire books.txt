@@ -1,6 +1,6 @@
 on the origin of species\charles darwin details his theory of natural selection and lays out the foundations of the field of evolutionary biology
 relativity: the special and general theory\albert einstein proposes his theory of relativity, which describes how space and time are fundamentally linked
 a brief history of time\stephen hawking explains, in layman's terms, the origin of the universe and the theories of general relativity and quantum mechanics
-newton's principia\isaac newtown defines his laws of motion and gravitation, which form the basis of classical mechanics in physics
+principia\isaac newtown defines his laws of motion and gravitation, which form the basis of classical mechanics in physics
 opticks\isaac newton analyzes light, separating it to form the color spectrum, and demonstrates that the color of an object is determined by how it absorbs and reflects light
 the sceptical chymist\robert boyle proposes that all objects exist as combinations of basic chemical elements, which lays the foundation for modern chemistry and the periodic table
