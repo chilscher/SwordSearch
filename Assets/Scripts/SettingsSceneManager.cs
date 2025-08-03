@@ -74,8 +74,10 @@ public class SettingsSceneManager : MonoBehaviour{
     }
 
     public void StageUp(){
+        if (StaticVariables.highestBeatenStage.enemyPrefab.name == "Tutorial 5 - Knight")
+            return;
         if ((StaticVariables.highestBeatenStage.nextStage != null) && (StaticVariables.highestBeatenStage.nextStage.nextStage != null))
-            StaticVariables.highestBeatenStage = StaticVariables.highestBeatenStage.nextStage;
+                StaticVariables.highestBeatenStage = StaticVariables.highestBeatenStage.nextStage;
         DisplayProgress();
         SaveSystem.SaveGame();
     }
