@@ -1,1 +1,43 @@
 healing - gray's anatomy\originally written by henry gray, this comprehensive medical refernce book has had dozens of revised editions published in the last century
+lightning - the illiad\homer
+healing - Bencao Gangmu by Li Shizhen
+healing - Al-Mūjaz Fī Al-Tibb by Ibn al-Nafis
+healing - Della Simmetria by Albrecht Dürer
+healing - On the Antiseptic Principle in the Practice of Surgery by Joseph Liste
+healing - The Psychology of the Unconscious by Carl Jung
+healing - Method of Medicine by Galen
+earth - Ab Urbe Condita by Titus Livius
+earth - Geographia by Strabo
+earth - Parallel Lives by Plutarch
+earth - Zuo Zhuan by Zuo Qiuming
+earth - Records of the Grand Historian by Sima Qian
+earth - Book of Han by Ban Zhao
+earth - Sanguozhi by Chen Shou
+earth - Anecdota by Procopius
+earth - Alexiad by Anna Komnene
+lightning - Edda by Snorri Sturluson
+earth - L'Estoire de la Guerre Sainte by Ambroise
+earth - Kitāb al-A‘lāq al-Nafīsa by Ahmad Ibn Rusta Isfahani
+earth - Muqaddimah by Ign Khaldun
+earth - Samguk Yusa by Il-yeon
+earth - a history of archeological thought by bruce trigger
+earth - Florentine Histories by Nicolo Machiavelli
+earth - History of the Galla by Bahrey
+earth - On Literature and History by Zhang Xuecheng
+earth - The Negro in Our History by Carter G. Woodson
+earth - A People's History of the United States by Howard Zinn
+earth - L'Étrange Défaite by Marc Bloch
+earth - Age of Extremes by Eric Hobsbawm
+fire - Elements by Euclid
+fire - On the Revolution of Heavenly Spheres by Nicolas Copernicus
+fire - Micrographia by Robert Hooke
+fire - Book of Optics by Alhazen Ibn Al-Haytham
+fire - Haidao Suanjing by Liu Hui
+fire - Traité du Triangle Arithmétique by Blaise Pascal
+fire - Al-Jabr by Muhammad Ibn Al-Khwarizmi
+fire - Treatise on the Quadrilateral by Nasir al-Din al-Tusi
+fire - Brahmasphutasiddhanta by Brahmagupta
+fire - Aryabhatiya by Aryabhata
+the rosetta stone
+dark - something from confucius
+dark - plato?
