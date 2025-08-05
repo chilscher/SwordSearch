@@ -145,6 +145,7 @@ public class BattleManager : MonoBehaviour {
             stopNextAttack = true;
             uiManager.PauseEnemyAttackBar();
             uiManager.PauseWaterDrain();
+            uiManager.FadeOutWaterOverlay();
             //uiManager.FadeOutWaterOverlay();
             uiManager.PauseBoulderDebuff();
             uiManager.PausePageTurn();
@@ -372,8 +373,9 @@ public class BattleManager : MonoBehaviour {
 
     private void ApplyBuffForWaterAttack(){
         if ((enemyHealth <= 0) || (playerHealth <= 0))
-            StaticVariables.WaitTimeThenCallFunction(0.6f, uiManager.FadeOutWaterOverlay);
-        isWaterInPuzzleArea = true;
+            return;
+            //StaticVariables.WaitTimeThenCallFunction(0.6f, uiManager.FadeOutWaterOverlay);
+            isWaterInPuzzleArea = true;
         uiManager.FillPuzzleAreaWithWater(StaticVariables.waterFloodDuration);
         inProgressWord.AddWaterBuff();
         UpdateSubmitVisuals();

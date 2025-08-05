@@ -113,7 +113,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battleManager: {fileID: 0}
   data: {fileID: 0}
-  burnDamageQueue: 
 --- !u!114 &1107962101534003463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBattleable: 1
   nameOverride: Dogless Goblin
-  startingHealth: 60
+  startingHealth: 80
   attackOrder:
     Value:
     - attackSpeed: 4
@@ -138,11 +137,12 @@ MonoBehaviour:
       specialColor: {r: 0, g: 0, b: 0, a: 0}
   isDraconic: 0
   isHorde: 0
-  isHoly: 0
-  isDark: 0
   isNearWater: 0
-  canApplyDebuff: 0
+  throwsRocks: 0
   isWaterDangerous: 0
+  isCopycat: 0
+  healsSelf: 0
+  canBurn: 0
   normal: {fileID: -338657862, guid: a458d76ab05da9846aface0cc46e70d9, type: 3}
   angry: {fileID: 1466234483, guid: a458d76ab05da9846aface0cc46e70d9, type: 3}
   defeated: {fileID: -1401176961, guid: a458d76ab05da9846aface0cc46e70d9, type: 3}

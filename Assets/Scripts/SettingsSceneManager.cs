@@ -56,7 +56,9 @@ public class SettingsSceneManager : MonoBehaviour{
         SaveSystem.SaveGame();
     }
 
-    public void WorldUp(){        
+    public void WorldUp(){     
+        if (StaticVariables.highestBeatenStage.nextStage.nextStage.worldName.ToUpper().Contains("DESERT")) //for alpha test
+            return;   
         int newWorld = StaticVariables.highestBeatenStage.nextStage.world + 1;
         if (newWorld > 8)
             newWorld = 8;
@@ -74,7 +76,7 @@ public class SettingsSceneManager : MonoBehaviour{
     }
 
     public void StageUp(){
-        if (StaticVariables.highestBeatenStage.enemyPrefab.name == "Tutorial 5 - Knight")
+        if (StaticVariables.highestBeatenStage.enemyPrefab.name == "Tutorial 5 - Knight") //for alpha test
             return;
         if ((StaticVariables.highestBeatenStage.nextStage != null) && (StaticVariables.highestBeatenStage.nextStage.nextStage != null))
                 StaticVariables.highestBeatenStage = StaticVariables.highestBeatenStage.nextStage;

@@ -12,14 +12,14 @@ public class TutorialManager : BattleManager {
     private char[,] startingLayout3 = {{'O', 'G', 'E', 'N', 'N'}, {'F', 'R', 'I', 'L', 'U'}, {'E', 'A', 'O', 'Z', 'P'}, {'T', 'N', 'E', 'I', 'M'}, {' ', ' ', ' ', ' ', ' '}, {' ', ' ', ' ', ' ', ' '}, {' ', ' ', ' ', ' ', ' '}};
     private char[,] startingLayout4 = {{'C', 'A', 'L', 'D', 'E'}, {'E', 'S', 'I', 'N', 'M'}, {'T', 'A', 'E', 'B', 'R'}, {'T', 'K', 'C', 'O', 'L'}, {' ', ' ', ' ', ' ', ' '}, {' ', ' ', ' ', ' ', ' '}, {' ', ' ', ' ', ' ', ' '}};
     private char[,] startingLayout5 = {{'B', 'R', 'X', 'A', 'F'}, {'A', 'N', 'E', 'D', 'U'}, {'L', 'I', 'A', 'L', 'T'}, {'G', 'O', 'W', 'E', 'I'}, {' ', ' ', ' ', ' ', ' '}, {' ', ' ', ' ', ' ', ' '}, {' ', ' ', ' ', ' ', ' '}};
-    private char[,] startingLayout6 = {{'B', 'R', 'X', 'A', 'F'}, {'A', 'N', 'E', 'D', 'U'}, {'L', 'I', 'A', 'L', 'T'}, {'G', 'O', 'W', 'E', 'I'}, {' ', ' ', ' ', ' ', ' '}, {' ', ' ', ' ', ' ', ' '}, {' ', ' ', ' ', ' ', ' '}};
+    private char[,] startingLayout6 = {{'C', 'A', 'M', 'T', 'E'}, {'R', 'P', 'O', 'L', 'D'}, {'K', 'E', 'T', 'O', 'N'}, {'D', 'I', 'B', 'G', 'A'}, {' ', ' ', ' ', ' ', ' '}, {' ', ' ', ' ', ' ', ' '}, {' ', ' ', ' ', ' ', ' '}};
 
     private char[,] startingPowerups1 = {{'-', '-', '-', '-', '-'}, {'-', 'H', '-', '-', '-'}, {'-', '-', '-', '-', '-'}, {'-', '-', '-', 'W', '-'}, {'-', '-', '-', '-', '-'}, {'-', '-', '-', '-', '-'}, {'-', '-', '-', '-', '-'}};
     private char[,] startingPowerups2 = {{'-', 'E', '-', '-', '-'}, {'-', '-', '-', '-', '-'}, {'-', '-', '-', '-', '-'}, {'-', '-', '-', 'E', '-'}, {'-', '-', '-', '-', '-'}, {'-', '-', '-', '-', '-'}, {'-', '-', '-', '-', '-'}};
-    private char[,] startingPowerups3 = {{'-', 'F', '-', '-', '-'}, {'-', '-', '-', '-', 'X'}, {'-', '-', '-', '-', '-'}, {'-', '-', '-', 'F', '-'}, {'-', '-', '-', '-', '-'}, {'-', '-', '-', '-', '-'}, {'-', '-', '-', '-', '-'}};
+    private char[,] startingPowerups3 = {{'-', '-', '-', 'X', '-'}, {'-', 'F', '-', '-', '-'}, {'-', '-', '-', '-', '-'}, {'-', '-', 'F', '-', '-'}, {'-', '-', '-', '-', '-'}, {'-', '-', '-', '-', '-'}, {'-', '-', '-', '-', '-'}};
 
 
-    private enum Cond{Click, CompleteWord, ReleaseFinger, SubmitWord, EnemyTakesDamage, EnemyDies, SubmitAnyWord, EnemyAttacks, PlayerTakesDamage, TurnPage, TurnPageEnds, NormalBattle, SubmitHealingWord, PlayerGetsHealed, SubmitWaterWord, WaterFillsPage, WaterDrains, SubmitEarthWord, SubmitFireWord};
+    private enum Cond{Click, CompleteWord, ReleaseFinger, SubmitWord, EnemyTakesDamage, EnemyDies, SubmitAnyWord, EnemyAttacks, PlayerTakesDamage, TurnPage, TurnPageEnds, NormalBattle, SubmitHealingWord, PlayerGetsHealed, SubmitWaterWord, WaterFillsPage, WaterDrains, SubmitEarthWord, SubmitFireWord, EnemyTakesDamageWithEmptyQueue};
     private Cond advanceCondition;
     private char[] requiredWord;
     private bool canEnemyTakeDamage = false;
@@ -344,7 +344,7 @@ public class TutorialManager : BattleManager {
         }
         else if (++i == tutorialStep){
             DisplayText("");
-            advanceCondition = Cond.EnemyTakesDamage;
+            advanceCondition = Cond.EnemyTakesDamageWithEmptyQueue;
         }
         else if (++i == tutorialStep){
             ShowTutorialShadow();
@@ -360,11 +360,11 @@ public class TutorialManager : BattleManager {
         }
         else if (++i == tutorialStep){
             DisplayText("The enemy's attacks will damage your health.");
-            highlightPlayerHealth.SetActive(false);
             advanceCondition = Cond.Click;
         }
         else if (++i == tutorialStep){
             DisplayText("Between your health and the enemy's health is a brown bar. This bar is a timer.");
+            highlightPlayerHealth.SetActive(false);
             highlightEnemyTimer.SetActive(true);
             advanceCondition = Cond.Click;
         }
@@ -409,6 +409,9 @@ public class TutorialManager : BattleManager {
         }
         else if (++i == tutorialStep){
             advanceCondition = Cond.SubmitAnyWord;
+        }
+        else if (++i == tutorialStep){
+            advanceCondition = Cond.EnemyTakesDamageWithEmptyQueue;
         }
         else if (++i == tutorialStep){
             ShowTutorialShadow();
@@ -751,7 +754,7 @@ public class TutorialManager : BattleManager {
             advanceCondition = Cond.Click;
         }
         else if (++i == tutorialStep){
-            DisplayText("Words made using the <fire>element of fire<> will deal <damage>triple the normal damage<>!");
+            DisplayText("Words made using the <fire>power of fire<> will deal <damage>triple the normal damage<>!");
             advanceCondition = Cond.Click;
         }
         else if (++i == tutorialStep){
@@ -1133,6 +1136,10 @@ public class TutorialManager : BattleManager {
                 break;
             case (Cond.NormalBattle):
                 if (enemyHealth <= 0)
+                    AdvanceTutorialStep();
+                break;
+            case (Cond.EnemyTakesDamageWithEmptyQueue):
+                if (attackQueue.Count == 0)
                     AdvanceTutorialStep();
                 break;
         }
