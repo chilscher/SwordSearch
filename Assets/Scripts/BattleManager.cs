@@ -146,6 +146,7 @@ public class BattleManager : MonoBehaviour {
             uiManager.PauseEnemyAttackBar();
             uiManager.PauseWaterDrain();
             uiManager.FadeOutWaterOverlay();
+            uiManager.RemoveRocksFromEdgeOfPuzzle();
             //uiManager.FadeOutWaterOverlay();
             uiManager.PauseBoulderDebuff();
             uiManager.PausePageTurn();
@@ -196,10 +197,12 @@ public class BattleManager : MonoBehaviour {
             playerHealth = 0;
         uiManager.ShowPlayerTakingDamage(amount, playerHealth > 0, showZeroDamage: amount == 0);
         uiManager.DisplayHealths(playerHealth, enemyHealth);
-        if (playerHealth == 0)
-        {
+        if (playerHealth == 0) {
             uiManager.PauseEnemyAttackBar();
             uiManager.PauseWaterDrain();
+            uiManager.FadeOutWaterOverlay();
+            uiManager.RemoveRocksFromEdgeOfPuzzle();
+            //uiManager.FadeOutWaterOverlay();
             //uiManager.FadeOutWaterOverlay();
             uiManager.PauseBoulderDebuff();
             uiManager.PausePageTurn();
@@ -724,13 +727,15 @@ public class BattleManager : MonoBehaviour {
 
     public void EnemyReturnedToIdle(){
         //print("here");
+        if (enemyHealth <= 0)
+            return;
         CheckToUseQueuedAttack(false, true);
     }
 
     public void PlayerAttackAnimationFinished(GameObject attackObject) {
         //destroys the gameobject, then resumes the enemy attack timer
         Destroy(attackObject);
-        if (enemyHealth < 1)
+        if (enemyHealth <= 0)
             return;
         uiManager.ResumeEnemyAttackBar();
         if (attackQueue.Count > 0)
@@ -883,6 +888,7 @@ public class AttackData {
         if (type == BattleManager.PowerupTypes.Fire)
             str *= StaticVariables.fireDamageMultiplier;
         strength = str;
+        //strength = 130;
     }
 
     public void SetPowerupType() {

@@ -97,6 +97,7 @@ public class CutsceneManager : MonoBehaviour{
         PlayAnimation("Bartender", "Idle Front");
         PlayAnimation("Child 1", "Idle Front");
         PlayAnimation("Child 2", "Idle Front");
+        //cutsceneStep = 40; //for testing townspeople walking into a cirlce
     }
 
     private void SetupGrasslands1(){
@@ -237,18 +238,6 @@ public class CutsceneManager : MonoBehaviour{
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("Okay, okay...\nLet's see here...", DialogueStep.Emotion.Normal);
         }     
-        //else if (++i == cutsceneStep){
-        //    AdvanceConditionDialogue_NobodyTalking();
-        //}        
-        //else if (++i == cutsceneStep){
-        //    PlayAnimation("Child 2", "Show Newspaper");
-        //    AdvanceConditionWait(1.3f);
-        //}        
-        //else if (++i == cutsceneStep){
-        //    PlayAnimation("Child 2", "Idle Not Holding Newspaper");
-        //    PlayAnimation("Player", "Idle Holding Newspaper");
-        //    AdvanceConditionWait(0.6f);
-        //}
         else if (++i == cutsceneStep){
             PlayAnimation("Child 2", "Idle Not Holding Newspaper");
             PlayAnimation("Player", "Idle Holding Newspaper");
@@ -295,7 +284,6 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_NobodyTalking(true);
         }
         else if (++i == cutsceneStep){
-            //DisplayNobodyTalking();
             PlayAnimation("Red Dragon", "Fly");
             MoveObject("Red Dragon", 1200, 1377, 2f);
             AdvanceConditionWait(1f);
@@ -394,7 +382,6 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_NobodyTalking(true);
         }
         else if (++i == cutsceneStep){
-            //DisplayNobodyTalking();
             PlayAnimationAndMoveThenIdle("Goblin 1", "Walk", 70, -96, 2.2f);
             PlayAnimationAndMoveThenIdle("Goblin 2", "Walk", 514, 310, 2f);
             PlayAnimationAndMoveThenIdle("Goblin 3", "Walk", 446, 489, 2f);
@@ -425,16 +412,6 @@ public class CutsceneManager : MonoBehaviour{
             HideEnemyChathead();
             AdvanceConditionWait(0.2f);
         }
-        /*
-        else if (++i == cutsceneStep){
-            //PlayAnimationAndMoveThenIdle("Blacksmith", "Walk", 29, 130, 0.5f);
-            PlayAnimationAndMoveThenIdle("Redhead Lady", "Walk", 274, 535, 1f);
-            //PlayAnimationAndMoveThenIdle("Brown Hair Lady No Hat", "Walk", -419, 244, 0.6f);
-            PlayAnimationAndMoveThenIdle("Blacksmith", "Walk", -110, 21, 0.2f);
-            PlayAnimationAndMoveThenIdle("Brown Hair Lady No Hat", "Walk", 29, 130, 0.5f);
-            AdvanceConditionWait(0.3f);
-        }    
-        */
         else if (++i == cutsceneStep){
             PlayAnimation("Redhead Lady", "Walk");
             MoveObject("Redhead Lady", 274, 535, 1f);
@@ -463,15 +440,7 @@ public class CutsceneManager : MonoBehaviour{
         else if (++i == cutsceneStep){
             PlayAnimation("Goblin 3", "Walk");
             AdvanceConditionWait(0.4f);
-        }  
-        /*
-        else if (++i == cutsceneStep){
-            PlayAnimationAndMoveThenIdle("Goblin 2", "Walk", 575, 310, 0.5f);
-            //PlayAnimationAndMoveThenIdle("Goblin 1", "Walk", -244, 191, 1f);
-            FlipDirection("Goblin 2");
-            AdvanceConditionWait(1.5f);
-        }
-        */   
+        }    
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("I don't know anything about fighting...", DialogueStep.Emotion.Worried);
         }        
@@ -490,6 +459,12 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("All of my precious books are burning! I have to save them!", DialogueStep.Emotion.Worried);
         }
         else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("What do I do? What do I do??", DialogueStep.Emotion.Worried);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("There's no time to think! I'll just throw them into the well!", DialogueStep.Emotion.Worried);
+        }
+        else if (++i == cutsceneStep){
             DisplayNobodyTalking();
             HideChatheads();
             PlayAnimation("Player", "Walk");
@@ -505,13 +480,19 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionWait(3f);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("She really likes her books huh...", "Child 1", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("Her best idea was chucking books into a well?", "Child 1", DialogueStep.Emotion.Normal);
+        }
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_EnemyTalking("She really likes her books huh...", "Child 1", DialogueStep.Emotion.Normal);
+       // }
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_EnemyTalking("Yeah, what a weirdo.", "Child 2", DialogueStep.Emotion.Normal);
+        //}
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("Doesn't water damage books though?", "Child 2", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("Yeah, what a weirdo.", "Child 2", DialogueStep.Emotion.Normal);
-        }
-        else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("Do you think we should go help her?", "Child 1", DialogueStep.Emotion.Questioning);
+            AdvanceConditionDialogue_EnemyTalking("You're right... Maybe we should go in there and help her?", "Child 1", DialogueStep.Emotion.Questioning);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("No, I don't want to get smacked by a flying book today.", "Child 2", DialogueStep.Emotion.Normal);
@@ -553,8 +534,7 @@ public class CutsceneManager : MonoBehaviour{
         }
         else if (++i == cutsceneStep){  
             StopShakeScreen();   
-            AdvanceConditionWait(0.1f);        
-            //AdvanceConditionWait(2.5f);
+            AdvanceConditionWait(0.1f);     
         }
         else if (++i == cutsceneStep){
             MagicFlash flash = GetAnimatorFromName("Water Spray").transform.GetChild(0).GetComponent<MagicFlash>();
@@ -611,15 +591,9 @@ public class CutsceneManager : MonoBehaviour{
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("Isn't this just an introduction to spelling and the alphabet?", DialogueStep.Emotion.Questioning);
         }
-        //else if (++i == cutsceneStep){
-        //    AdvanceConditionDialogue_PlayerTalking("I always thought this was an old empty journal...", DialogueStep.Emotion.Questioning);
-        //}
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("But... now the pages are filled with random letters!", DialogueStep.Emotion.Questioning);
         }
-        //else if (++i == cutsceneStep){
-        //    AdvanceConditionDialogue_PlayerTalking("I bet it was invisible ink... or maybe even magic?", DialogueStep.Emotion.Questioning);
-        //}
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("Could it be an actual spellbook?", DialogueStep.Emotion.Questioning);
         }
@@ -627,212 +601,203 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("And the letters react to my touch! It's definitely probably magical!", DialogueStep.Emotion.Happy);
         }
         else if (++i == cutsceneStep){
-            StaticVariables.hasCompletedStage = true;
-            StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
+            EndNormalStage();
         }
     }
     
     private void DoHometown2Step(){
         int i = 0;
-        if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("I saw you shooting some magic water at those goblins!", "Blacksmith", DialogueStep.Emotion.Normal);
+        if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_EnemyTalking("I saw you shooting some <water>magic water<> at those goblins!", "Blacksmith", DialogueStep.Emotion.Normal);
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("I didn't know you had that fighting spirit in you!", "Blacksmith", DialogueStep.Emotion.Happy);
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_PlayerTalking("I wouldn't call myself much of a warrior...", DialogueStep.Emotion.Worried);
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Nonsense! You were incredible!", "Blacksmith", DialogueStep.Emotion.Happy);
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("And the magic too! How did you do that??", "Brown Hair Lady No Hat", DialogueStep.Emotion.Questioning);
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_PlayerTalking("To be honest, I'm not sure.", DialogueStep.Emotion.Normal);
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_PlayerTalking("One of the old library books has these weird glowing letters, and...", DialogueStep.Emotion.Normal);
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_PlayerTalking("It might make more sense if you give it a try yourself!", DialogueStep.Emotion.Happy);
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_NobodyTalking();
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             PlayAnimation("Player", "Take Out Book");
             AdvanceConditionWait(2f);
-        }        
-        else if (++i == cutsceneStep){
+        }
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("The paper has a bunch of strange symbols on it...", "Brown Hair Lady No Hat", DialogueStep.Emotion.Questioning);
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_PlayerTalking("Those are letters. You know, the kind people use for reading and writing?", DialogueStep.Emotion.Questioning);
-        } 
-        else if (++i == cutsceneStep){
+        }
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Wow! Magic is crazy!", "Brown Hair Lady No Hat", DialogueStep.Emotion.Happy);
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_PlayerTalking("Um, we haven't quite arrived at the magic yet...", DialogueStep.Emotion.Worried);
-        } 
-        //else if (++i == cutsceneStep){
-        //    AdvanceConditionDialogue_EnemyTalking("There's more?", "Brown Hair Lady No Hat", DialogueStep.Emotion.Happy);
-        //}
-        else if (++i == cutsceneStep){
+        }
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_PlayerTalking("Try touching the letters!", DialogueStep.Emotion.Happy);
-        } 
-        //the paper has a bunch of strange symbols on it...
-        //those are letters. you know, the kind people use for reading and writing?
-        //wow! magic is crazy!
-        //well we haven't exactly gotten to the interesting part yet...
-        //try touching the letters!
-
-        //else if (++i == cutsceneStep){
-        //    AdvanceConditionDialogue_EnemyTalking("T", "Brown Hair Lady No Hat", DialogueStep.Emotion.Questioning);
-        //}
-        //else if (++i == cutsceneStep){
-        //    AdvanceConditionDialogue_PlayerTalking("Do you see all those jumbled random letters?", DialogueStep.Emotion.Questioning);
-        //}
-        //else if (++i == cutsceneStep){
-        //    AdvanceConditionDialogue_EnemyTalking("Yeah?", "Brown Hair Lady No Hat", DialogueStep.Emotion.Questioning);
-        //}
-        //else if (++i == cutsceneStep){
-        //    AdvanceConditionDialogue_PlayerTalking("Try touching them!", DialogueStep.Emotion.Happy);
-        //}
-        else if (++i == cutsceneStep){
+        }
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_NobodyTalking();
-        }        
-        else if (++i == cutsceneStep){
+        }
+        else if (++i == cutsceneStep) {
             PlayAnimationAndMoveThenIdle("Brown Hair Lady No Hat", "Walk", -200, 585, 0.4f);
             AdvanceConditionWait(0.4f);
-        }   
-        else if (++i == cutsceneStep){
+        }
+        else if (++i == cutsceneStep) {
             AdvanceConditionWait(1f);
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             PlayAnimationAndMoveThenIdle("Brown Hair Lady No Hat", "Walk", -117, 550, 0.4f);
             AdvanceConditionWait(0.4f);
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Nothing interesting happens...", "Brown Hair Lady No Hat", DialogueStep.Emotion.Normal);
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_PlayerTalking("That's weird, it works for me. Watch!", DialogueStep.Emotion.Questioning);
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_NobodyTalking();
-        }        
-        else if (++i == cutsceneStep){
+        }
+        else if (++i == cutsceneStep) {
             PlayAnimation("Player", "Cast Spell");
             AdvanceConditionWait(0.33f);
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             GetAnimatorFromName("Player").transform.parent.GetChild(2).gameObject.SetActive(true);
             AdvanceConditionWait(1.5f);
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             GetAnimatorFromName("Player").transform.parent.GetChild(2).gameObject.SetActive(false);
             AdvanceConditionDialogue_EnemyTalking("Hey! Don't start throwing magic at people!", "Redhead Guy", DialogueStep.Emotion.Angry);
             FlipDirection("Redhead Guy");
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Yeah, if you want to sling spells, go to the Academy!", "Blond Lady", DialogueStep.Emotion.Angry);
             FlipDirection("Blond Lady");
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("It's been a long time since anyone used magic around here.", "Redhead Lady", DialogueStep.Emotion.Normal);
             PlayAnimation("Redhead Lady", "Idle");
         }
-        //else if (++i == cutsceneStep){
-        //    AdvanceConditionDialogue_EnemyTalking("The last person was who, old man Eldric? ", "Redhead Guy", DialogueStep.Emotion.Normal);
-        //}
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Yeah, it's been decades since Eldric was stomping around here, slinging his spells...", "Redhead Guy", DialogueStep.Emotion.Normal);
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Hey, I'm not dead, I'm just old!", "Elder", DialogueStep.Emotion.Angry);
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_NobodyTalking();
-        }        
-        else if (++i == cutsceneStep){
+        }
+        else if (++i == cutsceneStep) {
             PlayAnimationAndMoveThenIdle("Elder", "Walk", 427, 471, 2f);
             AdvanceConditionWait(2f);
-        }   
-        else if (++i == cutsceneStep){
+        }
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("You whippersnappers are flappin' yer yappers about my magic?", "Elder", DialogueStep.Emotion.Questioning);
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Well, you're right. Back in the old days, when I could still touch my toes, I had control over the wind!", "Elder", DialogueStep.Emotion.Happy);
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_PlayerTalking("Like you could make tornadoes and stuff?", DialogueStep.Emotion.Questioning);
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Yes! I could make tornadoes! And stuff!", "Elder", DialogueStep.Emotion.Normal);
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("I was an adventurer! Slaying monsters, saving princesses...", "Elder", DialogueStep.Emotion.Happy);
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("I even fought an owlbear once!", "Elder", DialogueStep.Emotion.Happy);
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("But one day I woke up with a shake in my hands, and that was it. I couldn't use magic after that.", "Elder", DialogueStep.Emotion.Worried);
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_PlayerTalking("I've read some of the library's medical textbooks. Maybe there's something in one of them that could heal your hand tremors?", DialogueStep.Emotion.Questioning);
         }
-        else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("Oh! My book can do some healing magic! I bet I could fix your hands with that!", DialogueStep.Emotion.Happy);
+        else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_PlayerTalking("Oh! My book can do some <healing>healing magic<>! I bet I could fix your hands with that!", DialogueStep.Emotion.Happy);
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Young lady, that is very kind of you. But I'm afraid we have more important matters to discuss today.", "Elder", DialogueStep.Emotion.Normal);
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Gather 'round, everyone!", "Elder", DialogueStep.Emotion.Normal);
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_NobodyTalking();
-        }  
-        else if (++i == cutsceneStep){
-            FlipDirection("Shopkeeper");
-            PlayAnimationAndMoveThenIdle("Shopkeeper", "Walk", -156, 129, 2.3f);
-            FlipDirection("Blue-haired Lady");
-            PlayAnimationAndMoveThenIdle("Blue-haired Lady", "Walk", 106, 114, 2f);
-            
-            PlayAnimation("Child 2", "Walk");
-            MoveObject("Child 2", 268, 172, 2.1f);
-            //PlayAnimationAndMoveThenIdle("Child 2", "Walk", 268, 172, 2.2f);
-            PlayAnimationAndMoveThenIdle("Child 1", "Walk", 361, 370, 1.6f);
-            PlayAnimationAndMoveThenIdle("Chef", "Walk", -284, 254, 1.6f);
-            AdvanceConditionWait(0.8f);
-        }        
-        else if (++i == cutsceneStep){
-            PlayAnimationAndMoveThenIdle("Brown Hair Lady No Hat", "Walk", -384, 413, 0.8f);
-            AdvanceConditionWait(0.6f);
         }
-        else if (++i == cutsceneStep){
-            FlipDirection("Brown Hair Lady No Hat");
+        else if (++i == cutsceneStep) {
+            PlayAnimation("Child 2", "Walk");
+            MoveObject("Child 2", 268, 172, 1.4f);
+            AdvanceConditionWait(0.1f);
+        }
+        else if (++i == cutsceneStep) {
+            PlayAnimationAndMoveThenIdle("Child 1", "Walk", 361, 370, 1.6f);
+            AdvanceConditionWait(0.4f);
+        }
+        else if (++i == cutsceneStep) {
+            PlayAnimationAndMoveThenIdle("Blond Lady", "Walk", 73, 803, 2.3f);
             AdvanceConditionWait(0.2f);
         }
-        else if (++i == cutsceneStep){
+        else if (++i == cutsceneStep) {
+            PlayAnimationAndMoveThenIdle("Brown Hair Lady No Hat", "Walk", -384, 413, 1.8f);
+            AdvanceConditionWait(0.2f);
+        }
+        else if (++i == cutsceneStep) {
             FlipDirection("Shopkeeper");
-            PlayAnimationAndMoveThenIdle("Redhead Lady", "Walk", 348, 573, 2.1f);
-            PlayAnimationAndMoveThenIdle("Redhead Guy", "Walk", 219, 724, 2.2f);
-            PlayAnimationAndMoveThenIdle("Blond Lady", "Walk", 73, 803, 2.3f);
+            PlayAnimationAndMoveThenIdle("Shopkeeper", "Walk", -156, 129, 1.6f);
+            AdvanceConditionWait(0.3f);
+        }
+        else if (++i == cutsceneStep) {
+            PlayAnimationAndMoveThenIdle("Chef", "Walk", -284, 254, 1.6f);
+            AdvanceConditionWait(0.2f);
+        }    
+        else if (++i == cutsceneStep) {
+            PlayAnimation("Child 2", "Idle Not Holding Newspaper");
+            PlayAnimationAndMoveThenIdle("Redhead Lady", "Walk", 348, 573, 1.4f);
+            AdvanceConditionWait(0.3f);
+        }    
+        else if (++i == cutsceneStep) {
+            PlayAnimationAndMoveThenIdle("Redhead Guy", "Walk", 219, 724, 0.8f);
+            FlipDirection("Blue-haired Lady");
+            PlayAnimationAndMoveThenIdle("Blue-haired Lady", "Walk", 106, 114, 0.8f);
+            AdvanceConditionWait(0.3f);
+        }    
+        else if (++i == cutsceneStep){
             PlayAnimationAndMoveThenIdle("Blacksmith", "Walk", -205, 763, 0.5f);
+            FlipDirection("Brown Hair Lady No Hat");
             AdvanceConditionWait(0.5f);
         }
         else if (++i == cutsceneStep){
+            FlipDirection("Shopkeeper");
             FlipDirection("Blacksmith");
-            PlayAnimation("Child 2", "Idle Not Holding Newspaper");
             AdvanceConditionWait(0.5f);
         }
         //else if (++i == cutsceneStep){
-        //    AdvanceConditionWait(0.4f);
+        //    AdvanceConditionWait(0.5f);
+       // }
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionWait(0.5f);
         //}
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("Allow me to be blunt here... If that dragon comes by again, we're toast!", "Elder", DialogueStep.Emotion.Worried);
@@ -910,7 +875,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("I can go.", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("With my water magic I should be able to survive there.", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_PlayerTalking("With my <water>water magic<> I should be able to survive there.", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("I'll return with the sword, and then we can fight back against these dragon tyrants!", DialogueStep.Emotion.Angry);
@@ -919,7 +884,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("If you're sure...", "Elder", DialogueStep.Emotion.Questioning);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("I am!!", DialogueStep.Emotion.Happy);
+            AdvanceConditionDialogue_PlayerTalking("I am.", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("To get to the desert, you'll have to get to the far side of the enchanted forest, beyond the grasslands to the south.", "Elder", DialogueStep.Emotion.Normal);
@@ -928,8 +893,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("And don't worry about us, we will make sure the town stays safe!", "Blacksmith", DialogueStep.Emotion.Happy);
         }
         else if (++i == cutsceneStep){
-            StaticVariables.hasCompletedStage = true;
-            StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
+            EndLastStageOfWorld();
         }
     }
 
@@ -1090,8 +1054,7 @@ public class CutsceneManager : MonoBehaviour{
             PlayAnimationAndMoveThenIdle("Player", "Walk", 500, 2012, 5f);
         }
         else if (++i == cutsceneStep){
-            StaticVariables.hasCompletedStage = true;
-            StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
+            EndNormalStage();
         }
     }
     
@@ -1443,8 +1406,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionWait(2f);
         }
         else if (++i == cutsceneStep) {
-            StaticVariables.hasCompletedStage = true;
-            StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
+            EndLastStageOfWorld();
         }
         /*
         else if (++i == cutsceneStep){
@@ -1559,8 +1521,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionWait(2f);
         }     
         else if (++i == cutsceneStep){
-            StaticVariables.hasCompletedStage = true;
-            StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
+            EndNormalStage();
         }
     }
 
@@ -1950,8 +1911,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionWait(0.5f);
         }
         else if (++i == cutsceneStep){
-            StaticVariables.hasCompletedStage = true;
-            StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
+            EndNormalStage();
             AdvanceConditionWait(0.75f);
         }
         //something breaks on the rock impact
@@ -2317,8 +2277,7 @@ public class CutsceneManager : MonoBehaviour{
             PlayAnimationAndMoveThenIdle("Player", "Walk", -999, 1915, 5f);
         }
         else if (++i == cutsceneStep){
-            StaticVariables.hasCompletedStage = true;
-            StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
+            EndLastStageOfWorld();
         }
 
 
@@ -2599,8 +2558,7 @@ public class CutsceneManager : MonoBehaviour{
             PlayAnimationAndMoveThenIdle("Player", "Walk", 900, 2137, 5f);
         }
         else if (++i == cutsceneStep){
-            StaticVariables.hasCompletedStage = true;
-            StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
+            EndNormalStage();
         }
         //else if (++i == cutsceneStep){
         //    DisplayNobodyTalking();
@@ -2879,7 +2837,29 @@ public class CutsceneManager : MonoBehaviour{
         StaticVariables.hasCompletedStage = false;
         StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
     }
-
+    
+    private void EndLastStageOfWorld(){
+        //if you havent beaten this world before
+        if (StaticVariables.lastVisitedStage == StaticVariables.highestBeatenStage.nextStage){
+            StaticVariables.highestBeatenStage = StaticVariables.highestBeatenStage.nextStage;
+            StaticVariables.hasTalkedToNewestEnemy = false;
+            StaticVariables.hasCompletedStage = false;
+            StaticVariables.lastVisitedStage = StaticVariables.highestBeatenStage.nextStage;
+            SaveSystem.SaveGame();
+            StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
+        }
+        else{
+            StaticVariables.hasCompletedStage = true;
+            SaveSystem.SaveGame();
+            StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
+        }
+    }
+    
+    private void EndNormalStage(){
+        StaticVariables.hasCompletedStage = true;
+        SaveSystem.SaveGame();
+        StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
+    }
 }
 
 

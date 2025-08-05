@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 815226952419649515}
   - component: {fileID: 815226952419649514}
   m_Layer: 0
-  m_Name: Wolf Rider
+  m_Name: Goblin General Horde Data
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,7 +34,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -114,7 +113,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battleManager: {fileID: 0}
   data: {fileID: 0}
-  burnDamageQueue: 
 --- !u!114 &815226952419649514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,24 +127,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBattleable: 1
   nameOverride: Goblin General
-  startingHealth: 45
+  startingHealth: 60
   attackOrder:
     Value:
     - attackSpeed: 6
-      attackDamage: 3
+      attackDamage: 5
       isSpecial: 0
       specialType: 0
       specialColor: {r: 0, g: 0, b: 0, a: 0}
   isDraconic: 0
   isHorde: 0
-  isHoly: 0
-  isDark: 0
   isNearWater: 0
-  canApplyDebuff: 0
+  throwsRocks: 0
+  isWaterDangerous: 0
+  isCopycat: 0
+  healsSelf: 0
+  canBurn: 0
   normal: {fileID: 21300000, guid: b49f52f681ca8704b9065f3f0de87512, type: 3}
   angry: {fileID: 21300000, guid: 33625fcaa087dba40a24db45a1603313, type: 3}
   defeated: {fileID: 21300000, guid: 683176d32c9b98648872384ea1a3f732, type: 3}
   excited: {fileID: 0}
+  happy: {fileID: 0}
   questioning: {fileID: 0}
+  worried: {fileID: 0}
+  surprised: {fileID: 0}
+  mystery: {fileID: 0}
+  custom1: {fileID: 0}
+  custom2: {fileID: 0}
+  custom3: {fileID: 0}
   overworldDialogueSteps: []
   victoryDialogueSteps: []

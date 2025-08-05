@@ -117,11 +117,12 @@ MonoBehaviour:
     Value: []
   isDraconic: 0
   isHorde: 0
-  isHoly: 0
-  isDark: 0
   isNearWater: 0
-  canApplyDebuff: 0
+  throwsRocks: 0
   isWaterDangerous: 0
+  isCopycat: 0
+  healsSelf: 0
+  canBurn: 0
   normal: {fileID: -893409180, guid: 80dd7a0939a891f479e2f64e52994e90, type: 3}
   angry: {fileID: -1227289047, guid: 80dd7a0939a891f479e2f64e52994e90, type: 3}
   defeated: {fileID: 0}
@@ -133,5 +134,6 @@ MonoBehaviour:
   mystery: {fileID: 0}
   custom1: {fileID: 0}
   custom2: {fileID: 0}
+  custom3: {fileID: 0}
   overworldDialogueSteps: []
   victoryDialogueSteps: []

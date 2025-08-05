@@ -62,16 +62,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBattleable: 1
   nameOverride: Hopsy  &  Flopsy
-  startingHealth: 50
+  startingHealth: 60
   attackOrder:
     Value: []
   isDraconic: 0
   isHorde: 1
-  isHoly: 0
-  isDark: 0
   isNearWater: 0
-  canApplyDebuff: 0
+  throwsRocks: 0
   isWaterDangerous: 1
+  isCopycat: 0
+  healsSelf: 0
+  canBurn: 0
   normal: {fileID: 0}
   angry: {fileID: -1176699407, guid: c813dd0f7eb3db34e97dba98fba35e38, type: 3}
   defeated: {fileID: 0}

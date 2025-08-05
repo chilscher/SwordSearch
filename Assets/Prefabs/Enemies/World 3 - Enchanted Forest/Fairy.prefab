@@ -113,7 +113,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battleManager: {fileID: 0}
   data: {fileID: 0}
-  burnDamageQueue: 
 --- !u!114 &1107962101534003463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBattleable: 1
   nameOverride: Fairy
-  startingHealth: 100
+  startingHealth: 150
   attackOrder:
     Value:
     - attackSpeed: 6
@@ -138,12 +137,12 @@ MonoBehaviour:
       specialColor: {r: 0.49019608, g: 0.23921569, b: 0.08627451, a: 1}
   isDraconic: 0
   isHorde: 0
-  isHoly: 0
-  isDark: 0
   isNearWater: 0
-  canApplyDebuff: 0
+  throwsRocks: 0
   isWaterDangerous: 0
   isCopycat: 1
+  healsSelf: 0
+  canBurn: 0
   normal: {fileID: -1247256924, guid: 3e6795e51b8fdce48ae51e2b5f3c047b, type: 3}
   angry: {fileID: -967131540, guid: 3e6795e51b8fdce48ae51e2b5f3c047b, type: 3}
   defeated: {fileID: -1732052002, guid: 3e6795e51b8fdce48ae51e2b5f3c047b, type: 3}

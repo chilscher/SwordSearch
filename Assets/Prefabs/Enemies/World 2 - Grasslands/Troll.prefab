@@ -113,7 +113,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battleManager: {fileID: 0}
   data: {fileID: 0}
-  burnDamageQueue: 
 --- !u!114 &815226952419649514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBattleable: 1
   nameOverride: Bridge Troll
-  startingHealth: 90
+  startingHealth: 120
   attackOrder:
     Value:
     - attackSpeed: 7
@@ -138,11 +137,12 @@ MonoBehaviour:
       specialColor: {r: 0, g: 0, b: 0, a: 0}
   isDraconic: 0
   isHorde: 0
-  isHoly: 0
-  isDark: 0
   isNearWater: 1
-  canApplyDebuff: 0
+  throwsRocks: 0
   isWaterDangerous: 0
+  isCopycat: 0
+  healsSelf: 0
+  canBurn: 0
   normal: {fileID: -1140889484, guid: d8143a4214e2e02429209bd8162d302b, type: 3}
   angry: {fileID: 0}
   defeated: {fileID: -703376662, guid: d8143a4214e2e02429209bd8162d302b, type: 3}
