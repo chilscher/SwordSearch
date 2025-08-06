@@ -1600,7 +1600,6 @@ public class CutsceneManager : MonoBehaviour{
             CutsceneTreeMimic mimic = GetObjectFromName("Tree Synchronizer").transform.GetChild(0).GetComponent<CutsceneTreeMimic>();
             mimic.gameObject.SetActive(true);
             mimic.originalTree = GetObjectFromName("Tree Spawner 3").transform.GetChild(1);
-            StaticVariables.WaitTimeThenCallFunction(externalTriggerParameter, mimic.DestroyScript);
 
             //print(externalTriggerParameter);
             AdvanceConditionWait(externalTriggerParameter - 0.5f);
@@ -1610,8 +1609,10 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionWait(0.5f);
         } 
         else if (++i == cutsceneStep){
-            DOTween.KillAll();
+            //DOTween.KillAll();
             PlayAnimation("Player", "Idle Holding Book");
+            CutsceneTreeMimic mimic = GetObjectFromName("Tree Synchronizer").transform.GetChild(0).GetComponent<CutsceneTreeMimic>();
+            StaticVariables.WaitTimeThenCallFunction(0.1f, mimic.DestroyScript);
             AdvanceConditionWait(0.5f);
         } 
         else if (++i == cutsceneStep){
