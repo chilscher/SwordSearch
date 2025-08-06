@@ -753,7 +753,13 @@ public class TutorialManager : BattleManager {
             advanceCondition = Cond.Click;
         }
         else if (++i == tutorialStep){
-            DisplayText("Words made using the <fire>power of fire<> will deal <damage>triple the normal damage<>!");
+            string amt = "";
+            amt = StaticVariables.fireDamageMultiplier switch {
+                (2) => "double",
+                (3) => "triple",
+                _ => StaticVariables.fireDamageMultiplier + "x",
+            };
+            DisplayText("Words made using the <fire>power of fire<> will deal <damage>" + amt + " the normal damage<>!");
             advanceCondition = Cond.Click;
         }
         else if (++i == tutorialStep){
