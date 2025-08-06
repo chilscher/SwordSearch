@@ -37,7 +37,7 @@ public class CutsceneTreeFinalSynchronizer : MonoBehaviour{
 
         foreach (Transform cluster in clusters){
             DOTween.Kill(cluster);
-            cluster.DOLocalMoveX(cluster.localPosition.x -standaloneTreeDistanceRemaining, timeToMove).SetEase(Ease.Linear);
+            cluster.DOLocalMoveX(cluster.localPosition.x -standaloneTreeDistanceRemaining, timeToMove).SetEase(Ease.Linear).OnComplete(StandaloneTreeFinishedMoving);
         }
         
         FindObjectOfType<CutsceneManager>().ExternalTrigger(timeToMove);
@@ -45,5 +45,11 @@ public class CutsceneTreeFinalSynchronizer : MonoBehaviour{
 
     private void DeleteMimicTreeScript(){
         Destroy(mimicTreeScript);
+    }
+    
+    private void StandaloneTreeFinishedMoving(){
+        foreach (Transform cluster in clusters){
+            DOTween.Kill(cluster);
+        }
     }
 }

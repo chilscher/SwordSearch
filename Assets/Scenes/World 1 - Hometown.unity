@@ -31877,6 +31877,7 @@ MonoBehaviour:
   - {fileID: 2595863967861342857}
   - {fileID: 743201769844318053}
   sceneHeader: {fileID: 1552474486}
+  generalSceneManager: {fileID: 370989885}
   playerStepDuration: 0.2
   thisWorldNum: 1
   powerupsPerPuzzle: 3
@@ -69747,10 +69748,8 @@ MonoBehaviour:
       specialColor: {r: 0, g: 0, b: 0, a: 0}
   isDraconic: 0
   isHorde: 0
-  isHoly: 0
-  isDark: 0
   isNearWater: 0
-  canApplyDebuff: 0
+  throwsRocks: 0
   isWaterDangerous: 0
   isCopycat: 0
   healsSelf: 0
@@ -71909,7 +71908,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battleManager: {fileID: 0}
   data: {fileID: 0}
-  burnDamageQueue: 
 --- !u!1 &1357957825517041504
 GameObject:
   m_ObjectHideFlags: 0
@@ -72329,10 +72327,8 @@ MonoBehaviour:
       specialColor: {r: 0, g: 0, b: 0, a: 0}
   isDraconic: 0
   isHorde: 0
-  isHoly: 0
-  isDark: 0
   isNearWater: 0
-  canApplyDebuff: 0
+  throwsRocks: 0
   isWaterDangerous: 0
   isCopycat: 0
   healsSelf: 0
@@ -74621,10 +74617,8 @@ MonoBehaviour:
     Value: []
   isDraconic: 0
   isHorde: 0
-  isHoly: 0
-  isDark: 0
   isNearWater: 0
-  canApplyDebuff: 0
+  throwsRocks: 0
   isWaterDangerous: 0
   isCopycat: 0
   healsSelf: 0
@@ -78201,7 +78195,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battleManager: {fileID: 0}
   data: {fileID: 0}
-  burnDamageQueue: 
 --- !u!114 &2605706852017113808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85675,7 +85668,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battleManager: {fileID: 0}
   data: {fileID: 0}
-  burnDamageQueue: 
 --- !u!224 &4011810474495984973
 RectTransform:
   m_ObjectHideFlags: 0
@@ -86446,10 +86438,8 @@ MonoBehaviour:
       specialColor: {r: 0, g: 0, b: 0, a: 0}
   isDraconic: 0
   isHorde: 0
-  isHoly: 0
-  isDark: 0
   isNearWater: 0
-  canApplyDebuff: 0
+  throwsRocks: 0
   isWaterDangerous: 0
   isCopycat: 0
   healsSelf: 0
@@ -88164,7 +88154,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battleManager: {fileID: 0}
   data: {fileID: 0}
-  burnDamageQueue: 
 --- !u!224 &4354711707087769112
 RectTransform:
   m_ObjectHideFlags: 0
@@ -98323,7 +98312,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battleManager: {fileID: 0}
   data: {fileID: 0}
-  burnDamageQueue: 
 --- !u!1 &6138333678335857619
 GameObject:
   m_ObjectHideFlags: 0
@@ -109917,10 +109905,8 @@ MonoBehaviour:
       specialColor: {r: 0, g: 0, b: 0, a: 0}
   isDraconic: 0
   isHorde: 0
-  isHoly: 0
-  isDark: 0
   isNearWater: 0
-  canApplyDebuff: 0
+  throwsRocks: 0
   isWaterDangerous: 0
   isCopycat: 0
   healsSelf: 0

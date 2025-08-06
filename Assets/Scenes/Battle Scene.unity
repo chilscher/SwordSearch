@@ -20088,7 +20088,7 @@ MonoBehaviour:
   uiManager: {fileID: 380147764}
   puzzleGenerator: {fileID: 400925337}
   playerAnimatorFunctions: {fileID: 485298768}
-  setup: {fileID: 370989885}
+  GeneralSceneManager: {fileID: 370989885}
 --- !u!1 &1564386263
 GameObject:
   m_ObjectHideFlags: 0

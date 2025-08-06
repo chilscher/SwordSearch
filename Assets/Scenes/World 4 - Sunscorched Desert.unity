@@ -47045,6 +47045,7 @@ MonoBehaviour:
   - {fileID: 1343501815}
   - {fileID: 2003377217}
   sceneHeader: {fileID: 223357309}
+  generalSceneManager: {fileID: 370989885}
   playerStepDuration: 0.2
   thisWorldNum: 4
   powerupsPerPuzzle: 3

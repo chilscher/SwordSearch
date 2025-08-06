@@ -71102,8 +71102,8 @@ MonoBehaviour:
   - {fileID: 1928293913}
   - {fileID: 2069799334}
   sceneHeader: {fileID: 1923242813}
-  playerWalkSpeed: 1000
-  minTimeToMove: 1
+  generalSceneManager: {fileID: 370989885}
+  playerStepDuration: 0.2
   thisWorldNum: 2
   powerupsPerPuzzle: 3
   healActive: 1

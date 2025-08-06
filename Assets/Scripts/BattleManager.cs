@@ -81,12 +81,12 @@ public class BattleManager : MonoBehaviour {
     public UIManager uiManager;
     public PuzzleGenerator puzzleGenerator;
     public PlayerAnimatorFunctions playerAnimatorFunctions;
-    public GeneralSceneManager setup;
+    public GeneralSceneManager GeneralSceneManager;
 
 
 
     public virtual void Start(){
-        setup.Setup();
+        GeneralSceneManager.Setup();
         countdownToRefresh = maxPuzzleCountdown;
         if (StaticVariables.battleData == null)
             StaticVariables.battleData = defaultBattleData;
@@ -132,6 +132,28 @@ public class BattleManager : MonoBehaviour {
         StaticVariables.FadeIntoScene();
         StaticVariables.WaitTimeThenCallFunction(StaticVariables.sceneFadeDuration, QueueEnemyAttack);
         puzzleGenerator.Setup();
+    }
+
+    public void Update() {
+        CheckIfQueuedAttackCanBeUsed();
+    }
+
+    private void CheckIfQueuedAttackCanBeUsed() {
+        if (attackQueue.Count == 0)
+            return;
+        if (enemyHealth <= 0)
+            return;
+        if (playerHealth <= 0)
+            return;
+        if (enemyData.isHorde) {
+            if (!uiManager.enemyHordeAnimators[0].GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+                return;
+            }
+        else if (!uiManager.enemyAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+            return;
+        if (!uiManager.playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+            return;
+        AttackWithFirstWordInQueue();
     }
 
     public virtual void DamageEnemyHealth(int amount){
@@ -269,7 +291,6 @@ public class BattleManager : MonoBehaviour {
         else
             ApplyEnemyAttackDamage(ea.attackDamage);
 
-
         if (ea.isSpecial){
             switch (ea.specialType){
                 case EnemyAttack.EnemyAttackTypes.ThrowRocks:
@@ -280,12 +301,8 @@ public class BattleManager : MonoBehaviour {
                     BurnRandomLetters(3);
                     break;
             }
-
         }
-
-
         IncrementAttackIndex();
-
     }
 
     private void IncrementAttackIndex(){
@@ -652,35 +669,34 @@ public class BattleManager : MonoBehaviour {
             RemoveEarthBuff();
             if (isWaterInPuzzleArea && enemyData.canBurn)
                 ClearRandomBurnedLetters(2);
-            CheckToUseQueuedAttack(false, false);
+            //CheckToUseQueuedAttack(false, false);
         }
     }
     
-    public void CheckToUseQueuedAttack(bool ignorePlayerState, bool ignoreEnemyState){
-        //print(attackQueue.Count + " attacks in the queue");
-        if (CanQueuedAttackBeUsed(ignorePlayerState, ignoreEnemyState))
-            AttackWithFirstWordInQueue();
-    }
+    //public void CheckToUseQueuedAttack(bool ignorePlayerState, bool ignoreEnemyState){
+    //    print(attackQueue.Count + " attacks in the queue");
+    //    if (CanQueuedAttackBeUsed(ignorePlayerState, ignoreEnemyState))
+    //}
     
-    public bool CanQueuedAttackBeUsed(bool ignorePlayerState, bool ignoreEnemyState){
-        if (attackQueue.Count == 0)
-            return false;
-        if (enemyHealth <= 0)
-            return false;
-        if (playerHealth <= 0)
-            return false;
-        if (!ignoreEnemyState){
-            if (enemyData.isHorde) {
-                if (!uiManager.enemyHordeAnimators[0].GetCurrentAnimatorStateInfo(0).IsName("Idle"))
-                    return false;
-            }
-            else if (!uiManager.enemyAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
-                return false;
-        }
-        if (!ignorePlayerState)
-            return uiManager.playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle");
-        return true;
-    }
+    //public bool CanQueuedAttackBeUsed(bool ignorePlayerState, bool ignoreEnemyState){
+    //    if (attackQueue.Count == 0)
+    //        return false;
+    //    if (enemyHealth <= 0)
+    //        return false;
+    //    if (playerHealth <= 0)
+    //        return false;
+    //    if (!ignoreEnemyState){
+    //        if (enemyData.isHorde) {
+    //           if (!uiManager.enemyHordeAnimators[0].GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+    //                return false;
+    //        }
+//            else if (!uiManager.enemyAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+    //            return false;
+    //    }
+    //    if (!ignorePlayerState)
+//            return uiManager.playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle");
+    //    return true;
+    //}
         //int numberOfAttacksStillActive = uiManager.playerAttackAnimationParent.childCount;
         //return (numberOfAttacksStillActive == 0);
         
@@ -714,26 +730,44 @@ public class BattleManager : MonoBehaviour {
     }
 
     public virtual void QueueEnemyAttack(){
-        if (playerHealth != 0){
-            EnemyReturnedToIdle();
-            EnemyAttack ea;
-            if (enemyData.isHorde)
-                ea = firstEnemyInHorde.attackOrder.Value[enemyAttackIndex];    
-            else
-                ea = enemyData.attackOrder.Value[enemyAttackIndex];
-            if (ea.isSpecial)
-                uiManager.StartEnemyAttackTimer(ea.attackSpeed, ea.specialColor);
-            else
-                uiManager.StartEnemyAttackTimer(ea.attackSpeed);
-        }
-    }
-
-    public void EnemyReturnedToIdle(){
-        //print("here");
+        if (playerHealth <= 0)
+            return;
         if (enemyHealth <= 0)
             return;
-        CheckToUseQueuedAttack(false, true);
+        //if (CanQueuedAttackBeUsed(false, true)) {
+        //    AttackWithFirstWordInQueue();
+        //    return;
+        //}
+        EnemyAttack ea;
+        if (enemyData.isHorde)
+            ea = firstEnemyInHorde.attackOrder.Value[enemyAttackIndex];
+        else
+            ea = enemyData.attackOrder.Value[enemyAttackIndex];
+        if (ea.isSpecial)
+            uiManager.StartEnemyAttackTimer(ea.attackSpeed, ea.specialColor);
+        else
+            uiManager.StartEnemyAttackTimer(ea.attackSpeed);
+        //if (playerHealth != 0)
+        //{
+        //    EnemyReturnedToIdle();
+        //    EnemyAttack ea;
+        //    if (enemyData.isHorde)
+        //        ea = firstEnemyInHorde.attackOrder.Value[enemyAttackIndex];
+        //    else
+        //        ea = enemyData.attackOrder.Value[enemyAttackIndex];
+        //    if (ea.isSpecial)
+        //        uiManager.StartEnemyAttackTimer(ea.attackSpeed, ea.specialColor);
+        //    else
+        //        uiManager.StartEnemyAttackTimer(ea.attackSpeed);
+        //}
     }
+
+    //public void EnemyReturnedToIdle(){
+        //print("here");
+    //    if (enemyHealth <= 0)
+    //        return;
+    //    CheckToUseQueuedAttack(false, true);
+    //}
 
     public void PlayerAttackAnimationFinished(GameObject attackObject) {
         //destroys the gameobject, then resumes the enemy attack timer
@@ -741,8 +775,8 @@ public class BattleManager : MonoBehaviour {
         if (enemyHealth <= 0)
             return;
         uiManager.ResumeEnemyAttackBar();
-        if (attackQueue.Count > 0)
-            CheckToUseQueuedAttack(true, true);
+        //if (attackQueue.Count > 0)
+        //    CheckToUseQueuedAttack(true, true);
         //StaticVariables.WaitTimeThenCallFunction(0.1f, CheckToUseQueuedAttack);
         //else
     }

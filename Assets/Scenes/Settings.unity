@@ -8205,6 +8205,7 @@ MonoBehaviour:
     Easy  Mode.
   hardModeDescription: Enemies  have  more  health  and  deal  more  damage.  Good 
     luck.
+  generalSceneManager: {fileID: 370989885}
 --- !u!1 &1599557519
 GameObject:
   m_ObjectHideFlags: 0

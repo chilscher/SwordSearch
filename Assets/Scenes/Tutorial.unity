@@ -4246,7 +4246,7 @@ MonoBehaviour:
   uiManager: {fileID: 380147764}
   puzzleGenerator: {fileID: 400925337}
   playerAnimatorFunctions: {fileID: 485298768}
-  setup: {fileID: 370989885}
+  GeneralSceneManager: {fileID: 370989885}
   tutorialNumber: 0
   tutorialTextBox: {fileID: 350963394}
   highlightWord1: {fileID: 2042127426}

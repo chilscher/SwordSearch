@@ -23,10 +23,12 @@ public class SettingsSceneManager : MonoBehaviour{
     public string easyModeDescription;
     [TextArea(2,5)]
     public string hardModeDescription;
+    public GeneralSceneManager generalSceneManager;
 
     //public BattleData JustBattleOpponent;
 
     void Start(){
+        generalSceneManager.Setup();
         Setup();
     }
 

@@ -1286,8 +1286,8 @@ MonoBehaviour:
   overworldSpaces:
   - {fileID: 18251722}
   sceneHeader: {fileID: 2036482307}
-  playerWalkSpeed: 1000
-  minTimeToMove: 1
+  generalSceneManager: {fileID: 370989885}
+  playerStepDuration: 0.2
   thisWorldNum: 5
   powerupsPerPuzzle: 3
   healActive: 1
