@@ -45,6 +45,7 @@ public class HomepageManager : MonoBehaviour{
     void Start(){
         generalSceneManager.Setup();
         Setup();
+        generalSceneManager.FadeIn();
     }
 
     public void Setup(){

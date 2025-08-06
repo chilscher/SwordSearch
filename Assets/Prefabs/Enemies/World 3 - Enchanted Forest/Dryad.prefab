@@ -132,7 +132,7 @@ MonoBehaviour:
   attackOrder:
     Value:
     - attackSpeed: 8
-      attackDamage: 12
+      attackDamage: 11
       isSpecial: 0
       specialType: 0
       specialColor: {r: 0, g: 0, b: 0, a: 0}

@@ -42,6 +42,7 @@ public class CutsceneManager : MonoBehaviour{
     
 
     public void Start() {
+        generalSceneManager.Setup();
         SetCutsceneID();
         switch (cutsceneID){
             case (Cutscene.Hometown1):
@@ -75,9 +76,8 @@ public class CutsceneManager : MonoBehaviour{
         ButtonText("CONTINUE");
 
         SetupDialogueManager();
-
-        generalSceneManager.Setup();
         StaticVariables.WaitTimeThenCallFunction(StaticVariables.sceneFadeDuration, AdvanceCutsceneStep);
+        generalSceneManager.FadeIn();
     }
 
     private void SetCutsceneID(){
@@ -962,15 +962,15 @@ public class CutsceneManager : MonoBehaviour{
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("Are you... arguing with your book?", "Elder", DialogueStep.Emotion.Questioning);
         }
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_NobodyTalking();
+        //}
+        //else if (++i == cutsceneStep){ 
+        //    AdvanceConditionWait(1.5f);
+        //}
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_NobodyTalking();
-        }
-        else if (++i == cutsceneStep){ 
-            AdvanceConditionWait(1.5f);
             PlayAnimation("Player", "Put Away Book");
-        }
-        else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("Does it count as arguing if the thing you are talking to might not even be able to hear you?" , DialogueStep.Emotion.Angry);   
+            AdvanceConditionDialogue_PlayerTalking("Does this qualify as an argument?? I don't know if this thing can hear me!" , DialogueStep.Emotion.Angry);   
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("What are you doing out here anyway?" , DialogueStep.Emotion.Questioning);

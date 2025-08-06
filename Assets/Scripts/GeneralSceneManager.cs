@@ -7,11 +7,11 @@ using UnityEngine.SceneManagement;
 public class GeneralSceneManager : MonoBehaviour{
 
     public Image fadeImage;
-    private bool hasStarted = false;
+    //private bool hasStarted = false;
 
-    void Start(){
-        Setup();
-    }
+    //void Start(){
+        //Setup();
+    //}
 
     //private void MakeYellowIfBlack() {
     //    //for testing why the heck the black screen effect is happening
@@ -20,12 +20,15 @@ public class GeneralSceneManager : MonoBehaviour{
     //}
 
     public void Setup(){
-        if (!hasStarted){
+        //if (!hasStarted){
             StaticVariables.tweenDummy = transform;
             StaticVariables.fadeImage = fadeImage;
-            StaticVariables.FadeIntoScene();
             //StaticVariables.WaitTimeThenCallFunction(3f, MakeYellowIfBlack);
-            hasStarted = true;
-        }
+            //hasStarted = true;
+        //}
+    }
+    
+    public void FadeIn(){
+        StaticVariables.FadeIntoScene();
     }
 }

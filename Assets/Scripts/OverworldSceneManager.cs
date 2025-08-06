@@ -63,6 +63,7 @@ public class OverworldSceneManager : MonoBehaviour{
             CheckIfCompletedStage();
         }
         interactOverlayManager.Setup();
+        generalSceneManager.FadeIn();
     }
 
     private void CheckIfCompletedStage(){

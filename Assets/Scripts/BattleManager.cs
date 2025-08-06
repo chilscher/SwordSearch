@@ -63,10 +63,10 @@ public class BattleManager : MonoBehaviour {
     public UIManager uiManager;
     public PuzzleGenerator puzzleGenerator;
     public PlayerAnimatorFunctions playerAnimatorFunctions;
-    public GeneralSceneManager GeneralSceneManager;
+    public GeneralSceneManager generalSceneManager;
 
     public virtual void Start(){
-        GeneralSceneManager.Setup();
+        generalSceneManager.Setup();
         countdownToRefresh = maxPuzzleCountdown;
         if (StaticVariables.battleData == null)
             StaticVariables.battleData = defaultBattleData;
@@ -108,6 +108,7 @@ public class BattleManager : MonoBehaviour {
         StaticVariables.FadeIntoScene();
         StaticVariables.WaitTimeThenCallFunction(StaticVariables.sceneFadeDuration, QueueEnemyAttack);
         puzzleGenerator.Setup();
+        generalSceneManager.FadeIn();
     }
 
     public void Update() {
@@ -428,7 +429,7 @@ public class BattleManager : MonoBehaviour {
         if (uiManager.shownBoulders != null)
             uiManager.ClearBouldersOnPage();
         if (enemyData.isCopycat) {
-            copycatBuildup -= 3;
+            copycatBuildup -= 2;
             if (copycatBuildup < 0)
                 copycatBuildup = 0;
             uiManager.ShowCopycatBuildup();

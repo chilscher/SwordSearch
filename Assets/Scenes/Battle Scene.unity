@@ -20072,10 +20072,6 @@ MonoBehaviour:
   minCheckingWordLength: 3
   maxPuzzleCountdown: 3
   selfDamageFromDarkAttack: 5
-  burnDurationFromFireAttack: 5
-  timeBetweenBurnHits: 3
-  pebbleCountFromEarthAttack: 3
-  pebbleDamageMultiplier: 0.33
   lightningStunDuration: 15
   darkPowerupDamageMultiplier: 2.5
   swordPowerupDamageMultiplier: 2
@@ -20088,7 +20084,7 @@ MonoBehaviour:
   uiManager: {fileID: 380147764}
   puzzleGenerator: {fileID: 400925337}
   playerAnimatorFunctions: {fileID: 485298768}
-  GeneralSceneManager: {fileID: 370989885}
+  generalSceneManager: {fileID: 370989885}
 --- !u!1 &1564386263
 GameObject:
   m_ObjectHideFlags: 0
