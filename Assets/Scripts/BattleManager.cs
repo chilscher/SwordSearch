@@ -369,6 +369,7 @@ public class BattleManager : MonoBehaviour {
         hasEarthBuff = true;
         inProgressWord.AddEarthBuff();
         uiManager.AddRocksToEdgeOfPuzzle();
+        UpdateSubmitVisuals();
     }
 
     private void RemoveEarthBuff() {

@@ -1849,7 +1849,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("What are you doing to the roots??", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("Please, don't raise your voice!", "Wizard", DialogueStep.Emotion.Worried);
+            AdvanceConditionDialogue_EnemyTalking("Please, don't shout...", "Wizard", DialogueStep.Emotion.Worried);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("What are you doing to the tree??", DialogueStep.Emotion.Angry);

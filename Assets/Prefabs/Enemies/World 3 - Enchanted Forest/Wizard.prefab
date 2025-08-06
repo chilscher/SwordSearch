@@ -128,11 +128,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBattleable: 1
   nameOverride: Mustrum
-  startingHealth: 190
+  startingHealth: 250
   attackOrder:
     Value:
     - attackSpeed: 7
-      attackDamage: 8
+      attackDamage: 4
       isSpecial: 1
       specialType: 3
       specialColor: {r: 0.98039216, g: 0.3254902, b: 0.1254902, a: 1}
