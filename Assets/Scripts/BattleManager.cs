@@ -141,8 +141,10 @@ public class BattleManager : MonoBehaviour {
     private void CheckIfQueuedAttackCanBeUsed() {
         if (attackQueue.Count == 0)
             return;
-        if (enemyHealth <= 0)
+        if (playerAnimatorFunctions.attackInProgress != null)
             return;
+        if (enemyHealth <= 0)
+                return;
         if (playerHealth <= 0)
             return;
         if (enemyData.isHorde) {
@@ -704,6 +706,8 @@ public class BattleManager : MonoBehaviour {
     private void AttackWithFirstWordInQueue() {
         if (attackQueue.Count == 0)
             return;
+        //print("queueing attack");
+        //print(enemyHealth);
         AttackData attackData = attackQueue[0];
         attackQueue.RemoveAt(0);
         playerAnimatorFunctions.attackInProgress = attackData;
@@ -772,7 +776,10 @@ public class BattleManager : MonoBehaviour {
     public void PlayerAttackAnimationFinished(GameObject attackObject) {
         //destroys the gameobject, then resumes the enemy attack timer
         Destroy(attackObject);
+        playerAnimatorFunctions.attackInProgress = null;
         if (enemyHealth <= 0)
+            return;
+        if (attackQueue.Count > 0)
             return;
         uiManager.ResumeEnemyAttackBar();
         //if (attackQueue.Count > 0)
@@ -897,8 +904,7 @@ public class AttackData {
         return (result > -1);
     }
 
-    public void SetWordStrength()
-    {
+    public void SetWordStrength(){
         if (word.Length < battleManager.minCheckingWordLength)
         {
             strength = 0;
