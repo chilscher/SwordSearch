@@ -429,8 +429,8 @@ public class UIManager : MonoBehaviour {
         }
         */
         Color numberColor = Color.white;
-        if ((battleManager.isWaterInPuzzleArea) && (strength > 0))
-            numberColor = waterPowerupStrengthColor;
+        //if ((battleManager.isWaterInPuzzleArea) && (strength > 0))
+        //    numberColor = waterPowerupStrengthColor;
         strengthIcon1Digit.color = numberColor;
         strengthIcon2DigitOnes.color = numberColor;
         strengthIcon2DigitTens.color = numberColor;

@@ -128,7 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBattleable: 1
   nameOverride: Mustrum
-  startingHealth: 180
+  startingHealth: 190
   attackOrder:
     Value:
     - attackSpeed: 7

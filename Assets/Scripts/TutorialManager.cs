@@ -56,7 +56,7 @@ public class TutorialManager : BattleManager {
         puzzleGenerator.wordCount = 4;
         puzzleGenerator.useSmallerLayout = true;
 
-        
+
 
         tutorialShadowOriginalColor = tutorialShadow.color;
 
@@ -83,8 +83,7 @@ public class TutorialManager : BattleManager {
         UpdateSubmitVisuals();
         ButtonText("CONTINUE");
         AdvanceTutorialStep();
-
-        //uiManager.pauseButton.gameObject.SetActive(false);
+        uiManager.dialogueManager.transform.Find("Earth buff bottom").SetParent(uiManager.earthBuffBottom);
     }
 
     private void SetTutorialNumber() {

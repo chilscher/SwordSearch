@@ -343,6 +343,8 @@ public class BattleManager : MonoBehaviour {
     }
 
     private void ApplyEarthBuff() {
+        if ((enemyHealth <= 0) || (playerHealth <= 0))
+            return;
         if (hasEarthBuff)
             return;
         hasEarthBuff = true;
@@ -378,7 +380,7 @@ public class BattleManager : MonoBehaviour {
         if ((enemyHealth <= 0) || (playerHealth <= 0))
             return;
             //StaticVariables.WaitTimeThenCallFunction(0.6f, uiManager.FadeOutWaterOverlay);
-            isWaterInPuzzleArea = true;
+        isWaterInPuzzleArea = true;
         uiManager.FillPuzzleAreaWithWater(StaticVariables.waterFloodDuration);
         inProgressWord.AddWaterBuff();
         UpdateSubmitVisuals();
@@ -459,8 +461,9 @@ public class BattleManager : MonoBehaviour {
             uiManager.ClearBouldersOnPage();
         if (enemyData.isCopycat) {
             copycatBuildup -= 3;
-            if (copycatBuildup < -1)
-                copycatBuildup = -1; //its ok to set to -1, because a normal damaging attack happens right after, bringing the buildup back to 0.
+            if (copycatBuildup < 0)
+                copycatBuildup = 0;
+            uiManager.ShowCopycatBuildup();
         }
         //if (puzzleGenerator.burnedLetters.Count > 0)
         //    ClearRandomBurnedLetters(5);

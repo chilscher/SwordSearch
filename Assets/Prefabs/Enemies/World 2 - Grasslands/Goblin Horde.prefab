@@ -113,8 +113,8 @@ MonoBehaviour:
     talker: {fileID: 815226952419649514, guid: b3a9ed065174b564f91fd5311aa05d86, type: 3}
     name: Groats
     emotion: 5
-    description: '"Took care of"...? Look miss, wth all due respect I don''t think
-      we should be pamperin'' these green folk.'
+    description: '"Took care of"? Look miss, wth all due respect I don''t think we
+      should be pamperin'' these green folk.'
   - type: 0
     talker: {fileID: 0}
     name: 

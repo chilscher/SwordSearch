@@ -205,7 +205,8 @@ MonoBehaviour:
     talker: {fileID: 0}
     name: 
     emotion: 7
-    description: A fiddle dog to be precise.
+    description: "I've read about you! A long time ago, a pack of dogs was let loose\r
+      in the forest."
   - type: 0
     talker: {fileID: 0}
     name: 

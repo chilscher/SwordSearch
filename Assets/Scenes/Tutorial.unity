@@ -1682,7 +1682,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &101698510
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1694,8 +1694,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1482312692}
+  m_Children: []
   m_Father: {fileID: 1248625263}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -9149,6 +9148,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8075790155026782514, guid: fd3757c0e974e264e9941b0d191b40be, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1482312692}
     - targetCorrespondingSourceObject: {fileID: 8075790155026782514, guid: fd3757c0e974e264e9941b0d191b40be, type: 3}
       insertIndex: -1
       addedObject: {fileID: 350963393}
@@ -22258,7 +22260,7 @@ GameObject:
   - component: {fileID: 1482312694}
   - component: {fileID: 1482312693}
   m_Layer: 0
-  m_Name: Bottom Side
+  m_Name: Earth buff bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22271,17 +22273,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482312691}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.000000014901159, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 101698510}
+  m_Father: {fileID: 1980342576}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -59, y: 534}
-  m_SizeDelta: {x: 502.349, y: 186.78}
+  m_AnchoredPosition: {x: -76.22602, y: 1052}
+  m_SizeDelta: {x: 55.06494, y: 186.78}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1482312693
 MonoBehaviour:

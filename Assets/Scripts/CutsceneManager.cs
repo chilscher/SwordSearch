@@ -2034,7 +2034,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("I have reason to believe he isn't a necromancer, but please continue.", "Wizard", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("The cyclops had an apprentice who had his own face on his torso. He was good at throwing rocks, but not much else.", DialogueStep.Emotion.Normal);                
+            AdvanceConditionDialogue_PlayerTalking("The cyclops had an apprentice who had his own face on his torso. He couldn't do any magic, but I guess he was in training?", DialogueStep.Emotion.Normal);                
             }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("Before him, there was this retired adventurer in my hometown who used to have control over the wind.", DialogueStep.Emotion.Normal);                
@@ -2128,7 +2128,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("Would you like to find out?", "Wizard", DialogueStep.Emotion.Questioning);    
         }  
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("Well, duh! Who wouldn't want to shoot <fire>fire<> from my fingertips??", DialogueStep.Emotion.Surprised);        
+            AdvanceConditionDialogue_PlayerTalking("Well, duh! Who wouldn't want to shoot <fire>fire<> from their fingertips??", DialogueStep.Emotion.Surprised);        
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("Spectacular!", "Wizard", DialogueStep.Emotion.Happy);    
@@ -2185,10 +2185,10 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("Now, " + StaticVariables.playerName + ". Are you ready to become a <fire>pyromancer<>?", "Wizard", DialogueStep.Emotion.Questioning);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_PlayerTalking("Let me touch that catalyst so I can get out of these things!", DialogueStep.Emotion.Worried);
+            AdvanceConditionDialogue_PlayerTalking("Yes! Hand me that catalyst so I can take thee things off!!", DialogueStep.Emotion.Worried);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("Yes, of course!", "Wizard", DialogueStep.Emotion.Questioning);
+            AdvanceConditionDialogue_EnemyTalking("Of course, of course!", "Wizard", DialogueStep.Emotion.Questioning);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_NobodyTalking(true);
@@ -2523,7 +2523,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("Each element is connected to a field of study, right?", DialogueStep.Emotion.Questioning);
         } 
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("Do you think I could strengthen my fire abilities by reading a book about science?", DialogueStep.Emotion.Questioning);
+            AdvanceConditionDialogue_PlayerTalking("Do you think I could strengthen my <fire>fire<> abilities by reading a book about <fire>science<>?", DialogueStep.Emotion.Questioning);
         } 
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("I have plenty of books for the other disciplines, too.", DialogueStep.Emotion.Normal);
