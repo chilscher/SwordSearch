@@ -128,11 +128,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBattleable: 1
   nameOverride: Centaur
-  startingHealth: 160
+  startingHealth: 150
   attackOrder:
     Value:
     - attackSpeed: 8
-      attackDamage: 11
+      attackDamage: 9
       isSpecial: 0
       specialType: 0
       specialColor: {r: 0, g: 0, b: 0, a: 0}

@@ -924,9 +924,6 @@ public class CutsceneManager : MonoBehaviour{
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("Can you even understand me?", DialogueStep.Emotion.Questioning);
         }
-        //else if (++i == cutsceneStep){
-        //    AdvanceConditionDialogue_PlayerTalking("You're a magic book. Can you understand me?", DialogueStep.Emotion.Questioning);
-        //}
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("The magic book says nothing.", "Magic Book", DialogueStep.Emotion.Normal);
         }
@@ -962,15 +959,9 @@ public class CutsceneManager : MonoBehaviour{
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("Are you... arguing with your book?", "Elder", DialogueStep.Emotion.Questioning);
         }
-        //else if (++i == cutsceneStep){
-        //    AdvanceConditionDialogue_NobodyTalking();
-        //}
-        //else if (++i == cutsceneStep){ 
-        //    AdvanceConditionWait(1.5f);
-        //}
         else if (++i == cutsceneStep){
             PlayAnimation("Player", "Put Away Book");
-            AdvanceConditionDialogue_PlayerTalking("Does this qualify as an argument?? I don't know if this thing can hear me!" , DialogueStep.Emotion.Angry);   
+            AdvanceConditionDialogue_PlayerTalking("Does this qualify as an argument?? I don't know if this thing can even hear me!" , DialogueStep.Emotion.Angry);   
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("What are you doing out here anyway?" , DialogueStep.Emotion.Questioning);
@@ -1015,6 +1006,9 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("This is an enchanted pouch that can carry anything and everything you put inside it!", "Elder", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("It's very convenient to have for grocery shopping, but I think you might get a bit more use out of it.", "Elder", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("I had the children fill it with every single one of your books that survived the flames.", "Elder", DialogueStep.Emotion.Happy);
         }
         else if (++i == cutsceneStep){
@@ -1022,11 +1016,7 @@ public class CutsceneManager : MonoBehaviour{
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("You're welcome, Miss " + StaticVariables.playerName + ".", "Elder", DialogueStep.Emotion.Normal);
-        }
-        //else if (++i == cutsceneStep){
-        //    AdvanceConditionDialogue_EnemyTalking("You have a long journey ahead of you. Best to not get bored.", "Elder", DialogueStep.Emotion.Normal);
-        //}
-        
+        }        
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("It'd be best not to get bored on your journey.", "Elder", DialogueStep.Emotion.Normal);
         }
@@ -1036,9 +1026,6 @@ public class CutsceneManager : MonoBehaviour{
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("Make haste! The future of the whole continent may depend on it!", "Elder", DialogueStep.Emotion.Angry);
         }
-        //it'd be best to not get bored on your journey
-        //and it will be quite the long journey indeed! i shouldn't keep you any longer
-        //make haste! the future of the whole continent may depend on it!
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("You're right! I'd better get going!", DialogueStep.Emotion.Surprised);
         }

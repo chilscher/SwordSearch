@@ -130,22 +130,22 @@ MonoBehaviour:
   startingHealth: 150
   attackOrder:
     Value:
-    - attackSpeed: 2
+    - attackSpeed: 3
       attackDamage: 2
       isSpecial: 0
       specialType: 0
       specialColor: {r: 0, g: 0, b: 0, a: 0}
-    - attackSpeed: 2
+    - attackSpeed: 3
       attackDamage: 4
       isSpecial: 0
       specialType: 0
       specialColor: {r: 0, g: 0, b: 0, a: 0}
-    - attackSpeed: 2
+    - attackSpeed: 3
       attackDamage: 6
       isSpecial: 0
       specialType: 0
       specialColor: {r: 0, g: 0, b: 0, a: 0}
-    - attackSpeed: 2
+    - attackSpeed: 3
       attackDamage: 8
       isSpecial: 0
       specialType: 0
