@@ -28,6 +28,7 @@ public class SettingsSceneManager : MonoBehaviour{
     //public BattleData JustBattleOpponent;
 
     void Start(){
+        GetComponent<GeneralSceneManager>().Setup();
         //generalSceneManager.Setup();
         Setup();
         //generalSceneManager.FadeIn();

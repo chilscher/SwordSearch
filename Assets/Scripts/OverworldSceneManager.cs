@@ -47,6 +47,7 @@ public class OverworldSceneManager : MonoBehaviour{
 
 
     void Start(){
+        GetComponent<GeneralSceneManager>().Setup();
         //generalSceneManager.Setup();
         interactOverlayManager.gameObject.SetActive(true);
         dialogueManager.gameObject.SetActive(true);

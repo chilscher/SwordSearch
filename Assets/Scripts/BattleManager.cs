@@ -66,6 +66,7 @@ public class BattleManager : MonoBehaviour {
     //public GeneralSceneManager generalSceneManager;
 
     public virtual void Start(){
+        GetComponent<GeneralSceneManager>().Setup();
         //generalSceneManager.Setup();
         countdownToRefresh = maxPuzzleCountdown;
         if (StaticVariables.battleData == null)

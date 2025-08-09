@@ -42,6 +42,7 @@ public class CutsceneManager : MonoBehaviour{
     
 
     public void Start() {
+        GetComponent<GeneralSceneManager>().Setup();
         //generalSceneManager.Setup();
         SetCutsceneID();
         switch (cutsceneID){
@@ -976,7 +977,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("I think I should get some more practice with magic before I try it on people!" , DialogueStep.Emotion.Surprised);   
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("That's alright, I'm an old man now. I don't even know if I want to weild that power again...", "Elder", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("That's alright, I'm an old man now. I don't even know if I want to wield that power again...", "Elder", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("I do miss cooking though! Before I started adventuring, I was the head chef for the tavern.", "Elder", DialogueStep.Emotion.Happy);
