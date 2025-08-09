@@ -40,12 +40,12 @@ public class HomepageManager : MonoBehaviour{
     private List<GameObject> endlessModeEnemyPrefabs;
     private int endlessModeEnemyIndex = 0;
     private readonly float endlessModeMoveDuration = 9f;
-    public GeneralSceneManager generalSceneManager;
+    //public GeneralSceneManager generalSceneManager;
 
     void Start(){
-        generalSceneManager.Setup();
+        //generalSceneManager.Setup();
         Setup();
-        generalSceneManager.FadeIn();
+        //generalSceneManager.FadeIn();
     }
 
     public void Setup(){

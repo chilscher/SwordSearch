@@ -23,14 +23,14 @@ public class SettingsSceneManager : MonoBehaviour{
     public string easyModeDescription;
     [TextArea(2,5)]
     public string hardModeDescription;
-    public GeneralSceneManager generalSceneManager;
+    //public GeneralSceneManager generalSceneManager;
 
     //public BattleData JustBattleOpponent;
 
     void Start(){
-        generalSceneManager.Setup();
+        //generalSceneManager.Setup();
         Setup();
-        generalSceneManager.FadeIn();
+        //generalSceneManager.FadeIn();
     }
 
     public void Setup(){

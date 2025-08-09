@@ -63,10 +63,10 @@ public class BattleManager : MonoBehaviour {
     public UIManager uiManager;
     public PuzzleGenerator puzzleGenerator;
     public PlayerAnimatorFunctions playerAnimatorFunctions;
-    public GeneralSceneManager generalSceneManager;
+    //public GeneralSceneManager generalSceneManager;
 
     public virtual void Start(){
-        generalSceneManager.Setup();
+        //generalSceneManager.Setup();
         countdownToRefresh = maxPuzzleCountdown;
         if (StaticVariables.battleData == null)
             StaticVariables.battleData = defaultBattleData;
@@ -108,7 +108,7 @@ public class BattleManager : MonoBehaviour {
         StaticVariables.FadeIntoScene();
         StaticVariables.WaitTimeThenCallFunction(StaticVariables.sceneFadeDuration, QueueEnemyAttack);
         puzzleGenerator.Setup();
-        generalSceneManager.FadeIn();
+        //generalSceneManager.FadeIn();
     }
 
     public void Update() {

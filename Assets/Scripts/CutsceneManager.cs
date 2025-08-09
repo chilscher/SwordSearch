@@ -18,7 +18,7 @@ public class CutsceneManager : MonoBehaviour{
     private Animator playerAnimator;
     private GameObject nextBackground;
 
-    public GeneralSceneManager generalSceneManager;
+    //public GeneralSceneManager generalSceneManager;
     public DialogueManager dialogueManager;
     public RectTransform backgroundParent;
     public GameObject emptyGameObject;
@@ -42,7 +42,7 @@ public class CutsceneManager : MonoBehaviour{
     
 
     public void Start() {
-        generalSceneManager.Setup();
+        //generalSceneManager.Setup();
         SetCutsceneID();
         switch (cutsceneID){
             case (Cutscene.Hometown1):
@@ -77,7 +77,7 @@ public class CutsceneManager : MonoBehaviour{
 
         SetupDialogueManager();
         StaticVariables.WaitTimeThenCallFunction(StaticVariables.sceneFadeDuration, AdvanceCutsceneStep);
-        generalSceneManager.FadeIn();
+        //generalSceneManager.FadeIn();
     }
 
     private void SetCutsceneID(){

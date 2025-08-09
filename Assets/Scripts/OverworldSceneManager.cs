@@ -13,7 +13,7 @@ public class OverworldSceneManager : MonoBehaviour{
     public Animator playerAnimator;
     public OverworldSpace[] overworldSpaces;
     public RectTransform sceneHeader;
-    public GeneralSceneManager generalSceneManager;
+    //public GeneralSceneManager generalSceneManager;
 
 
     [Header("Timing Configurations")]
@@ -47,7 +47,7 @@ public class OverworldSceneManager : MonoBehaviour{
 
 
     void Start(){
-        generalSceneManager.Setup();
+        //generalSceneManager.Setup();
         interactOverlayManager.gameObject.SetActive(true);
         dialogueManager.gameObject.SetActive(true);
         SetPowerupAvailability();
@@ -63,7 +63,7 @@ public class OverworldSceneManager : MonoBehaviour{
             CheckIfCompletedStage();
         }
         interactOverlayManager.Setup();
-        generalSceneManager.FadeIn();
+        //generalSceneManager.FadeIn();
     }
 
     private void CheckIfCompletedStage(){
