@@ -6,8 +6,7 @@ using UnityEngine.UI;
 using DG.Tweening;
 using UnityEngine.SceneManagement;
 
-public class StaticVariables
-{
+public class StaticVariables{
     static public Transform tweenDummy;
     static public System.Random rand = new();
     static public BattleData battleData = null;
@@ -33,10 +32,20 @@ public class StaticVariables
     static public BookData[] readingLightningBooks;
     static public BookData[] readingDarkBooks;
     static public BookData[] readingSwordBooks;
-    static public string[] wordLibraryForChecking;
-    static public string[] wordLibraryForGeneration;
+    static public string[] allWordLibrary;
+    static public string[] allWordNoSwearsLibrary;
+    static public string[] words4LetterLibrary;
+    static public string[] words4LetterNoSwearsLibrary;
+    static public string[] words5LetterLibrary;
+    static public string[] words5LetterNoSwearsLibrary;
+    static public string[] words6LetterLibrary;
+    static public string[] words6LetterNoSwearsLibrary;
+    static public string[] words7LetterLibrary;
+    static public string[] words7LetterNoSwearsLibrary;
+    //static public string[] wordLibraryForChecking;
+    //static public string[] wordLibraryForGeneration;
     static public char[] randomLetterPool;
-    static public string[] wordLibraryForGeneratingSmallerPuzzles;
+    //static public string[] wordLibraryForGeneratingSmallerPuzzles;
 
     //stages
     static public List<StageData> allStages;
@@ -72,6 +81,7 @@ public class StaticVariables
     static public DifficultyMode difficultyMode = DifficultyMode.Normal;
     public enum DifficultyMode{Normal, Story, Puzzle, Easy, Hard};
     static public float gameVersionNumber = 0.1f;
+    static public bool allowProfanities = false;
 
     //powerup stats
     static public readonly int waterFloodDuration = 30;

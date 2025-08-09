@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 using MyBox;
 using DG.Tweening;
 using Unity.VisualScripting;
+using System.Linq;
+using System;
 
 public class LaunchGameSetup : MonoBehaviour
 {
@@ -39,10 +41,20 @@ public class LaunchGameSetup : MonoBehaviour
     public TextAsset swordBookList;
 
     [Header("Libraries")]
-    public TextAsset wordLibraryForGenerationFile; //all words that can be used to generate the puzzle
-    public TextAsset wordLibraryForCheckingFile; //all words that can be considered valid, even if they are not in the generating list
+    public TextAsset allWordsFile;
+    public TextAsset allWordsNoSwearsFile;
+    public TextAsset words4LetterFile;
+    public TextAsset words4LetterNoSwearsFile;
+    public TextAsset words5LetterFile;
+    public TextAsset words5LetterNoSwearsFile;
+    public TextAsset words6LetterFile;
+    public TextAsset words6LetterNoSwearsFile;
+    public TextAsset words7LetterFile;
+    public TextAsset words7LetterNoSwearsFile;
+    //public TextAsset wordLibraryForGenerationFile; //all words that can be used to generate the puzzle
+    //public TextAsset wordLibraryForCheckingFile; //all words that can be considered valid, even if they are not in the generating list
     public TextAsset randomLetterPoolFile;
-    public TextAsset wordLibraryForGeneratingSmallerPuzzlesFile;
+    //public TextAsset wordLibraryForGeneratingSmallerPuzzlesFile;
 
     private List<StageData> allStages;
 
@@ -74,10 +86,17 @@ public class LaunchGameSetup : MonoBehaviour
     }
 
     private void SetupLibraries() {
-        StaticVariables.wordLibraryForChecking = wordLibraryForCheckingFile.text.Split("\r\n");
-        StaticVariables.wordLibraryForGeneration = wordLibraryForGenerationFile.text.Split("\r\n");
+        StaticVariables.allWordLibrary = allWordsFile.text.Split("\r\n");
+        StaticVariables.allWordNoSwearsLibrary = allWordsNoSwearsFile.text.Split("\r\n");
+        StaticVariables.words4LetterLibrary = words4LetterFile.text.Split("\r\n");
+        StaticVariables.words4LetterNoSwearsLibrary = words4LetterNoSwearsFile.text.Split("\r\n");
+        StaticVariables.words5LetterLibrary = words5LetterFile.text.Split("\r\n");
+        StaticVariables.words5LetterNoSwearsLibrary = words5LetterNoSwearsFile.text.Split("\r\n");
+        StaticVariables.words6LetterLibrary = words6LetterFile.text.Split("\r\n");
+        StaticVariables.words6LetterNoSwearsLibrary = words6LetterNoSwearsFile.text.Split("\r\n");
+        StaticVariables.words7LetterLibrary = words7LetterFile.text.Split("\r\n");
+        StaticVariables.words7LetterNoSwearsLibrary = words7LetterNoSwearsFile.text.Split("\r\n");
         StaticVariables.randomLetterPool = randomLetterPoolFile.text.ToCharArray();
-        StaticVariables.wordLibraryForGeneratingSmallerPuzzles = wordLibraryForGeneratingSmallerPuzzlesFile.text.Split("\r\n");
     }
 
     private void SetupBookLists() {

@@ -23,6 +23,7 @@ public class SettingsSceneManager : MonoBehaviour{
     public string easyModeDescription;
     [TextArea(2,5)]
     public string hardModeDescription;
+    public Text profanityFilterDisplay;
     //public GeneralSceneManager generalSceneManager;
 
     //public BattleData JustBattleOpponent;
@@ -38,6 +39,7 @@ public class SettingsSceneManager : MonoBehaviour{
         DisplayProgress();
         DisplayPlayerName();
         DisplayDifficultyMode();
+        DisplayProfanitySelection();
     }
 
     public void HitBackButton(){
@@ -178,5 +180,19 @@ public class SettingsSceneManager : MonoBehaviour{
                 difficultyModeDescription.text = "Attempting to use an invalid difficulty mode.";
                 break;
         }
+    }
+    
+    public void ToggleProfanityFilter(){
+        StaticVariables.allowProfanities = !StaticVariables.allowProfanities;
+        DisplayProfanitySelection();
+        SaveSystem.SaveGame();
+    }
+
+    private void DisplayProfanitySelection() {
+        if (StaticVariables.allowProfanities)
+            profanityFilterDisplay.text = "";
+        else
+            profanityFilterDisplay.text = "X";
+        
     }
 }

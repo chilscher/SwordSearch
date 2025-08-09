@@ -20796,7 +20796,6 @@ asquint
 asquirm
 asrama
 asramas
-ass
 assacu
 assafetida
 assafoetida
@@ -20983,8 +20982,6 @@ asseveratory
 assewer
 asshead
 assheadedness
-asshole
-assholes
 assi
 assibilate
 assibilated
@@ -72018,7 +72015,6 @@ culvert
 culvertage
 culverts
 culverwort
-cum
 cumacea
 cumacean
 cumaceous
@@ -82798,7 +82794,6 @@ dichter
 dicier
 diciest
 dicing
-dick
 dickcissel
 dickens
 dickenses
@@ -82815,7 +82810,6 @@ dickie
 dickies
 dickinsonite
 dickite
-dicks
 dicksonia
 dickty
 dicky
@@ -116952,11 +116946,6 @@ fuci
 fucinita
 fuciphagous
 fucivorous
-fuck
-fucked
-fucker
-fucking
-fucks
 fuckwit
 fucoid
 fucoidal
@@ -154600,7 +154589,6 @@ jackarooed
 jackarooing
 jackaroos
 jackash
-jackass
 jackassery
 jackasses
 jackassism
@@ -187123,7 +187111,6 @@ motherdom
 mothered
 motherer
 motherers
-motherfucker
 mothergate
 motherhood
 motherhouse
@@ -251138,14 +251125,11 @@ rapallo
 rapanea
 rapateaceae
 rapateaceous
-rape
-raped
 rapeful
 rapely
 rapeoil
 raper
 rapers
-rapes
 rapeseed
 rapeseeds
 rapeye
@@ -251195,7 +251179,6 @@ rapiner
 rapines
 raping
 rapinic
-rapist
 rapists
 raploch
 raport
@@ -277532,7 +277515,6 @@ shastraik
 shastras
 shastri
 shastrik
-shat
 shatan
 shathmont
 shatter
@@ -278466,16 +278448,13 @@ shishya
 shisn
 shist
 shists
-shit
 shita
 shitepoke
 shithead
 shitheel
 shither
-shits
 shittah
 shittahs
-shitted
 shitten
 shittier
 shittiest
@@ -278485,7 +278464,6 @@ shittimwood
 shittiness
 shitting
 shittle
-shitty
 shiv
 shiva
 shivah

@@ -785,8 +785,12 @@ public class AttackData {
 
     private bool SearchLibraryForWord(string word) {
         //returns true if the library contains the word
-        int result = System.Array.BinarySearch<string>(StaticVariables.wordLibraryForChecking, word.ToLower());
-        return (result > -1);
+        if (StaticVariables.allowProfanities)
+            return (System.Array.BinarySearch<string>(StaticVariables.allWordLibrary, word.ToLower()) > -1);
+        else
+            return (System.Array.BinarySearch<string>(StaticVariables.allWordNoSwearsLibrary, word.ToLower()) > -1);
+        //int result = System.Array.BinarySearch<string>(StaticVariables.wordLibraryForChecking, word.ToLower());
+        //return (result > -1);
     }
 
     public void SetWordStrength(){

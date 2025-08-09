@@ -78,7 +78,7 @@ for word in swear_words:
     
 #write no swears list to no swears file
 with open(all_words_no_swears_file_name, 'w') as file:
-    for word in new_words_list:
+    for word in new_words_list_no_swears:
         file.write(f"{word}\n")
         
 #split word list by length

@@ -38,8 +38,7 @@ public static class SaveSystem{
             FirstTimePlayingEver();
     }
 
-    private static void FirstTimePlayingEver()
-    {
+    private static void FirstTimePlayingEver() {
         Debug.Log("First time playing ever!");
         //if this is the first time that the player has opened the game, load the default values for some staticVariables elements
         StaticVariables.highestBeatenStage = StaticVariables.GetStage(1, 0);

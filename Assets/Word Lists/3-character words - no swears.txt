@@ -371,7 +371,6 @@ cud
 cue
 cuj
 cul
-cum
 cun
 cup
 cur

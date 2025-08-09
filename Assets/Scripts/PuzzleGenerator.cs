@@ -95,23 +95,52 @@ public class PuzzleGenerator : MonoBehaviour {
     }
 
     private bool PickWordsAndAttemptToGenerateSolution(){
-        string[] words = GetRandomWordsFromLibrary();
-        //print("new puzzle about to be generated using words:");
-        //foreach (string w in words)
-        //    print(w);
+        string[] words = new string[wordCount];
+        if (useSmallerLayout) {
+            for (int i = 0; i < wordCount; i++)
+                words[i] = GetRandomWord(4);
+        }
+        else {
+            if (wordCount >= 1)
+                words[0] = GetRandomWord(7);
+            if (wordCount >= 2)
+                words[1] = GetRandomWord(6);
+            for (int i = 2; i < wordCount; i++)
+                words[i] = GetRandomWord(5);
+        }
+
+        for (int i = 0; i < wordCount; i++) {
+            if (words[i] == null)
+                words[i] = "qqqq";
+        }
         return AttemptToGenerateSolution(words);
     }
-
-    private string[] GetRandomWordsFromLibrary(){
-        string[] library = StaticVariables.wordLibraryForGeneration;
-        if (useSmallerLayout){
-            print("using smaller layout for generation");
-            library = StaticVariables.wordLibraryForGeneratingSmallerPuzzles;
+    
+    private string GetRandomWord(int length){
+        switch (length) {
+            case (7):
+                if (StaticVariables.allowProfanities)
+                    return StaticVariables.words7LetterLibrary[StaticVariables.rand.Next(StaticVariables.words7LetterLibrary.Length)];
+                else
+                    return StaticVariables.words7LetterNoSwearsLibrary[StaticVariables.rand.Next(StaticVariables.words7LetterNoSwearsLibrary.Length)];
+            case (6):
+                if (StaticVariables.allowProfanities)
+                    return StaticVariables.words6LetterLibrary[StaticVariables.rand.Next(StaticVariables.words6LetterLibrary.Length)];
+                else
+                    return StaticVariables.words6LetterNoSwearsLibrary[StaticVariables.rand.Next(StaticVariables.words6LetterNoSwearsLibrary.Length)];
+            case (5):
+                if (StaticVariables.allowProfanities)
+                    return StaticVariables.words5LetterLibrary[StaticVariables.rand.Next(StaticVariables.words5LetterLibrary.Length)];
+                else
+                    return StaticVariables.words5LetterNoSwearsLibrary[StaticVariables.rand.Next(StaticVariables.words5LetterNoSwearsLibrary.Length)];
+            case (4):
+                if (StaticVariables.allowProfanities)
+                    return StaticVariables.words4LetterLibrary[StaticVariables.rand.Next(StaticVariables.words4LetterLibrary.Length)];
+                else
+                    return StaticVariables.words4LetterNoSwearsLibrary[StaticVariables.rand.Next(StaticVariables.words4LetterNoSwearsLibrary.Length)];
+            default:
+                return null;
         }
-        string[] result = new string[wordCount];
-        for (int i = 0; i < wordCount; i++)
-            result[i] = library[StaticVariables.rand.Next(library.Length)];
-        return result;
     }
 
 
