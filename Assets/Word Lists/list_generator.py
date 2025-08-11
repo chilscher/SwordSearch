@@ -33,7 +33,6 @@ words_12_letter_file_name = '12-letter words.txt'
 words_13_letter_file_name = '13-letter words.txt'
 words_14_letter_file_name = '14-letter words.txt'
 words_15_letter_file_name = '15-letter words.txt'
-#words_for_puzzle_generation_file_name = 'list of words for puzzle generation.txt'
 
 #read in input files
 all_words_list = open(all_words_file_name).read().splitlines()
@@ -41,31 +40,23 @@ swears_to_remove = open(swears_to_remove_file_name).read().splitlines()
 words_to_add = open(words_to_add_file_name).read().splitlines()
 words_to_remove = open(words_to_remove_file_name).read().splitlines()
 
-#update base word list
+#update list of all words
 new_words_list = copy(all_words_list)
-#new_words_list = []
-#for word in all_words_list:
-#    if (2 < len(word) < 16):
-#        new_words_list.append(word)
 for word in words_to_add:
     new_words_list.append(word)
 for word in words_to_remove:
     if word in all_words_list:
         new_words_list.remove(word)
 new_words_list.sort()
-
-#write base list to original word list file
 with open(all_words_file_name, 'w') as file:
     for word in new_words_list:
         file.write(f"{word}\n")
              
-#remove swear words
+#update NP files
 new_words_list_no_swears = copy(new_words_list)
 for word in swears_to_remove:
     if word in new_words_list:
         new_words_list_no_swears.remove(word)
-    
-#write no swears list to no swears file
 with open(all_words_no_swears_file_name, 'w') as file:
     for word in new_words_list_no_swears:
         file.write(f"{word}\n")
