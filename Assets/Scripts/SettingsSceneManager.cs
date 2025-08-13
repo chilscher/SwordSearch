@@ -24,6 +24,14 @@ public class SettingsSceneManager : MonoBehaviour{
     [TextArea(2,5)]
     public string hardModeDescription;
     public Text profanityFilterDisplay;
+    public GameObject difficultyBackIcon;
+    public GameObject difficultyForwardIcon;
+    public GameObject worldPreviousIcon;
+    public GameObject worldNextIcon;
+    public GameObject stagePreviousIcon;
+    public GameObject stageNextIcon;
+    private string finalPlaytestWorldString = "DESERT"; // desert
+    private string finalPlaytestStageString = "Tutorial 5 - Knight";
     //public GeneralSceneManager generalSceneManager;
 
     //public BattleData JustBattleOpponent;
@@ -47,8 +55,20 @@ public class SettingsSceneManager : MonoBehaviour{
     }
 
     private void DisplayProgress(){
+        worldNextIcon.SetActive(true);
+        stageNextIcon.SetActive(true);
+        worldPreviousIcon.SetActive(true);
+        stagePreviousIcon.SetActive(true);
         worldNameDisplay.text = StaticVariables.highestBeatenStage.nextStage.worldName.ToUpper();
         stageNumberDisplay.text = "STAGE  " + StaticVariables.highestBeatenStage.nextStage.stage;
+        if ((StaticVariables.highestBeatenStage.nextStage.world == 1) && (StaticVariables.highestBeatenStage.nextStage.stage == 1)){
+            worldPreviousIcon.SetActive(false);
+            stagePreviousIcon.SetActive(false);
+        }
+        else if (StaticVariables.highestBeatenStage.enemyPrefab.name == finalPlaytestStageString){
+            worldNextIcon.SetActive(false);
+            stageNextIcon.SetActive(false);
+        }
     }
 
     public void WorldDown(){
@@ -62,15 +82,19 @@ public class SettingsSceneManager : MonoBehaviour{
         SaveSystem.SaveGame();
     }
 
-    public void WorldUp(){     
-        if (StaticVariables.highestBeatenStage.nextStage.nextStage.worldName.ToUpper().Contains("DESERT")) //for alpha test
-            return;   
-        int newWorld = StaticVariables.highestBeatenStage.nextStage.world + 1;
-        if (newWorld > 8)
-            newWorld = 8;
-        int newStage = 1;
-        StageData stage = StaticVariables.GetStage(newWorld, newStage);
-        StaticVariables.highestBeatenStage = stage.previousStage;
+    public void WorldUp(){
+        if (StaticVariables.highestBeatenStage.nextStage.nextStage.worldName.ToUpper().Contains(finalPlaytestWorldString)) //for alpha test
+            while (StaticVariables.highestBeatenStage.enemyPrefab.name != finalPlaytestStageString)
+                StaticVariables.highestBeatenStage = StaticVariables.highestBeatenStage.nextStage;
+            //return;
+        else {
+            int newWorld = StaticVariables.highestBeatenStage.nextStage.world + 1;
+            if (newWorld > 8)
+                newWorld = 8;
+            int newStage = 1;
+            StageData stage = StaticVariables.GetStage(newWorld, newStage);
+            StaticVariables.highestBeatenStage = stage.previousStage;
+        }
         DisplayProgress(); 
         SaveSystem.SaveGame();
     }
@@ -82,10 +106,10 @@ public class SettingsSceneManager : MonoBehaviour{
     }
 
     public void StageUp(){
-        if (StaticVariables.highestBeatenStage.enemyPrefab.name == "Tutorial 5 - Knight") //for alpha test
+        if ((StaticVariables.highestBeatenStage.enemyPrefab != null) && (StaticVariables.highestBeatenStage.enemyPrefab.name == finalPlaytestStageString)) //for alpha test
             return;
-        if ((StaticVariables.highestBeatenStage.nextStage != null) && (StaticVariables.highestBeatenStage.nextStage.nextStage != null))
-                StaticVariables.highestBeatenStage = StaticVariables.highestBeatenStage.nextStage;
+        else if ((StaticVariables.highestBeatenStage.nextStage != null) && (StaticVariables.highestBeatenStage.nextStage.nextStage != null))
+            StaticVariables.highestBeatenStage = StaticVariables.highestBeatenStage.nextStage;
         DisplayProgress();
         SaveSystem.SaveGame();
     }
@@ -105,8 +129,11 @@ public class SettingsSceneManager : MonoBehaviour{
     }
     
     public void NextDifficultyMode(){
-        //easy > normal > hard > puzzle > easy
+        //puzzle > easy > normal > hard
         switch (StaticVariables.difficultyMode){
+            case StaticVariables.DifficultyMode.Puzzle:
+                StaticVariables.difficultyMode = StaticVariables.DifficultyMode.Easy;
+                break;
             case StaticVariables.DifficultyMode.Easy:
                 StaticVariables.difficultyMode = StaticVariables.DifficultyMode.Normal;
                 break;
@@ -114,10 +141,7 @@ public class SettingsSceneManager : MonoBehaviour{
                 StaticVariables.difficultyMode = StaticVariables.DifficultyMode.Hard;
                 break;
             case StaticVariables.DifficultyMode.Hard:
-                StaticVariables.difficultyMode = StaticVariables.DifficultyMode.Puzzle;
-                break;
-            case StaticVariables.DifficultyMode.Puzzle:
-                StaticVariables.difficultyMode = StaticVariables.DifficultyMode.Easy;
+                //don't advance;
                 break;
             default:
                 StaticVariables.difficultyMode = StaticVariables.DifficultyMode.Normal;
@@ -131,19 +155,19 @@ public class SettingsSceneManager : MonoBehaviour{
     }
     
     public void PreviousDifficultyMode(){ 
-        //same as above but reversed       
+        //hard > normal > easy > puzzle     
         switch (StaticVariables.difficultyMode){
-            case StaticVariables.DifficultyMode.Easy:
-                StaticVariables.difficultyMode = StaticVariables.DifficultyMode.Puzzle;
-                break;
-            case StaticVariables.DifficultyMode.Puzzle:
-                StaticVariables.difficultyMode = StaticVariables.DifficultyMode.Hard;
-                break;
             case StaticVariables.DifficultyMode.Hard:
                 StaticVariables.difficultyMode = StaticVariables.DifficultyMode.Normal;
                 break;
             case StaticVariables.DifficultyMode.Normal:
                 StaticVariables.difficultyMode = StaticVariables.DifficultyMode.Easy;
+                break;
+            case StaticVariables.DifficultyMode.Easy:
+                StaticVariables.difficultyMode = StaticVariables.DifficultyMode.Puzzle;
+                break;
+            case StaticVariables.DifficultyMode.Puzzle:
+                //don't advance;
                 break;
             default:
                 StaticVariables.difficultyMode = StaticVariables.DifficultyMode.Normal;
@@ -154,7 +178,9 @@ public class SettingsSceneManager : MonoBehaviour{
     }
     
     public void DisplayDifficultyMode(){
-        switch (StaticVariables.difficultyMode){
+        difficultyBackIcon.SetActive(true);
+        difficultyForwardIcon.SetActive(true);
+        switch (StaticVariables.difficultyMode) {
             case StaticVariables.DifficultyMode.Normal:
                 difficultyModeDisplay.text = "NORMAL";
                 difficultyModeDescription.text = normalModeDescription;
@@ -166,6 +192,7 @@ public class SettingsSceneManager : MonoBehaviour{
             case StaticVariables.DifficultyMode.Puzzle:
                 difficultyModeDisplay.text = "PUZZLE";
                 difficultyModeDescription.text = puzzleModeDescription;
+                difficultyBackIcon.SetActive(false);
                 break;
             case StaticVariables.DifficultyMode.Easy:
                 difficultyModeDisplay.text = "EASY";
@@ -174,6 +201,7 @@ public class SettingsSceneManager : MonoBehaviour{
             case StaticVariables.DifficultyMode.Hard:
                 difficultyModeDisplay.text = "HARD";
                 difficultyModeDescription.text = hardModeDescription;
+                difficultyForwardIcon.SetActive(false);
                 break;
             default:
                 difficultyModeDisplay.text = "ERROR";

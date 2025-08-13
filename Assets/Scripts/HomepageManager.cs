@@ -120,8 +120,7 @@ public class HomepageManager : MonoBehaviour{
         ShowNextEndlessModeEnemy(endlessModePosition4, endlessModeMoveDuration);
     }
 
-    private void DisplayProgress()
-    {
+    private void DisplayProgress() {
         int nextEnemyWorldNum = StaticVariables.highestBeatenStage.nextStage.world;
         continueHometown.SetActive(nextEnemyWorldNum == 1);
         continueGrasslands.SetActive(nextEnemyWorldNum == 2);
