@@ -200,7 +200,7 @@ MonoBehaviour:
     talker: {fileID: 0}
     name: 
     emotion: 0
-    description: A fidlle dog to be precise.
+    description: A fiddle dog to be precise.
   - type: 0
     talker: {fileID: 0}
     name: 
