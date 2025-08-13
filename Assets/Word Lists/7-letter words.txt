@@ -3511,7 +3511,6 @@ beamlet
 beamman
 beanbag
 beancod
-beaners
 beanery
 beanier
 beanies
@@ -4587,7 +4586,6 @@ bludger
 bluecap
 bluecup
 bluefin
-bluegum
 blueing
 blueish
 bluejay
@@ -8427,7 +8425,6 @@ cookout
 coolant
 coolers
 coolest
-coolies
 cooling
 coolish
 coolung
@@ -9723,9 +9720,7 @@ darings
 dariole
 darkens
 darkest
-darkeys
 darkful
-darkies
 darking
 darkish
 darkled
@@ -13300,7 +13295,6 @@ faeries
 fagales
 fagelia
 faggery
-fagging
 faggoty
 fagoted
 fagoter
@@ -17653,8 +17647,6 @@ honesty
 honeyed
 honiton
 honkers
-honkeys
-honkies
 honking
 honored
 honoree
@@ -19221,7 +19213,6 @@ jerqued
 jerquer
 jerreed
 jerrids
-jerries
 jerseys
 jervina
 jervine
@@ -19271,7 +19262,6 @@ jibstay
 jicamas
 jicaque
 jiffies
-jigaboo
 jiggers
 jiggety
 jigging
@@ -21509,7 +21499,6 @@ lucible
 lucidae
 lucidly
 lucifee
-lucifer
 lucific
 lucigen
 lucilia
@@ -23656,7 +23645,6 @@ mukhtar
 mukluks
 muktear
 mulatta
-mulatto
 mulched
 mulcher
 mulches
@@ -24135,13 +24123,10 @@ negaton
 negator
 neglect
 neglige
-negress
 negrine
 negrita
 negrito
-negroes
 negrofy
-negroid
 negundo
 neguses
 neighed
@@ -29904,7 +29889,6 @@ redroop
 redroot
 redrove
 redsear
-redskin
 redtail
 redtops
 reduced
@@ -32835,7 +32819,6 @@ shedded
 shedder
 shedman
 sheened
-sheeney
 sheenie
 sheenly
 sheered
@@ -34671,7 +34654,6 @@ squinch
 squinny
 squinsy
 squints
-squinty
 squired
 squires
 squiret
@@ -37614,7 +37596,6 @@ traneen
 trangam
 tranker
 trankum
-trannie
 transfd
 transit
 transom
@@ -40875,7 +40856,6 @@ westing
 westlan
 westlaw
 westlin
-wetback
 wetbird
 wetched
 wetchet
@@ -41030,10 +41010,8 @@ whistly
 whitely
 whitens
 whitest
-whiteys
 whither
 whitier
-whities
 whiting
 whitish
 whitlow

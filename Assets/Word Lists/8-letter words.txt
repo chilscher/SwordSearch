@@ -5117,7 +5117,6 @@ blackies
 blacking
 blackish
 blackleg
-blackman
 blackneb
 blacknob
 blackout
@@ -5338,7 +5337,6 @@ bluefins
 bluefish
 bluegill
 bluegown
-bluegums
 bluehead
 blueings
 bluejack
@@ -6549,7 +6547,6 @@ burnweed
 burnwood
 burrbark
 burrfish
-burrhead
 burriest
 burritos
 burrknot
@@ -8421,8 +8418,6 @@ chimeres
 chimeric
 chimleys
 chimneys
-chinaman
-chinamen
 chinampa
 chinanta
 chinband
@@ -23350,7 +23345,6 @@ jezekite
 jibbings
 jibbooms
 jibingly
-jigaboos
 jiggered
 jiggerer
 jigglier
@@ -36352,7 +36346,6 @@ redrying
 redshank
 redshire
 redshirt
-redskins
 redstart
 redubber
 reducent
@@ -37200,7 +37193,6 @@ retaking
 retanned
 retanner
 retaping
-retarded
 retardee
 retarder
 retariff
@@ -44850,7 +44842,6 @@ testamur
 testandi
 testator
 testatum
-testicle
 testiere
 testiest
 testings
@@ -50461,7 +50452,6 @@ westmost
 westness
 westward
 westwork
-wetbacks
 wetlands
 wetproof
 wettable

@@ -2058,7 +2058,6 @@ aymoro
 aythya
 azalea
 azande
-azazel
 azides
 azilut
 azimin
@@ -2559,7 +2558,6 @@ beaker
 beamed
 beamer
 beaned
-beaner
 beanie
 beanos
 beards
@@ -3426,7 +3424,6 @@ boccia
 boccie
 boccis
 bocher
-boches
 bochur
 bockey
 bodach
@@ -3469,7 +3466,6 @@ bogway
 bohawn
 boheas
 bohora
-bohunk
 boidae
 boigid
 boiled
@@ -5219,7 +5215,6 @@ chines
 chinik
 chinin
 chinks
-chinky
 chinny
 chinoa
 chinol
@@ -5983,7 +5978,6 @@ cooled
 coolen
 cooler
 cooley
-coolie
 coolly
 coolth
 coombe
@@ -6933,8 +6927,6 @@ darius
 darked
 darken
 darker
-darkey
-darkie
 darkle
 darkly
 darned
@@ -9312,7 +9304,6 @@ fadged
 fadges
 fading
 faecal
-faeces
 faenas
 faence
 faenus
@@ -9322,11 +9313,9 @@ faffle
 fafnir
 fagald
 fagara
-fagged
 fagger
 fagine
 fagins
-fagots
 fagott
 fagoty
 faikes
@@ -9832,7 +9821,6 @@ flakes
 flambe
 flamed
 flamen
-flamer
 flames
 flanch
 flanes
@@ -10267,7 +10255,6 @@ friers
 friese
 frieze
 friezy
-frigga
 fright
 frigid
 frigor
@@ -11953,7 +11940,6 @@ hanses
 hansom
 hanted
 hantle
-haoles
 haoris
 hapale
 happed
@@ -12319,7 +12305,6 @@ himati
 himene
 himple
 hinder
-hindoo
 hindus
 hinged
 hinger
@@ -12363,7 +12348,6 @@ histie
 histon
 hitchy
 hither
-hitler
 hitter
 hiving
 hivite
@@ -12475,8 +12459,6 @@ honily
 honing
 honked
 honker
-honkey
-honkie
 honora
 honors
 honour
@@ -13593,7 +13575,6 @@ jettru
 jewdom
 jewels
 jewely
-jewess
 jewing
 jewish
 jewism
@@ -13876,7 +13857,6 @@ kadder
 kadein
 kadine
 kadish
-kaffir
 kafila
 kafiri
 kafirs
@@ -14470,7 +14450,6 @@ kraken
 krantz
 krasis
 krater
-krauts
 kreese
 krelos
 krepis
@@ -15699,7 +15678,6 @@ mabolo
 mabuti
 mabyer
 macabi
-macaca
 macaco
 macana
 macaws
@@ -17259,7 +17237,6 @@ myxine
 myxoid
 myxoma
 myzont
-mzungu
 naaman
 nabbed
 nabber
@@ -17451,7 +17428,6 @@ negara
 negate
 neglig
 negoce
-negros
 neighs
 neilah
 neiper
@@ -17877,7 +17853,6 @@ nylast
 nylgau
 nylons
 nympha
-nympho
 nymphs
 nyroca
 nytril
@@ -19830,7 +19805,6 @@ pokily
 poking
 pokomo
 pokunt
-polack
 poland
 polars
 polary
@@ -21863,7 +21837,6 @@ risser
 rissle
 rissoa
 rissom
-ritard
 ritely
 ritter
 ritual
@@ -22385,7 +22358,6 @@ sambal
 sambar
 sambas
 sambel
-sambos
 sambuk
 sambul
 sambur
@@ -22693,7 +22665,6 @@ scherm
 schick
 schism
 schist
-schizo
 schizy
 schlep
 schmoe
@@ -24437,7 +24408,6 @@ spiced
 spicer
 spices
 spicey
-spicks
 spider
 spiels
 spiers
@@ -26014,8 +25984,6 @@ testar
 tested
 testee
 tester
-testes
-testis
 teston
 testor
 tetany
@@ -28987,7 +28955,6 @@ weeted
 weever
 weevil
 weewaw
-weewee
 weewow
 weezle
 wefted
@@ -29109,7 +29076,6 @@ whited
 whiten
 whiter
 whites
-whitey
 whitin
 wholes
 wholly
@@ -29166,7 +29132,6 @@ wigeon
 wigful
 wigged
 wiggen
-wigger
 wiggle
 wiggly
 wigher

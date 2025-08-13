@@ -2673,7 +2673,6 @@ arrowlet
 arruague
 arsedine
 arsefoot
-arsehole
 arsenals
 arsenate
 arsenics
@@ -3960,7 +3959,6 @@ bassorin
 basswood
 bastaard
 bastarda
-bastards
 bastardy
 bastiles
 bastille
@@ -5061,7 +5059,6 @@ bitbrace
 bitchery
 bitchier
 bitchily
-bitching
 biteable
 biteless
 bitewing
@@ -5116,7 +5113,6 @@ blackies
 blacking
 blackish
 blackleg
-blackman
 blackneb
 blacknob
 blackout
@@ -5303,7 +5299,6 @@ blowhole
 blowiest
 blowings
 blowiron
-blowjobs
 blowlamp
 blowline
 blowoffs
@@ -5337,7 +5332,6 @@ bluefins
 bluefish
 bluegill
 bluegown
-bluegums
 bluehead
 blueings
 bluejack
@@ -5498,7 +5492,6 @@ bolivias
 bollards
 bollixed
 bollixes
-bollocks
 bolloxed
 bolloxes
 bollworm
@@ -6374,7 +6367,6 @@ bufonite
 bugaboos
 bugbanes
 bugbears
-buggered
 buggiest
 buggyman
 buggymen
@@ -6440,7 +6432,6 @@ bullpout
 bullring
 bullrush
 bullseye
-bullshit
 bullshot
 bullskin
 bulltoad
@@ -6548,7 +6539,6 @@ burnweed
 burnwood
 burrbark
 burrfish
-burrhead
 burriest
 burritos
 burrknot
@@ -8420,8 +8410,6 @@ chimeres
 chimeric
 chimleys
 chimneys
-chinaman
-chinamen
 chinampa
 chinanta
 chinband
@@ -9093,7 +9081,6 @@ clithral
 clitoral
 clitoria
 clitoric
-clitoris
 clivises
 cloacean
 cloakage
@@ -10129,7 +10116,6 @@ coprinae
 coprinus
 coproite
 coprosma
-copulate
 copybook
 copyboys
 copycats
@@ -15291,7 +15277,6 @@ erasures
 erecters
 erectile
 erecting
-erection
 erective
 erectors
 eremital
@@ -16441,7 +16426,6 @@ fellahin
 fellatah
 fellated
 fellatee
-fellatio
 fellator
 fellfare
 fellinic
@@ -17615,7 +17599,6 @@ foreshow
 foreside
 foresign
 foresing
-foreskin
 foreslow
 forestal
 forestay
@@ -17796,7 +17779,6 @@ fourling
 fourneau
 fourness
 fourrier
-foursome
 fourteen
 fourther
 fourthly
@@ -18068,7 +18050,6 @@ frothily
 frothing
 frottage
 frotteur
-frotting
 frottola
 frottole
 froufrou
@@ -18502,7 +18483,6 @@ gandhism
 gandhist
 gandoura
 gandurah
-gangbang
 gangerel
 gangetic
 ganggang
@@ -18764,7 +18744,6 @@ genially
 genipaps
 genisaro
 genistin
-genitals
 geniting
 genitive
 genitors
@@ -19335,7 +19314,6 @@ golgotha
 goliards
 goliaths
 golkakra
-golliwog
 gollywog
 goloshes
 gomarian
@@ -21482,7 +21460,6 @@ hornfair
 hornfels
 hornfish
 horngeld
-horniest
 hornitos
 hornkeck
 hornless
@@ -23188,7 +23165,6 @@ jagghery
 jaggiest
 jagirdar
 jahannan
-jailbait
 jailbird
 jailless
 jaillike
@@ -23349,7 +23325,6 @@ jezekite
 jibbings
 jibbooms
 jibingly
-jigaboos
 jiggered
 jiggerer
 jigglier
@@ -25213,7 +25188,6 @@ lingcods
 lingence
 lingered
 lingerer
-lingerie
 lingiest
 lingster
 linguale
@@ -27759,7 +27733,6 @@ molehill
 molelike
 moleskin
 molested
-molester
 molestie
 molewarp
 molified
@@ -30217,7 +30190,6 @@ organons
 organule
 organums
 organzas
-orgasmic
 orgastic
 orgulous
 oribatid
@@ -32206,7 +32178,6 @@ peelable
 peelcrow
 peelings
 peephole
-peepshow
 peerages
 peerhood
 peerless
@@ -33342,7 +33313,6 @@ playdays
 playdown
 playfere
 playfolk
-playgirl
 playgoer
 playland
 playless
@@ -36351,7 +36321,6 @@ redrying
 redshank
 redshire
 redshirt
-redskins
 redstart
 redubber
 reducent
@@ -37199,7 +37168,6 @@ retaking
 retanned
 retanner
 retaping
-retarded
 retardee
 retarder
 retariff
@@ -39798,7 +39766,6 @@ sextiply
 sextolet
 sextuple
 sextuply
-sexually
 sexupara
 seymeria
 sforzato
@@ -39841,7 +39808,6 @@ shagbark
 shagbush
 shaggier
 shaggily
-shagging
 shaglike
 shagpate
 shagreen
@@ -40119,12 +40085,9 @@ shirtier
 shirting
 shirtman
 shirtmen
-shithead
-shitheel
 shittahs
 shittier
 shittims
-shitting
 shivaism
 shivaist
 shivaite
@@ -41039,7 +41002,6 @@ slushing
 slushpit
 sluthood
 sluttery
-slutting
 sluttish
 slyboots
 smachrie
@@ -41403,8 +41365,6 @@ soddenly
 soddiest
 sodomies
 sodomist
-sodomite
-sodomize
 soffarid
 soffione
 soffioni
@@ -44060,7 +44020,6 @@ syntypic
 syodicon
 syphered
 syphilid
-syphilis
 syphoned
 syracuse
 syrianic
@@ -44849,7 +44808,6 @@ testamur
 testandi
 testator
 testatum
-testicle
 testiere
 testiest
 testings
@@ -50460,7 +50418,6 @@ westmost
 westness
 westward
 westwork
-wetbacks
 wetlands
 wetproof
 wettable
@@ -51579,7 +51536,6 @@ zoonotic
 zoopathy
 zooperal
 zoophaga
-zoophile
 zoophily
 zoophism
 zoophobe

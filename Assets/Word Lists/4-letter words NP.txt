@@ -255,7 +255,6 @@ amps
 amra
 amus
 amyl
-anal
 anam
 anan
 anas
@@ -292,7 +291,6 @@ ante
 anti
 ants
 antu
-anus
 aoli
 aoul
 apar
@@ -346,7 +344,6 @@ arni
 arow
 arri
 arry
-arse
 arte
 arts
 arty
@@ -651,7 +648,6 @@ bini
 bink
 bino
 bins
-bint
 biod
 biog
 biol
@@ -755,13 +751,11 @@ bomi
 bona
 bond
 bone
-bong
 boni
 bonk
 bono
 bons
 bony
-boob
 bood
 boof
 book
@@ -921,7 +915,6 @@ byth
 caam
 caba
 cabs
-caca
 cace
 caci
 cack
@@ -1116,7 +1109,6 @@ clew
 clin
 clio
 clip
-clit
 cliv
 clod
 clof
@@ -1142,7 +1134,6 @@ cobb
 cobs
 coca
 coch
-cock
 coco
 coct
 coda
@@ -1253,7 +1244,6 @@ crab
 crag
 cram
 cran
-crap
 craw
 crax
 cray
@@ -1295,7 +1285,6 @@ cube
 cubi
 cubs
 cuca
-cuck
 cuda
 cuds
 cued
@@ -1355,7 +1344,6 @@ dadu
 daer
 daff
 daft
-dago
 dags
 dahs
 dail
@@ -1369,7 +1357,6 @@ dalk
 dalt
 dama
 dame
-damn
 damp
 dams
 dana
@@ -1527,7 +1514,6 @@ dime
 dims
 dine
 ding
-dink
 dino
 dins
 dint
@@ -1732,7 +1718,6 @@ dyce
 dyed
 dyer
 dyes
-dyke
 dyne
 each
 eadi
@@ -1970,7 +1955,6 @@ ezod
 ezra
 faba
 face
-fack
 fact
 facy
 fade
@@ -2029,7 +2013,6 @@ feak
 feal
 fear
 feat
-feck
 fedn
 feds
 feeb
@@ -2499,12 +2482,10 @@ gony
 good
 goof
 goog
-gook
 gool
 goon
 goop
 goos
-gora
 gorb
 gore
 gory
@@ -2717,7 +2698,6 @@ heal
 heap
 hear
 heat
-hebe
 hech
 heck
 hede
@@ -2733,7 +2713,6 @@ hein
 heir
 held
 hele
-hell
 helm
 help
 heme
@@ -2752,7 +2731,6 @@ herl
 herm
 hern
 hero
-herp
 herr
 hers
 hert
@@ -2835,7 +2813,6 @@ holt
 holw
 holy
 home
-homo
 homy
 hond
 hone
@@ -2854,7 +2831,6 @@ hope
 hopi
 hops
 hora
-hore
 horn
 hors
 hort
@@ -2975,7 +2951,6 @@ iiwi
 ijma
 ikan
 ikat
-ikey
 ikon
 ikra
 ilea
@@ -3183,7 +3158,6 @@ jinn
 jins
 jinx
 jiri
-jism
 jiti
 jiva
 jive
@@ -3372,7 +3346,6 @@ kier
 kiev
 kifs
 kiho
-kike
 kiki
 kiku
 kill
@@ -3384,7 +3357,6 @@ kina
 kind
 kine
 king
-kink
 kino
 kins
 kipe
@@ -3502,7 +3474,6 @@ kyah
 kyak
 kyar
 kyat
-kyke
 kyle
 kylo
 kyte
@@ -3977,7 +3948,6 @@ menu
 meny
 meow
 merc
-merd
 mere
 merk
 merl
@@ -4006,7 +3976,6 @@ mias
 mibs
 mica
 mice
-mick
 mico
 mide
 midi
@@ -4100,7 +4069,6 @@ mojo
 moke
 moki
 moko
-moky
 mola
 mold
 mole
@@ -4114,7 +4082,6 @@ momo
 moms
 mona
 mone
-mong
 monk
 mono
 mons
@@ -4194,7 +4161,6 @@ mund
 mung
 munj
 muns
-munt
 muon
 mura
 mure
@@ -4577,7 +4543,6 @@ ordu
 ored
 ores
 orfe
-orgy
 orig
 orle
 orlo
@@ -4614,7 +4579,6 @@ over
 ovey
 ovid
 ovis
-ovum
 owed
 owen
 ower
@@ -4769,7 +4733,6 @@ perp
 pers
 pert
 peru
-perv
 pesa
 peso
 pess
@@ -4818,14 +4781,12 @@ pigs
 pika
 pike
 piki
-piky
 pile
 pili
 pill
 pilm
 pily
 pima
-pimp
 pina
 pind
 pine
@@ -4852,7 +4813,6 @@ pise
 pish
 pisk
 piso
-piss
 pist
 pita
 pith
@@ -4926,7 +4886,6 @@ poof
 pooh
 pook
 pool
-poon
 poop
 poor
 poot
@@ -4935,7 +4894,6 @@ pops
 porc
 pore
 pork
-porn
 porr
 port
 pory
@@ -4986,7 +4944,6 @@ prod
 prof
 prog
 prom
-pron
 proo
 prop
 pros
@@ -5093,7 +5050,6 @@ quey
 quia
 quib
 quid
-quim
 quin
 quip
 quis
@@ -5488,7 +5444,6 @@ saya
 says
 scab
 scad
-scag
 scam
 scan
 scap
@@ -5582,7 +5537,6 @@ seve
 sewn
 sews
 sext
-sexy
 sgad
 shab
 shad
@@ -5661,7 +5615,6 @@ silo
 silt
 sima
 sime
-simp
 sims
 sina
 sind
@@ -5693,7 +5646,6 @@ siva
 size
 sizy
 sizz
-skag
 skal
 skat
 skaw
@@ -5759,14 +5711,12 @@ slug
 slum
 slup
 slur
-slut
 smee
 smew
 smit
 smog
 smug
 smur
-smut
 snab
 snag
 snap
@@ -5877,10 +5827,7 @@ sped
 spet
 spew
 spex
-spic
 spif
-spig
-spik
 spin
 spit
 spiv
@@ -6131,7 +6078,6 @@ tean
 teap
 tear
 teas
-teat
 tebu
 teca
 tech
@@ -6258,7 +6204,6 @@ tiro
 tirr
 tite
 titi
-tits
 tivy
 tiza
 tnpk
@@ -6443,7 +6388,6 @@ tuza
 twae
 twal
 twas
-twat
 tway
 twee
 twie
@@ -6731,8 +6675,6 @@ wame
 wamp
 wand
 wane
-wang
-wank
 wans
 want
 wany
@@ -7052,7 +6994,6 @@ yett
 yeuk
 yews
 yhwh
-yids
 yigh
 yike
 yill

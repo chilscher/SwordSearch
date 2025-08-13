@@ -1355,7 +1355,6 @@ dadu
 daer
 daff
 daft
-dago
 dags
 dahs
 dail
@@ -1528,7 +1527,6 @@ dime
 dims
 dine
 ding
-dink
 dino
 dins
 dint
@@ -1733,7 +1731,6 @@ dyce
 dyed
 dyer
 dyes
-dyke
 dyne
 each
 eadi
@@ -2501,12 +2498,10 @@ gony
 good
 goof
 goog
-gook
 gool
 goon
 goop
 goos
-gora
 gorb
 gore
 gory
@@ -2719,7 +2714,6 @@ heal
 heap
 hear
 heat
-hebe
 hech
 heck
 hede
@@ -2754,7 +2748,6 @@ herl
 herm
 hern
 hero
-herp
 herr
 hers
 hert
@@ -2837,7 +2830,6 @@ holt
 holw
 holy
 home
-homo
 homy
 hond
 hone
@@ -2977,7 +2969,6 @@ iiwi
 ijma
 ikan
 ikat
-ikey
 ikon
 ikra
 ilea
@@ -3185,7 +3176,6 @@ jinn
 jins
 jinx
 jiri
-jism
 jiti
 jiva
 jive
@@ -3374,7 +3364,6 @@ kier
 kiev
 kifs
 kiho
-kike
 kiki
 kiku
 kill
@@ -3504,7 +3493,6 @@ kyah
 kyak
 kyar
 kyat
-kyke
 kyle
 kylo
 kyte
@@ -3979,7 +3967,6 @@ menu
 meny
 meow
 merc
-merd
 mere
 merk
 merl
@@ -4008,7 +3995,6 @@ mias
 mibs
 mica
 mice
-mick
 mico
 mide
 midi
@@ -4102,7 +4088,6 @@ mojo
 moke
 moki
 moko
-moky
 mola
 mold
 mole
@@ -4116,7 +4101,6 @@ momo
 moms
 mona
 mone
-mong
 monk
 mono
 mons
@@ -4196,7 +4180,6 @@ mund
 mung
 munj
 muns
-munt
 muon
 mura
 mure
@@ -4820,7 +4803,6 @@ pigs
 pika
 pike
 piki
-piky
 pile
 pili
 pill
@@ -4988,7 +4970,6 @@ prod
 prof
 prog
 prom
-pron
 proo
 prop
 pros
@@ -5095,7 +5076,6 @@ quey
 quia
 quib
 quid
-quim
 quin
 quip
 quis
@@ -5491,7 +5471,6 @@ saya
 says
 scab
 scad
-scag
 scam
 scan
 scap
@@ -5666,7 +5645,6 @@ silo
 silt
 sima
 sime
-simp
 sims
 sina
 sind
@@ -5698,7 +5676,6 @@ siva
 size
 sizy
 sizz
-skag
 skal
 skat
 skaw
@@ -5882,10 +5859,7 @@ sped
 spet
 spew
 spex
-spic
 spif
-spig
-spik
 spin
 spit
 spiv
@@ -7057,7 +7031,6 @@ yett
 yeuk
 yews
 yhwh
-yids
 yigh
 yike
 yill

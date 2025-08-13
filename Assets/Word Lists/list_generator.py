@@ -36,27 +36,30 @@ words_15_letter_file_name = '15-letter words.txt'
 
 #read in input files
 all_words_list = open(all_words_file_name).read().splitlines()
+all_words_no_swears_list  = open(all_words_no_swears_file_name).read().splitlines()
 swears_to_remove = open(swears_to_remove_file_name).read().splitlines()
 words_to_add = open(words_to_add_file_name).read().splitlines()
 words_to_remove = open(words_to_remove_file_name).read().splitlines()
 
-#update list of all words
+#update list of all words and NP words
 new_words_list = copy(all_words_list)
+new_words_list_no_swears = copy(all_words_no_swears_list)
 for word in words_to_add:
     new_words_list.append(word)
+    new_words_no_swears_list.append(word)
 for word in words_to_remove:
     if word in all_words_list:
         new_words_list.remove(word)
-new_words_list.sort()
-with open(all_words_file_name, 'w') as file:
-    for word in new_words_list:
-        file.write(f"{word}\n")
-             
-#update NP files
-new_words_list_no_swears = copy(new_words_list)
+    if word in all_words_no_swears_list:
+        new_words_list_no_swears.remove(word)
 for word in swears_to_remove:
     if word in new_words_list:
         new_words_list_no_swears.remove(word)
+new_words_list.sort()
+new_words_list_no_swears.sort()
+with open(all_words_file_name, 'w') as file:
+    for word in new_words_list:
+        file.write(f"{word}\n")
 with open(all_words_no_swears_file_name, 'w') as file:
     for word in new_words_list_no_swears:
         file.write(f"{word}\n")
@@ -233,4 +236,4 @@ with open(words_14_letter_no_swears_file_name, 'w') as file:
         file.write(f"{word}\n")
 with open(words_15_letter_no_swears_file_name, 'w') as file:
     for word in words_15_no_swears:
-        file.write(f"{word}\n")        
+        file.write(f"{word}\n")             
