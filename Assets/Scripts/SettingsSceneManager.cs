@@ -31,7 +31,7 @@ public class SettingsSceneManager : MonoBehaviour{
     public GameObject stagePreviousIcon;
     public GameObject stageNextIcon;
     private string finalPlaytestWorldString = "DESERT"; // desert
-    private string finalPlaytestStageString = "Tutorial 5 - Knight";
+    private string finalPlaytestStageString = "Manticore Bishop";
     //public GeneralSceneManager generalSceneManager;
 
     //public BattleData JustBattleOpponent;

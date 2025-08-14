@@ -10,7 +10,7 @@ public class CutsceneManager : MonoBehaviour{
     private int cutsceneStep = 0;
     private enum Cond{Click, Wait, BackgroundChange, externalTrigger};
     private Cond advanceCondition;
-    public enum Cutscene{Hometown1, Hometown2, Grasslands1, Grasslands2, Forest1, Forest2, Forest3, Desert1, Desert2};
+    public enum Cutscene{Hometown1, Hometown2, Grasslands1, Grasslands2, Forest1, Forest2, Forest3, Desert1, Desert2, Desert3};
     private Cutscene cutsceneID;
     private List<Animator> animatedObjectsInCutscene = new List<Animator>();
     private List<GameObject> searchableObjectsInCutscene = new List<GameObject>();
@@ -36,6 +36,7 @@ public class CutsceneManager : MonoBehaviour{
     public GameObject forest3;
     public GameObject desert1;
     public GameObject desert2;
+    public GameObject desert3;
 
     private float externalTriggerParameter = 0f;
 
@@ -72,6 +73,9 @@ public class CutsceneManager : MonoBehaviour{
                 break;
             case (Cutscene.Desert2):
                 SetupDesert2();
+                break;
+            case (Cutscene.Desert3):
+                SetupDesert3();
                 break;
         }
         ButtonText("CONTINUE");
@@ -136,6 +140,10 @@ public class CutsceneManager : MonoBehaviour{
         SetCutsceneBackground(desert2);
     }
 
+    private void SetupDesert3(){
+        SetCutsceneBackground(desert3);
+    }
+
     private void AdvanceCutsceneStep(){
         cutsceneStep ++;
         switch (cutsceneID){
@@ -165,6 +173,9 @@ public class CutsceneManager : MonoBehaviour{
                 break;
             case (Cutscene.Desert2):
                 DoDesert2Step();
+                break;
+            case (Cutscene.Desert3):
+                DoDesert3Step();
                 break;
         }
         CheckButtonAvailability();
@@ -2558,6 +2569,14 @@ public class CutsceneManager : MonoBehaviour{
     }
 
     private void DoDesert2Step(){   
+        int i = 0;
+        if (++i == cutsceneStep){
+        }
+        else if (++i == cutsceneStep){
+        }
+    }
+
+    private void DoDesert3Step(){   
         int i = 0;
         if (++i == cutsceneStep){
         }

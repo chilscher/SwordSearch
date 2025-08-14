@@ -218,10 +218,9 @@ MonoBehaviour:
   - {fileID: 1107962101534003457, guid: 0a732eed92775224a94b0b9e05132bef, type: 3}
   - {fileID: 1107962101534003457, guid: 559597effda3f6b46b2913f7cea39c13, type: 3}
   - {fileID: 815226952419649516, guid: 23533e197c4ca774ca07d8b406cddbfb, type: 3}
-  - {fileID: 1107962101534003457, guid: 851e65cc84f689f40a5c0319e9406497, type: 3}
-  - {fileID: 815226952419649516, guid: c474ca813f37a4c4c9ee56565a86be77, type: 3}
-  - {fileID: 815226952419649516, guid: a5b1341ba8b9d644895cb94283b9a8e6, type: 3}
+  - {fileID: 815226952419649516, guid: cc7a35b4e9455e440baa5d3192e3fba2, type: 3}
   - {fileID: 815226952419649516, guid: 7190dd23bcdf150498b170caf99347a4, type: 3}
+  - {fileID: 1107962101534003457, guid: cb88c9784fe00bd40aa0649daa8ec38e, type: 3}
   - {fileID: 815226952419649516, guid: 6bac5bfc3812a0043b48b999203a3cc2, type: 3}
   - {fileID: 1107962101534003457, guid: cb88c9784fe00bd40aa0649daa8ec38e, type: 3}
   cityEnemies:
@@ -239,17 +238,17 @@ MonoBehaviour:
   lightningBookList: {fileID: 4900000, guid: 37e00741fe523f24dbe8934236f19532, type: 3}
   darknessBookList: {fileID: 4900000, guid: e23831bd61f6f6c4fa1ef6f5fd43e07d, type: 3}
   swordBookList: {fileID: 4900000, guid: ee8ee9433873f6f44b1b046caba11c88, type: 3}
-  allWordsFile: {fileID: 4900000, guid: 48f12c2013a315d46bfaa710daa13525, type: 3}
-  allWordsNoSwearsFile: {fileID: 4900000, guid: 39d623805bd9fc44e8eaa73407d8788b, type: 3}
-  words4LetterFile: {fileID: 4900000, guid: a7a64d5e80a13b3408f08dad698e1c64, type: 3}
-  words4LetterNoSwearsFile: {fileID: 4900000, guid: fb4570b8e75f30947b339c3dfcf70af1, type: 3}
-  words5LetterFile: {fileID: 4900000, guid: 7878c227d6ed3d043a75e2b8fa67c19a, type: 3}
-  words5LetterNoSwearsFile: {fileID: 4900000, guid: 69050faa7e7435c41aed732ee828c205, type: 3}
-  words6LetterFile: {fileID: 4900000, guid: d7af4d6a526385f489d4850b38f77fcc, type: 3}
-  words6LetterNoSwearsFile: {fileID: 4900000, guid: 7463ff005198b2c48a1562e04dedbb40, type: 3}
-  words7LetterFile: {fileID: 4900000, guid: 63921c10f9e8c24458f70e1786abde7f, type: 3}
-  words7LetterNoSwearsFile: {fileID: 4900000, guid: 19bf0c6be088caa47aa9bc69fd952931, type: 3}
-  randomLetterPoolFile: {fileID: 4900000, guid: cab73a9fcac6c2a458ea94d8e1f965ca, type: 3}
+  allWordsFile: {fileID: 4900000, guid: c9fa9e3e3a99dd246954fa6eb341aedf, type: 3}
+  allWordsNoSwearsFile: {fileID: 4900000, guid: f07e4fa4640a6dc4495d4da25d04c1d4, type: 3}
+  words4LetterFile: {fileID: 4900000, guid: 519fa06a3456ac0459d13265e9580e8c, type: 3}
+  words4LetterNoSwearsFile: {fileID: 4900000, guid: 3556b3454ba9ae2419932d53e62d3ea8, type: 3}
+  words5LetterFile: {fileID: 4900000, guid: 61d7cae28a8ae58418cf85840ee58ccb, type: 3}
+  words5LetterNoSwearsFile: {fileID: 4900000, guid: e8a458d46e4756545bd29ba47bbb3d2f, type: 3}
+  words6LetterFile: {fileID: 4900000, guid: b2b03ad95ce828d45bd9a60712d3ee66, type: 3}
+  words6LetterNoSwearsFile: {fileID: 4900000, guid: acda5db56b1e01f4299fad86ecc53032, type: 3}
+  words7LetterFile: {fileID: 4900000, guid: 6b8405108f84c8f4694e89e42abf9748, type: 3}
+  words7LetterNoSwearsFile: {fileID: 4900000, guid: 620356732a811ea47a4ae15f6f15b9fe, type: 3}
+  randomLetterPoolFile: {fileID: 4900000, guid: 354934e948053e64a805c489c94c19de, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
