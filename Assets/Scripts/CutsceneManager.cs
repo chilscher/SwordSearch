@@ -1172,6 +1172,12 @@ public class CutsceneManager : MonoBehaviour{
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("In every fantasy adventure novel, there's always at least one reanimated skeleton!", DialogueStep.Emotion.Normal);
         }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("And it would be so cool to meet one in real life!", DialogueStep.Emotion.Surprised);
+        }
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_PlayerTalking("Maybe not today, though. I shouldn't dillydally for too long.", DialogueStep.Emotion.Surprised);
+       // }
         //else if (++i == cutsceneStep){
         //    AdvanceConditionDialogue_PlayerTalking("And my life has certainly been looking like a fantasy adventure lately...", DialogueStep.Emotion.Happy);
         //}

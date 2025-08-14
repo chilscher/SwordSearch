@@ -34,7 +34,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -113,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   battleManager: {fileID: 0}
-  burnDamageQueue: 
+  data: {fileID: 0}
 --- !u!114 &1107962101534003463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,7 +125,104 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa6c71501f9ece54da354ee8431c25ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 20
-  attackSpeed: 2
-  attackDamage: 1
+  isBattleable: 1
+  nameOverride: Undead Goat
+  startingHealth: 100
+  attackOrder:
+    Value:
+    - attackSpeed: 10
+      attackDamage: 0
+      isSpecial: 0
+      specialType: 0
+      specialColor: {r: 0, g: 0, b: 0, a: 0}
   isDraconic: 1
+  isHorde: 0
+  isNearWater: 0
+  throwsRocks: 0
+  isWaterDangerous: 0
+  isCopycat: 0
+  healsSelf: 0
+  canBurn: 0
+  weirdAnimalDisease: 1
+  normal: {fileID: 1152398375, guid: 15e0cc83eb7c0ba4e8c2c1338c6d8fcc, type: 3}
+  angry: {fileID: 0}
+  defeated: {fileID: 0}
+  excited: {fileID: 0}
+  happy: {fileID: 0}
+  questioning: {fileID: 0}
+  worried: {fileID: 0}
+  surprised: {fileID: 0}
+  mystery: {fileID: 0}
+  custom1: {fileID: 0}
+  custom2: {fileID: 0}
+  custom3: {fileID: 0}
+  overworldDialogueSteps:
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: It looks like this town is a bust.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 2
+    description: Even that potion shop didn't have anything good.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: It's a shame, I've never tried a potion before.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 5
+    description: I was hoping to find one that tastes like blue raspberry.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: That's one of those flavors you can't find out in the wild. It's
+      only in processed foods, like sour straws and gummy worms.
+  - type: 4
+    talker: {fileID: 0}
+    name: Undead Animal
+    emotion: 0
+    description: Bleat!
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 5
+    description: Uh, is that some kind of zombie goat?
+  - type: 4
+    talker: {fileID: 0}
+    name: Potential Zombie Goat
+    emotion: 0
+    description: Maaa.
+  - type: 0
+    talker: {fileID: 0}
+    name: Potential Zombie Goat
+    emotion: 0
+    description: Yep, definitely a goat.
+  - type: 0
+    talker: {fileID: 0}
+    name: Potential Zombie Goat
+    emotion: 0
+    description: I'd better knock it out. I don't want to get some kind of weird
+      undead animal disease.
+  victoryDialogueSteps:
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: Undead humans is one thing, but a random goat makes this a lot creepier.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 5
+    description: What happened to here?
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 6
+    description: Whatever it was, I'm going to skedaddle before it happens to me
+      too.

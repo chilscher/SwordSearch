@@ -268,6 +268,7 @@ public class LetterSpace : MonoBehaviour{
         text.gameObject.SetActive(false);
         selectedSignifier.SetActive(false);
         HideAllDirectionLines();
+        HideBurn();
     }
     public void DisableTouchDetection(){
         touchDetection1.SetActive(false);
@@ -294,8 +295,11 @@ public class LetterSpace : MonoBehaviour{
     
     public void RemoveBurn(){
         isBurned = false;
-        burnIcon.gameObject.SetActive(false);
         battleManager.puzzleGenerator.burnedLetters.Remove(this);
+    }
+    
+    private void HideBurn(){
+        burnIcon.gameObject.SetActive(false);
     }
     
     public void ApplyChar() {

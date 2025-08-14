@@ -341,6 +341,10 @@ public class InteractOverlayManager : MonoBehaviour{
             summary.Add("This enemy can <fire>burn<> the spellbook!");
             details.Add("The enemy's attacks will <fire>scorch<> some letters. You can still use a <fire>burned letter<>, but you get hurt in the process. Making an attack while the book is <water>flooded<> will <water>douse<> some flames.");
         }
+        if (enemy.weirdAnimalDisease){
+            summary.Add("The animal carries some kind of disease.");
+            details.Add("I still have to figure out the specifics of this effect.");
+        }
 
         summary = TextFormatter.FormatStringList(summary);
         details = TextFormatter.FormatStringList(details);

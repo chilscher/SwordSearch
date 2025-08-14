@@ -113,7 +113,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battleManager: {fileID: 0}
   data: {fileID: 0}
-  burnDamageQueue: 
 --- !u!114 &1107962101534003463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBattleable: 1
   nameOverride: 
-  startingHealth: 5000
+  startingHealth: 100
   attackOrder:
     Value:
     - attackSpeed: 10
@@ -165,93 +164,96 @@ MonoBehaviour:
   - type: 0
     talker: {fileID: 0}
     name: 
-    emotion: 2
+    emotion: 1
     description: I really hope we don't cross paths again. What a jerk!
   - type: 0
     talker: {fileID: 0}
     name: 
-    emotion: 5
-    description: Oh, what's this now?
-  - type: 0
-    talker: {fileID: 0}
-    name: 
-    emotion: 5
-    description: It looks like I've reached the end of the playtest.
-  - type: 0
-    talker: {fileID: 0}
-    name: 
     emotion: 2
-    description: That's unfortunate. I was hoping I'd be able to make it to that
-      big pyramid first.
-  - type: 0
-    talker: {fileID: 0}
-    name: 
-    emotion: 5
-    description: I wonder if the sword of dragonslaying is actually in there?
-  - type: 0
-    talker: {fileID: 0}
-    name: 
-    emotion: 6
-    description: There's no way that would be the end of the story already! It'd
-      be such a disappointing ending.
+    description: But I shouldn't let one toxic person take up space in my head. It's
+      probably better to focus on the good things in life.
   - type: 0
     talker: {fileID: 0}
     name: 
     emotion: 4
-    description: There are so many mysteries left to uncover! So many things left
-      to do!
+    description: Like this cute little town!
   - type: 0
     talker: {fileID: 0}
     name: 
-    emotion: 0
-    description: Maybe I'll get to go to Duskvale at some point, and see some of
-      the devastation there.
+    emotion: 5
+    description: Or at least it would be cute, if it weren't for all these bones
+      lying around...
   - type: 0
     talker: {fileID: 0}
     name: 
     emotion: 7
-    description: Maybe I'll even meet that Lich King some day!
+    description: It's a little ominous, almost as if -
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: Clatter!
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 4
+    description: Oh! I knew it!
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 4
+    description: It's not a true magic adventure until you meet a real live skeleton!
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: Clatter?
   - type: 0
     talker: {fileID: 0}
     name: 
     emotion: 5
-    description: What to do, what to do...
+    description: I guess you can't actually have a real live skeleton, now can you?
   - type: 0
     talker: {fileID: 0}
     name: 
-    emotion: 2
-    description: Too bad that big button on the bottom of the main menu doesn't work.
-      It's supposed to be something called "Endless Mode"!
+    emotion: 7
+    description: In a way, I'm a real live skeleton!
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: Clatter.
   - type: 0
     talker: {fileID: 0}
     name: 
     emotion: 0
-    description: Oh well, in the meantime at least I can play around with all my
-      fun powerups!
+    description: Regardless, I shouldn't get too excited. This is technically a life-or-death
+      situation.
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: Clatter?
   - type: 0
     talker: {fileID: 0}
     name: 
-    emotion: 4
-    description: It looks like this next enemy is harmless and has a load of health,
-      too! What a great coincidence!
+    emotion: 0
+    description: Although I think I can take on a single skeleton at this point.
   victoryDialogueSteps:
   - type: 0
     talker: {fileID: 0}
     name: 
-    emotion: 4
-    description: That was fun! How did I manage to do 5000 damage, anyway?
+    emotion: 0
+    description: That wasn't exactly difficult.
   - type: 0
     talker: {fileID: 0}
     name: 
-    emotion: 5
-    description: Too bad the game will freeze up if I try to fight the next enemy...
+    emotion: 2
+    description: Kind of a let-down actually, considering all the hype skeletons
+      get in media.
   - type: 0
     talker: {fileID: 0}
     name: 
-    emotion: 5
-    description: I guess there's not much left for me to do...
-  - type: 0
-    talker: {fileID: 0}
-    name: 
-    emotion: 4
-    description: Except fight it again!
+    emotion: 0
+    description: I should go find some supplies in the town before more skeletons
+      show up.
