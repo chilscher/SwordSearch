@@ -154,7 +154,37 @@ MonoBehaviour:
   custom1: {fileID: 0}
   custom2: {fileID: 0}
   custom3: {fileID: 0}
-  overworldDialogueSteps: []
+  overworldDialogueSteps:
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: This is me talking normally
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 12
+    description: This is spa time
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 13
+    description: And now im excited
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 14
+    description: And angry!
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: And back to jormal
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 1
+    description: And regular angry
   victoryDialogueSteps: []
 --- !u!1 &9039942117280077413
 GameObject:

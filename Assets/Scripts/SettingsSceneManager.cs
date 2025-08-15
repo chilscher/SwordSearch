@@ -83,7 +83,7 @@ public class SettingsSceneManager : MonoBehaviour{
     }
 
     public void WorldUp(){
-        if (StaticVariables.highestBeatenStage.nextStage.nextStage.worldName.ToUpper().Contains(finalPlaytestWorldString)) //for alpha test
+        if (StaticVariables.highestBeatenStage.nextStage.worldName.ToUpper().Contains(finalPlaytestWorldString)) //for alpha test
             while (StaticVariables.highestBeatenStage.enemyPrefab.name != finalPlaytestStageString)
                 StaticVariables.highestBeatenStage = StaticVariables.highestBeatenStage.nextStage;
             //return;

@@ -36,6 +36,9 @@ public class DialogueManager : MonoBehaviour{
     public Sprite playerChatheadQuestioning;
     public Sprite playerChatheadWorried;
     public Sprite playerChatheadSurprised;
+    public Sprite playerChatheadNormalSpa;
+    public Sprite playerChatheadSurprisedSpa;
+    public Sprite playerChatheadAngrySpa;
 
     [Header("Player Emotion Flairs")]
     public GameObject playerAngryFlair;
@@ -43,6 +46,8 @@ public class DialogueManager : MonoBehaviour{
     public GameObject playerSurprisedFlair;
     public GameObject playerQuestioningFlair;
     public GameObject playerWorriedFlair;
+    public GameObject playerSpaFlair;
+    public GameObject playerAngrySpaFlair;
     public Image[] playerFlairImages;
 
     [Header("Configurations")]
@@ -316,6 +321,9 @@ public class DialogueManager : MonoBehaviour{
             (DialogueStep.Emotion.Questioning) => playerChatheadQuestioning,
             (DialogueStep.Emotion.Worried) => playerChatheadWorried,
             (DialogueStep.Emotion.Surprised) => playerChatheadSurprised,
+            (DialogueStep.Emotion.Normal_Spa) => playerChatheadNormalSpa,
+            (DialogueStep.Emotion.Surprised_Spa) => playerChatheadSurprisedSpa,
+            (DialogueStep.Emotion.Angry_Spa) => playerChatheadAngrySpa,
             _ => playerChatheadNormal,
         };
         playerChathead.sprite = sprite;
@@ -330,6 +338,8 @@ public class DialogueManager : MonoBehaviour{
         playerSurprisedFlair.SetActive(false);
         playerQuestioningFlair.SetActive(false);
         playerWorriedFlair.SetActive(false);
+        playerSpaFlair.SetActive(false);
+        playerAngrySpaFlair.SetActive(false);
 
         GameObject flair = emotion switch {
             (DialogueStep.Emotion.Angry) => playerAngryFlair,
@@ -337,6 +347,9 @@ public class DialogueManager : MonoBehaviour{
             //(DialogueStep.Emotion.Questioning) => playerQuestioningFlair,
             (DialogueStep.Emotion.Worried) => playerWorriedFlair,
             //(DialogueStep.Emotion.Surprised) => playerSurprisedFlair,
+            (DialogueStep.Emotion.Normal_Spa) => playerSpaFlair,
+            (DialogueStep.Emotion.Surprised_Spa) => playerSpaFlair,
+            (DialogueStep.Emotion.Angry_Spa) => playerAngrySpaFlair,
             _ => null,
         };
 
