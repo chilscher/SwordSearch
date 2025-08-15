@@ -256,6 +256,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Infection
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 24
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87d165262d413714884863c205ac1aec
+      internalID: 1494606610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -271,6 +292,7 @@ TextureImporter:
       Earth Powerup Icon: -1609130236
       Fire Powerup Icon: 1598473493
       Healing Powerup Icon: 1333698669
+      Infection: 1494606610
       Lightning Powerup Icon: -470919841
       Sword Powerup Icon: -1643095337
       Water Powerup Icon: 1186131357

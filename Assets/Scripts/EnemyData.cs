@@ -27,6 +27,8 @@ public class EnemyData : MonoBehaviour{
     [ConditionalField(nameof(isBattleable))]    public bool healsSelf = false;
     [ConditionalField(nameof(isBattleable))]    public bool canBurn = false;
     [ConditionalField(nameof(isBattleable))]    public bool weirdAnimalDisease = false;
+    [ConditionalField(nameof(isBattleable))]    public bool waterHealsIt = false;
+    [ConditionalField(nameof(isBattleable))]    public bool earthHealsIt = false;
 
     [Header("Chatheads")]
     public Sprite normal;
@@ -70,7 +72,7 @@ public class DialogueStep{
 
 [System.Serializable]
 public class EnemyAttack{
-    public enum EnemyAttackTypes{ThrowRocks, Copycat, HealsSelf, BurnLetters}
+    public enum EnemyAttackTypes{ThrowRocks, Copycat, HealsSelf, BurnLetters, Infect}
 
     public float attackSpeed = 2f;
     public int attackDamage = 6;

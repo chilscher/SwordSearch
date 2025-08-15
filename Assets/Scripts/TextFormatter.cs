@@ -30,6 +30,7 @@ public static class TextFormatter{
         output = output.Replace("<dark>", "<color=#" + StaticVariables.darknessPowerupColor.ToHexString() + ">");
         output = output.Replace("<sword>", "<color=#" + StaticVariables.swordPowerupColor.ToHexString() + ">");
         output = output.Replace("<charred>", "<color=#" + Color.grey.ToHexString() + ">");
+        output = output.Replace("<infected>", "<color=#B2E540>");
         output = output.Replace("<>", "</color>");
         
         output = output.Replace("<playername>", StaticVariables.playerName);

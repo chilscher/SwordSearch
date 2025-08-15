@@ -342,8 +342,16 @@ public class InteractOverlayManager : MonoBehaviour{
             details.Add("The enemy's attacks will <fire>scorch<> some letters. You can still use a <fire>burned letter<>, but you get hurt in the process. Making an attack while the book is <water>flooded<> will <water>douse<> some flames.");
         }
         if (enemy.weirdAnimalDisease){
-            summary.Add("The animal carries some kind of disease.");
-            details.Add("I still have to figure out the specifics of this effect.");
+            summary.Add("The animal carries some kind of <infected>undead animal disease<>.");
+            details.Add("Getting hit by an attack from this enemy will <infected>infect<> a random letter. Using an <infected>infected letter<> hurts you. Not using an <infected>infected letter<> will spread the infection upon the next page turn. The <healing>power of healing<> cures one letter.");
+        }
+        if (enemy.waterHealsIt){
+            summary.Add("Using the <water>power of water<> heals this enemy.");
+            details.Add("The <water>power of water<> heals this enemy instead of dealing damage. The book's pages will still get <water>flooded<>, and <water>flooded<> attacks deal damage as normal.");
+        }
+        if (enemy.earthHealsIt){
+            summary.Add("Using the <earth>power of earth<> heals this enemy.");
+            details.Add("The <earth>power of earth<> heals this enemy instead of dealing damage. Rocks will still appear after using the <earth>power of earth<>, and the next attack will still deal extra damage as normal.");
         }
 
         summary = TextFormatter.FormatStringList(summary);

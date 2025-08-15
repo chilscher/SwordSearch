@@ -43,6 +43,8 @@ public class BattleManager : MonoBehaviour {
     [HideInInspector]
     public int copycatBuildup = 0;
     private int maxBurnedLetters = 20;
+    [HideInInspector]
+    public int maxInfectedLetters = 20;
     private bool hasEarthBuff = false;
 
     [Header("Game Variables")]
@@ -57,6 +59,7 @@ public class BattleManager : MonoBehaviour {
     public float swordPowerupDamageMultiplierVsDragons = 5f;
     public BattleData defaultBattleData;
     public int selfDamageFromBurnedLetters = 2;
+    public int selfDamageFromInfectedLetters = 5;
     public int maxCopycatStacks = 5;
 
     [Header("Scripts")]
@@ -273,6 +276,9 @@ public class BattleManager : MonoBehaviour {
                 case EnemyAttack.EnemyAttackTypes.BurnLetters:
                     BurnRandomLetters(3);
                     break;
+                case EnemyAttack.EnemyAttackTypes.Infect:
+                    InfectRandomLetters(1);
+                    break;
             }
         }
         IncrementAttackIndex();
@@ -304,7 +310,10 @@ public class BattleManager : MonoBehaviour {
         }
         switch (attackData.type){
             case PowerupTypes.Water:
-                DamageEnemyHealth(attackData.strength);
+                if (enemyData.waterHealsIt)
+                    HealEnemyHealth(attackData.strength);
+                else
+                    DamageEnemyHealth(attackData.strength);
                 ApplyBuffForWaterAttack();
                 break;
             case PowerupTypes.Fire:
@@ -318,7 +327,10 @@ public class BattleManager : MonoBehaviour {
                 DoDarkAttack(attackData.strength);
                 break;
             case PowerupTypes.Earth:
-                DamageEnemyHealth(attackData.strength);
+                if (enemyData.earthHealsIt)
+                    HealEnemyHealth(attackData.strength);
+                else
+                    DamageEnemyHealth(attackData.strength);
                 ApplyEarthBuff();
                 break;
             case PowerupTypes.Sword:
@@ -406,9 +418,19 @@ public class BattleManager : MonoBehaviour {
         for (int i = 0; i < amount; i++){
             if (puzzleGenerator.burnedLetters.Count >= maxBurnedLetters)
                 return;
-            LetterSpace toBurn = puzzleGenerator.PickRandomSpaceWithoutPowerupOrBurnOrChar();
+            LetterSpace toBurn = puzzleGenerator.PickRandomSpaceWithoutModifier();
             if(toBurn != null)
                 toBurn.ApplyBurn();
+        }
+    }
+        
+    public void InfectRandomLetters(int amount){
+        for (int i = 0; i < amount; i++){
+            if (puzzleGenerator.infectedLetters.Count >= maxInfectedLetters)
+                return;
+            LetterSpace toInfect = puzzleGenerator.PickRandomSpaceWithoutModifier();
+            if(toInfect != null)
+                toInfect.ApplyInfection();
         }
     }
     
@@ -419,11 +441,25 @@ public class BattleManager : MonoBehaviour {
                 toClear.RemoveBurn();
         }
     }
+    
+    public void ClearRandomInfectedLetters(int amount){
+        for (int i = 0; i < amount; i++){
+            LetterSpace toClear = puzzleGenerator.PickRandomInfectedSpace();
+            if (toClear != null)
+                toClear.RemoveInfection();
+        }
+    }
 
     private void ClearAllBurnedLetters() {
         List<LetterSpace> letters = new(puzzleGenerator.burnedLetters); //we dont want to modify the list as we are iterating on it, so we make a copy
         foreach (LetterSpace ls in letters)
             ls.RemoveBurn();
+    }
+
+    private void ClearAllInfectedLetters() {
+        List<LetterSpace> letters = new(puzzleGenerator.infectedLetters); //we dont want to modify the list as we are iterating on it, so we make a copy
+        foreach (LetterSpace ls in letters)
+            ls.RemoveInfection();
     }
 
     public void ClearDebuffsViaHealing(){
@@ -435,6 +471,8 @@ public class BattleManager : MonoBehaviour {
                 copycatBuildup = 0;
             uiManager.ShowCopycatBuildup();
         }
+        if (enemyData.weirdAnimalDisease)
+            ClearRandomInfectedLetters(1);
     }
     
     public void HideAllDebuffVisuals(){
@@ -442,6 +480,8 @@ public class BattleManager : MonoBehaviour {
             uiManager.ClearBouldersOnPage();
         if (puzzleGenerator.burnedLetters.Count > 0)
             ClearAllBurnedLetters();
+        if (puzzleGenerator.infectedLetters.Count > 0)
+            ClearAllInfectedLetters();
     }
 
     private void HealPlayerHealth(int amount) {
@@ -477,6 +517,8 @@ public class BattleManager : MonoBehaviour {
         UpdateSubmitVisuals();
         if (ls.isBurned)
             DamagePlayerHealth(selfDamageFromBurnedLetters);
+        if (ls.isInfected)
+            DamagePlayerHealth(selfDamageFromInfectedLetters);
 
     }
 
@@ -615,12 +657,21 @@ public class BattleManager : MonoBehaviour {
             attackQueue.Add(inProgressWord);
             inProgressWord = new(this);
             DecrementRefreshPuzzleCountdown();
+            RemoveInfectionFromLettersInWord();
             ClearWord(true, applyChar);
             RemoveEarthBuff();
             if (isWaterInPuzzleArea && enemyData.canBurn)
                 ClearRandomBurnedLetters(2);
         }
     }
+
+    private void RemoveInfectionFromLettersInWord() {
+        foreach (LetterSpace letter in letterSpacesForWord) {
+            if (letter.isInfected)
+                letter.RemoveInfection();
+        }
+    }
+    
     private void AttackWithFirstWordInQueue() {
         if (attackQueue.Count == 0)
             return;

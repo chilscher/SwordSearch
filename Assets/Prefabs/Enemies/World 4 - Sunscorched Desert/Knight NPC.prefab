@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 815226952419649515}
   - component: {fileID: 815226952419649514}
   m_Layer: 0
-  m_Name: Tutorial 5 - Knight
+  m_Name: Knight NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,8 +126,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBattleable: 1
-  nameOverride: Knight
-  startingHealth: 200
+  nameOverride: Artis
+  startingHealth: 1
   attackOrder:
     Value:
     - attackSpeed: 5
@@ -156,97 +156,5 @@ MonoBehaviour:
   custom1: {fileID: 0}
   custom2: {fileID: 0}
   custom3: {fileID: 0}
-  overworldDialogueSteps:
-  - type: 0
-    talker: {fileID: 0}
-    name: 
-    emotion: 5
-    description: Eldric mentioned his group left the sword in some kind of temple...
-  - type: 0
-    talker: {fileID: 0}
-    name: 
-    emotion: 0
-    description: There's a pyramid-looking structure in the distance! That's probably
-      a good place to start looking.
-  - type: 1
-    talker: {fileID: 0}
-    name: Knight
-    emotion: 7
-    description: Greetings, young lady!
-  - type: 0
-    talker: {fileID: 0}
-    name: 
-    emotion: 7
-    description: Oh! I didn't expect to find a knight in sweltering armor out here
-      in the desert!
-  - type: 4
-    talker: {fileID: 0}
-    name: Artis
-    emotion: 7
-    description: The heat will not bother me! For I am Artis, knight of the Academy!
-  - type: 0
-    talker: {fileID: 0}
-    name: 
-    emotion: 5
-    description: Oh, what brings an Academic out to the desert, so far from Duskvale?
-  - type: 4
-    talker: {fileID: 0}
-    name: Artis
-    emotion: 0
-    description: 'I have come here on a quest! I''m afraid I shan''t divulge the
-      details, Milady. '
-  - type: 0
-    talker: {fileID: 0}
-    name: 
-    emotion: 2
-    description: Ugh, please don't call me that. Aren't you aware of the connotations?
-      My name is <playername>.
-  - type: 4
-    talker: {fileID: 0}
-    name: Artis
-    emotion: 0
-    description: My apologies, My Dear <playername>.
-  - type: 0
-    talker: {fileID: 0}
-    name: 
-    emotion: 1
-    description: '"My Dear"?? That''s not much of an improvement!'
-  - type: 4
-    talker: {fileID: 0}
-    name: Artis
-    emotion: 0
-    description: Why are you out here? The desert presents many dangers for one such
-      as yourself.
-  - type: 0
-    talker: {fileID: 0}
-    name: 
-    emotion: 1
-    description: I'll have you know I'm very capable! Just yesterday I beat a science
-      wizard and a swarm of talking rabbits!
-  - type: 4
-    talker: {fileID: 0}
-    name: Artis
-    emotion: 0
-    description: My Dear <playername>, I think you may be suffering from heatstroke.
-  - type: 0
-    talker: {fileID: 0}
-    name: 
-    emotion: 1
-    description: I'm fine! I don't need a misogynist knight doting on me!
-  - type: 0
-    talker: {fileID: 0}
-    name: 
-    emotion: 0
-    description: I'm here on my own quest anyway! And I'll be going now.
-  - type: 4
-    talker: {fileID: 0}
-    name: Artis
-    emotion: 1
-    description: My Dear <playername>, wait! I cannot allow you to go off on your
-      own, when you are so clearly in distress!
-  - type: 0
-    talker: {fileID: 0}
-    name: 
-    emotion: 1
-    description: I'm not your damsel! Let me go!
+  overworldDialogueSteps: []
   victoryDialogueSteps: []

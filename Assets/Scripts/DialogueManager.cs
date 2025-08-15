@@ -253,12 +253,21 @@ public class DialogueManager : MonoBehaviour{
             }
             else if (dialogueSteps[currentStep].type == DialogueStep.DialogueType.Event)
                 if (dialogueSteps[currentStep].description == "Healing flash"){
-                    ShowNobodyTalking();
-                    dialogueTextBox.text = "";
-                    realButton.SetActive(false);
-                    MagicFlash flash = Instantiate(magicFlashPrefab, enemyChatheadTransform).GetComponent<MagicFlash>();
-                    StaticVariables.WaitTimeThenCallFunction(flash.GetTotalTime(), EndDialogueEvent);
-                    flash.StartProcess(StaticVariables.healingPowerupColor);
+                    TalkStageMagicFlash(StaticVariables.healingPowerupColor);
+                    //ShowNobodyTalking();
+                    //dialogueTextBox.text = "";
+                    //realButton.SetActive(false);
+                    //MagicFlash flash = Instantiate(magicFlashPrefab, enemyChatheadTransform).GetComponent<MagicFlash>();
+                    //StaticVariables.WaitTimeThenCallFunction(flash.GetTotalTime(), EndDialogueEvent);
+                    //flash.StartProcess(StaticVariables.healingPowerupColor);
+                    return;
+                }
+                else if (dialogueSteps[currentStep].description == "Hide enemy chathead") {
+                    HideEnemyChathead();
+                    AdvanceTalkStage();
+                }
+                else if (dialogueSteps[currentStep].description == "Water flash"){
+                    TalkStageMagicFlash(StaticVariables.waterPowerupColor);
                     return;
                 }
                 /*
@@ -278,6 +287,15 @@ public class DialogueManager : MonoBehaviour{
         else
             SetButtonText("NEXT");
 
+    }
+    
+    private void TalkStageMagicFlash(Color color){
+        ShowNobodyTalking();
+        dialogueTextBox.text = "";
+        realButton.SetActive(false);
+        MagicFlash flash = Instantiate(magicFlashPrefab, enemyChatheadTransform).GetComponent<MagicFlash>();
+        StaticVariables.WaitTimeThenCallFunction(flash.GetTotalTime(), EndDialogueEvent);
+        flash.StartProcess(color);
     }
 
     public void ShowPlayerTalking(DialogueStep.Emotion emotion){

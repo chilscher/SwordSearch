@@ -19,6 +19,10 @@ public class PuzzleGenerator : MonoBehaviour {
     private bool hasPickedBuffedTypeYet = false;
     [HideInInspector]
     public List<LetterSpace> burnedLetters = new();
+    [HideInInspector]
+    public List<LetterSpace> infectedLetters = new();
+    //[HideInInspector]
+    //public List<LetterSpace> lettersToInfectOnPageTurn = new();
     //private List<LetterSpace> unburnedLetters = new();
 
     [Header("Puzle Generation Rules")]
@@ -39,8 +43,14 @@ public class PuzzleGenerator : MonoBehaviour {
     public void Setup(){
         SetPowerupTypeList();
         GetPuzzleDimensions();
+        GenerateAllNeighborLists();
         GenerateNewPuzzle();
         UpdateAllLetterVisuals();
+    }
+
+    private void GenerateAllNeighborLists() {
+        foreach (LetterSpace ls in letterSpaces)
+            ls.GenerateNeighborsList();
     }
 
     public void GenerateNewPuzzle(){
@@ -56,6 +66,7 @@ public class PuzzleGenerator : MonoBehaviour {
         ClearAllPowerups();
         PickAllSpacesForPowerups(); 
         SetNextPuzzleData();
+        SpreadInfection();
     }
 
     public void SetCustomPowerups(char[,] powerupsLayout){
@@ -494,6 +505,18 @@ public class PuzzleGenerator : MonoBehaviour {
             }
         }
     }
+    
+    private void SpreadInfection(){ 
+        //lettersToInfectOnPageTurn = new();
+        foreach (LetterSpace ls in infectedLetters){
+            if (infectedLetters.Count >= battleManager.maxInfectedLetters)
+                return;
+            LetterSpace spreadTo = ls.ChooseNeighborToInfect();
+            if(spreadTo != null)
+                spreadTo.willBecomeInfected = true;
+            //lettersToInfectOnPageTurn.Add(spreadTo);
+        }
+    }
 
     private void PickAllSpacesForPowerups(){
         hasPickedBuffedTypeYet = false;
@@ -527,7 +550,7 @@ public class PuzzleGenerator : MonoBehaviour {
             int col = (int)space[1];
             if (row > maxRow)
                 viableSpaces.Remove(space);
-            if ((powerupTypes[row, col] != BattleManager.PowerupTypes.None) || letterSpaces[row, col].isBurned || letterSpaces[row, col].isCharred)
+            if ((powerupTypes[row, col] != BattleManager.PowerupTypes.None) || letterSpaces[row, col].HasNonPowerupModifier())
                 viableSpaces.Remove(space);
             //remove corners
             if (((row == maxRow) || row == 0) && ((col == maxCol) || (col == 0)))
@@ -613,13 +636,13 @@ public class PuzzleGenerator : MonoBehaviour {
                 powerupTypeSelection.Remove(StaticVariables.buffedType);
     }
 
-    public LetterSpace PickRandomSpaceWithoutPowerupOrBurnOrChar() {
+    public LetterSpace PickRandomSpaceWithoutModifier() {
         List<Vector2> allSpaces = GetListOfAllSpaces();
         List<Vector2> viablesSpaces = new();
 
         foreach (Vector2 s in allSpaces) {
             LetterSpace space = letterSpaces[(int)s[0], (int)s[1]];
-            if (!space.isBurned && ! space.isCharred && (space.powerupType == BattleManager.PowerupTypes.None) && !battleManager.letterSpacesForWord.Contains(space))
+            if (!space.HasNonPowerupModifier() && (space.powerupType == BattleManager.PowerupTypes.None) && !battleManager.letterSpacesForWord.Contains(space))
                 viablesSpaces.Add(s);
         }
 
@@ -633,6 +656,12 @@ public class PuzzleGenerator : MonoBehaviour {
     public LetterSpace PickRandomBurnedSpace() {
         if (burnedLetters.Count > 0)
             return burnedLetters[StaticVariables.rand.Next(burnedLetters.Count)];
+        return null;
+    }
+
+    public LetterSpace PickRandomInfectedSpace() {
+        if (infectedLetters.Count > 0)
+            return infectedLetters[StaticVariables.rand.Next(infectedLetters.Count)];
         return null;
     }
 }

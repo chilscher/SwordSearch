@@ -114,7 +114,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battleManager: {fileID: 0}
   data: {fileID: 0}
-  burnDamageQueue: 
 --- !u!114 &815226952419649514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,31 +127,189 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBattleable: 1
-  nameOverride: 
-  startingHealth: 110
+  nameOverride: Nymph
+  startingHealth: 1
   attackOrder:
-    Value: []
+    Value:
+    - attackSpeed: 10
+      attackDamage: 0
+      isSpecial: 0
+      specialType: 0
+      specialColor: {r: 0, g: 0, b: 0, a: 0}
   isDraconic: 0
   isHorde: 0
-  isHoly: 0
-  isDark: 0
   isNearWater: 0
-  canApplyDebuff: 0
+  throwsRocks: 0
   isWaterDangerous: 0
-  normal: {fileID: 0}
-  angry: {fileID: 0}
-  defeated: {fileID: 0}
+  isCopycat: 0
+  healsSelf: 0
+  canBurn: 0
+  weirdAnimalDisease: 0
+  waterHealsIt: 1
+  earthHealsIt: 0
+  normal: {fileID: 1543554617, guid: 2f8e83c6f1c85834784b76d45441fe1e, type: 3}
+  angry: {fileID: -2056507514, guid: 2f8e83c6f1c85834784b76d45441fe1e, type: 3}
+  defeated: {fileID: 629605316, guid: 2f8e83c6f1c85834784b76d45441fe1e, type: 3}
   excited: {fileID: 0}
   happy: {fileID: 0}
-  questioning: {fileID: 0}
+  questioning: {fileID: 1337994282, guid: 2f8e83c6f1c85834784b76d45441fe1e, type: 3}
   worried: {fileID: 0}
   surprised: {fileID: 0}
   mystery: {fileID: 0}
   custom1: {fileID: 0}
   custom2: {fileID: 0}
   custom3: {fileID: 0}
-  overworldDialogueSteps: []
-  victoryDialogueSteps: []
+  overworldDialogueSteps:
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 7
+    description: Hello, is anyone there?
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: My name is <playername>; I'm looking for some advice!
+  - type: 4
+    talker: {fileID: 0}
+    name: Creature
+    emotion: 5
+    description: Advice?
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 7
+    description: Whoa! Did you just emerge from the water?
+  - type: 4
+    talker: {fileID: 0}
+    name: Creature
+    emotion: 0
+    description: Yes, I live in the oasis. Or rather, its life is my life. We are
+      one and the same.
+  - type: 1
+    talker: {fileID: 0}
+    name: Creature
+    emotion: 0
+    description: I am, as you say, a nymph.
+  - type: 0
+    talker: {fileID: 0}
+    name: Creature
+    emotion: 7
+    description: A nymph! In the middle of a desert!
+  - type: 0
+    talker: {fileID: 0}
+    name: Creature
+    emotion: 0
+    description: This must be quite the hostile environment.
+  - type: 1
+    talker: {fileID: 0}
+    name: Creature
+    emotion: 0
+    description: I survive, but others are not so lucky.
+  - type: 1
+    talker: {fileID: 0}
+    name: Creature
+    emotion: 0
+    description: My cousin lives nearby. Her oasis is mud, and she has turned.
+  - type: 0
+    talker: {fileID: 0}
+    name: Creature
+    emotion: 6
+    description: Turned? That doesn't sound good.
+  - type: 1
+    talker: {fileID: 0}
+    name: Creature
+    emotion: 0
+    description: It is unfortunate. I think the sudden presence of the undead may
+      have something to do with it.
+  - type: 0
+    talker: {fileID: 0}
+    name: Creature
+    emotion: 5
+    description: Sudden?
+  - type: 1
+    talker: {fileID: 0}
+    name: Creature
+    emotion: 0
+    description: I saw the first one shambling around not even two months ago.
+  - type: 0
+    talker: {fileID: 0}
+    name: Creature
+    emotion: 0
+    description: I don't know about shambling. Some of them can move pretty quickly!
+  - type: 0
+    talker: {fileID: 0}
+    name: Creature
+    emotion: 0
+    description: Especially when they have someone to chase.
+  - type: 1
+    talker: {fileID: 0}
+    name: Creature
+    emotion: 5
+    description: Have the undead been following you?
+  - type: 0
+    talker: {fileID: 0}
+    name: Creature
+    emotion: 0
+    description: Well, yes, but -
+  - type: 1
+    talker: {fileID: 0}
+    name: Creature
+    emotion: 1
+    description: You DARE bring those cretins to my oasis??
+  - type: 0
+    talker: {fileID: 0}
+    name: Creature
+    emotion: 6
+    description: That's not what -
+  - type: 0
+    talker: {fileID: 0}
+    name: Creature
+    emotion: 1
+    description: Ouch!
+  victoryDialogueSteps:
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 2
+    description: Burble...
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 2
+    description: I shouldn't have knocked her out like that...
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: I don't need to add nymphicide to my list of recent accomplishments.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 4
+    description: Oh! I can add some <water>magic water<> back in the oasis! That
+      might help revitalize her!
+  - type: 3
+    talker: {fileID: 0}
+    name: 
+    emotion: 4
+    description: Water flash
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: That's good. Things are already looking a little greener around
+      here.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: I'll try visiting that other nymph next. The one who has "turned".
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: Maybe I could use a little magic to help her, too!
 --- !u!1 &9039942117280077413
 GameObject:
   m_ObjectHideFlags: 0

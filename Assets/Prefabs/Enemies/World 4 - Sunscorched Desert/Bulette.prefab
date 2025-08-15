@@ -130,11 +130,11 @@ MonoBehaviour:
   startingHealth: 100
   attackOrder:
     Value:
-    - attackSpeed: 10
+    - attackSpeed: 3
       attackDamage: 0
-      isSpecial: 0
-      specialType: 0
-      specialColor: {r: 0, g: 0, b: 0, a: 0}
+      isSpecial: 1
+      specialType: 4
+      specialColor: {r: 0.69803923, g: 0.8980392, b: 0.2509804, a: 0.7607843}
   isDraconic: 1
   isHorde: 0
   isNearWater: 0
@@ -144,6 +144,8 @@ MonoBehaviour:
   healsSelf: 0
   canBurn: 0
   weirdAnimalDisease: 1
+  waterHealsIt: 0
+  earthHealsIt: 0
   normal: {fileID: 1152398375, guid: 15e0cc83eb7c0ba4e8c2c1338c6d8fcc, type: 3}
   angry: {fileID: 0}
   defeated: {fileID: 0}

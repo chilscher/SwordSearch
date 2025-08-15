@@ -30,9 +30,15 @@ public class LetterSpace : MonoBehaviour{
     [HideInInspector]
     public BattleManager.PowerupTypes nextPowerupType = BattleManager.PowerupTypes.None;
     [HideInInspector]
+    public bool willBecomeInfected = false;
+    [HideInInspector]
     public bool isBurned = false;
     [HideInInspector]
     public bool isCharred = false;
+    [HideInInspector]
+    public bool isInfected = false;
+    [HideInInspector]
+    public List<LetterSpace> neighbors = new();
 
 
     [Header("GameObjects")]
@@ -75,6 +81,7 @@ public class LetterSpace : MonoBehaviour{
     public Animator highlightAnimator;
     public Transform burnIcon;
     public Transform charredIcon;
+    public Transform infectedIcon;
 
     [Header("Colors")]
     public Color normalLetterColor;
@@ -237,7 +244,10 @@ public class LetterSpace : MonoBehaviour{
     public void ShowPowerup(){
         if (powerupType == BattleManager.PowerupTypes.None){
             HidePowerupIcons();
-            text.font = fontNoOutline;
+            //if (isInfected)
+            //    text.font = fontWithOutline;
+            //else
+                text.font = fontNoOutline;
         }
         else{
             PowerupDisplayData d = battleManager.uiManager.GetPowerupDisplayDataWithType(powerupType);
@@ -261,6 +271,10 @@ public class LetterSpace : MonoBehaviour{
     public void ApplyNextPuzzleData(){
         SetPowerup(nextPowerupType);
         UpdateLetter(nextLetter);
+        if (willBecomeInfected){
+            willBecomeInfected = false;
+            ApplyInfection();
+        }
     }
 
     public void HideVisuals(){
@@ -293,9 +307,29 @@ public class LetterSpace : MonoBehaviour{
         battleManager.puzzleGenerator.burnedLetters.Add(this);
     }
     
+    public void ApplyInfection() {
+        isInfected = true;
+        infectedIcon.gameObject.SetActive(true);
+        int[] directions = { 0, 1, 2, 3 };
+        int rotation = directions[StaticVariables.rand.Next(directions.Length)] * 90;
+        infectedIcon.transform.rotation *= Quaternion.Euler(0,0,rotation);
+        float originalScale = infectedIcon.localScale.x;
+        infectedIcon.localScale = Vector2.zero;
+        infectedIcon.DOScale(originalScale, 0.2f);
+        battleManager.puzzleGenerator.infectedLetters.Add(this);
+        //ShowPowerup();
+    }
+    
     public void RemoveBurn(){
         isBurned = false;
         battleManager.puzzleGenerator.burnedLetters.Remove(this);
+    }
+    
+    public void RemoveInfection(){
+        isInfected = false;
+        battleManager.puzzleGenerator.infectedLetters.Remove(this);
+        infectedIcon.gameObject.SetActive(false);
+        //ShowPowerup();
     }
     
     private void HideBurn(){
@@ -315,5 +349,33 @@ public class LetterSpace : MonoBehaviour{
         isCharred = false;
         charredIcon.gameObject.SetActive(false);
         //battleManager.puzzleGenerator.burnedLetters.Remove(this);
+    }
+
+    public bool HasNonPowerupModifier() {
+        if (isBurned)
+            return true;
+        if (isCharred)
+            return true;
+        if (isInfected)
+            return true;
+        return false;
+    }
+
+    public LetterSpace ChooseNeighborToInfect() {
+        List<LetterSpace> candidates = new();
+        foreach (LetterSpace ls in neighbors) {
+            if (!ls.isInfected && !ls.willBecomeInfected && (ls.nextPowerupType == BattleManager.PowerupTypes.None))
+                candidates.Add(ls);
+        }
+        if (candidates.Count == 0)
+            return null;
+        return candidates[StaticVariables.rand.Next(candidates.Count)];
+    }
+    
+    public void GenerateNeighborsList(){
+        foreach (LetterSpace candidate in battleManager.puzzleGenerator.letterSpaces) {
+            if (IsAdjacentToLetterSpace(candidate))
+                neighbors.Add(candidate);
+        }
     }
 }

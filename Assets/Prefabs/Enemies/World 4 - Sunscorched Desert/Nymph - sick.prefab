@@ -114,7 +114,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battleManager: {fileID: 0}
   data: {fileID: 0}
-  burnDamageQueue: 
 --- !u!114 &815226952419649514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,17 +133,21 @@ MonoBehaviour:
     Value: []
   isDraconic: 0
   isHorde: 0
-  isHoly: 0
-  isDark: 0
   isNearWater: 0
-  canApplyDebuff: 0
+  throwsRocks: 0
   isWaterDangerous: 0
-  normal: {fileID: 0}
-  angry: {fileID: 0}
-  defeated: {fileID: 0}
+  isCopycat: 0
+  healsSelf: 0
+  canBurn: 0
+  weirdAnimalDisease: 0
+  waterHealsIt: 1
+  earthHealsIt: 1
+  normal: {fileID: -2023403393, guid: 59d4b7795bc10f249a47aae15613a9cf, type: 3}
+  angry: {fileID: -379247629, guid: 59d4b7795bc10f249a47aae15613a9cf, type: 3}
+  defeated: {fileID: 1782075158, guid: 59d4b7795bc10f249a47aae15613a9cf, type: 3}
   excited: {fileID: 0}
   happy: {fileID: 0}
-  questioning: {fileID: 0}
+  questioning: {fileID: -1419833351, guid: 59d4b7795bc10f249a47aae15613a9cf, type: 3}
   worried: {fileID: 0}
   surprised: {fileID: 0}
   mystery: {fileID: 0}

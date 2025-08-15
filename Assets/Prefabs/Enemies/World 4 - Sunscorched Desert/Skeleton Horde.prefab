@@ -68,66 +68,176 @@ MonoBehaviour:
     Value: []
   isDraconic: 0
   isHorde: 1
-  isHoly: 0
-  isDark: 0
   isNearWater: 0
-  canApplyDebuff: 0
+  throwsRocks: 0
+  isWaterDangerous: 0
+  isCopycat: 0
+  healsSelf: 0
+  canBurn: 0
+  weirdAnimalDisease: 0
   normal: {fileID: 0}
   angry: {fileID: 21300000, guid: 8654e1b0a98668a44a45cc07c910ebd4, type: 3}
   defeated: {fileID: 0}
   excited: {fileID: 0}
+  happy: {fileID: 0}
   questioning: {fileID: 0}
+  worried: {fileID: 0}
+  surprised: {fileID: 0}
+  mystery: {fileID: 0}
+  custom1: {fileID: 0}
+  custom2: {fileID: 0}
+  custom3: {fileID: 0}
   overworldDialogueSteps:
-  - type: 2
+  - type: 0
     talker: {fileID: 815226952419649514, guid: b3a9ed065174b564f91fd5311aa05d86, type: 3}
+    name: 
+    emotion: 7
+    description: The pyramid is so huge up close!
+  - type: 0
+    talker: {fileID: 815226952419649514, guid: b3a9ed065174b564f91fd5311aa05d86, type: 3}
+    name: 
     emotion: 0
-    description: Watch out up ahead, miss. Up that way is a gaggle of goblins.
-  - type: 2
-    talker: {fileID: 815226952419649514, guid: b3a9ed065174b564f91fd5311aa05d86, type: 3}
-    emotion: 1
-    description: They always steal our crops and kill our livestock!
+    description: But it's surrounded by skeletons and mummies...
   - type: 0
     talker: {fileID: 0}
-    emotion: 5
-    description: Do you want to fight them off once and for all? I bet we can beat
-      them together!
+    name: 
+    emotion: 0
+    description: Oh, here comes that jerk knight again.
   - type: 2
-    talker: {fileID: 815226952419649514, guid: b3a9ed065174b564f91fd5311aa05d86, type: 3}
+    talker: {fileID: 815226952419649514, guid: 9278f1f95622cb049b0a1a0d3e11ef54, type: 3}
+    name: 
     emotion: 0
-    description: Boy howdy, do I!
+    description: Aaaagh!!
   - type: 0
     talker: {fileID: 815226952419649514, guid: b3a9ed065174b564f91fd5311aa05d86, type: 3}
-    emotion: 0
-    description: Let's each take half of the group. I'll get those four over there.
+    name: 
+    emotion: 4
+    description: And some skeletons from the town are chasing him!
+  - type: 2
+    talker: {fileID: 815226952419649514, guid: 9278f1f95622cb049b0a1a0d3e11ef54, type: 3}
+    name: 
+    emotion: 7
+    description: My Dear Rebecca!
   - type: 0
-    talker: {fileID: 815226952419649514, guid: b3a9ed065174b564f91fd5311aa05d86, type: 3}
-    emotion: 1
-    description: Hey you goblins! Come and get me!!
-  - type: 1
     talker: {fileID: 1107962101534003463, guid: 0ba5b6c16cd2aa840984644a4ebdf3ee, type: 3}
-    emotion: 1
-    description: Human!!!
-  victoryDialogueSteps:
-  - type: 0
-    talker: {fileID: 0}
-    emotion: 1
-    description: Take THAT!!
+    name: 
+    emotion: 5
+    description: Are you aware you're being followed by a horde of skeletons?
   - type: 2
-    talker: {fileID: 815226952419649514, guid: b3a9ed065174b564f91fd5311aa05d86, type: 3}
+    talker: {fileID: 815226952419649514, guid: 9278f1f95622cb049b0a1a0d3e11ef54, type: 3}
+    name: 
+    emotion: 7
+    description: Never fear! I, Artis, knight of the Academy, will confront this
+      threat, and defend you!
+  - type: 2
+    talker: {fileID: 815226952419649514, guid: 9278f1f95622cb049b0a1a0d3e11ef54, type: 3}
+    name: 
+    emotion: 1
+    description: Face me, vile creatures!
+  - type: 3
+    talker: {fileID: 815226952419649514, guid: 9278f1f95622cb049b0a1a0d3e11ef54, type: 3}
+    name: 
+    emotion: 1
+    description: Hide enemy chathead
+  - type: 0
+    talker: {fileID: 815226952419649514, guid: 9278f1f95622cb049b0a1a0d3e11ef54, type: 3}
+    name: 
+    emotion: 2
+    description: This rube really talks himself up. But he just can't follow through.
+  - type: 0
+    talker: {fileID: 815226952419649514, guid: 9278f1f95622cb049b0a1a0d3e11ef54, type: 3}
+    name: 
+    emotion: 5
+    description: He seems to be having trouble with a single skeleton.
+  - type: 0
+    talker: {fileID: 815226952419649514, guid: 9278f1f95622cb049b0a1a0d3e11ef54, type: 3}
+    name: 
+    emotion: 5
+    description: Is he really cut out for this whole knighting thing?
+  - type: 0
+    talker: {fileID: 815226952419649514, guid: 9278f1f95622cb049b0a1a0d3e11ef54, type: 3}
+    name: 
     emotion: 0
-    description: Looks like we managed to drive off the rest of them!
-  - type: 0
-    talker: {fileID: 815226952419649514, guid: b3a9ed065174b564f91fd5311aa05d86, type: 3}
-    emotion: 6
-    description: Uh... no, I don't think we did!
+    description: I guess I'll take on the rest of them.
+  victoryDialogueSteps:
   - type: 2
-    talker: {fileID: 31044923072073363, guid: 19bba172f03c62d47a37240074409bbf, type: 3}
+    talker: {fileID: 815226952419649514, guid: 9278f1f95622cb049b0a1a0d3e11ef54, type: 3}
+    name: 
     emotion: 1
-    description: Humans!
+    description: Aaaaaaaand...
+  - type: 2
+    talker: {fileID: 815226952419649514, guid: 9278f1f95622cb049b0a1a0d3e11ef54, type: 3}
+    name: 
+    emotion: 0
+    description: Done! Phew!
+  - type: 2
+    talker: {fileID: 815226952419649514, guid: 9278f1f95622cb049b0a1a0d3e11ef54, type: 3}
+    name: 
+    emotion: 7
+    description: Hah! The rest of them must have run off, after witnessing my skill
+      and power!
   - type: 0
     talker: {fileID: 31044923072073363, guid: 19bba172f03c62d47a37240074409bbf, type: 3}
+    name: 
+    emotion: 0
+    description: Oh, yes. That must be it. There's absolutely no other possible explanation.
+  - type: 2
+    talker: {fileID: 815226952419649514, guid: 9278f1f95622cb049b0a1a0d3e11ef54, type: 3}
+    name: 
+    emotion: 7
+    description: Precisely! I strike feat into the hearts of the undead!
+  - type: 0
+    talker: {fileID: 815226952419649514, guid: 9278f1f95622cb049b0a1a0d3e11ef54, type: 3}
+    name: 
+    emotion: 0
+    description: They don't really have hearts, so...
+  - type: 2
+    talker: {fileID: 815226952419649514, guid: 9278f1f95622cb049b0a1a0d3e11ef54, type: 3}
+    name: 
+    emotion: 0
+    description: Ah, My Dear! 'Twas a metaphor! Or perhaps a simile?
+  - type: 2
+    talker: {fileID: 815226952419649514, guid: 9278f1f95622cb049b0a1a0d3e11ef54, type: 3}
+    name: 
+    emotion: 7
+    description: No matter! If you'll excuse me, I have a pyramid to search!
+  - type: 0
+    talker: {fileID: 815226952419649514, guid: 9278f1f95622cb049b0a1a0d3e11ef54, type: 3}
+    name: 
+    emotion: 5
+    description: Don't you see all of the undead around the base of the pyramid?
+      Maybe it'd be better to find another way.
+  - type: 2
+    talker: {fileID: 815226952419649514, guid: 9278f1f95622cb049b0a1a0d3e11ef54, type: 3}
+    name: 
+    emotion: 7
+    description: Nonsense! Once those wretches bear witness to my feats, they will
+      surely flee!
+  - type: 3
+    talker: {fileID: 815226952419649514, guid: 9278f1f95622cb049b0a1a0d3e11ef54, type: 3}
+    name: 
+    emotion: 7
+    description: Hide enemy chathead
+  - type: 0
+    talker: {fileID: 815226952419649514, guid: 9278f1f95622cb049b0a1a0d3e11ef54, type: 3}
+    name: 
     emotion: 6
-    description: It's a horde of goblin generals!
+    description: There he goes, charging blindly into a zombie pyramid.
+  - type: 0
+    talker: {fileID: 815226952419649514, guid: 9278f1f95622cb049b0a1a0d3e11ef54, type: 3}
+    name: 
+    emotion: 0
+    description: No way am I following him.
+  - type: 0
+    talker: {fileID: 815226952419649514, guid: 9278f1f95622cb049b0a1a0d3e11ef54, type: 3}
+    name: 
+    emotion: 5
+    description: I could do with a little more information about that pyramid first.
+  - type: 0
+    talker: {fileID: 815226952419649514, guid: 9278f1f95622cb049b0a1a0d3e11ef54, type: 3}
+    name: 
+    emotion: 0
+    description: There's an oasis nearby, maybe there's someone to talk to there.
 --- !u!114 &730767153068028742
 MonoBehaviour:
   m_ObjectHideFlags: 0

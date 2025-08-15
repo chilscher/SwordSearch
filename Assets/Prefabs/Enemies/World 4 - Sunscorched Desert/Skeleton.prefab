@@ -127,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBattleable: 1
   nameOverride: 
-  startingHealth: 100
+  startingHealth: 1
   attackOrder:
     Value:
     - attackSpeed: 10
@@ -143,6 +143,7 @@ MonoBehaviour:
   isCopycat: 0
   healsSelf: 0
   canBurn: 0
+  weirdAnimalDisease: 0
   normal: {fileID: -1390840257, guid: 9a3b7e10e1efd8e429c972fef80a53f9, type: 3}
   angry: {fileID: 0}
   defeated: {fileID: 0}

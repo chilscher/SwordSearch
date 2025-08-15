@@ -113,7 +113,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battleManager: {fileID: 0}
   data: {fileID: 0}
-  burnDamageQueue: 
 --- !u!114 &1107962101534003463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,16 +127,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBattleable: 1
   nameOverride: 
-  startingHealth: 60
+  startingHealth: 1
   attackOrder:
-    Value: []
+    Value:
+    - attackSpeed: 10
+      attackDamage: 0
+      isSpecial: 0
+      specialType: 0
+      specialColor: {r: 0, g: 0, b: 0, a: 0}
   isDraconic: 0
   isHorde: 0
-  isHoly: 0
-  isDark: 0
   isNearWater: 0
-  canApplyDebuff: 0
+  throwsRocks: 0
   isWaterDangerous: 0
+  isCopycat: 0
+  healsSelf: 0
+  canBurn: 0
+  weirdAnimalDisease: 0
   normal: {fileID: -1116304966, guid: 8068f26cd91a3eb41849adc77cbe7a93, type: 3}
   angry: {fileID: 0}
   defeated: {fileID: 0}
@@ -150,5 +156,35 @@ MonoBehaviour:
   custom1: {fileID: 0}
   custom2: {fileID: 0}
   custom3: {fileID: 0}
-  overworldDialogueSteps: []
-  victoryDialogueSteps: []
+  overworldDialogueSteps:
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: Mmmf.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 7
+    description: A mummy!
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 5
+    description: Out here, in broad daylight?
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: Mmmf.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: i have to finish this dialogue later.
+  victoryDialogueSteps:
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: i have to finish this dialogue later.
