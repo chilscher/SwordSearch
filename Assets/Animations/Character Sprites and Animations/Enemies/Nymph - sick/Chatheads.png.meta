@@ -114,7 +114,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 54
+        y: 72
         width: 19
         height: 17
       alignment: 0
@@ -135,7 +135,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 36
+        y: 54
         width: 19
         height: 17
       alignment: 0
@@ -156,7 +156,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 18
+        y: 36
         width: 19
         height: 17
       alignment: 0
@@ -177,7 +177,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 18
         width: 19
         height: 17
       alignment: 0
@@ -189,6 +189,27 @@ TextureImporter:
       bones: []
       spriteID: d73eb593d43a5f544b7f298698e977d0
       internalID: -1419833351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Happy
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dcf7bc09a7a76849887f9d5a479a81b
+      internalID: 1527623196
       vertices: []
       indices: 
       edges: []
@@ -206,6 +227,7 @@ TextureImporter:
     nameFileIdTable:
       Angry: -379247629
       Defeated: 1782075158
+      Happy: 1527623196
       Normal: -2023403393
       Questioning: -1419833351
   mipmapLimitGroupName: 

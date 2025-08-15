@@ -113,7 +113,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battleManager: {fileID: 0}
   data: {fileID: 0}
-  burnDamageQueue: 
 --- !u!114 &815226952419649514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,11 +132,15 @@ MonoBehaviour:
     Value: []
   isDraconic: 0
   isHorde: 0
-  isHoly: 0
-  isDark: 0
   isNearWater: 0
-  canApplyDebuff: 0
+  throwsRocks: 0
   isWaterDangerous: 0
+  isCopycat: 0
+  healsSelf: 0
+  canBurn: 0
+  weirdAnimalDisease: 0
+  waterHealsIt: 0
+  earthHealsIt: 0
   normal: {fileID: -459845517, guid: 9fb1f96006afb74469d4723d17da60e8, type: 3}
   angry: {fileID: -414696302, guid: 9fb1f96006afb74469d4723d17da60e8, type: 3}
   defeated: {fileID: 199904343, guid: 9fb1f96006afb74469d4723d17da60e8, type: 3}
@@ -150,5 +153,10 @@ MonoBehaviour:
   custom1: {fileID: 0}
   custom2: {fileID: 0}
   custom3: {fileID: 0}
-  overworldDialogueSteps: []
+  overworldDialogueSteps:
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: Okay! I think i got all the mud off.
   victoryDialogueSteps: []

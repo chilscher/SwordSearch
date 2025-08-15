@@ -144,6 +144,8 @@ MonoBehaviour:
   healsSelf: 0
   canBurn: 0
   weirdAnimalDisease: 0
+  waterHealsIt: 0
+  earthHealsIt: 0
   normal: {fileID: -1116304966, guid: 8068f26cd91a3eb41849adc77cbe7a93, type: 3}
   angry: {fileID: 0}
   defeated: {fileID: 0}
@@ -181,7 +183,7 @@ MonoBehaviour:
     talker: {fileID: 0}
     name: 
     emotion: 0
-    description: i have to finish this dialogue later.
+    description: 
   victoryDialogueSteps:
   - type: 0
     talker: {fileID: 0}

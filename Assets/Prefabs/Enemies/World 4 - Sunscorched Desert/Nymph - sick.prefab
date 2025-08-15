@@ -127,8 +127,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBattleable: 1
-  nameOverride: 
-  startingHealth: 110
+  nameOverride: Turned Nymph
+  startingHealth: 1
   attackOrder:
     Value: []
   isDraconic: 0
@@ -146,7 +146,7 @@ MonoBehaviour:
   angry: {fileID: -379247629, guid: 59d4b7795bc10f249a47aae15613a9cf, type: 3}
   defeated: {fileID: 1782075158, guid: 59d4b7795bc10f249a47aae15613a9cf, type: 3}
   excited: {fileID: 0}
-  happy: {fileID: 0}
+  happy: {fileID: 1527623196, guid: 59d4b7795bc10f249a47aae15613a9cf, type: 3}
   questioning: {fileID: -1419833351, guid: 59d4b7795bc10f249a47aae15613a9cf, type: 3}
   worried: {fileID: 0}
   surprised: {fileID: 0}
@@ -158,34 +158,223 @@ MonoBehaviour:
   - type: 0
     talker: {fileID: 0}
     name: 
-    emotion: 0
-    description: This is me talking normally
+    emotion: 7
+    description: Hello, is there a nymph around here?
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 5
+    description: What do you want?
   - type: 0
     talker: {fileID: 0}
     name: 
-    emotion: 12
-    description: This is spa time
+    emotion: 0
+    description: I was hoping to ask you some questions about the pyramid.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 4
+    description: And I can help clean up your murky oasis, too!
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: Oh, great. Another one.
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: The last people who tried to "help" me still have their bones scattered
+      around.
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 1
+    description: I'm doing just fine here! I don't want your charity!
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 6
+    description: It's not charity! I know you've turned, and I can fix it!
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 1
+    description: '"Turned"?? I''ve had it with you random strangers thinking you
+      know me!'
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 1
+    description: You don't know me!!
+  victoryDialogueSteps:
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: You're right, I don't know you.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: Please, tell me about yourself.
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 2
+    description: Ugh... You talked to my cousin, didn't you?
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: She thinks she's so much better than me because her oasis is so
+      "pure".
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 1
+    description: Mine is pure, too! I am absolutely teeming with enriching minerals!
+      It just makes me a little murky!
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 7
+    description: Oooh wow, that must be great for your complexion!
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 4
+    description: Oh, it is, girl!
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 5
+    description: ...
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 5
+    description: You wanna try some?
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 4
+    description: Actually, I'd love that.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 2
+    description: A little spa treatment would be perfect after the day I've had.
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 4
+    description: Ooh ooh, do tell! Spill that tea!
   - type: 0
     talker: {fileID: 0}
     name: 
     emotion: 13
-    description: And now im excited
+    description: Oh, I already feel better!
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 12
+    description: There's this stupid bigoted macho knight guy.
   - type: 0
     talker: {fileID: 0}
     name: 
     emotion: 14
-    description: And angry!
-  - type: 0
+    description: He talks down to me for being a woman! You know the type?
+  - type: 1
     talker: {fileID: 0}
     name: 
     emotion: 0
-    description: And back to jormal
+    description: Sure do.
   - type: 0
     talker: {fileID: 0}
     name: 
-    emotion: 1
-    description: And regular angry
-  victoryDialogueSteps: []
+    emotion: 12
+    description: And he's not half as brave as he pretends to be.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 12
+    description: Not that bravery is everything, but if you build your whole personality
+      around it... y'know?
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 13
+    description: If he came over this way, you'd already have him pleading for his
+      life.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 12
+    description: Not that he's any better off right now.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 12
+    description: The last time I saw him, he was charging into battle against an
+      army of undead around the pyramid.
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 5
+    description: Army? Oh, no, sister. They wouldn't hurt a fly.
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: They stay in their nice little town and keep to themselves.
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: They're normal people,  just happen to be undead.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 13
+    description: Are you telling me I've been attacking peaceful civilians all day?
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 4
+    description: I wouldn't worry about it, girlfriend. If you knock 'em down, they
+      just put themselves  back together again!
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: That pyramid isn't overrun by hordes of hostile undead or anything.
+      They just work there.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 12
+    description: And that stupid knight ran right in there, sword blazing and everything.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 13
+    description: I bet he's terrorizing those poor people right now!
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 13
+    description: I have to go help them!
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 12
+    description: But thank you for the spa treatment, and the good company!
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 4
+    description: I'm glad you liked it!
 --- !u!1 &9039942117280077413
 GameObject:
   m_ObjectHideFlags: 0
