@@ -146,6 +146,7 @@ MonoBehaviour:
   weirdAnimalDisease: 0
   waterHealsIt: 0
   earthHealsIt: 0
+  weakToFire: 1
   normal: {fileID: -1116304966, guid: 8068f26cd91a3eb41849adc77cbe7a93, type: 3}
   angry: {fileID: 0}
   defeated: {fileID: 0}
@@ -182,11 +183,32 @@ MonoBehaviour:
   - type: 0
     talker: {fileID: 0}
     name: 
-    emotion: 0
-    description: 
+    emotion: 5
+    description: We're not even in the town anymore. Has the whole desert been zombified?
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 2
+    description: Mmmf mf.
   victoryDialogueSteps:
   - type: 0
     talker: {fileID: 0}
     name: 
     emotion: 0
-    description: i have to finish this dialogue later.
+    description: I was so excited to see my first skeleton earlier!
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: But now it seems the undead are a dime a dozen around here.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 5
+    description: It makes sense when you think about it. Who would just raise one
+      skeleton?
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 2
+    description: Oh, and here I am talking to myself again. I'd better keep going.

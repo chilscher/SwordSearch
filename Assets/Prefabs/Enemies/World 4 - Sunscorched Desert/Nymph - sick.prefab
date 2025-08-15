@@ -142,6 +142,7 @@ MonoBehaviour:
   weirdAnimalDisease: 0
   waterHealsIt: 1
   earthHealsIt: 1
+  weakToFire: 0
   normal: {fileID: -2023403393, guid: 59d4b7795bc10f249a47aae15613a9cf, type: 3}
   angry: {fileID: -379247629, guid: 59d4b7795bc10f249a47aae15613a9cf, type: 3}
   defeated: {fileID: 1782075158, guid: 59d4b7795bc10f249a47aae15613a9cf, type: 3}
@@ -265,16 +266,26 @@ MonoBehaviour:
     name: 
     emotion: 2
     description: A little spa treatment would be perfect after the day I've had.
-  - type: 1
+  - type: 3
     talker: {fileID: 0}
     name: 
-    emotion: 4
-    description: Ooh ooh, do tell! Spill that tea!
+    emotion: 2
+    description: Hide player chathead
+  - type: 3
+    talker: {fileID: 0}
+    name: 
+    emotion: 2
+    description: Wait time :1
   - type: 0
     talker: {fileID: 0}
     name: 
     emotion: 13
-    description: Oh, I already feel better!
+    description: Oh, wow! This is great!
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: What's been bothering you today, honey? Spill that tea.
   - type: 0
     talker: {fileID: 0}
     name: 

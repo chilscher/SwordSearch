@@ -353,6 +353,10 @@ public class InteractOverlayManager : MonoBehaviour{
             summary.Add("The <earth>power of earth<> heals this enemy.");
             details.Add("Any attack made with the <earth>power of earth<> will <healing>heal<> this enemy instead of dealing damage. Rocks will still appear after using the <earth>power of earth<>, and the next attack will still deal extra damage as normal.");
         }
+        if (enemy.weakToFire){
+            summary.Add("This enemy is highly <fire>flammable<>.");
+            details.Add("Attacks made with the <fire>power of fire<> deal <damage>50% more damage<>.");
+        }
 
         summary = TextFormatter.FormatStringList(summary);
         details = TextFormatter.FormatStringList(details);

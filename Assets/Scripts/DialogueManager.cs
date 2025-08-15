@@ -219,11 +219,15 @@ public class DialogueManager : MonoBehaviour{
     }
     public void HideEnemyChathead(float duration = 0f){
         float enemyChatheadSize = enemyChatheadTransform.sizeDelta.y * enemyChatheadTransform.localScale.y;
-        if (duration <= 0){
+        if (duration <= 0)
             enemyChatheadTransform.anchoredPosition = new Vector2(enemyChatheadTransform.anchoredPosition.x, -enemyChatheadSize);
-        }
         enemyChatheadTransform.DOAnchorPos(new Vector2(enemyChatheadTransform.anchoredPosition.x, -enemyChatheadSize), duration);
-
+    }
+    public void HidePlayerChathead(float duration = 0f){
+        float playerChatheadSize = playerChatheadTransform.sizeDelta.y * playerChatheadTransform.localScale.y;
+        if (duration <= 0)
+            playerChatheadTransform.anchoredPosition = new Vector2(playerChatheadTransform.anchoredPosition.x, -playerChatheadSize);
+        playerChatheadTransform.DOAnchorPos(new Vector2(playerChatheadTransform.anchoredPosition.x, -playerChatheadSize), duration);
     }
     
     public void PressedButton(){
@@ -273,6 +277,18 @@ public class DialogueManager : MonoBehaviour{
                 }
                 else if (dialogueSteps[currentStep].description == "Water flash"){
                     TalkStageMagicFlash(StaticVariables.waterPowerupColor);
+                    return;
+                }
+                else if (dialogueSteps[currentStep].description == "Hide player chathead"){
+                    dialogueTextBox.text = "";
+                    HidePlayerChathead(0.5f);
+                    AdvanceTalkStage();
+                    return;
+                }
+                else if (dialogueSteps[currentStep].description.Contains("Wait time :")){
+                    float duration = float.Parse(dialogueSteps[currentStep].description.Split(':')[1]);
+                    dialogueTextBox.text = "";
+                    StaticVariables.WaitTimeThenCallFunction(duration, EndDialogueEvent);
                     return;
                 }
                 /*

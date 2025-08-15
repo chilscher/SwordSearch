@@ -126,8 +126,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBattleable: 1
-  nameOverride: 
-  startingHealth: 50
+  nameOverride: Bouncer
+  startingHealth: 1
   attackOrder:
     Value: []
   isDraconic: 0
@@ -141,16 +141,17 @@ MonoBehaviour:
   weirdAnimalDisease: 0
   waterHealsIt: 0
   earthHealsIt: 0
+  weakToFire: 0
   normal: {fileID: -459845517, guid: 9fb1f96006afb74469d4723d17da60e8, type: 3}
   angry: {fileID: -414696302, guid: 9fb1f96006afb74469d4723d17da60e8, type: 3}
   defeated: {fileID: 199904343, guid: 9fb1f96006afb74469d4723d17da60e8, type: 3}
   excited: {fileID: 0}
-  happy: {fileID: 0}
+  happy: {fileID: -993759432, guid: 9fb1f96006afb74469d4723d17da60e8, type: 3}
   questioning: {fileID: -332142754, guid: 9fb1f96006afb74469d4723d17da60e8, type: 3}
   worried: {fileID: 0}
   surprised: {fileID: 0}
   mystery: {fileID: 0}
-  custom1: {fileID: 0}
+  custom1: {fileID: 919174330, guid: 9fb1f96006afb74469d4723d17da60e8, type: 3}
   custom2: {fileID: 0}
   custom3: {fileID: 0}
   overworldDialogueSteps:
@@ -159,4 +160,167 @@ MonoBehaviour:
     name: 
     emotion: 0
     description: Okay! I think i got all the mud off.
-  victoryDialogueSteps: []
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 5
+    description: Hello, may I see some ID?
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 5
+    description: ID? I'm just trying to get to the pyramid.
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: I'm sorry, this is an employees-only event. I'm going to have to
+      ask you to leave.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 5
+    description: Huh?
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: There's a pot luck, carnival games, you name it.
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: The boss is calling it "Staff Appreciation Day". A bunch of corporate
+      nonsense if you ask me.
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: Every day would be "Staff Appreciation Day" if he just paid us a
+      little more. A decent living wage.
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 5
+    description: Well, not a "living" wage exactly, on account of -
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: Ah, yeah, the undeadedness and everything.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 5
+    description: So you're undead too?
+  - type: 4
+    talker: {fileID: 0}
+    name: Name Name
+    emotion: 4
+    description: Yep. Name Name, at your service.
+  - type: 4
+    talker: {fileID: 0}
+    name: Formerly Name Name
+    emotion: 5
+    description: Or I was Name Name, before the boss brought me back.
+  - type: 4
+    talker: {fileID: 0}
+    name: Formerly Name Name
+    emotion: 5
+    description: Now I don't have a name, I think.
+  - type: 0
+    talker: {fileID: 0}
+    name: Formerly Name Name
+    emotion: 0
+    description: I don't mean to be impolite, but you don't look like any of the
+      other undead I've seen.
+  - type: 0
+    talker: {fileID: 0}
+    name: Formerly Name Name
+    emotion: 5
+    description: Plus, none of them have been able to talk, but you can. Why is that?
+  - type: 4
+    talker: {fileID: 0}
+    name: Formerly Name Name
+    emotion: 0
+    description: Ah, I understand the confusion. Not to worry, I was enbalmed at
+      the end of my past life.
+  - type: 4
+    talker: {fileID: 0}
+    name: Formerly Name Name
+    emotion: 0
+    description: All of my organs are still intact, perfectly usable.
+  - type: 0
+    talker: {fileID: 0}
+    name: Formerly Name Name
+    emotion: 5
+    description: But... enbalming means your organs have been removed and preserved?
+  - type: 4
+    talker: {fileID: 0}
+    name: Formerly Name Name
+    emotion: 0
+    description: Exactly! They're all in these jars here. I carry them with me wherever
+      I go.
+  - type: 4
+    talker: {fileID: 0}
+    name: Formerly Name Name
+    emotion: 4
+    description: Hope that clears things up.
+  - type: 0
+    talker: {fileID: 0}
+    name: Formerly Name Name
+    emotion: 2
+    description: Not at all actually. But it's magic, it doesn't have to make sense
+      all the time.
+  - type: 4
+    talker: {fileID: 0}
+    name: Formerly Name Name
+    emotion: 0
+    description: I'm not at liberty to discuss the boss' magic with a breather like
+      yourself, I'm sure you understand.
+  - type: 4
+    talker: {fileID: 0}
+    name: Formerly Name Name
+    emotion: 0
+    description: I shouldn't let you into the party, either. Although...
+  - type: 4
+    talker: {fileID: 0}
+    name: Formerly Name Name
+    emotion: 4
+    description: You seem like a nice lady. I'll tell you what.
+  - type: 4
+    talker: {fileID: 0}
+    name: Formerly Name Name
+    emotion: 0
+    description: If you make a show of knocking me out, you can head on in.
+  - type: 4
+    talker: {fileID: 0}
+    name: Formerly Name Name
+    emotion: 5
+    description: What's the boss going to do, fire a guy who just got beat up?
+  victoryDialogueSteps:
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 7
+    description: Wow! That guy really blew apart!
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 5
+    description: But the nymph was right. I can already see him reforming.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: There goes a hand, scuttling across the sand.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 4
+    description: Alright, thanks for letting me through!
+  - type: 4
+    talker: {fileID: 0}
+    name: Disembodied Mouth
+    emotion: 9
+    description: Don't mention it!

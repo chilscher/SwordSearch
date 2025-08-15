@@ -883,8 +883,11 @@ public class AttackData {
             if (battleManager.enemyData.isNearWater)
                 str += StaticVariables.riverDamageBonus;
         }
-        if (type == BattleManager.PowerupTypes.Fire)
+        if (type == BattleManager.PowerupTypes.Fire) {
             str *= StaticVariables.fireDamageMultiplier;
+            if (battleManager.enemyData.weakToFire)
+                str = (int)(str * 1.5f);
+        }
         strength = str;
         //strength = 130;
     }

@@ -29,6 +29,7 @@ public class EnemyData : MonoBehaviour{
     [ConditionalField(nameof(isBattleable))]    public bool weirdAnimalDisease = false;
     [ConditionalField(nameof(isBattleable))]    public bool waterHealsIt = false;
     [ConditionalField(nameof(isBattleable))]    public bool earthHealsIt = false;
+    [ConditionalField(nameof(isBattleable))]    public bool weakToFire = false;
 
     [Header("Chatheads")]
     public Sprite normal;

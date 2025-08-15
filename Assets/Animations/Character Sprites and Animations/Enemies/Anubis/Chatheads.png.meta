@@ -114,7 +114,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 60
+        y: 100
         width: 21
         height: 19
       alignment: 0
@@ -135,7 +135,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 40
+        y: 80
         width: 21
         height: 19
       alignment: 0
@@ -156,7 +156,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 20
+        y: 60
         width: 21
         height: 19
       alignment: 0
@@ -177,7 +177,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 40
         width: 21
         height: 19
       alignment: 0
@@ -189,6 +189,48 @@ TextureImporter:
       bones: []
       spriteID: 2781563b26ad2d34fab86b3852a18a1d
       internalID: -332142754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Happy
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 20
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5520614b2cae91644896622bfeaaea8f
+      internalID: -993759432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mouth
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4c6478f7dd23b04b8ca6b9d9b6946e8
+      internalID: 919174330
       vertices: []
       indices: 
       edges: []
@@ -206,6 +248,8 @@ TextureImporter:
     nameFileIdTable:
       Angry: -414696302
       Defeated: 199904343
+      Happy: -993759432
+      Mouth: 919174330
       Normal: -459845517
       Questioning: -332142754
   mipmapLimitGroupName: 
