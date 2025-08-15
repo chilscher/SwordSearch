@@ -126,8 +126,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBattleable: 1
-  nameOverride: Undead Goat
-  startingHealth: 100
+  nameOverride: Zombie Goat
+  startingHealth: 1
   attackOrder:
     Value:
     - attackSpeed: 3
@@ -209,8 +209,8 @@ MonoBehaviour:
     talker: {fileID: 0}
     name: Potential Zombie Goat
     emotion: 0
-    description: I'd better knock it out. I don't want to get some kind of weird
-      undead animal disease.
+    description: I'd better knock it out. I don't want to get some kind of <infected>weird
+      undead animal disease<>.
   victoryDialogueSteps:
   - type: 0
     talker: {fileID: 0}

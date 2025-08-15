@@ -1150,11 +1150,11 @@ public class TutorialManager : BattleManager {
         }
     }
 
-    public override void DamagePlayerHealth(int amount){
+    public override void DamagePlayerHealth(int amount, bool showDamageAnimation = true){
         if (amount >= playerHealth)
             amount = playerHealth - 1;
         playerHealth -= amount;
-        uiManager.ShowPlayerTakingDamage(amount, playerHealth > 0, showZeroDamage: amount == 0);
+        uiManager.ShowPlayerTakingDamage(amount, playerHealth > 0, showDamageAnimation, showZeroDamage: amount == 0);
         uiManager.DisplayHealths(playerHealth, enemyHealth);
 
         switch (advanceCondition){

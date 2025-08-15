@@ -263,7 +263,7 @@ public class DialogueManager : MonoBehaviour{
                     return;
                 }
                 else if (dialogueSteps[currentStep].description == "Hide enemy chathead") {
-                    HideEnemyChathead();
+                    HideEnemyChathead(0.5f);
                     AdvanceTalkStage();
                 }
                 else if (dialogueSteps[currentStep].description == "Water flash"){
@@ -294,6 +294,8 @@ public class DialogueManager : MonoBehaviour{
         dialogueTextBox.text = "";
         realButton.SetActive(false);
         MagicFlash flash = Instantiate(magicFlashPrefab, enemyChatheadTransform).GetComponent<MagicFlash>();
+        flash.transform.parent = enemyChatheadTransform.parent;
+        flash.transform.SetSiblingIndex(1);
         StaticVariables.WaitTimeThenCallFunction(flash.GetTotalTime(), EndDialogueEvent);
         flash.StartProcess(color);
     }

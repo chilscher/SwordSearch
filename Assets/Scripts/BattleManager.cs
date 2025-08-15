@@ -66,16 +66,17 @@ public class BattleManager : MonoBehaviour {
     public UIManager uiManager;
     public PuzzleGenerator puzzleGenerator;
     public PlayerAnimatorFunctions playerAnimatorFunctions;
+    private float enemyDifficultyHealthModifier = 1f;
     //public GeneralSceneManager generalSceneManager;
 
-    public virtual void Start(){
+    public virtual void Start() {
         GetComponent<GeneralSceneManager>().Setup();
         //generalSceneManager.Setup();
         countdownToRefresh = maxPuzzleCountdown;
         if (StaticVariables.battleData == null)
             StaticVariables.battleData = defaultBattleData;
         uiManager.AddEnemyToScene(StaticVariables.battleData.enemyPrefab);
-        if (enemyData.isHorde){
+        if (enemyData.isHorde) {
             startingHordeEnemyCount = enemyHordeAttackAnimatorFunctions.Count;
             currentHordeEnemyCount = startingHordeEnemyCount;
             firstEnemyInHorde = enemyHordeAttackAnimatorFunctions[0].GetComponent<EnemyData>();
@@ -84,24 +85,29 @@ public class BattleManager : MonoBehaviour {
         }
         else
             enemyHealth = enemyData.startingHealth;
-        switch (StaticVariables.difficultyMode){
+        switch (StaticVariables.difficultyMode) {
             case StaticVariables.DifficultyMode.Story:
+            //    enemyDifficultyHealthModifier = -1;
                 enemyHealth = 1;
                 break;
             case StaticVariables.DifficultyMode.Puzzle:
-                enemyHealth *= 5;
+                enemyDifficultyHealthModifier = 5;
+                //enemyHealth *= 5;
                 break;
             case StaticVariables.DifficultyMode.Easy:
-                float a = (enemyHealth * 0.7f);
-                if (a < 1)
-                    a = 1;
-                enemyHealth = (int)a;
+                enemyDifficultyHealthModifier = 0.7f;
+                //float a = (enemyHealth * 0.7f);
+                //if (a < 1)
+                //    a = 1;
+                //enemyHealth = (int)a;
                 break;
             case StaticVariables.DifficultyMode.Hard:
-                float b = enemyHealth * 1.3f;
-                enemyHealth = (int)b;
+                enemyDifficultyHealthModifier = 1.3f;
+                //float b = enemyHealth * 1.3f;
+                //enemyHealth = (int)b;
                 break;
         }
+        enemyHealth = ApplyEnemyDifficultyHealthModifier(enemyHealth);
         playerHealth = startingPlayerHealth;
         uiManager.ApplyBackground(StaticVariables.battleData.backgroundPrefab);
 
@@ -138,6 +144,13 @@ public class BattleManager : MonoBehaviour {
             return;
         AttackWithFirstWordInQueue();
     }
+    
+    private int ApplyEnemyDifficultyHealthModifier(int originalEnemyHealth){
+        float newAmt = (enemyHealth * enemyDifficultyHealthModifier);
+        if (newAmt < 1)
+            newAmt = 1;
+        return (int)newAmt;
+    }
 
     public virtual void DamageEnemyHealth(int amount){
         enemyHealth -= amount;
@@ -165,7 +178,7 @@ public class BattleManager : MonoBehaviour {
         }
         currentHordeEnemyCount = 1;
         for (int i = 1; i < startingHordeEnemyCount; i++){
-            if (enemyHealth > i * firstEnemyInHorde.startingHealth)
+            if (enemyHealth > (i * ApplyEnemyDifficultyHealthModifier(firstEnemyInHorde.startingHealth)))
                 currentHordeEnemyCount ++;
         }
     }
@@ -194,11 +207,11 @@ public class BattleManager : MonoBehaviour {
         }
     }
 
-    public virtual void DamagePlayerHealth(int amount) {
+    public virtual void DamagePlayerHealth(int amount, bool showDamageAnimation = true) {
         playerHealth -= amount;
         if (playerHealth < 0)
             playerHealth = 0;
-        uiManager.ShowPlayerTakingDamage(amount, playerHealth > 0, showZeroDamage: amount == 0);
+        uiManager.ShowPlayerTakingDamage(amount, playerHealth > 0, showDamageAnimation, showZeroDamage: amount == 0);
         uiManager.DisplayHealths(playerHealth, enemyHealth);
         if (playerHealth == 0) {
             uiManager.PauseEnemyAttackBar();
@@ -446,7 +459,7 @@ public class BattleManager : MonoBehaviour {
         for (int i = 0; i < amount; i++){
             LetterSpace toClear = puzzleGenerator.PickRandomInfectedSpace();
             if (toClear != null)
-                toClear.RemoveInfection();
+                toClear.RemoveInfection(true);
         }
     }
 
@@ -459,7 +472,7 @@ public class BattleManager : MonoBehaviour {
     private void ClearAllInfectedLetters() {
         List<LetterSpace> letters = new(puzzleGenerator.infectedLetters); //we dont want to modify the list as we are iterating on it, so we make a copy
         foreach (LetterSpace ls in letters)
-            ls.RemoveInfection();
+            ls.RemoveInfection(false);
     }
 
     public void ClearDebuffsViaHealing(){
@@ -517,8 +530,8 @@ public class BattleManager : MonoBehaviour {
         UpdateSubmitVisuals();
         if (ls.isBurned)
             DamagePlayerHealth(selfDamageFromBurnedLetters);
-        if (ls.isInfected)
-            DamagePlayerHealth(selfDamageFromInfectedLetters);
+        //if (ls.isInfected)
+        //    DamagePlayerHealth(selfDamageFromInfectedLetters);
 
     }
 
@@ -657,7 +670,7 @@ public class BattleManager : MonoBehaviour {
             attackQueue.Add(inProgressWord);
             inProgressWord = new(this);
             DecrementRefreshPuzzleCountdown();
-            RemoveInfectionFromLettersInWord();
+            RemoveInfectionsAndDamagePlayer();
             ClearWord(true, applyChar);
             RemoveEarthBuff();
             if (isWaterInPuzzleArea && enemyData.canBurn)
@@ -665,11 +678,16 @@ public class BattleManager : MonoBehaviour {
         }
     }
 
-    private void RemoveInfectionFromLettersInWord() {
+    private void RemoveInfectionsAndDamagePlayer() {
+        int damage = 0;
         foreach (LetterSpace letter in letterSpacesForWord) {
-            if (letter.isInfected)
-                letter.RemoveInfection();
+            if (letter.isInfected) {
+                letter.RemoveInfection(true);
+                damage += selfDamageFromInfectedLetters;
+            }
         }
+        if (damage > 0)
+            DamagePlayerHealth(selfDamageFromInfectedLetters, false);
     }
     
     private void AttackWithFirstWordInQueue() {

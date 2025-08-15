@@ -222,11 +222,6 @@ MonoBehaviour:
     emotion: 0
     description: It is unfortunate. I think the sudden presence of the undead may
       have something to do with it.
-  - type: 0
-    talker: {fileID: 0}
-    name: Creature
-    emotion: 5
-    description: Sudden?
   - type: 1
     talker: {fileID: 0}
     name: Creature

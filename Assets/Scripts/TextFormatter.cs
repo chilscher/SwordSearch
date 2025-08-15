@@ -24,6 +24,7 @@ public static class TextFormatter{
         output = output.Replace("<damage>", "<color=#" + damageKeywordColor + ">");
         output = output.Replace("<water>", "<color=#" + StaticVariables.waterPowerupColor.ToHexString() + ">");
         output = output.Replace("<healing>", "<color=#" + StaticVariables.healingPowerupColor.ToHexString() + ">");
+        output = output.Replace("<heal>", "<color=#" + StaticVariables.healingPowerupColor.ToHexString() + ">");
         output = output.Replace("<earth>", "<color=#" + StaticVariables.earthPowerupColor.ToHexString() + ">");
         output = output.Replace("<fire>", "<color=#" + StaticVariables.firePowerupColor.ToHexString() + ">");
         output = output.Replace("<lightning>", "<color=#" + StaticVariables.lightningPowerupColor.ToHexString() + ">");

@@ -283,6 +283,8 @@ public class LetterSpace : MonoBehaviour{
         selectedSignifier.SetActive(false);
         HideAllDirectionLines();
         HideBurn();
+        HideInfection();
+        HideChar();
     }
     public void DisableTouchDetection(){
         touchDetection1.SetActive(false);
@@ -325,11 +327,16 @@ public class LetterSpace : MonoBehaviour{
         battleManager.puzzleGenerator.burnedLetters.Remove(this);
     }
     
-    public void RemoveInfection(){
+    public void RemoveInfection(bool updateVisuals){
         isInfected = false;
         battleManager.puzzleGenerator.infectedLetters.Remove(this);
-        infectedIcon.gameObject.SetActive(false);
+        if (updateVisuals)
+            infectedIcon.gameObject.SetActive(false);
         //ShowPowerup();
+    }
+    
+    public void HideInfection(){
+        infectedIcon.gameObject.SetActive(false);       
     }
     
     private void HideBurn(){
@@ -349,6 +356,10 @@ public class LetterSpace : MonoBehaviour{
         isCharred = false;
         charredIcon.gameObject.SetActive(false);
         //battleManager.puzzleGenerator.burnedLetters.Remove(this);
+    }
+    
+    private void HideChar(){
+        charredIcon.gameObject.SetActive(false);
     }
 
     public bool HasNonPowerupModifier() {
