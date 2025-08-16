@@ -5142,7 +5142,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1426, y: -1066}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1040, y: 2728.56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3400323192897129742
@@ -63637,7 +63637,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -1214, y: -2692}
   m_SizeDelta: {x: 1240, y: 673.44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7099250101357733197
@@ -70877,7 +70877,7 @@ GameObject:
   - component: {fileID: 4514786910575337825}
   - component: {fileID: 4844026370941325712}
   m_Layer: 5
-  m_Name: Desert Prototype
+  m_Name: Desert Prototype old
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74867,7 +74867,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -1214, y: -2692}
   m_SizeDelta: {x: 1240, y: 673.44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1297686099407264049
@@ -81025,7 +81025,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1426, y: -1066}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1040, y: 2728.56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8393620505177399769

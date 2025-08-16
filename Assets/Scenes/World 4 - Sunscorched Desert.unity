@@ -12766,6 +12766,10 @@ PrefabInstance:
       propertyPath: battleData.enemyPrefab
       value: 
       objectReference: {fileID: 815226952419649516, guid: cc7a35b4e9455e440baa5d3192e3fba2, type: 3}
+    - target: {fileID: 2708877614081805339, guid: 6b52574c2b70ce84e81c748699aa6b72, type: 3}
+      propertyPath: battleData.backgroundPrefab
+      value: 
+      objectReference: {fileID: 7543067620809557234, guid: d99c073a23d457c4d84084fdceaef59b, type: 3}
     - target: {fileID: 7131587583327895681, guid: 6b52574c2b70ce84e81c748699aa6b72, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -22020,6 +22024,10 @@ PrefabInstance:
       propertyPath: battleData.enemyPrefab
       value: 
       objectReference: {fileID: 815226952419649516, guid: 7190dd23bcdf150498b170caf99347a4, type: 3}
+    - target: {fileID: 2708877614081805339, guid: 0af3fa0e138bb1d4b98f60e151d93f72, type: 3}
+      propertyPath: battleData.backgroundPrefab
+      value: 
+      objectReference: {fileID: 7543067620809557234, guid: 226ece6fa9ffcd84face7bab977a7542, type: 3}
     - target: {fileID: 7131587583327895681, guid: 0af3fa0e138bb1d4b98f60e151d93f72, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -38420,6 +38428,10 @@ PrefabInstance:
       propertyPath: battleData.enemyPrefab
       value: 
       objectReference: {fileID: 1107962101534003457, guid: 6f8f4c2b644e7f1478d21104450cf07b, type: 3}
+    - target: {fileID: 2708877614081805339, guid: d1cf0ee7e00470f469a438f7c19f7c40, type: 3}
+      propertyPath: battleData.backgroundPrefab
+      value: 
+      objectReference: {fileID: 7543067620809557234, guid: a29dd9a7811a78b41bea1f1224ba0644, type: 3}
     - target: {fileID: 7131587583327895681, guid: d1cf0ee7e00470f469a438f7c19f7c40, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -50028,6 +50040,10 @@ PrefabInstance:
       propertyPath: battleData.enemyPrefab
       value: 
       objectReference: {fileID: 815226952419649516, guid: 23533e197c4ca774ca07d8b406cddbfb, type: 3}
+    - target: {fileID: 2708877614081805339, guid: 6b52574c2b70ce84e81c748699aa6b72, type: 3}
+      propertyPath: battleData.backgroundPrefab
+      value: 
+      objectReference: {fileID: 7543067620809557234, guid: ec84184cd36946441aca7515096bbf6e, type: 3}
     - target: {fileID: 5941702189331763658, guid: 6b52574c2b70ce84e81c748699aa6b72, type: 3}
       propertyPath: m_SizeDelta.y
       value: 343.56
@@ -71853,6 +71869,10 @@ PrefabInstance:
       propertyPath: battleData.enemyPrefab
       value: 
       objectReference: {fileID: 1107962101534003457, guid: 559597effda3f6b46b2913f7cea39c13, type: 3}
+    - target: {fileID: 2708877614081805339, guid: d1cf0ee7e00470f469a438f7c19f7c40, type: 3}
+      propertyPath: battleData.backgroundPrefab
+      value: 
+      objectReference: {fileID: 7543067620809557234, guid: bd3d618ab81e40a48b7778b3bf7317a6, type: 3}
     - target: {fileID: 7131587583327895681, guid: d1cf0ee7e00470f469a438f7c19f7c40, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -88431,6 +88451,10 @@ PrefabInstance:
       propertyPath: battleData.enemyPrefab
       value: 
       objectReference: {fileID: 1107962101534003457, guid: 0a732eed92775224a94b0b9e05132bef, type: 3}
+    - target: {fileID: 2708877614081805339, guid: d1cf0ee7e00470f469a438f7c19f7c40, type: 3}
+      propertyPath: battleData.backgroundPrefab
+      value: 
+      objectReference: {fileID: 7543067620809557234, guid: 93998bd8376e1be4a8c94bfccc4a5aff, type: 3}
     - target: {fileID: 5941702189331763658, guid: d1cf0ee7e00470f469a438f7c19f7c40, type: 3}
       propertyPath: m_SizeDelta.x
       value: 516.287
