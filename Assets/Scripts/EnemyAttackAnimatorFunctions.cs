@@ -65,6 +65,8 @@ public class EnemyAttackAnimatorFunctions : MonoBehaviour{
     */
 
     public void DeathAnimationFinished(){
+        if (battleManager == null)
+            return;
         battleManager.EnemyDeathAnimationFinished();
     }
     

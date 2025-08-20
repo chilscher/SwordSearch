@@ -13,10 +13,14 @@ public class AttackAnimatorFunctions : MonoBehaviour{
     }
 
     public void DestroySelf() {
+        if (battleManager == null)
+            return;
         battleManager.PlayerAttackAnimationFinished(this.gameObject);
     }
 
     public void DoAttackEffect() {
+        if (battleManager == null)
+            return;
         battleManager.AttackHitsEnemy(attackData);
     }
 
