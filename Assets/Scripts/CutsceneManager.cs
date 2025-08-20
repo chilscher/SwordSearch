@@ -138,7 +138,7 @@ public class CutsceneManager : MonoBehaviour{
 
     private void SetupDesert2(){
         SetCutsceneBackground(desert2);
-        cutsceneStep = 25; //for testing horde loop
+        //cutsceneStep = 25; //for testing horde loop
     }
 
     private void SetupDesert3(){
@@ -2599,6 +2599,9 @@ public class CutsceneManager : MonoBehaviour{
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("Good of you to finally arrive! You see, I have been -", "Knight NPC", DialogueStep.Emotion.Surprised);
         } 
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_EnemyTalking("Gah!", "Knight NPC", DialogueStep.Emotion.Angry);
+       // }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_NobodyTalking();
         }  
@@ -2618,16 +2621,32 @@ public class CutsceneManager : MonoBehaviour{
         else if (++i == cutsceneStep){
             GameObject group1 = GetObjectFromName("Undead Group 1");
             GameObject group2 = GetObjectFromName("Undead Group 2");
-            foreach (Transform guy in group1.transform)
+            foreach (Transform guy in group1.transform){
                 guy.localScale = new Vector2(guy.localScale.x * -1, guy.localScale.y);
-            foreach (Transform guy in group2.transform)
-                guy.localScale = new Vector2(guy.localScale.x * -1, guy.localScale.y);
+                guy.GetComponent<Animator>().Play("Idle");
+            }
+            foreach (Transform guy in group2.transform){
+                    guy.localScale = new Vector2(guy.localScale.x * -1, guy.localScale.y);
+                guy.GetComponent<Animator>().Play("Idle");
+            }
             AdvanceConditionWait(0.5f);
         } 
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("Gah!", "Knight NPC", DialogueStep.Emotion.Angry);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_NobodyTalking();
+        }  
         else if (++i == cutsceneStep){
             PlayAnimationAndMoveThenIdle("Knight NPC", "Walk", 919, 673, 2f);
             MoveObject("Undead Group 1", 919, 673, 2f);
             MoveObject("Undead Group 2", 919, 673, 2f);
+            GameObject group1 = GetObjectFromName("Undead Group 1");
+            GameObject group2 = GetObjectFromName("Undead Group 2");
+            foreach (Transform guy in group1.transform)
+                guy.GetComponent<Animator>().Play("Walk");
+            foreach (Transform guy in group2.transform)
+                guy.GetComponent<Animator>().Play("Walk");
             AdvanceConditionWait(2.1f);
         } 
         else if (++i == cutsceneStep){
@@ -2636,11 +2655,8 @@ public class CutsceneManager : MonoBehaviour{
             GameObject.Destroy(GetObjectFromName("Undead Group 2"));
             AdvanceConditionWait(1f);
         }
-        //else if (++i == cutsceneStep){
-            //knight comes back out
-        //} 
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("And these undead abominations, they -", "Knight NPC", DialogueStep.Emotion.Surprised);
+            AdvanceConditionDialogue_EnemyTalking("All these undead abominations, they -", "Knight NPC", DialogueStep.Emotion.Surprised);
         } 
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_NobodyTalking();
@@ -2750,7 +2766,10 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionWait(1f);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("Let me guess, you tried to be all brave, so you crashed this business party and attacked everyone.", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_PlayerTalking("So let me take a wild guess about what happened here...", DialogueStep.Emotion.Normal);
+        } 
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("You wanted to act all brave, so you crashed this business party and attacked everyone.", DialogueStep.Emotion.Normal);
         } 
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("I broke their pinata!", "Knight NPC", DialogueStep.Emotion.Surprised);
@@ -2792,7 +2811,10 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("Wow. That's much better.", DialogueStep.Emotion.Happy);
         } 
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("But if I'm going to save you here, we need to set some ground rules.", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_PlayerTalking("Okay, you can count on me. I'll get us out of this mess.", DialogueStep.Emotion.Normal);
+        } 
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("But we need to set some ground rules!", DialogueStep.Emotion.Surprised);
         } 
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("Yes, yes! Anything! Just keep fighting them off, please!", "Knight NPC", DialogueStep.Emotion.Angry);
