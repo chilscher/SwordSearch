@@ -2808,7 +2808,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("Wow. That's much better.", DialogueStep.Emotion.Happy);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_PlayerTalking("Okay, you can count on me. I'll get us out of this mess.", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_PlayerTalking("Okay, you can count on me. I'll get you out of this mess.", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_PlayerTalking("But we need to set some ground rules!", DialogueStep.Emotion.Normal);
@@ -2856,7 +2856,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("My memory is a little fuzzy now, but the sword is definitely in that pyramid somewhere.", "Knight NPC", DialogueStep.Emotion.Questioning);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("Some kind of great calamity is coming soon, and I may be the only one who can stop it!", "Knight NPC", DialogueStep.Emotion.Surprised);
+            AdvanceConditionDialogue_EnemyTalking("Some kind of great calamity is coming soon, and I'm the only one who can stop it!", "Knight NPC", DialogueStep.Emotion.Surprised);
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_PlayerTalking("Oh, dear.", DialogueStep.Emotion.Worried);
@@ -2910,6 +2910,7 @@ public class CutsceneManager : MonoBehaviour{
             cuh.StopHordeMovement();
         }
         else if (++i == cutsceneStep) {
+            HideEnemyChathead();
             AdvanceConditionDialogue_PlayerTalking("What was that?", DialogueStep.Emotion.Normal);
             FlipDirection("Table Mummy");
             FlipDirection("Zoo Skeleton 1");
@@ -2952,7 +2953,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("Yeah, but let's keep out of sight.", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_NobodyTalking();
+            AdvanceConditionDialogue_NobodyTalking(true);
         }
         else if (++i == cutsceneStep) {
             GetAnimatorFromName("Table Skeleton").gameObject.SetActive(false);
@@ -3056,7 +3057,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("But in the battle, a miracle occurred. I was gifted a new power.", "Manticore", DialogueStep.Emotion.Questioning);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("The power to control life and death.", "Manticore", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("The power to control life and death.", "Manticore", DialogueStep.Emotion.Happy);
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("That day, I saw the Lich King for what he truly is. A corrupt, twisted abomination.", "Manticore", DialogueStep.Emotion.Angry);
@@ -3086,16 +3087,17 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("Now, hang on a minute!", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking(StaticVariables.playerName + ", what are you doing? Do you want to get zombified??", "Knight NPC", DialogueStep.Emotion.Defeated);
+            AdvanceConditionDialogue_EnemyTalking(StaticVariables.playerName + ", what are you doing? Do you want to get zombified??", "Knight NPC", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("Let's just go! The sword is in Duskvale anyway.", "Knight NPC", DialogueStep.Emotion.Defeated);
+            AdvanceConditionDialogue_EnemyTalking("Let's just go! The sword is in Duskvale anyway.", "Knight NPC", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_PlayerTalking("No, sometimes it's worth doing something brave and stupid. Watch.", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_NobodyTalking(true);
+            HideEnemyChathead();
+            AdvanceConditionDialogue_NobodyTalking();
         }
         else if (++i == cutsceneStep) {
             PlayAnimationAndMoveThenIdle("Player", "Walk", -414, 2137, 2f);

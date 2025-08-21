@@ -108,6 +108,12 @@ public class HomepageManager : MonoBehaviour{
         GameObject enemyParent = GameObject.Instantiate(emptyGameObject, endlessModeEnemiesParent);
         enemyParent.transform.localPosition = startingPosition.localPosition;
         GameObject enemy = GameObject.Instantiate(endlessModeEnemyPrefabs[endlessModeEnemyIndex], enemyParent.transform);
+        if (enemy.GetComponent<EnemyData>().isHorde) {
+            foreach (Transform t in enemy.transform)
+                t.GetChild(0).GetComponent<Animator>().Play("Walk");
+        }
+        else
+            enemy.GetComponent<Animator>().Play("Walk");
         enemyParent.transform.DOLocalMoveX(endlessModeEndPosition.localPosition.x, moveDuration).SetEase(Ease.Linear).OnComplete(ShowNextEndlessModeEnemy);
         StaticVariables.WaitTimeThenCallFunction(moveDuration, GameObject.Destroy, enemyParent);
         endlessModeEnemyIndex++;
