@@ -16,9 +16,9 @@ public class CutsceneUndeadHorde : MonoBehaviour {
     private List<GameObject> undeadHordesHalfBottom = new();
     private List<GameObject> currentHordes;
     private BattleManager.PowerupTypes powerToUse;
-    public bool endLoop = false;
-    public bool hasEnded = false;
     private CutsceneManager cutsceneManager;
+    public bool playerIsCasting = false;
+    private bool cancelEverything = false;
 
     public void Setup(Animator playerAnimator, Transform wholeHordesParent, Transform topHalfHordesParent, Transform bottomHalfHordesParent, CutsceneManager cutsceneManager) {
         this.playerAnimator = playerAnimator;
@@ -72,6 +72,9 @@ public class CutsceneUndeadHorde : MonoBehaviour {
     }
 
     private void StartPlayerAttack() {
+        if (cancelEverything)
+            return;
+        playerIsCasting = true;
         playerAnimator.Play("Cast Spell");
         StaticVariables.WaitTimeThenCallFunction(0.33f, StartPower);
     }
@@ -103,6 +106,8 @@ public class CutsceneUndeadHorde : MonoBehaviour {
     }
 
     private void DamageEnemies(){
+        if (cancelEverything)
+            return;
         foreach (GameObject horde in currentHordes){
             horde.transform.DOKill();
             foreach (Transform guy in horde.transform)
@@ -111,17 +116,55 @@ public class CutsceneUndeadHorde : MonoBehaviour {
     }
 
     private void EndAnimation() {
+        if (cancelEverything)
+            return;
+        playerIsCasting = false;
         powerWater.SetActive(false);
         powerEarth.SetActive(false);
         powerFire.SetActive(false);
         foreach (GameObject horde in currentHordes) {
             horde.SetActive(false);
         }
-        if (!endLoop)
-            StaticVariables.WaitTimeThenCallFunction(2f, SendOutNewHorde);
-        else{
-            hasEnded = true;
-            cutsceneManager.ExternalTrigger();
+        StaticVariables.WaitTimeThenCallFunction(2f, SendOutNewHorde);
+    }
+
+    public void CancelEverything(){
+        cancelEverything = true;
+        if (playerIsCasting) {
+            Color c = Color.white;
+            c.a = 0;
+            powerWater.GetComponent<Image>().DOColor(c, 0.5f);
+            powerEarth.GetComponent<Image>().DOColor(c, 0.5f);
+            powerFire.GetComponent<Image>().DOColor(c, 0.5f);
         }
+    }
+
+    public void TurnHordeAround() {
+        foreach (GameObject horde in currentHordes) {
+            foreach (Transform guy in horde.transform)
+                guy.localScale = new Vector2(guy.transform.localScale.x * -1, guy.transform.localScale.y);
+        }
+    }
+    public void StopHordeMovement() {
+        foreach (GameObject horde in currentHordes) {
+            foreach (Transform guy in horde.transform)
+                guy.GetComponent<Animator>().Play("Idle");
+            horde.transform.DOKill();
+        }
+    }
+    
+    public void WalkHordeOffScreen(){
+        foreach (GameObject horde in currentHordes){
+            foreach (Transform guy in horde.transform)
+                guy.GetComponent<Animator>().Play("Walk");
+            horde.transform.DOLocalMoveX(0, 2.5f);
+        }
+    }
+    
+    public void HideHorde(){
+        foreach (GameObject horde in currentHordes) {
+            horde.SetActive(false);
+        }
+        
     }
 }

@@ -138,7 +138,8 @@ public class CutsceneManager : MonoBehaviour{
 
     private void SetupDesert2(){
         SetCutsceneBackground(desert2);
-        cutsceneStep = 25; //for testing horde loop
+        //cutsceneStep = 25; //for testing horde loop
+        //cutsceneStep = 82; //for testing walk off screen
     }
 
     private void SetupDesert3(){
@@ -2575,7 +2576,6 @@ public class CutsceneManager : MonoBehaviour{
     private void DoDesert2Step(){   
         int i = 0;
         if (++i == cutsceneStep) {
-            //MoveObject("Player", -494, 2137, 1.5f);
             PlayAnimationAndMoveThenIdle("Player", "Walk", -494, 2137, 1.5f);
             AdvanceConditionWait(1.5f);
         }
@@ -2596,9 +2596,6 @@ public class CutsceneManager : MonoBehaviour{
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Good of you to finally arrive! You see, I have been -", "Knight NPC", DialogueStep.Emotion.Surprised);
         }
-        //else if (++i == cutsceneStep){
-        //    AdvanceConditionDialogue_EnemyTalking("Gah!", "Knight NPC", DialogueStep.Emotion.Angry);
-        // }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_NobodyTalking();
         }
@@ -2899,7 +2896,6 @@ public class CutsceneManager : MonoBehaviour{
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("You're right, " + StaticVariables.playerName + ".", "Knight NPC", DialogueStep.Emotion.Normal);
-            GetObjectFromName("Undead Horde Controller").GetComponent<CutsceneUndeadHorde>().endLoop = true;
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Perhaps we could sneak into the pyramid and look around?", "Knight NPC", DialogueStep.Emotion.Questioning);
@@ -2908,25 +2904,44 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("Okay, yeah, good idea! Finally using your brain for once.", DialogueStep.Emotion.Surprised);
         }
         else if (++i == cutsceneStep) {
-            if (GetObjectFromName("Undead Horde Controller").GetComponent<CutsceneUndeadHorde>().hasEnded == true) {
-                AdvanceCutsceneStep();
-            }
-            else{
-                DisplayNobodyTalking();
-                advanceCondition = Cond.externalTrigger;
-            }
+            AdvanceConditionDialogue_EnemyTalking("MMMP MMT HMMPH", "Far-off voice", DialogueStep.Emotion.Normal);
+            CutsceneUndeadHorde cuh = GetObjectFromName("Undead Horde Controller").GetComponent<CutsceneUndeadHorde>();
+            cuh.CancelEverything();
+            cuh.StopHordeMovement();
+        }
+        else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_PlayerTalking("What was that?", DialogueStep.Emotion.Normal);
+            FlipDirection("Table Mummy");
+            FlipDirection("Zoo Skeleton 1");
+            FlipDirection("Zoo Skeleton 2");
+            CutsceneUndeadHorde cuh = GetObjectFromName("Undead Horde Controller").GetComponent<CutsceneUndeadHorde>();
+            cuh.TurnHordeAround();
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_NobodyTalking(); 
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("MMMP MMT HMMPH", "Far-off voice", DialogueStep.Emotion.Normal);
+            GetObjectFromName("Undead Horde Controller").GetComponent<CutsceneUndeadHorde>().WalkHordeOffScreen();
+            AdvanceConditionWait(0.5f);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_PlayerTalking("What was that?", DialogueStep.Emotion.Normal);
-
+            PlayAnimationAndMoveThenIdle("Table Mummy", "Walk", 831, 1164, 2f);
+            PlayAnimationAndMoveThenIdle("Zoo Mummy", "Walk", -854, 1129, 1f);
+            FlipDirection("Zoo Mummy");
+            AdvanceConditionWait(0.3f);
         }
-        //guys move off screen
+        else if (++i == cutsceneStep) {
+            PlayAnimationAndMoveThenIdle("Table Skeleton", "Walk", 831, 1164, 2.5f);
+            AdvanceConditionWait(0.3f);
+        }
+        else if (++i == cutsceneStep) {
+            PlayAnimationAndMoveThenIdle("Zoo Skeleton 1", "Walk", 800, 1010, 3f);
+            AdvanceConditionWait(0.3f);
+        }
+        else if (++i == cutsceneStep) {
+            PlayAnimationAndMoveThenIdle("Zoo Skeleton 2", "Walk", 816, 939, 3.5f);
+            AdvanceConditionWait(1.5f);
+        }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_PlayerTalking("There's something going on up ahead.", DialogueStep.Emotion.Normal);
         }
@@ -2936,9 +2951,38 @@ public class CutsceneManager : MonoBehaviour{
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_PlayerTalking("Yeah, but let's keep out of sight.", DialogueStep.Emotion.Normal);
         }
-        //player and knight walk up, hiding behind some boxes?
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("Mmph mph mph mmt -", "Announcer Mummy", DialogueStep.Emotion.Normal); //maybe call it far-off voice?
+            AdvanceConditionDialogue_NobodyTalking();
+        }
+        else if (++i == cutsceneStep) {
+            GetAnimatorFromName("Table Skeleton").gameObject.SetActive(false);
+            GetAnimatorFromName("Table Mummy").gameObject.SetActive(false);
+            GetAnimatorFromName("Zoo Skeleton 1").gameObject.SetActive(false);
+            GetAnimatorFromName("Zoo Skeleton 2").gameObject.SetActive(false);
+            GetAnimatorFromName("Zoo Mummy").gameObject.SetActive(false);
+            GetObjectFromName("Undead Horde Controller").GetComponent<CutsceneUndeadHorde>().HideHorde();
+            PlayAnimationAndMoveThenIdle("Player", "Walk", -365, 2137, 4f);
+            PlayAnimationAndMoveThenIdle("Knight NPC", "Walk", -548, 605, 4f);
+            MoveEverythingExceptPlayerAndOther("Knight NPC", -1200, 0, 4f);
+            AdvanceConditionWait(4f);
+        }
+        else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_PlayerTalking("Quick, hide behind that table! Before anyone turns around.", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_NobodyTalking(true);
+        }
+        else if (++i == cutsceneStep) {
+            PlayAnimationAndMoveThenIdle("Knight NPC", "Walk", -373, 1245, 2f);
+            AdvanceConditionWait(0.3f);
+        }
+        else if (++i == cutsceneStep) {
+            PlayAnimationAndMoveThenIdle("Player", "Walk", -414, 2557, 2f);
+            GetObjectFromName("Player").transform.parent.SetAsLastSibling();
+            AdvanceConditionWait(2f);
+        }
+        else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_EnemyTalking("Mmph mph mph mmt -", "Announcer Mummy", DialogueStep.Emotion.Custom1);
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Unwrap your mouth!", "Crowd", DialogueStep.Emotion.Normal);
@@ -2947,28 +2991,36 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("Mph moh yes, thank you.", "Announcer Mummy", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("As I was saying...", "Announcer Mummy", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("As I was saying...", "Announcer Mummy", DialogueStep.Emotion.Surprised);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("It's my pleasure to introduce your CEO!", "Announcer Mummy", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("It's my pleasure to introduce your CEO!", "Announcer Mummy", DialogueStep.Emotion.Surprised);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("Put your bones together for! Edwin! Manticore!!", "Announcer Mummy", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("Put your bones together for! Edwin! Manticore!!", "Announcer Mummy", DialogueStep.Emotion.Surprised);
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Man-ti-core! Man-ti-core!", "Crowd", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_NobodyTalking();
+        }
+        else if (++i == cutsceneStep) {
+            PlayAnimationAndMoveThenIdle("Manticore", "Walk", 664, 800, 1.5f);
+            AdvanceConditionWait(1.5f);
+        }
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_PlayerTalking("Stay quiet, I think this might be the guy responsible for creating all of these undead.", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
+            dialogueManager.HidePlayerChathead();
             AdvanceConditionDialogue_EnemyTalking("Ahem! Thank you.", "Manticore", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("This is a truly momentous occasion.", "Manticore", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("This is a truly momentous occasion.", "Manticore", DialogueStep.Emotion.Happy);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("To understand why, allow me to share the story of how I founded our great company.", "Manticore", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("To understand why, allow me to share the story of how I founded our great company.", "Manticore", DialogueStep.Emotion.Happy);
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Forty years ago, I was tasked with guarding a precious artifact.", "Manticore", DialogueStep.Emotion.Normal);
@@ -2977,10 +3029,10 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("And guard it I did! For forty years, alone in this pyramid.", "Manticore", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("A mere fifty-one days ago, a thief came to steal it.", "Manticore", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("A mere fifty-one days ago, a thief came to steal it.", "Manticore", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("The vile Lich King.", "Manticore", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("The vile Lich King.", "Manticore", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Boo!!", "Crowd", DialogueStep.Emotion.Normal);
@@ -2989,7 +3041,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("He tried to sweet-talk me, to claim he was working for the greater good.", "Manticore", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("I attacked the scoundrel!", "Manticore", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("I attacked the scoundrel!", "Manticore", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Woo! Yeah! Down with the Lich King!", "Crowd", DialogueStep.Emotion.Normal);
@@ -2998,19 +3050,19 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("My holy lightning clashed with his accursed black magic, and it shook the very earth.", "Manticore", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("Ultimately, his heist was successful. He managed to steal the artifact and escape.", "Manticore", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("Ultimately, his heist was successful. He managed to steal the artifact and escape.", "Manticore", DialogueStep.Emotion.Defeated);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("But in the battle, a miracle occurred. I was gifted a new power.", "Manticore", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("But in the battle, a miracle occurred. I was gifted a new power.", "Manticore", DialogueStep.Emotion.Questioning);
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("The power to control life and death.", "Manticore", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("That day, I saw the Lich King for what he truly is. A corrupt, twisted abomination.", "Manticore", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("That day, I saw the Lich King for what he truly is. A corrupt, twisted abomination.", "Manticore", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("A mockery of life itself.", "Manticore", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("A mockery of life itself.", "Manticore", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Fifty days ago, I set out to do better.", "Manticore", DialogueStep.Emotion.Normal);
@@ -3019,13 +3071,13 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("To raise the dead, the right way.", "Manticore", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("This is a truly momentous occasion.", "Manticore", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("This is a truly momentous occasion.", "Manticore", DialogueStep.Emotion.Happy);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("We have conquered the desert! Brought towns to ruin and revived their citizens.", "Manticore", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("We have conquered the desert! Brought towns to ruin and revived their citizens.", "Manticore", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("Today, we march on Duskvale!", "Manticore", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("Today, we march on Duskvale!", "Manticore", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Yeah! Woo-hoo!!", "Crowd", DialogueStep.Emotion.Normal);
@@ -3043,52 +3095,59 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("No, sometimes it's worth doing something brave and stupid. Watch.", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_NobodyTalking(true);
+        }
+        else if (++i == cutsceneStep) {
+            PlayAnimationAndMoveThenIdle("Player", "Walk", -414, 2137, 2f);
+            AdvanceConditionWait(2f);
+        }
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_PlayerTalking("Are you all insane??", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_PlayerTalking("Your boss just openly admitted to killing real people!", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_PlayerTalking("Your boss just openly admitted to killing real people!", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_PlayerTalking("Worse, he brought you all back as his servants!", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_PlayerTalking("Worse, he brought you all back as his servants!", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_PlayerTalking("Now, he wants to march an army to the most populated city in the continent and do it all again!", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_PlayerTalking("Now, he wants to march an army to the most populated city in the continent and do it all again!", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("What?", "Shelton", DialogueStep.Emotion.Defeated);
+            AdvanceConditionDialogue_EnemyTalking("What?", "Shelton", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("She has a point.", "Bubby", DialogueStep.Emotion.Defeated);
+            AdvanceConditionDialogue_EnemyTalking("She has a point.", "Bubby", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("Is Edwin Manticore the bad guy?", "Felton", DialogueStep.Emotion.Defeated);
+            AdvanceConditionDialogue_EnemyTalking("Is Edwin Manticore the bad guy?", "Felton", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("Down with MantiCORP!", "Zuzzy", DialogueStep.Emotion.Defeated);
+            AdvanceConditionDialogue_EnemyTalking("Down with MantiCORP!", "Zuzzy", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("Who let you in??", "Manticore", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("Who let you in??", "Manticore", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("Where's Steve?? I want him fired over this!", "Manticore", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("Where's Steve?? I want him fired over this!", "Manticore", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("Er, you mean Pharaoh Steve II? His majesty... got beat up.", "Announcer Mummy", DialogueStep.Emotion.Normal); //maybe call it far-off voice?
+            AdvanceConditionDialogue_EnemyTalking("Er, you mean Pharaoh Steve II? His majesty... got beat up.", "Announcer Mummy", DialogueStep.Emotion.Surprised);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("I'd advise against firing the Pharaoh. It would be a PR nightmare.", "Announcer Mummy", DialogueStep.Emotion.Normal); //maybe call it far-off voice?
+            AdvanceConditionDialogue_EnemyTalking("I'd advise against firing the Pharaoh. It would be a PR nightmare.", "Announcer Mummy", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
             if (StaticVariables.allowProfanities)
-                AdvanceConditionDialogue_EnemyTalking("To hell with PR! I want his head!", "Manticore", DialogueStep.Emotion.Normal);
+                AdvanceConditionDialogue_EnemyTalking("To hell with PR! I want his head!", "Manticore", DialogueStep.Emotion.Angry);
             else
-                AdvanceConditionDialogue_EnemyTalking("To heck with PR! I want his head!", "Manticore", DialogueStep.Emotion.Normal);
+                AdvanceConditionDialogue_EnemyTalking("To heck with PR! I want his head!", "Manticore", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("Now he's threatening the Pharaoh!", "Elton", DialogueStep.Emotion.Defeated);
+            AdvanceConditionDialogue_EnemyTalking("Now he's threatening the Pharaoh!", "Elton", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("Down with MantiCORP!!", "Tutty", DialogueStep.Emotion.Defeated);
+            AdvanceConditionDialogue_EnemyTalking("Down with MantiCORP!!", "Tutty", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
             EndNormalStage();
@@ -3106,6 +3165,14 @@ public class CutsceneManager : MonoBehaviour{
     private void MoveEverythingExceptPlayer(float xDistance, float yDistance, float duration){
         foreach (Transform t in backgroundParent){
             if (t.name != "Player (Overworld)"){
+                t.DOLocalMove(new Vector2(t.localPosition.x + xDistance, t.localPosition.y + yDistance), duration);
+            }
+        }
+    }
+    
+    private void MoveEverythingExceptPlayerAndOther(string otherName, float xDistance, float yDistance, float duration){
+        foreach (Transform t in backgroundParent){
+            if ((t.name != "Player (Overworld)") && (t.name != otherName)){
                 t.DOLocalMove(new Vector2(t.localPosition.x + xDistance, t.localPosition.y + yDistance), duration);
             }
         }
@@ -3267,8 +3334,22 @@ public class CutsceneManager : MonoBehaviour{
         StaticVariables.WaitTimeThenCallFunction(duration, PlayIdle, objectName);
     }
 
+    private void PlayAnimationAndMoveThenDisable(string objectName, string animationName, float xPos, float yPos, float duration){
+        PlayAnimationThenDisable(objectName, animationName, duration);
+        MoveObject(objectName, xPos, yPos, duration);
+    }
+
+    private void PlayAnimationThenDisable(string objectName, string animationName, float duration){
+        PlayAnimation(objectName, animationName);
+        StaticVariables.WaitTimeThenCallFunction(duration, Disable, objectName);
+    }
+
     private void PlayIdle(string name){
         PlayAnimation(name, "Idle");
+    }
+
+    private void Disable(string name){
+        GetAnimatorFromName(name).gameObject.SetActive(false);
     }
     
     private void PlayAnimation(string objectName, string animationName){

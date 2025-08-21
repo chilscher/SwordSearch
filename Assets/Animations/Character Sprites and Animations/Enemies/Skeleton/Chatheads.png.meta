@@ -114,7 +114,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 17
         width: 14
         height: 14
       alignment: 0
@@ -135,7 +135,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 0
+        y: 17
         width: 14
         height: 14
       alignment: 0
@@ -156,7 +156,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 0
+        y: 17
         width: 14
         height: 14
       alignment: 0
@@ -177,7 +177,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 47
-        y: 0
+        y: 17
         width: 14
         height: 14
       alignment: 0
@@ -193,6 +193,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Crowd
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 33
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eb6d54558b89764e8f6855e3a5c5410
+      internalID: 1290388474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -204,6 +225,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Crowd: 1290388474
       Mystery: 961451945
       Variant 1 Normal: -1390840257
       Variant 2 Normal: -1591375987
