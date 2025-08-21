@@ -16,9 +16,13 @@ public class CutsceneUndeadHorde : MonoBehaviour {
     private List<GameObject> undeadHordesHalfBottom = new();
     private List<GameObject> currentHordes;
     private BattleManager.PowerupTypes powerToUse;
+    public bool endLoop = false;
+    public bool hasEnded = false;
+    private CutsceneManager cutsceneManager;
 
-    public void Setup(Animator playerAnimator, Transform wholeHordesParent, Transform topHalfHordesParent, Transform bottomHalfHordesParent) {
+    public void Setup(Animator playerAnimator, Transform wholeHordesParent, Transform topHalfHordesParent, Transform bottomHalfHordesParent, CutsceneManager cutsceneManager) {
         this.playerAnimator = playerAnimator;
+        this.cutsceneManager = cutsceneManager;
         powerWater = playerAnimator.transform.parent.GetChild(2).gameObject;
         powerEarth = playerAnimator.transform.parent.GetChild(3).gameObject;
         powerFire = playerAnimator.transform.parent.GetChild(4).gameObject;
@@ -106,13 +110,18 @@ public class CutsceneUndeadHorde : MonoBehaviour {
         }
     }
 
-    private void EndAnimation(){
+    private void EndAnimation() {
         powerWater.SetActive(false);
         powerEarth.SetActive(false);
         powerFire.SetActive(false);
-        foreach (GameObject horde in currentHordes){
+        foreach (GameObject horde in currentHordes) {
             horde.SetActive(false);
         }
-        StaticVariables.WaitTimeThenCallFunction(2f, SendOutNewHorde);
+        if (!endLoop)
+            StaticVariables.WaitTimeThenCallFunction(2f, SendOutNewHorde);
+        else{
+            hasEnded = true;
+            cutsceneManager.ExternalTrigger();
+        }
     }
 }
