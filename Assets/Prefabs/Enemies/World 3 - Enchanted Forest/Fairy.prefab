@@ -143,6 +143,10 @@ MonoBehaviour:
   isCopycat: 1
   healsSelf: 0
   canBurn: 0
+  weirdAnimalDisease: 0
+  waterHealsIt: 0
+  earthHealsIt: 0
+  weakToFire: 0
   normal: {fileID: -1247256924, guid: 3e6795e51b8fdce48ae51e2b5f3c047b, type: 3}
   angry: {fileID: -967131540, guid: 3e6795e51b8fdce48ae51e2b5f3c047b, type: 3}
   defeated: {fileID: -1732052002, guid: 3e6795e51b8fdce48ae51e2b5f3c047b, type: 3}
@@ -228,26 +232,11 @@ MonoBehaviour:
     emotion: 6
     description: Agh!! Get away from me!!
   victoryDialogueSteps:
-  - type: 0
-    talker: {fileID: 0}
-    name: 
-    emotion: 0
-    description: Alright, let's see... How do I stop this evil bodysnatching magic...
-  - type: 0
-    talker: {fileID: 0}
-    name: 
-    emotion: 5
-    description: Am I supposed to kill you or something?
-  - type: 0
-    talker: {fileID: 0}
-    name: 
-    emotion: 0
-    description: I don't really want to do that...
   - type: 1
     talker: {fileID: 0}
     name: 
     emotion: 9
-    description: Tee-hee... You should have seen the look on your face!
+    description: Tee-hee... You should really see the look on your face!
   - type: 1
     talker: {fileID: 0}
     name: 
@@ -259,85 +248,84 @@ MonoBehaviour:
     talker: {fileID: 0}
     name: 
     emotion: 9
-    description: Naive little human girl.
-  - type: 0
-    talker: {fileID: 0}
-    name: 
-    emotion: 5
-    description: I don't understand, is this some kind of trick?
+    description: I wish there were more humans in the forest. You are so easy to
+      trick!
   - type: 0
     talker: {fileID: 0}
     name: 
     emotion: 1
-    description: Is all of this just a prank??
+    description: What?? Was all of this just a prank??
   - type: 1
     talker: {fileID: 0}
     name: 
     emotion: 4
-    description: Tee-hee, that about sums it up!
+    description: Tee-hee, I really had to spell it out for you, huh?
   - type: 0
     talker: {fileID: 0}
     name: 
-    emotion: 5
-    description: You're not some kind of magic mimic of me?
+    emotion: 1
+    description: That's so rude! You had me fearing for my life!
   - type: 1
     talker: {fileID: 0}
     name: 
-    emotion: 4
-    description: Not at all! I'm a pretty standard forest fairy.
+    emotion: 0
+    description: Oh, don't be so dramatic. I'm not an evil copy of you or anything,
+      just a pretty standard forest fairy.
   - type: 0
     talker: {fileID: 0}
     name: 
     emotion: 5
-    description: How do you look exactly like a miniature version of me?
+    description: But then how do you look exactly like a miniature version of me?
   - type: 1
     talker: {fileID: 0}
     name: 
     emotion: 0
     description: Purely a coincidence.
-  - type: 0
-    talker: {fileID: 0}
-    name: 
-    emotion: 1
-    description: That's so rude! You scared me half to death!
   - type: 1
     talker: {fileID: 0}
     name: 
     emotion: 9
-    description: How could I resist? The first human to enter the forest in a century,
-      and I'm in the perfect position for some fun!
+    description: But what a lucky coincidence it was! The first human to enter the
+      forest in a century, and you look just like me!
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: I couldn't turn down the perfect opprotunity for a bit of fun.
   - type: 0
     talker: {fileID: 0}
     name: 
     emotion: 1
-    description: I wouldn't call that fun!
-  - type: 1
-    talker: {fileID: 0}
-    name: 
-    emotion: 2
-    description: Oh, don't make me feel bad!
+    description: I wouldn't call that fun! You can't just toy with a person like
+      that!
   - type: 1
     talker: {fileID: 0}
     name: 
     emotion: 0
-    description: Alright, I'm sorry. Let me give you a little advice, you might need
-      it.
-  - type: 1
+    description: Okay, sheesh, calm down lady. Let me give you a bit of friendly
+      advice, okay?
+  - type: 0
     talker: {fileID: 0}
     name: 
-    emotion: 0
-    description: There's one other human in the entire forest, but be wary of him.
+    emotion: 5
+    description: Why would I listen to you after all that?
   - type: 1
     talker: {fileID: 0}
     name: 
     emotion: 5
-    description: He comes around here from time to time, and I can't ever tell what
-      he's up to.
+    description: I'm trying to help you out here, alright? Now listen carefully.
   - type: 1
     talker: {fileID: 0}
     name: 
     emotion: 0
-    description: I hope you don't ever cross paths!
+    description: There's one other human in the entire forest. He's been here a long
+      time, and he's very dangerous.
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 6
+    description: He comes around here from time to time, and I can't ever tell what
+      he's up to. I'd be cautious if I were you!
   - type: 0
     talker: {fileID: 0}
     name: 
