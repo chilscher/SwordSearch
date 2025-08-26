@@ -139,7 +139,7 @@ public class CutsceneManager : MonoBehaviour{
     private void SetupDesert2(){
         SetCutsceneBackground(desert2);
         //cutsceneStep = 25; //for testing horde loop
-        //cutsceneStep = 82; //for testing walk off screen
+        //cutsceneStep = 80; //for testing walk off screen
     }
 
     private void SetupDesert3(){
@@ -2738,6 +2738,9 @@ public class CutsceneManager : MonoBehaviour{
         }
         else if (++i == cutsceneStep) {
             GetAnimatorFromName("Player").transform.parent.GetChild(2).gameObject.SetActive(false);
+            AdvanceConditionWait(0.5f);
+        }
+        else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Oh, My Dear " + StaticVariables.playerName + "! That was incredible!!", "Knight NPC", DialogueStep.Emotion.Surprised);
         }
         else if (++i == cutsceneStep) {
@@ -2873,11 +2876,11 @@ public class CutsceneManager : MonoBehaviour{
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("What??", "Knight NPC", DialogueStep.Emotion.Angry);
         }
+        //else if (++i == cutsceneStep) {
+        //    AdvanceConditionDialogue_PlayerTalking("A little over two weeks ago, a group of dragons appeared in Duskvale.", DialogueStep.Emotion.Normal);
+        //}
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_PlayerTalking("A little over two weeks ago, a group of dragons appeared in Duskvale.", DialogueStep.Emotion.Normal);
-        }
-        else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_PlayerTalking("They destroyed the city, and they're on their way to taking over the continent!", DialogueStep.Emotion.Surprised);
+            AdvanceConditionDialogue_PlayerTalking("A group of dragons destroyed Duskvale, and they're on their way to taking over the continent!", DialogueStep.Emotion.Surprised);
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_PlayerTalking("You're looking for the sword of dragonslaying. I am too.", DialogueStep.Emotion.Normal);
@@ -2998,7 +3001,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("It's my pleasure to introduce your CEO!", "Announcer Mummy", DialogueStep.Emotion.Surprised);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("Put your bones together for! Edwin! Manticore!!", "Announcer Mummy", DialogueStep.Emotion.Surprised);
+            AdvanceConditionDialogue_EnemyTalking("Put your bones together for... Edwin! Manticore!!", "Announcer Mummy", DialogueStep.Emotion.Surprised);
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Man-ti-core! Man-ti-core!", "Crowd", DialogueStep.Emotion.Normal);
@@ -3015,25 +3018,38 @@ public class CutsceneManager : MonoBehaviour{
         }
         else if (++i == cutsceneStep) {
             dialogueManager.HidePlayerChathead();
-            AdvanceConditionDialogue_EnemyTalking("Ahem! Thank you.", "Manticore", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("Ahem!", "Manticore", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("This is a truly momentous occasion.", "Manticore", DialogueStep.Emotion.Happy);
+            AdvanceConditionDialogue_EnemyTalking("We have gathered today in celebration.", "Manticore", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("To understand why, allow me to share the story of how I founded our great company.", "Manticore", DialogueStep.Emotion.Happy);
+            AdvanceConditionDialogue_EnemyTalking("Willing or not, you all have dedicated your afterlives to me and my vision for MantiCORP.", "Manticore", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("Forty years ago, I was tasked with guarding a precious artifact.", "Manticore", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("Over a mere fifty days, we have built one of the greatest commercial empires in history!", "Manticore", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("And guard it I did! For forty years, alone in this pyramid.", "Manticore", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("Woo-woo! Yeah we did!", "Crowd", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("A mere fifty-one days ago, a thief came to steal it.", "Manticore", DialogueStep.Emotion.Angry);
+            AdvanceConditionDialogue_EnemyTalking("Yes, the future of MantiCORP is bright.", "Manticore", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("The vile Lich King.", "Manticore", DialogueStep.Emotion.Angry);
+            AdvanceConditionDialogue_EnemyTalking("You may be wondering what's next. What shall we do, now that we've conquered the desert?", "Manticore", DialogueStep.Emotion.Normal);
+        }
+        //the great philosopher soandso once said...
+        else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_EnemyTalking("I will sate your curiousity, but first allow me to share a little story.", "Manticore", DialogueStep.Emotion.Happy);
+        }
+        else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_EnemyTalking("For the last few decades, a precious artifact sat in our headquarters, under my care.", "Manticore", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_EnemyTalking("Fifty-one days ago, a thief came to steal it.", "Manticore", DialogueStep.Emotion.Angry);
+        }
+        else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_EnemyTalking("You may have heard of him. He is the self-proclaimed ruler of the continent... the vile Lich King.", "Manticore", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Boo!!", "Crowd", DialogueStep.Emotion.Normal);
@@ -3046,42 +3062,57 @@ public class CutsceneManager : MonoBehaviour{
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Woo! Yeah! Down with the Lich King!", "Crowd", DialogueStep.Emotion.Normal);
+        } 
+        else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_EnemyTalking("He met my lightning strikes with some kind of pitch-black dark magic.", "Manticore", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("My holy lightning clashed with his accursed black magic, and it shook the very earth.", "Manticore", DialogueStep.Emotion.Normal);
-        }
-        else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("Ultimately, his heist was successful. He managed to steal the artifact and escape.", "Manticore", DialogueStep.Emotion.Defeated);
-        }
-        else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("But in the battle, a miracle occurred. I was gifted a new power.", "Manticore", DialogueStep.Emotion.Questioning);
-        }
-        else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("The power to control life and death.", "Manticore", DialogueStep.Emotion.Happy);
-        }
-        else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("That day, I saw the Lich King for what he truly is. A corrupt, twisted abomination.", "Manticore", DialogueStep.Emotion.Angry);
+            AdvanceConditionDialogue_EnemyTalking("I saw the Lich King for what he truly is. A twisted abomination, reanimated by eldritch sorcery.", "Manticore", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("A mockery of life itself.", "Manticore", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("Fifty days ago, I set out to do better.", "Manticore", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("Ultimately, his heist was successful. He managed to steal the artifact and escape.", "Manticore", DialogueStep.Emotion.Defeated);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("To raise the dead, the right way.", "Manticore", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("How could I let a monster like that win?", "Manticore", DialogueStep.Emotion.Defeated);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("This is a truly momentous occasion.", "Manticore", DialogueStep.Emotion.Happy);
+            AdvanceConditionDialogue_EnemyTalking("The next day, I vowed to do better.", "Manticore", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("We have conquered the desert! Brought towns to ruin and revived their citizens.", "Manticore", DialogueStep.Emotion.Angry);
+            AdvanceConditionDialogue_EnemyTalking("To raise the dead, the right way. No curses, no witchcraft, just honest work.", "Manticore", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("Today, we march on Duskvale!", "Manticore", DialogueStep.Emotion.Angry);
+            AdvanceConditionDialogue_EnemyTalking("Today, we stand in a conquered desert. We have brought towns to ruin and revived their citizens.", "Manticore", DialogueStep.Emotion.Happy);
+        }
+        else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_EnemyTalking("Tomorrow, we march on Duskvale.", "Manticore", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Yeah! Woo-hoo!!", "Crowd", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_EnemyTalking("We will raze their precious city and show that Lich King what true necromancy is capable of!!", "Manticore", DialogueStep.Emotion.Angry);
+        }
+        else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_EnemyTalking("Are you with me??", "Manticore", DialogueStep.Emotion.Angry);
+        }
+        else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_EnemyTalking("Yeah!!!", "Crowd", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_EnemyTalking("He really knows how to work a crowd.", "Shelton", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_EnemyTalking("Right? It's like he's telling us exactly what we want to hear!", "Bubby", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_EnemyTalking("Yeah, so he must be the good guy!", "Shelton", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_EnemyTalking("For MantiCORP!!", "Crowd", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_PlayerTalking("Now, hang on a minute!", DialogueStep.Emotion.Normal);
@@ -3121,11 +3152,15 @@ public class CutsceneManager : MonoBehaviour{
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("She has a point.", "Bubby", DialogueStep.Emotion.Normal);
         }
+        //something about he's such a good public speaker, he knows how to work a crowd
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Is Edwin Manticore the bad guy?", "Felton", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Down with MantiCORP!", "Zuzzy", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_EnemyTalking("Down with MantiCORP!!!", "Crowd", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Who let you in??", "Manticore", DialogueStep.Emotion.Angry);
@@ -3162,6 +3197,14 @@ public class CutsceneManager : MonoBehaviour{
         }
         else if (++i == cutsceneStep){
         }
+        // eldric is out of town for the moment
+        //he was inspired to go adventuring again after you left
+        //i was hoping to see him and fix up his hands! im a little more experienced with my magic now
+        //oh well, if you see him could you pass along a message?
+        //sure thing
+        //let him know that his magic might come back to him if he does a little cooking
+        //it doesn't have to be anything spectacular, just some basic cookery
+        //but make it sound not forced
     }
 
     private void MoveEverythingExceptPlayer(float xDistance, float yDistance, float duration){

@@ -412,6 +412,10 @@ MonoBehaviour:
   isCopycat: 0
   healsSelf: 0
   canBurn: 0
+  weirdAnimalDisease: 0
+  waterHealsIt: 0
+  earthHealsIt: 0
+  weakToFire: 0
   normal: {fileID: 0}
   angry: {fileID: 0}
   defeated: {fileID: 0}
@@ -2008,6 +2012,10 @@ MonoBehaviour:
   isCopycat: 0
   healsSelf: 0
   canBurn: 0
+  weirdAnimalDisease: 0
+  waterHealsIt: 0
+  earthHealsIt: 0
+  weakToFire: 0
   normal: {fileID: 0}
   angry: {fileID: 0}
   defeated: {fileID: 0}
@@ -2160,6 +2168,10 @@ MonoBehaviour:
   isCopycat: 0
   healsSelf: 0
   canBurn: 0
+  weirdAnimalDisease: 0
+  waterHealsIt: 0
+  earthHealsIt: 0
+  weakToFire: 0
   normal: {fileID: 0}
   angry: {fileID: 0}
   defeated: {fileID: 0}
@@ -2630,6 +2642,10 @@ MonoBehaviour:
   isCopycat: 0
   healsSelf: 0
   canBurn: 0
+  weirdAnimalDisease: 0
+  waterHealsIt: 0
+  earthHealsIt: 0
+  weakToFire: 0
   normal: {fileID: 0}
   angry: {fileID: 0}
   defeated: {fileID: 0}
@@ -6907,7 +6923,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1801585002
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8990,6 +9006,10 @@ MonoBehaviour:
   isCopycat: 0
   healsSelf: 0
   canBurn: 0
+  weirdAnimalDisease: 0
+  waterHealsIt: 0
+  earthHealsIt: 0
+  weakToFire: 0
   normal: {fileID: 0}
   angry: {fileID: 0}
   defeated: {fileID: 0}
