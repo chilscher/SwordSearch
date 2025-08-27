@@ -261,7 +261,12 @@ MonoBehaviour:
   forest3: {fileID: 7543067620809557234, guid: 22810d6dd6bbda9438ed0a9db61425de, type: 3}
   desert1: {fileID: 7543067620809557234, guid: b19c1a6fb66f25341a3db6dcd07b19c7, type: 3}
   desert2: {fileID: 7543067620809557234, guid: 207b02cd681bce64b9d40a5b4d7eced3, type: 3}
-  desert3: {fileID: 7543067620809557234, guid: 81eb3156165350c4ebb49dd359cfd270, type: 3}
+  desert3_pt1: {fileID: 7543067620809557234, guid: 81eb3156165350c4ebb49dd359cfd270, type: 3}
+  desert3_pt2: {fileID: 7543067620809557234, guid: ed536f5fcb050504f8a906578f149dc4, type: 3}
+  desert3_pt3: {fileID: 7543067620809557234, guid: e7750c55b5cb0384db2243e9e09fe607, type: 3}
+  desert3_pt4: {fileID: 7543067620809557234, guid: 4d94d5409baf325499229c4360170312, type: 3}
+  desert3_pt5: {fileID: 7543067620809557234, guid: d509a577e7a915849a3d1bbd0606986a, type: 3}
+  desert3_pt6: {fileID: 7543067620809557234, guid: e075bc73f76769943b682e73fd6fc7ba, type: 3}
 --- !u!114 &109189012
 MonoBehaviour:
   m_ObjectHideFlags: 0

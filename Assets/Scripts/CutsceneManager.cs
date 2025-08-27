@@ -37,7 +37,12 @@ public class CutsceneManager : MonoBehaviour{
     public GameObject forest3;
     public GameObject desert1;
     public GameObject desert2;
-    public GameObject desert3;
+    public GameObject desert3_pt1;
+    public GameObject desert3_pt2;
+    public GameObject desert3_pt3;
+    public GameObject desert3_pt4;
+    public GameObject desert3_pt5;
+    public GameObject desert3_pt6;
 
     private float externalTriggerParameter = 0f;
 
@@ -144,7 +149,7 @@ public class CutsceneManager : MonoBehaviour{
     }
 
     private void SetupDesert3(){
-        SetCutsceneBackground(desert3);
+        SetCutsceneBackground(desert3_pt1);
         PlayAnimation("Player", "Idle Holding Book");
     }
 
@@ -3225,17 +3230,43 @@ public class CutsceneManager : MonoBehaviour{
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("\"CERTAINLY. PROCEED FORWARD.\"", "Magic Book", DialogueStep.Emotion.Normal);
         }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_NobodyTalking(true);
+        }
+        else if (++i == cutsceneStep){
+            PlayAnimation("Player", "Walk While Holding Book");
+            MoveObject("Player", 488, 2055, 5f);
+            AdvanceConditionWait(2f);
+        }
+        else if (++i == cutsceneStep){
+            StartCutsceneImageTransition(desert3_pt2);
+            advanceCondition = Cond.BackgroundChange;
+        }
         //player starts moving, fade to black
         //fade in near top of pyramid
         else if (++i == cutsceneStep){
+            PlayAnimation("Player", "Idle Holding Book");
             AdvanceConditionDialogue_EnemyTalking("\"WARMER.\"", "Magic Book", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            PlayAnimation("Player", "Walk While Holding Book");
+            MoveObject("Player", -129, 2421, 3f);
+            AdvanceConditionWait(3f);
         }
         //player moves up
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("\"WARMER.\"", "Magic Book", DialogueStep.Emotion.Normal);
+            PlayAnimation("Player", "Idle Holding Book");
+            AdvanceConditionDialogue_EnemyTalking("\"WARMER...\"", "Magic Book", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            PlayAnimation("Player", "Walk While Holding Book");
+            MoveObject("Player", -16, 2632, 3f);
+            MoveObject("pyramid", 100, 230, 3f);
+            AdvanceConditionWait(3f);
         }
         //player moves up
         else if (++i == cutsceneStep){
+            PlayAnimation("Player", "Idle Holding Book");
             AdvanceConditionDialogue_PlayerTalking("Well, well... A very conspicuous lightningrod, at the top of a pyramid in the middle of a cloudless desert.", DialogueStep.Emotion.Questioning);
         }
         else if (++i == cutsceneStep){
@@ -3259,6 +3290,34 @@ public class CutsceneManager : MonoBehaviour{
         //lightning flash, fade to black
         //cut to oasis
         //player walks into frame
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_NobodyTalking(true);
+        }
+        else if (++i == cutsceneStep){
+            StartCutsceneImageTransition(desert3_pt3);
+            advanceCondition = Cond.BackgroundChange;
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_NobodyTalking(true);
+        }
+        else if (++i == cutsceneStep){
+            StartCutsceneImageTransition(desert3_pt4);
+            advanceCondition = Cond.BackgroundChange;
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_NobodyTalking(true);
+        }
+        else if (++i == cutsceneStep){
+            StartCutsceneImageTransition(desert3_pt5);
+            advanceCondition = Cond.BackgroundChange;
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_NobodyTalking(true);
+        }
+        else if (++i == cutsceneStep){
+            StartCutsceneImageTransition(desert3_pt6);
+            advanceCondition = Cond.BackgroundChange;
+        }
         
         //i wonder what kind of field of study is related to lightning magic?
         //that manticore didn't give any hints about his hobbies, what with all the taking-over-the-world plans and everything
