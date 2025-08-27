@@ -3249,6 +3249,9 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("\"WARMER.\"", "Magic Book", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_NobodyTalking();
+        }
+        else if (++i == cutsceneStep){
             PlayAnimation("Player", "Walk While Holding Book");
             MoveObject("Player", -129, 2421, 3f);
             AdvanceConditionWait(3f);
@@ -3259,15 +3262,19 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("\"WARMER...\"", "Magic Book", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_NobodyTalking();
+        }
+        else if (++i == cutsceneStep){
             PlayAnimation("Player", "Walk While Holding Book");
-            MoveObject("Player", -16, 2632, 3f);
-            MoveObject("pyramid", 100, 230, 3f);
+            MoveEverythingExceptPlayer(-19.3f, -274.9f, 3f);
+            MoveObject("Player", -10.4f, 2570, 3f);
+            //MoveObject("pyramid", 100, 169, 3f);
             AdvanceConditionWait(3f);
         }
         //player moves up
         else if (++i == cutsceneStep){
             PlayAnimation("Player", "Idle Holding Book");
-            AdvanceConditionDialogue_PlayerTalking("Well, well... A very conspicuous lightningrod, at the top of a pyramid in the middle of a cloudless desert.", DialogueStep.Emotion.Questioning);
+            AdvanceConditionDialogue_PlayerTalking("Well, well... A very conspicuous lightning rod, at the top of a pyramid in the middle of a cloudless desert.", DialogueStep.Emotion.Questioning);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("If this turns out to be the <necromancy>necromancy catalyst<>, I'd be absolutely shocked.", DialogueStep.Emotion.Normal);
@@ -3287,16 +3294,51 @@ public class CutsceneManager : MonoBehaviour{
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("Oh well. Let's get this new power and start heading back.", DialogueStep.Emotion.Happy);
         }
-        //lightning flash, fade to black
-        //cut to oasis
-        //player walks into frame
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_NobodyTalking(true);
         }
         else if (++i == cutsceneStep){
+            PlayAnimation("Player", "Put Away Book");
+            AdvanceConditionWait(1.5f);
+        }
+        else if (++i == cutsceneStep){
+            PlayAnimation("Player", "Walk");
+            MoveObject("Player", 2.5f, 2676, 1f);
+            AdvanceConditionWait(1f);
+        }
+        else if (++i == cutsceneStep){
+            PlayAnimation("Player", "Idle");
+            AdvanceConditionWait(1f);
+        }
+        else if (++i == cutsceneStep){
+            PlayAnimation("Player", "Book Catch");
+            AdvanceConditionWait(1f);
+        } 
+        else if (++i == cutsceneStep){
+            StartScreenShake();
+            AdvanceConditionWait(0.8f);
+        }
+        else if (++i == cutsceneStep){
+            MagicFlash flash = GetObjectFromName("Magic Flash").GetComponent<MagicFlash>();
+            flash.gameObject.SetActive(true);
+            flash.StartProcess(StaticVariables.lightningPowerupColor);
+            AdvanceConditionWait(flash.GetTotalTime() - flash.fadeTime);
+        }
+        else if (++i == cutsceneStep){
+            StopShakeScreen();
             StartCutsceneImageTransition(desert3_pt3);
             advanceCondition = Cond.BackgroundChange;
         }
+        //lightning flash, fade to black
+        //cut to oasis
+        //player walks into frame
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_NobodyTalking(true);
+        //}
+        //else if (++i == cutsceneStep){
+        //    StartCutsceneImageTransition(desert3_pt3);
+        //    advanceCondition = Cond.BackgroundChange;
+        //}
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_NobodyTalking(true);
         }
