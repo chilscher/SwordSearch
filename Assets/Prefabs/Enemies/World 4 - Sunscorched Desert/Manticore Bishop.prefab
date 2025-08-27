@@ -113,7 +113,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battleManager: {fileID: 0}
   data: {fileID: 0}
-  burnDamageQueue: 
 --- !u!114 &815226952419649514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,17 +126,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBattleable: 1
-  nameOverride: 
-  startingHealth: 70
+  nameOverride: Manticore
+  startingHealth: 1
   attackOrder:
     Value: []
   isDraconic: 0
   isHorde: 0
-  isHoly: 0
-  isDark: 0
   isNearWater: 0
-  canApplyDebuff: 0
+  throwsRocks: 0
   isWaterDangerous: 0
+  isCopycat: 0
+  healsSelf: 0
+  canBurn: 0
+  weirdAnimalDisease: 0
+  waterHealsIt: 0
+  earthHealsIt: 0
+  weakToFire: 0
+  usesLightning: 0
+  usesNecromancy: 0
   normal: {fileID: -1557460093, guid: 8831f2639002f4b4d8f909aab5d18b61, type: 3}
   angry: {fileID: 38637143, guid: 8831f2639002f4b4d8f909aab5d18b61, type: 3}
   defeated: {fileID: 1308978502, guid: 8831f2639002f4b4d8f909aab5d18b61, type: 3}
@@ -150,5 +156,117 @@ MonoBehaviour:
   custom1: {fileID: 0}
   custom2: {fileID: 0}
   custom3: {fileID: 0}
-  overworldDialogueSteps: []
-  victoryDialogueSteps: []
+  overworldDialogueSteps:
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 1
+    description: You!!
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: Me.
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 1
+    description: How dare you invade my party and turn my employees against me!
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 1
+    description: How dare YOU raise an undead army and threaten the continent with
+      its second war in a month!
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: Petty arguments will get us nowhere. Prepare yourself.
+  victoryDialogueSteps:
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: Good. He's out cold.
+  - type: 5
+    talker: {fileID: 1107962101534003463, guid: 559597effda3f6b46b2913f7cea39c13, type: 3}
+    name: Zuzzy
+    emotion: 0
+    description: The breather won!
+  - type: 5
+    talker: {fileID: 1107962101534003463, guid: b7704cd355ec8d7489d4c1b90d6ec069, type: 3}
+    name: Kelton
+    emotion: 0
+    description: We're free!
+  - type: 0
+    talker: {fileID: 2091835595648111671, guid: bde59c5c5605c724ea6cba62c4bce585, type: 3}
+    name: 
+    emotion: 7
+    description: If you all want to leave, now is probably the best time!
+  - type: 0
+    talker: {fileID: 2091835595648111671, guid: bde59c5c5605c724ea6cba62c4bce585, type: 3}
+    name: 
+    emotion: 5
+    description: You could go work for someone else, or do your own thing...
+  - type: 5
+    talker: {fileID: 1107962101534003463, guid: b7704cd355ec8d7489d4c1b90d6ec069, type: 3}
+    name: Pelton
+    emotion: 0
+    description: I think we should work for that Lich King!
+  - type: 0
+    talker: {fileID: 2091835595648111671, guid: bde59c5c5605c724ea6cba62c4bce585, type: 3}
+    name: 
+    emotion: 6
+    description: I don't think that's such a good idea...
+  - type: 5
+    talker: {fileID: 1107962101534003463, guid: 559597effda3f6b46b2913f7cea39c13, type: 3}
+    name: Puppy
+    emotion: 0
+    description: Yeah! He's undead too, he might understand us a little better.
+  - type: 5
+    talker: {fileID: 1107962101534003463, guid: b7704cd355ec8d7489d4c1b90d6ec069, type: 3}
+    name: Melton
+    emotion: 0
+    description: Let's go!
+  - type: 2
+    talker: {fileID: 2091835595648111671, guid: bde59c5c5605c724ea6cba62c4bce585, type: 3}
+    name: Puppy
+    emotion: 7
+    description: It sounds like we have a consensus!
+  - type: 2
+    talker: {fileID: 2091835595648111671, guid: bde59c5c5605c724ea6cba62c4bce585, type: 3}
+    name: Puppy
+    emotion: 7
+    description: Tomorrow, we march on Duskvale!
+  - type: 2
+    talker: {fileID: 2091835595648111671, guid: bde59c5c5605c724ea6cba62c4bce585, type: 3}
+    name: Puppy
+    emotion: 7
+    description: As an army... of the unemployed!
+  - type: 0
+    talker: {fileID: 2091835595648111671, guid: bde59c5c5605c724ea6cba62c4bce585, type: 3}
+    name: Puppy
+    emotion: 6
+    description: Great. Just great.
+  - type: 2
+    talker: {fileID: 815226952419649514, guid: 9278f1f95622cb049b0a1a0d3e11ef54, type: 3}
+    name: Puppy
+    emotion: 1
+    description: We have to get back to Duskvale and warn everyone!
+  - type: 0
+    talker: {fileID: 815226952419649514, guid: 9278f1f95622cb049b0a1a0d3e11ef54, type: 3}
+    name: Puppy
+    emotion: 0
+    description: You go on ahead, I'll catch up.
+  - type: 0
+    talker: {fileID: 815226952419649514, guid: 9278f1f95622cb049b0a1a0d3e11ef54, type: 3}
+    name: Puppy
+    emotion: 0
+    description: There's a muddy oasis in the middle of the desert, and a nice nymph
+      who lives there.
+  - type: 0
+    talker: {fileID: 815226952419649514, guid: 9278f1f95622cb049b0a1a0d3e11ef54, type: 3}
+    name: Puppy
+    emotion: 7
+    description: Wait for me there. I'll be right behind you!

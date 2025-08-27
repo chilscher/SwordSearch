@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
+using Unity.VisualScripting;
 
 public class CutsceneManager : MonoBehaviour{
 
@@ -144,6 +145,7 @@ public class CutsceneManager : MonoBehaviour{
 
     private void SetupDesert3(){
         SetCutsceneBackground(desert3);
+        PlayAnimation("Player", "Idle Holding Book");
     }
 
     private void AdvanceCutsceneStep(){
@@ -3007,7 +3009,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("Man-ti-core! Man-ti-core!", "Crowd", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_NobodyTalking();
+            AdvanceConditionDialogue_NobodyTalking(true);
         }
         else if (++i == cutsceneStep) {
             PlayAnimationAndMoveThenIdle("Manticore", "Walk", 664, 800, 1.5f);
@@ -3021,7 +3023,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("Ahem!", "Manticore", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("We have gathered today in celebration.", "Manticore", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("We have gathered today in celebration.", "Manticore", DialogueStep.Emotion.Happy);
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Willing or not, you all have dedicated your afterlives to me and my vision for MantiCORP.", "Manticore", DialogueStep.Emotion.Normal);
@@ -3036,7 +3038,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("Yes, the future of MantiCORP is bright.", "Manticore", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("You may be wondering what's next. What shall we do, now that we've conquered the desert?", "Manticore", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("You may be wondering what's next. What shall we do, now that we've conquered the desert?", "Manticore", DialogueStep.Emotion.Questioning);
         }
         //the great philosopher soandso once said...
         else if (++i == cutsceneStep) {
@@ -3118,7 +3120,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("Now, hang on a minute!", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking(StaticVariables.playerName + ", what are you doing? Do you want to get zombified??", "Knight NPC", DialogueStep.Emotion.Angry);
+            AdvanceConditionDialogue_EnemyTalking(StaticVariables.playerName + ", what are you doing? D-do you want to get z-zombified??", "Knight NPC", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Let's just go! The sword is in Duskvale anyway.", "Knight NPC", DialogueStep.Emotion.Normal);
@@ -3152,7 +3154,6 @@ public class CutsceneManager : MonoBehaviour{
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("She has a point.", "Bubby", DialogueStep.Emotion.Normal);
         }
-        //something about he's such a good public speaker, he knows how to work a crowd
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Is Edwin Manticore the bad guy?", "Felton", DialogueStep.Emotion.Normal);
         }
@@ -3194,9 +3195,86 @@ public class CutsceneManager : MonoBehaviour{
     private void DoDesert3Step(){   
         int i = 0;
         if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("Hey, spellbook.", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("Am I right in thinking that there are two catalysts inside the pyramid?", DialogueStep.Emotion.Questioning);
+            //AdvanceConditionDialogue_PlayerTalking("Am I right in thinking that there are two catalysts inside the pyramid? One for <lightning>lightning<>, one for <necromancy>necromancy<>?", DialogueStep.Emotion.Questioning);
         }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("One for <lightning>lightning<>, the other for <necromancy>necromancy<>?", DialogueStep.Emotion.Questioning);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("\"THERE ARE TWO STRONG MAGICAL SOURCES NEARBY.\"", "Magic Book", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("\"THE SPECIFIC SCHOOLS OF MAGIC ARE NOT IDENTIFIABLE AT A DISTANCE.\"", "Magic Book", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("Oh! Interesting...", DialogueStep.Emotion.Questioning);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("I have absolutely no interest in becoming a <necromancy>necromancer<>.", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("I doubt it would even work for me anyway. <necromancy>Necromancy<> is the one field I never studied.", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("Could you guide me to one of them, and we'll see which one it is?", DialogueStep.Emotion.Questioning);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("\"CERTAINLY. PROCEED FORWARD.\"", "Magic Book", DialogueStep.Emotion.Normal);
+        }
+        //player starts moving, fade to black
+        //fade in near top of pyramid
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("\"WARMER.\"", "Magic Book", DialogueStep.Emotion.Normal);
+        }
+        //player moves up
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("\"WARMER.\"", "Magic Book", DialogueStep.Emotion.Normal);
+        }
+        //player moves up
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("Well, well... A very conspicuous lightningrod, at the top of a pyramid in the middle of a cloudless desert.", DialogueStep.Emotion.Questioning);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("If this turns out to be the <necromancy>necromancy catalyst<>, I'd be absolutely shocked.", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("Not literally shocked, of course. That would more likely come from the <lightning>lightning catalyst<>.", DialogueStep.Emotion.Questioning);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("What field of study could be related to <lightning>lightning magic<> anyway?", DialogueStep.Emotion.Questioning);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("That manticore didn't give any hints about his hobbies between all the self-praise and plans for domination.", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("It'll be a long journey to get to Duskvale. I'm sure I'll have plenty of time to figure it out.", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("Oh well. Let's get this new power and start heading back.", DialogueStep.Emotion.Happy);
+        }
+        //lightning flash, fade to black
+        //cut to oasis
+        //player walks into frame
+        
+        //i wonder what kind of field of study is related to lightning magic?
+        //that manticore didn't give any hints about his hobbies, what with all the taking-over-the-world plans and everything
+        //it'll be a long journey to get to duskvale, i'm sure i'll have plenty of time to figure it out
+        //(running through the forest, trees going by, rabbits close behind)
+        //well it would have been nice to stop and see mustrum
+        //but it doesnt seem like the wisest choice, given our circumstances
+        //...
+        //(talking to cyclops)
+        //so it turns out, he's been trying to cure the quercus giganteum for that whole time!
+        //that is IM PRESS IVE
+        //per haps i judged him too harsh ly
+        //i am need ed here, so i can not go help him
+        //but may be i shall send my app ren tice in my stead
+        //...
+        //(in the tavern)
         // eldric is out of town for the moment
         //he was inspired to go adventuring again after you left
         //i was hoping to see him and fix up his hands! im a little more experienced with my magic now
@@ -3205,6 +3283,10 @@ public class CutsceneManager : MonoBehaviour{
         //let him know that his magic might come back to him if he does a little cooking
         //it doesn't have to be anything spectacular, just some basic cookery
         //but make it sound not forced
+        
+        
+        
+        //in a duskvale cutscene, something about the existence of "actual literal personified death"
     }
 
     private void MoveEverythingExceptPlayer(float xDistance, float yDistance, float duration){

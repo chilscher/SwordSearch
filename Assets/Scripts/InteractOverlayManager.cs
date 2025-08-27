@@ -357,6 +357,14 @@ public class InteractOverlayManager : MonoBehaviour{
             summary.Add("This enemy is highly <fire>flammable<>.");
             details.Add("Attacks made with the <fire>power of fire<> deal <damage>50% more damage<>.");
         }
+        if (enemy.usesLightning){
+            summary.Add("This enemy can attack with the <lightning>power of lightning<>");
+            details.Add("some description.");
+        }
+        if (enemy.usesNecromancy){
+            summary.Add("This enemy can attack with the <necromancy>power of necromancy<>");
+            details.Add("some description.");
+        }
 
         summary = TextFormatter.FormatStringList(summary);
         details = TextFormatter.FormatStringList(details);

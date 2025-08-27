@@ -1,0 +1,228 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2091835595648111665
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2091835595648111666}
+  - component: {fileID: 2091835595648111668}
+  - component: {fileID: 2091835595648111667}
+  - component: {fileID: 2091835595648111669}
+  - component: {fileID: 2091835595648111670}
+  - component: {fileID: 2091835595648111671}
+  - component: {fileID: 117130717696741814}
+  m_Layer: 0
+  m_Name: Announcer Mummy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2091835595648111666
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091835595648111665}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 13, y: 13, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1759, y: 515}
+  m_SizeDelta: {x: 16, y: 16}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2091835595648111668
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091835595648111665}
+  m_CullTransparentMesh: 1
+--- !u!114 &2091835595648111667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091835595648111665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 291747274, guid: ba4e987c66db93f4ab1df976768d04cf, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!95 &2091835595648111669
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091835595648111665}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c841da8d4a9f7f643a32ad8eeec29f47, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2091835595648111670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091835595648111665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af103d27019d02543a0cf828b6cd164a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battleManager: {fileID: 0}
+  data: {fileID: 0}
+--- !u!114 &2091835595648111671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091835595648111665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa6c71501f9ece54da354ee8431c25ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBattleable: 1
+  nameOverride: 
+  startingHealth: 1
+  attackOrder:
+    Value:
+    - attackSpeed: 10
+      attackDamage: 0
+      isSpecial: 0
+      specialType: 0
+      specialColor: {r: 0, g: 0, b: 0, a: 0}
+  isDraconic: 0
+  isHorde: 0
+  isNearWater: 0
+  throwsRocks: 0
+  isWaterDangerous: 0
+  isCopycat: 0
+  healsSelf: 0
+  canBurn: 0
+  weirdAnimalDisease: 0
+  waterHealsIt: 0
+  earthHealsIt: 0
+  weakToFire: 1
+  normal: {fileID: -868944376, guid: 8068f26cd91a3eb41849adc77cbe7a93, type: 3}
+  angry: {fileID: 0}
+  defeated: {fileID: 0}
+  excited: {fileID: 0}
+  happy: {fileID: 1744080147, guid: 8068f26cd91a3eb41849adc77cbe7a93, type: 3}
+  questioning: {fileID: 0}
+  worried: {fileID: 0}
+  surprised: {fileID: 309166100, guid: 8068f26cd91a3eb41849adc77cbe7a93, type: 3}
+  mystery: {fileID: 0}
+  custom1: {fileID: 727591529, guid: 8068f26cd91a3eb41849adc77cbe7a93, type: 3}
+  custom2: {fileID: 0}
+  custom3: {fileID: 0}
+  overworldDialogueSteps:
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: Mmmf.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 7
+    description: A mummy!
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 5
+    description: Out here, in broad daylight?
+  - type: 1
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: Mmmf.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 5
+    description: We're not even in the town anymore. Has the whole desert been zombified?
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 2
+    description: Mmmf mf.
+  victoryDialogueSteps:
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: I was so excited to see my first skeleton earlier!
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: But now it seems the undead are a dime a dozen around here.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 5
+    description: It makes sense when you think about it. Who would just raise one
+      skeleton?
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 2
+    description: Oh, and here I am talking to myself again. I'd better keep going.
+--- !u!114 &117130717696741814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091835595648111665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76a7427ed1e37fc46baf49a8b196a669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateNameOverride: Idle
