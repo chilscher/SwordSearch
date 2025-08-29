@@ -114,7 +114,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 104
+        y: 129
         width: 19
         height: 22
       alignment: 0
@@ -135,7 +135,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 78
+        y: 103
         width: 19
         height: 22
       alignment: 0
@@ -156,7 +156,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 52
+        y: 77
         width: 19
         height: 22
       alignment: 0
@@ -177,7 +177,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 26
+        y: 51
         width: 19
         height: 22
       alignment: 0
@@ -198,7 +198,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 25
         width: 19
         height: 22
       alignment: 0
@@ -210,6 +210,27 @@ TextureImporter:
       bones: []
       spriteID: 1c14f86e4eeb528468abaad44a944cc8
       internalID: -762285997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spa
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f076d59cb55c3a429b43c1074fc9b3a
+      internalID: 1512696101
       vertices: []
       indices: 
       edges: []
@@ -229,6 +250,7 @@ TextureImporter:
       Defeated: -762285997
       Normal: -2128018156
       Questioning: -1777957814
+      Spa: 1512696101
       Surprised: 1434472255
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

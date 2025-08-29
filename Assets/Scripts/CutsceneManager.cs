@@ -151,6 +151,7 @@ public class CutsceneManager : MonoBehaviour{
     private void SetupDesert3(){
         SetCutsceneBackground(desert3_pt1);
         PlayAnimation("Player", "Idle Holding Book");
+        cutsceneStep = 33; //for testing oasis section
     }
 
     private void AdvanceCutsceneStep(){
@@ -3242,8 +3243,6 @@ public class CutsceneManager : MonoBehaviour{
             StartCutsceneImageTransition(desert3_pt2);
             advanceCondition = Cond.BackgroundChange;
         }
-        //player starts moving, fade to black
-        //fade in near top of pyramid
         else if (++i == cutsceneStep){
             PlayAnimation("Player", "Idle Holding Book");
             AdvanceConditionDialogue_EnemyTalking("\"WARMER.\"", "Magic Book", DialogueStep.Emotion.Normal);
@@ -3268,7 +3267,6 @@ public class CutsceneManager : MonoBehaviour{
             PlayAnimation("Player", "Walk While Holding Book");
             MoveEverythingExceptPlayer(-19.3f, -274.9f, 3f);
             MoveObject("Player", -10.4f, 2570, 3f);
-            //MoveObject("pyramid", 100, 169, 3f);
             AdvanceConditionWait(3f);
         }
         //player moves up
@@ -3329,21 +3327,21 @@ public class CutsceneManager : MonoBehaviour{
             StartCutsceneImageTransition(desert3_pt3);
             advanceCondition = Cond.BackgroundChange;
         }
-        //lightning flash, fade to black
-        //cut to oasis
-        //player walks into frame
-        //else if (++i == cutsceneStep){
-        //    AdvanceConditionDialogue_NobodyTalking(true);
-        //}
-        //else if (++i == cutsceneStep){
-        //    StartCutsceneImageTransition(desert3_pt3);
-        //    advanceCondition = Cond.BackgroundChange;
-        //}
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_NobodyTalking(true);
+            PlayAnimation("Nymph - sick", "Idle - No Weapon");
+            AdvanceConditionWait(1f);
         }
         else if (++i == cutsceneStep){
-            StartCutsceneImageTransition(desert3_pt4);
+            AdvanceConditionDialogue_EnemyTalking("Wow, you're right! This stuff is great!", "Knight NPC", DialogueStep.Emotion.Custom1);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("Isn't it?", DialogueStep.Emotion.Surprised_Spa);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("Ha! Your knight friend isn't so bad after all.", "Nymph - sick", DialogueStep.Emotion.Happy);
+        }
+        else if (++i == cutsceneStep){
+            //StartCutsceneImageTransition(desert3_pt4);
             advanceCondition = Cond.BackgroundChange;
         }
         else if (++i == cutsceneStep){
@@ -3360,10 +3358,6 @@ public class CutsceneManager : MonoBehaviour{
             StartCutsceneImageTransition(desert3_pt6);
             advanceCondition = Cond.BackgroundChange;
         }
-        
-        //i wonder what kind of field of study is related to lightning magic?
-        //that manticore didn't give any hints about his hobbies, what with all the taking-over-the-world plans and everything
-        //it'll be a long journey to get to duskvale, i'm sure i'll have plenty of time to figure it out
         //(running through the forest, trees going by, rabbits close behind)
         //well it would have been nice to stop and see mustrum
         //but it doesnt seem like the wisest choice, given our circumstances
