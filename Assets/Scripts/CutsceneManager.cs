@@ -42,7 +42,6 @@ public class CutsceneManager : MonoBehaviour{
     public GameObject desert3_pt3;
     public GameObject desert3_pt4;
     public GameObject desert3_pt5;
-    public GameObject desert3_pt6;
 
     private float externalTriggerParameter = 0f;
 
@@ -3123,7 +3122,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("For MantiCORP!!", "Crowd", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_PlayerTalking("Now, hang on a minute!", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_PlayerTalking("Now, hang on a minute!", DialogueStep.Emotion.Surprised);
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking(StaticVariables.playerName + ", what are you doing? D-do you want to get z-zombified??", "Knight NPC", DialogueStep.Emotion.Angry);
@@ -3155,10 +3154,13 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("Now, he wants to march an army to the most populated city in the continent and do it all again!", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("What?", "Shelton", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("What?", "Welton", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("She has a point.", "Bubby", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("She has a point.", "Lully", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_PlayerTalking("Plus, they're recovering from a disaster right now.", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Is Edwin Manticore the bad guy?", "Felton", DialogueStep.Emotion.Normal);
@@ -3167,8 +3169,12 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("Down with MantiCORP!", "Zuzzy", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("Down with MantiCORP!!!", "Crowd", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("What is a human doing here??", "Manticore", DialogueStep.Emotion.Angry);
         }
+        else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_EnemyTalking("Boo!! Down with MantiCORP!!!", "Crowd", DialogueStep.Emotion.Normal);
+        }
+        /*
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Who let you in??", "Manticore", DialogueStep.Emotion.Angry);
         }
@@ -3177,6 +3183,26 @@ public class CutsceneManager : MonoBehaviour{
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Er, you mean Pharaoh Steve II? His majesty... got beat up.", "Announcer Mummy", DialogueStep.Emotion.Surprised);
+        }
+        else if (++i == cutsceneStep) {
+        */ 
+        else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_EnemyTalking("Where is that bouncer??", "Manticore", DialogueStep.Emotion.Angry);
+        }
+        //else if (++i == cutsceneStep) {
+        //    AdvanceConditionDialogue_EnemyTalking("Where's Steve?? I want him fired over this!", "Manticore", DialogueStep.Emotion.Angry);
+        //}
+        else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_EnemyTalking("\"That bouncer\"? Erm, you mean the Pharaoh?", "Announcer Mummy", DialogueStep.Emotion.Surprised);
+        }
+        else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_EnemyTalking("His majesty... got beat up. He is currently reforming.", "Announcer Mummy", DialogueStep.Emotion.Surprised);
+        }
+        else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_EnemyTalking("Bah! I didn't bring him back to be worshipped, I brought him back to work for me!", "Manticore", DialogueStep.Emotion.Angry);
+        }
+        else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_EnemyTalking("He's fired!", "Manticore", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("I'd advise against firing the Pharaoh. It would be a PR nightmare.", "Announcer Mummy", DialogueStep.Emotion.Normal);
@@ -3191,7 +3217,8 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("Now he's threatening the Pharaoh!", "Elton", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("Down with MantiCORP!!", "Tutty", DialogueStep.Emotion.Normal);
+            //AdvanceConditionDialogue_EnemyTalking("Down with MantiCORP!!", "Tutty", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("Down with MantiCORP!!", "Crowd", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
             EndNormalStage();
@@ -3332,17 +3359,70 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionWait(1f);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("Wow, you're right! This stuff is great!", "Knight NPC", DialogueStep.Emotion.Custom1);
+            AdvanceConditionDialogue_EnemyTalking("Well, well. You speak the truth, " + StaticVariables.playerName + ". This stuff is great!", "Knight NPC", DialogueStep.Emotion.Custom1);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("Isn't it?", DialogueStep.Emotion.Surprised_Spa);
         }
         else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("I can feel my skin... doing something.", "Knight NPC", DialogueStep.Emotion.Custom1);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("I'm not sure what exactly, but now I am extremely aware of my pores!", "Knight NPC", DialogueStep.Emotion.Custom1);
+        }
+        else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("Ha! Your knight friend isn't so bad after all.", "Nymph - sick", DialogueStep.Emotion.Happy);
         }
         else if (++i == cutsceneStep){
-            //StartCutsceneImageTransition(desert3_pt4);
+            AdvanceConditionDialogue_PlayerTalking("yeah, something", DialogueStep.Emotion.Normal_Spa);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("we should really try to rest while we can", DialogueStep.Emotion.Surprised_Spa);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("i know a shortcut that'll get us to duskvale ahead of the undead, but we'll need our energy", DialogueStep.Emotion.Surprised_Spa);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("what do you mean?", "Knight NPC", DialogueStep.Emotion.Custom1);
+        }
+        else if (++i == cutsceneStep){
+            StaticVariables.StartFadeDarken(0.5f);
+            AdvanceConditionDialogue_NobodyTalking(true);
+        }
+        else if (++i == cutsceneStep){
+            GetObjectFromName("Desert background stuff").SetActive(false);
+            GetObjectFromName("Desert foreground stuff").SetActive(false);
+            GetAnimatorFromName("Player").transform.parent.gameObject.SetActive(false);
+            GetAnimatorFromName("Knight NPC").transform.parent.gameObject.SetActive(false);
+            GetAnimatorFromName("Nymph - sick").transform.parent.gameObject.SetActive(false);
+            GetObjectFromName("Forest people").transform.DOLocalMoveX(-250, 4f);
+            StaticVariables.StartFadeLighten(0.5f);
+            AdvanceConditionWait(4f);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("okay, now i see what you mean.", "Knight NPC", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_NobodyTalking(true);
+        }
+        else if (++i == cutsceneStep){
+            StartCutsceneImageTransition(desert3_pt4);
             advanceCondition = Cond.BackgroundChange;
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("so it turns out he's been trying to cure the quercus giganteum the entire time!", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("That Is Im Press Ive.", "Cyclops", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("Per Haps I Judged Him Too Harsh Ly.", "Cyclops", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("Un For Tu Nate Ly I Can Not Go Help Him.", "Cyclops", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("But May Be I Shall Send My App Ren Tice In My Stead.", "Cyclops", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_NobodyTalking(true);
@@ -3352,35 +3432,29 @@ public class CutsceneManager : MonoBehaviour{
             advanceCondition = Cond.BackgroundChange;
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_NobodyTalking(true);
+            AdvanceConditionDialogue_EnemyTalking("eldric is out of town for the moment.", "Blacksmith", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
-            StartCutsceneImageTransition(desert3_pt6);
-            advanceCondition = Cond.BackgroundChange;
+            AdvanceConditionDialogue_EnemyTalking("he was inspired to go adventuring again after you left.", "Blacksmith", DialogueStep.Emotion.Normal);
         }
-        //(running through the forest, trees going by, rabbits close behind)
-        //well it would have been nice to stop and see mustrum
-        //but it doesnt seem like the wisest choice, given our circumstances
-        //...
-        //(talking to cyclops)
-        //so it turns out, he's been trying to cure the quercus giganteum for that whole time!
-        //that is IM PRESS IVE
-        //per haps i judged him too harsh ly
-        //i am need ed here, so i can not go help him
-        //but may be i shall send my app ren tice in my stead
-        //...
-        //(in the tavern)
-        // eldric is out of town for the moment
-        //he was inspired to go adventuring again after you left
-        //i was hoping to see him and fix up his hands! im a little more experienced with my magic now
-        //oh well, if you see him could you pass along a message?
-        //sure thing
-        //let him know that his magic might come back to him if he does a little cooking
-        //it doesn't have to be anything spectacular, just some basic cookery
-        //but make it sound not forced
-        
-        
-        
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("i was hoping to fix up his hands! im a little more experienced with my magic now.", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("oh well, if you see him could you pass along a message?", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("sure thing.", "Blacksmith", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("ask him to try and dabble in some cooking again.", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("it doesnt have to be anything extravagant, just something basic", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("just a favor from me, alright?", DialogueStep.Emotion.Normal);
+        }
         //in a duskvale cutscene, something about the existence of "actual literal personified death"
     }
 
