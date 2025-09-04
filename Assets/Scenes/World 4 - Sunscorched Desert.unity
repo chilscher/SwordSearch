@@ -5453,6 +5453,10 @@ PrefabInstance:
       propertyPath: battleData.enemyPrefab
       value: 
       objectReference: {fileID: 815226952419649516, guid: 6bac5bfc3812a0043b48b999203a3cc2, type: 3}
+    - target: {fileID: 2708877614081805339, guid: 0af3fa0e138bb1d4b98f60e151d93f72, type: 3}
+      propertyPath: battleData.backgroundPrefab
+      value: 
+      objectReference: {fileID: 7543067620809557234, guid: 0c515e5613f4de24081cef458ccc7f5d, type: 3}
     - target: {fileID: 5941702189331763658, guid: 0af3fa0e138bb1d4b98f60e151d93f72, type: 3}
       propertyPath: m_SizeDelta.x
       value: 671.71

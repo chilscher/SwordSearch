@@ -150,7 +150,7 @@ public class CutsceneManager : MonoBehaviour{
     private void SetupDesert3(){
         SetCutsceneBackground(desert3_pt1);
         PlayAnimation("Player", "Idle Holding Book");
-        cutsceneStep = 33; //for testing oasis section
+        //cutsceneStep = 33; //for testing oasis section
     }
 
     private void AdvanceCutsceneStep(){
@@ -2263,7 +2263,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("Oh, that sounds like a desperate situation indeed...", "Wizard", DialogueStep.Emotion.Worried);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("Unfortunately, I fear the Quercus Giganteum does not have much time left.", "Wizard", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("Unfortunately, I fear the Quercus giganteum does not have much time left.", "Wizard", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("I think I should stay here for the time being.", "Wizard", DialogueStep.Emotion.Normal);
@@ -3238,7 +3238,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("One for <lightning>lightning<>, the other for <necromancy>necromancy<>?", DialogueStep.Emotion.Questioning);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("\"THERE ARE TWO STRONG MAGICAL SOURCES NEARBY.\"", "Magic Book", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("\"THERE ARE INDEED TWO STRONG MAGICAL SOURCES NEARBY.\"", "Magic Book", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("\"THE SPECIFIC SCHOOLS OF MAGIC ARE NOT IDENTIFIABLE AT A DISTANCE.\"", "Magic Book", DialogueStep.Emotion.Normal);
@@ -3247,7 +3247,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("Oh! Interesting...", DialogueStep.Emotion.Questioning);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("I have absolutely no interest in becoming a <necromancy>necromancer<>.", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_PlayerTalking("I have absolutely no desire to become a <necromancy>necromancer<>.", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("I doubt it would even work for me anyway. <necromancy>Necromancy<> is the one field I never studied.", DialogueStep.Emotion.Normal);
@@ -3355,8 +3355,8 @@ public class CutsceneManager : MonoBehaviour{
             advanceCondition = Cond.BackgroundChange;
         }
         else if (++i == cutsceneStep){
-            PlayAnimation("Nymph - sick", "Idle - No Weapon");
-            AdvanceConditionWait(1f);
+            //PlayAnimation("Nymph - sick", "Idle - No Weapon");
+            AdvanceConditionWait(0.5f);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("Well, well. You speak the truth, " + StaticVariables.playerName + ". This stuff is great!", "Knight NPC", DialogueStep.Emotion.Custom1);
@@ -3368,26 +3368,35 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("I can feel my skin... doing something.", "Knight NPC", DialogueStep.Emotion.Custom1);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("I'm not sure what exactly, but now I am extremely aware of my pores!", "Knight NPC", DialogueStep.Emotion.Custom1);
+            AdvanceConditionDialogue_EnemyTalking("For the first time in my life, I'm aware of my pores!", "Knight NPC", DialogueStep.Emotion.Custom1);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("Ha! Your knight friend isn't so bad after all.", "Nymph - sick", DialogueStep.Emotion.Happy);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("yeah, something", DialogueStep.Emotion.Normal_Spa);
+            AdvanceConditionDialogue_PlayerTalking("It's amazing how a little humility can change a person.", DialogueStep.Emotion.Normal_Spa);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("we should really try to rest while we can", DialogueStep.Emotion.Surprised_Spa);
+            AdvanceConditionDialogue_EnemyTalking("It's good to open up and relax every now and again.", "Knight NPC", DialogueStep.Emotion.Custom1);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("i know a shortcut that'll get us to duskvale ahead of the undead, but we'll need our energy", DialogueStep.Emotion.Surprised_Spa);
+            AdvanceConditionDialogue_PlayerTalking("Oh yeah, we should really try to rest while we can!", DialogueStep.Emotion.Surprised_Spa);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("what do you mean?", "Knight NPC", DialogueStep.Emotion.Custom1);
+            AdvanceConditionDialogue_PlayerTalking("I know a shortcut that'll get us to Duskvale ahead of the undead army.", DialogueStep.Emotion.Normal_Spa);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("It'll save us a ton of time, but it might be a little... exhausting.", DialogueStep.Emotion.Surprised_Spa);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("I don't quite understand what you mean.", "Knight NPC", DialogueStep.Emotion.Custom1);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_NobodyTalking(true);
         }
         else if (++i == cutsceneStep){
             StaticVariables.StartFadeDarken(0.5f);
-            AdvanceConditionDialogue_NobodyTalking(true);
+            AdvanceConditionWait(0.5f);
         }
         else if (++i == cutsceneStep){
             GetObjectFromName("Desert background stuff").SetActive(false);
@@ -3400,17 +3409,41 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionWait(4f);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("okay, now i see what you mean.", "Knight NPC", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("Alright, now I quite understand what you mean!", "Knight NPC", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("In a way... Huff... This is good.", DialogueStep.Emotion.Surprised);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("The undead army will have to find another way around.", DialogueStep.Emotion.Surprised);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("We should have... Hah... Plenty of time to warn the citizenry!", "Knight NPC", DialogueStep.Emotion.Surprised);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("And plenty of time to... Phew... Catch our breath!", DialogueStep.Emotion.Surprised);
+        }
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_PlayerTalking("How are you managing to keep up in all that armor??", DialogueStep.Emotion.Angry);
+        //}
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_EnemyTalking("I don't know!!", "Knight NPC", DialogueStep.Emotion.Angry);
+        //}
+        else if (++i == cutsceneStep){
             AdvanceConditionDialogue_NobodyTalking(true);
+        }
+        else if (++i == cutsceneStep){
+            Transform people = GetObjectFromName("Forest people").transform;
+            people.DOLocalMoveX(-1000, 3f);
+            people.GetChild(2).DOKill();
+            AdvanceConditionWait(2f);
         }
         else if (++i == cutsceneStep){
             StartCutsceneImageTransition(desert3_pt4);
             advanceCondition = Cond.BackgroundChange;
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("so it turns out he's been trying to cure the quercus giganteum the entire time!", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_PlayerTalking("So it turns out he's been trying to cure the Quercus giganteum the entire time!", DialogueStep.Emotion.Surprised);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("That Is Im Press Ive.", "Cyclops", DialogueStep.Emotion.Normal);
@@ -3419,11 +3452,29 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("Per Haps I Judged Him Too Harsh Ly.", "Cyclops", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("Un For Tu Nate Ly I Can Not Go Help Him.", "Cyclops", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_PlayerTalking("Not just you! Everyone in the forst is suspicious of him!", DialogueStep.Emotion.Defeated);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("But May Be I Shall Send My App Ren Tice In My Stead.", "Cyclops", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("I May Send My App Ren Tice To Pro Vide A Ssist Ance.", "Cyclops", DialogueStep.Emotion.Happy);
         }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("Such An Arr Ange Ment Could Be Mu Tu Al Ly Be Ne Fi Cial.", "Cyclops", DialogueStep.Emotion.Happy);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("What are you even saying??", "Knight NPC", DialogueStep.Emotion.Angry);
+        }
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_PlayerTalking("That's a great idea! I'm sure h", DialogueStep.Emotion.Defeated);
+        //}
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_EnemyTalking("Un For Tu Nate Ly I Can Not Go Help Him.", "Cyclops", DialogueStep.Emotion.Normal);
+        //}
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_EnemyTalking("But May Be I Shall Send My App Ren Tice In My Stead.", "Cyclops", DialogueStep.Emotion.Happy);
+        //}
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_EnemyTalking("I'm Sure He Would Learn Much Of The Ways Of Ma Gic.", "Cyclops", DialogueStep.Emotion.Normal);
+        //}
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_NobodyTalking(true);
         }
