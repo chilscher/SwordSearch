@@ -506,13 +506,14 @@ public class PuzzleGenerator : MonoBehaviour {
         }
     }
     
-    private void SpreadInfection(){ 
+    private void SpreadInfection(){
         //lettersToInfectOnPageTurn = new();
-        foreach (LetterSpace ls in infectedLetters){
+        foreach (LetterSpace ls in infectedLetters)
+        {
             if (infectedLetters.Count >= battleManager.maxInfectedLetters)
                 return;
             LetterSpace spreadTo = ls.ChooseNeighborToInfect();
-            if(spreadTo != null)
+            if (spreadTo != null)
                 spreadTo.willBecomeInfected = true;
             //lettersToInfectOnPageTurn.Add(spreadTo);
         }

@@ -59,7 +59,7 @@ public class BattleManager : MonoBehaviour {
     public float swordPowerupDamageMultiplierVsDragons = 5f;
     public BattleData defaultBattleData;
     public int selfDamageFromBurnedLetters = 2;
-    public int selfDamageFromInfectedLetters = 5;
+    public int selfDamageFromInfectedLetters = 3;
     public int maxCopycatStacks = 5;
 
     [Header("Scripts")]
@@ -670,7 +670,7 @@ public class BattleManager : MonoBehaviour {
             attackQueue.Add(inProgressWord);
             inProgressWord = new(this);
             DecrementRefreshPuzzleCountdown();
-            RemoveInfectionsAndDamagePlayer();
+            RemoveInfectionsFromCurrentWord();
             ClearWord(true, applyChar);
             RemoveEarthBuff();
             if (isWaterInPuzzleArea && enemyData.canBurn)
@@ -678,17 +678,30 @@ public class BattleManager : MonoBehaviour {
         }
     }
 
-    private void RemoveInfectionsAndDamagePlayer() {
-        int damage = 0;
+    private void RemoveInfectionsFromCurrentWord() {
         foreach (LetterSpace letter in letterSpacesForWord) {
-            if (letter.isInfected) {
+            if (letter.isInfected)
                 letter.RemoveInfection(true);
-                damage += selfDamageFromInfectedLetters;
-            }
         }
-        if (damage > 0)
-            DamagePlayerHealth(selfDamageFromInfectedLetters, false);
     }
+    
+    private void DamagePlayerFromInfectedLetters(){
+        int damage = puzzleGenerator.infectedLetters.Count * selfDamageFromInfectedLetters;
+        if (damage > 0)
+            DamagePlayerHealth(selfDamageFromInfectedLetters);
+    }
+
+    //private void RemoveInfectionsAndDamagePlayer() {
+    //    int damage = 0;
+    //    foreach (LetterSpace letter in letterSpacesForWord) {
+    //        if (letter.isInfected) {
+    //            letter.RemoveInfection(true);
+    //            damage += selfDamageFromInfectedLetters;
+    //        }
+    //    }
+    //    if (damage > 0)
+    //        DamagePlayerHealth(selfDamageFromInfectedLetters, false);
+    //}
     
     private void AttackWithFirstWordInQueue() {
         if (attackQueue.Count == 0)
@@ -701,6 +714,7 @@ public class BattleManager : MonoBehaviour {
 
     public virtual void PressWordArea() {
         if ((inProgressWord.word.Length == 0) && (countdownToRefresh == 0)) {
+            DamagePlayerFromInfectedLetters();
             puzzleGenerator.GenerateNewPuzzle();
             countdownToRefresh = maxPuzzleCountdown;
             ClearWord(true);

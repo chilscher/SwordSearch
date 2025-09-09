@@ -343,7 +343,7 @@ public class InteractOverlayManager : MonoBehaviour{
         }
         if (enemy.weirdAnimalDisease){
             summary.Add("The goat carries some kind of <infected>wierd undead animal disease<>.");
-            details.Add("Each of this enemy's attacks will <infected>infect<> a random letter. Using an <infected>infected letter<> hurts you and removes the infection. <infected>Infections<> spread when the page is turned. The <healing>power of healing<> cures a letter.");
+            details.Add("This enemy's attacks <infected>infect<> letters. Using an <infected>infected letter<> will cure it, and the <healing>power of healing<> will cure one letter at random. When you turn a page, any remaining <infected>infections<> will spread and hurt you.");
         }
         if (enemy.waterHealsIt){
             summary.Add("The <water>power of water<> heals this enemy.");
