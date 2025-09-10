@@ -3305,7 +3305,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("If this turns out to be the <necromancy>necromancy catalyst<>, I'd be absolutely shocked.", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("Not literally shocked, of course. That would more likely come from the <lightning>lightning catalyst<>.", DialogueStep.Emotion.Questioning);
+            AdvanceConditionDialogue_PlayerTalking("Not literally shocked, of course! That would be from the <lightning>lightning catalyst<>!", DialogueStep.Emotion.Surprised);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("What field of study could be related to <lightning>lightning magic<> anyway?", DialogueStep.Emotion.Questioning);
@@ -3371,13 +3371,25 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("For the first time in my life, I'm aware of my pores!", "Knight NPC", DialogueStep.Emotion.Custom1);
         }
         else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("Which is... good, I think?", "Knight NPC", DialogueStep.Emotion.Custom1);
+        }
+        else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("Ha! Your knight friend isn't so bad after all.", "Nymph - sick", DialogueStep.Emotion.Happy);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("It's amazing how a little humility can change a person.", DialogueStep.Emotion.Normal_Spa);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("It's good to open up and relax every now and again.", "Knight NPC", DialogueStep.Emotion.Custom1);
+            AdvanceConditionDialogue_PlayerTalking("I'm glad you've stopped trying to act like a big macho man.", DialogueStep.Emotion.Surprised_Spa);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("Honestly? It was quite exhausting.", "Knight NPC", DialogueStep.Emotion.Custom1);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("It feels good to open up and be comfortable with myself.", "Knight NPC", DialogueStep.Emotion.Custom1);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("Plus, a little relaxation doesn't hurt.", "Knight NPC", DialogueStep.Emotion.Custom1);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("Oh yeah, we should really try to rest while we can!", DialogueStep.Emotion.Surprised_Spa);
@@ -3386,7 +3398,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("I know a shortcut that'll get us to Duskvale ahead of the undead army.", DialogueStep.Emotion.Normal_Spa);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("It'll save us a ton of time, but it might be a little... exhausting.", DialogueStep.Emotion.Surprised_Spa);
+            AdvanceConditionDialogue_PlayerTalking("It'll save us a ton of time, but the path might be a little... rapid.", DialogueStep.Emotion.Surprised_Spa);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("I don't quite understand what you mean.", "Knight NPC", DialogueStep.Emotion.Custom1);
@@ -3408,21 +3420,42 @@ public class CutsceneManager : MonoBehaviour{
             StaticVariables.StartFadeLighten(0.5f);
             AdvanceConditionWait(4f);
         }
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_EnemyTalking("Alright, now I understand!", "Knight NPC", DialogueStep.Emotion.Angry);
+        //}
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("Alright, now I quite understand what you mean!", "Knight NPC", DialogueStep.Emotion.Angry);
+            AdvanceConditionDialogue_EnemyTalking("Why would you take us... Hah... this way?? Are you crazy??", "Knight NPC", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("In a way... Huff... This is good.", DialogueStep.Emotion.Surprised);
+            AdvanceConditionDialogue_PlayerTalking("Why wouldn't you take your... Huff... armor off first? Are you crazy??", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("The undead army will have to find another way around.", DialogueStep.Emotion.Surprised);
+            AdvanceConditionDialogue_EnemyTalking("This armor... Phew... represents the Academy, and my future as a knight!", "Knight NPC", DialogueStep.Emotion.Surprised);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("We should have... Hah... Plenty of time to warn the citizenry!", "Knight NPC", DialogueStep.Emotion.Surprised);
+            AdvanceConditionDialogue_PlayerTalking("It might represent... Huff... your corpse if you keep wearing it everywhere!", DialogueStep.Emotion.Surprised);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("And plenty of time to... Phew... Catch our breath!", DialogueStep.Emotion.Surprised);
+            AdvanceConditionDialogue_PlayerTalking("You went to a place called the \"Sunscorched... Hah... Desert\", and you really thought a suit of... Whew... armor was appropriate??", DialogueStep.Emotion.Surprised);
         }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("Can we... Ahh... talk about this later?", "Knight NPC", DialogueStep.Emotion.Surprised);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("Yeah, when we're not in... Huff... peril.",  DialogueStep.Emotion.Surprised);
+        }
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_PlayerTalking("In a way... Huff... This is good.", DialogueStep.Emotion.Surprised);
+        //}
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_PlayerTalking("The undead army will have to find another way around.", DialogueStep.Emotion.Surprised);
+        //}
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_EnemyTalking("We should have... Hah... Plenty of time to warn the citizenry!", "Knight NPC", DialogueStep.Emotion.Surprised);
+        //}
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_PlayerTalking("And plenty of time to... Phew... Catch our breath!", DialogueStep.Emotion.Surprised);
+        //}
         //else if (++i == cutsceneStep){
         //    AdvanceConditionDialogue_PlayerTalking("How are you managing to keep up in all that armor??", DialogueStep.Emotion.Angry);
         //}
@@ -3462,6 +3495,9 @@ public class CutsceneManager : MonoBehaviour{
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("What are you even saying??", "Knight NPC", DialogueStep.Emotion.Angry);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("Oh, come on! Don't be rude!", DialogueStep.Emotion.Angry);
         }
         //else if (++i == cutsceneStep){
         //    AdvanceConditionDialogue_PlayerTalking("That's a great idea! I'm sure h", DialogueStep.Emotion.Defeated);
