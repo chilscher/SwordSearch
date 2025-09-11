@@ -3380,7 +3380,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("It's amazing how a little humility can change a person.", DialogueStep.Emotion.Normal_Spa);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("I'm glad you've stopped trying to act like a big macho man.", DialogueStep.Emotion.Surprised_Spa);
+            AdvanceConditionDialogue_PlayerTalking("I'm glad you've stopped pretending you're a brave macho man.", DialogueStep.Emotion.Surprised_Spa);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("Honestly? It was quite exhausting.", "Knight NPC", DialogueStep.Emotion.Custom1);
@@ -3427,10 +3427,10 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("Why would you take us... Hah... this way?? Are you crazy??", "Knight NPC", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("Why wouldn't you take your... Huff... armor off first? Are you crazy??", DialogueStep.Emotion.Angry);
+            AdvanceConditionDialogue_PlayerTalking("Why wouldn't you take your... Huff... armor off first? Are YOU crazy??", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("This armor... Phew... represents the Academy, and my future as a knight!", "Knight NPC", DialogueStep.Emotion.Surprised);
+            AdvanceConditionDialogue_EnemyTalking("This armor... Phew... represents the Academy... Hah... and my future as a knight!", "Knight NPC", DialogueStep.Emotion.Surprised);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("It might represent... Huff... your corpse if you keep wearing it everywhere!", DialogueStep.Emotion.Surprised);
@@ -3439,10 +3439,10 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("You went to a place called the \"Sunscorched... Hah... Desert\", and you really thought a suit of... Whew... armor was appropriate??", DialogueStep.Emotion.Surprised);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("Can we... Ahh... talk about this later?", "Knight NPC", DialogueStep.Emotion.Surprised);
+            AdvanceConditionDialogue_EnemyTalking("Can we... Ahh... cut the chit-chat?", "Knight NPC", DialogueStep.Emotion.Surprised);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("Yeah, when we're not in... Huff... peril.",  DialogueStep.Emotion.Surprised);
+            AdvanceConditionDialogue_PlayerTalking("Yeah, maybe now isn't the time.",  DialogueStep.Emotion.Surprised);
         }
         //else if (++i == cutsceneStep){
         //    AdvanceConditionDialogue_PlayerTalking("In a way... Huff... This is good.", DialogueStep.Emotion.Surprised);
@@ -3494,11 +3494,38 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("Such An Arr Ange Ment Could Be Mu Tu Al Ly Be Ne Fi Cial.", "Cyclops", DialogueStep.Emotion.Happy);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("What are you even saying??", "Knight NPC", DialogueStep.Emotion.Angry);
+            AdvanceConditionDialogue_EnemyTalking("Could you stop speaking gibberish for a minute??", "Knight NPC", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("Oh, come on! Don't be rude!", DialogueStep.Emotion.Angry);
+            AdvanceConditionDialogue_EnemyTalking("Ah! Lit Tle Knight.", "Cyclops", DialogueStep.Emotion.Happy);
         }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("You Bear The I Con Og Ra Phy Of The A Ca Dem Y.", "Cyclops", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("The A.. Cademy? Uh, yeah, I'm a student there.", "Knight NPC", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("And You Now Tra Vel With The Most Gif Ted Mag I Cal Prac Ti Tion Er In Sev Er Al Cen Tur Ies.", "Cyclops", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("Are you trying to make me blush?", DialogueStep.Emotion.Happy);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("Do Not Squan Der Your Opp Or Tu Ni Ties. You Have Much To Learn.", "Cyclops", DialogueStep.Emotion.Angry);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("Um, yes! Yes. You're right.", "Knight NPC", DialogueStep.Emotion.Surprised);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("Thank you! For your wise, uh... wisdom.", "Knight NPC", DialogueStep.Emotion.Normal);
+        }
+        //they train
+        //and you now travel with the most gifted magical practitioner in several centuries
+        //you have much to learn. do not squander your opportunities
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_PlayerTalking("Oh, come on! Don't be rude!", DialogueStep.Emotion.Angry);
+        //}
         //else if (++i == cutsceneStep){
         //    AdvanceConditionDialogue_PlayerTalking("That's a great idea! I'm sure h", DialogueStep.Emotion.Defeated);
         //}
