@@ -285,6 +285,12 @@ public class DialogueManager : MonoBehaviour{
                     AdvanceTalkStage();
                     return;
                 }
+                else if (dialogueSteps[currentStep].description == "Fail Battle"){
+                    dialogueTextBox.text = "";
+                    StaticVariables.hasCompletedStage = false;
+                    StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
+                    return;
+                }
                 else if (dialogueSteps[currentStep].description.Contains("Wait time :")){
                     float duration = float.Parse(dialogueSteps[currentStep].description.Split(':')[1]);
                     dialogueTextBox.text = "";

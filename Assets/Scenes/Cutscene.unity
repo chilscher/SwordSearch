@@ -266,7 +266,7 @@ MonoBehaviour:
   desert3_pt3: {fileID: 7543067620809557234, guid: e7750c55b5cb0384db2243e9e09fe607, type: 3}
   desert3_pt4: {fileID: 7543067620809557234, guid: 4d94d5409baf325499229c4360170312, type: 3}
   desert3_pt5: {fileID: 7543067620809557234, guid: d509a577e7a915849a3d1bbd0606986a, type: 3}
-  desert3_pt6: {fileID: 7543067620809557234, guid: e075bc73f76769943b682e73fd6fc7ba, type: 3}
+  city1: {fileID: 7543067620809557234, guid: 220a4a4d06cd0f04bb2cc430d3c81d58, type: 3}
 --- !u!114 &109189012
 MonoBehaviour:
   m_ObjectHideFlags: 0

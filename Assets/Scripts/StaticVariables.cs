@@ -63,7 +63,7 @@ public class StaticVariables{
     static public string world2Name = "World 2 - Grasslands";
     static public string world3Name = "World 3 - Enchanted Forest";
     static public string world4Name = "World 4 - Sunscorched Desert";
-    static public string world5Name = "World 5 - Fallen City";
+    static public string world5Name = "World 5 - Duskvale";
     static public string world6Name = "World 6 - Frostlands";
     static public string world7Name = "World 7 - Caverns";
     static public string world8Name = "World 8 - Dragon's Den";

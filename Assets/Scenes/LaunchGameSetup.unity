@@ -225,6 +225,7 @@ MonoBehaviour:
   - {fileID: 1107962101534003457, guid: cb88c9784fe00bd40aa0649daa8ec38e, type: 3}
   cityEnemies:
   - {fileID: 1107962101534003457, guid: cb88c9784fe00bd40aa0649daa8ec38e, type: 3}
+  - {fileID: 1107962101534003457, guid: c13fc35047c0e894293b0bc81626b50a, type: 3}
   frostlandsEnemies:
   - {fileID: 1107962101534003457, guid: cb88c9784fe00bd40aa0649daa8ec38e, type: 3}
   cavernsEnemies:

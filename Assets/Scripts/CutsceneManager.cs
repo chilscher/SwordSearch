@@ -11,7 +11,7 @@ public class CutsceneManager : MonoBehaviour{
     private int cutsceneStep = 0;
     private enum Cond{Click, Wait, BackgroundChange, externalTrigger};
     private Cond advanceCondition;
-    public enum Cutscene{Hometown1, Hometown2, Grasslands1, Grasslands2, Forest1, Forest2, Forest3, Desert1, Desert2, Desert3};
+    public enum Cutscene{Hometown1, Hometown2, Grasslands1, Grasslands2, Forest1, Forest2, Forest3, Desert1, Desert2, Desert3, City1};
     private Cutscene cutsceneID;
     private List<Animator> animatedObjectsInCutscene = new List<Animator>();
     private List<GameObject> searchableObjectsInCutscene = new List<GameObject>();
@@ -42,6 +42,7 @@ public class CutsceneManager : MonoBehaviour{
     public GameObject desert3_pt3;
     public GameObject desert3_pt4;
     public GameObject desert3_pt5;
+    public GameObject city1;
 
     private float externalTriggerParameter = 0f;
 
@@ -81,6 +82,9 @@ public class CutsceneManager : MonoBehaviour{
                 break;
             case (Cutscene.Desert3):
                 SetupDesert3();
+                break;
+            case (Cutscene.City1):
+                SetupCity1();
                 break;
         }
         ButtonText("CONTINUE");
@@ -153,6 +157,13 @@ public class CutsceneManager : MonoBehaviour{
         //cutsceneStep = 33; //for testing oasis section
     }
 
+    private void SetupCity1(){
+        SetCutsceneBackground(city1);
+        //ToggleObject("Player", false);
+        //cutsceneStep = 50; //for testing goblin walking
+        //cutsceneStep = 79; //for testing the water spray
+    }
+
     private void AdvanceCutsceneStep(){
         cutsceneStep ++;
         switch (cutsceneID){
@@ -185,6 +196,9 @@ public class CutsceneManager : MonoBehaviour{
                 break;
             case (Cutscene.Desert3):
                 DoDesert3Step();
+                break;
+            case (Cutscene.City1):
+                DoCity1Step();
                 break;
         }
         CheckButtonAvailability();
@@ -3249,11 +3263,11 @@ public class CutsceneManager : MonoBehaviour{
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("I have absolutely no desire to become a <necromancy>necromancer<>.", DialogueStep.Emotion.Normal);
         }
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_PlayerTalking("I doubt it would even work for me anyway. <necromancy>Necromancy<> is the one field I never studied.", DialogueStep.Emotion.Normal);
+        //}
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("I doubt it would even work for me anyway. <necromancy>Necromancy<> is the one field I never studied.", DialogueStep.Emotion.Normal);
-        }
-        else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("Could you guide me to one of them, and we'll see which one it is?", DialogueStep.Emotion.Questioning);
+            AdvanceConditionDialogue_PlayerTalking("But <lightning>lightning<> would be cool! Could you guide me to one of them, and we'll see which one it is?", DialogueStep.Emotion.Questioning);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("\"CERTAINLY. PROCEED FORWARD.\"", "Magic Book", DialogueStep.Emotion.Normal);
@@ -3299,13 +3313,13 @@ public class CutsceneManager : MonoBehaviour{
         //player moves up
         else if (++i == cutsceneStep){
             PlayAnimation("Player", "Idle Holding Book");
-            AdvanceConditionDialogue_PlayerTalking("Well, well... A very conspicuous lightning rod, at the top of a pyramid in the middle of a cloudless desert.", DialogueStep.Emotion.Questioning);
+            AdvanceConditionDialogue_PlayerTalking("Hmmm... A very conspicuous lightning rod, at the top of a pyramid in the middle of a cloudless desert.", DialogueStep.Emotion.Questioning);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("If this turns out to be the <necromancy>necromancy catalyst<>, I'd be absolutely shocked.", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("Not literally shocked, of course! That would be from the <lightning>lightning catalyst<>!", DialogueStep.Emotion.Surprised);
+            AdvanceConditionDialogue_PlayerTalking("Not literally shocked, of course! Although it is a lightningrod...", DialogueStep.Emotion.Questioning);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("What field of study could be related to <lightning>lightning magic<> anyway?", DialogueStep.Emotion.Questioning);
@@ -3383,7 +3397,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("I'm glad you've stopped pretending you're a brave macho man.", DialogueStep.Emotion.Surprised_Spa);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("Honestly? It was quite exhausting.", "Knight NPC", DialogueStep.Emotion.Custom1);
+            AdvanceConditionDialogue_EnemyTalking("Honestly, it has been quite exhausting.", "Knight NPC", DialogueStep.Emotion.Custom1);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("It feels good to open up and be comfortable with myself.", "Knight NPC", DialogueStep.Emotion.Custom1);
@@ -3424,7 +3438,7 @@ public class CutsceneManager : MonoBehaviour{
         //    AdvanceConditionDialogue_EnemyTalking("Alright, now I understand!", "Knight NPC", DialogueStep.Emotion.Angry);
         //}
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("Why would you take us... Hah... this way?? Are you crazy??", "Knight NPC", DialogueStep.Emotion.Angry);
+            AdvanceConditionDialogue_EnemyTalking("Why would you take us... Hah... this way? Are you crazy??", "Knight NPC", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("Why wouldn't you take your... Huff... armor off first? Are YOU crazy??", DialogueStep.Emotion.Angry);
@@ -3494,7 +3508,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("Such An Arr Ange Ment Could Be Mu Tu Al Ly Be Ne Fi Cial.", "Cyclops", DialogueStep.Emotion.Happy);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("Could you stop speaking gibberish for a minute??", "Knight NPC", DialogueStep.Emotion.Angry);
+            AdvanceConditionDialogue_EnemyTalking("Could you please stop speaking gibberish??", "Knight NPC", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("Ah! Lit Tle Knight.", "Cyclops", DialogueStep.Emotion.Happy);
@@ -3506,7 +3520,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("The A.. Cademy? Uh, yeah, I'm a student there.", "Knight NPC", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("And You Now Tra Vel With The Most Gif Ted Mag I Cal Prac Ti Tion Er In Sev Er Al Cen Tur Ies.", "Cyclops", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("And You Now Tra Vel With The Most Gif Ted Mag I Cal Prac Ti Tion Er Of Our Age.", "Cyclops", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("Are you trying to make me blush?", DialogueStep.Emotion.Happy);
@@ -3546,30 +3560,139 @@ public class CutsceneManager : MonoBehaviour{
             advanceCondition = Cond.BackgroundChange;
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("eldric is out of town for the moment.", "Blacksmith", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("Actually, Eldric is out of town for the moment!", "Blond Lady", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("he was inspired to go adventuring again after you left.", "Blacksmith", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("Apparently adventure called, and he answered!", "Brown Hair Lady No Hat", DialogueStep.Emotion.Happy);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("i was hoping to fix up his hands! im a little more experienced with my magic now.", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_PlayerTalking("Oh, wow! Do you have any idea which way he went?", DialogueStep.Emotion.Questioning);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("oh well, if you see him could you pass along a message?", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("Not a clue. He just disappeared one night.", "Blond Lady", DialogueStep.Emotion.Questioning);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("sure thing.", "Blacksmith", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("He left behind a goodbye note, and the kids were able to read it.", "Blond Lady", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("ask him to try and dabble in some cooking again.", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_PlayerTalking("That's incredible!", DialogueStep.Emotion.Surprised);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("it doesnt have to be anything extravagant, just something basic", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("Yeah, I told them about the magic letters in your magic book! They've been excited about reading ever since!", "Brown Hair Lady No Hat", DialogueStep.Emotion.Happy);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("just a favor from me, alright?", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_PlayerTalking("I should have a talk with those kids after this is all over...", DialogueStep.Emotion.Questioning);
         }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("Come to think of it, I saw you talking to Eldric on your way out of town!", "Blacksmith", DialogueStep.Emotion.Happy);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("Something you said must have resonated with him?", "Blacksmith", DialogueStep.Emotion.Questioning);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("Let me think...", DialogueStep.Emotion.Questioning);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("He gave me a magic bag, I mentioned I'd heal his hands when he got back, and he said he'd...", DialogueStep.Emotion.Questioning);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("Ah! I think I know what might've happened.", DialogueStep.Emotion.Happy);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("Well don't be coy about it! Tell us!", "Brown Hair Lady No Hat", DialogueStep.Emotion.Questioning);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("Maybe he'll tell you himself, when he returns.", DialogueStep.Emotion.Normal);
+        }
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_EnemyTalking("Actually, Eldric is out of town for the moment!", "Blond Lady", DialogueStep.Emotion.Normal);
+        //}
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_PlayerTalking("But don't worry! I think he's more than capable of handling himself now.", DialogueStep.Emotion.Happy);
+        //}
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_PlayerTalking("Although I expect it'll be quite some time until then.", DialogueStep.Emotion.Questioning);
+        //}
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("But that reminds me, I should get going too...", DialogueStep.Emotion.Defeated);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("I didn't find the sword, but it's likely in Duskvale.", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("Let's all head over there and grab it!", "Blacksmith", DialogueStep.Emotion.Angry);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("No, no, no! That's a very bad idea.", DialogueStep.Emotion.Worried);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("Dragons, magic, the undead, all of it seems to be converging in Duskvale.", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("The city has been a warzone for a few weeks now, and it'll just continue to get worse.", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("You can trust me, I'll get that sword! Just try to stay safe while I'm gone.", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            EndLastStageOfWorld();
+        }
+        //have the kids approach and say they started reading, after hearing the magic book was filled with magic letters? or do that in the epilogue
         //in a duskvale cutscene, something about the existence of "actual literal personified death"
+    }
+    private void DoCity1Step(){   
+        int i = 0;
+        if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("Well, we've made it to Duskvale.", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("But it doesn't look like there's anything here!", "Knight NPC", DialogueStep.Emotion.Angry);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("It looks like we've reached the end of the playtest.", DialogueStep.Emotion.Questioning);
+        }
+        else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_EnemyTalking("The sword must be here somewhere...", "Knight NPC", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("It must be, right?", DialogueStep.Emotion.Questioning);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("But we won't know for sure until the next time the game gets updated.", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_EnemyTalking("What else is there to do now?", "Knight NPC", DialogueStep.Emotion.Questioning);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("Too bad that big button on the bottom of the main menu doesn't work. It's supposed to be something called \"Endless Mode\"!", DialogueStep.Emotion.Defeated);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("Oh well, in the meantime at least I can play around with all my fun powerups!", DialogueStep.Emotion.Happy);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("It looks like this next enemy is harmless and has a load of health, too! What a great coincidence!", DialogueStep.Emotion.Happy);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("Oh, I guess we never explained how the <lightning>Power of Lightning<> works, did we?", DialogueStep.Emotion.Questioning);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("It's pretty straightforward, honestly. It just stuns an enemy and delays their next attack.", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep) {
+            AdvanceConditionDialogue_EnemyTalking("That sounds like fun!", "Knight NPC", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("I'm sure it will be.", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("But maybe it won't be the most fun to try on a harmless enemy.", DialogueStep.Emotion.Defeated);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("Oh, well! I bet the animations will look cool at least!", DialogueStep.Emotion.Happy);
+        }
+        else if (++i == cutsceneStep){
+            EndNormalStage();
+        }
     }
 
     private void MoveEverythingExceptPlayer(float xDistance, float yDistance, float duration){

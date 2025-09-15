@@ -34,7 +34,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -113,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   battleManager: {fileID: 0}
-  burnDamageQueue: 
+  data: {fileID: 0}
 --- !u!114 &1107962101534003463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,7 +125,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa6c71501f9ece54da354ee8431c25ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 20
-  attackSpeed: 2
-  attackDamage: 1
-  isDraconic: 1
+  isBattleable: 1
+  nameOverride: Harmless Bat
+  startingHealth: 5000
+  attackOrder:
+    Value: []
+  isDraconic: 0
+  isHorde: 0
+  isNearWater: 0
+  throwsRocks: 0
+  isWaterDangerous: 0
+  isCopycat: 0
+  healsSelf: 0
+  canBurn: 0
+  weirdAnimalDisease: 0
+  waterHealsIt: 0
+  earthHealsIt: 0
+  weakToFire: 0
+  usesLightning: 0
+  usesNecromancy: 0
+  normal: {fileID: 0}
+  angry: {fileID: 0}
+  defeated: {fileID: 0}
+  excited: {fileID: 0}
+  happy: {fileID: 0}
+  questioning: {fileID: 0}
+  worried: {fileID: 0}
+  surprised: {fileID: 0}
+  mystery: {fileID: 0}
+  custom1: {fileID: 0}
+  custom2: {fileID: 0}
+  custom3: {fileID: 0}
+  overworldDialogueSteps:
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 0
+    description: Okay, you harmless bat! Let me test my magic on you!
+  victoryDialogueSteps:
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 7
+    description: Well, I won somehow. But it looks like I can't progress any further.
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 4
+    description: Oh well. I guess I can just keep fighting this enemy over and over!
+  - type: 0
+    talker: {fileID: 0}
+    name: 
+    emotion: 5
+    description: Or maybe I could put the game down and do that thing I've been meaning
+      to do...?
