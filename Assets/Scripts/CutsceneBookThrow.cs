@@ -13,8 +13,9 @@ public class CutsceneBookThrow : MonoBehaviour{
     public float timeBetweenBooks = 0.5f;
 
     public GameObject tossedBookPrefab;
+    public List<GameObject> booksToShowInOrder;
 
-    public void StartThrow(){
+    public void StartThrow() {
         keepThrowing = true;
         ThrowRandomBook();
         StaticVariables.WaitTimeThenCallFunction(timeBetweenBooks, ThrowRandomBook);
@@ -38,6 +39,7 @@ public class CutsceneBookThrow : MonoBehaviour{
         GameObject newBook = Instantiate(tossedBookPrefab, transform);
         //newBook.transform.SetParent(transform);
         newBook.GetComponent<Image>().sprite = bookSprite;
+        newBook.GetComponent<TossedBook>().cbt = this;
     }
 
     private void ThrowMagicBook(){
@@ -49,6 +51,15 @@ public class CutsceneBookThrow : MonoBehaviour{
             return;
         ThrowRandomBook();
         StaticVariables.WaitTimeThenCallFunction(timeBetweenBooks, ThrowBookAndQueueNextBook);
+    }
+
+    public void ABookThrowEnded(Sprite im) {
+        if (booksToShowInOrder.Count == 0)
+            return;
+        GameObject firstBook = booksToShowInOrder[0];
+        firstBook.SetActive(true);
+        firstBook.GetComponent<Image>().sprite = im;
+        booksToShowInOrder.RemoveAt(0);
     }
 
 

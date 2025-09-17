@@ -552,7 +552,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("What's happening now??", DialogueStep.Emotion.Questioning);
             ToggleObject("Player", true);
             FlipDirection("Player");
-            ToggleObject("Tossing Books", false);
+            //ToggleObject("Tossing Books", false);
         }
         else if (++i == cutsceneStep){
             DisplayNobodyTalking();
@@ -561,7 +561,9 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionWait(2f);
         }
         else if (++i == cutsceneStep){  
-            ToggleObject("Water Spray", true);
+            GetAnimatorFromName("Tossing Books").transform.Find("Water Spray").gameObject.SetActive(true);
+            GetAnimatorFromName("Tossing Books").transform.Find("Water Spray 2").gameObject.SetActive(true);
+            //ToggleObject("Water Spray", true);
             AdvanceConditionWait(0.5f);
         }
         else if (++i == cutsceneStep){  
@@ -569,7 +571,13 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionWait(0.1f);     
         }
         else if (++i == cutsceneStep){
-            MagicFlash flash = GetAnimatorFromName("Water Spray").transform.GetChild(0).GetComponent<MagicFlash>();
+            //Transform tossingBooks = GetAnimatorFromName("Tossing Books").transform;
+            //tossingBooks.Find("Water Spray").Find("Book").gameObject.SetActive(false);
+            //Transform flashParent = tossingBooks.Find("Flash Parent");
+            //flashParent.gameObject.SetActive(true);
+            GetAnimatorFromName("Tossing Books").transform.Find("Water Spray").Find("Book").gameObject.SetActive(false);
+            GetAnimatorFromName("Tossing Books").transform.Find("Water Spray 2").Find("Book").gameObject.SetActive(true);
+            MagicFlash flash = GetAnimatorFromName("Tossing Books").transform.Find("Water Spray 2").Find("Magic Flash").GetComponent<MagicFlash>();
             flash.gameObject.SetActive(true);
             flash.StartProcess(StaticVariables.waterPowerupColor);
             AdvanceConditionWait(flash.GetTotalTime() - flash.fadeTime);
@@ -597,7 +605,9 @@ public class CutsceneManager : MonoBehaviour{
         }
         else if (++i == cutsceneStep){
             HideChatheads();
-            PlayAnimation("Water Spray", "End Spray");
+            GetAnimatorFromName("Tossing Books").transform.Find("Water Spray").GetComponent<Animator>().Play("End Spray");
+            GetAnimatorFromName("Tossing Books").transform.Find("Water Spray 2").GetComponent<Animator>().Play("End Spray");
+            //PlayAnimation("Water Spray", "End Spray");
             AdvanceConditionWait(0.7f);
         }
         else if (++i == cutsceneStep){
@@ -610,7 +620,9 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionWait(0.367f);
         }
         else if (++i == cutsceneStep){
-            ToggleObject("Water Spray", false);
+            GetAnimatorFromName("Tossing Books").transform.Find("Water Spray").gameObject.SetActive(false);
+            GetAnimatorFromName("Tossing Books").transform.Find("Water Spray 2").gameObject.SetActive(false);
+            //ToggleObject("Water Spray", false);
             PlayAnimation("Player", "Idle Holding Book Flipped");
             AdvanceConditionDialogue_PlayerTalking("Got it!", DialogueStep.Emotion.Happy);
         }
@@ -2789,7 +2801,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("You wanted to act all brave, so you crashed this business party and attacked everyone.", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("I broke their pinata!", "Knight NPC", DialogueStep.Emotion.Surprised);
+            AdvanceConditionDialogue_EnemyTalking("I broke their piñata!", "Knight NPC", DialogueStep.Emotion.Surprised);
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_PlayerTalking("And when they all got mad, you couldn't defend yourself?", DialogueStep.Emotion.Questioning);
