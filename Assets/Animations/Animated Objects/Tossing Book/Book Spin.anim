@@ -48,7 +48,7 @@ AnimationClip:
         time: 0.75
         value: {x: 0, y: 0, z: 270}
         inSlope: {x: -0, y: -0, z: 360}
-        outSlope: {x: Infinity, y: Infinity, z: Infinity}
+        outSlope: {x: Infinity, y: Infinity, z: 360}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
@@ -326,8 +326,8 @@ AnimationClip:
         time: 0.75
         value: 270
         inSlope: 360
-        outSlope: Infinity
-        tangentMode: 101
+        outSlope: 360
+        tangentMode: 69
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
@@ -429,7 +429,7 @@ AnimationClip:
     path: 
     classID: 224
     script: {fileID: 0}
-    flags: 16
+    flags: 0
   - serializedVersion: 2
     curve:
       serializedVersion: 2
@@ -441,7 +441,7 @@ AnimationClip:
     path: 
     classID: 224
     script: {fileID: 0}
-    flags: 16
+    flags: 0
   - serializedVersion: 2
     curve:
       serializedVersion: 2
@@ -453,7 +453,7 @@ AnimationClip:
     path: 
     classID: 224
     script: {fileID: 0}
-    flags: 16
+    flags: 0
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_Events:

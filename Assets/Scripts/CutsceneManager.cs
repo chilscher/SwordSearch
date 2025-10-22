@@ -102,6 +102,7 @@ public class CutsceneManager : MonoBehaviour{
         SetCutsceneBackground(hometown1);
         ToggleObject("Player", false);
         //cutsceneStep = 50; //for testing goblin walking
+        //cutsceneStep = 70; //for testing player throwing books
         //cutsceneStep = 79; //for testing the water spray
     }
 
@@ -508,6 +509,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionWait(0.5f);
         }
         else if (++i == cutsceneStep){
+            //GetObjectFromName("Library door edge").SetActive(true);
             GetAnimatorFromName("Tossing Books").GetComponent<CutsceneBookThrow>().StartThrow();
             AdvanceConditionWait(3f);
         }
@@ -552,12 +554,16 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("What's happening now??", DialogueStep.Emotion.Questioning);
             ToggleObject("Player", true);
             FlipDirection("Player");
-            //ToggleObject("Tossing Books", false);
         }
         else if (++i == cutsceneStep){
             DisplayNobodyTalking();
             HideChatheads();
             PlayAnimationAndMoveThenIdle("Player", "Walk", -140, 1860, 1.5f);
+            Transform t = GetObjectFromName("Tossing Books").transform;
+            int index = t.parent.GetSiblingIndex();
+            GetAnimatorFromName("Child 1").transform.parent.SetSiblingIndex(index - 3);
+            GetAnimatorFromName("Child 2").transform.parent.SetSiblingIndex(index - 2);
+            t.Find("Library door edge").gameObject.SetActive(false);
             AdvanceConditionWait(2f);
         }
         else if (++i == cutsceneStep){  

@@ -2244,7 +2244,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fantasy RPG Interior Pack (16x16 grid)_101
+      name: Red book with shadow
       rect:
         serializedVersion: 2
         x: 228
@@ -2265,7 +2265,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fantasy RPG Interior Pack (16x16 grid)_102
+      name: Blue book with shadow
       rect:
         serializedVersion: 2
         x: 244
@@ -2286,7 +2286,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fantasy RPG Interior Pack (16x16 grid)_103
+      name: Green book with shadow
       rect:
         serializedVersion: 2
         x: 260
@@ -2349,7 +2349,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fantasy RPG Interior Pack (16x16 grid)_106
+      name: Yellow book with shadow
       rect:
         serializedVersion: 2
         x: 228
@@ -2370,7 +2370,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fantasy RPG Interior Pack (16x16 grid)_107
+      name: Brown book with shadow
       rect:
         serializedVersion: 2
         x: 244
@@ -2391,7 +2391,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fantasy RPG Interior Pack (16x16 grid)_108
+      name: Purple book with shadow
       rect:
         serializedVersion: 2
         x: 260
@@ -2819,7 +2819,7 @@ TextureImporter:
         width: 48
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2842,18 +2842,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Blue book with shadow: 1001751584
+      Brown book with shadow: 867778435
       Fantasy RPG Interior Pack (16x16 grid)_0: -1330741285
       Fantasy RPG Interior Pack (16x16 grid)_1: 1717753112
       Fantasy RPG Interior Pack (16x16 grid)_10: 757129388
       Fantasy RPG Interior Pack (16x16 grid)_100: 2045940005
-      Fantasy RPG Interior Pack (16x16 grid)_101: 2064651796
-      Fantasy RPG Interior Pack (16x16 grid)_102: 1001751584
-      Fantasy RPG Interior Pack (16x16 grid)_103: 371525857
       Fantasy RPG Interior Pack (16x16 grid)_104: -472273579
       Fantasy RPG Interior Pack (16x16 grid)_105: -1415382613
-      Fantasy RPG Interior Pack (16x16 grid)_106: 506612478
-      Fantasy RPG Interior Pack (16x16 grid)_107: 867778435
-      Fantasy RPG Interior Pack (16x16 grid)_108: -1290797802
       Fantasy RPG Interior Pack (16x16 grid)_109: 1281508646
       Fantasy RPG Interior Pack (16x16 grid)_11: -1775079830
       Fantasy RPG Interior Pack (16x16 grid)_110: -1894763906
@@ -2971,6 +2967,10 @@ TextureImporter:
       Fantasy RPG Interior Pack (16x16 grid)_97: 1277600820
       Fantasy RPG Interior Pack (16x16 grid)_98: 1214455007
       Fantasy RPG Interior Pack (16x16 grid)_99: -930405492
+      Green book with shadow: 371525857
+      Purple book with shadow: -1290797802
+      Red book with shadow: 2064651796
+      Yellow book with shadow: 506612478
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

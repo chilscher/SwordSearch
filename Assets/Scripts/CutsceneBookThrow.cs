@@ -14,6 +14,15 @@ public class CutsceneBookThrow : MonoBehaviour{
 
     public GameObject tossedBookPrefab;
     public List<GameObject> booksToShowInOrder;
+    public Transform booksInMotionParent;
+    public Transform defaultBookDestination;
+    public List<TossedBook> booksToShowInOrder2;
+    private int bookIndex = 0;
+    
+    public void Start(){
+        foreach (TossedBook book in booksToShowInOrder2)
+            book.Hide();
+    }
 
     public void StartThrow() {
         keepThrowing = true;
@@ -30,20 +39,27 @@ public class CutsceneBookThrow : MonoBehaviour{
     }
 
     private void ThrowRandomBook(){
-        ThrowBook(normalBooks[StaticVariables.rand.Next(normalBooks.Count)]);
-        //pick a random book
-        //throw the book
+        Sprite bookSprite = normalBooks[StaticVariables.rand.Next(normalBooks.Count)];
+        bool isFlipped = StaticVariables.rand.Next(100) > 50;
+        ThrowBook(bookSprite, isFlipped);
     }
 
-    private void ThrowBook(Sprite bookSprite){
-        GameObject newBook = Instantiate(tossedBookPrefab, transform);
-        //newBook.transform.SetParent(transform);
-        newBook.GetComponent<Image>().sprite = bookSprite;
-        newBook.GetComponent<TossedBook>().cbt = this;
+    private void ThrowBook(Sprite bookSprite, bool isFlipped){
+        if (bookIndex > booksToShowInOrder2.Count - 1) {
+            GameObject newBook = Instantiate(tossedBookPrefab, booksInMotionParent);
+            TossedBook book = newBook.GetComponent<TossedBook>();
+            book.destroySelfAfter = true;
+            book.StartThrow(bookSprite, isFlipped);
+            return;
+        }
+        TossedBook nextBook = booksToShowInOrder2[bookIndex];
+        nextBook.StartThrow(bookSprite, isFlipped);
+
+        bookIndex++;
     }
 
     private void ThrowMagicBook(){
-        ThrowBook(magicBook);
+        ThrowBook(magicBook, false);
     }
 
     private void ThrowBookAndQueueNextBook(){
@@ -52,15 +68,4 @@ public class CutsceneBookThrow : MonoBehaviour{
         ThrowRandomBook();
         StaticVariables.WaitTimeThenCallFunction(timeBetweenBooks, ThrowBookAndQueueNextBook);
     }
-
-    public void ABookThrowEnded(Sprite im) {
-        if (booksToShowInOrder.Count == 0)
-            return;
-        GameObject firstBook = booksToShowInOrder[0];
-        firstBook.SetActive(true);
-        firstBook.GetComponent<Image>().sprite = im;
-        booksToShowInOrder.RemoveAt(0);
-    }
-
-
 }
