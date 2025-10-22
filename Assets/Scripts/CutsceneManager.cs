@@ -491,12 +491,12 @@ public class CutsceneManager : MonoBehaviour{
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("All of my precious books are burning! I have to save them!", DialogueStep.Emotion.Worried);
         }
-        else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("What do I do? What do I do??", DialogueStep.Emotion.Worried);
-        }
-        else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("There's no time to think! I'll just throw them into the well!", DialogueStep.Emotion.Worried);
-        }
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_PlayerTalking("What do I do? What do I do??", DialogueStep.Emotion.Worried);
+        //}
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_PlayerTalking("There's no time to think! I'll just throw them into the well!", DialogueStep.Emotion.Worried);
+        //}
         else if (++i == cutsceneStep){
             DisplayNobodyTalking();
             HideChatheads();
@@ -514,7 +514,10 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionWait(3f);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("Her best idea was chucking books into a well?", "Child 1", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("Her best idea was chucking books into a big pile?", "Child 1", DialogueStep.Emotion.Normal);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("Maybe we should toss them in a well or something?", "Child 1", DialogueStep.Emotion.Questioning);
         }
         //else if (++i == cutsceneStep){
         //    AdvanceConditionDialogue_EnemyTalking("She really likes her books huh...", "Child 1", DialogueStep.Emotion.Normal);
@@ -523,13 +526,13 @@ public class CutsceneManager : MonoBehaviour{
         //    AdvanceConditionDialogue_EnemyTalking("Yeah, what a weirdo.", "Child 2", DialogueStep.Emotion.Normal);
         //}
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("Doesn't water damage books though?", "Child 2", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("No, you dummy! Water is really damaging for books!", "Child 2", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("You're right... Maybe we should go in there and help her?", "Child 1", DialogueStep.Emotion.Questioning);
+            AdvanceConditionDialogue_EnemyTalking("Oh, yeah! Maybe we should go in there and help her?", "Child 1", DialogueStep.Emotion.Questioning);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("No, I don't want to get smacked by a flying book today.", "Child 2", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("I don't want to get smacked by a flaming book today.", "Child 2", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("Besides, how many books can she even have in there? Do you think she's almost done?", "Child 2", DialogueStep.Emotion.Questioning);
@@ -1127,17 +1130,17 @@ public class CutsceneManager : MonoBehaviour{
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("Great. You're an actual real-life talking book! You want me to just ignore that and go into some dark cave?", DialogueStep.Emotion.Questioning);
         }
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_PlayerTalking("Ugh, fine. But are you sure we should go in there?", DialogueStep.Emotion.Questioning);
+        //}
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("Ugh, fine. But are you sure we should go in there?", DialogueStep.Emotion.Questioning);
-        }
-        else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("We need to get through the forest, and there really isn't any time to waste!", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_PlayerTalking("Plus, we need to get through the forest, and there really isn't any time to waste!", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("The ink shifts around, forming new words.", "Magic Book", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("\"GO NOW, BEFORE THE CYCLOPS AWAKENS.\"", "Magic Book", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("\"GO BEFORE THE CYCLOPS AWAKENS.\"", "Magic Book", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("You know what, you're a magic book. You can <water>summon water<>. You can <healing>heal the injured<>.", DialogueStep.Emotion.Normal);
@@ -1292,9 +1295,9 @@ public class CutsceneManager : MonoBehaviour{
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("This is an incredibly precious archeological digsite!", DialogueStep.Emotion.Surprised);
         }
-        else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("Maybe the cyclops is just a normal historian.", DialogueStep.Emotion.Normal);
-        }
+        //else if (++i == cutsceneStep){
+         //   AdvanceConditionDialogue_PlayerTalking("Maybe the cyclops is just a normal historian.", DialogueStep.Emotion.Normal);
+        //}
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("Is this what you wanted me to see?", DialogueStep.Emotion.Questioning);
         }
@@ -1309,19 +1312,19 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("The book reads,\n\"KEEP GOING, AND HURRY UP\".", "Magic Book", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("Are you serious? You want me to walk right past these Lydian coins?", DialogueStep.Emotion.Angry);
+            AdvanceConditionDialogue_PlayerTalking("Are you serious? Do you know how cool this stuff is??", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("Herodotus, the father of history, thought Lydia was the first civilization to ever use metal coins!", DialogueStep.Emotion.Surprised);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("This is probably the coolest thing that I've ever seen!", DialogueStep.Emotion.Surprised);
+            AdvanceConditionDialogue_PlayerTalking("This is the craziest thing that I've ever seen!", DialogueStep.Emotion.Surprised);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("Well, aside from a literal spellbook anyway...", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_PlayerTalking("Oh actually, maybe it's the second craziest, after a talking magical spellbook...", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("Fine, I'll move on. But we're going to keep talking about this later!", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_PlayerTalking("Fine, I'll keep moving. But I'm not happy about it!", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_NobodyTalking(true);
@@ -1349,22 +1352,25 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("It looks like some kind of tool... Maybe a trowel?", DialogueStep.Emotion.Questioning);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("It looks like there's a book on the table...", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_PlayerTalking("And there's a book on the table, too...", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("The...\nNecronomicon???", DialogueStep.Emotion.Worried);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("I don't understand, this shouldn't be possible.", DialogueStep.Emotion.Worried);
+            AdvanceConditionDialogue_PlayerTalking("I don't understand, this shouldn't be possible. The Necronomicon isn't real.", DialogueStep.Emotion.Worried);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("The Necronomicon was just a narrative device that H. P. Lovecraft made up for his horror stories.", DialogueStep.Emotion.Questioning);
+            AdvanceConditionDialogue_PlayerTalking("H. P. Lovecraft, the famous horror novelist, referenced The Necronomicon in his stories.", DialogueStep.Emotion.Questioning);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("Its legend became so notorious that many libraries received check-out requests for it!", DialogueStep.Emotion.Surprised);
+            AdvanceConditionDialogue_PlayerTalking("But it was ultimately just a narrative device that he made up.", DialogueStep.Emotion.Questioning);
         }
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_PlayerTalking("People thought it was real of course... Countless libraries received requests for itIts legend became so notorious that many libraries received check-out requests for it!", DialogueStep.Emotion.Surprised);
+        //}
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("But no copies ever actually existed, and certainly not with any forbidden eldritch secrets.", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_PlayerTalking("No copies ever actually existed, and certainly not with any forbidden eldritch secrets.", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("But here one is, right in front of me. As real as I am.", DialogueStep.Emotion.Normal);
@@ -1397,10 +1403,13 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("Touch it, are you crazy?? It'd turn me into a skeleton or something!", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("Words reshape on the book's pages, \n\"YOU WILL BE FINE\".", "Magic Book", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("Words reshape on the book's pages, \n\"YOUR PHYSICAL BODY WILL LIKELY BE UNHARMED\".", "Magic Book", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("Alright, if you're sure...  Here goes nothing!", DialogueStep.Emotion.Worried);
+            AdvanceConditionDialogue_PlayerTalking("That doesn't make me feel any better!", DialogueStep.Emotion.Worried);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("Fine, fine! Let's get this over with!", DialogueStep.Emotion.Worried);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_NobodyTalking(true);
@@ -1412,6 +1421,10 @@ public class CutsceneManager : MonoBehaviour{
         else if (++i == cutsceneStep){
             StartScreenShake();
             AdvanceConditionWait(0.8f);
+        }
+        else if (++i == cutsceneStep){
+            //have rocks start jutting out
+            AdvanceConditionWait(4.5f);
         }
         else if (++i == cutsceneStep){
             MagicFlash flash = GetObjectFromName("Magic Flash").GetComponent<MagicFlash>();
@@ -1431,14 +1444,17 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("The book's pages are empty aside from a single word,\n\"EARTH\".", "Magic Book", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("After a moment, the letters reform to say,\n\"YOU SHOULD PROBABLY LEAVE NOW\".", "Magic Book", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_PlayerTalking("We need to get out of here! The cave could collapse at any moment!", DialogueStep.Emotion.Surprised);
         }
-        else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("Uhh, yep! That's a great idea.", DialogueStep.Emotion.Worried);
-        }
-        else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("That cyclops could wake up any minute! Let's get out of here!", DialogueStep.Emotion.Worried);
-        }
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_EnemyTalking("After a moment, the letters reform to say,\n\"YOU SHOULD PROBABLY LEAVE NOW\".", "Magic Book", DialogueStep.Emotion.Normal);
+        //}
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_PlayerTalking("Uhh, yep! That's a great idea.", DialogueStep.Emotion.Worried);
+        //}
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_PlayerTalking("That cyclops could wake up any minute! Let's get out of here!", DialogueStep.Emotion.Worried);
+        //}
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_NobodyTalking(true);
         }  
