@@ -1140,7 +1140,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("The ink shifts around, forming new words.", "Magic Book", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("\"GO BEFORE THE CYCLOPS AWAKENS.\"", "Magic Book", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("\"QUICKLY, BEFORE THE CYCLOPS AWAKENS.\"", "Magic Book", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("You know what, you're a magic book. You can <water>summon water<>. You can <healing>heal the injured<>.", DialogueStep.Emotion.Normal);
@@ -1422,9 +1422,25 @@ public class CutsceneManager : MonoBehaviour{
             StartScreenShake();
             AdvanceConditionWait(0.8f);
         }
+        //else if (++i == cutsceneStep){
+        //    GetObjectFromName("Rock rising 1").SetActive(true);
+        //    AdvanceConditionWait(4.5f);
+        //}
         else if (++i == cutsceneStep){
-            //have rocks start jutting out
-            AdvanceConditionWait(4.5f);
+            GetAnimatorFromName("Rock rising 1").transform.parent.gameObject.SetActive(true);
+            AdvanceConditionWait(0.4f);
+        }
+        else if (++i == cutsceneStep){
+            GetAnimatorFromName("Rock rising 2").transform.parent.gameObject.SetActive(true);
+            AdvanceConditionWait(1f);
+        }
+        else if (++i == cutsceneStep){
+            GetAnimatorFromName("Rock rising 3").transform.parent.gameObject.SetActive(true);
+            AdvanceConditionWait(0.5f);
+        }
+        else if (++i == cutsceneStep){
+            GetAnimatorFromName("Rock rising 4").transform.parent.gameObject.SetActive(true);
+            AdvanceConditionWait(2.6f);
         }
         else if (++i == cutsceneStep){
             MagicFlash flash = GetObjectFromName("Magic Flash").GetComponent<MagicFlash>();
@@ -1460,6 +1476,10 @@ public class CutsceneManager : MonoBehaviour{
         }  
         else if (++i == cutsceneStep) {
             FlipDirection("Player");
+            PlayAnimation("Player", "Idle Holding Book Flipped");
+            AdvanceConditionWait(0.5f);
+        }
+        else if (++i == cutsceneStep) {
             PlayAnimationAndMoveThenIdle("Player", "Walk While Holding Book Flipped", -536, 1675, 5f);
             MoveEverythingExceptPlayer(1000, 0, 5f);
             AdvanceConditionWait(2f);
