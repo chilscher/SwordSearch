@@ -1432,7 +1432,7 @@ public class CutsceneManager : MonoBehaviour{
         }
         else if (++i == cutsceneStep){
             GetAnimatorFromName("Rock rising 2").transform.parent.gameObject.SetActive(true);
-            AdvanceConditionWait(1f);
+            AdvanceConditionWait(0.6f);
         }
         else if (++i == cutsceneStep){
             GetAnimatorFromName("Rock rising 3").transform.parent.gameObject.SetActive(true);
@@ -1440,13 +1440,47 @@ public class CutsceneManager : MonoBehaviour{
         }
         else if (++i == cutsceneStep){
             GetAnimatorFromName("Rock rising 4").transform.parent.gameObject.SetActive(true);
-            AdvanceConditionWait(2.6f);
+            AdvanceConditionWait(0.3f);
         }
         else if (++i == cutsceneStep){
+            GetObjectFromName("Rock falling 1").SetActive(true);
+            AdvanceConditionWait(0.3f);
+        }
+        else if (++i == cutsceneStep){
+            GetAnimatorFromName("Rock rising 5").transform.parent.gameObject.SetActive(true);
+            AdvanceConditionWait(0.5f);
+        }
+        else if (++i == cutsceneStep){
+            GetObjectFromName("Rock falling 2").SetActive(true);
+            AdvanceConditionWait(0.3f);
+        }
+        else if (++i == cutsceneStep){
+            GetObjectFromName("Rock falling 3").SetActive(true);
+            AdvanceConditionWait(0.2f);
+        }
+        else if (++i == cutsceneStep){
+            GetObjectFromName("Rock falling 7").SetActive(true);
             MagicFlash flash = GetObjectFromName("Magic Flash").GetComponent<MagicFlash>();
             flash.gameObject.SetActive(true);
             flash.StartProcess(StaticVariables.earthPowerupColor);
-            AdvanceConditionWait(flash.GetTotalTime() - flash.fadeTime);
+            AdvanceConditionWait(0.3f);
+        }
+        else if (++i == cutsceneStep){
+            GetObjectFromName("Rock falling 4").SetActive(true);
+            AdvanceConditionWait(0.5f);
+        }
+        else if (++i == cutsceneStep){
+            GetObjectFromName("Rock falling 5").SetActive(true);
+            AdvanceConditionWait(0.2f);
+        }
+        else if (++i == cutsceneStep){
+            GetObjectFromName("Rock falling 6").SetActive(true);
+            AdvanceConditionWait(0.3f);
+        }
+        else if (++i == cutsceneStep){
+            GetObjectFromName("Rock falling 8").SetActive(true);
+            MagicFlash flash = GetObjectFromName("Magic Flash").GetComponent<MagicFlash>();
+            AdvanceConditionWait(flash.GetTotalTime() - flash.fadeTime - 1.3f);
         }
         else if (++i == cutsceneStep){
             StopShakeScreen();
