@@ -2230,7 +2230,24 @@ public class CutsceneManager : MonoBehaviour{
         } 
         else if (++i == cutsceneStep){
             StartScreenShake();
+            AdvanceConditionWait(0.3f);
+        }
+        else if (++i == cutsceneStep){
+            GetObjectFromName("Fire Spin 1").SetActive(true);
+            AdvanceConditionWait(1.5f);
+        }
+        else if (++i == cutsceneStep){
+            Transform t = GetObjectFromName("Fire Spin 1").transform;
+            t.DOScale(t.localScale * 1.5f, 2f);
             AdvanceConditionWait(0.8f);
+        }
+        else if (++i == cutsceneStep){
+            GetObjectFromName("Fire Spin 2").SetActive(true);
+            AdvanceConditionWait(0.75f);
+        }
+        else if (++i == cutsceneStep){
+            GetObjectFromName("Fire Spin 3").SetActive(true);
+            AdvanceConditionWait(1f);
         }
         else if (++i == cutsceneStep){
             MagicFlash flash = GetObjectFromName("Magic Flash").GetComponent<MagicFlash>();
@@ -2240,6 +2257,9 @@ public class CutsceneManager : MonoBehaviour{
         }
         else if (++i == cutsceneStep){
             StopShakeScreen();
+            GetObjectFromName("Fire Spin 1").SetActive(false);
+            GetObjectFromName("Fire Spin 2").SetActive(false);
+            GetObjectFromName("Fire Spin 3").SetActive(false);
             AdvanceConditionWait(0.5f);
         }
         else if (++i == cutsceneStep){
