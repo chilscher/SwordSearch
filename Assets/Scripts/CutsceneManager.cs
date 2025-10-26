@@ -3281,7 +3281,8 @@ public class CutsceneManager : MonoBehaviour{
         }
         else if (++i == cutsceneStep){
             PlayAnimation("Player", "Walk While Holding Book");
-            MoveObject("Player", -129, 2421, 3f);
+            MoveObject("Player", -129, 2321, 3f);
+            MoveEverythingExceptPlayer(0, -100f, 3f);
             AdvanceConditionWait(3f);
         }
         else if (++i == cutsceneStep){
@@ -3293,8 +3294,8 @@ public class CutsceneManager : MonoBehaviour{
         }
         else if (++i == cutsceneStep){
             PlayAnimation("Player", "Walk While Holding Book");
-            MoveEverythingExceptPlayer(-19.3f, -274.9f, 3f);
-            MoveObject("Player", -10.4f, 2570, 3f);
+            MoveEverythingExceptPlayer(-19.3f, -874.9f, 3f);
+            MoveObject("Player", -10.4f, 1870, 3f);
             AdvanceConditionWait(3f);
         }
         else if (++i == cutsceneStep){
@@ -3328,7 +3329,9 @@ public class CutsceneManager : MonoBehaviour{
         }
         else if (++i == cutsceneStep){
             PlayAnimation("Player", "Walk");
-            MoveObject("Player", 2.5f, 2676, 1f);
+            //MoveObject("Player", 2.5f, 2676, 1f);
+            MoveObject("Player", -24f, 1976, 1f);
+            //MoveEverythingExceptPlayer(0, -500f, 2f);
             AdvanceConditionWait(1f);
         }
         else if (++i == cutsceneStep){
@@ -3342,6 +3345,10 @@ public class CutsceneManager : MonoBehaviour{
         else if (++i == cutsceneStep){
             StartScreenShake();
             AdvanceConditionWait(0.8f);
+        }
+        else if (++i == cutsceneStep){
+            GetAnimatorFromName("Lightning Strike").transform.parent.gameObject.SetActive(true);
+            AdvanceConditionWait(1f);
         }
         else if (++i == cutsceneStep){
             MagicFlash flash = GetObjectFromName("Magic Flash").GetComponent<MagicFlash>();

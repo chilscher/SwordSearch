@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8e3352db52b9d224990e135c85aad9cf
+guid: 99ee303868f5e124eb49b5d09209d126
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,12 +123,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lightning_Thunder_I_A_32x96_0
+      name: Custom Thunder_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
+        width: 112
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -137,19 +137,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 006b44826eb79144aab3cabe9f6e2120
-      internalID: 1090661069
+      spriteID: fb1a078be12bb31459a5b8f4f81b326f
+      internalID: -483815133
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lightning_Thunder_I_A_32x96_1
+      name: Custom Thunder_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 112
         y: 0
-        width: 32
+        width: 112
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -158,19 +158,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e09c805b6b007564cbf76fc7204129f1
-      internalID: -1642551154
+      spriteID: 515d3fcf5c5260646b30318a63d6581c
+      internalID: 936220028
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lightning_Thunder_I_A_32x96_2
+      name: Custom Thunder_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 224
         y: 0
-        width: 32
+        width: 112
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -179,19 +179,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2c865666c0544a4fad38b0d99fa8cbd
-      internalID: 707299814
+      spriteID: 0c9383a02e02bf747be9ae5fccdbfa16
+      internalID: -1275583003
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lightning_Thunder_I_A_32x96_3
+      name: Custom Thunder_3
       rect:
         serializedVersion: 2
-        x: 96
+        x: 336
         y: 0
-        width: 32
+        width: 112
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -200,8 +200,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99acd2118f5555246bc6ad1b3d8fe343
-      internalID: 1079277232
+      spriteID: 0aef51fece9caae4487b3f323158099e
+      internalID: -264774677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Thunder_4
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 112
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ae1ccafddf6158488b49907adda7971
+      internalID: -67600161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Thunder_5
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 0
+        width: 112
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7b2c7c1287bdd041ad6abbd47137ed0
+      internalID: -1465127393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Thunder_6
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 112
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed6f66405acb8cb459dbd847281c6176
+      internalID: -1417734936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Thunder_7
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 0
+        width: 112
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74732bdfa9f08bd4fbfddc3e524f8091
+      internalID: -1665635025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Thunder_8
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 112
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b37e687740217f4da9e3a8a54f83d86
+      internalID: 1649525014
       vertices: []
       indices: 
       edges: []
@@ -217,10 +322,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Lightning_Thunder_I_A_32x96_0: 1090661069
-      Lightning_Thunder_I_A_32x96_1: -1642551154
-      Lightning_Thunder_I_A_32x96_2: 707299814
-      Lightning_Thunder_I_A_32x96_3: 1079277232
+      Custom Thunder_0: -483815133
+      Custom Thunder_1: 936220028
+      Custom Thunder_2: -1275583003
+      Custom Thunder_3: -264774677
+      Custom Thunder_4: -67600161
+      Custom Thunder_5: -1465127393
+      Custom Thunder_6: -1417734936
+      Custom Thunder_7: -1665635025
+      Custom Thunder_8: 1649525014
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
