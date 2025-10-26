@@ -113,10 +113,10 @@ TextureImporter:
       name: Fire catalyst
       rect:
         serializedVersion: 2
-        x: 48
-        y: 0
-        width: 13
-        height: 16
+        x: 49
+        y: 19
+        width: 11
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
