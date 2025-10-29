@@ -416,6 +416,8 @@ MonoBehaviour:
   waterHealsIt: 0
   earthHealsIt: 0
   weakToFire: 0
+  usesLightning: 0
+  usesNecromancy: 0
   normal: {fileID: 0}
   angry: {fileID: 0}
   defeated: {fileID: 0}
@@ -1186,14 +1188,26 @@ PrefabInstance:
     - target: {fileID: 7708556982317265253, guid: 9e34c6ec711c987428290fc17ca42c0f, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 75c1bbb98d2cacc4cb9c516c608a32f8, type: 3}
+      objectReference: {fileID: 21300000, guid: f46940f3c33c8c64dad66cf43c75e3fc, type: 3}
+    - target: {fileID: 8683642233594305091, guid: 9e34c6ec711c987428290fc17ca42c0f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.4352803
+      objectReference: {fileID: 0}
+    - target: {fileID: 8683642233594305091, guid: 9e34c6ec711c987428290fc17ca42c0f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.4352803
+      objectReference: {fileID: 0}
+    - target: {fileID: 8683642233594305091, guid: 9e34c6ec711c987428290fc17ca42c0f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.4352803
+      objectReference: {fileID: 0}
     - target: {fileID: 8683642233594305091, guid: 9e34c6ec711c987428290fc17ca42c0f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -131
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 8683642233594305091, guid: 9e34c6ec711c987428290fc17ca42c0f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -67
+      value: -979
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2016,6 +2030,8 @@ MonoBehaviour:
   waterHealsIt: 0
   earthHealsIt: 0
   weakToFire: 0
+  usesLightning: 0
+  usesNecromancy: 0
   normal: {fileID: 0}
   angry: {fileID: 0}
   defeated: {fileID: 0}
@@ -2172,6 +2188,8 @@ MonoBehaviour:
   waterHealsIt: 0
   earthHealsIt: 0
   weakToFire: 0
+  usesLightning: 0
+  usesNecromancy: 0
   normal: {fileID: 0}
   angry: {fileID: 0}
   defeated: {fileID: 0}
@@ -2646,6 +2664,8 @@ MonoBehaviour:
   waterHealsIt: 0
   earthHealsIt: 0
   weakToFire: 0
+  usesLightning: 0
+  usesNecromancy: 0
   normal: {fileID: 0}
   angry: {fileID: 0}
   defeated: {fileID: 0}
@@ -6421,7 +6441,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2048378958768048467, guid: 9e34c6ec711c987428290fc17ca42c0f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2278062002313291930, guid: 9e34c6ec711c987428290fc17ca42c0f, type: 3}
       propertyPath: m_Pivot.x
@@ -8753,7 +8773,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2048378958768048467, guid: 9e34c6ec711c987428290fc17ca42c0f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2278062002313291930, guid: 9e34c6ec711c987428290fc17ca42c0f, type: 3}
       propertyPath: m_Pivot.x
@@ -8857,11 +8877,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8683642233594305091, guid: 9e34c6ec711c987428290fc17ca42c0f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 78
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 8683642233594305091, guid: 9e34c6ec711c987428290fc17ca42c0f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -468
+      value: -441
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9010,6 +9030,8 @@ MonoBehaviour:
   waterHealsIt: 0
   earthHealsIt: 0
   weakToFire: 0
+  usesLightning: 0
+  usesNecromancy: 0
   normal: {fileID: 0}
   angry: {fileID: 0}
   defeated: {fileID: 0}
