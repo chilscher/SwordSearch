@@ -1515,10 +1515,10 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("I wonder what would happen if we got Eldric to touch that rock too...", DialogueStep.Emotion.Questioning);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("There's no point in worrying about that just yet, we have to save the world first!", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_PlayerTalking("Maybe we'll worry about that after we save the continent, huh?", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("Our next goal is to get through this forest!", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_PlayerTalking("For now I should focus on getting us through this forest!", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_NobodyTalking();

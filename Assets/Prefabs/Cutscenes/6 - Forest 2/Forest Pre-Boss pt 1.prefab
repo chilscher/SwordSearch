@@ -672,6 +672,8 @@ MonoBehaviour:
   endDestination: 1000
   moveSpeed: 1200
   spawnPoint: -1000
+  clusterToGoBehind: {fileID: 2698033006692479558}
+  distanceBehindOtherCluster: 328
 --- !u!1 &289927694695993327
 GameObject:
   m_ObjectHideFlags: 0
@@ -3721,6 +3723,8 @@ MonoBehaviour:
   endDestination: 1000
   moveSpeed: 1200
   spawnPoint: -1000
+  clusterToGoBehind: {fileID: 9035740540909200448}
+  distanceBehindOtherCluster: 319
 --- !u!1 &2040992231217679612
 GameObject:
   m_ObjectHideFlags: 0
@@ -4116,6 +4120,8 @@ MonoBehaviour:
   endDestination: 1000
   moveSpeed: 1200
   spawnPoint: -1000
+  clusterToGoBehind: {fileID: 8338424447676114293}
+  distanceBehindOtherCluster: 444
 --- !u!1 &2285988443138194370
 GameObject:
   m_ObjectHideFlags: 0
@@ -11964,6 +11970,8 @@ MonoBehaviour:
   endDestination: 1000
   moveSpeed: 1200
   spawnPoint: -1000
+  clusterToGoBehind: {fileID: 4824590919432761136}
+  distanceBehindOtherCluster: 319
 --- !u!1 &5861723528337311029
 GameObject:
   m_ObjectHideFlags: 0
@@ -15088,6 +15096,8 @@ MonoBehaviour:
   endDestination: 1000
   moveSpeed: 1200
   spawnPoint: -1000
+  clusterToGoBehind: {fileID: 295165666353668227}
+  distanceBehindOtherCluster: 464
 --- !u!1 &7295694836651997920
 GameObject:
   m_ObjectHideFlags: 0

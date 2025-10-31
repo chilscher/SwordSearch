@@ -9,6 +9,8 @@ public class CutsceneRabbitCycle : MonoBehaviour{
     public float endDestination = 1000;
     public float moveSpeed = 700;
     public float spawnPoint = -1000;
+    public Transform clusterToGoBehind;
+    public float distanceBehindOtherCluster;
     //private Vector2 initialPosition;
     //public 
 
@@ -25,7 +27,8 @@ public class CutsceneRabbitCycle : MonoBehaviour{
     }
 
     private void StartMove(){
-        Vector2 startingPoint = new Vector2(spawnPoint, transform.localPosition.y);
+        //Vector2 startingPoint = new Vector2(spawnPoint, transform.localPosition.y);
+        Vector2 startingPoint = new Vector2(clusterToGoBehind.localPosition.x - distanceBehindOtherCluster, transform.localPosition.y);
         float distanceToTravel = MathF.Abs(endDestination - startingPoint.x);
         float timeToTravel = distanceToTravel / moveSpeed;
 
