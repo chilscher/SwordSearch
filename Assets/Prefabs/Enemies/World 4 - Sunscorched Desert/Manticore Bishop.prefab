@@ -127,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBattleable: 1
   nameOverride: Manticore
-  startingHealth: 1
+  startingHealth: 300
   attackOrder:
     Value: []
   isDraconic: 0

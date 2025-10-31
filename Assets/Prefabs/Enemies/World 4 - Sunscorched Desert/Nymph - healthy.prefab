@@ -128,11 +128,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBattleable: 1
   nameOverride: Nymph
-  startingHealth: 1
+  startingHealth: 200
   attackOrder:
     Value:
     - attackSpeed: 10
-      attackDamage: 0
+      attackDamage: 15
       isSpecial: 0
       specialType: 0
       specialColor: {r: 0, g: 0, b: 0, a: 0}
@@ -147,6 +147,9 @@ MonoBehaviour:
   weirdAnimalDisease: 0
   waterHealsIt: 1
   earthHealsIt: 0
+  weakToFire: 0
+  usesLightning: 0
+  usesNecromancy: 0
   normal: {fileID: 1543554617, guid: 2f8e83c6f1c85834784b76d45441fe1e, type: 3}
   angry: {fileID: -2056507514, guid: 2f8e83c6f1c85834784b76d45441fe1e, type: 3}
   defeated: {fileID: 629605316, guid: 2f8e83c6f1c85834784b76d45441fe1e, type: 3}

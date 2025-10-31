@@ -289,8 +289,8 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionWait(0.2f);
         }
         else if (++i == cutsceneStep){
-            PlayAnimationAndMoveThenIdle("Brown Hair Lady No Hat", "Walk", -227, 244, 1.7f);
-            AdvanceConditionWaitThenClick(1.9f);
+            PlayAnimationAndMoveThenIdle("Brown Hair Lady No Hat", "Walk", -436, 368, 1.4f);
+            AdvanceConditionWaitThenClick(1.6f);
         } 
         else if (++i == cutsceneStep){
             DisplayEnemyTalking("I hate the Lich King!", "Redhead Lady", DialogueStep.Emotion.Angry);
@@ -377,7 +377,7 @@ public class CutsceneManager : MonoBehaviour{
         }
         else if (++i == cutsceneStep){
             PlayAnimation("Red Dragon", "Prolonged Attack - Start");
-            AdvanceConditionWait(1f);
+            AdvanceConditionWait(0.7f);
         }
         else if (++i == cutsceneStep){
             PlayAnimation("Red Dragon", "Prolonged Attack - End");
@@ -457,7 +457,7 @@ public class CutsceneManager : MonoBehaviour{
         }     
         else if (++i == cutsceneStep){
             PlayAnimation("Brown Hair Lady No Hat", "Walk");
-            MoveObject("Brown Hair Lady No Hat", 29, 130, 0.5f);
+            MoveObject("Brown Hair Lady No Hat", 29, 130, 0.8f);
             AdvanceConditionWait(0.1f);
         }     
         else if (++i == cutsceneStep){
@@ -510,7 +510,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("Her best idea was chucking books into a big pile?", "Child 1", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("Maybe we should toss them in a well or something?", "Child 1", DialogueStep.Emotion.Questioning);
+            AdvanceConditionDialogue_EnemyTalking("Couldn't we chuck 'em in a well or something?", "Child 1", DialogueStep.Emotion.Questioning);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("No, you dummy! Water is really damaging for books!", "Child 2", DialogueStep.Emotion.Normal);
@@ -519,13 +519,13 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("Oh, yeah! Maybe we should go in there and help her?", "Child 1", DialogueStep.Emotion.Questioning);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("I don't want to get smacked by a flaming book today.", "Child 2", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("Uh, no thanks. I don't want to get smacked by a flaming book.", "Child 2", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("Besides, how many books can she even have in there? Do you think she's almost done?", "Child 2", DialogueStep.Emotion.Questioning);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("Maybe we can go find a goblin to fight!", "Child 1", DialogueStep.Emotion.Happy);
+            AdvanceConditionDialogue_EnemyTalking("Oh, I know! Let's go find a goblin to fight!", "Child 1", DialogueStep.Emotion.Happy);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("Wait, do you hear that?", "Child 2", DialogueStep.Emotion.Questioning);
@@ -591,7 +591,7 @@ public class CutsceneManager : MonoBehaviour{
         }
         else if (++i == cutsceneStep){
             Transform player = GetObjectFromName("Player").transform.parent;
-            player.SetSiblingIndex(player.parent.childCount -3);
+            player.SetSiblingIndex(player.parent.childCount -4);
             AdvanceConditionDialogue_PlayerTalking("There's a book coming out of the water!", DialogueStep.Emotion.Happy);
         }
         else if (++i == cutsceneStep){
@@ -681,10 +681,10 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("Wow! Magic is crazy!", "Brown Hair Lady No Hat", DialogueStep.Emotion.Happy);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_PlayerTalking("Um, we haven't quite arrived at the magic yet...", DialogueStep.Emotion.Worried);
+            AdvanceConditionDialogue_PlayerTalking("Um, no, that's what normal books are like...", DialogueStep.Emotion.Worried);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_PlayerTalking("Try touching the letters!", DialogueStep.Emotion.Happy);
+            AdvanceConditionDialogue_PlayerTalking("You know, maybe it'll make more sense if you just touch some of the letters!", DialogueStep.Emotion.Happy);
         }
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_NobodyTalking();
@@ -871,8 +871,11 @@ public class CutsceneManager : MonoBehaviour{
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("\"Other local experts believe the Sword of Dragonslaying is purely a myth, and it would be dangerous to go searching for it with dragons about.\"", DialogueStep.Emotion.Worried);
         }
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_PlayerTalking("\"A third group of local experts believe that despite the Lich King's low approval ratings, the dragon attack was not politically motivated.\"", DialogueStep.Emotion.Questioning);
+        //}
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("\"A third group of local experts believe that despite the Lich King's low approval ratings, the dragon attack was not politically motivated.\"", DialogueStep.Emotion.Questioning);
+            AdvanceConditionDialogue_PlayerTalking("\"A third group of local experts believe that, due to the Lich King's record low approval ratings, the attack may have been politically motivated.\"", DialogueStep.Emotion.Questioning);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("Well I'm not one for politics, but that bit about a dragon-killing sword sounds pretty useful right about now!", "Redhead Guy", DialogueStep.Emotion.Happy);
@@ -1187,8 +1190,11 @@ public class CutsceneManager : MonoBehaviour{
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("Come to think of it, I have to be careful. It might come back to life!", DialogueStep.Emotion.Normal);
         }
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_PlayerTalking("In every fantasy adventure novel, there's always at least one reanimated skeleton!", DialogueStep.Emotion.Normal);
+        //}
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("In every fantasy adventure novel, there's always at least one reanimated skeleton!", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_PlayerTalking("Every magical adventure story needs at least one reanimated skeleton!", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("And it would be so cool to meet one in real life!", DialogueStep.Emotion.Surprised);
@@ -1196,8 +1202,11 @@ public class CutsceneManager : MonoBehaviour{
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("What is a skeleton doing here, anyway? The cyclops talked about ecological conservation, not dead bodies.", DialogueStep.Emotion.Questioning);
         }
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_PlayerTalking("You don't accidentally leave a skeleton in your house.", DialogueStep.Emotion.Questioning);
+        //}
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("You don't accidentally leave a skeleton in your house.", DialogueStep.Emotion.Questioning);
+            AdvanceConditionDialogue_PlayerTalking("Normal people don't have a literal skeleton in their metaphorical closet.", DialogueStep.Emotion.Questioning);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("Something isn't adding up. I should take a look around.", DialogueStep.Emotion.Normal);
@@ -1283,7 +1292,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("Oh actually, maybe it's the second craziest, after a talking magical spellbook...", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("Fine, I'll keep moving. But I'm not happy about it!", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_PlayerTalking("Fine, fine! I'll keep moving. But I'm not happy about it!", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_NobodyTalking(true);
@@ -1357,7 +1366,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("That doesn't make me feel any better!", DialogueStep.Emotion.Worried);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("Fine, fine! Let's get this over with!", DialogueStep.Emotion.Worried);
+            AdvanceConditionDialogue_PlayerTalking("Okay, okay, fine, whatever! Let's just get this over with!", DialogueStep.Emotion.Worried);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_NobodyTalking(true);

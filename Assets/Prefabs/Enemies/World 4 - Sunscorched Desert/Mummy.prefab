@@ -127,11 +127,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBattleable: 1
   nameOverride: 
-  startingHealth: 1
+  startingHealth: 200
   attackOrder:
     Value:
-    - attackSpeed: 10
-      attackDamage: 0
+    - attackSpeed: 5
+      attackDamage: 8
       isSpecial: 0
       specialType: 0
       specialColor: {r: 0, g: 0, b: 0, a: 0}
@@ -147,6 +147,8 @@ MonoBehaviour:
   waterHealsIt: 0
   earthHealsIt: 0
   weakToFire: 1
+  usesLightning: 0
+  usesNecromancy: 0
   normal: {fileID: -1116304966, guid: 8068f26cd91a3eb41849adc77cbe7a93, type: 3}
   angry: {fileID: 0}
   defeated: {fileID: 0}

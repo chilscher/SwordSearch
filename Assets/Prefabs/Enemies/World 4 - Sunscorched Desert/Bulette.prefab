@@ -127,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBattleable: 1
   nameOverride: Zombie Goat
-  startingHealth: 1
+  startingHealth: 175
   attackOrder:
     Value:
     - attackSpeed: 3
@@ -146,6 +146,9 @@ MonoBehaviour:
   weirdAnimalDisease: 1
   waterHealsIt: 0
   earthHealsIt: 0
+  weakToFire: 0
+  usesLightning: 0
+  usesNecromancy: 0
   normal: {fileID: 1152398375, guid: 15e0cc83eb7c0ba4e8c2c1338c6d8fcc, type: 3}
   angry: {fileID: 0}
   defeated: {fileID: 0}

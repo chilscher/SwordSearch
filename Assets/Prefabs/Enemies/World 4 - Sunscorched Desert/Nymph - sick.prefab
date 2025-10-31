@@ -128,9 +128,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBattleable: 1
   nameOverride: Turned Nymph
-  startingHealth: 1
+  startingHealth: 200
   attackOrder:
-    Value: []
+    Value:
+    - attackSpeed: 10
+      attackDamage: 15
+      isSpecial: 0
+      specialType: 0
+      specialColor: {r: 0, g: 0, b: 0, a: 0}
   isDraconic: 0
   isHorde: 0
   isNearWater: 0
@@ -143,6 +148,8 @@ MonoBehaviour:
   waterHealsIt: 1
   earthHealsIt: 1
   weakToFire: 0
+  usesLightning: 0
+  usesNecromancy: 0
   normal: {fileID: -2023403393, guid: 59d4b7795bc10f249a47aae15613a9cf, type: 3}
   angry: {fileID: -379247629, guid: 59d4b7795bc10f249a47aae15613a9cf, type: 3}
   defeated: {fileID: 1782075158, guid: 59d4b7795bc10f249a47aae15613a9cf, type: 3}

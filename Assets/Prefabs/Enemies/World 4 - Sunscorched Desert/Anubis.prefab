@@ -127,9 +127,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBattleable: 1
   nameOverride: Undead Bouncer
-  startingHealth: 1
+  startingHealth: 230
   attackOrder:
-    Value: []
+    Value:
+    - attackSpeed: 8
+      attackDamage: 8
+      isSpecial: 0
+      specialType: 0
+      specialColor: {r: 0, g: 0, b: 0, a: 0}
   isDraconic: 0
   isHorde: 0
   isNearWater: 0
@@ -142,6 +147,8 @@ MonoBehaviour:
   waterHealsIt: 0
   earthHealsIt: 0
   weakToFire: 0
+  usesLightning: 0
+  usesNecromancy: 0
   normal: {fileID: -459845517, guid: 9fb1f96006afb74469d4723d17da60e8, type: 3}
   angry: {fileID: -414696302, guid: 9fb1f96006afb74469d4723d17da60e8, type: 3}
   defeated: {fileID: 199904343, guid: 9fb1f96006afb74469d4723d17da60e8, type: 3}
