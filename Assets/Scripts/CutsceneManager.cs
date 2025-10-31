@@ -1821,14 +1821,23 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("Acutally, that brings me to my first question!", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("Why is everyone in the forest suspicious of you, anyway?", DialogueStep.Emotion.Questioning);
+            AdvanceConditionDialogue_PlayerTalking("Why is everyone suspicious of you, anyway?", DialogueStep.Emotion.Questioning);
+        }
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_EnemyTalking("Since I've come here, my magical prowess has been steadily growing.", "Wizard", DialogueStep.Emotion.Normal);
+        //}
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_EnemyTalking("Meanwhile, the strength of the forest wanes.", "Wizard", DialogueStep.Emotion.Normal);
+        //}
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("Ah, I can only assume they've noticed that the forest is weaker than ever now.", "Wizard", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("Since I've come here, my magical prowess has been steadily growing.", "Wizard", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("The local magic has been diminishing slowly for the entire time that I've lived here.", "Wizard", DialogueStep.Emotion.Normal);
         }
-        else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("Meanwhile, the strength of the forest wanes.", "Wizard", DialogueStep.Emotion.Normal);
-        }
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_EnemyTalking("Really, the whole time that I've lived here, the local magic has been diminishing.", "Wizard", DialogueStep.Emotion.Normal);
+        //}
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("Some creatures have even lost their magical intelligence altogether!", "Wizard", DialogueStep.Emotion.Worried);
         }
@@ -2093,14 +2102,14 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("And I've never heard of anyone else who can control three different elements!", DialogueStep.Emotion.Surprised);        
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("What's special about me? I just like to read books...", DialogueStep.Emotion.Defeated);        
+            AdvanceConditionDialogue_PlayerTalking("What's special about me? I just like books...", DialogueStep.Emotion.Defeated);        
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("...", DialogueStep.Emotion.Questioning);        
         }
-        else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("That's it! I like to read books!", DialogueStep.Emotion.Happy);        
-        }
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_PlayerTalking("That's it! I like to read books!", DialogueStep.Emotion.Happy);        
+        //}
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("Does magic come from reading?", DialogueStep.Emotion.Questioning);        
         }
@@ -2123,10 +2132,16 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("<water>Language<> is dynamic. It flows and changes as the generations pass, much like the <water>element of water<> you carry.", "Wizard", DialogueStep.Emotion.Normal);    
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("I'm sure you can guess what your <healing>power of healing<> is tied to.", "Wizard", DialogueStep.Emotion.Questioning);    
+            AdvanceConditionDialogue_EnemyTalking("Care to take a guess about your <healing>power of healing<>?", "Wizard", DialogueStep.Emotion.Questioning);    
+        }
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_EnemyTalking("I'm sure you can guess what your <healing>power of healing<> is tied to.", "Wizard", DialogueStep.Emotion.Questioning);    
+        //}
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("Actually, I was our town's doctor for a time!", DialogueStep.Emotion.Surprised);        
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("I did serve as our town's doctor, but that was mainly because I was the only one who could read medical textbooks.", DialogueStep.Emotion.Normal);        
+            AdvanceConditionDialogue_PlayerTalking("But I think that was because nobody else could read medical textbooks.", DialogueStep.Emotion.Normal);        
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("Or maybe I was the only one who cared to try.", DialogueStep.Emotion.Defeated);        
@@ -2137,8 +2152,11 @@ public class CutsceneManager : MonoBehaviour{
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("Magic doesn't come from having knowledge, but from the pursuit of it.", "Wizard", DialogueStep.Emotion.Happy);    
         }  
+        //else if (++i == cutsceneStep){
+        //    AdvanceConditionDialogue_EnemyTalking("And you have a passion for every discipline.", "Wizard", DialogueStep.Emotion.Normal);    
+        //}  
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("And you have a passion for every discipline.", "Wizard", DialogueStep.Emotion.Normal);    
+            AdvanceConditionDialogue_EnemyTalking("And you'll study anything you can get your hands on!", "Wizard", DialogueStep.Emotion.Happy);    
         }  
         //else if (++i == cutsceneStep){
         //    AdvanceConditionDialogue_PlayerTalking("So that explains why there are so few magical people in the world!", DialogueStep.Emotion.Surprised);        
@@ -2156,7 +2174,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("Would you like to find out?", "Wizard", DialogueStep.Emotion.Questioning);    
         }  
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("Well, duh! Who wouldn't want to shoot <fire>fire<> from their fingertips??", DialogueStep.Emotion.Surprised);        
+            AdvanceConditionDialogue_PlayerTalking("Absolutely! Who wouldn't want to shoot <fire>fire<> from their fingertips??", DialogueStep.Emotion.Surprised);        
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("Spectacular!", "Wizard", DialogueStep.Emotion.Happy);    
@@ -2256,7 +2274,7 @@ public class CutsceneManager : MonoBehaviour{
         }
         else if (++i == cutsceneStep){
             GetObjectFromName("Fire Spin 3").SetActive(true);
-            AdvanceConditionWait(1f);
+            AdvanceConditionWait(0.5f);
         }
         else if (++i == cutsceneStep){
             MagicFlash flash = GetObjectFromName("Magic Flash").GetComponent<MagicFlash>();
