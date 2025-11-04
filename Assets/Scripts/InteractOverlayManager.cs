@@ -343,15 +343,15 @@ public class InteractOverlayManager : MonoBehaviour{
         }
         if (enemy.weirdAnimalDisease){
             summary.Add("The goat carries some kind of <infected>wierd undead animal disease<>.");
-            details.Add("This enemy's attacks <infected>infect<> letters. Using an <infected>infected letter<> will cure it, and the <healing>power of healing<> will cure one letter at random. When you turn a page, any remaining <infected>infections<> will spread and hurt you.");
+            details.Add("This enemy's attacks will <infected>infect<> a random letter. An <infected>infected letter<> can be cured by using it in a word, or by using the <healing>power of healing<>. Turning a page will cause any remaining <infected>infections<> to spread and hurt you.");
         }
         if (enemy.waterHealsIt){
             summary.Add("The <water>power of water<> heals this enemy.");
-            details.Add("Any attack made with the <water>power of water<> will <healing>heal<> this enemy instead of dealing damage. The book's pages will still get <water>flooded<>, and <water>flooded<> attacks deal damage as normal.");
+            details.Add("Any attack made with the <water>power of water<> will <healing>heal<> this enemy instead of dealing damage. However, the book's pages will still get <water>flooded<> like normal, and <water>flooded attacks<> do still deal bonus damage.");
         }
         if (enemy.earthHealsIt){
             summary.Add("The <earth>power of earth<> heals this enemy.");
-            details.Add("Any attack made with the <earth>power of earth<> will <healing>heal<> this enemy instead of dealing damage. Rocks will still appear after using the <earth>power of earth<>, and the next attack will still deal extra damage as normal.");
+            details.Add("Any attack made with the <earth>power of earth<> will <healing>heal<> this enemy instead of dealing damage. However, the <earth>power of earth<> still causes the next attack to deal extra damage as normal.");
         }
         if (enemy.weakToFire){
             summary.Add("This enemy is highly <fire>flammable<>.");

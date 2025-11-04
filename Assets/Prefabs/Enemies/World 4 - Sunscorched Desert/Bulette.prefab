@@ -130,12 +130,12 @@ MonoBehaviour:
   startingHealth: 175
   attackOrder:
     Value:
-    - attackSpeed: 3
-      attackDamage: 0
+    - attackSpeed: 6
+      attackDamage: 2
       isSpecial: 1
       specialType: 4
       specialColor: {r: 0.69803923, g: 0.8980392, b: 0.2509804, a: 0.7607843}
-  isDraconic: 1
+  isDraconic: 0
   isHorde: 0
   isNearWater: 0
   throwsRocks: 0
@@ -212,8 +212,13 @@ MonoBehaviour:
     talker: {fileID: 0}
     name: Potential Zombie Goat
     emotion: 0
-    description: I'd better knock it out. I don't want to get some kind of <infected>weird
-      undead animal disease<>.
+    description: Ugh, I don't want to get some kind of <infected>weird undead animal
+      disease<>.
+  - type: 0
+    talker: {fileID: 0}
+    name: Potential Zombie Goat
+    emotion: 0
+    description: I'd better knock it out, just to be safe.
   victoryDialogueSteps:
   - type: 0
     talker: {fileID: 0}

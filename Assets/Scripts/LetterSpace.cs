@@ -375,7 +375,7 @@ public class LetterSpace : MonoBehaviour{
     public LetterSpace ChooseNeighborToInfect() {
         List<LetterSpace> candidates = new();
         foreach (LetterSpace ls in neighbors) {
-            if (!ls.isInfected && !ls.willBecomeInfected && (ls.nextPowerupType == BattleManager.PowerupTypes.None))
+            if (!ls.isInfected && !ls.willBecomeInfected && (ls.nextPowerupType == BattleManager.PowerupTypes.None) && !ls.hasBeenUsedInAWordAlready)
                 candidates.Add(ls);
         }
         if (candidates.Count == 0)

@@ -508,8 +508,7 @@ public class PuzzleGenerator : MonoBehaviour {
     
     private void SpreadInfection(){
         //lettersToInfectOnPageTurn = new();
-        foreach (LetterSpace ls in infectedLetters)
-        {
+        foreach (LetterSpace ls in infectedLetters) {
             if (infectedLetters.Count >= battleManager.maxInfectedLetters)
                 return;
             LetterSpace spreadTo = ls.ChooseNeighborToInfect();
@@ -637,14 +636,19 @@ public class PuzzleGenerator : MonoBehaviour {
                 powerupTypeSelection.Remove(StaticVariables.buffedType);
     }
 
-    public LetterSpace PickRandomSpaceWithoutModifier() {
+    public LetterSpace PickRandomSpaceWithoutModifier(bool allowUsedSpaces = true) {
         List<Vector2> allSpaces = GetListOfAllSpaces();
         List<Vector2> viablesSpaces = new();
 
         foreach (Vector2 s in allSpaces) {
             LetterSpace space = letterSpaces[(int)s[0], (int)s[1]];
-            if (!space.HasNonPowerupModifier() && (space.powerupType == BattleManager.PowerupTypes.None) && !battleManager.letterSpacesForWord.Contains(space))
-                viablesSpaces.Add(s);
+            if (!space.HasNonPowerupModifier() && (space.powerupType == BattleManager.PowerupTypes.None) && !battleManager.letterSpacesForWord.Contains(space)){
+                if (!allowUsedSpaces && space.hasBeenUsedInAWordAlready){
+                    //do not use
+                }
+                else
+                    viablesSpaces.Add(s);
+            }
         }
 
         if (viablesSpaces.Count > 0) {

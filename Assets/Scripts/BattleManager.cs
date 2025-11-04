@@ -441,7 +441,7 @@ public class BattleManager : MonoBehaviour {
         for (int i = 0; i < amount; i++){
             if (puzzleGenerator.infectedLetters.Count >= maxInfectedLetters)
                 return;
-            LetterSpace toInfect = puzzleGenerator.PickRandomSpaceWithoutModifier();
+            LetterSpace toInfect = puzzleGenerator.PickRandomSpaceWithoutModifier(false);
             if(toInfect != null)
                 toInfect.ApplyInfection();
         }
@@ -688,7 +688,7 @@ public class BattleManager : MonoBehaviour {
     private void DamagePlayerFromInfectedLetters(){
         int damage = puzzleGenerator.infectedLetters.Count * selfDamageFromInfectedLetters;
         if (damage > 0)
-            DamagePlayerHealth(selfDamageFromInfectedLetters);
+            DamagePlayerHealth(damage);
     }
 
     //private void RemoveInfectionsAndDamagePlayer() {
