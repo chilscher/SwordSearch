@@ -220622,6 +220622,7 @@ peekaboo
 peekaboos
 peeke
 peeked
+peeker
 peeking
 peeks
 peel
@@ -265923,7 +265924,6 @@ rypophobia
 rytidosis
 rytina
 ryukyu
-saa
 saad
 saan
 saanen

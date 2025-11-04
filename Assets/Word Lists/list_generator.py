@@ -46,7 +46,7 @@ new_words_list = copy(all_words_list)
 new_words_list_no_swears = copy(all_words_no_swears_list)
 for word in words_to_add:
     new_words_list.append(word)
-    new_words_no_swears_list.append(word)
+    new_words_list_no_swears.append(word)
 for word in words_to_remove:
     if word in all_words_list:
         new_words_list.remove(word)
