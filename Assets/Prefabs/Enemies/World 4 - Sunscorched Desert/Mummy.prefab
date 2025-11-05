@@ -187,7 +187,7 @@ MonoBehaviour:
     name: 
     emotion: 5
     description: We're not even in the town anymore. Has the whole desert been zombified?
-  - type: 0
+  - type: 1
     talker: {fileID: 0}
     name: 
     emotion: 2

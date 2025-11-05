@@ -146,7 +146,7 @@ public class BattleManager : MonoBehaviour {
     }
     
     private int ApplyEnemyDifficultyHealthModifier(int originalEnemyHealth){
-        float newAmt = (enemyHealth * enemyDifficultyHealthModifier);
+        float newAmt = (originalEnemyHealth * enemyDifficultyHealthModifier);
         if (newAmt < 1)
             newAmt = 1;
         return (int)newAmt;

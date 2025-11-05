@@ -269,10 +269,10 @@ public class InteractOverlayManager : MonoBehaviour{
         if (enemy.isHorde){
             summary.Add("This enemy is a horde.");
             details.Add("A horde is made up of <damage>multiple enemies<>. As you deal damage, the number of enemies left in the horde will decrease, and the horde will do <damage>less damage<> when it attacks.");
-            if (StaticVariables.fireActive){
-                summary.Add("Horde enemies take more <fire>burn damage<> from <fire>fire spells<>.");
-                details.Add("<fire>Burn damage<> from the <fire>power of fire<> is multiplied by the number of enemies in the horde.");
-            }
+            //if (StaticVariables.fireActive){
+            //    summary.Add("Horde enemies take more <fire>burn damage<> from <fire>fire spells<>.");
+            //    details.Add("<fire>Burn damage<> from the <fire>power of fire<> is multiplied by the number of enemies in the horde.");
+            //}
             if ((StaticVariables.waterActive) && (!enemy.isWaterDangerous)){                
                 summary.Add("Horde enemies are hit harder from <water>flooded attacks<>.");
                 details.Add("The usual <damage>+" + StaticVariables.waterFloodDamageBonus + " damage bonus<> while the book is <water>flooded<> is dealt to every enemy remaining in the horde.");
