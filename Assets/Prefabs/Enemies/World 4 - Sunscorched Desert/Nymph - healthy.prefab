@@ -171,7 +171,7 @@ MonoBehaviour:
   - type: 0
     talker: {fileID: 0}
     name: 
-    emotion: 0
+    emotion: 7
     description: My name is <playername>; I'm looking for some advice!
   - type: 4
     talker: {fileID: 0}
@@ -202,17 +202,17 @@ MonoBehaviour:
   - type: 0
     talker: {fileID: 0}
     name: Creature
-    emotion: 0
+    emotion: 5
     description: This must be quite the hostile environment.
   - type: 1
     talker: {fileID: 0}
     name: Creature
-    emotion: 0
+    emotion: 5
     description: I survive, but others are not so lucky.
   - type: 1
     talker: {fileID: 0}
     name: Creature
-    emotion: 0
+    emotion: 2
     description: My cousin lives nearby. Her oasis is mud, and she has turned.
   - type: 0
     talker: {fileID: 0}
@@ -223,17 +223,17 @@ MonoBehaviour:
     talker: {fileID: 0}
     name: Creature
     emotion: 0
-    description: It is unfortunate. I think the sudden presence of the undead may
-      have something to do with it.
+    description: Quite unfortunate, really. I suspect the undead may have something
+      to do with it.
   - type: 1
     talker: {fileID: 0}
     name: Creature
     emotion: 0
-    description: I saw the first one shambling around not even two months ago.
+    description: They first started shambling about not even two months ago.
   - type: 0
     talker: {fileID: 0}
     name: Creature
-    emotion: 0
+    emotion: 7
     description: I don't know about shambling. Some of them can move pretty quickly!
   - type: 0
     talker: {fileID: 0}
@@ -285,8 +285,7 @@ MonoBehaviour:
     talker: {fileID: 0}
     name: 
     emotion: 4
-    description: Oh! I can add some <water>magic water<> back in the oasis! That
-      might help revitalize her!
+    description: Oh! I bet some <water>magic water<> could help revitalize her!
   - type: 3
     talker: {fileID: 0}
     name: 

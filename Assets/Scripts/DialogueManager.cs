@@ -312,7 +312,7 @@ public class DialogueManager : MonoBehaviour{
         if (currentStep == dialogueSteps.Length - 1)
             SetButtonText("CONTINUE");
         else
-            SetButtonText("NEXT");
+            SetButtonText("CONTINUE");
 
     }
     

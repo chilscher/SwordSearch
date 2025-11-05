@@ -87,7 +87,8 @@ public class CutsceneManager : MonoBehaviour{
                 SetupCity1();
                 break;
         }
-        ButtonText("CONTINUE");
+        
+        dialogueManager.SetButtonText("CONTINUE");
 
         SetupDialogueManager();
         StaticVariables.WaitTimeThenCallFunction(StaticVariables.sceneFadeDuration, AdvanceCutsceneStep);
@@ -3784,9 +3785,9 @@ public class CutsceneManager : MonoBehaviour{
     }
     
 
-    private void ButtonText(string s){
-        dialogueManager.SetButtonText(s);
-    }
+    //private void ButtonText(string s){
+    //    dialogueManager.SetButtonText(s);
+    //}
 
     public void PressedNextButton(){
         if (advanceCondition == Cond.Click)

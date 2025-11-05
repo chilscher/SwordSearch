@@ -278,8 +278,8 @@ public class InteractOverlayManager : MonoBehaviour{
                 details.Add("The usual <damage>+" + StaticVariables.waterFloodDamageBonus + " damage bonus<> while the book is <water>flooded<> is dealt to every enemy remaining in the horde.");
             }
             if (StaticVariables.lightningActive){
-                summary.Add("Horde enemies are <lightning>stunned<> for less time from <lightning>lightning spells<>.");
-                details.Add("The duration of the <lightning>stun<> applied by the <lightning>power of lightning<> is divided by the number of enemies in the horde.");
+                summary.Add("Horde enemies recover more quickly from being <lightning>stunned<>.");
+                details.Add("The duration of the <lightning>stun<> applied by the <lightning>power of lightning<> is divided by the number of enemies remaining in the horde.");
             }
         }
         if (enemy.isDraconic){
