@@ -75,7 +75,7 @@ public class DialogueStep{
 
 [System.Serializable]
 public class EnemyAttack{
-    public enum EnemyAttackTypes{ThrowRocks, Copycat, HealsSelf, BurnLetters, Infect}
+    public enum EnemyAttackTypes{ThrowRocks, Copycat, HealsSelf, BurnLetters, Infect, Necromancy}
 
     public float attackSpeed = 2f;
     public int attackDamage = 6;

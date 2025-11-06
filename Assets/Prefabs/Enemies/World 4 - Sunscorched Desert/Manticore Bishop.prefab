@@ -129,7 +129,17 @@ MonoBehaviour:
   nameOverride: Manticore
   startingHealth: 300
   attackOrder:
-    Value: []
+    Value:
+    - attackSpeed: 1
+      attackDamage: 0
+      isSpecial: 1
+      specialType: 5
+      specialColor: {r: 0.23921569, g: 0.09019608, b: 0.28235295, a: 1}
+    - attackSpeed: 100
+      attackDamage: 0
+      isSpecial: 1
+      specialType: 5
+      specialColor: {r: 0.23921569, g: 0.09019608, b: 0.28235295, a: 1}
   isDraconic: 0
   isHorde: 0
   isNearWater: 0
@@ -143,7 +153,7 @@ MonoBehaviour:
   earthHealsIt: 0
   weakToFire: 0
   usesLightning: 0
-  usesNecromancy: 0
+  usesNecromancy: 1
   normal: {fileID: -1557460093, guid: 8831f2639002f4b4d8f909aab5d18b61, type: 3}
   angry: {fileID: 38637143, guid: 8831f2639002f4b4d8f909aab5d18b61, type: 3}
   defeated: {fileID: 1308978502, guid: 8831f2639002f4b4d8f909aab5d18b61, type: 3}

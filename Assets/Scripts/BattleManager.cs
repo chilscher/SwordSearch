@@ -46,6 +46,7 @@ public class BattleManager : MonoBehaviour {
     [HideInInspector]
     public int maxInfectedLetters = 20;
     private bool hasEarthBuff = false;
+    public int[] necromancyHandsHeights = new int[] { 0, 0, 0, 0, 0 };
 
     [Header("Game Variables")]
     private readonly int startingPlayerHealth = 100;
@@ -292,6 +293,9 @@ public class BattleManager : MonoBehaviour {
                 case EnemyAttack.EnemyAttackTypes.Infect:
                     InfectRandomLetters(1);
                     break;
+                case EnemyAttack.EnemyAttackTypes.Necromancy:
+                    RaiseNecromancyHands();
+                    break;
             }
         }
         IncrementAttackIndex();
@@ -447,6 +451,21 @@ public class BattleManager : MonoBehaviour {
         }
     }
     
+    private void RaiseNecromancyHands(){
+        //first, decide which heights to raise the new hands to
+        for (int i = 0; i < necromancyHandsHeights.Length; i++){
+            if (necromancyHandsHeights[i] == 0){ //if at 0 height, raise by 1 or 2
+                if (StaticVariables.rand.Next(100) > 50)
+                    necromancyHandsHeights[i] += 1;
+                else
+                    necromancyHandsHeights[i] += 2;
+            }
+            else if (necromancyHandsHeights[i] < 7) //if not at max height, raise by 1
+                necromancyHandsHeights[i]++;
+        }
+        uiManager.ShowNecromancyHandHeights();
+    }
+    
     public void ClearRandomBurnedLetters(int amount){
         for (int i = 0; i < amount; i++){
             LetterSpace toClear = puzzleGenerator.PickRandomBurnedSpace();
@@ -579,11 +598,24 @@ public class BattleManager : MonoBehaviour {
             return false;
         if ((uiManager.shownBoulders != null) && (uiManager.shownBoulders.coveredLetters.Contains(letterSpace)))
             return false;
+        if (IsLetterCoveredByHands(letterSpace))
+            return false;
         if (letterSpacesForWord.Count == 0)
             return true;
         if (letterSpacesForWord.Count >= 15) //hard limit of 15 letters per word, for UI reasons
             return false;
         if (letterSpace.IsAdjacentToLetterSpace(lastLetterSpace))
+            return true;
+        return false;
+    }
+    
+    private bool IsLetterCoveredByHands(LetterSpace letterSpace){
+        if (!enemyData.usesNecromancy)
+            return false;
+        int row = (int)letterSpace.position[0];
+        int height = 7 - row;
+        int col = (int)letterSpace.position[1];
+        if (necromancyHandsHeights[col] > height)
             return true;
         return false;
     }
@@ -671,6 +703,7 @@ public class BattleManager : MonoBehaviour {
             inProgressWord = new(this);
             DecrementRefreshPuzzleCountdown();
             RemoveInfectionsFromCurrentWord();
+            LowerNecromancyHandsFromCurrentWord();
             ClearWord(true, applyChar);
             RemoveEarthBuff();
             if (isWaterInPuzzleArea && enemyData.canBurn)
@@ -683,6 +716,19 @@ public class BattleManager : MonoBehaviour {
             if (letter.isInfected)
                 letter.RemoveInfection(true);
         }
+    }
+    
+    private void LowerNecromancyHandsFromCurrentWord(){
+        if (!enemyData.usesNecromancy)
+            return;
+        foreach (LetterSpace ls in letterSpacesForWord) {
+            int row = (int)ls.position[0];
+            int height = 7 - row;
+            int col = (int)ls.position[1];
+            if (necromancyHandsHeights[col] == height)
+                necromancyHandsHeights[col]--;
+        }
+        uiManager.ShowNecromancyHandHeights();
     }
     
     private void DamagePlayerFromInfectedLetters(){

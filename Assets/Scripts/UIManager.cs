@@ -522,6 +522,10 @@ public class UIManager : MonoBehaviour {
         temp = earthBuffRight.rect.width;
         earthBuffRight.DOAnchorPosX(temp, 0.5f);
     }
+    
+    public void ShowNecromancyHandHeights(){
+        print("hand heights: (" + battleManager.necromancyHandsHeights[0] + ", "+ battleManager.necromancyHandsHeights[1] + ", "+ battleManager.necromancyHandsHeights[2] + ", "+ battleManager.necromancyHandsHeights[3] + ", "+ battleManager.necromancyHandsHeights[4] + ")");
+    }
 
     private void FloatWater() {
         battleManager.WaterReachedTopOfPage();
