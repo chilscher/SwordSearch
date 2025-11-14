@@ -119,6 +119,11 @@ public class UIManager : MonoBehaviour {
     public GameObject enemyParentPrefab;
     public DialogueManager dialogueManager;
     public Transform boulderGroupsParent;
+    public RectTransform necromancyHand1;
+    public RectTransform necromancyHand2;
+    public RectTransform necromancyHand3;
+    public RectTransform necromancyHand4;
+    public RectTransform necromancyHand5;
 
     [HideInInspector]
     public BattleManager.PowerupTypes powerupType;
@@ -524,7 +529,14 @@ public class UIManager : MonoBehaviour {
     }
     
     public void ShowNecromancyHandHeights(){
-        print("hand heights: (" + battleManager.necromancyHandsHeights[0] + ", "+ battleManager.necromancyHandsHeights[1] + ", "+ battleManager.necromancyHandsHeights[2] + ", "+ battleManager.necromancyHandsHeights[3] + ", "+ battleManager.necromancyHandsHeights[4] + ")");
+        int[] heights = { -1481, -1400, -1200, -993, -786, -579, -372, -165, -10 };
+        print(necromancyHand1.localPosition.y);
+        necromancyHand1.DOAnchorPosY(heights[battleManager.necromancyHandsHeights[0]], 1f);
+        necromancyHand2.DOAnchorPosY(heights[battleManager.necromancyHandsHeights[1]], 1f);
+        necromancyHand3.DOAnchorPosY(heights[battleManager.necromancyHandsHeights[2]], 1f);
+        necromancyHand4.DOAnchorPosY(heights[battleManager.necromancyHandsHeights[3]], 1f);
+        necromancyHand5.DOAnchorPosY(heights[battleManager.necromancyHandsHeights[4]], 1f);
+        //print("hand heights: (" + battleManager.necromancyHandsHeights[0] + ", "+ battleManager.necromancyHandsHeights[1] + ", "+ battleManager.necromancyHandsHeights[2] + ", "+ battleManager.necromancyHandsHeights[3] + ", "+ battleManager.necromancyHandsHeights[4] + ")");
     }
 
     private void FloatWater() {

@@ -135,7 +135,7 @@ MonoBehaviour:
       isSpecial: 1
       specialType: 5
       specialColor: {r: 0.23921569, g: 0.09019608, b: 0.28235295, a: 1}
-    - attackSpeed: 100
+    - attackSpeed: 15
       attackDamage: 0
       isSpecial: 1
       specialType: 5

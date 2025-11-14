@@ -1563,7 +1563,6 @@ rit
 riv
 rix
 rld
-rle
 rly
 rms
 rnd
