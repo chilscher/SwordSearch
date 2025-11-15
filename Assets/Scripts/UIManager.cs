@@ -387,6 +387,7 @@ public class UIManager : MonoBehaviour {
     }
 
     public void CancelEnemyAttackAndQueueNext(){
+        print("cancelling enemy attack");
         enemyTimerBar.DOKill();
         enemyTimerBar.DOScale(Vector3.one, 1f).SetEase(Ease.Linear).OnComplete(battleManager.QueueAttackAfterCancel);
         enemyTimerBarImage.color = defaultEnemyTimerBarColor; 
@@ -404,7 +405,7 @@ public class UIManager : MonoBehaviour {
                 break;
             }
         }
-        else if (attackType == EnemyAttack.EnemyAttackTypes.Lightning){
+        else if (attackType == EnemyAttack.EnemyAttackTypes.Lightning2){
             switch (StaticVariables.difficultyMode) {
             case StaticVariables.DifficultyMode.Easy:
                 duration += 2;
@@ -432,10 +433,18 @@ public class UIManager : MonoBehaviour {
         }
     }
 
-    public void StartEnemyAttackAnimation() {
+    public void StartEnemyAttackAnimation(EnemyAttack.EnemyAttackTypes? attackType = null) {
         if (battleManager.enemyData.isHorde) {
             foreach (Animator anim in enemyHordeAnimators)
                 anim.SetTrigger("Attack");
+        }
+        else if (attackType == EnemyAttack.EnemyAttackTypes.Necromancy)
+            enemyAnimator.SetTrigger("Attack_Necromancy");
+        else if (attackType == EnemyAttack.EnemyAttackTypes.Lightning1)
+            enemyAnimator.SetTrigger("Attack_Lightning_Charge");
+        else if (attackType == EnemyAttack.EnemyAttackTypes.Lightning2){
+            enemyAnimator.SetTrigger("Attack_Lightning_Strike");
+            battleManager.ClearLightningCharging();
         }
         else
             enemyAnimator.SetTrigger("Attack");

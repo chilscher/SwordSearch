@@ -283,10 +283,14 @@ public class BattleManager : MonoBehaviour {
             if (amount > 0)
                 HealEnemyHealth(amount);
         }
-        else if (ea.isSpecial && ea.specialType == EnemyAttack.EnemyAttackTypes.Lightning)
-            DoEnemyLightningAttack(ea.attackDamage);
-        else if (ea.isSpecial && ea.specialType == EnemyAttack.EnemyAttackTypes.Necromancy)
+        else if (ea.isSpecial && ea.specialType == EnemyAttack.EnemyAttackTypes.Lightning1)
+            DoEnemyLightningCharge();
+        //else if (ea.isSpecial && ea.specialType == EnemyAttack.EnemyAttackTypes.Lightning2)
+        //    DoEnemyLightningStrike(ea.attackDamage);
+        else if (ea.isSpecial && ea.specialType == EnemyAttack.EnemyAttackTypes.Necromancy){
+            ApplyEnemyAttackDamage(0);
             RaiseNecromancyHands();
+        }
 
         else
             ApplyEnemyAttackDamage(ea.attackDamage);
@@ -457,17 +461,27 @@ public class BattleManager : MonoBehaviour {
         }
     }
 
+    private void DoEnemyLightningCharge(){
+        enemyLightningChargeColumn = StaticVariables.rand.Next(1, 6);
+        puzzleGenerator.letterSpaces[0,enemyLightningChargeColumn-1].ShowCharged();
+        StaticVariables.WaitTimeThenCallFunction(0.1f,puzzleGenerator.letterSpaces[1,enemyLightningChargeColumn-1].ShowCharged);
+        StaticVariables.WaitTimeThenCallFunction(0.2f,puzzleGenerator.letterSpaces[2,enemyLightningChargeColumn-1].ShowCharged);
+        StaticVariables.WaitTimeThenCallFunction(0.3f,puzzleGenerator.letterSpaces[3,enemyLightningChargeColumn-1].ShowCharged);
+        StaticVariables.WaitTimeThenCallFunction(0.4f,puzzleGenerator.letterSpaces[4,enemyLightningChargeColumn-1].ShowCharged);
+        StaticVariables.WaitTimeThenCallFunction(0.5f,puzzleGenerator.letterSpaces[5,enemyLightningChargeColumn-1].ShowCharged);
+        StaticVariables.WaitTimeThenCallFunction(0.6f,puzzleGenerator.letterSpaces[6,enemyLightningChargeColumn-1].ShowCharged);
+        isEnemyLightningCharging = true;
+    }
+
+    private void DoEnemyLightningStrike(int damage){
+            ApplyEnemyAttackDamage(damage);
+    }
+
+    /*
     private void DoEnemyLightningAttack(int damage){
         if (isEnemyLightningCharging){
-            //if (hasPlayerStoppedEnemyLightning){
-                //print("you stopped the lightning!");
-            //}
-            //else{
-                ApplyEnemyAttackDamage(damage);
-                //print("ouch, you took damage");
-                ClearLightningCharging();
-            //}
-            
+            ApplyEnemyAttackDamage(damage);
+            ClearLightningCharging();
         }
         else{
             enemyLightningChargeColumn = StaticVariables.rand.Next(1, 6);
@@ -478,10 +492,10 @@ public class BattleManager : MonoBehaviour {
             StaticVariables.WaitTimeThenCallFunction(0.4f,puzzleGenerator.letterSpaces[4,enemyLightningChargeColumn-1].ShowCharged);
             StaticVariables.WaitTimeThenCallFunction(0.5f,puzzleGenerator.letterSpaces[5,enemyLightningChargeColumn-1].ShowCharged);
             StaticVariables.WaitTimeThenCallFunction(0.6f,puzzleGenerator.letterSpaces[6,enemyLightningChargeColumn-1].ShowCharged);
+            isEnemyLightningCharging = true;
         }
-        isEnemyLightningCharging = !isEnemyLightningCharging;
-        //hasPlayerStoppedEnemyLightning = false;
     }
+    */
     
     private void RaiseNecromancyHands(){
         //first, decide which heights to raise the new hands to
@@ -774,18 +788,16 @@ public class BattleManager : MonoBehaviour {
             int col = (int)ls.position[1];
             if (col == enemyLightningChargeColumn- 1){
                 ClearLightningCharging();
+                uiManager.CancelEnemyAttackAndQueueNext();
                 return;
             }
         }
     }
 
-    private void ClearLightningCharging(){
+    public void ClearLightningCharging(){
         foreach (LetterSpace ls in puzzleGenerator.letterSpaces)
-            ls.HideCharged();
-        //hasPlayerStoppedEnemyLightning = true;
+            ls.DissipateCharge();
         isEnemyLightningCharging = false;
-        //skip to the next attack
-        uiManager.CancelEnemyAttackAndQueueNext();
     }
 
     public void QueueAttackAfterCancel(){
@@ -869,7 +881,7 @@ public class BattleManager : MonoBehaviour {
         if (!stopNextAttack){
             DecrementRefreshPuzzleCountdown();
             UpdateSubmitVisuals();
-            uiManager.StartEnemyAttackAnimation();
+            uiManager.StartEnemyAttackAnimation(enemyData.attackOrder.Value[enemyAttackIndex].specialType);
         }
     }
 

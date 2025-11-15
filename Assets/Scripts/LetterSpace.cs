@@ -395,7 +395,18 @@ public class LetterSpace : MonoBehaviour{
         chargedIcon.gameObject.SetActive(true);
     }
 
-    public void HideCharged(){
+    public void DissipateCharge(){
+        if (chargedIcon.gameObject.activeSelf){
+            chargedIcon.GetComponent<Animator>().SetTrigger("Dissipate");
+            StaticVariables.WaitTimeThenCallFunction(1f, HideCharged);
+        }
+    }
+
+    private void HideCharged(){
         chargedIcon.gameObject.SetActive(false);
     }
+
+    //public void HideCharged(){
+    //    chargedIcon.gameObject.SetActive(false);
+    //}
 }
