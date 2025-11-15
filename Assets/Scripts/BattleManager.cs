@@ -213,11 +213,11 @@ public class BattleManager : MonoBehaviour {
         }
     }
 
-    public virtual void DamagePlayerHealth(int amount, bool showDamageAnimation = true) {
+    public virtual void DamagePlayerHealth(int amount) {
         playerHealth -= amount;
         if (playerHealth < 0)
             playerHealth = 0;
-        uiManager.ShowPlayerTakingDamage(amount, playerHealth > 0, showDamageAnimation, showZeroDamage: amount == 0);
+        uiManager.ShowPlayerTakingDamage(amount, playerHealth > 0);
         uiManager.DisplayHealths(playerHealth, enemyHealth);
         if (playerHealth == 0) {
             uiManager.PauseEnemyAttackBar();

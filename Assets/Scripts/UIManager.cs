@@ -185,14 +185,9 @@ public class UIManager : MonoBehaviour {
         enemyHP4DigitOnes.transform.parent.gameObject.SetActive(enemyHealth >= 1000);
     }
 
-    public void ShowPlayerTakingDamage(int amount, bool stillAlive, bool showDamageAnimation = true, bool showZeroDamage = false) {
-        if (showZeroDamage)
-            amount = 0;
-        else if (amount < 1)
-            return;
-        ShowNumbersAsChild(playerDamageSingleDigitPrefab, playerDamageDoubleDigitPrefab, playerDamageTripleDigitPrefab, playerObject, amount);
-        if (!showDamageAnimation)
-            return;
+    public void ShowPlayerTakingDamage(int amount, bool stillAlive) {
+        if (amount < 1) //if dealt 0 damage, don't show hitsplat
+            ShowNumbersAsChild(playerDamageSingleDigitPrefab, playerDamageDoubleDigitPrefab, playerDamageTripleDigitPrefab, playerObject, amount);
         if (stillAlive)
             playerAnimator.SetTrigger("TakeDamage");
         else
