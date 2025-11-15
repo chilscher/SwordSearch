@@ -358,12 +358,12 @@ public class InteractOverlayManager : MonoBehaviour{
             details.Add("Attacks made with the <fire>power of fire<> deal <damage>50% more damage<>.");
         }
         if (enemy.usesLightning){
-            summary.Add("This enemy can attack with the <lightning>power of lightning<>");
-            details.Add("some description.");
+            summary.Add("This enemy wields the <lightning>power of lightning<>.");
+            details.Add("Getting hit by a <lightning>lightning<> attack will <lightning>electrify<> some letters. If you don't use one of those letters before the enemy's next attack, you will take a <damage>lot of damage<>!");
         }
         if (enemy.usesNecromancy){
-            summary.Add("This enemy can attack with the <necromancy>power of necromancy<>");
-            details.Add("some description.");
+            summary.Add("This enemy attacks with the <necromancy>power of necromancy<>.");
+            details.Add("Every time you are hit by a <necromancy>necromancy<> attack, <necromancy>necromantic energy<> will cover the bottom of the book, blocking letters. Making a word using the letters just above the <necromancy>blockage<> will lower it and free up more room.");
         }
 
         summary = TextFormatter.FormatStringList(summary);

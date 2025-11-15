@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -46,7 +47,11 @@ public class BattleManager : MonoBehaviour {
     [HideInInspector]
     public int maxInfectedLetters = 20;
     private bool hasEarthBuff = false;
+    [HideInInspector]
     public int[] necromancyHandsHeights = new int[] { 0, 0, 0, 0, 0 };
+    private bool isEnemyLightningCharging = false;
+    //private bool hasPlayerStoppedEnemyLightning = false;
+    private int enemyLightningChargeColumn = 0;
 
     [Header("Game Variables")]
     private readonly int startingPlayerHealth = 100;
@@ -278,6 +283,10 @@ public class BattleManager : MonoBehaviour {
             if (amount > 0)
                 HealEnemyHealth(amount);
         }
+        else if (ea.isSpecial && ea.specialType == EnemyAttack.EnemyAttackTypes.Lightning)
+            DoEnemyLightningAttack(ea.attackDamage);
+        else if (ea.isSpecial && ea.specialType == EnemyAttack.EnemyAttackTypes.Necromancy)
+            RaiseNecromancyHands();
 
         else
             ApplyEnemyAttackDamage(ea.attackDamage);
@@ -292,9 +301,6 @@ public class BattleManager : MonoBehaviour {
                     break;
                 case EnemyAttack.EnemyAttackTypes.Infect:
                     InfectRandomLetters(1);
-                    break;
-                case EnemyAttack.EnemyAttackTypes.Necromancy:
-                    RaiseNecromancyHands();
                     break;
             }
         }
@@ -450,18 +456,43 @@ public class BattleManager : MonoBehaviour {
                 toInfect.ApplyInfection();
         }
     }
+
+    private void DoEnemyLightningAttack(int damage){
+        if (isEnemyLightningCharging){
+            //if (hasPlayerStoppedEnemyLightning){
+                //print("you stopped the lightning!");
+            //}
+            //else{
+                ApplyEnemyAttackDamage(damage);
+                //print("ouch, you took damage");
+                ClearLightningCharging();
+            //}
+            
+        }
+        else{
+            enemyLightningChargeColumn = StaticVariables.rand.Next(1, 6);
+            puzzleGenerator.letterSpaces[0,enemyLightningChargeColumn-1].ShowCharged();
+            StaticVariables.WaitTimeThenCallFunction(0.1f,puzzleGenerator.letterSpaces[1,enemyLightningChargeColumn-1].ShowCharged);
+            StaticVariables.WaitTimeThenCallFunction(0.2f,puzzleGenerator.letterSpaces[2,enemyLightningChargeColumn-1].ShowCharged);
+            StaticVariables.WaitTimeThenCallFunction(0.3f,puzzleGenerator.letterSpaces[3,enemyLightningChargeColumn-1].ShowCharged);
+            StaticVariables.WaitTimeThenCallFunction(0.4f,puzzleGenerator.letterSpaces[4,enemyLightningChargeColumn-1].ShowCharged);
+            StaticVariables.WaitTimeThenCallFunction(0.5f,puzzleGenerator.letterSpaces[5,enemyLightningChargeColumn-1].ShowCharged);
+            StaticVariables.WaitTimeThenCallFunction(0.6f,puzzleGenerator.letterSpaces[6,enemyLightningChargeColumn-1].ShowCharged);
+        }
+        isEnemyLightningCharging = !isEnemyLightningCharging;
+        //hasPlayerStoppedEnemyLightning = false;
+    }
     
     private void RaiseNecromancyHands(){
         //first, decide which heights to raise the new hands to
         for (int i = 0; i < necromancyHandsHeights.Length; i++){
             if (necromancyHandsHeights[i] == 0){ //if at 0 height, raise by 1 or 2
                 if (StaticVariables.rand.Next(100) > 50)
-                    necromancyHandsHeights[i] += 1;
-                else
-                    necromancyHandsHeights[i] += 2;
+                    necromancyHandsHeights[i] ++;
             }
-            else if (necromancyHandsHeights[i] < 7) //if not at max height, raise by 1
-                necromancyHandsHeights[i]++;
+            necromancyHandsHeights[i]++;
+            if (necromancyHandsHeights[i] >= 7) //max height is 6
+                necromancyHandsHeights[i] = 6;
         }
         uiManager.ShowNecromancyHandHeights();
     }
@@ -704,6 +735,7 @@ public class BattleManager : MonoBehaviour {
             DecrementRefreshPuzzleCountdown();
             RemoveInfectionsFromCurrentWord();
             LowerNecromancyHandsFromCurrentWord();
+            DischargeLightningFromCurrentWord();
             ClearWord(true, applyChar);
             RemoveEarthBuff();
             if (isWaterInPuzzleArea && enemyData.canBurn)
@@ -729,6 +761,36 @@ public class BattleManager : MonoBehaviour {
                 necromancyHandsHeights[col]--;
         }
         uiManager.ShowNecromancyHandHeights();
+    }
+
+    private void DischargeLightningFromCurrentWord(){
+        if (!enemyData.usesLightning)
+            return;
+        if (!isEnemyLightningCharging)
+            return;
+        //if (hasPlayerStoppedEnemyLightning)
+        //    return;
+        foreach (LetterSpace ls in letterSpacesForWord) {
+            int col = (int)ls.position[1];
+            if (col == enemyLightningChargeColumn- 1){
+                ClearLightningCharging();
+                return;
+            }
+        }
+    }
+
+    private void ClearLightningCharging(){
+        foreach (LetterSpace ls in puzzleGenerator.letterSpaces)
+            ls.HideCharged();
+        //hasPlayerStoppedEnemyLightning = true;
+        isEnemyLightningCharging = false;
+        //skip to the next attack
+        uiManager.CancelEnemyAttackAndQueueNext();
+    }
+
+    public void QueueAttackAfterCancel(){
+        IncrementAttackIndex();
+        QueueEnemyAttack();
     }
     
     private void DamagePlayerFromInfectedLetters(){
@@ -787,7 +849,7 @@ public class BattleManager : MonoBehaviour {
         else
             ea = enemyData.attackOrder.Value[enemyAttackIndex];
         if (ea.isSpecial)
-            uiManager.StartEnemyAttackTimer(ea.attackSpeed, ea.specialColor);
+            uiManager.StartEnemyAttackTimer(ea.attackSpeed, ea.specialColor, ea.specialType);
         else
             uiManager.StartEnemyAttackTimer(ea.attackSpeed);
     }

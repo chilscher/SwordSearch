@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 06888d494d6bd3744a2a6af6a95cbecc
+guid: 27c9f9c5ed6e55f43b78e6d0edae8b23
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,106 +110,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Necrmancy hands_1
+      name: Necrmancy hands spacers_0
       rect:
         serializedVersion: 2
-        x: 40
+        x: 33
         y: 0
-        width: 40
+        width: 13
         height: 183
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62feedbe1b6346244bad380178829f0b
-      internalID: 1633384124
+      spriteID: cda0cfa4f21dd8c459f7b7488588385b
+      internalID: 847027922
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Necrmancy hands_2
+      name: Necrmancy hands spacers_1
       rect:
         serializedVersion: 2
-        x: 80
+        x: 74
         y: 0
-        width: 40
+        width: 13
         height: 183
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 773ce24cc6cc839488e4a5b357483cf2
-      internalID: 923060450
+      spriteID: 5272ab7a14422b3429a7be3ffeaafb6a
+      internalID: 1109010021
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Necrmancy hands_3
+      name: Necrmancy hands spacers_2
       rect:
         serializedVersion: 2
-        x: 120
+        x: 114
         y: 0
-        width: 40
+        width: 13
         height: 183
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 517942582b04c4d4bb7f2108f6492bc6
-      internalID: -1107819357
+      spriteID: e241719811b4b774ebb3ddc8b2e71e4a
+      internalID: 1766174410
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Necrmancy hands_4
+      name: Necrmancy hands spacers_3
       rect:
         serializedVersion: 2
-        x: 160
+        x: 153
         y: 0
-        width: 40
+        width: 13
         height: 183
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a10bd1e4fe514194b93438025239449b
-      internalID: 1762156991
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Necrmancy hands_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 40
-        height: 183
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6367cc3573799744c8262493090a59c4
-      internalID: -2027531940
+      spriteID: 51aba8f69abe538478d50ad42c1d9a46
+      internalID: -541470575
       vertices: []
       indices: 
       edges: []
@@ -225,11 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Necrmancy hands_0: -2027531940
-      Necrmancy hands_1: 1633384124
-      Necrmancy hands_2: 923060450
-      Necrmancy hands_3: -1107819357
-      Necrmancy hands_4: 1762156991
+      Necrmancy hands spacers_0: 847027922
+      Necrmancy hands spacers_1: 1109010021
+      Necrmancy hands spacers_2: 1766174410
+      Necrmancy hands spacers_3: -541470575
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

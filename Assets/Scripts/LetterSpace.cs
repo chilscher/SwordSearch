@@ -82,6 +82,7 @@ public class LetterSpace : MonoBehaviour{
     public Transform burnIcon;
     public Transform charredIcon;
     public Transform infectedIcon;
+    public Transform chargedIcon;
 
     [Header("Colors")]
     public Color normalLetterColor;
@@ -388,5 +389,13 @@ public class LetterSpace : MonoBehaviour{
             if (IsAdjacentToLetterSpace(candidate))
                 neighbors.Add(candidate);
         }
+    }
+
+    public void ShowCharged(){
+        chargedIcon.gameObject.SetActive(true);
+    }
+
+    public void HideCharged(){
+        chargedIcon.gameObject.SetActive(false);
     }
 }

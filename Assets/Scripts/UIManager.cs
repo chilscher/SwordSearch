@@ -94,6 +94,18 @@ public class UIManager : MonoBehaviour {
     public Animator enemyStunBarAnimation;
     public RectTransform copycatBar;
 
+    [Header("Enemy Attacks")]
+    public Transform boulderGroupsParent;
+    public RectTransform necromancyHand1;
+    public RectTransform necromancyHand2;
+    public RectTransform necromancyHand3;
+    public RectTransform necromancyHand4;
+    public RectTransform necromancyHand5;
+    public RectTransform necromancyHandSpacer12;
+    public RectTransform necromancyHandSpacer23;
+    public RectTransform necromancyHandSpacer34;
+    public RectTransform necromancyHandSpacer45;
+
     [Header("Misc")]
     public BattleManager battleManager;
     public Transform playerAttackAnimationParent;
@@ -118,12 +130,6 @@ public class UIManager : MonoBehaviour {
     public Animator pageTurnAnimator;
     public GameObject enemyParentPrefab;
     public DialogueManager dialogueManager;
-    public Transform boulderGroupsParent;
-    public RectTransform necromancyHand1;
-    public RectTransform necromancyHand2;
-    public RectTransform necromancyHand3;
-    public RectTransform necromancyHand4;
-    public RectTransform necromancyHand5;
 
     [HideInInspector]
     public BattleManager.PowerupTypes powerupType;
@@ -380,7 +386,35 @@ public class UIManager : MonoBehaviour {
         enemyStunBarAnimation.SetTrigger("End");
     }
 
-    public void StartEnemyAttackTimer(float duration, Color? c = null) {
+    public void CancelEnemyAttackAndQueueNext(){
+        enemyTimerBar.DOKill();
+        enemyTimerBar.DOScale(Vector3.one, 1f).SetEase(Ease.Linear).OnComplete(battleManager.QueueAttackAfterCancel);
+        enemyTimerBarImage.color = defaultEnemyTimerBarColor; 
+    }
+
+    public void StartEnemyAttackTimer(float duration, Color? c = null, EnemyAttack.EnemyAttackTypes? attackType = null) {
+        //modify attack speed for specific enemy special attacks (usually attacks that)
+        if (attackType == EnemyAttack.EnemyAttackTypes.Necromancy){
+            switch (StaticVariables.difficultyMode) {
+            case StaticVariables.DifficultyMode.Easy:
+                duration += 2;
+                break;
+            case StaticVariables.DifficultyMode.Hard:
+                duration -= 1;
+                break;
+            }
+        }
+        else if (attackType == EnemyAttack.EnemyAttackTypes.Lightning){
+            switch (StaticVariables.difficultyMode) {
+            case StaticVariables.DifficultyMode.Easy:
+                duration += 2;
+                break;
+            case StaticVariables.DifficultyMode.Hard:
+                duration -= 1;
+                break;
+            }
+        }
+        //print(duration);
         enemyTimerBar.localScale = Vector3.one;
         enemyTimerBar.DOScale(new Vector3(0, 1, 1), duration).SetEase(Ease.Linear).OnComplete(battleManager.TriggerEnemyAttack);
         if (c == null)
@@ -530,12 +564,15 @@ public class UIManager : MonoBehaviour {
     
     public void ShowNecromancyHandHeights(){
         int[] heights = { -1481, -1400, -1200, -993, -786, -579, -372, -165, -10 };
-        print(necromancyHand1.localPosition.y);
         necromancyHand1.DOAnchorPosY(heights[battleManager.necromancyHandsHeights[0]], 1f);
         necromancyHand2.DOAnchorPosY(heights[battleManager.necromancyHandsHeights[1]], 1f);
         necromancyHand3.DOAnchorPosY(heights[battleManager.necromancyHandsHeights[2]], 1f);
         necromancyHand4.DOAnchorPosY(heights[battleManager.necromancyHandsHeights[3]], 1f);
         necromancyHand5.DOAnchorPosY(heights[battleManager.necromancyHandsHeights[4]], 1f);
+        necromancyHandSpacer12.DOAnchorPosY(heights[Mathf.Min(battleManager.necromancyHandsHeights[0], battleManager.necromancyHandsHeights[1])], 1f);
+        necromancyHandSpacer23.DOAnchorPosY(heights[Mathf.Min(battleManager.necromancyHandsHeights[1], battleManager.necromancyHandsHeights[2])], 1f);
+        necromancyHandSpacer34.DOAnchorPosY(heights[Mathf.Min(battleManager.necromancyHandsHeights[2], battleManager.necromancyHandsHeights[3])], 1f);
+        necromancyHandSpacer45.DOAnchorPosY(heights[Mathf.Min(battleManager.necromancyHandsHeights[3], battleManager.necromancyHandsHeights[4])], 1f);
         //print("hand heights: (" + battleManager.necromancyHandsHeights[0] + ", "+ battleManager.necromancyHandsHeights[1] + ", "+ battleManager.necromancyHandsHeights[2] + ", "+ battleManager.necromancyHandsHeights[3] + ", "+ battleManager.necromancyHandsHeights[4] + ")");
     }
 

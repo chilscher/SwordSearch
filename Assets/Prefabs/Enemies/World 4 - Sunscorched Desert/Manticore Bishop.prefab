@@ -130,16 +130,26 @@ MonoBehaviour:
   startingHealth: 300
   attackOrder:
     Value:
-    - attackSpeed: 1
+    - attackSpeed: 5
       attackDamage: 0
       isSpecial: 1
       specialType: 5
       specialColor: {r: 0.23921569, g: 0.09019608, b: 0.28235295, a: 1}
-    - attackSpeed: 15
+    - attackSpeed: 5
       attackDamage: 0
       isSpecial: 1
       specialType: 5
       specialColor: {r: 0.23921569, g: 0.09019608, b: 0.28235295, a: 1}
+    - attackSpeed: 8
+      attackDamage: 0
+      isSpecial: 1
+      specialType: 6
+      specialColor: {r: 1, g: 0.88235295, b: 0.23137255, a: 1}
+    - attackSpeed: 5
+      attackDamage: 0
+      isSpecial: 1
+      specialType: 6
+      specialColor: {r: 1, g: 1, b: 0.38039216, a: 1}
   isDraconic: 0
   isHorde: 0
   isNearWater: 0
@@ -152,7 +162,7 @@ MonoBehaviour:
   waterHealsIt: 0
   earthHealsIt: 0
   weakToFire: 0
-  usesLightning: 0
+  usesLightning: 1
   usesNecromancy: 1
   normal: {fileID: -1557460093, guid: 8831f2639002f4b4d8f909aab5d18b61, type: 3}
   angry: {fileID: 38637143, guid: 8831f2639002f4b4d8f909aab5d18b61, type: 3}
