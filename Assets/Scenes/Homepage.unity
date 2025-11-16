@@ -8315,7 +8315,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: UNAVAILABLE
+  m_Text: COMING   SOON
 --- !u!222 &2095231520
 CanvasRenderer:
   m_ObjectHideFlags: 0

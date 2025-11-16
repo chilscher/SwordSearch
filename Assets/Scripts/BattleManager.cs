@@ -426,7 +426,7 @@ public class BattleManager : MonoBehaviour {
         playerHealth -= selfDamageFromDarkAttack;
         if (playerHealth < 1)
             playerHealth = 1;
-        uiManager.ShowPlayerTakingDamage((prevHP - playerHealth), playerHealth > 0, false);
+        uiManager.ShowPlayerTakingDamage((prevHP - playerHealth), playerHealth > 0);
         uiManager.DisplayHealths(playerHealth, enemyHealth);
     }
 

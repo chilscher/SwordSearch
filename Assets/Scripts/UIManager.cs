@@ -186,7 +186,7 @@ public class UIManager : MonoBehaviour {
     }
 
     public void ShowPlayerTakingDamage(int amount, bool stillAlive) {
-        if (amount < 1) //if dealt 0 damage, don't show hitsplat
+        if (amount > 0) //if dealt 0 damage, don't show hitsplat
             ShowNumbersAsChild(playerDamageSingleDigitPrefab, playerDamageDoubleDigitPrefab, playerDamageTripleDigitPrefab, playerObject, amount);
         if (stillAlive)
             playerAnimator.SetTrigger("TakeDamage");
@@ -388,8 +388,9 @@ public class UIManager : MonoBehaviour {
         enemyTimerBarImage.color = defaultEnemyTimerBarColor; 
     }
 
-    public void StartEnemyAttackTimer(float duration, Color? c = null, EnemyAttack.EnemyAttackTypes? attackType = null) {
-        //modify attack speed for specific enemy special attacks (usually attacks that)
+    public void StartEnemyAttackTimer(float duration, Color? c = null, EnemyAttack.EnemyAttackTypes attackType = EnemyAttack.EnemyAttackTypes.None) {
+        //modify attack speed for specific enemy special attacks (usually attacks that don't do damage on their own)
+        /*
         if (attackType == EnemyAttack.EnemyAttackTypes.Necromancy){
             switch (StaticVariables.difficultyMode) {
             case StaticVariables.DifficultyMode.Easy:
@@ -410,13 +411,39 @@ public class UIManager : MonoBehaviour {
                 break;
             }
         }
+        */
         //print(duration);
+        duration = ScaleAttackTimerWithDifficulty(duration, attackType);
         enemyTimerBar.localScale = Vector3.one;
         enemyTimerBar.DOScale(new Vector3(0, 1, 1), duration).SetEase(Ease.Linear).OnComplete(battleManager.TriggerEnemyAttack);
         if (c == null)
             enemyTimerBarImage.color = defaultEnemyTimerBarColor;
         else
             enemyTimerBarImage.color = (Color)c;
+    }
+
+    private float ScaleAttackTimerWithDifficulty(float normalTime, EnemyAttack.EnemyAttackTypes attackType){
+        if (attackType == EnemyAttack.EnemyAttackTypes.None)
+            return normalTime;
+        if (StaticVariables.difficultyMode == StaticVariables.DifficultyMode.Normal)
+            return normalTime;
+        if (attackType == EnemyAttack.EnemyAttackTypes.Necromancy){
+            switch (StaticVariables.difficultyMode) {
+                case StaticVariables.DifficultyMode.Easy:
+                    return normalTime * 1.3f;
+                case StaticVariables.DifficultyMode.Hard:
+                    return normalTime * 0.7f;
+            }
+        }
+        else if (attackType == EnemyAttack.EnemyAttackTypes.Lightning2){
+            switch (StaticVariables.difficultyMode) {
+                case StaticVariables.DifficultyMode.Easy:
+                    return normalTime * 1.3f;
+                case StaticVariables.DifficultyMode.Hard:
+                    return normalTime * 0.7f;
+            }
+        }
+        return normalTime;
     }
 
     public void AnimateEnemyAttackBarDisappearing() {
