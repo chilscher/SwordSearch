@@ -389,30 +389,6 @@ public class UIManager : MonoBehaviour {
     }
 
     public void StartEnemyAttackTimer(float duration, Color? c = null, EnemyAttack.EnemyAttackTypes attackType = EnemyAttack.EnemyAttackTypes.None) {
-        //modify attack speed for specific enemy special attacks (usually attacks that don't do damage on their own)
-        /*
-        if (attackType == EnemyAttack.EnemyAttackTypes.Necromancy){
-            switch (StaticVariables.difficultyMode) {
-            case StaticVariables.DifficultyMode.Easy:
-                duration += 2;
-                break;
-            case StaticVariables.DifficultyMode.Hard:
-                duration -= 1;
-                break;
-            }
-        }
-        else if (attackType == EnemyAttack.EnemyAttackTypes.Lightning2){
-            switch (StaticVariables.difficultyMode) {
-            case StaticVariables.DifficultyMode.Easy:
-                duration += 2;
-                break;
-            case StaticVariables.DifficultyMode.Hard:
-                duration -= 1;
-                break;
-            }
-        }
-        */
-        //print(duration);
         duration = ScaleAttackTimerWithDifficulty(duration, attackType);
         enemyTimerBar.localScale = Vector3.one;
         enemyTimerBar.DOScale(new Vector3(0, 1, 1), duration).SetEase(Ease.Linear).OnComplete(battleManager.TriggerEnemyAttack);
@@ -423,6 +399,7 @@ public class UIManager : MonoBehaviour {
     }
 
     private float ScaleAttackTimerWithDifficulty(float normalTime, EnemyAttack.EnemyAttackTypes attackType){
+        //modify attack speed for specific enemy special attacks (usually attacks that don't do damage on their own)
         if (attackType == EnemyAttack.EnemyAttackTypes.None)
             return normalTime;
         if (StaticVariables.difficultyMode == StaticVariables.DifficultyMode.Normal)
@@ -592,6 +569,15 @@ public class UIManager : MonoBehaviour {
         temp = earthBuffRight.rect.width;
         earthBuffRight.DOAnchorPosX(temp, 0.5f);
     }
+
+    public void RemoveNecromancyHands(){
+        battleManager.necromancyHandsHeights[0] = 0;
+        battleManager.necromancyHandsHeights[1] = 0;
+        battleManager.necromancyHandsHeights[2] = 0;
+        battleManager.necromancyHandsHeights[3] = 0;
+        battleManager.necromancyHandsHeights[4] = 0;
+        ShowNecromancyHandHeights();
+    }
     
     public void ShowNecromancyHandHeights(){
         int[] heights = { -1481, -1400, -1200, -993, -786, -579, -372, -165, -10 };
@@ -682,6 +668,7 @@ public class UIManager : MonoBehaviour {
             ChangeAnimationStateIfObjectIsActive(ls.darkIconAnimator, state);
             ChangeAnimationStateIfObjectIsActive(ls.swordIconAnimator, state);
             ChangeAnimationStateIfObjectIsActive(ls.selectedSignifierAnimator, state);
+            ChangeAnimationStateIfObjectIsActive(ls.chargedIconAnimator, state);
         }
         foreach (Transform t in enemyParentParent) {
             if (t.GetComponent<Animator>() != null)

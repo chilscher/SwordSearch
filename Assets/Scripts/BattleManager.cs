@@ -171,6 +171,8 @@ public class BattleManager : MonoBehaviour {
             uiManager.PauseWaterDrain();
             uiManager.FadeOutWaterOverlay();
             uiManager.RemoveRocksFromEdgeOfPuzzle();
+            uiManager.RemoveNecromancyHands();
+            ClearLightningCharging();
             uiManager.PauseBoulderDebuff();
             uiManager.PausePageTurn();
             ClearWord(false);
@@ -224,6 +226,8 @@ public class BattleManager : MonoBehaviour {
             uiManager.PauseWaterDrain();
             uiManager.FadeOutWaterOverlay();
             uiManager.RemoveRocksFromEdgeOfPuzzle();
+            uiManager.RemoveNecromancyHands();
+            ClearLightningCharging();
             uiManager.PauseBoulderDebuff();
             uiManager.PausePageTurn();
             ClearWord(false);
@@ -473,30 +477,6 @@ public class BattleManager : MonoBehaviour {
         isEnemyLightningCharging = true;
     }
 
-    private void DoEnemyLightningStrike(int damage){
-            ApplyEnemyAttackDamage(damage);
-    }
-
-    /*
-    private void DoEnemyLightningAttack(int damage){
-        if (isEnemyLightningCharging){
-            ApplyEnemyAttackDamage(damage);
-            ClearLightningCharging();
-        }
-        else{
-            enemyLightningChargeColumn = StaticVariables.rand.Next(1, 6);
-            puzzleGenerator.letterSpaces[0,enemyLightningChargeColumn-1].ShowCharged();
-            StaticVariables.WaitTimeThenCallFunction(0.1f,puzzleGenerator.letterSpaces[1,enemyLightningChargeColumn-1].ShowCharged);
-            StaticVariables.WaitTimeThenCallFunction(0.2f,puzzleGenerator.letterSpaces[2,enemyLightningChargeColumn-1].ShowCharged);
-            StaticVariables.WaitTimeThenCallFunction(0.3f,puzzleGenerator.letterSpaces[3,enemyLightningChargeColumn-1].ShowCharged);
-            StaticVariables.WaitTimeThenCallFunction(0.4f,puzzleGenerator.letterSpaces[4,enemyLightningChargeColumn-1].ShowCharged);
-            StaticVariables.WaitTimeThenCallFunction(0.5f,puzzleGenerator.letterSpaces[5,enemyLightningChargeColumn-1].ShowCharged);
-            StaticVariables.WaitTimeThenCallFunction(0.6f,puzzleGenerator.letterSpaces[6,enemyLightningChargeColumn-1].ShowCharged);
-            isEnemyLightningCharging = true;
-        }
-    }
-    */
-    
     private void RaiseNecromancyHands(){
         //first, decide which heights to raise the new hands to
         for (int i = 0; i < necromancyHandsHeights.Length; i++){
@@ -810,18 +790,6 @@ public class BattleManager : MonoBehaviour {
         if (damage > 0)
             DamagePlayerHealth(damage);
     }
-
-    //private void RemoveInfectionsAndDamagePlayer() {
-    //    int damage = 0;
-    //    foreach (LetterSpace letter in letterSpacesForWord) {
-    //        if (letter.isInfected) {
-    //            letter.RemoveInfection(true);
-    //            damage += selfDamageFromInfectedLetters;
-    //        }
-    //    }
-    //    if (damage > 0)
-    //        DamagePlayerHealth(selfDamageFromInfectedLetters, false);
-    //}
     
     private void AttackWithFirstWordInQueue() {
         if (attackQueue.Count == 0)

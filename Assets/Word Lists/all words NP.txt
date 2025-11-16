@@ -9503,7 +9503,6 @@ alvine
 alvissmal
 alvite
 alvus
-alw
 alway
 always
 alwise
@@ -293427,7 +293426,6 @@ stows
 stowse
 stowth
 stowwood
-str
 stra
 strabism
 strabismal
@@ -314400,7 +314398,6 @@ toryistic
 toryize
 toryship
 toryweed
-tos
 tosaphist
 tosaphoth
 tosca

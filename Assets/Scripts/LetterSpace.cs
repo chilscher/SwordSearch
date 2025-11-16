@@ -82,7 +82,7 @@ public class LetterSpace : MonoBehaviour{
     public Transform burnIcon;
     public Transform charredIcon;
     public Transform infectedIcon;
-    public Transform chargedIcon;
+    public Animator chargedIconAnimator;
 
     [Header("Colors")]
     public Color normalLetterColor;
@@ -245,10 +245,7 @@ public class LetterSpace : MonoBehaviour{
     public void ShowPowerup(){
         if (powerupType == BattleManager.PowerupTypes.None){
             HidePowerupIcons();
-            //if (isInfected)
-            //    text.font = fontWithOutline;
-            //else
-                text.font = fontNoOutline;
+            text.font = fontNoOutline;
         }
         else{
             PowerupDisplayData d = battleManager.uiManager.GetPowerupDisplayDataWithType(powerupType);
@@ -256,7 +253,6 @@ public class LetterSpace : MonoBehaviour{
             ShowPowerupIcon(powerupType);
             text.font = fontWithOutline;
         }
-
     }
 
     public void SetPowerup(BattleManager.PowerupTypes type){
@@ -320,7 +316,6 @@ public class LetterSpace : MonoBehaviour{
         infectedIcon.localScale = Vector2.zero;
         infectedIcon.DOScale(originalScale, 0.2f);
         battleManager.puzzleGenerator.infectedLetters.Add(this);
-        //ShowPowerup();
     }
     
     public void RemoveBurn(){
@@ -333,7 +328,6 @@ public class LetterSpace : MonoBehaviour{
         battleManager.puzzleGenerator.infectedLetters.Remove(this);
         if (updateVisuals)
             infectedIcon.gameObject.SetActive(false);
-        //ShowPowerup();
     }
     
     public void HideInfection(){
@@ -350,13 +344,11 @@ public class LetterSpace : MonoBehaviour{
         float originalScale = charredIcon.localScale.x;
         charredIcon.localScale = Vector2.zero;
         charredIcon.DOScale(originalScale, 0.2f);
-        //battleManager.puzzleGenerator.burnedLetters.Add(this);
     }
     
     public void RemoveChar(){
         isCharred = false;
         charredIcon.gameObject.SetActive(false);
-        //battleManager.puzzleGenerator.burnedLetters.Remove(this);
     }
     
     private void HideChar(){
@@ -392,21 +384,17 @@ public class LetterSpace : MonoBehaviour{
     }
 
     public void ShowCharged(){
-        chargedIcon.gameObject.SetActive(true);
+        chargedIconAnimator.gameObject.SetActive(true);
     }
 
     public void DissipateCharge(){
-        if (chargedIcon.gameObject.activeSelf){
-            chargedIcon.GetComponent<Animator>().SetTrigger("Dissipate");
+        if (chargedIconAnimator.gameObject.activeSelf){
+            chargedIconAnimator.SetTrigger("Dissipate");
             StaticVariables.WaitTimeThenCallFunction(1f, HideCharged);
         }
     }
 
     private void HideCharged(){
-        chargedIcon.gameObject.SetActive(false);
+        chargedIconAnimator.gameObject.SetActive(false);
     }
-
-    //public void HideCharged(){
-    //    chargedIcon.gameObject.SetActive(false);
-    //}
 }

@@ -3334,7 +3334,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("If this turns out to be the <necromancy>necromancy catalyst<>, I'd be absolutely shocked.", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("Not literally shocked, of course! Although it is a lightningrod...", DialogueStep.Emotion.Questioning);
+            AdvanceConditionDialogue_PlayerTalking("Not literally shocked, of course! At least I hope not...", DialogueStep.Emotion.Worried);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("What field of study could be related to <lightning>lightning magic<> anyway?", DialogueStep.Emotion.Questioning);
@@ -3399,13 +3399,13 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("Isn't it?", DialogueStep.Emotion.Surprised_Spa);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("I can feel my skin... doing something.", "Knight NPC", DialogueStep.Emotion.Custom1);
-        }
-        else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("For the first time in my life, I'm aware of my pores!", "Knight NPC", DialogueStep.Emotion.Custom1);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("Which is... good, I think?", "Knight NPC", DialogueStep.Emotion.Custom1);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_EnemyTalking("I can feel my skin doing something!", "Knight NPC", DialogueStep.Emotion.Custom1);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("Ha! Your knight friend isn't so bad after all.", "Nymph - sick", DialogueStep.Emotion.Happy);
@@ -3414,16 +3414,16 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("It's amazing how a little humility can change a person.", DialogueStep.Emotion.Normal_Spa);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_PlayerTalking("I'm glad you've stopped pretending you're a brave macho man.", DialogueStep.Emotion.Surprised_Spa);
+            AdvanceConditionDialogue_PlayerTalking("I'm glad you've stopped pretending you're such a brave macho man.", DialogueStep.Emotion.Surprised_Spa);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("Honestly, it has been quite exhausting.", "Knight NPC", DialogueStep.Emotion.Custom1);
+            AdvanceConditionDialogue_EnemyTalking("Ugh, honestly, it has been quite exhausting.", "Knight NPC", DialogueStep.Emotion.Custom1);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("It feels good to open up and be comfortable with myself.", "Knight NPC", DialogueStep.Emotion.Custom1);
+            AdvanceConditionDialogue_EnemyTalking("Maybe it's time to stop taking myself so seriously, huh?", "Knight NPC", DialogueStep.Emotion.Custom1);
         }
         else if (++i == cutsceneStep){
-            AdvanceConditionDialogue_EnemyTalking("Plus, a little relaxation doesn't hurt.", "Knight NPC", DialogueStep.Emotion.Custom1);
+            AdvanceConditionDialogue_EnemyTalking("Some peaceful relaxation here would do me good.", "Knight NPC", DialogueStep.Emotion.Custom1);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("Oh yeah, we should really try to rest while we can!", DialogueStep.Emotion.Surprised_Spa);
@@ -3436,6 +3436,9 @@ public class CutsceneManager : MonoBehaviour{
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_EnemyTalking("I don't quite understand what you mean.", "Knight NPC", DialogueStep.Emotion.Custom1);
+        }
+        else if (++i == cutsceneStep){
+            AdvanceConditionDialogue_PlayerTalking("Oh, you'll see soon enough!", DialogueStep.Emotion.Surprised_Spa);
         }
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_NobodyTalking(true);

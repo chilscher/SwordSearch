@@ -153,6 +153,11 @@ MonoBehaviour:
       isSpecial: 1
       specialType: 7
       specialColor: {r: 1, g: 1, b: 0.38039216, a: 1}
+    - attackSpeed: 6
+      attackDamage: 0
+      isSpecial: 1
+      specialType: 5
+      specialColor: {r: 0.23921569, g: 0.09019608, b: 0.28235295, a: 1}
   isDraconic: 0
   isHorde: 0
   isNearWater: 0

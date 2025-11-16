@@ -82,7 +82,6 @@ alo
 alp
 als
 alt
-alw
 aly
 ama
 amb
@@ -1714,7 +1713,6 @@ std
 stg
 stk
 stm
-str
 stu
 sty
 sub
@@ -1816,7 +1814,6 @@ ton
 too
 top
 tor
-tos
 tot
 tou
 tov
