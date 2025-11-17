@@ -983,8 +983,11 @@ public class AttackData {
             return;
         }
         int len = word.Length;
-        if (hasEarthBuff)
+        if (hasEarthBuff){
             len += 2;
+            if (battleManager.enemyData.hasBrittleBones)
+                len ++;
+        }
         int powerupCount = 0;
         foreach (LetterSpace ls in battleManager.letterSpacesForWord) {
             if (ls.powerupType != BattleManager.PowerupTypes.None)

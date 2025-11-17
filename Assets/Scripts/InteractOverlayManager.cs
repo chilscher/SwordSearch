@@ -365,6 +365,11 @@ public class InteractOverlayManager : MonoBehaviour{
             summary.Add("This enemy attacks with the <necromancy>power of necromancy<>.");
             details.Add("Every time you are hit by a <necromancy>necromancy<> attack, <necromancy>necromantic energy<> will cover the bottom of the book, blocking letters. Using a letter just above the <necromancy>blockage<> will push it back down.");
         }
+        if (enemy.hasBrittleBones){
+            summary.Add("This enemy has <damage>brittle bones<>.");
+            //details.Add("Making an attack enhanced by the <earth>power of earth<> will +3 letters longer, instead of the normal +2.");
+            details.Add("Words enhanced by the <earth>power of earth<> will act as if they are <damage>+3 letters longer<>, instead of the normal +2.");
+        }
 
         summary = TextFormatter.FormatStringList(summary);
         details = TextFormatter.FormatStringList(details);

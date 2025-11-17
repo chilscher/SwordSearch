@@ -132,7 +132,7 @@ MonoBehaviour:
   attackOrder:
     Value:
     - attackSpeed: 10
-      attackDamage: 15
+      attackDamage: 13
       isSpecial: 0
       specialType: 0
       specialColor: {r: 0, g: 0, b: 0, a: 0}
@@ -150,6 +150,7 @@ MonoBehaviour:
   weakToFire: 0
   usesLightning: 0
   usesNecromancy: 0
+  hasBrittleBones: 0
   normal: {fileID: 1543554617, guid: 2f8e83c6f1c85834784b76d45441fe1e, type: 3}
   angry: {fileID: -2056507514, guid: 2f8e83c6f1c85834784b76d45441fe1e, type: 3}
   defeated: {fileID: 629605316, guid: 2f8e83c6f1c85834784b76d45441fe1e, type: 3}
