@@ -5061,7 +5061,6 @@ flche
 fldxt
 fleak
 fleam
-flear
 fleas
 fleay
 fleck

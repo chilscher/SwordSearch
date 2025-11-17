@@ -361,7 +361,7 @@ MonoBehaviour:
     name: 
     emotion: 4
     description: I wouldn't worry about it, girlfriend. If you knock 'em down, they
-      just put themselves  back together again!
+      just put themselves back together again!
   - type: 1
     talker: {fileID: 0}
     name: 

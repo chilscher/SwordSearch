@@ -222,19 +222,34 @@ MonoBehaviour:
     description: So you're undead too?
   - type: 4
     talker: {fileID: 0}
-    name: Pharaoh Steve II
+    name: Craigankhamun
     emotion: 4
-    description: Yep. Pharaoh Steve II, at your service.
+    description: Yep. Craigankhamun, at your service.
   - type: 4
     talker: {fileID: 0}
-    name: Formerly Pharaoh Steve II
+    name: Craigankhamun II
+    emotion: 4
+    description: Actually, Craigankhamun II, if you want to be technical about it.
+  - type: 4
+    talker: {fileID: 0}
+    name: Craig II
+    emotion: 4
+    description: But you can just call me Craig. Uh.. Craig II.
+  - type: 4
+    talker: {fileID: 0}
+    name: Pharaoh Craig II
+    emotion: 4
+    description: Pharaoh! Pharaoh Craig II!
+  - type: 4
+    talker: {fileID: 0}
+    name: Formerly Pharaoh Craig II
     emotion: 5
     description: Or I was the Pharaoh, before the boss brought me back.
   - type: 4
     talker: {fileID: 0}
-    name: Bouncer Steve II
+    name: Bouncer Craig II
     emotion: 2
-    description: Now I might just be Bouncer Steve II.
+    description: Now I might just be Bouncer Craig II.
   - type: 0
     talker: {fileID: 0}
     name: Formerly Name Name
@@ -248,13 +263,13 @@ MonoBehaviour:
     description: Plus, none of them have been able to talk, but you can. Why is that?
   - type: 4
     talker: {fileID: 0}
-    name: Bouncer Steve II
+    name: Bouncer Craig II
     emotion: 0
     description: Ah, I understand the confusion. Not to worry, I was enbalmed at
       the end of my past life.
   - type: 4
     talker: {fileID: 0}
-    name: Bouncer Steve II
+    name: Bouncer Craig II
     emotion: 0
     description: All of my organs are still intact, perfectly usable.
   - type: 0
@@ -264,45 +279,50 @@ MonoBehaviour:
     description: But... enbalming means your organs have been removed and preserved?
   - type: 4
     talker: {fileID: 0}
-    name: Bouncer Steve II
+    name: Bouncer Craig II
     emotion: 0
     description: Exactly! They're all in these jars here. I carry them with me wherever
       I go.
   - type: 4
     talker: {fileID: 0}
-    name: Bouncer Steve II
+    name: Bouncer Craig II
     emotion: 4
     description: Hope that clears things up.
   - type: 0
     talker: {fileID: 0}
     name: Formerly Name Name
     emotion: 2
-    description: Not at all actually. But it's magic, it doesn't have to make sense
-      all the time.
+    description: No, it really doesn't.
+  - type: 0
+    talker: {fileID: 0}
+    name: Formerly Name Name
+    emotion: 0
+    description: But you know what, it's magic. If the magic says you can talk, then
+      I guess you can talk.
   - type: 4
     talker: {fileID: 0}
-    name: Bouncer Steve II
+    name: Bouncer Craig II
     emotion: 0
     description: I'm not at liberty to discuss the boss' magic with a breather like
       yourself, I'm sure you understand.
   - type: 4
     talker: {fileID: 0}
-    name: Bouncer Steve II
+    name: Bouncer Craig II
     emotion: 0
     description: I shouldn't let you into the party, either. Although...
   - type: 4
     talker: {fileID: 0}
-    name: Bouncer Steve II
+    name: Bouncer Craig II
     emotion: 4
     description: You seem like a nice lady. I'll tell you what.
   - type: 4
     talker: {fileID: 0}
-    name: Bouncer Steve II
+    name: Bouncer Craig II
     emotion: 0
     description: If you make a show of knocking me out, you can head on in.
   - type: 4
     talker: {fileID: 0}
-    name: Bouncer Steve II
+    name: Bouncer Craig II
     emotion: 5
     description: What's the boss going to do, fire a guy who just got beat up?
   victoryDialogueSteps:

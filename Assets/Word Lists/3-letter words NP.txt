@@ -315,7 +315,6 @@ civ
 ckw
 cli
 clk
-clo
 clr
 cly
 cmd
@@ -710,7 +709,6 @@ gph
 gpm
 gps
 gra
-gre
 grf
 gro
 grr
@@ -1253,7 +1251,6 @@ noh
 nol
 nom
 non
-noo
 nor
 nos
 not

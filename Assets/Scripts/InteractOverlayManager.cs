@@ -363,7 +363,7 @@ public class InteractOverlayManager : MonoBehaviour{
         }
         if (enemy.usesNecromancy){
             summary.Add("This enemy attacks with the <necromancy>power of necromancy<>.");
-            details.Add("Every time you are hit by a <necromancy>necromancy<> attack, <necromancy>necromantic energy<> will cover the bottom of the book, blocking letters. Making a word using the letters just above the <necromancy>blockage<> will lower it and free up more room.");
+            details.Add("Every time you are hit by a <necromancy>necromancy<> attack, <necromancy>necromantic energy<> will cover the bottom of the book, blocking letters. Using a letter just above the <necromancy>blockage<> will push it back down.");
         }
 
         summary = TextFormatter.FormatStringList(summary);

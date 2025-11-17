@@ -130,7 +130,7 @@ MonoBehaviour:
   startingHealth: 175
   attackOrder:
     Value:
-    - attackSpeed: 6
+    - attackSpeed: 7
       attackDamage: 2
       isSpecial: 1
       specialType: 4

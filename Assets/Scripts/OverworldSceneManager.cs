@@ -108,7 +108,25 @@ public class OverworldSceneManager : MonoBehaviour{
                 StaticVariables.buffedType = BattleManager.PowerupTypes.Dark;
             if (thisWorldNum == 7 || thisWorldNum == 8)
                 StaticVariables.buffedType = BattleManager.PowerupTypes.Sword;
-        }
+        }  
+        else if (StaticVariables.buffedType == BattleManager.PowerupTypes.Lightning){//if the buffed type is not available for this world, set it to the highest one available
+            if (thisWorldNum == 4)
+                StaticVariables.buffedType = BattleManager.PowerupTypes.Fire;
+        }  
+        else if (StaticVariables.buffedType == BattleManager.PowerupTypes.Dark){
+            if (thisWorldNum == 4)
+                StaticVariables.buffedType = BattleManager.PowerupTypes.Fire;
+            if (thisWorldNum == 5)
+                StaticVariables.buffedType = BattleManager.PowerupTypes.Lightning;
+        }   
+        else if (StaticVariables.buffedType == BattleManager.PowerupTypes.Sword){
+            if (thisWorldNum == 4)
+                StaticVariables.buffedType = BattleManager.PowerupTypes.Fire;
+            if (thisWorldNum == 5)
+                StaticVariables.buffedType = BattleManager.PowerupTypes.Lightning;
+            if (thisWorldNum == 6)
+                StaticVariables.buffedType = BattleManager.PowerupTypes.Dark;
+        }     
         //clear the buffed type if on worlds 1-3
         if (thisWorldNum < 4)
             StaticVariables.buffedType = BattleManager.PowerupTypes.None;

@@ -190,7 +190,7 @@ MonoBehaviour:
   - type: 1
     talker: {fileID: 0}
     name: 
-    emotion: 2
+    emotion: 0
     description: Mmmf mf.
   victoryDialogueSteps:
   - type: 0

@@ -80,6 +80,6 @@ public class EnemyAttack{
     public float attackSpeed = 2f;
     public int attackDamage = 6;
     public bool isSpecial = false;
-    [ConditionalField(nameof(isSpecial))] public EnemyAttackTypes specialType;
+    [ConditionalField(nameof(isSpecial))] public EnemyAttackTypes specialType = EnemyAttackTypes.None;
     [ConditionalField(nameof(isSpecial))] public Color specialColor;
 }

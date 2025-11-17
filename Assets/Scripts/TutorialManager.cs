@@ -834,7 +834,7 @@ public class TutorialManager : BattleManager {
             advanceCondition = Cond.Click;
         }
         else if (++i == tutorialStep){
-            DisplayEnemyTalking("Despite being a woman, you are quite capable in battle...", enemyData, DialogueStep.Emotion.Defeated, "Artis");
+            DisplayEnemyTalking("I've never met a woman so... oof... capable...", enemyData, DialogueStep.Emotion.Defeated, "Artis");
             advanceCondition = Cond.Click;
         }
         else if (++i == tutorialStep){

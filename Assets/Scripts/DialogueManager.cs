@@ -310,10 +310,15 @@ public class DialogueManager : MonoBehaviour{
             DisplaySpeakerName("WARNING");
         }
         if (currentStep == dialogueSteps.Length - 1)
-            SetButtonText("CONTINUE");
+            SetButtonTextToEnd();
         else
             SetButtonText("CONTINUE");
 
+    }
+
+    public void SetButtonTextToEnd(){
+        //can change exact string later without having to update all references
+        SetButtonText("END");
     }
     
     private void TalkStageMagicFlash(Color color){

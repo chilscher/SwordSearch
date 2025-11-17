@@ -632,6 +632,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("Could it be an actual spellbook?", DialogueStep.Emotion.Questioning);
         }
         else if (++i == cutsceneStep){
+            dialogueManager.SetButtonTextToEnd();
             AdvanceConditionDialogue_PlayerTalking("And the letters react to my touch! It's definitely probably magical!", DialogueStep.Emotion.Happy);
         }
         else if (++i == cutsceneStep){
@@ -927,6 +928,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("To get to the desert, you'll have to get to the far side of the enchanted forest, beyond the grasslands to the south.", "Elder", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
+            dialogueManager.SetButtonTextToEnd();
             AdvanceConditionDialogue_EnemyTalking("And don't worry about us, we will make sure the town stays safe!", "Blacksmith", DialogueStep.Emotion.Happy);
         }
         else if (++i == cutsceneStep){
@@ -1064,6 +1066,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("Make haste! The future of the whole continent may depend on it!", "Elder", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep){
+            dialogueManager.SetButtonTextToEnd();
             AdvanceConditionDialogue_PlayerTalking("You're right! I'd better get going!", DialogueStep.Emotion.Surprised);
         }
         else if (++i == cutsceneStep){
@@ -1448,6 +1451,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("The book's pages are empty aside from a single word,\n\"EARTH\".", "Magic Book", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
+            dialogueManager.SetButtonTextToEnd();
             AdvanceConditionDialogue_PlayerTalking("We need to get out of here! The cave could collapse at any moment!", DialogueStep.Emotion.Surprised);
         }
         else if (++i == cutsceneStep){
@@ -1527,7 +1531,7 @@ public class CutsceneManager : MonoBehaviour{
         }  
         else if (++i == cutsceneStep){ 
             AdvanceConditionWait(1.5f);
-            PlayAnimation("Player", "Put Away Book");
+            PlayAnimation("Player", "Put Away Book Flipped");
         }   
         else if (++i == cutsceneStep){
             AdvanceConditionDialogue_PlayerTalking("It really is beautiful here...", DialogueStep.Emotion.Normal);
@@ -1539,6 +1543,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("I should try to get through quickly and leave no trace.", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
+            dialogueManager.SetButtonTextToEnd();
             AdvanceConditionDialogue_PlayerTalking("I'll have to just pick a direction and move carefully and quietly.", DialogueStep.Emotion.Normal);
         }  
         else if (++i == cutsceneStep){
@@ -1935,6 +1940,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("That's it, no more questions!", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep){
+            dialogueManager.SetButtonTextToEnd();
             AdvanceConditionDialogue_PlayerTalking("I'm putting a stop to your mad science here and now!", DialogueStep.Emotion.Angry);
         }    
         else if (++i == cutsceneStep){
@@ -2333,6 +2339,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("I have an inkling that I might be close to a breakthrough!", "Wizard", DialogueStep.Emotion.Happy);
         }
         else if (++i == cutsceneStep) {
+            dialogueManager.SetButtonTextToEnd();
             AdvanceConditionDialogue_EnemyTalking("But don't let me keep you! Those dragons aren't going to stop themselves.", "Wizard", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
@@ -2611,6 +2618,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("I'll have to pick something good to read...", DialogueStep.Emotion.Questioning);
         } 
         else if (++i == cutsceneStep){
+            dialogueManager.SetButtonTextToEnd();
             AdvanceConditionDialogue_PlayerTalking("But in the meantime, we should keep going. That dragon-killing sword is somewhere in this desert!", DialogueStep.Emotion.Normal);
         } 
         else if (++i == cutsceneStep){
@@ -3225,22 +3233,28 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("Boo!! Down with MantiCORP!!!", "Crowd", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("Where is that bouncer??", "Manticore", DialogueStep.Emotion.Angry);
+            if (StaticVariables.allowProfanities)
+                AdvanceConditionDialogue_EnemyTalking("Where is that damn bouncer??", "Manticore", DialogueStep.Emotion.Angry);
+            else
+                AdvanceConditionDialogue_EnemyTalking("Where is that dang bouncer??", "Manticore", DialogueStep.Emotion.Angry);
         }
+        //else if (++i == cutsceneStep) {
+        //    AdvanceConditionDialogue_EnemyTalking("Where is that bouncer??", "Manticore", DialogueStep.Emotion.Angry);
+        //}
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("\"That bouncer\"? Erm, you mean the Pharaoh?", "Announcer Mummy", DialogueStep.Emotion.Surprised);
         }
-        else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("His majesty... got beat up. He is currently reforming.", "Announcer Mummy", DialogueStep.Emotion.Surprised);
-        }
+        //else if (++i == cutsceneStep) {
+        //    AdvanceConditionDialogue_EnemyTalking("His majesty... got beat up. He is currently reforming.", "Announcer Mummy", DialogueStep.Emotion.Surprised);
+        //}
         else if (++i == cutsceneStep) {
             AdvanceConditionDialogue_EnemyTalking("Bah! I didn't bring him back to be worshipped, I brought him back to work for me!", "Manticore", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("He's fired!", "Manticore", DialogueStep.Emotion.Angry);
+            AdvanceConditionDialogue_EnemyTalking("Fire him!!!", "Manticore", DialogueStep.Emotion.Angry);
         }
         else if (++i == cutsceneStep) {
-            AdvanceConditionDialogue_EnemyTalking("I'd advise against firing the Pharaoh. It would be a PR nightmare.", "Announcer Mummy", DialogueStep.Emotion.Normal);
+            AdvanceConditionDialogue_EnemyTalking("I'd advise against firing the Pharaoh. It would be a PR nightmare. Plus, he just got beat up!", "Announcer Mummy", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
             if (StaticVariables.allowProfanities)
@@ -3252,6 +3266,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_EnemyTalking("Now he's threatening the Pharaoh!", "Elton", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
+            dialogueManager.SetButtonTextToEnd();
             AdvanceConditionDialogue_EnemyTalking("Down with MantiCORP!!", "Crowd", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep) {
@@ -3607,6 +3622,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("The city has been a warzone for a few weeks now, and it'll just continue to get worse.", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
+            dialogueManager.SetButtonTextToEnd();
             AdvanceConditionDialogue_PlayerTalking("You can trust me, I'll get that sword! Just try to stay safe while I'm gone.", DialogueStep.Emotion.Normal);
         }
         else if (++i == cutsceneStep){
@@ -3663,6 +3679,7 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_PlayerTalking("But maybe it won't be the most fun to try on a harmless enemy.", DialogueStep.Emotion.Defeated);
         }
         else if (++i == cutsceneStep){
+            dialogueManager.SetButtonTextToEnd();
             AdvanceConditionDialogue_PlayerTalking("Oh, well! I bet the animations will look cool at least!", DialogueStep.Emotion.Happy);
         }
         else if (++i == cutsceneStep){

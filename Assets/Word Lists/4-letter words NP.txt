@@ -2235,7 +2235,6 @@ furs
 fury
 fusc
 fuse
-fusk
 fuss
 fust
 fute
@@ -2498,7 +2497,6 @@ goup
 gour
 gout
 gove
-govt
 gowd
 gowf
 gowk
@@ -2517,7 +2515,6 @@ grat
 grav
 gray
 gree
-greg
 gres
 gret
 grew
@@ -3618,7 +3615,6 @@ lice
 lich
 lick
 lida
-lide
 lido
 lids
 lied

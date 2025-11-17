@@ -828,8 +828,16 @@ public class BattleManager : MonoBehaviour {
             ea = firstEnemyInHorde.attackOrder.Value[enemyAttackIndex];
         else
             ea = enemyData.attackOrder.Value[enemyAttackIndex];
-        if (ea.isSpecial)
+        if (ea.isSpecial){
+            if (ea.specialType == EnemyAttack.EnemyAttackTypes.Lightning2){
+                //if the player dissipated the electricity while the bar was refilling, skip to the next attack
+                if (!isEnemyLightningCharging) {
+                    QueueAttackAfterCancel();
+                    return;
+                }
+            }
             uiManager.StartEnemyAttackTimer(ea.attackSpeed, ea.specialColor, ea.specialType);
+        }
         else
             uiManager.StartEnemyAttackTimer(ea.attackSpeed);
     }
@@ -846,10 +854,15 @@ public class BattleManager : MonoBehaviour {
     }
 
     public virtual void TriggerEnemyAttack(){
+        print("got here 2");
         if (!stopNextAttack){
             DecrementRefreshPuzzleCountdown();
             UpdateSubmitVisuals();
-            uiManager.StartEnemyAttackAnimation(enemyData.attackOrder.Value[enemyAttackIndex].specialType);
+            print("got here 3");
+            if (enemyData.isHorde)
+                uiManager.StartEnemyAttackAnimation(firstEnemyInHorde.attackOrder.Value[enemyAttackIndex].specialType);
+            else
+                uiManager.StartEnemyAttackAnimation(enemyData.attackOrder.Value[enemyAttackIndex].specialType);
         }
     }
 

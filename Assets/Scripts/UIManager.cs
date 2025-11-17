@@ -432,7 +432,8 @@ public class UIManager : MonoBehaviour {
         }
     }
 
-    public void StartEnemyAttackAnimation(EnemyAttack.EnemyAttackTypes? attackType = null) {
+    public void StartEnemyAttackAnimation(EnemyAttack.EnemyAttackTypes attackType = EnemyAttack.EnemyAttackTypes.None) {
+        print("got here");
         if (battleManager.enemyData.isHorde) {
             foreach (Animator anim in enemyHordeAnimators)
                 anim.SetTrigger("Attack");
