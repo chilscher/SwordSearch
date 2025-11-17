@@ -229,12 +229,12 @@ MonoBehaviour:
   - type: 4
     talker: {fileID: 0}
     name: Craigankhamun II
-    emotion: 4
+    emotion: 5
     description: Actually, Craigankhamun II, if you want to be technical about it.
   - type: 4
     talker: {fileID: 0}
     name: Craig II
-    emotion: 4
+    emotion: 0
     description: But you can just call me Craig. Uh.. Craig II.
   - type: 4
     talker: {fileID: 0}
@@ -255,13 +255,13 @@ MonoBehaviour:
     talker: {fileID: 0}
     name: Formerly Name Name
     emotion: 0
-    description: I don't mean to be impolite, but you don't look like any of the
-      other undead I've seen.
+    description: For an undead, you are pretty talkative, huh...
   - type: 0
     talker: {fileID: 0}
     name: Formerly Name Name
     emotion: 5
-    description: Plus, none of them have been able to talk, but you can. Why is that?
+    description: None of the others I've come across have been able to speak, but
+      you can. Why is that?
   - type: 4
     talker: {fileID: 0}
     name: Bouncer Craig II

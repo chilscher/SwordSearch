@@ -530,6 +530,7 @@ MonoBehaviour:
   burnIcon: {fileID: 3069169878593812042}
   charredIcon: {fileID: 864441113959922144}
   infectedIcon: {fileID: 1238677760324529498}
+  chargedIcon: {fileID: 6852294310555820628}
   chargedIconAnimator: {fileID: 3518418765441572057}
   normalLetterColor: {r: 0.1792453, g: 0.1792453, b: 0.1792453, a: 1}
   powerupOrWordLetterColor: {r: 0.94509804, g: 0.9254902, b: 0.8627451, a: 1}
@@ -2155,7 +2156,6 @@ GameObject:
   - component: {fileID: 4756853007061431207}
   - component: {fileID: 6852294310555820628}
   - component: {fileID: 3518418765441572057}
-  - component: {fileID: 6055547335563542879}
   m_Layer: 0
   m_Name: Charged
   m_TagString: Untagged
@@ -2241,19 +2241,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6055547335563542879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8412324463309868409}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76a7427ed1e37fc46baf49a8b196a669, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stateNameOverride: Lightning Charge
 --- !u!1 &8832771209801951931
 GameObject:
   m_ObjectHideFlags: 0

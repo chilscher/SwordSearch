@@ -82,6 +82,7 @@ public class LetterSpace : MonoBehaviour{
     public Transform burnIcon;
     public Transform charredIcon;
     public Transform infectedIcon;
+    public Image chargedIcon;
     public Animator chargedIconAnimator;
 
     [Header("Colors")]
@@ -385,11 +386,25 @@ public class LetterSpace : MonoBehaviour{
 
     public void ShowCharged(){
         chargedIconAnimator.gameObject.SetActive(true);
+        chargedIconAnimator.transform.localScale = Vector3.zero;
+        chargedIconAnimator.transform.DOScale(Vector3.one, 1f);
+        chargedIcon.color = Color.white;
+        Color c = Color.white;
+        c.a = 0.8f;
+        chargedIcon.DOColor(c,1f);
+        //chargedIconAnimator.Play("Appear");
     }
 
     public void DissipateCharge(){
         if (chargedIconAnimator.gameObject.activeSelf){
-            chargedIconAnimator.SetTrigger("Dissipate");
+            //print("dissipate");
+            chargedIconAnimator.transform.localScale = Vector3.one;
+            chargedIconAnimator.transform.DOScale(Vector3.one * 2f, 1f);
+            chargedIcon.color = Color.white;
+            Color c = Color.white;
+            c.a = 0f;
+            chargedIcon.DOColor(c,1f);
+            //chargedIconAnimator.Play("Dissipate");
             StaticVariables.WaitTimeThenCallFunction(1f, HideCharged);
         }
     }

@@ -172,6 +172,7 @@ MonoBehaviour:
   weakToFire: 0
   usesLightning: 1
   usesNecromancy: 1
+  hasBrittleBones: 0
   normal: {fileID: -1557460093, guid: 8831f2639002f4b4d8f909aab5d18b61, type: 3}
   angry: {fileID: 38637143, guid: 8831f2639002f4b4d8f909aab5d18b61, type: 3}
   defeated: {fileID: 1308978502, guid: 8831f2639002f4b4d8f909aab5d18b61, type: 3}

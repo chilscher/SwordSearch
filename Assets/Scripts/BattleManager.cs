@@ -467,6 +467,8 @@ public class BattleManager : MonoBehaviour {
 
     private void DoEnemyLightningCharge(){
         enemyLightningChargeColumn = StaticVariables.rand.Next(1, 6);
+        //enemyLightningChargeColumn = 1;
+        //print("charging, col " + enemyLightningChargeColumn);
         puzzleGenerator.letterSpaces[0,enemyLightningChargeColumn-1].ShowCharged();
         StaticVariables.WaitTimeThenCallFunction(0.1f,puzzleGenerator.letterSpaces[1,enemyLightningChargeColumn-1].ShowCharged);
         StaticVariables.WaitTimeThenCallFunction(0.2f,puzzleGenerator.letterSpaces[2,enemyLightningChargeColumn-1].ShowCharged);
@@ -758,6 +760,7 @@ public class BattleManager : MonoBehaviour {
     }
 
     private void DischargeLightningFromCurrentWord(){
+        //print(isEnemyLightningCharging);
         if (!enemyData.usesLightning)
             return;
         if (!isEnemyLightningCharging)
@@ -854,11 +857,9 @@ public class BattleManager : MonoBehaviour {
     }
 
     public virtual void TriggerEnemyAttack(){
-        print("got here 2");
         if (!stopNextAttack){
             DecrementRefreshPuzzleCountdown();
             UpdateSubmitVisuals();
-            print("got here 3");
             if (enemyData.isHorde)
                 uiManager.StartEnemyAttackAnimation(firstEnemyInHorde.attackOrder.Value[enemyAttackIndex].specialType);
             else
