@@ -1,23 +1,5 @@
-95 theses\the publication of martin luther's criticisms of the catholic church led to the protestant reformation
-the epic of gilgamesh
-the odyssey
-the five classics
-the daozang
-the bhagavad gita
-the king james bible
-the book of mormon
-the ten commandments
-the quran
-the tanakh
-the popol vuh
-the codex regius
-tohunga: the revival
-how maui slowed the sun\the oral legend of maui, something something
-the pyramid texts
-the gandharan buddhist texts
-the four vedas
-the upanishads
-the torah
-the mazmuur
-five dialogues\plato recounts his conversations with socrates
-the divine comedy\an adventure through dante allegheri's interpretation of the christian hell
+95 theses\martin luther criticizes the methods of forgiveness and punishment for sins within the roman catholic church, which began the protestant reformation
+the divine comedy\dante alighieri's narrative poem depicts a journey through hell, purgatory, and heaven to present a vision of the afterlife
+nicomachean ethics\aristotle asks what exactly defines a good life, asserts that goodness comes from both morals and deeds, and provides practical advice in the pursuit of both
+meditations on first philosophy\rene descartes establishes what can be known for certain, beginning with the existence of the self, and logically proving the existence of god and material objects
+an essay on free will\peter van inwagen asserts that determinism and free will cannot logically coexist, because if the past was predetermined, then all human actions are foregone conclusions

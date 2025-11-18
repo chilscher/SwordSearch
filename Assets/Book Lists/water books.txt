@@ -4,3 +4,4 @@ everyone here spoke sign language\nora ellen groce analyzes the hereditary deafn
 the unfolding of language\guy deutscher describes the development of language, covering the origins of syntax, grammar, and complex systems of communication
 the rosetta stone\inscribed with ancient greek, hieroglyphics, and demotic scripts, this stele was the key to translating and understanding ancient egyptian text
 interesting stories about curious words\susie dent explains the unexpected origins of common (and uncommon) words and idioms
+the semantic conception of truth\alfred tarski identifies a problem with trying to define the concept of truth, and incorporates mathematics, phiolosophy, and everyday usage into a new definition
