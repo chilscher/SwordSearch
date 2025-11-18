@@ -1,4 +1,9 @@
-#original source file for all words can be found at https://github.com/dwyl/english-words/blob/master/words_alpha.txt
+#original source file for all words can be found at https://github.com/wordnik/wordlist/blob/main/wordlist-20210729.txt
+#to update to a new original source file, find your new file and remove all rows that have any non-alphanumeric characters
+#then paste that new list into 'all words.txt' and 'all words NP.txt'
+#if there is a separate list of words to exclude (ex, common non-words or known slurs), paste it into 'input - words to remove.txt'
+#if there is a separate list of profanities, paste it into 'input - profanities to remove.txt'
+#then just run the python file!
 from copy import copy
 
 #file names
@@ -53,7 +58,7 @@ for word in words_to_remove:
     if word in all_words_no_swears_list:
         new_words_list_no_swears.remove(word)
 for word in swears_to_remove:
-    if word in new_words_list:
+    if word in new_words_list_no_swears:
         new_words_list_no_swears.remove(word)
 new_words_list.sort()
 new_words_list_no_swears.sort()
