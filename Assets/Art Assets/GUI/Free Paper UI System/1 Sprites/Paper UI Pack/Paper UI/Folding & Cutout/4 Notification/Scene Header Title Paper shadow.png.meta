@@ -1,7 +1,10 @@
 fileFormatVersion: 2
-guid: 53ddf955641386748ab7af9ba30965e0
+guid: 713c1bec8ae0c0b42b13bd3e9d765152
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2470719877724502139
+    second: Scene Header Title Paper shadow_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +52,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 16, y: 22, z: 62, w: 36}
+  spriteBorder: {x: 1, y: 22, z: 62, w: 36}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -108,7 +111,29 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Scene Header Title Paper shadow_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 15
+        width: 242
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b78f34b63a2c94220800000000000000
+      internalID: 2470719877724502139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -122,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Scene Header Title Paper shadow_0: 2470719877724502139
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

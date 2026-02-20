@@ -9,19 +9,21 @@ public class SceneHeader : MonoBehaviour{
     //private float pos;
 
     //public void Start(){
-        //SlideIn();
-        //RectTransform rt = GetComponent<RectTransform>();
-        //pos = rt.localPosition.y;
-        //print(pos);
-        //transform.localPosition = new Vector2(transform.localPosition.x, pos + rt.rect.height);
-        //transform.DOLocalMoveY(pos, 0.5f);
+    //    SlideIn();
     //}
 
     public void SlideIn(){
-        
+        RectTransform rt = GetComponent<RectTransform>();
+        float pos = rt.localPosition.y;
+        transform.localPosition = new Vector2(transform.localPosition.x, pos + rt.rect.height);
+        transform.DOLocalMoveY(pos, 0.5f);
     }
 
     public void SlideOut(){
+        RectTransform rt = GetComponent<RectTransform>();
+        float pos = rt.localPosition.y;
+        //transform.localPosition = new Vector2(transform.localPosition.x, pos + rt.rect.height);
+        transform.DOLocalMoveY(pos + rt.rect.height, 0.5f);
         
     }
 

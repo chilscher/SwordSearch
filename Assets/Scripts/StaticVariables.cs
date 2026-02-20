@@ -103,6 +103,9 @@ public class StaticVariables{
     static public void WaitTimeThenCallFunction(float delay, TweenCallback<GameObject> function, GameObject param){
         tweenDummy.DOLocalMove(tweenDummy.localPosition, delay, false).OnComplete(()=>function(param));
     }
+    static public void WaitTimeThenCallFunction(float delay, TweenCallback<RectTransform> function, RectTransform param){
+        tweenDummy.DOLocalMove(tweenDummy.localPosition, delay, false).OnComplete(()=>function(param));
+    }
 
     static public void FadeOutThenLoadScene(string name){
         sceneName = name;

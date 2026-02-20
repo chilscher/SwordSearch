@@ -43,7 +43,7 @@ public class HomepageManager : MonoBehaviour{
     //public GeneralSceneManager generalSceneManager;
 
     void Start(){
-        GetComponent<GeneralSceneManager>().Setup();
+        //GetComponent<GeneralSceneManager>().Setup();
         Setup();
         //generalSceneManager.FadeIn();
     }

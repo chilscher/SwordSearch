@@ -17,14 +17,19 @@ public class SettingsSceneManager : MonoBehaviour{
     public Text difficultyModeDescription;
     [TextArea(2,5)]
     public string normalModeDescription;
+    public Color difficultyTextColorNormal;
     [TextArea(2,5)]
     public string storyModeDescription;
     [TextArea(2,5)]
     public string puzzleModeDescription;
+    public Color difficultyTextColorPuzzle;
     [TextArea(2,5)]
     public string easyModeDescription;
+    public Color difficultyTextColorEasy;
     [TextArea(2,5)]
     public string hardModeDescription;
+    public Color difficultyTextColorHard;
+    [Header("Misc")]
     public Text profanityFilterDisplay;
     public GameObject difficultyBackIcon;
     public GameObject difficultyForwardIcon;
@@ -197,6 +202,7 @@ public class SettingsSceneManager : MonoBehaviour{
             case StaticVariables.DifficultyMode.Normal:
                 difficultyModeDisplay.text = "NORMAL";
                 difficultyModeDescription.text = normalModeDescription;
+                difficultyModeDisplay.color = difficultyTextColorNormal;
                 break;
             case StaticVariables.DifficultyMode.Story:
                 difficultyModeDisplay.text = "STORY";
@@ -205,15 +211,18 @@ public class SettingsSceneManager : MonoBehaviour{
             case StaticVariables.DifficultyMode.Puzzle:
                 difficultyModeDisplay.text = "PUZZLE";
                 difficultyModeDescription.text = puzzleModeDescription;
+                difficultyModeDisplay.color = difficultyTextColorPuzzle;
                 difficultyBackIcon.SetActive(false);
                 break;
             case StaticVariables.DifficultyMode.Easy:
                 difficultyModeDisplay.text = "EASY";
                 difficultyModeDescription.text = easyModeDescription;
+                difficultyModeDisplay.color = difficultyTextColorEasy;
                 break;
             case StaticVariables.DifficultyMode.Hard:
                 difficultyModeDisplay.text = "HARD";
                 difficultyModeDescription.text = hardModeDescription;
+                difficultyModeDisplay.color = difficultyTextColorHard;
                 difficultyForwardIcon.SetActive(false);
                 break;
             default:

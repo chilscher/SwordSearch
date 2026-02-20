@@ -1,4 +1,4 @@
-//for Cityscapes, copyright Fancy Bus Games 2026
+//for Sword Search, copyright Fancy Bus Games 2026
 
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,7 +22,7 @@ public class SceneChanger{
         goingFrom = visuals.thisScene;
         goingTo = Scene.Homepage;
         visuals.AnimateLeavingScene();
-        StaticVariables.WaitTimeThenCallFunction(1f, LoadScene);
+        //StaticVariables.WaitTimeThenCallFunction(1f, LoadScene);
     }
 
     static public void GoSettings(){
@@ -30,10 +30,10 @@ public class SceneChanger{
         goingFrom = visuals.thisScene;
         goingTo = Scene.Settings;
         visuals.AnimateLeavingScene();
-        StaticVariables.WaitTimeThenCallFunction(1f, LoadScene);
+        StaticVariables.WaitTimeThenCallFunction(0.5f, LoadScene);
     }
 
-    static private void LoadScene(){
+    static public void LoadScene(){
         SceneManager.LoadScene(nextSceneName);
     }
 
