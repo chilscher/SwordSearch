@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: -0.16666651, y: -2.1666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 29
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 0.16666663, y: -1.2}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 52
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 0.4545455, y: -0.9166667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 94
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 0.51612896, y: -0.6923077}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 93
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 0.5555556, y: -0.61538464}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 49
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0.5675675, y: -0.4666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: 0.5675675, y: -0.53333336}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 49
@@ -266,6 +279,7 @@ ScriptedImporter:
     pivot: {x: 0.5675675, y: -0.6428572}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -286,6 +300,7 @@ ScriptedImporter:
     pivot: {x: 0.5555556, y: -0.6923077}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 31
@@ -306,6 +321,7 @@ ScriptedImporter:
     pivot: {x: 0.59375, y: -0.5714286}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 75
@@ -326,6 +342,7 @@ ScriptedImporter:
     pivot: {x: 0.3333333, y: -0.3888889}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 74
@@ -346,6 +363,7 @@ ScriptedImporter:
     pivot: {x: 0.29411763, y: -0.08}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -366,6 +384,7 @@ ScriptedImporter:
     pivot: {x: 0.31578946, y: -0.12}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -386,6 +405,7 @@ ScriptedImporter:
     pivot: {x: 0.28571433, y: -0.16666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 52
@@ -406,6 +426,7 @@ ScriptedImporter:
     pivot: {x: 0.2666667, y: -0.13043478}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 29
@@ -422,15 +443,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 9, y: 79}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1776858887
+    uuid:
+      value0: 3628692451
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -666274845
     name: Dark_II
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Dark_II_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -439,7 +466,7 @@ ScriptedImporter:
         width: 48
         height: 32
       spriteId: 56af86be962fd9941b52cacb69d6bac6
-    - name: Dark_II_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -448,7 +475,7 @@ ScriptedImporter:
         width: 48
         height: 32
       spriteId: 685a46807c2f0b54b9e24923096e49e4
-    - name: Dark_II_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -457,7 +484,7 @@ ScriptedImporter:
         width: 48
         height: 32
       spriteId: d1fbde4060fab714e9bbf91d88a3abbc
-    - name: Dark_II_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -466,7 +493,7 @@ ScriptedImporter:
         width: 48
         height: 32
       spriteId: 637e17af5648d9241bd60d9a1e17acea
-    - name: Dark_II_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -475,7 +502,7 @@ ScriptedImporter:
         width: 48
         height: 32
       spriteId: 8d3f835c52fcf684489101840a504486
-    - name: Dark_II_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -484,7 +511,7 @@ ScriptedImporter:
         width: 48
         height: 32
       spriteId: dc54fde43794bd04c8b05cfef0caa07b
-    - name: Dark_II_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -493,7 +520,7 @@ ScriptedImporter:
         width: 48
         height: 32
       spriteId: 976369a6908a4dc409459f9f6e2a4684
-    - name: Dark_II_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -502,7 +529,7 @@ ScriptedImporter:
         width: 48
         height: 32
       spriteId: 6b5a5737b8736f1479f9e117f9e1a011
-    - name: Dark_II_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -511,7 +538,7 @@ ScriptedImporter:
         width: 48
         height: 32
       spriteId: c1cb27ca34d207d46ab6351ddfc8c01a
-    - name: Dark_II_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -520,7 +547,7 @@ ScriptedImporter:
         width: 48
         height: 32
       spriteId: 804f95d4c903db44fba3ccb7a781593c
-    - name: Dark_II_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -529,7 +556,7 @@ ScriptedImporter:
         width: 48
         height: 32
       spriteId: 46693bb8443381c42968f15a7b40f4fe
-    - name: Dark_II_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -538,7 +565,7 @@ ScriptedImporter:
         width: 48
         height: 32
       spriteId: 3ef48e00f3d6d4b4684e7f919ba55a07
-    - name: Dark_II_Frame_12
+    - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
@@ -547,7 +574,7 @@ ScriptedImporter:
         width: 48
         height: 32
       spriteId: 70e29dee39ed07147b9eab8fb0e0bcfe
-    - name: Dark_II_Frame_13
+    - name: Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
@@ -556,7 +583,7 @@ ScriptedImporter:
         width: 48
         height: 32
       spriteId: 2be4403917451524ab76f1b14cbbf8fd
-    - name: Dark_II_Frame_14
+    - name: Frame_14
       frameIndex: 14
       additiveSortOrder: 0
       cellRect:
@@ -566,9 +593,13 @@ ScriptedImporter:
         height: 32
       spriteId: 468415397b9647b45ae0251c18551040
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 32}
+  previousTextureSize: {x: 128, y: 128}

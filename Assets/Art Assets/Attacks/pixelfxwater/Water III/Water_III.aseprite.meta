@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 8.75, y: -4.75}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 247
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 4.5, y: -2.5714285}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 231
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 2.3125, y: -1.7}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 207
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 1.3214285, y: -1.4166666}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 180
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 0.8409091, y: -1.3076923}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 61
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0.787234, y: -1.4166666}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 149
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: 0.73999995, y: -1.0714285}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 149
@@ -266,6 +279,7 @@ ScriptedImporter:
     pivot: {x: 0.75510204, y: -1.0714285}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -286,6 +300,7 @@ ScriptedImporter:
     pivot: {x: 0.75510204, y: -1}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 92
@@ -306,6 +321,7 @@ ScriptedImporter:
     pivot: {x: 0.8809524, y: -1.0625}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 207
@@ -326,6 +342,7 @@ ScriptedImporter:
     pivot: {x: 1.15625, y: -0.85}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -346,6 +363,7 @@ ScriptedImporter:
     pivot: {x: 1.95, y: -0.7083333}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 33
@@ -366,6 +384,7 @@ ScriptedImporter:
     pivot: {x: 2, y: -0.67999995}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 231
@@ -386,6 +405,7 @@ ScriptedImporter:
     pivot: {x: 1.9523811, y: -0.7083333}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -406,6 +426,7 @@ ScriptedImporter:
     pivot: {x: 0.8604651, y: -0.9444444}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 180
@@ -426,6 +447,7 @@ ScriptedImporter:
     pivot: {x: 0.4933333, y: -0.16666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -446,6 +468,7 @@ ScriptedImporter:
     pivot: {x: 0.4625, y: -0.13157894}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -466,6 +489,7 @@ ScriptedImporter:
     pivot: {x: 0.48051944, y: -0.2}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 87
@@ -486,6 +510,7 @@ ScriptedImporter:
     pivot: {x: 0.4625, y: -0.17142858}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 92
@@ -506,6 +531,7 @@ ScriptedImporter:
     pivot: {x: 0.45000002, y: -0.20588236}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -526,6 +552,7 @@ ScriptedImporter:
     pivot: {x: 0.479452, y: -0.20588236}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 172
@@ -542,15 +569,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 159, y: 85}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1143556357
+    uuid:
+      value0: 3664610471
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -630356825
     name: Water_III
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Water_III_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -559,7 +592,7 @@ ScriptedImporter:
         width: 96
         height: 48
       spriteId: aaf3ac910b521694b959891c53013b75
-    - name: Water_III_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -568,7 +601,7 @@ ScriptedImporter:
         width: 96
         height: 48
       spriteId: 0534a67fbd2fc8b498e864958ea968db
-    - name: Water_III_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -577,7 +610,7 @@ ScriptedImporter:
         width: 96
         height: 48
       spriteId: c5694e714b8f3de429126d1ff67def43
-    - name: Water_III_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -586,7 +619,7 @@ ScriptedImporter:
         width: 96
         height: 48
       spriteId: 86d87f83f4a7f914cb125ba704e5b939
-    - name: Water_III_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -595,7 +628,7 @@ ScriptedImporter:
         width: 96
         height: 48
       spriteId: 4f96a858fb64ad145be41fffd22bffb9
-    - name: Water_III_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -604,7 +637,7 @@ ScriptedImporter:
         width: 96
         height: 48
       spriteId: 1c733c75be258e846b34c6609c3f6d31
-    - name: Water_III_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -613,7 +646,7 @@ ScriptedImporter:
         width: 96
         height: 48
       spriteId: 73111eef48ee54e4090706e5e0085006
-    - name: Water_III_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -622,7 +655,7 @@ ScriptedImporter:
         width: 96
         height: 48
       spriteId: 0abcabd71b5310f488665cd389309695
-    - name: Water_III_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -631,7 +664,7 @@ ScriptedImporter:
         width: 96
         height: 48
       spriteId: c0dc3409f86aa5d4e885a4538d53bbb6
-    - name: Water_III_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -640,7 +673,7 @@ ScriptedImporter:
         width: 96
         height: 48
       spriteId: 1385eefb39796ff4d82d08665fe123c6
-    - name: Water_III_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -649,7 +682,7 @@ ScriptedImporter:
         width: 96
         height: 48
       spriteId: 723885faa52a31146804cff079f21b40
-    - name: Water_III_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -658,7 +691,7 @@ ScriptedImporter:
         width: 96
         height: 48
       spriteId: 8f5715ea9d3304044a6e31095b20346a
-    - name: Water_III_Frame_12
+    - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
@@ -667,7 +700,7 @@ ScriptedImporter:
         width: 96
         height: 48
       spriteId: 4c84d5b4bc6afdd4baf8fa04c6393a62
-    - name: Water_III_Frame_13
+    - name: Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
@@ -676,7 +709,7 @@ ScriptedImporter:
         width: 96
         height: 48
       spriteId: 5465eb7e4a1bf944991b671c31212fa4
-    - name: Water_III_Frame_14
+    - name: Frame_14
       frameIndex: 14
       additiveSortOrder: 0
       cellRect:
@@ -685,7 +718,7 @@ ScriptedImporter:
         width: 96
         height: 48
       spriteId: b042745721a22af4dab07428f2cdf756
-    - name: Water_III_Frame_15
+    - name: Frame_15
       frameIndex: 15
       additiveSortOrder: 0
       cellRect:
@@ -694,7 +727,7 @@ ScriptedImporter:
         width: 96
         height: 48
       spriteId: af9e8bce39c061e4fb0b3f18a723990f
-    - name: Water_III_Frame_16
+    - name: Frame_16
       frameIndex: 16
       additiveSortOrder: 0
       cellRect:
@@ -703,7 +736,7 @@ ScriptedImporter:
         width: 96
         height: 48
       spriteId: e87f930886354094c80aa87c49b6ad71
-    - name: Water_III_Frame_17
+    - name: Frame_17
       frameIndex: 17
       additiveSortOrder: 0
       cellRect:
@@ -712,7 +745,7 @@ ScriptedImporter:
         width: 96
         height: 48
       spriteId: 6f20843cddbf6eb4e833bd6ca295ee79
-    - name: Water_III_Frame_18
+    - name: Frame_18
       frameIndex: 18
       additiveSortOrder: 0
       cellRect:
@@ -721,7 +754,7 @@ ScriptedImporter:
         width: 96
         height: 48
       spriteId: 30b123bf78c379a4dba8177050cfdfb5
-    - name: Water_III_Frame_19
+    - name: Frame_19
       frameIndex: 19
       additiveSortOrder: 0
       cellRect:
@@ -730,7 +763,7 @@ ScriptedImporter:
         width: 96
         height: 48
       spriteId: 96087e4bcde5bc649add7dbe5208f80b
-    - name: Water_III_Frame_20
+    - name: Frame_20
       frameIndex: 20
       additiveSortOrder: 0
       cellRect:
@@ -740,9 +773,13 @@ ScriptedImporter:
         height: 48
       spriteId: f94c3385fbc0a38479004983335b9b51
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 96, y: 48}
+  previousTextureSize: {x: 256, y: 256}

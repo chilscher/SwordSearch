@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 236
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -266,6 +279,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -286,6 +300,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -306,6 +321,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 236
@@ -326,6 +342,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 236
@@ -346,6 +363,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 236
@@ -366,6 +384,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -386,6 +405,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -406,6 +426,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 236
@@ -426,6 +447,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 236
@@ -446,6 +468,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -466,6 +489,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 236
@@ -486,6 +510,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 236
@@ -506,6 +531,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 236
@@ -526,6 +552,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 236
@@ -546,6 +573,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 236
@@ -566,6 +594,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -586,6 +615,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 236
@@ -602,15 +632,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 236, y: 443}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -608875520
+    uuid:
+      value0: 1091140608
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1091140608
     name: Drown
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Drown_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -619,7 +655,7 @@ ScriptedImporter:
         width: 224
         height: 64
       spriteId: 342811ee4ee045b48918e05da80742c1
-    - name: Drown_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -628,7 +664,7 @@ ScriptedImporter:
         width: 224
         height: 64
       spriteId: 9ffe4e5936107304b86eb89cab2b3097
-    - name: Drown_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -637,7 +673,7 @@ ScriptedImporter:
         width: 224
         height: 64
       spriteId: b53b016e8c894414eb7fc88ac16a1edf
-    - name: Drown_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -646,7 +682,7 @@ ScriptedImporter:
         width: 224
         height: 64
       spriteId: 0bbff31302425404bbd956201d0653e5
-    - name: Drown_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -655,7 +691,7 @@ ScriptedImporter:
         width: 224
         height: 64
       spriteId: 675e6557946b98f42b9eba8e60ca67c1
-    - name: Drown_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -664,7 +700,7 @@ ScriptedImporter:
         width: 224
         height: 64
       spriteId: b11fe6437d2a298428fb648489706928
-    - name: Drown_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -673,7 +709,7 @@ ScriptedImporter:
         width: 224
         height: 64
       spriteId: def0faef0d852ac4c87efab64dda2eb9
-    - name: Drown_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -682,7 +718,7 @@ ScriptedImporter:
         width: 224
         height: 64
       spriteId: 957ed51a1618a984ab70fdc2f0beebfd
-    - name: Drown_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -691,7 +727,7 @@ ScriptedImporter:
         width: 224
         height: 64
       spriteId: 11ab9f4ffab25834a8fdd2464d44d4d5
-    - name: Drown_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -700,7 +736,7 @@ ScriptedImporter:
         width: 224
         height: 64
       spriteId: 256fcb8c986fed844883b36e4e7f0e2a
-    - name: Drown_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -709,7 +745,7 @@ ScriptedImporter:
         width: 224
         height: 64
       spriteId: e6a04cee1841ed84a843e02316e118a1
-    - name: Drown_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -718,7 +754,7 @@ ScriptedImporter:
         width: 224
         height: 64
       spriteId: 43c4efb14a15fa540bd4bc70e38f1036
-    - name: Drown_Frame_12
+    - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
@@ -727,7 +763,7 @@ ScriptedImporter:
         width: 224
         height: 64
       spriteId: adcf6d429a11526479d485508694e9c7
-    - name: Drown_Frame_13
+    - name: Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
@@ -736,7 +772,7 @@ ScriptedImporter:
         width: 224
         height: 64
       spriteId: 1b74bb195dd86534dbfdcf332ed0232f
-    - name: Drown_Frame_14
+    - name: Frame_14
       frameIndex: 14
       additiveSortOrder: 0
       cellRect:
@@ -745,7 +781,7 @@ ScriptedImporter:
         width: 224
         height: 64
       spriteId: 97b5d6fd63db7b74fb657e28ced6a2c5
-    - name: Drown_Frame_15
+    - name: Frame_15
       frameIndex: 15
       additiveSortOrder: 0
       cellRect:
@@ -754,7 +790,7 @@ ScriptedImporter:
         width: 224
         height: 64
       spriteId: b73fb8aeb4b87074186081ce78b56bec
-    - name: Drown_Frame_16
+    - name: Frame_16
       frameIndex: 16
       additiveSortOrder: 0
       cellRect:
@@ -763,7 +799,7 @@ ScriptedImporter:
         width: 224
         height: 64
       spriteId: 27c978985558c594a905d8d8008cb0e2
-    - name: Drown_Frame_17
+    - name: Frame_17
       frameIndex: 17
       additiveSortOrder: 0
       cellRect:
@@ -772,7 +808,7 @@ ScriptedImporter:
         width: 224
         height: 64
       spriteId: 358479a24c0591347baa275761ec7c41
-    - name: Drown_Frame_18
+    - name: Frame_18
       frameIndex: 18
       additiveSortOrder: 0
       cellRect:
@@ -781,7 +817,7 @@ ScriptedImporter:
         width: 224
         height: 64
       spriteId: 2c3ec335e101b514681132ce398c9c16
-    - name: Drown_Frame_19
+    - name: Frame_19
       frameIndex: 19
       additiveSortOrder: 0
       cellRect:
@@ -790,7 +826,7 @@ ScriptedImporter:
         width: 224
         height: 64
       spriteId: 4c766902c2fb0ab41a23fb61a0b2ae8c
-    - name: Drown_Frame_20
+    - name: Frame_20
       frameIndex: 20
       additiveSortOrder: 0
       cellRect:
@@ -799,7 +835,7 @@ ScriptedImporter:
         width: 224
         height: 64
       spriteId: efc51bec7292abf40956c4b9092655cd
-    - name: Drown_Frame_21
+    - name: Frame_21
       frameIndex: 21
       additiveSortOrder: 0
       cellRect:
@@ -808,7 +844,7 @@ ScriptedImporter:
         width: 224
         height: 64
       spriteId: 2982fd18bf2acfc48b7356269d95b22b
-    - name: Drown_Frame_22
+    - name: Frame_22
       frameIndex: 22
       additiveSortOrder: 0
       cellRect:
@@ -817,7 +853,7 @@ ScriptedImporter:
         width: 224
         height: 64
       spriteId: d9c18786c580bf740915727636edea11
-    - name: Drown_Frame_23
+    - name: Frame_23
       frameIndex: 23
       additiveSortOrder: 0
       cellRect:
@@ -827,9 +863,13 @@ ScriptedImporter:
         height: 64
       spriteId: feda02217e943634382f3c0d338a12b6
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 224, y: 64}
+  previousTextureSize: {x: 512, y: 512}

@@ -94,15 +94,14 @@ public class StaticVariables{
 
 
 
-    static public void WaitTimeThenCallFunction(float delay, TweenCallback function)
-    {
-        tweenDummy.DOLocalMove(tweenDummy.transform.localPosition, delay, false).OnComplete(function);
+    static public void WaitTimeThenCallFunction(float delay, TweenCallback function) {
+        tweenDummy.DOLocalMove(tweenDummy.localPosition, delay, false).OnComplete(function);
     }    
     static public void WaitTimeThenCallFunction(float delay, TweenCallback<string> function, string param) {
-        tweenDummy.DOLocalMove(tweenDummy.transform.localPosition, delay, false).OnComplete(()=>function(param));
+        tweenDummy.DOLocalMove(tweenDummy.localPosition, delay, false).OnComplete(()=>function(param));
     }
     static public void WaitTimeThenCallFunction(float delay, TweenCallback<GameObject> function, GameObject param){
-        tweenDummy.DOLocalMove(tweenDummy.transform.localPosition, delay, false).OnComplete(()=>function(param));
+        tweenDummy.DOLocalMove(tweenDummy.localPosition, delay, false).OnComplete(()=>function(param));
     }
 
     static public void FadeOutThenLoadScene(string name){

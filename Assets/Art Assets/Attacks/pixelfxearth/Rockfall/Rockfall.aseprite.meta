@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 0.54545456, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 0.42857146, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 117
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 84
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 65
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 0.4615385, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 23
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0.4666667, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 71
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 23
@@ -266,6 +279,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.15384616}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -286,6 +300,7 @@ ScriptedImporter:
     pivot: {x: 0.42857146, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 60
@@ -306,6 +321,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 102
@@ -326,6 +342,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 85
@@ -346,6 +363,7 @@ ScriptedImporter:
     pivot: {x: 0.4615385, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 44
@@ -366,6 +384,7 @@ ScriptedImporter:
     pivot: {x: 0.4666667, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 94
@@ -386,6 +405,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 47
@@ -406,6 +426,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.3}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -426,6 +447,7 @@ ScriptedImporter:
     pivot: {x: 0.42857146, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 75
@@ -446,6 +468,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -466,6 +489,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 44
@@ -486,6 +510,7 @@ ScriptedImporter:
     pivot: {x: 0.4615385, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 105
@@ -506,6 +531,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.6666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 63
@@ -526,6 +552,7 @@ ScriptedImporter:
     pivot: {x: 0.33333334, y: -0.3}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -546,6 +573,7 @@ ScriptedImporter:
     pivot: {x: 0.42857146, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 90
@@ -566,6 +594,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -586,6 +615,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 64
@@ -606,6 +636,7 @@ ScriptedImporter:
     pivot: {x: 0.4615385, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 23
@@ -626,6 +657,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.6666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 83
@@ -646,6 +678,7 @@ ScriptedImporter:
     pivot: {x: 0.33333334, y: -1}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 120
@@ -666,6 +699,7 @@ ScriptedImporter:
     pivot: {x: 0.42857146, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 105
@@ -686,6 +720,7 @@ ScriptedImporter:
     pivot: {x: 0.44444445, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -706,6 +741,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 23
@@ -726,6 +762,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 103
@@ -746,6 +783,7 @@ ScriptedImporter:
     pivot: {x: 0.4, y: -1}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 23
@@ -766,6 +804,7 @@ ScriptedImporter:
     pivot: {x: 0.42857146, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 23
@@ -786,6 +825,7 @@ ScriptedImporter:
     pivot: {x: 0.44444445, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 23
@@ -806,6 +846,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 43
@@ -826,6 +867,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 40
@@ -842,15 +884,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 38, y: 63}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 593104370
+    uuid:
+      value0: 3842081850
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -452885446
     name: Rockfall
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Rockfall_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -859,7 +907,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: a51cb18a098a1c34ab9fa0d919444db9
-    - name: Rockfall_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -868,7 +916,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: 76ac6c9a3618d284d9eb858d18855492
-    - name: Rockfall_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -877,7 +925,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: ed26e821d6839844dbc5029eae57e966
-    - name: Rockfall_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -886,7 +934,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: b13cc690bf5824746a42b60462caad7e
-    - name: Rockfall_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -895,7 +943,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: a7f5692abb8f54648999211d96ec847d
-    - name: Rockfall_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -904,7 +952,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: 73b8e19f46cfd2646aa2945b81a2d524
-    - name: Rockfall_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -913,7 +961,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: 7361cfe9445711d4f9376e54254ccfbe
-    - name: Rockfall_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -922,7 +970,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: 44b5e21b2a8ec8e45a111852e1cf22f6
-    - name: Rockfall_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -931,7 +979,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: 9db0c764d9cee5747ac5b42735fecd57
-    - name: Rockfall_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -940,7 +988,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: e5cc07ab8ec07bb44b8639e80e8e622e
-    - name: Rockfall_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -949,7 +997,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: cc32c27d256d18a4d861f9e3524713c4
-    - name: Rockfall_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -958,7 +1006,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: d16eb5796f5a1284d9058527099917e8
-    - name: Rockfall_Frame_12
+    - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
@@ -967,7 +1015,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: 709f6ec190696074fbe9f9fe185934c0
-    - name: Rockfall_Frame_13
+    - name: Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
@@ -976,7 +1024,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: 974d81e5769ea244fba37968e15a2fd5
-    - name: Rockfall_Frame_14
+    - name: Frame_14
       frameIndex: 14
       additiveSortOrder: 0
       cellRect:
@@ -985,7 +1033,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: 0cce198d8a7a97a478bb93e96c58ea8c
-    - name: Rockfall_Frame_15
+    - name: Frame_15
       frameIndex: 15
       additiveSortOrder: 0
       cellRect:
@@ -994,7 +1042,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: 276392c7d2f895b4f876b3a855938e99
-    - name: Rockfall_Frame_16
+    - name: Frame_16
       frameIndex: 16
       additiveSortOrder: 0
       cellRect:
@@ -1003,7 +1051,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: 677e25de997c2164cb0062de26fada70
-    - name: Rockfall_Frame_17
+    - name: Frame_17
       frameIndex: 17
       additiveSortOrder: 0
       cellRect:
@@ -1012,7 +1060,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: 521b96f1a4dead14e8be8ca5cec09279
-    - name: Rockfall_Frame_18
+    - name: Frame_18
       frameIndex: 18
       additiveSortOrder: 0
       cellRect:
@@ -1021,7 +1069,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: 262b138292274fb49bf704014c7d30ee
-    - name: Rockfall_Frame_19
+    - name: Frame_19
       frameIndex: 19
       additiveSortOrder: 0
       cellRect:
@@ -1030,7 +1078,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: 21d0ce233f0cda841871191efaac9c32
-    - name: Rockfall_Frame_20
+    - name: Frame_20
       frameIndex: 20
       additiveSortOrder: 0
       cellRect:
@@ -1039,7 +1087,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: c6a5503e612365a44ad4a468475c065c
-    - name: Rockfall_Frame_21
+    - name: Frame_21
       frameIndex: 21
       additiveSortOrder: 0
       cellRect:
@@ -1048,7 +1096,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: 1021b0addbd1c064e80215495a66eff2
-    - name: Rockfall_Frame_22
+    - name: Frame_22
       frameIndex: 22
       additiveSortOrder: 0
       cellRect:
@@ -1057,7 +1105,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: abd4fe761e4a4b843abe511051838297
-    - name: Rockfall_Frame_23
+    - name: Frame_23
       frameIndex: 23
       additiveSortOrder: 0
       cellRect:
@@ -1066,7 +1114,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: 555cbbdf8390173449690c38553564ad
-    - name: Rockfall_Frame_24
+    - name: Frame_24
       frameIndex: 24
       additiveSortOrder: 0
       cellRect:
@@ -1075,7 +1123,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: ba23707797589d8478c1a0d0cf6111ce
-    - name: Rockfall_Frame_25
+    - name: Frame_25
       frameIndex: 25
       additiveSortOrder: 0
       cellRect:
@@ -1084,7 +1132,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: 05f186d44f864f5449ea295835f57f92
-    - name: Rockfall_Frame_26
+    - name: Frame_26
       frameIndex: 26
       additiveSortOrder: 0
       cellRect:
@@ -1093,7 +1141,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: bba1b060b31aa784f8ccc3525a779e9e
-    - name: Rockfall_Frame_27
+    - name: Frame_27
       frameIndex: 27
       additiveSortOrder: 0
       cellRect:
@@ -1102,7 +1150,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: c9e42376167fedc40a05f64aa00b75aa
-    - name: Rockfall_Frame_28
+    - name: Frame_28
       frameIndex: 28
       additiveSortOrder: 0
       cellRect:
@@ -1111,7 +1159,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: 550266df4e79dab43b67308cce0e7f1e
-    - name: Rockfall_Frame_29
+    - name: Frame_29
       frameIndex: 29
       additiveSortOrder: 0
       cellRect:
@@ -1120,7 +1168,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: 9e3e7df6c48030a43942e50f736c8584
-    - name: Rockfall_Frame_30
+    - name: Frame_30
       frameIndex: 30
       additiveSortOrder: 0
       cellRect:
@@ -1129,7 +1177,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: a51b162409a4da5459c38db370dcfc51
-    - name: Rockfall_Frame_31
+    - name: Frame_31
       frameIndex: 31
       additiveSortOrder: 0
       cellRect:
@@ -1138,7 +1186,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: fbd6916a99e02c04d896951327fb903d
-    - name: Rockfall_Frame_32
+    - name: Frame_32
       frameIndex: 32
       additiveSortOrder: 0
       cellRect:
@@ -1147,7 +1195,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: e5491406aa97e994f9518f219c21b0c2
-    - name: Rockfall_Frame_33
+    - name: Frame_33
       frameIndex: 33
       additiveSortOrder: 0
       cellRect:
@@ -1156,7 +1204,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: 0b620586b61353944896f7649e35a3dc
-    - name: Rockfall_Frame_34
+    - name: Frame_34
       frameIndex: 34
       additiveSortOrder: 0
       cellRect:
@@ -1165,7 +1213,7 @@ ScriptedImporter:
         width: 16
         height: 16
       spriteId: 4455b0db9c4ae4549a4f1a18969ab684
-    - name: Rockfall_Frame_35
+    - name: Frame_35
       frameIndex: 35
       additiveSortOrder: 0
       cellRect:
@@ -1175,9 +1223,13 @@ ScriptedImporter:
         height: 16
       spriteId: 0cbab4532910e9945814db5269890728
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 16, y: 16}
+  previousTextureSize: {x: 128, y: 128}

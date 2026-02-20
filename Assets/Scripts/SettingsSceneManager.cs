@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class SettingsSceneManager : MonoBehaviour{
 
+    public RectTransform canvas;
+    public RectTransform backgroundPage;
     public Text worldNameDisplay;
     public Text stageNumberDisplay;
     public InputField playerNameInput;
@@ -34,22 +36,20 @@ public class SettingsSceneManager : MonoBehaviour{
     private string finalPlaytestStageString = "Bat";
     private bool isOnFinalWorld = false;
     private bool isOnFinalStage = false;
-    //public GeneralSceneManager generalSceneManager;
-
-    //public BattleData JustBattleOpponent;
 
     void Start(){
-        GetComponent<GeneralSceneManager>().Setup();
-        //generalSceneManager.Setup();
-        Setup();
-        //generalSceneManager.FadeIn();
-    }
-
-    public void Setup(){
+        SetBackgroundSize();
         DisplayProgress();
         DisplayPlayerName();
         DisplayDifficultyMode();
         DisplayProfanitySelection();
+    }
+
+    private void SetBackgroundSize(){
+        float fullHeight = canvas.rect.height;
+        float fullWidth = canvas.rect.width;
+        backgroundPage.sizeDelta = new Vector2(fullWidth + 500, fullHeight);
+        
     }
 
     public void HitBackButton(){

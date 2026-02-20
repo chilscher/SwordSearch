@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 2.9999995, y: -15.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 66
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 1.7500001, y: -7.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 66
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 1.1250001, y: -3.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 78
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 0.8125, y: -1.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 78
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 0.65625, y: -0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 78
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0.5925926, y: -0.09259259}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: 0.5833334, y: -0.033333335}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -266,6 +279,7 @@ ScriptedImporter:
     pivot: {x: 0.5833334, y: -0.033333335}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 78
@@ -286,6 +300,7 @@ ScriptedImporter:
     pivot: {x: 0.5833334, y: -0.033333335}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 78
@@ -306,6 +321,7 @@ ScriptedImporter:
     pivot: {x: 0.5833334, y: -0.033333335}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 78
@@ -326,6 +342,7 @@ ScriptedImporter:
     pivot: {x: 0.5833334, y: -0.033333335}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 78
@@ -346,6 +363,7 @@ ScriptedImporter:
     pivot: {x: 0.5833334, y: -0.033333335}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 78
@@ -366,6 +384,7 @@ ScriptedImporter:
     pivot: {x: 0.53968257, y: -0.046875}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -386,6 +405,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.04477612}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -406,6 +426,7 @@ ScriptedImporter:
     pivot: {x: 0.5666667, y: -0.10447761}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -426,6 +447,7 @@ ScriptedImporter:
     pivot: {x: 0.53968257, y: -0.10144927}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -446,6 +468,7 @@ ScriptedImporter:
     pivot: {x: 0.5862069, y: -0.07042254}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -462,15 +485,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: -2, y: 151}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 217521036
+    uuid:
+      value0: 3808680124
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -486287172
     name: Bubble
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Bubble_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -479,7 +508,7 @@ ScriptedImporter:
         width: 80
         height: 80
       spriteId: c8424bb4a1483f54087f0ac87a684013
-    - name: Bubble_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -488,7 +517,7 @@ ScriptedImporter:
         width: 80
         height: 80
       spriteId: ea668ec26ee3981409f25480faa8442e
-    - name: Bubble_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -497,7 +526,7 @@ ScriptedImporter:
         width: 80
         height: 80
       spriteId: 2a063957c74693a47bb27e8d5dd3a769
-    - name: Bubble_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -506,7 +535,7 @@ ScriptedImporter:
         width: 80
         height: 80
       spriteId: d145b157680e1b94fb17af98450d7637
-    - name: Bubble_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -515,7 +544,7 @@ ScriptedImporter:
         width: 80
         height: 80
       spriteId: 349f872436269c347b61bbd0414d1837
-    - name: Bubble_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -524,7 +553,7 @@ ScriptedImporter:
         width: 80
         height: 80
       spriteId: 98f429812b054ac4b8001f4f9611fd3f
-    - name: Bubble_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -533,7 +562,7 @@ ScriptedImporter:
         width: 80
         height: 80
       spriteId: b4220ac8454b5614db2c86fdac377e32
-    - name: Bubble_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -542,7 +571,7 @@ ScriptedImporter:
         width: 80
         height: 80
       spriteId: bf63859dd1ffdd145959b6ae3923eecc
-    - name: Bubble_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -551,7 +580,7 @@ ScriptedImporter:
         width: 80
         height: 80
       spriteId: 6cde0ae879e42e8408ce1d67cb1f7fd0
-    - name: Bubble_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -560,7 +589,7 @@ ScriptedImporter:
         width: 80
         height: 80
       spriteId: 2f8b41e38fc2db544ad0740e37d2e8d8
-    - name: Bubble_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -569,7 +598,7 @@ ScriptedImporter:
         width: 80
         height: 80
       spriteId: 1c036756b5d5b324399f2d6c9f76aa39
-    - name: Bubble_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -578,7 +607,7 @@ ScriptedImporter:
         width: 80
         height: 80
       spriteId: d770a1ada35ff9e499d3200a13df7c44
-    - name: Bubble_Frame_12
+    - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
@@ -587,7 +616,7 @@ ScriptedImporter:
         width: 80
         height: 80
       spriteId: ff721acdbdd12e54ab8f831f68a9a6eb
-    - name: Bubble_Frame_13
+    - name: Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
@@ -596,7 +625,7 @@ ScriptedImporter:
         width: 80
         height: 80
       spriteId: cc2888ebe6667954aa1df4db0fe1f9b4
-    - name: Bubble_Frame_14
+    - name: Frame_14
       frameIndex: 14
       additiveSortOrder: 0
       cellRect:
@@ -605,7 +634,7 @@ ScriptedImporter:
         width: 80
         height: 80
       spriteId: 7de62d6071de1d94aaa144ee9b9168a8
-    - name: Bubble_Frame_15
+    - name: Frame_15
       frameIndex: 15
       additiveSortOrder: 0
       cellRect:
@@ -614,7 +643,7 @@ ScriptedImporter:
         width: 80
         height: 80
       spriteId: 9072d2799f86fb54bb7497946769c341
-    - name: Bubble_Frame_16
+    - name: Frame_16
       frameIndex: 16
       additiveSortOrder: 0
       cellRect:
@@ -624,9 +653,13 @@ ScriptedImporter:
         height: 80
       spriteId: f89494a7408629c45add27fe8e4b11ad
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 80, y: 80}
+  previousTextureSize: {x: 256, y: 512}

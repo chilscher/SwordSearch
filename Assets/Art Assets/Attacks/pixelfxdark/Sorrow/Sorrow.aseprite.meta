@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -12.25}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 99
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -8}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 99
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -5.875}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 45
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -4.6}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 114
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -4.6}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 114
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0.42857146, y: -2.6666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 99
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: 0.44444445, y: -0.018181818}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 66
@@ -266,6 +279,7 @@ ScriptedImporter:
     pivot: {x: 0.4166667, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 28
@@ -286,6 +300,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -306,6 +321,7 @@ ScriptedImporter:
     pivot: {x: 0.47058824, y: -0.018181818}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -326,6 +342,7 @@ ScriptedImporter:
     pivot: {x: 0.375, y: -0.018518519}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 83
@@ -346,6 +363,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.018181818}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 48
@@ -366,6 +384,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -4.6}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 29
@@ -386,6 +405,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -4.6}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 114
@@ -406,6 +426,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -5.875}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 61
@@ -426,6 +447,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -8}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 99
@@ -446,6 +468,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -12.25}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 77
@@ -462,15 +485,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 77, y: 4}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1583671266
+    uuid:
+      value0: 3760868886
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -534098410
     name: Sorrow
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Sorrow_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -479,7 +508,7 @@ ScriptedImporter:
         width: 4
         height: 4
       spriteId: 6f33f6a6ecd5b26469887f0e902dd0bd
-    - name: Sorrow_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -488,7 +517,7 @@ ScriptedImporter:
         width: 6
         height: 6
       spriteId: ea0d4279a05dba54c82fcc129aef7883
-    - name: Sorrow_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -497,7 +526,7 @@ ScriptedImporter:
         width: 8
         height: 8
       spriteId: 8ccd3e9674d631d449f362f6cf4fcdb5
-    - name: Sorrow_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -506,7 +535,7 @@ ScriptedImporter:
         width: 10
         height: 10
       spriteId: cba999f4a536d4e48ac331d66280738c
-    - name: Sorrow_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -515,7 +544,7 @@ ScriptedImporter:
         width: 8
         height: 10
       spriteId: 743275434e8fa974a8dd6381b50d6c67
-    - name: Sorrow_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -524,7 +553,7 @@ ScriptedImporter:
         width: 7
         height: 15
       spriteId: bd4dc05830143c6439425f22f4195b57
-    - name: Sorrow_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -533,7 +562,7 @@ ScriptedImporter:
         width: 9
         height: 55
       spriteId: 0579011837452ca419b42302fff145ec
-    - name: Sorrow_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -542,7 +571,7 @@ ScriptedImporter:
         width: 12
         height: 56
       spriteId: 5963147af613fdc4fb5e737b210648d2
-    - name: Sorrow_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -551,7 +580,7 @@ ScriptedImporter:
         width: 16
         height: 56
       spriteId: 416e78aa4ff1e7e41b37d80c3170101b
-    - name: Sorrow_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -560,7 +589,7 @@ ScriptedImporter:
         width: 17
         height: 55
       spriteId: 95dd599af0a8de44588f68fc361c9ac2
-    - name: Sorrow_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -569,7 +598,7 @@ ScriptedImporter:
         width: 8
         height: 54
       spriteId: df326fdd5ce4ab44f890a4db1de63e83
-    - name: Sorrow_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -578,7 +607,7 @@ ScriptedImporter:
         width: 10
         height: 55
       spriteId: bb6ddb4b24c2a9548a2a94fb725690da
-    - name: Sorrow_Frame_12
+    - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
@@ -587,7 +616,7 @@ ScriptedImporter:
         width: 8
         height: 10
       spriteId: bdc3bd4af87fa014fb114f476ab758dd
-    - name: Sorrow_Frame_13
+    - name: Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
@@ -596,7 +625,7 @@ ScriptedImporter:
         width: 10
         height: 10
       spriteId: 943567634fb3c734ba66a31c14f42753
-    - name: Sorrow_Frame_14
+    - name: Frame_14
       frameIndex: 14
       additiveSortOrder: 0
       cellRect:
@@ -605,7 +634,7 @@ ScriptedImporter:
         width: 8
         height: 8
       spriteId: 83a9d40f4f0d28543bc8e5b3818d15ea
-    - name: Sorrow_Frame_15
+    - name: Frame_15
       frameIndex: 15
       additiveSortOrder: 0
       cellRect:
@@ -614,7 +643,7 @@ ScriptedImporter:
         width: 6
         height: 6
       spriteId: bba44fc851cf2a54f85db8bec40abdf9
-    - name: Sorrow_Frame_16
+    - name: Frame_16
       frameIndex: 16
       additiveSortOrder: 0
       cellRect:
@@ -624,9 +653,13 @@ ScriptedImporter:
         height: 4
       spriteId: be709369c3e48f34ab7be8090d769879
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 32, y: 64}
+  previousTextureSize: {x: 128, y: 128}

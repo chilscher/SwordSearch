@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 0.75757575, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 0.6756757, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 0.6511628, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 0.61702126, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 0.6122449, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0, y: -0.96428573}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 61
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: -0.13636364, y: -0.96428573}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 92
@@ -266,6 +279,7 @@ ScriptedImporter:
     pivot: {x: -0.18181819, y: -0.96428573}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 92
@@ -286,6 +300,7 @@ ScriptedImporter:
     pivot: {x: -0.18181819, y: -0.96428573}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 92
@@ -306,6 +321,7 @@ ScriptedImporter:
     pivot: {x: -0.18181819, y: -0.92857146}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 92
@@ -326,6 +342,7 @@ ScriptedImporter:
     pivot: {x: -0.18181819, y: -0.8928572}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 122
@@ -346,6 +363,7 @@ ScriptedImporter:
     pivot: {x: -0.18181819, y: -0.92857146}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 122
@@ -366,6 +384,7 @@ ScriptedImporter:
     pivot: {x: -0.18181819, y: -0.96428573}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 122
@@ -386,6 +405,7 @@ ScriptedImporter:
     pivot: {x: -0.22727273, y: -0.8965517}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 92
@@ -406,6 +426,7 @@ ScriptedImporter:
     pivot: {x: -0.22727273, y: -0.8965517}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 92
@@ -426,6 +447,7 @@ ScriptedImporter:
     pivot: {x: -0.22727273, y: -0.7741935}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 61
@@ -446,6 +468,7 @@ ScriptedImporter:
     pivot: {x: -0.22727273, y: -0.6363636}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 61
@@ -466,6 +489,7 @@ ScriptedImporter:
     pivot: {x: -0.22727273, y: -0.51428574}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 61
@@ -486,6 +510,7 @@ ScriptedImporter:
     pivot: {x: -0.22727273, y: -0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 61
@@ -506,6 +531,7 @@ ScriptedImporter:
     pivot: {x: -0.21739131, y: -0.4864865}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 61
@@ -526,6 +552,7 @@ ScriptedImporter:
     pivot: {x: -0.20833334, y: -0.4473684}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -546,6 +573,7 @@ ScriptedImporter:
     pivot: {x: -0.22727273, y: -0.8965517}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 92
@@ -562,15 +590,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 55, y: 52}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1495543459
+    uuid:
+      value0: 1770476305
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1770476305
     name: Doom
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Doom_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -579,7 +613,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 381fe57a56ccc8b41901005dcaeaa579
-    - name: Doom_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -588,7 +622,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 5f8b0c5f379dac348ad7cc8f50a17ced
-    - name: Doom_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -597,7 +631,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 5c3ea9cea67dd4648ba5af22cd4da148
-    - name: Doom_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -606,7 +640,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: ca5ac39d9cf96e940926fbb5868ea990
-    - name: Doom_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -615,7 +649,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: c58c2c310dfc8ab43aa5c14f83e829e1
-    - name: Doom_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -624,7 +658,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: ea1acadb679abc643bd98f01759dc4eb
-    - name: Doom_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -633,7 +667,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: fde81f0299011bc448f4e4fec9588286
-    - name: Doom_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -642,7 +676,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 49f99f5566cdb284486e55239d388dba
-    - name: Doom_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -651,7 +685,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 4fed1d68041ec5849874ff0b253ea225
-    - name: Doom_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -660,7 +694,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: b27015402df8e8341a989b09ab940943
-    - name: Doom_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -669,7 +703,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: f9a36aa22dc6ee843b96d0a779af3a59
-    - name: Doom_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -678,7 +712,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: c89153c2b06acd5499b0692dae76907a
-    - name: Doom_Frame_12
+    - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
@@ -687,7 +721,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: a253ca63e71bf424aa4142fde676f09c
-    - name: Doom_Frame_13
+    - name: Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
@@ -696,7 +730,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: cd35e3f0b94eb474dabc2459c6cc44b6
-    - name: Doom_Frame_14
+    - name: Frame_14
       frameIndex: 14
       additiveSortOrder: 0
       cellRect:
@@ -705,7 +739,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 00118d4ba0e4bf24ebe6845af0e2788f
-    - name: Doom_Frame_15
+    - name: Frame_15
       frameIndex: 15
       additiveSortOrder: 0
       cellRect:
@@ -714,7 +748,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: b2b584a5b5cb41e40a35eeee2984f230
-    - name: Doom_Frame_16
+    - name: Frame_16
       frameIndex: 16
       additiveSortOrder: 0
       cellRect:
@@ -723,7 +757,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: e756c363c107e3b449953c5d0fa4c5c6
-    - name: Doom_Frame_17
+    - name: Frame_17
       frameIndex: 17
       additiveSortOrder: 0
       cellRect:
@@ -732,7 +766,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 82d5dfb35784ac847a7d53821dc00d01
-    - name: Doom_Frame_18
+    - name: Frame_18
       frameIndex: 18
       additiveSortOrder: 0
       cellRect:
@@ -741,7 +775,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: a919f7b7f7c70f9459f13e9f7eec8ac1
-    - name: Doom_Frame_19
+    - name: Frame_19
       frameIndex: 19
       additiveSortOrder: 0
       cellRect:
@@ -750,7 +784,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 8badcbd677d29494fa1293a1336144bc
-    - name: Doom_Frame_20
+    - name: Frame_20
       frameIndex: 20
       additiveSortOrder: 0
       cellRect:
@@ -759,7 +793,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: c6271192a974d8f4396d58ad8b126896
-    - name: Doom_Frame_21
+    - name: Frame_21
       frameIndex: 21
       additiveSortOrder: 0
       cellRect:
@@ -769,9 +803,13 @@ ScriptedImporter:
         height: 64
       spriteId: f7d44856e90e7f04da071e21105723ed
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 64, y: 64}
+  previousTextureSize: {x: 256, y: 256}

@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 6.625, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 88
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 3.0588236, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 82
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 2.7894738, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 85
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 2.65, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 85
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 2.4545455, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 79
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 2.3913043, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 82
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: 4, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 88
@@ -266,6 +279,7 @@ ScriptedImporter:
     pivot: {x: 8.166666, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 237
@@ -286,6 +300,7 @@ ScriptedImporter:
     pivot: {x: 6.625, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 244
@@ -306,6 +321,7 @@ ScriptedImporter:
     pivot: {x: 1.8571428, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 74
@@ -326,6 +342,7 @@ ScriptedImporter:
     pivot: {x: 1.2325583, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 58
@@ -346,6 +363,7 @@ ScriptedImporter:
     pivot: {x: 0.9464286, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 114
@@ -366,6 +384,7 @@ ScriptedImporter:
     pivot: {x: 0.96428573, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 178
@@ -386,6 +405,7 @@ ScriptedImporter:
     pivot: {x: 0.9322034, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 178
@@ -406,6 +426,7 @@ ScriptedImporter:
     pivot: {x: 0.89655167, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 178
@@ -426,6 +447,7 @@ ScriptedImporter:
     pivot: {x: 0.8596491, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 178
@@ -446,6 +468,7 @@ ScriptedImporter:
     pivot: {x: 0.84313726, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 178
@@ -466,6 +489,7 @@ ScriptedImporter:
     pivot: {x: 1.0833334, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 79
@@ -486,6 +510,7 @@ ScriptedImporter:
     pivot: {x: 4.75, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 245
@@ -506,6 +531,7 @@ ScriptedImporter:
     pivot: {x: 6.625, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 244
@@ -526,6 +552,7 @@ ScriptedImporter:
     pivot: {x: 1.8571428, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 76
@@ -546,6 +573,7 @@ ScriptedImporter:
     pivot: {x: 1.2325583, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 178
@@ -566,6 +594,7 @@ ScriptedImporter:
     pivot: {x: 0.8548387, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -586,6 +615,7 @@ ScriptedImporter:
     pivot: {x: 0.8059702, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -606,6 +636,7 @@ ScriptedImporter:
     pivot: {x: 0.7236842, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -626,6 +657,7 @@ ScriptedImporter:
     pivot: {x: 0.71232873, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -646,6 +678,7 @@ ScriptedImporter:
     pivot: {x: 0.7, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -666,6 +699,7 @@ ScriptedImporter:
     pivot: {x: 0.671875, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -686,6 +720,7 @@ ScriptedImporter:
     pivot: {x: 0.5652174, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -706,6 +741,7 @@ ScriptedImporter:
     pivot: {x: 0.59375, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 74
@@ -726,6 +762,7 @@ ScriptedImporter:
     pivot: {x: 0.6363636, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 237
@@ -746,6 +783,7 @@ ScriptedImporter:
     pivot: {x: 6.625, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 243
@@ -766,6 +804,7 @@ ScriptedImporter:
     pivot: {x: 1.8571428, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 76
@@ -786,6 +825,7 @@ ScriptedImporter:
     pivot: {x: 1.2325583, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 178
@@ -806,6 +846,7 @@ ScriptedImporter:
     pivot: {x: 0.8548387, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -826,6 +867,7 @@ ScriptedImporter:
     pivot: {x: 0.8059702, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -846,6 +888,7 @@ ScriptedImporter:
     pivot: {x: 0.59782606, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -866,6 +909,7 @@ ScriptedImporter:
     pivot: {x: 0.5714286, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -886,6 +930,7 @@ ScriptedImporter:
     pivot: {x: 0.4803922, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -906,6 +951,7 @@ ScriptedImporter:
     pivot: {x: 0.44329894, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -926,6 +972,7 @@ ScriptedImporter:
     pivot: {x: 0.32098767, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -946,6 +993,7 @@ ScriptedImporter:
     pivot: {x: 0.25333336, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -966,6 +1014,7 @@ ScriptedImporter:
     pivot: {x: 0.11111111, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -986,6 +1035,7 @@ ScriptedImporter:
     pivot: {x: -0.52631587, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 229
@@ -1006,6 +1056,7 @@ ScriptedImporter:
     pivot: {x: -2.3333333, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 243
@@ -1022,15 +1073,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 173, y: 60}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 952007825
+    uuid:
+      value0: 3356150805
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -938816491
     name: Stomp
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Stomp_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -1039,7 +1096,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 7fcacc0be638eb24787f5a82ff461c9a
-    - name: Stomp_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -1048,7 +1105,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: e8e33d2410d49ea45ac21b74486d077c
-    - name: Stomp_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -1057,7 +1114,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 31e86cd2d4d841d45b54a8b1c31c2853
-    - name: Stomp_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -1066,7 +1123,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 1aa20dbef2f9deb4e920d7d2b32adf03
-    - name: Stomp_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -1075,7 +1132,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: e2ce1060b6b998040a1e76ecec6137e6
-    - name: Stomp_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -1084,7 +1141,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 6fdac7f284d6ba14095d0b3045581bb2
-    - name: Stomp_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -1093,7 +1150,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 17103179de9fcdc428866639958a461b
-    - name: Stomp_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -1102,7 +1159,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 6c5776693337d3e4fa611c9fc9d71411
-    - name: Stomp_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -1111,7 +1168,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 81f4fc45e32d416448d2d2af25d3cfaa
-    - name: Stomp_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -1120,7 +1177,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: dfb51bf7d674733449b44961329d6997
-    - name: Stomp_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -1129,7 +1186,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 54f5087e209e1ad46850b58b8c8cae66
-    - name: Stomp_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -1138,7 +1195,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: c633e4062081b5748a952b7f8537bf94
-    - name: Stomp_Frame_12
+    - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
@@ -1147,7 +1204,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 468c6efc2b673b242b227c29daf20be4
-    - name: Stomp_Frame_13
+    - name: Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
@@ -1156,7 +1213,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 45da8784c3b67d14580e6cbda0d20ab2
-    - name: Stomp_Frame_14
+    - name: Frame_14
       frameIndex: 14
       additiveSortOrder: 0
       cellRect:
@@ -1165,7 +1222,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 2d5584c4c53ee284099b0e26d297f2ec
-    - name: Stomp_Frame_15
+    - name: Frame_15
       frameIndex: 15
       additiveSortOrder: 0
       cellRect:
@@ -1174,7 +1231,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 5e07f04af9b241a43b5b9ebb946bfdb3
-    - name: Stomp_Frame_16
+    - name: Frame_16
       frameIndex: 16
       additiveSortOrder: 0
       cellRect:
@@ -1183,7 +1240,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: d8b85f14b69a2cd478713a8f8701ae0c
-    - name: Stomp_Frame_17
+    - name: Frame_17
       frameIndex: 17
       additiveSortOrder: 0
       cellRect:
@@ -1192,7 +1249,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 023e9d83098a40e46a10381d23cbd82a
-    - name: Stomp_Frame_18
+    - name: Frame_18
       frameIndex: 18
       additiveSortOrder: 0
       cellRect:
@@ -1201,7 +1258,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 5953f38d8a6df3b42b985fb84f5abe93
-    - name: Stomp_Frame_19
+    - name: Frame_19
       frameIndex: 19
       additiveSortOrder: 0
       cellRect:
@@ -1210,7 +1267,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 5690dbba9fd579f4fabd1413a18c486c
-    - name: Stomp_Frame_20
+    - name: Frame_20
       frameIndex: 20
       additiveSortOrder: 0
       cellRect:
@@ -1219,7 +1276,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: fa7bc2a10f4c2c948a2c9ff949e2f021
-    - name: Stomp_Frame_21
+    - name: Frame_21
       frameIndex: 21
       additiveSortOrder: 0
       cellRect:
@@ -1228,7 +1285,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 4654319ae84f7f3489aee042efb11e19
-    - name: Stomp_Frame_22
+    - name: Frame_22
       frameIndex: 22
       additiveSortOrder: 0
       cellRect:
@@ -1237,7 +1294,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 0cf0b0f8babeffe48b1d40cf06907b35
-    - name: Stomp_Frame_23
+    - name: Frame_23
       frameIndex: 23
       additiveSortOrder: 0
       cellRect:
@@ -1246,7 +1303,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: e506869f6602aff4c82df2314d9a97ae
-    - name: Stomp_Frame_24
+    - name: Frame_24
       frameIndex: 24
       additiveSortOrder: 0
       cellRect:
@@ -1255,7 +1312,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 188e2b1c644ea0545a8c911037648345
-    - name: Stomp_Frame_25
+    - name: Frame_25
       frameIndex: 25
       additiveSortOrder: 0
       cellRect:
@@ -1264,7 +1321,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: daaedd63e447d5a458e6092e8e2aa120
-    - name: Stomp_Frame_26
+    - name: Frame_26
       frameIndex: 26
       additiveSortOrder: 0
       cellRect:
@@ -1273,7 +1330,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 8f2dde4b545894545921ec0c1ce73e9d
-    - name: Stomp_Frame_27
+    - name: Frame_27
       frameIndex: 27
       additiveSortOrder: 0
       cellRect:
@@ -1282,7 +1339,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 82e5d1ab3ec431745b497e6b7e1dca25
-    - name: Stomp_Frame_28
+    - name: Frame_28
       frameIndex: 28
       additiveSortOrder: 0
       cellRect:
@@ -1291,7 +1348,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: a1b330f554e6cbe4da31f11b06f9c25c
-    - name: Stomp_Frame_29
+    - name: Frame_29
       frameIndex: 29
       additiveSortOrder: 0
       cellRect:
@@ -1300,7 +1357,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 0f7c0a34ffc36a04898274965799a44a
-    - name: Stomp_Frame_30
+    - name: Frame_30
       frameIndex: 30
       additiveSortOrder: 0
       cellRect:
@@ -1309,7 +1366,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 833790819ef94aa41b7c0b9e5dfc5ceb
-    - name: Stomp_Frame_31
+    - name: Frame_31
       frameIndex: 31
       additiveSortOrder: 0
       cellRect:
@@ -1318,7 +1375,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: e9d8d3920a0462f4fbb884cb6fecc9ff
-    - name: Stomp_Frame_32
+    - name: Frame_32
       frameIndex: 32
       additiveSortOrder: 0
       cellRect:
@@ -1327,7 +1384,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 0cc79e7b14a24c544b61abaa808a7dc2
-    - name: Stomp_Frame_33
+    - name: Frame_33
       frameIndex: 33
       additiveSortOrder: 0
       cellRect:
@@ -1336,7 +1393,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 9f46b7317cade6944a731c6886aee54c
-    - name: Stomp_Frame_34
+    - name: Frame_34
       frameIndex: 34
       additiveSortOrder: 0
       cellRect:
@@ -1345,7 +1402,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 9add7cf122c794840841febbe8b034d6
-    - name: Stomp_Frame_35
+    - name: Frame_35
       frameIndex: 35
       additiveSortOrder: 0
       cellRect:
@@ -1354,7 +1411,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: b2a0b16d38fe1424ea5d076dfcb30167
-    - name: Stomp_Frame_36
+    - name: Frame_36
       frameIndex: 36
       additiveSortOrder: 0
       cellRect:
@@ -1363,7 +1420,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 177a6fd5d2d4f5040b5f8a0722ac283c
-    - name: Stomp_Frame_37
+    - name: Frame_37
       frameIndex: 37
       additiveSortOrder: 0
       cellRect:
@@ -1372,7 +1429,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 59b3d816e51511243becb66dc32caa33
-    - name: Stomp_Frame_38
+    - name: Frame_38
       frameIndex: 38
       additiveSortOrder: 0
       cellRect:
@@ -1381,7 +1438,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 5e48dd529ac2d444cbbd1ff08effd89e
-    - name: Stomp_Frame_39
+    - name: Frame_39
       frameIndex: 39
       additiveSortOrder: 0
       cellRect:
@@ -1390,7 +1447,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 808b900eb4d28dc4aa2dedb81575fe7c
-    - name: Stomp_Frame_40
+    - name: Frame_40
       frameIndex: 40
       additiveSortOrder: 0
       cellRect:
@@ -1399,7 +1456,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 1168325c3b2caed45b126f717aaaf84e
-    - name: Stomp_Frame_41
+    - name: Frame_41
       frameIndex: 41
       additiveSortOrder: 0
       cellRect:
@@ -1408,7 +1465,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: ef2639a0fa6405943879de165415a165
-    - name: Stomp_Frame_42
+    - name: Frame_42
       frameIndex: 42
       additiveSortOrder: 0
       cellRect:
@@ -1417,7 +1474,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 937c9481570ffdb4f99edbeea278c383
-    - name: Stomp_Frame_43
+    - name: Frame_43
       frameIndex: 43
       additiveSortOrder: 0
       cellRect:
@@ -1426,7 +1483,7 @@ ScriptedImporter:
         width: 112
         height: 48
       spriteId: 79e2f3c5363425947baeb8e4307b1b71
-    - name: Stomp_Frame_44
+    - name: Frame_44
       frameIndex: 44
       additiveSortOrder: 0
       cellRect:
@@ -1436,9 +1493,13 @@ ScriptedImporter:
         height: 48
       spriteId: c976821549556cd49a2147212a0d0716
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 112, y: 48}
+  previousTextureSize: {x: 256, y: 512}

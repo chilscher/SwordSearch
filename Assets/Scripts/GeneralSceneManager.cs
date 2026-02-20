@@ -14,7 +14,7 @@ public class GeneralSceneManager : MonoBehaviour{
 
     public void Setup(){
         if (!hasStarted){
-            StaticVariables.tweenDummy = transform;
+            //StaticVariables.tweenDummy = transform;
             StaticVariables.fadeImage = fadeImage;
             StaticVariables.FadeIntoScene();
             hasStarted = true;

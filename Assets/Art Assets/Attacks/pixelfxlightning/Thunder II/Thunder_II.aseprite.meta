@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 0.42857122, y: -0.5714286}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 203
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 0.37499982, y: -0.3}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 203
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 0.42857122, y: -0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 183
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 0.42857122, y: -0.6666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 203
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 0.4444446, y: -0.33333334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 203
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0.40000013, y: -0.18181819}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 183
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: 0.27272713, y: -0.3}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 183
@@ -266,6 +279,7 @@ ScriptedImporter:
     pivot: {x: 0.33333316, y: -0.6666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 203
@@ -286,6 +300,7 @@ ScriptedImporter:
     pivot: {x: 0.24999988, y: -0.75}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 203
@@ -306,6 +321,7 @@ ScriptedImporter:
     pivot: {x: 0.4952381, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 93
@@ -326,6 +342,7 @@ ScriptedImporter:
     pivot: {x: 0.49074075, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 93
@@ -346,6 +363,7 @@ ScriptedImporter:
     pivot: {x: 0.49056605, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 93
@@ -366,6 +384,7 @@ ScriptedImporter:
     pivot: {x: 0.47058827, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 93
@@ -386,6 +405,7 @@ ScriptedImporter:
     pivot: {x: 0.49514562, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 93
@@ -406,6 +426,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 93
@@ -426,6 +447,7 @@ ScriptedImporter:
     pivot: {x: 1, y: -2.2}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 183
@@ -446,6 +468,7 @@ ScriptedImporter:
     pivot: {x: 0.4210526, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -466,6 +489,7 @@ ScriptedImporter:
     pivot: {x: 0.47761193, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -486,6 +510,7 @@ ScriptedImporter:
     pivot: {x: 0.48, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -506,6 +531,7 @@ ScriptedImporter:
     pivot: {x: 0.48148146, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -526,6 +552,7 @@ ScriptedImporter:
     pivot: {x: 0.46341467, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 93
@@ -542,15 +569,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 43, y: 4}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -701044049
+    uuid:
+      value0: 2107852843
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 2107852843
     name: Thunder_II
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Thunder_II_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -559,7 +592,7 @@ ScriptedImporter:
         width: 7
         height: 7
       spriteId: 684a1ee09dc5adc4a8f89c7bdde1751b
-    - name: Thunder_II_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -568,7 +601,7 @@ ScriptedImporter:
         width: 8
         height: 10
       spriteId: 5e1fd70782de61f4ca5b13de9f4b5bf3
-    - name: Thunder_II_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -577,7 +610,7 @@ ScriptedImporter:
         width: 7
         height: 8
       spriteId: 8a04fa6a9826c9c42a2a9e054fdfbec1
-    - name: Thunder_II_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -586,7 +619,7 @@ ScriptedImporter:
         width: 7
         height: 6
       spriteId: 98e37ecd168041b4ab6c3b8c240ffd40
-    - name: Thunder_II_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -595,7 +628,7 @@ ScriptedImporter:
         width: 9
         height: 9
       spriteId: 8b83f16bba6441c4db27841e10dc03c0
-    - name: Thunder_II_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -604,7 +637,7 @@ ScriptedImporter:
         width: 10
         height: 11
       spriteId: 2d0c544c10bab8140a03112f8b2c6b11
-    - name: Thunder_II_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -613,7 +646,7 @@ ScriptedImporter:
         width: 11
         height: 10
       spriteId: 19be7f35eb917a544b73600f49d6f36a
-    - name: Thunder_II_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -622,7 +655,7 @@ ScriptedImporter:
         width: 6
         height: 6
       spriteId: 2d2e02750af0e08469bbdf710974befb
-    - name: Thunder_II_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -631,7 +664,7 @@ ScriptedImporter:
         width: 4
         height: 4
       spriteId: 41731b92df69aa740946bf9ccd33acf9
-    - name: Thunder_II_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -640,7 +673,7 @@ ScriptedImporter:
         width: 105
         height: 2
       spriteId: 4c6adc4cc109dc246b7275c6e1ac2f16
-    - name: Thunder_II_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -649,7 +682,7 @@ ScriptedImporter:
         width: 108
         height: 3
       spriteId: f955f06674ff2f748814bd28df5c7be6
-    - name: Thunder_II_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -658,7 +691,7 @@ ScriptedImporter:
         width: 106
         height: 4
       spriteId: c44367e8c59297a4bbf618cc2ad30f83
-    - name: Thunder_II_Frame_12
+    - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
@@ -667,7 +700,7 @@ ScriptedImporter:
         width: 102
         height: 4
       spriteId: 4a3f5c507303a7d44b1e99accc6907ea
-    - name: Thunder_II_Frame_13
+    - name: Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
@@ -676,7 +709,7 @@ ScriptedImporter:
         width: 103
         height: 4
       spriteId: f55043e26c2005b45b7baffe9d0e1b3d
-    - name: Thunder_II_Frame_14
+    - name: Frame_14
       frameIndex: 14
       additiveSortOrder: 0
       cellRect:
@@ -685,7 +718,7 @@ ScriptedImporter:
         width: 102
         height: 4
       spriteId: dbd9807228e5d054d889357fd73a9434
-    - name: Thunder_II_Frame_15
+    - name: Frame_15
       frameIndex: 15
       additiveSortOrder: 0
       cellRect:
@@ -694,7 +727,7 @@ ScriptedImporter:
         width: 12
         height: 30
       spriteId: bc9655617025a3e49b1b1d9572f9afef
-    - name: Thunder_II_Frame_16
+    - name: Frame_16
       frameIndex: 16
       additiveSortOrder: 0
       cellRect:
@@ -703,7 +736,7 @@ ScriptedImporter:
         width: 57
         height: 96
       spriteId: 8377d973cd6b50142aac4645d2a2d9c3
-    - name: Thunder_II_Frame_17
+    - name: Frame_17
       frameIndex: 17
       additiveSortOrder: 0
       cellRect:
@@ -712,7 +745,7 @@ ScriptedImporter:
         width: 67
         height: 96
       spriteId: 5b74cc232fe37be439b969a405d18725
-    - name: Thunder_II_Frame_18
+    - name: Frame_18
       frameIndex: 18
       additiveSortOrder: 0
       cellRect:
@@ -721,7 +754,7 @@ ScriptedImporter:
         width: 75
         height: 92
       spriteId: d51cb3325fc37b144aff55cf073acc0a
-    - name: Thunder_II_Frame_19
+    - name: Frame_19
       frameIndex: 19
       additiveSortOrder: 0
       cellRect:
@@ -730,7 +763,7 @@ ScriptedImporter:
         width: 144
         height: 96
       spriteId: 9ca76dd4241b4954e9cdbb282dddee00
-    - name: Thunder_II_Frame_20
+    - name: Frame_20
       frameIndex: 20
       additiveSortOrder: 0
       cellRect:
@@ -740,9 +773,13 @@ ScriptedImporter:
         height: 96
       spriteId: 76ac37c6b3e393249b6050f4a2c4541a
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 112, y: 96}
+  previousTextureSize: {x: 256, y: 512}

@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 11.6, y: -4.4}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 243
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 11.6, y: -4.4}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 225
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 11.6, y: -4.4}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 238
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 11.6, y: -4.4}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 179
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 0.4166667, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 223
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0.57894737, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 152
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: 0.52, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 94
@@ -266,6 +279,7 @@ ScriptedImporter:
     pivot: {x: 0.5243902, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -286,6 +300,7 @@ ScriptedImporter:
     pivot: {x: 0.5263158, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -306,6 +321,7 @@ ScriptedImporter:
     pivot: {x: 0.5272727, y: -0.73333335}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 107
@@ -326,6 +342,7 @@ ScriptedImporter:
     pivot: {x: 0.49572653, y: -0.5833334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 131
@@ -346,6 +363,7 @@ ScriptedImporter:
     pivot: {x: 0.49137932, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -366,6 +384,7 @@ ScriptedImporter:
     pivot: {x: 0.460177, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 128
@@ -386,6 +405,7 @@ ScriptedImporter:
     pivot: {x: 0.47222224, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 107
@@ -406,6 +426,7 @@ ScriptedImporter:
     pivot: {x: 0.48717952, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 128
@@ -426,6 +447,7 @@ ScriptedImporter:
     pivot: {x: 0.4915254, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 129
@@ -446,6 +468,7 @@ ScriptedImporter:
     pivot: {x: 0.48717952, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -466,6 +489,7 @@ ScriptedImporter:
     pivot: {x: 0.487395, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -486,6 +510,7 @@ ScriptedImporter:
     pivot: {x: 0.48717952, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 130
@@ -506,6 +531,7 @@ ScriptedImporter:
     pivot: {x: 0.4915254, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -526,6 +552,7 @@ ScriptedImporter:
     pivot: {x: 0.49137932, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -546,6 +573,7 @@ ScriptedImporter:
     pivot: {x: 0.48717952, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -566,6 +594,7 @@ ScriptedImporter:
     pivot: {x: 0.48717952, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 129
@@ -582,15 +611,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 129, y: 140}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -71850829
+    uuid:
+      value0: 1914703679
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1914703679
     name: Napalm
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Napalm_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -599,7 +634,7 @@ ScriptedImporter:
         width: 5
         height: 5
       spriteId: 42b2cf542dc4d7f4f9f562ce2e66a541
-    - name: Napalm_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -608,7 +643,7 @@ ScriptedImporter:
         width: 5
         height: 5
       spriteId: d945fa93c4ab77941895749971549a4a
-    - name: Napalm_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -617,7 +652,7 @@ ScriptedImporter:
         width: 5
         height: 5
       spriteId: 0a0c8dccfe3886740891db6c98094acf
-    - name: Napalm_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -626,7 +661,7 @@ ScriptedImporter:
         width: 5
         height: 5
       spriteId: 8a95bdd0c1afa3b4bab7730f28409840
-    - name: Napalm_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -635,7 +670,7 @@ ScriptedImporter:
         width: 12
         height: 6
       spriteId: cfc1bc9010ffcb74e8710aa468a8d807
-    - name: Napalm_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -644,7 +679,7 @@ ScriptedImporter:
         width: 19
         height: 19
       spriteId: 5104aa1ce590ea0429d7383056bda05f
-    - name: Napalm_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -653,7 +688,7 @@ ScriptedImporter:
         width: 50
         height: 32
       spriteId: 7c8390736b1b6d34f879f3900ee22e15
-    - name: Napalm_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -662,7 +697,7 @@ ScriptedImporter:
         width: 82
         height: 32
       spriteId: b06682dad32507f4d91ac874c47a68c5
-    - name: Napalm_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -671,7 +706,7 @@ ScriptedImporter:
         width: 95
         height: 29
       spriteId: 5a66326171be97d4796cf4541a0e7fdf
-    - name: Napalm_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -680,7 +715,7 @@ ScriptedImporter:
         width: 110
         height: 15
       spriteId: 6ba0e8ea45ec0aa448157fbbe0413c2b
-    - name: Napalm_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -689,7 +724,7 @@ ScriptedImporter:
         width: 117
         height: 12
       spriteId: d09d2ebcc82c0f74aabdf686cee8bbe7
-    - name: Napalm_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -698,7 +733,7 @@ ScriptedImporter:
         width: 116
         height: 12
       spriteId: 42f0b2d95c23134419ab48f1ac74a2d2
-    - name: Napalm_Frame_12
+    - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
@@ -707,7 +742,7 @@ ScriptedImporter:
         width: 113
         height: 7
       spriteId: 87ae5ec8fc45c8744be6735805c0f9fb
-    - name: Napalm_Frame_13
+    - name: Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
@@ -716,7 +751,7 @@ ScriptedImporter:
         width: 108
         height: 5
       spriteId: c11cd91682fb4aa419377142970e38ea
-    - name: Napalm_Frame_14
+    - name: Frame_14
       frameIndex: 14
       additiveSortOrder: 0
       cellRect:
@@ -725,7 +760,7 @@ ScriptedImporter:
         width: 117
         height: 11
       spriteId: b4b2bc07e271c6e499923a83d32ed540
-    - name: Napalm_Frame_15
+    - name: Frame_15
       frameIndex: 15
       additiveSortOrder: 0
       cellRect:
@@ -734,7 +769,7 @@ ScriptedImporter:
         width: 118
         height: 10
       spriteId: e58468209f65f8c48ab15e3e5ce50a91
-    - name: Napalm_Frame_16
+    - name: Frame_16
       frameIndex: 16
       additiveSortOrder: 0
       cellRect:
@@ -743,7 +778,7 @@ ScriptedImporter:
         width: 117
         height: 11
       spriteId: 7f2eb72d3cd97eb4fbc858617f5a822b
-    - name: Napalm_Frame_17
+    - name: Frame_17
       frameIndex: 17
       additiveSortOrder: 0
       cellRect:
@@ -752,7 +787,7 @@ ScriptedImporter:
         width: 119
         height: 12
       spriteId: 3c42d6ef39739a546ac2b15afe6a0300
-    - name: Napalm_Frame_18
+    - name: Frame_18
       frameIndex: 18
       additiveSortOrder: 0
       cellRect:
@@ -761,7 +796,7 @@ ScriptedImporter:
         width: 117
         height: 9
       spriteId: 27bd6d9005528ff40beb7443275ab4a7
-    - name: Napalm_Frame_19
+    - name: Frame_19
       frameIndex: 19
       additiveSortOrder: 0
       cellRect:
@@ -770,7 +805,7 @@ ScriptedImporter:
         width: 118
         height: 9
       spriteId: d9e439901bd9bd94fb4044b81b8add90
-    - name: Napalm_Frame_20
+    - name: Frame_20
       frameIndex: 20
       additiveSortOrder: 0
       cellRect:
@@ -779,7 +814,7 @@ ScriptedImporter:
         width: 116
         height: 9
       spriteId: 03620b0b982f57140bb075713b980c7c
-    - name: Napalm_Frame_21
+    - name: Frame_21
       frameIndex: 21
       additiveSortOrder: 0
       cellRect:
@@ -788,7 +823,7 @@ ScriptedImporter:
         width: 117
         height: 10
       spriteId: 0a8f277533f4686468e849ac1d1f8845
-    - name: Napalm_Frame_22
+    - name: Frame_22
       frameIndex: 22
       additiveSortOrder: 0
       cellRect:
@@ -798,9 +833,13 @@ ScriptedImporter:
         height: 10
       spriteId: cbccfe6164f9d874ba5787399cd572f1
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 128, y: 32}
+  previousTextureSize: {x: 256, y: 256}

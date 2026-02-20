@@ -65,7 +65,8 @@ public class HomepageManager : MonoBehaviour{
     }
 
     public void HitSettingsButton(){
-        StaticVariables.FadeOutThenLoadScene("Settings");
+        SceneChanger.GoSettings();
+        //StaticVariables.FadeOutThenLoadScene("Settings");
     }
 
     public void HitMapButton(){

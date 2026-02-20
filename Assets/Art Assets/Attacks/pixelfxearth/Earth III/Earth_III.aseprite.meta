@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 77
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 77
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 77
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 0.51515156, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 34
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 0.51515156, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 34
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0.54285717, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 34
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: 0.5294118, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 34
@@ -266,6 +279,7 @@ ScriptedImporter:
     pivot: {x: 0.5294118, y: -0.21052632}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 34
@@ -286,6 +300,7 @@ ScriptedImporter:
     pivot: {x: 0.54545456, y: -1.0833334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 34
@@ -306,6 +321,7 @@ ScriptedImporter:
     pivot: {x: 0.51851857, y: -1.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 77
@@ -326,6 +342,7 @@ ScriptedImporter:
     pivot: {x: 0.51851857, y: -1.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 77
@@ -346,6 +363,7 @@ ScriptedImporter:
     pivot: {x: 0.48387095, y: -1.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 77
@@ -366,6 +384,7 @@ ScriptedImporter:
     pivot: {x: 0.51428574, y: -1.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 34
@@ -386,6 +405,7 @@ ScriptedImporter:
     pivot: {x: 0.55, y: -0.3478261}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -406,6 +426,7 @@ ScriptedImporter:
     pivot: {x: 0.07692312, y: -0.10344828}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 55
@@ -426,6 +447,7 @@ ScriptedImporter:
     pivot: {x: 0.07692312, y: -0.02857143}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 34
@@ -446,6 +468,7 @@ ScriptedImporter:
     pivot: {x: 0.4, y: -0.04651163}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -466,6 +489,7 @@ ScriptedImporter:
     pivot: {x: 0.4545455, y: -0.04651163}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -486,6 +510,7 @@ ScriptedImporter:
     pivot: {x: 0.42857146, y: -0.022727273}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -506,6 +531,7 @@ ScriptedImporter:
     pivot: {x: 0.4, y: -0.022727273}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -526,6 +552,7 @@ ScriptedImporter:
     pivot: {x: 0.51428574, y: -1.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 34
@@ -546,6 +573,7 @@ ScriptedImporter:
     pivot: {x: 0.51428574, y: -1.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 77
@@ -566,6 +594,7 @@ ScriptedImporter:
     pivot: {x: 0.51428574, y: -1.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 77
@@ -582,15 +611,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 71, y: 62}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 2040582232
+    uuid:
+      value0: 2612412344
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -1682554952
     name: Earth_III
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Earth_III_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -599,7 +634,7 @@ ScriptedImporter:
         width: 48
         height: 48
       spriteId: ba00cfe3f630c0149bf3826ef9760369
-    - name: Earth_III_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -608,7 +643,7 @@ ScriptedImporter:
         width: 48
         height: 48
       spriteId: 049a34095e94ad64299c1f8defc03613
-    - name: Earth_III_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -617,7 +652,7 @@ ScriptedImporter:
         width: 48
         height: 48
       spriteId: 8251085e93f6c4645abc05ff7956148f
-    - name: Earth_III_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -626,7 +661,7 @@ ScriptedImporter:
         width: 48
         height: 48
       spriteId: d4df64af3433687479cb8389ac80953e
-    - name: Earth_III_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -635,7 +670,7 @@ ScriptedImporter:
         width: 48
         height: 48
       spriteId: 90877e6f0d5b7564cbb0f423142b5f6d
-    - name: Earth_III_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -644,7 +679,7 @@ ScriptedImporter:
         width: 48
         height: 48
       spriteId: a0534ed8ce467c14a944fdf00a68599c
-    - name: Earth_III_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -653,7 +688,7 @@ ScriptedImporter:
         width: 48
         height: 48
       spriteId: 2e1a562d632a22946b65958a2ebf4400
-    - name: Earth_III_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -662,7 +697,7 @@ ScriptedImporter:
         width: 48
         height: 48
       spriteId: 862d7e84c1eccb84ea946112e5e17004
-    - name: Earth_III_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -671,7 +706,7 @@ ScriptedImporter:
         width: 48
         height: 48
       spriteId: bc25b9e9ffb991145b662da9f0256d18
-    - name: Earth_III_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -680,7 +715,7 @@ ScriptedImporter:
         width: 48
         height: 48
       spriteId: 7dd72c9502710a14598a304174a31259
-    - name: Earth_III_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -689,7 +724,7 @@ ScriptedImporter:
         width: 48
         height: 48
       spriteId: 92201252320af1840b759ab0b4742f72
-    - name: Earth_III_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -698,7 +733,7 @@ ScriptedImporter:
         width: 48
         height: 48
       spriteId: 02d0b7867fd02c74d91aabb0a217794e
-    - name: Earth_III_Frame_12
+    - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
@@ -707,7 +742,7 @@ ScriptedImporter:
         width: 48
         height: 48
       spriteId: 5f4610faa4819eb42a1b67fadffe4151
-    - name: Earth_III_Frame_16
+    - name: Frame_16
       frameIndex: 16
       additiveSortOrder: 0
       cellRect:
@@ -716,7 +751,7 @@ ScriptedImporter:
         width: 48
         height: 48
       spriteId: fbd7b77e2fa53fd45b78e44aeb0435f6
-    - name: Earth_III_Frame_17
+    - name: Frame_17
       frameIndex: 17
       additiveSortOrder: 0
       cellRect:
@@ -725,7 +760,7 @@ ScriptedImporter:
         width: 48
         height: 48
       spriteId: c2327ba0da675a247a01ee262dcc3305
-    - name: Earth_III_Frame_18
+    - name: Frame_18
       frameIndex: 18
       additiveSortOrder: 0
       cellRect:
@@ -734,7 +769,7 @@ ScriptedImporter:
         width: 48
         height: 48
       spriteId: 85e3a929b2ec3ee4cb8d4dcdcf62bb5d
-    - name: Earth_III_Frame_19
+    - name: Frame_19
       frameIndex: 19
       additiveSortOrder: 0
       cellRect:
@@ -743,7 +778,7 @@ ScriptedImporter:
         width: 48
         height: 48
       spriteId: f1c4ceb19227d954c9e2cf91e8166eb9
-    - name: Earth_III_Frame_20
+    - name: Frame_20
       frameIndex: 20
       additiveSortOrder: 0
       cellRect:
@@ -752,7 +787,7 @@ ScriptedImporter:
         width: 48
         height: 48
       spriteId: 810b27d1d0b7ad74c9732b8a48cc74d2
-    - name: Earth_III_Frame_21
+    - name: Frame_21
       frameIndex: 21
       additiveSortOrder: 0
       cellRect:
@@ -761,7 +796,7 @@ ScriptedImporter:
         width: 48
         height: 48
       spriteId: 14df38e845822f2418710fc2b55b1829
-    - name: Earth_III_Frame_22
+    - name: Frame_22
       frameIndex: 22
       additiveSortOrder: 0
       cellRect:
@@ -770,7 +805,7 @@ ScriptedImporter:
         width: 48
         height: 48
       spriteId: 51b2390eb40350543b85c3adde05f31b
-    - name: Earth_III_Frame_13
+    - name: Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
@@ -779,7 +814,7 @@ ScriptedImporter:
         width: 48
         height: 48
       spriteId: fcee907712400a848baf41c5611979d6
-    - name: Earth_III_Frame_14
+    - name: Frame_14
       frameIndex: 14
       additiveSortOrder: 0
       cellRect:
@@ -788,7 +823,7 @@ ScriptedImporter:
         width: 48
         height: 48
       spriteId: c6ded9be9d28d714da95fdd2697300f2
-    - name: Earth_III_Frame_15
+    - name: Frame_15
       frameIndex: 15
       additiveSortOrder: 0
       cellRect:
@@ -798,9 +833,13 @@ ScriptedImporter:
         height: 48
       spriteId: ebd0da48e379f8c42891f5699e9315ab
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 128, y: 256}

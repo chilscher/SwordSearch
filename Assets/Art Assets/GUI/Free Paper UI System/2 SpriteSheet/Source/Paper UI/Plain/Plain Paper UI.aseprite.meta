@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 0.49600002, y: -0.018548576}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 0.49600002, y: -0.10416667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 0.5083333, y: -0.15142429}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4012
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 0.6063896, y: -0.059575494}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 1.0853859, y: -2.4245672}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4012
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0.82, y: -0.22274882}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: 0.82, y: -0.22374293}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -266,6 +279,7 @@ ScriptedImporter:
     pivot: {x: 0.94333845, y: -4.6159997}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 2412
@@ -286,6 +300,7 @@ ScriptedImporter:
     pivot: {x: 11.068572, y: -20.965034}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 3639
@@ -306,6 +321,7 @@ ScriptedImporter:
     pivot: {x: 1.1199766, y: -2.7378993}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4012
@@ -326,6 +342,7 @@ ScriptedImporter:
     pivot: {x: 0.9917356, y: -2.5512366}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4012
@@ -346,6 +363,7 @@ ScriptedImporter:
     pivot: {x: 1.2165279, y: -6.9587426}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 2412
@@ -366,6 +384,7 @@ ScriptedImporter:
     pivot: {x: 1.292517, y: -2.8169014}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 2412
@@ -386,6 +405,7 @@ ScriptedImporter:
     pivot: {x: 1.5652174, y: -6.833013}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 2412
@@ -406,6 +426,7 @@ ScriptedImporter:
     pivot: {x: 3.0331752, y: -4.273082}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 2412
@@ -426,6 +447,7 @@ ScriptedImporter:
     pivot: {x: 0.9746579, y: -2.3794239}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4012
@@ -446,6 +468,7 @@ ScriptedImporter:
     pivot: {x: 1.1942927, y: -31.552942}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -466,6 +489,7 @@ ScriptedImporter:
     pivot: {x: 20.440678, y: -96.63158}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 3639
@@ -486,6 +510,7 @@ ScriptedImporter:
     pivot: {x: 51.652172, y: -160.04347}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 3639
@@ -506,6 +531,7 @@ ScriptedImporter:
     pivot: {x: 18.890625, y: -204.16666}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 3639
@@ -526,6 +552,7 @@ ScriptedImporter:
     pivot: {x: 16.186666, y: -79.82609}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 3639
@@ -542,15 +569,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 3639, y: 14237}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 9979462
+    uuid:
+      value0: 3570149086
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -724818210
     name: Plain Paper UI
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Plain Paper UI_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -559,7 +592,7 @@ ScriptedImporter:
         width: 4000
         height: 4313
       spriteId: bc9272d6ca5d6aa449713d51f81f1cb9
-    - name: Plain Paper UI_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -568,7 +601,7 @@ ScriptedImporter:
         width: 4000
         height: 768
       spriteId: 502438f10098c22439c99cffa643e9f1
-    - name: Plain Paper UI_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -577,7 +610,7 @@ ScriptedImporter:
         width: 3840
         height: 667
       spriteId: 893a10dd403612c4a9a527ca58d22078
-    - name: Plain Paper UI_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -586,7 +619,7 @@ ScriptedImporter:
         width: 3224
         height: 4146
       spriteId: 50777ef4ae1d1af4e8349f1f6f278f53
-    - name: Plain Paper UI_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -595,7 +628,7 @@ ScriptedImporter:
         width: 1827
         height: 1213
       spriteId: f624be969e3813148a56a38a66341c0e
-    - name: Plain Paper UI_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -604,7 +637,7 @@ ScriptedImporter:
         width: 2400
         height: 3376
       spriteId: 6cf5f9508d253d44fa0bb8f5c8942b31
-    - name: Plain Paper UI_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -613,7 +646,7 @@ ScriptedImporter:
         width: 2400
         height: 3361
       spriteId: ffd94e2bb70293945b8eef20ca32166a
-    - name: Plain Paper UI_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -622,7 +655,7 @@ ScriptedImporter:
         width: 1306
         height: 625
       spriteId: 40845608f58b12647be0930d642c4dbf
-    - name: Plain Paper UI_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -631,7 +664,7 @@ ScriptedImporter:
         width: 175
         height: 143
       spriteId: 8d2798e9651bd3c41992ed760504d82a
-    - name: Plain Paper UI_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -640,7 +673,7 @@ ScriptedImporter:
         width: 1717
         height: 1095
       spriteId: a8810ec01e84ba245ba8707e2141e45d
-    - name: Plain Paper UI_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -649,7 +682,7 @@ ScriptedImporter:
         width: 1815
         height: 1132
       spriteId: ea5780212c367c24590945c7d3cb3ae9
-    - name: Plain Paper UI_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -658,7 +691,7 @@ ScriptedImporter:
         width: 1561
         height: 509
       spriteId: e3084f5c64df2e147b042d1ec3bf6489
-    - name: Plain Paper UI_Frame_12
+    - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
@@ -667,7 +700,7 @@ ScriptedImporter:
         width: 1470
         height: 1065
       spriteId: 19bec013802815a41a4fb97be12d630b
-    - name: Plain Paper UI_Frame_13
+    - name: Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
@@ -676,7 +709,7 @@ ScriptedImporter:
         width: 1219
         height: 521
       spriteId: 511e6282c6921294dab819477b246ee9
-    - name: Plain Paper UI_Frame_14
+    - name: Frame_14
       frameIndex: 14
       additiveSortOrder: 0
       cellRect:
@@ -685,7 +718,7 @@ ScriptedImporter:
         width: 633
         height: 769
       spriteId: e6f71797dba9542479df6407a28327e0
-    - name: Plain Paper UI_Frame_15
+    - name: Frame_15
       frameIndex: 15
       additiveSortOrder: 0
       cellRect:
@@ -694,7 +727,7 @@ ScriptedImporter:
         width: 1973
         height: 1215
       spriteId: cc3e6f44d71e5054496ea9f8e4be9ed5
-    - name: Plain Paper UI_Frame_16
+    - name: Frame_16
       frameIndex: 16
       additiveSortOrder: 0
       cellRect:
@@ -703,7 +736,7 @@ ScriptedImporter:
         width: 1647
         height: 85
       spriteId: 1816d7b6ca0d1654f821080dc1ed4fa5
-    - name: Plain Paper UI_Frame_17
+    - name: Frame_17
       frameIndex: 17
       additiveSortOrder: 0
       cellRect:
@@ -712,7 +745,7 @@ ScriptedImporter:
         width: 59
         height: 38
       spriteId: 982b54eecbd5afe468a6684ca069a250
-    - name: Plain Paper UI_Frame_18
+    - name: Frame_18
       frameIndex: 18
       additiveSortOrder: 0
       cellRect:
@@ -721,7 +754,7 @@ ScriptedImporter:
         width: 23
         height: 23
       spriteId: 8b90c2930d399bb4dab3cdddd8d7d044
-    - name: Plain Paper UI_Frame_19
+    - name: Frame_19
       frameIndex: 19
       additiveSortOrder: 0
       cellRect:
@@ -730,7 +763,7 @@ ScriptedImporter:
         width: 64
         height: 18
       spriteId: 0755ed1bf7b52c740ba117f59d565f48
-    - name: Plain Paper UI_Frame_20
+    - name: Frame_20
       frameIndex: 20
       additiveSortOrder: 0
       cellRect:
@@ -740,9 +773,13 @@ ScriptedImporter:
         height: 46
       spriteId: 25bf0d95e6fb078429d4a7f90ecc709d
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 4288, y: 4464}
+  previousTextureSize: {x: 8192, y: 16384}

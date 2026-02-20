@@ -60,8 +60,12 @@ public class LaunchGameSetup : MonoBehaviour
 
     //just used for generating the list of all stages
     private StageData previousStage;
+    [Header("Misc")]
+    public Transform tweenDummy;
 
     void Start() {
+        StaticVariables.tweenDummy = tweenDummy;
+        DontDestroyOnLoad(tweenDummy);
         SetupColors();
         SetupBookLists();
         SetupStageList();

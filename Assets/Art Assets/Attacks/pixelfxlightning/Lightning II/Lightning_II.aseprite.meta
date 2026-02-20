@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 3.4545455, y: -1.7142859}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 85
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 1.0263158, y: -1.1818182}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 78
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 0.6964286, y: -0.61538464}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 0.57575756, y: -0.8333334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 0.47945204, y: -1.625}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -1.8333334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -242,15 +254,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 50}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -447926293
+    uuid:
+      value0: 3568995671
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -725971625
     name: Lightning_II
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Lightning_II_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -259,7 +277,7 @@ ScriptedImporter:
         width: 80
         height: 32
       spriteId: ea73bd2378225664cb3007872ea8a63a
-    - name: Lightning_II_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -268,7 +286,7 @@ ScriptedImporter:
         width: 80
         height: 32
       spriteId: ffe82b706ed175d49a1ba635a2f5314c
-    - name: Lightning_II_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -277,7 +295,7 @@ ScriptedImporter:
         width: 80
         height: 32
       spriteId: bbf8c30f4e8234942a6fb1609bc44527
-    - name: Lightning_II_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -286,7 +304,7 @@ ScriptedImporter:
         width: 80
         height: 32
       spriteId: d89db8924ec9ca74e8030b36c7f9a09d
-    - name: Lightning_II_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -295,7 +313,7 @@ ScriptedImporter:
         width: 80
         height: 32
       spriteId: 39b6a9ed2126bcd4a8f258849e225ed3
-    - name: Lightning_II_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -305,9 +323,13 @@ ScriptedImporter:
         height: 32
       spriteId: 418d542b1324ad542959e2c8fb756c5a
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 80, y: 32}
+  previousTextureSize: {x: 128, y: 128}

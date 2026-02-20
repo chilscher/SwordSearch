@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -1.625}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 86
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 0.50000006, y: -1.7333335}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 104
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 0.5333334, y: -1.7333335}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 79
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 0.5294118, y: -1.7333335}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 79
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 0.41666675, y: -2.0769231}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 112
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0.44444436, y: -3.2222223}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 86
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: 0.50000024, y: -7.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 103
@@ -266,6 +279,7 @@ ScriptedImporter:
     pivot: {x: 0.38461545, y: -1.7142857}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 102
@@ -286,6 +300,7 @@ ScriptedImporter:
     pivot: {x: 0.43999997, y: -0.09090909}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -306,6 +321,7 @@ ScriptedImporter:
     pivot: {x: 0.47142857, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -326,6 +342,7 @@ ScriptedImporter:
     pivot: {x: 0.5068493, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -346,6 +363,7 @@ ScriptedImporter:
     pivot: {x: 0.49999997, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -366,6 +384,7 @@ ScriptedImporter:
     pivot: {x: 0.50746274, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -382,15 +401,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 213}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 631534254
+    uuid:
+      value0: 3257976550
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -1036990746
     name: Bomb_Explosion
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Bomb_Explosion_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -399,7 +424,7 @@ ScriptedImporter:
         width: 18
         height: 16
       spriteId: 37bdee1ba45980e459b8dc386dcef6f7
-    - name: Bomb_Explosion_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -408,7 +433,7 @@ ScriptedImporter:
         width: 16
         height: 15
       spriteId: 4359be3e271b3d841bee482dbcf8b099
-    - name: Bomb_Explosion_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -417,7 +442,7 @@ ScriptedImporter:
         width: 15
         height: 15
       spriteId: 40f7a704afed1b64199dcc1ea44859a8
-    - name: Bomb_Explosion_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -426,7 +451,7 @@ ScriptedImporter:
         width: 17
         height: 15
       spriteId: e9443546e99b5a245af6c145c55a15c9
-    - name: Bomb_Explosion_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -435,7 +460,7 @@ ScriptedImporter:
         width: 12
         height: 13
       spriteId: 7d7f6704f49f618448dc191c587a3b38
-    - name: Bomb_Explosion_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -444,7 +469,7 @@ ScriptedImporter:
         width: 9
         height: 9
       spriteId: ce2e7c10501748148b8516e63ce0dafa
-    - name: Bomb_Explosion_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -453,7 +478,7 @@ ScriptedImporter:
         width: 4
         height: 4
       spriteId: 062d928b7e2784843ba3fb63d62ef140
-    - name: Bomb_Explosion_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -462,7 +487,7 @@ ScriptedImporter:
         width: 13
         height: 14
       spriteId: c2f6b1ad5408fbc4e9e6870448bad404
-    - name: Bomb_Explosion_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -471,7 +496,7 @@ ScriptedImporter:
         width: 50
         height: 44
       spriteId: 7142f6705a8b92d4c919a5eaab92a727
-    - name: Bomb_Explosion_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -480,7 +505,7 @@ ScriptedImporter:
         width: 70
         height: 48
       spriteId: 2a4d34eff303fb4459fb158033dd960e
-    - name: Bomb_Explosion_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -489,7 +514,7 @@ ScriptedImporter:
         width: 73
         height: 48
       spriteId: 81a9d6d726981fb4f947e09f903e77ea
-    - name: Bomb_Explosion_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -498,7 +523,7 @@ ScriptedImporter:
         width: 74
         height: 37
       spriteId: bc614a617a2bc794cb48e521beb697df
-    - name: Bomb_Explosion_Frame_12
+    - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
@@ -508,9 +533,13 @@ ScriptedImporter:
         height: 27
       spriteId: 0e53a156db6d8074995cbc673ec2261d
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 96, y: 48}
+  previousTextureSize: {x: 128, y: 256}
