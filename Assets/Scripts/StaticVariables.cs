@@ -107,6 +107,7 @@ public class StaticVariables{
         tweenDummy.DOLocalMove(tweenDummy.localPosition, delay, false).OnComplete(()=>function(param));
     }
 
+
     static public void FadeOutThenLoadScene(string name){
         sceneName = name;
         StartFadeDarken(sceneFadeDuration);

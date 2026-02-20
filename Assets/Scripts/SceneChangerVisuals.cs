@@ -13,6 +13,8 @@ public class SceneChangerVisuals : MonoBehaviour {
     public RectTransform settingsPage;
     public GameObject clickBlocker;   
     public SceneHeader sceneHeader;
+    [Header("Only for the Homepage Scene")]
+    public RectTransform settingsScroll;
     [Header("Only for the Settings Scene")]
     public RectTransform settingsPaper1;
     public RectTransform settingsPaper2;
@@ -43,8 +45,12 @@ public class SceneChangerVisuals : MonoBehaviour {
         clickBlocker.SetActive(true);
         if (SceneChanger.goingTo == SceneChanger.Scene.Settings){ //presumably only happening from the homepage
             settingsPage.gameObject.SetActive(true);
+            float horizOffset = (settingsScroll.rect.width / 2) + (canvasWidth / 2);
+            settingsScroll.DOLocalMoveX(horizOffset, 0.5f).SetEase(Ease.OutSine);
             //slide out the settings scroll first
-            settingsPage.DOLocalMoveX(0, 0.5f).SetEase(Ease.OutSine);
+            StaticVariables.WaitTimeThenCallFunction(0.5f, MoveObjectToX0OutSine, settingsPage);
+            StaticVariables.WaitTimeThenCallFunction(1f, TriggerSceneChange);
+            //settingsPage.DOLocalMoveX(0, 0.5f).SetEase(Ease.OutSine);
             return;
         }
         else if ((SceneChanger.goingTo == SceneChanger.Scene.Homepage) && (SceneChanger.goingFrom == SceneChanger.Scene.Settings)){
@@ -66,7 +72,6 @@ public class SceneChangerVisuals : MonoBehaviour {
     public void AnimateComingIntoScene(){
         clickBlocker.SetActive(true);
         if (SceneChanger.goingTo == SceneChanger.Scene.Settings){
-            sceneHeader.SlideIn();
             //assume all settings papers are the same width (should be 1440, the min screen width)
             float horizOffset = (settingsPaper1.rect.width / 2) + (canvasWidth / 2);
             settingsPaper1.localPosition = new Vector2(-horizOffset, settingsPaper1.localPosition.y);
@@ -81,6 +86,7 @@ public class SceneChangerVisuals : MonoBehaviour {
             StaticVariables.WaitTimeThenCallFunction(0.6f, MoveObjectToX0, settingsPaper4);
             StaticVariables.WaitTimeThenCallFunction(0.8f, MoveObjectToX0, settingsPaper5);
             StaticVariables.WaitTimeThenCallFunction(1.0f, MoveObjectToX0, settingsPaper6);
+            StaticVariables.WaitTimeThenCallFunction(1f, sceneHeader.SlideIn);
             StaticVariables.WaitTimeThenCallFunction(1.5f, EnableClicks);
             return;
         }
@@ -89,7 +95,11 @@ public class SceneChangerVisuals : MonoBehaviour {
             float pos = settingsPage.localPosition.x;
             settingsPage.localPosition = new Vector2(0, settingsPage.localPosition.y);
             settingsPage.DOLocalMoveX(pos, 0.5f).SetEase(Ease.InSine);
-            StaticVariables.WaitTimeThenCallFunction(0.5f, EnableClicks);
+            customVal1 = settingsScroll.localPosition.x;
+            float horizOffset = (settingsScroll.rect.width / 2) + (canvasWidth / 2);
+            settingsScroll.localPosition = new Vector2(horizOffset, settingsScroll.localPosition.y);
+            StaticVariables.WaitTimeThenCallFunction(0.5f, MoveObjectToXCustom1InSine, settingsScroll);
+            StaticVariables.WaitTimeThenCallFunction(1f, EnableClicks);
             return;
         }
     }
@@ -109,8 +119,20 @@ public class SceneChangerVisuals : MonoBehaviour {
         obj.DOLocalMoveX(0, 0.5f);
     }
 
+    private void MoveObjectToX0OutSine(RectTransform obj){
+        obj.DOLocalMoveX(0, 0.5f).SetEase(Ease.OutSine);
+    }
+
+    private void MoveObjectToX0InSine(RectTransform obj){
+        obj.DOLocalMoveX(0, 0.5f).SetEase(Ease.InSine);
+    }
+
     private void MoveObjectToXCustom1(RectTransform obj){
         obj.DOLocalMoveX(customVal1, 0.5f);
+    }
+
+    private void MoveObjectToXCustom1InSine(RectTransform obj){
+        obj.DOLocalMoveX(customVal1, 0.5f).SetEase(Ease.InSine);
     }
 
     private void MoveObjectToXCustom2(RectTransform obj){
