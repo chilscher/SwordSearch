@@ -59,12 +59,12 @@ public class SceneChangerVisuals : MonoBehaviour {
             customVal1 = -horizOffset;
             customVal2 = horizOffset;
             MoveObjectToXCustom1(settingsPaper1);
-            StaticVariables.WaitTimeThenCallFunction(0.2f, MoveObjectToXCustom2, settingsPaper2);
-            StaticVariables.WaitTimeThenCallFunction(0.4f, MoveObjectToXCustom1, settingsPaper3);
-            StaticVariables.WaitTimeThenCallFunction(0.6f, MoveObjectToXCustom2, settingsPaper4);
-            StaticVariables.WaitTimeThenCallFunction(0.8f, MoveObjectToXCustom1, settingsPaper5);
-            StaticVariables.WaitTimeThenCallFunction(1.0f, MoveObjectToXCustom2, settingsPaper6);
-            StaticVariables.WaitTimeThenCallFunction(1.5f, TriggerSceneChange);
+            StaticVariables.WaitTimeThenCallFunction(0.1f, MoveObjectToXCustom2, settingsPaper2);
+            StaticVariables.WaitTimeThenCallFunction(0.15f, MoveObjectToXCustom1, settingsPaper3);
+            StaticVariables.WaitTimeThenCallFunction(0.2f, MoveObjectToXCustom2, settingsPaper4);
+            StaticVariables.WaitTimeThenCallFunction(0.25f, MoveObjectToXCustom1, settingsPaper5);
+            StaticVariables.WaitTimeThenCallFunction(0.3f, MoveObjectToXCustom2, settingsPaper6);
+            StaticVariables.WaitTimeThenCallFunction(0.8f, TriggerSceneChange);
             return;
         }
     }
@@ -81,13 +81,13 @@ public class SceneChangerVisuals : MonoBehaviour {
             settingsPaper5.localPosition = new Vector2(-horizOffset, settingsPaper5.localPosition.y);
             settingsPaper6.localPosition = new Vector2(horizOffset, settingsPaper6.localPosition.y);
             MoveObjectToX0(settingsPaper1);
-            StaticVariables.WaitTimeThenCallFunction(0.2f, MoveObjectToX0, settingsPaper2);
-            StaticVariables.WaitTimeThenCallFunction(0.4f, MoveObjectToX0, settingsPaper3);
-            StaticVariables.WaitTimeThenCallFunction(0.6f, MoveObjectToX0, settingsPaper4);
-            StaticVariables.WaitTimeThenCallFunction(0.8f, MoveObjectToX0, settingsPaper5);
-            StaticVariables.WaitTimeThenCallFunction(1.0f, MoveObjectToX0, settingsPaper6);
-            StaticVariables.WaitTimeThenCallFunction(1f, sceneHeader.SlideIn);
-            StaticVariables.WaitTimeThenCallFunction(1.5f, EnableClicks);
+            StaticVariables.WaitTimeThenCallFunction(0.1f, MoveObjectToX0, settingsPaper2);
+            StaticVariables.WaitTimeThenCallFunction(0.2f, MoveObjectToX0, settingsPaper3);
+            StaticVariables.WaitTimeThenCallFunction(0.3f, MoveObjectToX0, settingsPaper4);
+            StaticVariables.WaitTimeThenCallFunction(0.4f, MoveObjectToX0, settingsPaper5);
+            StaticVariables.WaitTimeThenCallFunction(0.5f, MoveObjectToX0, settingsPaper6);
+            StaticVariables.WaitTimeThenCallFunction(0.5f, sceneHeader.SlideIn);
+            StaticVariables.WaitTimeThenCallFunction(1f, EnableClicks);
             return;
         }
         else if ((SceneChanger.goingTo == SceneChanger.Scene.Homepage) && (SceneChanger.goingFrom == SceneChanger.Scene.Settings)){
