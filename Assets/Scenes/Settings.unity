@@ -3676,7 +3676,7 @@ GameObject:
   - component: {fileID: 782603023}
   - component: {fileID: 782603022}
   m_Layer: 5
-  m_Name: Scroll
+  m_Name: Settings Paper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3695,11 +3695,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 425947445}
-  m_Father: {fileID: 811241014}
+  m_Father: {fileID: 2091244632}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.00005256616, y: 0.00010513232}
   m_SizeDelta: {x: 2000, y: 3000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &782603022
@@ -4040,7 +4040,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2091244632}
-  - {fileID: 782603021}
   - {fileID: 1047605253}
   - {fileID: 489060475}
   - {fileID: 1418904920}
@@ -4048,7 +4047,6 @@ RectTransform:
   - {fileID: 917317892}
   - {fileID: 263176993}
   - {fileID: 1622906992}
-  - {fileID: 1562977004}
   - {fileID: 2007312346}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7758,81 +7756,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559018916}
   m_CullTransparentMesh: 1
---- !u!1 &1562977003
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1562977004}
-  - component: {fileID: 1562977006}
-  - component: {fileID: 1562977005}
-  m_Layer: 5
-  m_Name: Fade
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1562977004
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562977003}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 811241014}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 2600, y: 3200}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1562977005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562977003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 2
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 0.1
---- !u!222 &1562977006
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562977003}
-  m_CullTransparentMesh: 1
 --- !u!1 &1568513078
 GameObject:
   m_ObjectHideFlags: 0
@@ -8394,8 +8317,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 811241014}
   backgroundPage: {fileID: 782603021}
-  worldNameDisplay: {fileID: 0}
-  stageNumberDisplay: {fileID: 0}
   playerNameInput: {fileID: 998270657}
   difficultyModeDisplay: {fileID: 575227577}
   difficultyModeDescription: {fileID: 1963772573}
@@ -8413,10 +8334,6 @@ MonoBehaviour:
   profanityFilterIcon: {fileID: 372763512}
   difficultyBackIcon: {fileID: 1898887464}
   difficultyForwardIcon: {fileID: 1244425323}
-  worldPreviousIcon: {fileID: 0}
-  worldNextIcon: {fileID: 0}
-  stagePreviousIcon: {fileID: 0}
-  stageNextIcon: {fileID: 0}
 --- !u!1 &1607545366
 GameObject:
   m_ObjectHideFlags: 0
@@ -10806,6 +10723,7 @@ RectTransform:
   - {fileID: 1346059647}
   - {fileID: 1574169903}
   - {fileID: 1527810530}
+  - {fileID: 782603021}
   m_Father: {fileID: 811241014}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}

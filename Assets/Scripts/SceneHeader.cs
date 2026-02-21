@@ -33,6 +33,11 @@ public class SceneHeader : MonoBehaviour{
         SceneChanger.GoHome();
         //StaticVariables.FadeOutThenLoadScene("Homepage");
     }
+
+    public void GoToSettings(){
+        SceneChanger.GoSettings();
+    }
+
     public void GoToAtlas(){
         StaticVariables.FadeOutThenLoadScene(StaticVariables.mapName);
     }

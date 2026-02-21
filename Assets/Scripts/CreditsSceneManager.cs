@@ -5,7 +5,6 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class CreditsSceneManager : MonoBehaviour{
-
     public RectTransform canvas;
     public RectTransform backgroundPage;
     public Text worldNameDisplay;
@@ -37,16 +36,8 @@ public class CreditsSceneManager : MonoBehaviour{
         stageNextIcon.SetActive(!isOnFinalStage);
         worldPreviousIcon.SetActive(!isAtBeginning);
         stagePreviousIcon.SetActive(!isAtBeginning);
-        worldNameDisplay.text = StaticVariables.highestBeatenStage.nextStage.worldName.ToUpper();
+        worldNameDisplay.text = "WORLD  " + StaticVariables.highestBeatenStage.nextStage.world;
         stageNumberDisplay.text = "STAGE  " + StaticVariables.highestBeatenStage.nextStage.stage;
-        //if ((StaticVariables.highestBeatenStage.nextStage.world == 1) && (StaticVariables.highestBeatenStage.nextStage.stage == 1)){
-        //    worldPreviousIcon.SetActive(false);
-        //    stagePreviousIcon.SetActive(false);
-        //}
-        //else if (StaticVariables.highestBeatenStage.enemyPrefab.name == finalPlaytestStageString){
-        //    worldNextIcon.SetActive(false);
-        //    stageNextIcon.SetActive(false);
-        //}
     }
 
     public void WorldDown(){
@@ -75,13 +66,6 @@ public class CreditsSceneManager : MonoBehaviour{
             StageData stage = StaticVariables.GetStage(newWorld, newStage);
             StaticVariables.highestBeatenStage = stage.previousStage;
         }
-        //if (StaticVariables.highestBeatenStage.nextStage.worldName.ToUpper().Contains(finalPlaytestWorldString)) //for alpha test
-        //    while (StaticVariables.highestBeatenStage.enemyPrefab.name != finalPlaytestStageString)
-        //        StaticVariables.highestBeatenStage = StaticVariables.highestBeatenStage.nextStage;
-        //return;
-        //else
-        //{
-        //}
         DisplayProgress(); 
         SaveSystem.SaveGame();
     }
@@ -93,7 +77,7 @@ public class CreditsSceneManager : MonoBehaviour{
     }
 
     public void StageUp(){
-        if (isOnFinalStage) //for alpha test
+        if (isOnFinalStage)
             return;
         else if ((StaticVariables.highestBeatenStage.nextStage != null) && (StaticVariables.highestBeatenStage.nextStage.nextStage != null))
             StaticVariables.highestBeatenStage = StaticVariables.highestBeatenStage.nextStage;

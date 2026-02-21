@@ -22,6 +22,8 @@ public class SceneChangerVisuals : MonoBehaviour {
     public RectTransform settingsPaper4;
     public RectTransform settingsPaper5;
     public RectTransform settingsPaper6;
+    [Header("Only for the Credits Scene")]
+    public RectTransform creditsPaper;
 
     private float canvasWidth;
     private float canvasHeight;
@@ -67,6 +69,14 @@ public class SceneChangerVisuals : MonoBehaviour {
             StaticVariables.WaitTimeThenCallFunction(0.8f, TriggerSceneChange);
             return;
         }
+        else if (CheckSceneChange(SceneChanger.Scene.Credits, null)){
+            sceneHeader.SlideOut();
+            creditsPaper.DOLocalMoveY(-creditsPaper.rect.height, 0.5f).SetEase(Ease.InSine);
+            //customVal1 = -creditsPaper.rect.height;
+            //MoveObjectToYCustom1(creditsPaper);
+            StaticVariables.WaitTimeThenCallFunction(0.5f, TriggerSceneChange);
+            return;
+        }
     }
 
     public void AnimateComingIntoScene(){
@@ -102,6 +112,14 @@ public class SceneChangerVisuals : MonoBehaviour {
             StaticVariables.WaitTimeThenCallFunction(1f, EnableClicks);
             return;
         }
+        else if (CheckSceneChange(null, SceneChanger.Scene.Credits)){
+            creditsPaper.localPosition = new Vector2(creditsPaper.localPosition.x, -creditsPaper.rect.height);
+            creditsPaper.DOLocalMoveY(0, 0.5f).SetEase(Ease.OutSine);
+            //MoveObjectToY0(creditsPaper);
+            StaticVariables.WaitTimeThenCallFunction(0.5f, sceneHeader.SlideIn);
+            StaticVariables.WaitTimeThenCallFunction(1f, EnableClicks);
+            return;
+        }
     }
 
     private void SetCanvasSizes(){
@@ -119,6 +137,10 @@ public class SceneChangerVisuals : MonoBehaviour {
         obj.DOLocalMoveX(0, 0.5f);
     }
 
+    private void MoveObjectToY0(RectTransform obj){
+        obj.DOLocalMoveY(0, 0.5f);
+    }
+
     private void MoveObjectToX0OutSine(RectTransform obj){
         obj.DOLocalMoveX(0, 0.5f).SetEase(Ease.OutSine);
     }
@@ -129,6 +151,10 @@ public class SceneChangerVisuals : MonoBehaviour {
 
     private void MoveObjectToXCustom1(RectTransform obj){
         obj.DOLocalMoveX(customVal1, 0.5f);
+    }
+
+    private void MoveObjectToYCustom1(RectTransform obj){
+        obj.DOLocalMoveY(customVal1, 0.5f);
     }
 
     private void MoveObjectToXCustom1InSine(RectTransform obj){
