@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger{
 
-    public enum Scene {None, Homepage, Settings}
+    public enum Scene {None, Homepage, Settings, Credits}
     static public Scene goingFrom = Scene.None;
     static public Scene goingTo = Scene.None;
     static public SceneChangerVisuals visuals;
@@ -28,6 +28,13 @@ public class SceneChanger{
         nextSceneName = "Settings";
         goingFrom = visuals.thisScene;
         goingTo = Scene.Settings;
+        visuals.AnimateLeavingScene();
+    }
+
+    static public void GoCredits(){
+        nextSceneName = "Credits";
+        goingFrom = visuals.thisScene;
+        goingTo = Scene.Credits;
         visuals.AnimateLeavingScene();
     }
 

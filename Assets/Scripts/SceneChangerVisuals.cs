@@ -61,9 +61,9 @@ public class SceneChangerVisuals : MonoBehaviour {
             MoveObjectToXCustom1(settingsPaper1);
             StaticVariables.WaitTimeThenCallFunction(0.1f, MoveObjectToXCustom2, settingsPaper2);
             StaticVariables.WaitTimeThenCallFunction(0.15f, MoveObjectToXCustom1, settingsPaper3);
-            StaticVariables.WaitTimeThenCallFunction(0.2f, MoveObjectToXCustom2, settingsPaper4);
-            StaticVariables.WaitTimeThenCallFunction(0.25f, MoveObjectToXCustom1, settingsPaper5);
-            StaticVariables.WaitTimeThenCallFunction(0.3f, MoveObjectToXCustom2, settingsPaper6);
+            StaticVariables.WaitTimeThenCallFunction(0.2f, MoveObjectToXCustom1, settingsPaper4);
+            StaticVariables.WaitTimeThenCallFunction(0.25f, MoveObjectToXCustom2, settingsPaper5);
+            StaticVariables.WaitTimeThenCallFunction(0.3f, MoveObjectToXCustom1, settingsPaper6);
             StaticVariables.WaitTimeThenCallFunction(0.8f, TriggerSceneChange);
             return;
         }
@@ -77,9 +77,9 @@ public class SceneChangerVisuals : MonoBehaviour {
             settingsPaper1.localPosition = new Vector2(-horizOffset, settingsPaper1.localPosition.y);
             settingsPaper2.localPosition = new Vector2(horizOffset, settingsPaper2.localPosition.y);
             settingsPaper3.localPosition = new Vector2(-horizOffset, settingsPaper3.localPosition.y);
-            settingsPaper4.localPosition = new Vector2(horizOffset, settingsPaper4.localPosition.y);
-            settingsPaper5.localPosition = new Vector2(-horizOffset, settingsPaper5.localPosition.y);
-            settingsPaper6.localPosition = new Vector2(horizOffset, settingsPaper6.localPosition.y);
+            settingsPaper4.localPosition = new Vector2(-horizOffset, settingsPaper4.localPosition.y);
+            settingsPaper5.localPosition = new Vector2(horizOffset, settingsPaper5.localPosition.y);
+            settingsPaper6.localPosition = new Vector2(-horizOffset, settingsPaper6.localPosition.y);
             MoveObjectToX0(settingsPaper1);
             StaticVariables.WaitTimeThenCallFunction(0.1f, MoveObjectToX0, settingsPaper2);
             StaticVariables.WaitTimeThenCallFunction(0.2f, MoveObjectToX0, settingsPaper3);

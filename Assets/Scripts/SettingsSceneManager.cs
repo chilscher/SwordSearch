@@ -30,7 +30,7 @@ public class SettingsSceneManager : MonoBehaviour{
     public string hardModeDescription;
     public Color difficultyTextColorHard;
     [Header("Misc")]
-    public Text profanityFilterDisplay;
+    public GameObject profanityFilterIcon;
     public GameObject difficultyBackIcon;
     public GameObject difficultyForwardIcon;
     public GameObject worldPreviousIcon;
@@ -239,11 +239,7 @@ public class SettingsSceneManager : MonoBehaviour{
     }
 
     private void DisplayProfanitySelection() {
-        if (StaticVariables.allowProfanities)
-            profanityFilterDisplay.text = "";
-        else
-            profanityFilterDisplay.text = "X";
-        
+        profanityFilterIcon.SetActive(!StaticVariables.allowProfanities);
     }
     
     private void SetIsOnFinalWorldAndStage(){
@@ -260,5 +256,9 @@ public class SettingsSceneManager : MonoBehaviour{
         }
         isOnFinalWorld = w;
         isOnFinalStage = s;
+    }
+
+    public void PushedCreditsButton(){
+        print("go to credits");
     }
 }
