@@ -35,6 +35,7 @@ public class SceneChanger{
         nextSceneName = "Credits";
         goingFrom = visuals.thisScene;
         goingTo = Scene.Credits;
+        //LoadScene();
         visuals.AnimateLeavingScene();
     }
 

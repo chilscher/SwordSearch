@@ -50,4 +50,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/World 8 - Dragon's Den.unity
     guid: 056fdc3dce973f6478dbb5a8521e7940
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: c061e1bbbf432d645b3dbfd27d3c2bde
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

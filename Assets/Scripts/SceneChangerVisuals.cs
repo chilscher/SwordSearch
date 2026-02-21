@@ -43,7 +43,7 @@ public class SceneChangerVisuals : MonoBehaviour {
 
     public void AnimateLeavingScene(){
         clickBlocker.SetActive(true);
-        if (SceneChanger.goingTo == SceneChanger.Scene.Settings){ //presumably only happening from the homepage
+        if (CheckSceneChange(SceneChanger.Scene.Homepage, SceneChanger.Scene.Settings)){ //presumably only happening from the homepage
             settingsPage.gameObject.SetActive(true);
             float horizOffset = (settingsScroll.rect.width / 2) + (canvasWidth / 2);
             settingsScroll.DOLocalMoveX(horizOffset, 0.5f).SetEase(Ease.OutSine);
@@ -53,7 +53,7 @@ public class SceneChangerVisuals : MonoBehaviour {
             //settingsPage.DOLocalMoveX(0, 0.5f).SetEase(Ease.OutSine);
             return;
         }
-        else if ((SceneChanger.goingTo == SceneChanger.Scene.Homepage) && (SceneChanger.goingFrom == SceneChanger.Scene.Settings)){
+        else if (CheckSceneChange(SceneChanger.Scene.Settings, null)){
             sceneHeader.SlideOut();
             float horizOffset = (settingsPaper1.rect.width / 2) + (canvasWidth / 2);
             customVal1 = -horizOffset;
@@ -71,7 +71,7 @@ public class SceneChangerVisuals : MonoBehaviour {
 
     public void AnimateComingIntoScene(){
         clickBlocker.SetActive(true);
-        if (SceneChanger.goingTo == SceneChanger.Scene.Settings){
+        if (CheckSceneChange(null, SceneChanger.Scene.Settings)){
             //assume all settings papers are the same width (should be 1440, the min screen width)
             float horizOffset = (settingsPaper1.rect.width / 2) + (canvasWidth / 2);
             settingsPaper1.localPosition = new Vector2(-horizOffset, settingsPaper1.localPosition.y);
@@ -90,7 +90,7 @@ public class SceneChangerVisuals : MonoBehaviour {
             StaticVariables.WaitTimeThenCallFunction(1f, EnableClicks);
             return;
         }
-        else if ((SceneChanger.goingTo == SceneChanger.Scene.Homepage) && (SceneChanger.goingFrom == SceneChanger.Scene.Settings)){
+        else if (CheckSceneChange(SceneChanger.Scene.Settings, SceneChanger.Scene.Homepage)){
             settingsPage.gameObject.SetActive(true);
             float pos = settingsPage.localPosition.x;
             settingsPage.localPosition = new Vector2(0, settingsPage.localPosition.y);
@@ -145,5 +145,13 @@ public class SceneChangerVisuals : MonoBehaviour {
 
     private void TriggerSceneChange(){
         SceneChanger.LoadScene();
+    }
+
+    private bool CheckSceneChange(SceneChanger.Scene? from, SceneChanger.Scene? to){
+        if (from == null)
+            return (to == SceneChanger.goingTo);
+        if (to == null)
+            return (from == SceneChanger.goingFrom);
+        return ((from == SceneChanger.goingFrom) && (to == SceneChanger.goingTo));
     }
 }
