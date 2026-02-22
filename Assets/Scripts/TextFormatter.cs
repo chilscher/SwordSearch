@@ -33,6 +33,7 @@ public static class TextFormatter{
         output = output.Replace("<charred>", "<color=#" + Color.grey.ToHexString() + ">");
         output = output.Replace("<infected>", "<color=#B2E540>");
         output = output.Replace("<necromancy>", "<color=#6D4174>");
+        output = output.Replace("<g>", "<color=#797979>"); //grey, for the credits scene
         output = output.Replace("<>", "</color>");
         
         output = output.Replace("<playername>", StaticVariables.playerName);

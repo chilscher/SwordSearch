@@ -17,10 +17,12 @@ public class CreditsSceneManager : MonoBehaviour{
     private string finalPlaytestStageString = "Bat";
     private bool isOnFinalWorld = false;
     private bool isOnFinalStage = false;
+    public Transform creditsTextParent;
 
     void Start(){
         SetBackgroundSize();
         DisplayProgress();
+        FormatCreditsText();
     }
 
     private void SetBackgroundSize(){
@@ -99,5 +101,14 @@ public class CreditsSceneManager : MonoBehaviour{
         }
         isOnFinalWorld = w;
         isOnFinalStage = s;
+    }
+
+    private void FormatCreditsText(){
+        foreach (Transform t in creditsTextParent){
+            Text tx = t.GetComponent<Text>();
+            if (tx != null){
+                tx.text = TextFormatter.FormatString(tx.text);
+            }
+        }
     }
 }
