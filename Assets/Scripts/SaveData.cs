@@ -19,6 +19,7 @@ public class SaveData{
     public float gameVersionNumber;
     public string buffedType;
     public bool allowProfanities;
+    public int globalVolume;
 
     // ---------------------------------------------------
     //ALL OF THE FUNCTIONS THAT ARE USED TO SAVE PLAYER DATA
@@ -32,6 +33,7 @@ public class SaveData{
         hasTalkedToNewestEnemy = StaticVariables.hasTalkedToNewestEnemy;
         playerName = StaticVariables.playerName;
         allowProfanities = StaticVariables.allowProfanities;
+        globalVolume = StaticVariables.globalVolume;
         switch (StaticVariables.difficultyMode) {
             case (StaticVariables.DifficultyMode.Normal):
                 difficultyMode = "normal";
@@ -71,6 +73,7 @@ public class SaveData{
         //StaticVariables.lastVisitedStage = StaticVariables.GetStage(lastVisitedWorld, lastVisitedStage);
         StaticVariables.playerName = playerName;
         StaticVariables.allowProfanities = allowProfanities;
+        StaticVariables.globalVolume = globalVolume;
         switch (difficultyMode) {
             case ("normal"):
                 StaticVariables.difficultyMode = StaticVariables.DifficultyMode.Normal;

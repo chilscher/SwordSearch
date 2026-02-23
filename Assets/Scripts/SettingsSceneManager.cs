@@ -27,8 +27,12 @@ public class SettingsSceneManager : MonoBehaviour{
     [TextArea(2,5)]
     public string hardModeDescription;
     public Color difficultyTextColorHard;
+    [Header("Volume Selection")]
+    public List<VolumeSelector> volumeSelectors;
+    [Header("Profanity Filter")]
+    public GameObject profanityFilterIconOn;
+    public GameObject profanityFilterIconOff;
     [Header("Misc")]
-    public GameObject profanityFilterIcon;
     public GameObject difficultyBackIcon;
     public GameObject difficultyForwardIcon;
 
@@ -37,6 +41,7 @@ public class SettingsSceneManager : MonoBehaviour{
         DisplayPlayerName();
         DisplayDifficultyMode();
         DisplayProfanitySelection();
+        ShowVolume();
     }
 
     private void SetBackgroundSize(){
@@ -156,10 +161,24 @@ public class SettingsSceneManager : MonoBehaviour{
     }
 
     private void DisplayProfanitySelection() {
-        profanityFilterIcon.SetActive(!StaticVariables.allowProfanities);
+        profanityFilterIconOff.SetActive(StaticVariables.allowProfanities);
+        profanityFilterIconOn.SetActive(!StaticVariables.allowProfanities);
     }
 
     public void PushedCreditsButton(){
         SceneChanger.GoCredits();
+    }
+
+    
+    public void SetVolume(int vol){
+        StaticVariables.globalVolume = vol;
+        //AudioManager.PlaySound(AudioManager.IDs.Select);
+        ShowVolume();
+        SaveSystem.SaveGame();
+    }
+
+    private void ShowVolume(){
+        foreach (VolumeSelector s in volumeSelectors)
+            s.ShowSelected();
     }
 }

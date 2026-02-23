@@ -1,0 +1,1638 @@
+fileFormatVersion: 2
+guid: 80924cd49b5c46f4586360e3990e7046
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5845124698104158995
+    second: Settings and Home Icons are inside this_0
+  - first:
+      213: 7330315780777602473
+    second: Settings and Home Icons are inside this_1
+  - first:
+      213: -2552056884066714193
+    second: Settings and Home Icons are inside this_2
+  - first:
+      213: -6943811715987847286
+    second: Settings and Home Icons are inside this_3
+  - first:
+      213: 2945139098761631770
+    second: Settings and Home Icons are inside this_4
+  - first:
+      213: 1823136260280512148
+    second: Settings and Home Icons are inside this_5
+  - first:
+      213: -9109626905985341691
+    second: Settings and Home Icons are inside this_6
+  - first:
+      213: -2764235030510575526
+    second: Settings and Home Icons are inside this_7
+  - first:
+      213: -1223811417324577307
+    second: Settings and Home Icons are inside this_8
+  - first:
+      213: -8833142024437147832
+    second: Settings and Home Icons are inside this_9
+  - first:
+      213: 5213287721126691417
+    second: Settings and Home Icons are inside this_10
+  - first:
+      213: -6731607409835856319
+    second: Settings and Home Icons are inside this_11
+  - first:
+      213: 1591130080572901495
+    second: Settings and Home Icons are inside this_12
+  - first:
+      213: -5953289023650210001
+    second: Settings and Home Icons are inside this_13
+  - first:
+      213: 4568050238899427773
+    second: Settings and Home Icons are inside this_14
+  - first:
+      213: -4015088472154870171
+    second: Settings and Home Icons are inside this_15
+  - first:
+      213: -4608519484711146841
+    second: Settings and Home Icons are inside this_16
+  - first:
+      213: -1168667951761119703
+    second: Settings and Home Icons are inside this_17
+  - first:
+      213: 7227444013413230648
+    second: Settings and Home Icons are inside this_18
+  - first:
+      213: -6239763460190022891
+    second: Settings and Home Icons are inside this_19
+  - first:
+      213: -6085275691803108890
+    second: Settings and Home Icons are inside this_20
+  - first:
+      213: -7449327996847671469
+    second: Settings and Home Icons are inside this_21
+  - first:
+      213: 6768275529506864551
+    second: Settings and Home Icons are inside this_22
+  - first:
+      213: -805963532102959877
+    second: Settings and Home Icons are inside this_23
+  - first:
+      213: -2211583318327733197
+    second: Settings and Home Icons are inside this_24
+  - first:
+      213: 1462955257827479896
+    second: Settings and Home Icons are inside this_25
+  - first:
+      213: -7491469381818656661
+    second: Settings and Home Icons are inside this_26
+  - first:
+      213: -4710714064583473829
+    second: Settings and Home Icons are inside this_27
+  - first:
+      213: -5291708317014826977
+    second: Settings and Home Icons are inside this_28
+  - first:
+      213: 4062771398698814621
+    second: Settings and Home Icons are inside this_29
+  - first:
+      213: -6490533681182890290
+    second: Settings and Home Icons are inside this_30
+  - first:
+      213: -8017842220251355469
+    second: Settings and Home Icons are inside this_31
+  - first:
+      213: -4396590209478349863
+    second: Settings and Home Icons are inside this_32
+  - first:
+      213: 5756037940671492804
+    second: Settings and Home Icons are inside this_33
+  - first:
+      213: 3679444592159988676
+    second: Settings and Home Icons are inside this_34
+  - first:
+      213: 8480344771692498658
+    second: Settings and Home Icons are inside this_35
+  - first:
+      213: -3112081526444412634
+    second: Settings and Home Icons are inside this_36
+  - first:
+      213: -6324316802535562117
+    second: Settings and Home Icons are inside this_37
+  - first:
+      213: -5793911743476483251
+    second: Settings and Home Icons are inside this_38
+  - first:
+      213: 4723675126784174707
+    second: Settings and Home Icons are inside this_39
+  - first:
+      213: -7544773776408091769
+    second: Settings and Home Icons are inside this_40
+  - first:
+      213: 1436465784237918321
+    second: Settings and Home Icons are inside this_41
+  - first:
+      213: 2174387768517528435
+    second: Settings and Home Icons are inside this_42
+  - first:
+      213: -2159104526757706156
+    second: Settings and Home Icons are inside this_43
+  - first:
+      213: 8016428951044296546
+    second: Settings and Home Icons are inside this_44
+  - first:
+      213: 5122955406815772461
+    second: Settings and Home Icons are inside this_45
+  - first:
+      213: 2861605483781869191
+    second: Settings and Home Icons are inside this_46
+  - first:
+      213: -3712001097437888286
+    second: Settings and Home Icons are inside this_47
+  - first:
+      213: 3363066126308207560
+    second: Settings and Home Icons are inside this_48
+  - first:
+      213: 1423514541802430106
+    second: Settings and Home Icons are inside this_49
+  - first:
+      213: -5131294978825800904
+    second: Settings and Home Icons are inside this_50
+  - first:
+      213: 614761150650038997
+    second: Settings and Home Icons are inside this_51
+  - first:
+      213: 4913976491289728842
+    second: Settings and Home Icons are inside this_52
+  - first:
+      213: -6463945922002135870
+    second: Settings and Home Icons are inside this_53
+  - first:
+      213: -543450481901490875
+    second: Settings and Home Icons are inside this_54
+  - first:
+      213: -6629042658152873873
+    second: Settings and Home Icons are inside this_55
+  - first:
+      213: -2267606075932641543
+    second: Settings and Home Icons are inside this_56
+  - first:
+      213: 3880177637708822017
+    second: Settings and Home Icons are inside this_57
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Grey Box
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de4a3ad4e02f1eea0800000000000000
+      internalID: -5845124698104158995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 191
+        width: 32
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ad60bc6d538ab560800000000000000
+      internalID: 7330315780777602473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 191
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fadfc9a09c5459cd0800000000000000
+      internalID: -2552056884066714193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_3
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 191
+        width: 32
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a874951c800a2af90800000000000000
+      internalID: -6943811715987847286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_4
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 143
+        width: 98
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a181dc3086c3fd820800000000000000
+      internalID: 2945139098761631770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_5
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 191
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49e6723f4c41d4910800000000000000
+      internalID: 1823136260280512148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_6
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 143
+        width: 44
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5072768089a149180800000000000000
+      internalID: -9109626905985341691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_7
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 143
+        width: 50
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a50e9b2a2e673a9d0800000000000000
+      internalID: -2764235030510575526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_8
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 143
+        width: 47
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ed1d4efff5240fe0800000000000000
+      internalID: -1223811417324577307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_9
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 149
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84759d6f0206a6580800000000000000
+      internalID: -8833142024437147832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_10
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 143
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95289a9af81595840800000000000000
+      internalID: 5213287721126691417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edit Arrow
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 144
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14ea851f9b68492a0800000000000000
+      internalID: -6731607409835856319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_12
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 146
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7788cfbc064d41610800000000000000
+      internalID: 1591130080572901495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_13
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 143
+        width: 44
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2fd814cc2ba16da0800000000000000
+      internalID: -5953289023650210001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_14
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 146
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db91dbd5d79f46f30800000000000000
+      internalID: 4568050238899427773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Music Note
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 96
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56e6173be4a8748c0800000000000000
+      internalID: -4015088472154870171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 146
+        width: 35
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aa635512ff3b00c0800000000000000
+      internalID: -4608519484711146841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_17
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 143
+        width: 44
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92625e290be08cfe0800000000000000
+      internalID: -1168667951761119703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_18
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 143
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 838e48d990a0d4460800000000000000
+      internalID: 7227444013413230648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_19
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 146
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51359e05138e769a0800000000000000
+      internalID: -6239763460190022891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red X
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 99
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e991cddff1cc8ba0800000000000000
+      internalID: -6085275691803108890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_21
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 98
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 357b584b7abae9890800000000000000
+      internalID: -7449327996847671469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_22
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 98
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7adb936fbbebded50800000000000000
+      internalID: 6768275529506864551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_23
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 98
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfc751f0074a0d4f0800000000000000
+      internalID: -805963532102959877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_24
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 98
+        width: 50
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33455ef70b0ee41e0800000000000000
+      internalID: -2211583318327733197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CheckMark
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 98
+        width: 44
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 851d8115e067d4410800000000000000
+      internalID: 1462955257827479896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_26
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 47
+        width: 50
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b68dbfae944f80890800000000000000
+      internalID: -7491469381818656661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_27
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 98
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b55c016448e20aeb0800000000000000
+      internalID: -4710714064583473829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_28
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 98
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f10e95582531096b0800000000000000
+      internalID: -5291708317014826977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_29
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 50
+        width: 50
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9c4f07cf0dd16830800000000000000
+      internalID: 4062771398698814621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_30
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 98
+        width: 44
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec6a26a510efce5a0800000000000000
+      internalID: -6490533681182890290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_31
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 101
+        width: 97
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b6e9c42bf6eab090800000000000000
+      internalID: -8017842220251355469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_32
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 50
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9db2515af7c2cf2c0800000000000000
+      internalID: -4396590209478349863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_33
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 47
+        width: 194
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c2356f920e81ef40800000000000000
+      internalID: 5756037940671492804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_34
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 47
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cb9d6eac53001330800000000000000
+      internalID: 3679444592159988676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_35
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 0
+        width: 50
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ee829993ac30b570800000000000000
+      internalID: 8480344771692498658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_36
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 50
+        width: 44
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 621b938175aafc4d0800000000000000
+      internalID: -3112081526444412634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_37
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 50
+        width: 44
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7465d130638b38a0800000000000000
+      internalID: -6324316802535562117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_38
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 47
+        width: 50
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4bbe1e77f3e79fa0800000000000000
+      internalID: -5793911743476483251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_39
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 47
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37aa15e208ddd8140800000000000000
+      internalID: 4723675126784174707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_40
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 5
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 783638a69349b4790800000000000000
+      internalID: -7544773776408091769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_41
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 5
+        width: 14
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1780181250a5fe310800000000000000
+      internalID: 1436465784237918321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_42
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 5
+        width: 14
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37b0172b72afc2e10800000000000000
+      internalID: 2174387768517528435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_43
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 8
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4564ba15fd15902e0800000000000000
+      internalID: -2159104526757706156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_44
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 8
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26f072a78a3104f60800000000000000
+      internalID: 8016428951044296546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_45
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 5
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2fbb67ccc4681740800000000000000
+      internalID: 5122955406815772461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_46
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 5
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78ec02ca60776b720800000000000000
+      internalID: 2861605483781869191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_47
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 5
+        width: 14
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e0ca5d3ba25c7cc0800000000000000
+      internalID: -3712001097437888286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_48
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 5
+        width: 14
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cbefb6d2d20cae20800000000000000
+      internalID: 3363066126308207560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_49
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 8
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9e9cb40fe651c310800000000000000
+      internalID: 1423514541802430106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_50
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 8
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 833b75d476af9c8b0800000000000000
+      internalID: -5131294978825800904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_51
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 5
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dab4366202188800800000000000000
+      internalID: 614761150650038997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_52
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 8
+        width: 47
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a47d1fd5593f13440800000000000000
+      internalID: 4913976491289728842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_53
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 0
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c45abf6e637b46a0800000000000000
+      internalID: -6463945922002135870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_54
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 2
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54d2f318aa64578f0800000000000000
+      internalID: -543450481901490875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_55
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 5
+        width: 20
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6003e713d8e004a0800000000000000
+      internalID: -6629042658152873873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_56
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 5
+        width: 20
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f67489c948d780e0800000000000000
+      internalID: -2267606075932641543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings and Home Icons are inside this_57
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 2
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1067c01e00929d530800000000000000
+      internalID: 3880177637708822017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 84e3afbeb729fdb438ad838811461a10
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      CheckMark: 1462955257827479896
+      Edit Arrow: -6731607409835856319
+      Grey Box: -5845124698104158995
+      Music Note: -4015088472154870171
+      Paper: -4608519484711146841
+      Red X: -6085275691803108890
+      Settings and Home Icons are inside this_1: 7330315780777602473
+      Settings and Home Icons are inside this_10: 5213287721126691417
+      Settings and Home Icons are inside this_12: 1591130080572901495
+      Settings and Home Icons are inside this_13: -5953289023650210001
+      Settings and Home Icons are inside this_14: 4568050238899427773
+      Settings and Home Icons are inside this_17: -1168667951761119703
+      Settings and Home Icons are inside this_18: 7227444013413230648
+      Settings and Home Icons are inside this_19: -6239763460190022891
+      Settings and Home Icons are inside this_2: -2552056884066714193
+      Settings and Home Icons are inside this_21: -7449327996847671469
+      Settings and Home Icons are inside this_22: 6768275529506864551
+      Settings and Home Icons are inside this_23: -805963532102959877
+      Settings and Home Icons are inside this_24: -2211583318327733197
+      Settings and Home Icons are inside this_26: -7491469381818656661
+      Settings and Home Icons are inside this_27: -4710714064583473829
+      Settings and Home Icons are inside this_28: -5291708317014826977
+      Settings and Home Icons are inside this_29: 4062771398698814621
+      Settings and Home Icons are inside this_3: -6943811715987847286
+      Settings and Home Icons are inside this_30: -6490533681182890290
+      Settings and Home Icons are inside this_31: -8017842220251355469
+      Settings and Home Icons are inside this_32: -4396590209478349863
+      Settings and Home Icons are inside this_33: 5756037940671492804
+      Settings and Home Icons are inside this_34: 3679444592159988676
+      Settings and Home Icons are inside this_35: 8480344771692498658
+      Settings and Home Icons are inside this_36: -3112081526444412634
+      Settings and Home Icons are inside this_37: -6324316802535562117
+      Settings and Home Icons are inside this_38: -5793911743476483251
+      Settings and Home Icons are inside this_39: 4723675126784174707
+      Settings and Home Icons are inside this_4: 2945139098761631770
+      Settings and Home Icons are inside this_40: -7544773776408091769
+      Settings and Home Icons are inside this_41: 1436465784237918321
+      Settings and Home Icons are inside this_42: 2174387768517528435
+      Settings and Home Icons are inside this_43: -2159104526757706156
+      Settings and Home Icons are inside this_44: 8016428951044296546
+      Settings and Home Icons are inside this_45: 5122955406815772461
+      Settings and Home Icons are inside this_46: 2861605483781869191
+      Settings and Home Icons are inside this_47: -3712001097437888286
+      Settings and Home Icons are inside this_48: 3363066126308207560
+      Settings and Home Icons are inside this_49: 1423514541802430106
+      Settings and Home Icons are inside this_5: 1823136260280512148
+      Settings and Home Icons are inside this_50: -5131294978825800904
+      Settings and Home Icons are inside this_51: 614761150650038997
+      Settings and Home Icons are inside this_52: 4913976491289728842
+      Settings and Home Icons are inside this_53: -6463945922002135870
+      Settings and Home Icons are inside this_54: -543450481901490875
+      Settings and Home Icons are inside this_55: -6629042658152873873
+      Settings and Home Icons are inside this_56: -2267606075932641543
+      Settings and Home Icons are inside this_57: 3880177637708822017
+      Settings and Home Icons are inside this_6: -9109626905985341691
+      Settings and Home Icons are inside this_7: -2764235030510575526
+      Settings and Home Icons are inside this_8: -1223811417324577307
+      Settings and Home Icons are inside this_9: -8833142024437147832
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
