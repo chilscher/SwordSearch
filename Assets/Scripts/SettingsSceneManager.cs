@@ -35,6 +35,7 @@ public class SettingsSceneManager : MonoBehaviour{
     [Header("Misc")]
     public GameObject difficultyBackIcon;
     public GameObject difficultyForwardIcon;
+    public string inviteLink = "https://discord.gg/KtARNGgaC8";
 
     void Start(){
         SetBackgroundSize();
@@ -180,5 +181,10 @@ public class SettingsSceneManager : MonoBehaviour{
     private void ShowVolume(){
         foreach (VolumeSelector s in volumeSelectors)
             s.ShowSelected();
+    }
+
+    public void PushInviteButton(){
+        //AudioManager.PlaySound(AudioManager.IDs.Select);
+        Application.OpenURL(inviteLink);
     }
 }
