@@ -48,11 +48,10 @@ public class SceneChangerVisuals : MonoBehaviour {
         if (CheckSceneChange(SceneChanger.Scene.Homepage, SceneChanger.Scene.Settings)){ //presumably only happening from the homepage
             settingsPage.gameObject.SetActive(true);
             float horizOffset = (settingsScroll.rect.width / 2) + (canvasWidth / 2);
-            settingsScroll.DOLocalMoveX(horizOffset, 0.5f).SetEase(Ease.OutSine);
+            settingsScroll.DOLocalMoveX(horizOffset, 0.5f).SetEase(Ease.InSine);
             //slide out the settings scroll first
             StaticVariables.WaitTimeThenCallFunction(0.5f, MoveObjectToX0OutSine, settingsPage);
             StaticVariables.WaitTimeThenCallFunction(1f, TriggerSceneChange);
-            //settingsPage.DOLocalMoveX(0, 0.5f).SetEase(Ease.OutSine);
             return;
         }
         else if (CheckSceneChange(SceneChanger.Scene.Settings, null)){
@@ -72,8 +71,6 @@ public class SceneChangerVisuals : MonoBehaviour {
         else if (CheckSceneChange(SceneChanger.Scene.Credits, null)){
             sceneHeader.SlideOut();
             creditsPaper.DOLocalMoveY(-creditsPaper.rect.height, 0.5f).SetEase(Ease.InSine);
-            //customVal1 = -creditsPaper.rect.height;
-            //MoveObjectToYCustom1(creditsPaper);
             StaticVariables.WaitTimeThenCallFunction(0.5f, TriggerSceneChange);
             return;
         }
@@ -108,14 +105,13 @@ public class SceneChangerVisuals : MonoBehaviour {
             customVal1 = settingsScroll.localPosition.x;
             float horizOffset = (settingsScroll.rect.width / 2) + (canvasWidth / 2);
             settingsScroll.localPosition = new Vector2(horizOffset, settingsScroll.localPosition.y);
-            StaticVariables.WaitTimeThenCallFunction(0.5f, MoveObjectToXCustom1InSine, settingsScroll);
+            StaticVariables.WaitTimeThenCallFunction(0.5f, MoveObjectToXCustom1OutSine, settingsScroll);
             StaticVariables.WaitTimeThenCallFunction(1f, EnableClicks);
             return;
         }
         else if (CheckSceneChange(null, SceneChanger.Scene.Credits)){
             creditsPaper.localPosition = new Vector2(creditsPaper.localPosition.x, -creditsPaper.rect.height);
             creditsPaper.DOLocalMoveY(0, 0.5f).SetEase(Ease.OutSine);
-            //MoveObjectToY0(creditsPaper);
             StaticVariables.WaitTimeThenCallFunction(0.5f, sceneHeader.SlideIn);
             StaticVariables.WaitTimeThenCallFunction(1f, EnableClicks);
             return;
@@ -125,7 +121,6 @@ public class SceneChangerVisuals : MonoBehaviour {
     private void SetCanvasSizes(){
         canvasHeight = canvas.rect.height;
         canvasWidth = canvas.rect.width;
-        
     }
 
     private void SetUIElementSizes(){
@@ -159,6 +154,10 @@ public class SceneChangerVisuals : MonoBehaviour {
 
     private void MoveObjectToXCustom1InSine(RectTransform obj){
         obj.DOLocalMoveX(customVal1, 0.5f).SetEase(Ease.InSine);
+    }
+
+    private void MoveObjectToXCustom1OutSine(RectTransform obj){
+        obj.DOLocalMoveX(customVal1, 0.5f).SetEase(Ease.OutSine);
     }
 
     private void MoveObjectToXCustom2(RectTransform obj){
