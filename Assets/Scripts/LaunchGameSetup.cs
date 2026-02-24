@@ -62,10 +62,12 @@ public class LaunchGameSetup : MonoBehaviour
     private StageData previousStage;
     [Header("Misc")]
     public Transform tweenDummy;
+    public AudioSetup audioSetup;
 
     void Start() {
         StaticVariables.tweenDummy = tweenDummy;
         DontDestroyOnLoad(tweenDummy);
+        audioSetup.Setup();
         SetupColors();
         SetupBookLists();
         SetupStageList();
