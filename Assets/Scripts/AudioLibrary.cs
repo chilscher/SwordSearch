@@ -8,11 +8,22 @@ using DG.Tweening;
 public class AudioLibrary : MonoBehaviour {
 
     [Header("Homepage")]
-    public SoundEffect settingsFolderMoveOut;
     public SoundEffect settingsFolderMoveIn;
-    public SoundEffect settingsPageMoveOut;
+    public SoundEffect settingsFolderMoveOut;
     public SoundEffect settingsPageMoveIn;
+    public SoundEffect settingsPageMoveOut;
     [Header("Settings")]
-    public SoundEffect settingsScrapMoveOut;
     public SoundEffect settingsScrapMoveIn;
+    public SoundEffect settingsScrapMoveOut;
+    //public SoundEffect changeName;
+    public SoundEffect setVolume;
+    public SoundEffect changeDifficulty;
+    public SoundEffect toggleProfanity;
+    public SoundEffect openDiscord;
+    [Header("Credits")]
+    public SoundEffect creditsPaperMoveIn;
+    public SoundEffect creditsPaperMoveOut;
+    [Header("General")]
+    public SoundEffect headerMoveIn;
+    public SoundEffect headerMoveOut;
 }

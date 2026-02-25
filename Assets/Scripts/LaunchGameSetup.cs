@@ -198,9 +198,9 @@ public class LaunchGameSetup : MonoBehaviour {
             //UpdateToVersion0_1();
         }
         //if (StaticVariables.gameVersionNumber == 0.1f)
-        //    ChangeVersionNumber(0.2f);
+        //    UpdateToVersion0_2();
         //if (StaticVariables.gameVersionNumber == 0.2f)
-        //    ChangeVersionNumber(0.3f);
+        //    UpdateToVersion0_3();
     }
 
     //private void UpdateToVersion0_1(){

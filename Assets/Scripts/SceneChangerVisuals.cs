@@ -14,7 +14,7 @@ public class SceneChangerVisuals : MonoBehaviour {
     public GameObject clickBlocker;   
     public SceneHeader sceneHeader;
     [Header("Only for the Homepage Scene")]
-    public RectTransform settingsScroll;
+    public RectTransform settingsFolder;
     [Header("Only for the Settings Scene")]
     public RectTransform settingsPaper1;
     public RectTransform settingsPaper2;
@@ -59,14 +59,15 @@ public class SceneChangerVisuals : MonoBehaviour {
             StaticVariables.WaitTimeThenCallFunction(0.1f, MoveObjectToX0, settingsPaper2);
             StaticVariables.WaitTimeThenCallFunction(0.1f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveIn);
             StaticVariables.WaitTimeThenCallFunction(0.2f, MoveObjectToX0, settingsPaper3);
-            StaticVariables.WaitTimeThenCallFunction(0.1f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveIn);
+            StaticVariables.WaitTimeThenCallFunction(0.2f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveIn);
             StaticVariables.WaitTimeThenCallFunction(0.3f, MoveObjectToX0, settingsPaper4);
-            StaticVariables.WaitTimeThenCallFunction(0.1f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveIn);
+            StaticVariables.WaitTimeThenCallFunction(0.3f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveIn);
             StaticVariables.WaitTimeThenCallFunction(0.4f, MoveObjectToX0, settingsPaper5);
-            StaticVariables.WaitTimeThenCallFunction(0.1f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveIn);
+            StaticVariables.WaitTimeThenCallFunction(0.4f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveIn);
             StaticVariables.WaitTimeThenCallFunction(0.5f, MoveObjectToX0, settingsPaper6);
-            StaticVariables.WaitTimeThenCallFunction(0.1f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveIn);
+            StaticVariables.WaitTimeThenCallFunction(0.5f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveIn);
             StaticVariables.WaitTimeThenCallFunction(0.5f, sceneHeader.SlideIn);
+            StaticVariables.WaitTimeThenCallFunction(0.5f, AudioManager.PlaySound, AudioManager.library.headerMoveIn);
             StaticVariables.WaitTimeThenCallFunction(1f, EnableClicks);
             return;
         }
@@ -76,10 +77,10 @@ public class SceneChangerVisuals : MonoBehaviour {
             settingsPage.localPosition = new Vector2(0, settingsPage.localPosition.y);
             settingsPage.DOLocalMoveX(pos, 0.5f).SetEase(Ease.InSine);
             AudioManager.PlaySound(AudioManager.library.settingsPageMoveOut);
-            customVal1 = settingsScroll.localPosition.x;
-            float horizOffset = (settingsScroll.rect.width / 2) + (canvasWidth / 2);
-            settingsScroll.localPosition = new Vector2(horizOffset, settingsScroll.localPosition.y);
-            StaticVariables.WaitTimeThenCallFunction(0.5f, MoveObjectToXCustom1OutSine, settingsScroll);
+            customVal1 = settingsFolder.localPosition.x;
+            float horizOffset = (settingsFolder.rect.width / 2) + (canvasWidth / 2);
+            settingsFolder.localPosition = new Vector2(horizOffset, settingsFolder.localPosition.y);
+            StaticVariables.WaitTimeThenCallFunction(0.5f, MoveObjectToXCustom1OutSine, settingsFolder);
             StaticVariables.WaitTimeThenCallFunction(0.5f, AudioManager.PlaySound, AudioManager.library.settingsFolderMoveIn);
             StaticVariables.WaitTimeThenCallFunction(1f, EnableClicks);
             return;
@@ -87,7 +88,9 @@ public class SceneChangerVisuals : MonoBehaviour {
         else if (CheckSceneChange(null, SceneChanger.Scene.Credits)){
             creditsPaper.localPosition = new Vector2(creditsPaper.localPosition.x, -creditsPaper.rect.height);
             creditsPaper.DOLocalMoveY(0, 0.5f).SetEase(Ease.OutSine);
+            AudioManager.PlaySound(AudioManager.library.creditsPaperMoveIn);
             StaticVariables.WaitTimeThenCallFunction(0.5f, sceneHeader.SlideIn);
+            StaticVariables.WaitTimeThenCallFunction(0.5f, AudioManager.PlaySound, AudioManager.library.headerMoveIn);
             StaticVariables.WaitTimeThenCallFunction(1f, EnableClicks);
             return;
         }
@@ -97,10 +100,9 @@ public class SceneChangerVisuals : MonoBehaviour {
         clickBlocker.SetActive(true);
         if (CheckSceneChange(SceneChanger.Scene.Homepage, SceneChanger.Scene.Settings)){ //presumably only happening from the homepage
             settingsPage.gameObject.SetActive(true);
-            float horizOffset = (settingsScroll.rect.width / 2) + (canvasWidth / 2);
-            settingsScroll.DOLocalMoveX(horizOffset, 0.5f).SetEase(Ease.InSine);
+            float horizOffset = (settingsFolder.rect.width / 2) + (canvasWidth / 2);
+            settingsFolder.DOLocalMoveX(horizOffset, 0.5f).SetEase(Ease.InSine);
             AudioManager.PlaySound(AudioManager.library.settingsFolderMoveOut);
-            //slide out the settings scroll first
             StaticVariables.WaitTimeThenCallFunction(0.5f, MoveObjectToX0OutSine, settingsPage);
             StaticVariables.WaitTimeThenCallFunction(0.5f, AudioManager.PlaySound, AudioManager.library.settingsPageMoveIn);
             StaticVariables.WaitTimeThenCallFunction(1f, TriggerSceneChange);
@@ -108,6 +110,7 @@ public class SceneChangerVisuals : MonoBehaviour {
         }
         else if (CheckSceneChange(SceneChanger.Scene.Settings, null)){
             sceneHeader.SlideOut();
+            AudioManager.PlaySound(AudioManager.library.headerMoveOut);
             float horizOffset = (settingsPaper1.rect.width / 2) + (canvasWidth / 2);
             customVal1 = -horizOffset;
             customVal2 = horizOffset;
@@ -116,19 +119,21 @@ public class SceneChangerVisuals : MonoBehaviour {
             StaticVariables.WaitTimeThenCallFunction(0.1f, MoveObjectToXCustom2, settingsPaper2);
             StaticVariables.WaitTimeThenCallFunction(0.1f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveOut);
             StaticVariables.WaitTimeThenCallFunction(0.15f, MoveObjectToXCustom1, settingsPaper3);
-            StaticVariables.WaitTimeThenCallFunction(0.1f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveOut);
+            StaticVariables.WaitTimeThenCallFunction(0.15f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveOut);
             StaticVariables.WaitTimeThenCallFunction(0.2f, MoveObjectToXCustom1, settingsPaper4);
-            StaticVariables.WaitTimeThenCallFunction(0.1f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveOut);
+            StaticVariables.WaitTimeThenCallFunction(0.2f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveOut);
             StaticVariables.WaitTimeThenCallFunction(0.25f, MoveObjectToXCustom2, settingsPaper5);
-            StaticVariables.WaitTimeThenCallFunction(0.1f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveOut);
+            StaticVariables.WaitTimeThenCallFunction(0.25f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveOut);
             StaticVariables.WaitTimeThenCallFunction(0.3f, MoveObjectToXCustom1, settingsPaper6);
-            StaticVariables.WaitTimeThenCallFunction(0.1f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveOut);
+            StaticVariables.WaitTimeThenCallFunction(0.3f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveOut);
             StaticVariables.WaitTimeThenCallFunction(0.8f, TriggerSceneChange);
             return;
         }
         else if (CheckSceneChange(SceneChanger.Scene.Credits, null)){
             sceneHeader.SlideOut();
+            AudioManager.PlaySound(AudioManager.library.headerMoveOut);
             creditsPaper.DOLocalMoveY(-creditsPaper.rect.height, 0.5f).SetEase(Ease.InSine);
+            AudioManager.PlaySound(AudioManager.library.creditsPaperMoveOut);
             StaticVariables.WaitTimeThenCallFunction(0.5f, TriggerSceneChange);
             return;
         }

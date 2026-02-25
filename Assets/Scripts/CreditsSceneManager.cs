@@ -1,3 +1,5 @@
+//for Sword Search, copyright Fancy Bus Games 2026
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -49,6 +51,7 @@ public class CreditsSceneManager : MonoBehaviour{
         int newStage = 1;
         StageData stage = StaticVariables.GetStage(newWorld, newStage);
         StaticVariables.highestBeatenStage = stage.previousStage;
+        AudioManager.PlaySound(AudioManager.library.changeDifficulty);
         DisplayProgress();
         SaveSystem.SaveGame();
     }
@@ -68,12 +71,14 @@ public class CreditsSceneManager : MonoBehaviour{
             StageData stage = StaticVariables.GetStage(newWorld, newStage);
             StaticVariables.highestBeatenStage = stage.previousStage;
         }
+        AudioManager.PlaySound(AudioManager.library.changeDifficulty);
         DisplayProgress(); 
         SaveSystem.SaveGame();
     }
     public void StageDown(){
         if (StaticVariables.highestBeatenStage.previousStage != null)
             StaticVariables.highestBeatenStage = StaticVariables.highestBeatenStage.previousStage;
+        AudioManager.PlaySound(AudioManager.library.changeDifficulty);
         DisplayProgress();
         SaveSystem.SaveGame();
     }
@@ -83,6 +88,7 @@ public class CreditsSceneManager : MonoBehaviour{
             return;
         else if ((StaticVariables.highestBeatenStage.nextStage != null) && (StaticVariables.highestBeatenStage.nextStage.nextStage != null))
             StaticVariables.highestBeatenStage = StaticVariables.highestBeatenStage.nextStage;
+        AudioManager.PlaySound(AudioManager.library.changeDifficulty);
         DisplayProgress();
         SaveSystem.SaveGame();
     }

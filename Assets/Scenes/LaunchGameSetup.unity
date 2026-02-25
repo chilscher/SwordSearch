@@ -574,22 +574,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d08ca87ee2016c9459cfc144e28fb330, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioLibrary
-  settingsFolderMoveOut:
-    audioClip: {fileID: 8300000, guid: e324314cfb0f62b429c920ba71b9fc8f, type: 3}
-    volumePercentage: 200
   settingsFolderMoveIn:
     audioClip: {fileID: 8300000, guid: e324314cfb0f62b429c920ba71b9fc8f, type: 3}
     volumePercentage: 200
-  settingsPageMoveOut:
+  settingsFolderMoveOut:
     audioClip: {fileID: 8300000, guid: e324314cfb0f62b429c920ba71b9fc8f, type: 3}
     volumePercentage: 200
   settingsPageMoveIn:
     audioClip: {fileID: 8300000, guid: e324314cfb0f62b429c920ba71b9fc8f, type: 3}
     volumePercentage: 200
-  settingsScrapMoveOut:
+  settingsPageMoveOut:
     audioClip: {fileID: 8300000, guid: e324314cfb0f62b429c920ba71b9fc8f, type: 3}
     volumePercentage: 200
   settingsScrapMoveIn:
+    audioClip: {fileID: 8300000, guid: e324314cfb0f62b429c920ba71b9fc8f, type: 3}
+    volumePercentage: 200
+  settingsScrapMoveOut:
+    audioClip: {fileID: 8300000, guid: e324314cfb0f62b429c920ba71b9fc8f, type: 3}
+    volumePercentage: 200
+  setVolume:
+    audioClip: {fileID: 8300000, guid: e324314cfb0f62b429c920ba71b9fc8f, type: 3}
+    volumePercentage: 200
+  changeDifficulty:
+    audioClip: {fileID: 8300000, guid: e324314cfb0f62b429c920ba71b9fc8f, type: 3}
+    volumePercentage: 200
+  toggleProfanity:
+    audioClip: {fileID: 8300000, guid: e324314cfb0f62b429c920ba71b9fc8f, type: 3}
+    volumePercentage: 200
+  openDiscord:
+    audioClip: {fileID: 8300000, guid: e324314cfb0f62b429c920ba71b9fc8f, type: 3}
+    volumePercentage: 200
+  creditsPaperMoveIn:
+    audioClip: {fileID: 8300000, guid: e324314cfb0f62b429c920ba71b9fc8f, type: 3}
+    volumePercentage: 200
+  creditsPaperMoveOut:
+    audioClip: {fileID: 8300000, guid: e324314cfb0f62b429c920ba71b9fc8f, type: 3}
+    volumePercentage: 200
+  headerMoveIn:
+    audioClip: {fileID: 8300000, guid: e324314cfb0f62b429c920ba71b9fc8f, type: 3}
+    volumePercentage: 200
+  headerMoveOut:
     audioClip: {fileID: 8300000, guid: e324314cfb0f62b429c920ba71b9fc8f, type: 3}
     volumePercentage: 200
 --- !u!4 &624050941

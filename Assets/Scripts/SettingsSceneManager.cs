@@ -1,3 +1,5 @@
+//for Sword Search, copyright Fancy Bus Games 2026
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -91,6 +93,7 @@ public class SettingsSceneManager : MonoBehaviour{
             //    StaticVariables.difficultyMode = StaticVariables.DifficultyMode.Normal;
             //    break;
         }
+        AudioManager.PlaySound(AudioManager.library.changeDifficulty);
         DisplayDifficultyMode();
         SaveSystem.SaveGame();
     }
@@ -114,6 +117,7 @@ public class SettingsSceneManager : MonoBehaviour{
                 StaticVariables.difficultyMode = StaticVariables.DifficultyMode.Normal;
                 break;
         }
+        AudioManager.PlaySound(AudioManager.library.changeDifficulty);
         DisplayDifficultyMode();
         SaveSystem.SaveGame();
     }
@@ -157,6 +161,7 @@ public class SettingsSceneManager : MonoBehaviour{
     
     public void ToggleProfanityFilter(){
         StaticVariables.allowProfanities = !StaticVariables.allowProfanities;
+        AudioManager.PlaySound(AudioManager.library.toggleProfanity);
         DisplayProfanitySelection();
         SaveSystem.SaveGame();
     }
@@ -173,7 +178,7 @@ public class SettingsSceneManager : MonoBehaviour{
     
     public void SetVolume(int vol){
         StaticVariables.globalVolume = vol;
-        //AudioManager.PlaySound(AudioManager.IDs.Select);
+        AudioManager.PlaySound(AudioManager.library.setVolume);
         ShowVolume();
         SaveSystem.SaveGame();
     }
@@ -184,7 +189,7 @@ public class SettingsSceneManager : MonoBehaviour{
     }
 
     public void PushInviteButton(){
-        //AudioManager.PlaySound(AudioManager.IDs.Select);
+        AudioManager.PlaySound(AudioManager.library.openDiscord);
         Application.OpenURL(inviteLink);
     }
 }

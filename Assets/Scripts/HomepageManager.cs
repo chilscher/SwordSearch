@@ -1,3 +1,5 @@
+//for Sword Search, copyright Fancy Bus Games 2026
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -71,7 +73,8 @@ public class HomepageManager : MonoBehaviour{
 
     public void HitMapButton(){
         StaticVariables.lastVisitedStage = StaticVariables.highestBeatenStage.nextStage;
-        StaticVariables.FadeOutThenLoadScene(StaticVariables.mapName);
+        SceneChanger.GoAtlas();
+        //StaticVariables.FadeOutThenLoadScene(StaticVariables.mapName);
     }
 
     private List<GameObject> CreateEndlessModeEnemyList(){
