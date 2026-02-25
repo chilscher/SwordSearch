@@ -1,3 +1,5 @@
+//for Sword Search, copyright Fancy Bus Games 2026
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -106,7 +108,7 @@ public class StaticVariables{
     static public void WaitTimeThenCallFunction(float delay, TweenCallback<RectTransform> function, RectTransform param){
         tweenDummy.DOLocalMove(tweenDummy.localPosition, delay, false).OnComplete(()=>function(param));
     }
-    static public void WaitTimeThenCallFunction(float delay, TweenCallback<AudioManager.IDs> function, AudioManager.IDs param){
+    static public void WaitTimeThenCallFunction(float delay, TweenCallback<SoundEffect> function, SoundEffect param){
         tweenDummy.DOLocalMove(tweenDummy.localPosition, delay, false).OnComplete(()=>function(param));
     }
 

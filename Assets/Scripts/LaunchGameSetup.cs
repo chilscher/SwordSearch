@@ -1,3 +1,5 @@
+//for Sword Search, copyright Fancy Bus Games 2026
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,8 +11,7 @@ using Unity.VisualScripting;
 using System.Linq;
 using System;
 
-public class LaunchGameSetup : MonoBehaviour
-{
+public class LaunchGameSetup : MonoBehaviour {
 
     [Header("Powerup Colors")]
     public Color waterColor;
@@ -60,14 +61,17 @@ public class LaunchGameSetup : MonoBehaviour
 
     //just used for generating the list of all stages
     private StageData previousStage;
+    [Header("Audio")]
+    public AudioLibrary audioLibrary;
+    public Transform audioSourceParent;
     [Header("Misc")]
     public Transform tweenDummy;
-    public AudioSetup audioSetup;
 
     void Start() {
         StaticVariables.tweenDummy = tweenDummy;
         DontDestroyOnLoad(tweenDummy);
-        audioSetup.Setup();
+        AudioManager.library = audioLibrary;
+        SetupAudioSources();
         SetupColors();
         SetupBookLists();
         SetupStageList();
@@ -79,6 +83,15 @@ public class LaunchGameSetup : MonoBehaviour
         //StaticVariables.highestBeatenStage = StaticVariables.GetStage(3, 12); //end of forest
         //StaticVariables.storyMode = true;
         SceneManager.LoadScene(StaticVariables.mainMenuName);
+    }
+
+    private void SetupAudioSources(){
+        //to add new audio sources, just add a new audiosource child to the audio sources parent gameobject, that's it
+        List<AudioSource> sources = new();
+        foreach (Transform t in audioSourceParent)
+            sources.Add(t.GetComponent<AudioSource>());
+        AudioManager.audioSources = sources;
+        DontDestroyOnLoad(audioSourceParent);
     }
 
     private void SetupColors() {
@@ -200,5 +213,4 @@ public class LaunchGameSetup : MonoBehaviour
         print("updating version number! Old version " + StaticVariables.gameVersionNumber + ", new version " + newVersionNum);
         StaticVariables.gameVersionNumber = newVersionNum;
     }
-
 }

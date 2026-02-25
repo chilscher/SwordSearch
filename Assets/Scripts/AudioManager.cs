@@ -5,44 +5,24 @@ using UnityEngine;
 
 public class AudioManager{
 
-    static public AudioSource audioSource;
-    public enum IDs {Swish}
-    static public List<SoundEffect> allSoundEffects = new();
-    static public List<AllSoundsWithID> soundsSortedByID = new();
-    static public SoundEffect lastSoundPlayed;
+    static public List<AudioSource> audioSources;
+    static public int audioSourceIndex = 0;
+    static public AudioLibrary library;
 
-    static public void PlaySound(IDs ID){
-        SoundEffect se = allSoundEffects[0];
-        foreach (AllSoundsWithID list in soundsSortedByID){
-            if (list.ID == ID)
-                se = list.GetRandomSoundFromList();
-        }
-        lastSoundPlayed = se;
-        audioSource.clip = se.audioClip;
-        audioSource.volume = (float)(se.volumePercentage / 100.0) * (float)(StaticVariables.globalVolume / 100.0);
-        
-        //Debug.Log("playing ID " + ID.ToString() + " (" + audioSource.clip.name + ")");
-
-        audioSource.Play();
+    static public void PlaySound(SoundEffect soundEffect){
+        AudioSource source = audioSources[audioSourceIndex];
+        audioSourceIndex ++;
+        if (audioSourceIndex >= audioSources.Count)
+            audioSourceIndex = 0;
+        source.clip = soundEffect.audioClip;
+        source.volume = (float)(soundEffect.volumePercentage / 100.0) * (float)(StaticVariables.globalVolume / 100.0);
+        source.Play();
     }
 }
 
 [System.Serializable]
 public class SoundEffect{
-    public AudioManager.IDs ID;
     public AudioClip audioClip;
     [Range(0, 200)]
     public int volumePercentage = 100;
-}
-
-public class AllSoundsWithID{
-    public AudioManager.IDs ID;
-    public List<SoundEffect> soundEffects = new();
-    public SoundEffect GetRandomSoundFromList(){
-        SoundEffect se = soundEffects[StaticVariables.rand.Next(0, soundEffects.Count)];
-        if (se == AudioManager.lastSoundPlayed)
-            if (soundEffects.Count > 1)
-                return GetRandomSoundFromList();
-        return se;
-    }
 }
