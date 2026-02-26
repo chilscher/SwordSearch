@@ -10,11 +10,11 @@ public class SceneChangerVisuals : MonoBehaviour {
 
     public SceneChanger.Scene thisScene;
     public RectTransform canvas;
-    public RectTransform settingsPage;
     public GameObject clickBlocker;   
     public SceneHeader sceneHeader;
     [Header("Only for the Homepage Scene")]
     public RectTransform settingsFolder;
+    public RectTransform settingsPage;
     public RectTransform atlasSmall;
     public RectTransform atlasBig;
     //[Header("Only for the Atlas Scene")]
@@ -124,11 +124,11 @@ public class SceneChangerVisuals : MonoBehaviour {
             return;
         }
         else if (CheckSceneChange(SceneChanger.Scene.Atlas, SceneChanger.Scene.Homepage)){
-            //settingsPage.gameObject.SetActive(true);
-            //float pos = settingsPage.localPosition.x;
-            //settingsPage.localPosition = new Vector2(0, settingsPage.localPosition.y);
-            //settingsPage.DOLocalMoveX(pos, 0.5f).SetEase(Ease.InSine);
-            //AudioManager.PlaySound(AudioManager.library.settingsPageMoveOut);
+            atlasBig.gameObject.SetActive(true);
+            float pos = atlasBig.localPosition.x;
+            atlasBig.localPosition = new Vector2(0, atlasBig.localPosition.y);
+            atlasBig.DOLocalMoveX(pos, 0.5f).SetEase(Ease.InSine);
+            AudioManager.PlaySound(AudioManager.library.settingsPageMoveOut);
             customVal1 = atlasSmall.localPosition.x;
             float horizOffset = (atlasSmall.rect.width / 2) + (canvasWidth / 2);
             atlasSmall.localPosition = new Vector2(-horizOffset, atlasSmall.localPosition.y);
@@ -181,16 +181,16 @@ public class SceneChangerVisuals : MonoBehaviour {
             return;
         }
         else if (CheckSceneChange(SceneChanger.Scene.Homepage, SceneChanger.Scene.Atlas)){
-            //atlasBig.gameObject.SetActive(true);
+            atlasBig.gameObject.SetActive(true);
             float horizOffset = (atlasSmall.rect.width / 2) + (canvasWidth / 2);
             atlasSmall.DOLocalMoveX(-horizOffset, 0.5f).SetEase(Ease.InSine);
             AudioManager.PlaySound(AudioManager.library.atlasSmallMoveOut);
-            //StaticVariables.WaitTimeThenCallFunction(0.5f, MoveObjectToX0OutSine, atlasBig);
-            //StaticVariables.WaitTimeThenCallFunction(0.5f, AudioManager.PlaySound, AudioManager.library.atlasBigMoveIn);
+            StaticVariables.WaitTimeThenCallFunction(0.5f, MoveObjectToX0OutSine, atlasBig);
+            StaticVariables.WaitTimeThenCallFunction(0.5f, AudioManager.PlaySound, AudioManager.library.atlasBigMoveIn);
             StaticVariables.WaitTimeThenCallFunction(1f, TriggerSceneChange);
             return;
         }
-        else if (CheckSceneChange(SceneChanger.Scene.Atlas, null)){
+        else if (CheckSceneChange(SceneChanger.Scene.Atlas, SceneChanger.Scene.Homepage)){
             sceneHeader.SlideOut();
             AudioManager.PlaySound(AudioManager.library.headerMoveOut);
             //float horizOffset = (settingsPaper1.rect.width / 2) + (canvasWidth / 2);
@@ -208,7 +208,7 @@ public class SceneChangerVisuals : MonoBehaviour {
             //StaticVariables.WaitTimeThenCallFunction(0.25f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveOut);
             //StaticVariables.WaitTimeThenCallFunction(0.3f, MoveObjectToXCustom1, settingsPaper6);
             //StaticVariables.WaitTimeThenCallFunction(0.3f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveOut);
-            StaticVariables.WaitTimeThenCallFunction(0.8f, TriggerSceneChange);
+            StaticVariables.WaitTimeThenCallFunction(0.5f, TriggerSceneChange);
             return;
         }
     }
@@ -222,7 +222,7 @@ public class SceneChangerVisuals : MonoBehaviour {
         settingsPage.sizeDelta = new Vector2(canvasWidth + 500, canvasHeight);
         settingsPage.localPosition = new Vector2(canvasWidth + 500, 0);
         //atlasBig.sizeDelta = new Vector2(canvasWidth + 500, canvasHeight);
-        //atlasBig.localPosition = new Vector2(canvasWidth + 500, 0);
+        atlasBig.localPosition = new Vector2(- ((canvasWidth /2) + (atlasBig.rect.width/2)), 0);
     }
 
     private void MoveObjectToX0(RectTransform obj){
