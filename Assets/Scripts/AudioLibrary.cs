@@ -12,6 +12,10 @@ public class AudioLibrary : MonoBehaviour {
     public SoundEffect settingsFolderMoveOut;
     public SoundEffect settingsPageMoveIn;
     public SoundEffect settingsPageMoveOut;
+    public SoundEffect atlasSmallMoveIn;
+    public SoundEffect atlasSmallMoveOut;
+    public SoundEffect atlasBigMoveIn;
+    public SoundEffect atlasBigMoveOut;
     [Header("Settings")]
     public SoundEffect settingsScrapMoveIn;
     public SoundEffect settingsScrapMoveOut;

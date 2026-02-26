@@ -586,6 +586,18 @@ MonoBehaviour:
   settingsPageMoveOut:
     audioClip: {fileID: 8300000, guid: e324314cfb0f62b429c920ba71b9fc8f, type: 3}
     volumePercentage: 200
+  atlasSmallMoveIn:
+    audioClip: {fileID: 8300000, guid: e324314cfb0f62b429c920ba71b9fc8f, type: 3}
+    volumePercentage: 200
+  atlasSmallMoveOut:
+    audioClip: {fileID: 8300000, guid: e324314cfb0f62b429c920ba71b9fc8f, type: 3}
+    volumePercentage: 200
+  atlasBigMoveIn:
+    audioClip: {fileID: 8300000, guid: e324314cfb0f62b429c920ba71b9fc8f, type: 3}
+    volumePercentage: 200
+  atlasBigMoveOut:
+    audioClip: {fileID: 8300000, guid: e324314cfb0f62b429c920ba71b9fc8f, type: 3}
+    volumePercentage: 200
   settingsScrapMoveIn:
     audioClip: {fileID: 8300000, guid: e324314cfb0f62b429c920ba71b9fc8f, type: 3}
     volumePercentage: 200

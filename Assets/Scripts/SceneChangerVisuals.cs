@@ -15,6 +15,9 @@ public class SceneChangerVisuals : MonoBehaviour {
     public SceneHeader sceneHeader;
     [Header("Only for the Homepage Scene")]
     public RectTransform settingsFolder;
+    public RectTransform atlasSmall;
+    public RectTransform atlasBig;
+    //[Header("Only for the Atlas Scene")]
     [Header("Only for the Settings Scene")]
     public RectTransform settingsPaper1;
     public RectTransform settingsPaper2;
@@ -94,11 +97,51 @@ public class SceneChangerVisuals : MonoBehaviour {
             StaticVariables.WaitTimeThenCallFunction(1f, EnableClicks);
             return;
         }
+        else if (CheckSceneChange(null, SceneChanger.Scene.Atlas)){
+            //assume all settings papers are the same width (should be 1440, the min screen width)
+            //float horizOffset = (settingsPaper1.rect.width / 2) + (canvasWidth / 2);
+            //settingsPaper1.localPosition = new Vector2(-horizOffset, settingsPaper1.localPosition.y);
+            //settingsPaper2.localPosition = new Vector2(horizOffset, settingsPaper2.localPosition.y);
+            //settingsPaper3.localPosition = new Vector2(-horizOffset, settingsPaper3.localPosition.y);
+            //settingsPaper4.localPosition = new Vector2(-horizOffset, settingsPaper4.localPosition.y);
+            //settingsPaper5.localPosition = new Vector2(horizOffset, settingsPaper5.localPosition.y);
+            //settingsPaper6.localPosition = new Vector2(-horizOffset, settingsPaper6.localPosition.y);
+            //MoveObjectToX0(settingsPaper1);
+            //AudioManager.PlaySound(AudioManager.library.settingsScrapMoveIn);
+            //StaticVariables.WaitTimeThenCallFunction(0.1f, MoveObjectToX0, settingsPaper2);
+            //StaticVariables.WaitTimeThenCallFunction(0.1f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveIn);
+            //StaticVariables.WaitTimeThenCallFunction(0.2f, MoveObjectToX0, settingsPaper3);
+            //StaticVariables.WaitTimeThenCallFunction(0.2f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveIn);
+            //StaticVariables.WaitTimeThenCallFunction(0.3f, MoveObjectToX0, settingsPaper4);
+            //StaticVariables.WaitTimeThenCallFunction(0.3f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveIn);
+            //StaticVariables.WaitTimeThenCallFunction(0.4f, MoveObjectToX0, settingsPaper5);
+            //StaticVariables.WaitTimeThenCallFunction(0.4f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveIn);
+            //StaticVariables.WaitTimeThenCallFunction(0.5f, MoveObjectToX0, settingsPaper6);
+            //StaticVariables.WaitTimeThenCallFunction(0.5f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveIn);
+            StaticVariables.WaitTimeThenCallFunction(0.5f, sceneHeader.SlideIn);
+            StaticVariables.WaitTimeThenCallFunction(0.5f, AudioManager.PlaySound, AudioManager.library.headerMoveIn);
+            StaticVariables.WaitTimeThenCallFunction(1f, EnableClicks);
+            return;
+        }
+        else if (CheckSceneChange(SceneChanger.Scene.Atlas, SceneChanger.Scene.Homepage)){
+            //settingsPage.gameObject.SetActive(true);
+            //float pos = settingsPage.localPosition.x;
+            //settingsPage.localPosition = new Vector2(0, settingsPage.localPosition.y);
+            //settingsPage.DOLocalMoveX(pos, 0.5f).SetEase(Ease.InSine);
+            //AudioManager.PlaySound(AudioManager.library.settingsPageMoveOut);
+            customVal1 = atlasSmall.localPosition.x;
+            float horizOffset = (atlasSmall.rect.width / 2) + (canvasWidth / 2);
+            atlasSmall.localPosition = new Vector2(-horizOffset, atlasSmall.localPosition.y);
+            StaticVariables.WaitTimeThenCallFunction(0.5f, MoveObjectToXCustom1OutSine, atlasSmall);
+            StaticVariables.WaitTimeThenCallFunction(0.5f, AudioManager.PlaySound, AudioManager.library.settingsFolderMoveIn);
+            StaticVariables.WaitTimeThenCallFunction(1f, EnableClicks);
+            return;
+        }
     }
 
     public void AnimateLeavingScene(){
         clickBlocker.SetActive(true);
-        if (CheckSceneChange(SceneChanger.Scene.Homepage, SceneChanger.Scene.Settings)){ //presumably only happening from the homepage
+        if (CheckSceneChange(SceneChanger.Scene.Homepage, SceneChanger.Scene.Settings)){
             settingsPage.gameObject.SetActive(true);
             float horizOffset = (settingsFolder.rect.width / 2) + (canvasWidth / 2);
             settingsFolder.DOLocalMoveX(horizOffset, 0.5f).SetEase(Ease.InSine);
@@ -137,6 +180,37 @@ public class SceneChangerVisuals : MonoBehaviour {
             StaticVariables.WaitTimeThenCallFunction(0.5f, TriggerSceneChange);
             return;
         }
+        else if (CheckSceneChange(SceneChanger.Scene.Homepage, SceneChanger.Scene.Atlas)){
+            //atlasBig.gameObject.SetActive(true);
+            float horizOffset = (atlasSmall.rect.width / 2) + (canvasWidth / 2);
+            atlasSmall.DOLocalMoveX(-horizOffset, 0.5f).SetEase(Ease.InSine);
+            AudioManager.PlaySound(AudioManager.library.atlasSmallMoveOut);
+            //StaticVariables.WaitTimeThenCallFunction(0.5f, MoveObjectToX0OutSine, atlasBig);
+            //StaticVariables.WaitTimeThenCallFunction(0.5f, AudioManager.PlaySound, AudioManager.library.atlasBigMoveIn);
+            StaticVariables.WaitTimeThenCallFunction(1f, TriggerSceneChange);
+            return;
+        }
+        else if (CheckSceneChange(SceneChanger.Scene.Atlas, null)){
+            sceneHeader.SlideOut();
+            AudioManager.PlaySound(AudioManager.library.headerMoveOut);
+            //float horizOffset = (settingsPaper1.rect.width / 2) + (canvasWidth / 2);
+            //customVal1 = -horizOffset;
+            //customVal2 = horizOffset;
+            //MoveObjectToXCustom1(settingsPaper1);
+            //AudioManager.PlaySound(AudioManager.library.settingsScrapMoveOut);
+            //StaticVariables.WaitTimeThenCallFunction(0.1f, MoveObjectToXCustom2, settingsPaper2);
+            //StaticVariables.WaitTimeThenCallFunction(0.1f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveOut);
+            //StaticVariables.WaitTimeThenCallFunction(0.15f, MoveObjectToXCustom1, settingsPaper3);
+            //StaticVariables.WaitTimeThenCallFunction(0.15f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveOut);
+            //StaticVariables.WaitTimeThenCallFunction(0.2f, MoveObjectToXCustom1, settingsPaper4);
+            //StaticVariables.WaitTimeThenCallFunction(0.2f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveOut);
+            //StaticVariables.WaitTimeThenCallFunction(0.25f, MoveObjectToXCustom2, settingsPaper5);
+            //StaticVariables.WaitTimeThenCallFunction(0.25f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveOut);
+            //StaticVariables.WaitTimeThenCallFunction(0.3f, MoveObjectToXCustom1, settingsPaper6);
+            //StaticVariables.WaitTimeThenCallFunction(0.3f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveOut);
+            StaticVariables.WaitTimeThenCallFunction(0.8f, TriggerSceneChange);
+            return;
+        }
     }
 
     private void SetCanvasSizes(){
@@ -147,6 +221,8 @@ public class SceneChangerVisuals : MonoBehaviour {
     private void SetUIElementSizes(){
         settingsPage.sizeDelta = new Vector2(canvasWidth + 500, canvasHeight);
         settingsPage.localPosition = new Vector2(canvasWidth + 500, 0);
+        //atlasBig.sizeDelta = new Vector2(canvasWidth + 500, canvasHeight);
+        //atlasBig.localPosition = new Vector2(canvasWidth + 500, 0);
     }
 
     private void MoveObjectToX0(RectTransform obj){
