@@ -127,6 +127,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1237109348}
     m_Modifications:
+    - target: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+      propertyPath: worldNum
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -209,7 +213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Name
-      value: Overworld Step (3)
+      value: Desert 3
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_IsActive
@@ -225,6 +229,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
   m_PrefabInstance: {fileID: 5850803}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5850805 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+  m_PrefabInstance: {fileID: 5850803}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5986313
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,6 +1166,10 @@ PrefabInstance:
       propertyPath: sceneHeader
       value: 
       objectReference: {fileID: 2015240615}
+    - target: {fileID: 7456985050191186055, guid: d337f394ee351aa48bb3e18165b25f50, type: 3}
+      propertyPath: overworldManager
+      value: 
+      objectReference: {fileID: 1115847364}
     - target: {fileID: 7627512285222415357, guid: d337f394ee351aa48bb3e18165b25f50, type: 3}
       propertyPath: m_Name
       value: SceneChangerVisuals
@@ -1324,6 +1343,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 538519378}
     m_Modifications:
+    - target: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+      propertyPath: worldNum
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1406,7 +1429,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Name
-      value: Overworld Step (1)
+      value: Caverns 1
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_IsActive
@@ -1422,6 +1445,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
   m_PrefabInstance: {fileID: 153535313}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &153535315 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+  m_PrefabInstance: {fileID: 153535313}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &172214679
 GameObject:
   m_ObjectHideFlags: 0
@@ -1628,6 +1662,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 915047147}
     m_Modifications:
+    - target: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+      propertyPath: worldNum
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1710,7 +1748,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Name
-      value: Overworld Step (3)
+      value: Frostlands 3
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_IsActive
@@ -1726,6 +1764,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
   m_PrefabInstance: {fileID: 236631254}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &236631256 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+  m_PrefabInstance: {fileID: 236631254}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &239579558
 GameObject:
   m_ObjectHideFlags: 0
@@ -2170,6 +2219,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 915047147}
     m_Modifications:
+    - target: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+      propertyPath: worldNum
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2252,7 +2305,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Name
-      value: Overworld Step (2)
+      value: Frostlands 2
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_IsActive
@@ -2268,6 +2321,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
   m_PrefabInstance: {fileID: 307037625}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &307037627 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+  m_PrefabInstance: {fileID: 307037625}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &308396077
 GameObject:
   m_ObjectHideFlags: 0
@@ -2698,6 +2762,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2041813259}
     m_Modifications:
+    - target: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+      propertyPath: worldNum
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2780,7 +2848,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Name
-      value: Overworld Step (4)
+      value: Duskvale 4
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_IsActive
@@ -2796,6 +2864,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
   m_PrefabInstance: {fileID: 382110651}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &382110653 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+  m_PrefabInstance: {fileID: 382110651}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &402099245
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2804,6 +2883,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2041813259}
     m_Modifications:
+    - target: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+      propertyPath: worldNum
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2886,7 +2969,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Name
-      value: Overworld Step (5)
+      value: Duskvale 5
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_IsActive
@@ -2902,6 +2985,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
   m_PrefabInstance: {fileID: 402099245}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &402099247 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+  m_PrefabInstance: {fileID: 402099245}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &412246929
 GameObject:
   m_ObjectHideFlags: 0
@@ -3931,6 +4025,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -25
       objectReference: {fileID: 0}
+    - target: {fileID: 7579210329882486058, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
+      propertyPath: worldNum
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7579210329882486058, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
+      propertyPath: isDestination
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8331165739053312393, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
       propertyPath: m_Name
       value: Caverns
@@ -3984,6 +4086,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2708877614081805338, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
   m_PrefabInstance: {fileID: 538519374}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &538519377 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7579210329882486058, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
+  m_PrefabInstance: {fileID: 538519374}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &538519378 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2109338398305284069, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
@@ -5708,6 +5821,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 36
       objectReference: {fileID: 0}
+    - target: {fileID: 7579210329882486058, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
+      propertyPath: worldNum
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7579210329882486058, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
+      propertyPath: isDestination
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7977024133942377660, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8331165739053312393, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
       propertyPath: m_Name
       value: Grasslands
@@ -5746,6 +5871,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2708877614081805338, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
   m_PrefabInstance: {fileID: 825047232}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &825047235 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7579210329882486058, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
+  m_PrefabInstance: {fileID: 825047232}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &825047236 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2109338398305284069, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
@@ -6178,6 +6314,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1237109348}
     m_Modifications:
+    - target: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+      propertyPath: worldNum
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6260,7 +6400,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Name
-      value: Overworld Step (1)
+      value: Desert 1
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_IsActive
@@ -6276,6 +6416,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
   m_PrefabInstance: {fileID: 903301247}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &903301249 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+  m_PrefabInstance: {fileID: 903301247}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &915047143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6384,6 +6535,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 158
       objectReference: {fileID: 0}
+    - target: {fileID: 7579210329882486058, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
+      propertyPath: worldNum
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7579210329882486058, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
+      propertyPath: isDestination
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8331165739053312393, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
       propertyPath: m_Name
       value: Frostlands
@@ -6428,6 +6587,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2708877614081805338, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
   m_PrefabInstance: {fileID: 915047143}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &915047146 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7579210329882486058, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
+  m_PrefabInstance: {fileID: 915047143}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &915047147 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2109338398305284069, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
@@ -6842,6 +7012,41 @@ MonoBehaviour:
   - {fileID: 2041813256}
   - {fileID: 915047144}
   - {fileID: 538519375}
+  pathSteps:
+  - {fileID: 1928809090}
+  - {fileID: 2133098460}
+  - {fileID: 2093828158}
+  - {fileID: 1362253177}
+  - {fileID: 825047235}
+  - {fileID: 1434391994}
+  - {fileID: 1524902445}
+  - {fileID: 1184266521}
+  - {fileID: 2059348672}
+  - {fileID: 903301249}
+  - {fileID: 1707580448}
+  - {fileID: 5850805}
+  - {fileID: 1237109347}
+  - {fileID: 1527405200}
+  - {fileID: 1882666563}
+  - {fileID: 1958325824}
+  - {fileID: 382110653}
+  - {fileID: 402099247}
+  - {fileID: 2041813258}
+  - {fileID: 1473961311}
+  - {fileID: 307037627}
+  - {fileID: 236631256}
+  - {fileID: 1741741111}
+  - {fileID: 1481875495}
+  - {fileID: 915047146}
+  - {fileID: 153535315}
+  - {fileID: 1314919815}
+  - {fileID: 1661648518}
+  - {fileID: 1284285274}
+  - {fileID: 1771726968}
+  - {fileID: 1901077111}
+  - {fileID: 2040765533}
+  - {fileID: 2138746933}
+  - {fileID: 538519377}
   sceneHeader: {fileID: 0}
   playerStepDuration: 0.2
   thisWorldNum: 0
@@ -7347,6 +7552,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2059348673}
     m_Modifications:
+    - target: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+      propertyPath: worldNum
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -7429,7 +7638,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Name
-      value: Overworld Step (3)
+      value: Forest 3
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_IsActive
@@ -7445,6 +7654,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
   m_PrefabInstance: {fileID: 1184266519}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1184266521 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+  m_PrefabInstance: {fileID: 1184266519}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1189834432
 GameObject:
   m_ObjectHideFlags: 0
@@ -7941,6 +8161,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -61
       objectReference: {fileID: 0}
+    - target: {fileID: 7579210329882486058, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
+      propertyPath: worldNum
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7579210329882486058, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
+      propertyPath: isDestination
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8331165739053312393, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
       propertyPath: m_Name
       value: Sunscorched Desert
@@ -7979,6 +8207,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2708877614081805338, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
   m_PrefabInstance: {fileID: 1237109344}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1237109347 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7579210329882486058, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
+  m_PrefabInstance: {fileID: 1237109344}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1237109348 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2109338398305284069, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
@@ -8425,6 +8664,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 538519378}
     m_Modifications:
+    - target: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+      propertyPath: worldNum
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8507,7 +8750,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Name
-      value: Overworld Step (4)
+      value: Caverns 4
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_IsActive
@@ -8523,6 +8766,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
   m_PrefabInstance: {fileID: 1284285272}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1284285274 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+  m_PrefabInstance: {fileID: 1284285272}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1295846236
 GameObject:
   m_ObjectHideFlags: 0
@@ -8606,6 +8860,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 538519378}
     m_Modifications:
+    - target: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+      propertyPath: worldNum
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8688,7 +8946,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Name
-      value: Overworld Step (2)
+      value: Caverns 2
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_IsActive
@@ -8704,6 +8962,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
   m_PrefabInstance: {fileID: 1314919813}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1314919815 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+  m_PrefabInstance: {fileID: 1314919813}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1319192427
 GameObject:
   m_ObjectHideFlags: 0
@@ -9022,6 +9291,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 825047236}
     m_Modifications:
+    - target: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+      propertyPath: worldNum
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -9104,7 +9377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Name
-      value: Overworld Step (2)
+      value: Grasslands 3
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_IsActive
@@ -9120,6 +9393,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
   m_PrefabInstance: {fileID: 1362253175}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1362253177 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+  m_PrefabInstance: {fileID: 1362253175}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1390165389
 GameObject:
   m_ObjectHideFlags: 0
@@ -9632,6 +9916,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2059348673}
     m_Modifications:
+    - target: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+      propertyPath: worldNum
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -9714,7 +10002,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Name
-      value: Overworld Step (1)
+      value: Forest 1
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_IsActive
@@ -9730,6 +10018,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
   m_PrefabInstance: {fileID: 1434391992}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1434391994 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+  m_PrefabInstance: {fileID: 1434391992}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1448405954
 GameObject:
   m_ObjectHideFlags: 0
@@ -9813,6 +10112,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 915047147}
     m_Modifications:
+    - target: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+      propertyPath: worldNum
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -9895,7 +10198,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Name
-      value: Overworld Step (1)
+      value: Frostlands 1
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_IsActive
@@ -9911,6 +10214,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
   m_PrefabInstance: {fileID: 1473961309}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1473961311 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+  m_PrefabInstance: {fileID: 1473961309}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1481875493
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9919,6 +10233,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 915047147}
     m_Modifications:
+    - target: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+      propertyPath: worldNum
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -10001,7 +10319,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Name
-      value: Overworld Step (5)
+      value: Frostlands 5
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_IsActive
@@ -10017,6 +10335,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
   m_PrefabInstance: {fileID: 1481875493}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1481875495 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+  m_PrefabInstance: {fileID: 1481875493}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1523154796
 GameObject:
   m_ObjectHideFlags: 0
@@ -10100,6 +10429,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2059348673}
     m_Modifications:
+    - target: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+      propertyPath: worldNum
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -10182,7 +10515,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Name
-      value: Overworld Step (2)
+      value: Forest 2
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_IsActive
@@ -10198,6 +10531,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
   m_PrefabInstance: {fileID: 1524902443}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1524902445 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+  m_PrefabInstance: {fileID: 1524902443}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1527405198
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10206,6 +10550,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2041813259}
     m_Modifications:
+    - target: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+      propertyPath: worldNum
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -10288,7 +10636,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Name
-      value: Overworld Step (1)
+      value: Duskvale 1
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_IsActive
@@ -10304,6 +10652,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
   m_PrefabInstance: {fileID: 1527405198}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1527405200 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+  m_PrefabInstance: {fileID: 1527405198}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1528368351
 GameObject:
   m_ObjectHideFlags: 0
@@ -11037,6 +11396,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 538519378}
     m_Modifications:
+    - target: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+      propertyPath: worldNum
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -11119,7 +11482,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Name
-      value: Overworld Step (3)
+      value: Caverns 3
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_IsActive
@@ -11135,6 +11498,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
   m_PrefabInstance: {fileID: 1661648516}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1661648518 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+  m_PrefabInstance: {fileID: 1661648516}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1670146878 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8075790155026782514, guid: fd3757c0e974e264e9941b0d191b40be, type: 3}
@@ -11384,6 +11758,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1237109348}
     m_Modifications:
+    - target: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+      propertyPath: worldNum
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -11466,7 +11844,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Name
-      value: Overworld Step (2)
+      value: Desert 2
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_IsActive
@@ -11482,6 +11860,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
   m_PrefabInstance: {fileID: 1707580446}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1707580448 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+  m_PrefabInstance: {fileID: 1707580446}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1712597533
 GameObject:
   m_ObjectHideFlags: 0
@@ -11640,6 +12029,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 915047147}
     m_Modifications:
+    - target: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+      propertyPath: worldNum
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -11722,7 +12115,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Name
-      value: Overworld Step (4)
+      value: Frostlands 4
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_IsActive
@@ -11738,6 +12131,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
   m_PrefabInstance: {fileID: 1741741109}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1741741111 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+  m_PrefabInstance: {fileID: 1741741109}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1771726966
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11746,6 +12150,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 538519378}
     m_Modifications:
+    - target: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+      propertyPath: worldNum
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -11828,7 +12236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Name
-      value: Overworld Step (5)
+      value: Caverns 5
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_IsActive
@@ -11844,6 +12252,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
   m_PrefabInstance: {fileID: 1771726966}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1771726968 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+  m_PrefabInstance: {fileID: 1771726966}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1777279006
 GameObject:
   m_ObjectHideFlags: 0
@@ -12208,6 +12627,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2041813259}
     m_Modifications:
+    - target: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+      propertyPath: worldNum
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -12290,7 +12713,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Name
-      value: Overworld Step (2)
+      value: Duskvale 2
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_IsActive
@@ -12306,6 +12729,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
   m_PrefabInstance: {fileID: 1882666561}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1882666563 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+  m_PrefabInstance: {fileID: 1882666561}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1901077109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12314,6 +12748,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 538519378}
     m_Modifications:
+    - target: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+      propertyPath: worldNum
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -12396,7 +12834,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Name
-      value: Overworld Step (6)
+      value: Caverns 6
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_IsActive
@@ -12412,6 +12850,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
   m_PrefabInstance: {fileID: 1901077109}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1901077111 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+  m_PrefabInstance: {fileID: 1901077109}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1907566331
 GameObject:
   m_ObjectHideFlags: 0
@@ -12663,6 +13112,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7579210329882486058, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
+      propertyPath: worldNum
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7579210329882486058, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
+      propertyPath: isDestination
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8331165739053312393, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
       propertyPath: m_Name
       value: Hometown
@@ -12692,6 +13149,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2708877614081805338, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
   m_PrefabInstance: {fileID: 1928809087}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1928809090 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7579210329882486058, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
+  m_PrefabInstance: {fileID: 1928809087}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1958325822
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12700,6 +13168,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2041813259}
     m_Modifications:
+    - target: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+      propertyPath: worldNum
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -12782,7 +13254,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Name
-      value: Overworld Step (3)
+      value: Duskvale 3
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_IsActive
@@ -12798,6 +13270,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
   m_PrefabInstance: {fileID: 1958325822}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1958325824 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+  m_PrefabInstance: {fileID: 1958325822}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1972518202
 GameObject:
   m_ObjectHideFlags: 0
@@ -13317,6 +13800,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 538519378}
     m_Modifications:
+    - target: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+      propertyPath: worldNum
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -13399,7 +13886,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Name
-      value: Overworld Step (7)
+      value: Caverns 7
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_IsActive
@@ -13415,6 +13902,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
   m_PrefabInstance: {fileID: 2040765531}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2040765533 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+  m_PrefabInstance: {fileID: 2040765531}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2041813255
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13527,6 +14025,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 44.000057
       objectReference: {fileID: 0}
+    - target: {fileID: 7579210329882486058, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
+      propertyPath: worldNum
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7579210329882486058, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
+      propertyPath: isDestination
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8331165739053312393, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
       propertyPath: m_Name
       value: Duskvale
@@ -13571,6 +14077,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2708877614081805338, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
   m_PrefabInstance: {fileID: 2041813255}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2041813258 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7579210329882486058, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
+  m_PrefabInstance: {fileID: 2041813255}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &2041813259 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2109338398305284069, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
@@ -13704,6 +14221,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -42
       objectReference: {fileID: 0}
+    - target: {fileID: 7579210329882486058, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
+      propertyPath: worldNum
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7579210329882486058, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
+      propertyPath: isDestination
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8331165739053312393, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
       propertyPath: m_Name
       value: Enchanted Forest
@@ -13742,6 +14267,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2708877614081805338, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
   m_PrefabInstance: {fileID: 2059348669}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2059348672 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7579210329882486058, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
+  m_PrefabInstance: {fileID: 2059348669}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &2059348673 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2109338398305284069, guid: 691d7785d055e504a8da9c62489f44f8, type: 3}
@@ -14055,6 +14591,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 825047236}
     m_Modifications:
+    - target: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+      propertyPath: worldNum
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -14137,7 +14677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Name
-      value: Overworld Step (1)
+      value: Grasslands 2
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_IsActive
@@ -14153,6 +14693,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
   m_PrefabInstance: {fileID: 2093828156}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2093828158 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+  m_PrefabInstance: {fileID: 2093828156}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2126010085
 GameObject:
   m_ObjectHideFlags: 0
@@ -14236,6 +14787,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 825047236}
     m_Modifications:
+    - target: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+      propertyPath: worldNum
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -14318,7 +14873,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Name
-      value: Overworld Step
+      value: Grasslands 1
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_IsActive
@@ -14334,6 +14889,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
   m_PrefabInstance: {fileID: 2133098458}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2133098460 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+  m_PrefabInstance: {fileID: 2133098458}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2135582591
 GameObject:
   m_ObjectHideFlags: 0
@@ -14417,6 +14983,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 538519378}
     m_Modifications:
+    - target: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+      propertyPath: worldNum
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -14499,7 +15069,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_Name
-      value: Overworld Step (8)
+      value: Caverns 8
       objectReference: {fileID: 0}
     - target: {fileID: 7674081202763112976, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
       propertyPath: m_IsActive
@@ -14515,6 +15085,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5168440235876138819, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
   m_PrefabInstance: {fileID: 2138746931}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2138746933 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 844363469441222734, guid: e3b384807629a3b409b0dd4671880cee, type: 3}
+  m_PrefabInstance: {fileID: 2138746931}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c585892ee3860854c9c46026761173f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2143630238
 GameObject:
   m_ObjectHideFlags: 0

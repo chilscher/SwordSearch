@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
+using System.Linq;
 
 public class OverworldSceneManager : MonoBehaviour{
 
@@ -12,6 +13,7 @@ public class OverworldSceneManager : MonoBehaviour{
     public RectTransform playerParent;
     public Animator playerAnimator;
     public OverworldSpace[] overworldSpaces;
+    public PathStep[] pathSteps;
     public RectTransform sceneHeader;
     //public GeneralSceneManager generalSceneManager;
 
@@ -55,8 +57,8 @@ public class OverworldSceneManager : MonoBehaviour{
         SetupOverworldSpaces();
         PickReadingBookOptions();
         if (thisWorldNum == 0){
-            ShowAllWorldsProgress();
             PlacePlayerAtPosition(StaticVariables.lastVisitedStage.world);
+            ShowAllWorldsProgress();
         }
         else{
             ShowPartialWorldProgress();
@@ -277,7 +279,9 @@ public class OverworldSceneManager : MonoBehaviour{
         playerParent.transform.position = newSpot.transform.position;
         currentPlayerSpace = space;
         currentEnemyData = space.battleData.enemyPrefab.GetComponent<EnemyData>();
-        currentPlayerSpace.transform.GetChild(2).Find("Overworld Player Space Icon").gameObject.SetActive(false);
+        PathStep currentPlayerPathStep = currentPlayerSpace.transform.GetChild(2).Find("Overworld Player Space Icon").GetComponent<PathStep>();
+        currentPlayerPathStep.gameObject.SetActive(false);
+        currentPlayerPathStep.isPlayerAtStep = true;
     }
 
     public void PlayerArrivedAtDestination(){
@@ -370,10 +374,33 @@ public class OverworldSceneManager : MonoBehaviour{
     }
 
     private void ShowAllWorldsProgress(){
-        //only used in the atlas/map scene to show full world progress
+        //only used in the atlas scene to show available worlds
         for (int i = StaticVariables.highestBeatenStage.nextStage.world; i < overworldSpaces.Length; i++)
             overworldSpaces[i].gameObject.SetActive(false);
-
+        //create a list of all path steps the player has available
+        List<PathStep> availableSteps = new();
+        foreach (PathStep ps in pathSteps){
+            if (ps.worldNum <= StaticVariables.highestBeatenStage.nextStage.world)
+              availableSteps.Add(ps);
+        }
+        float totalFadeInTime = 3f;
+        float timePerStep = 0;
+        if (availableSteps.Count > 1)
+            timePerStep = totalFadeInTime / (availableSteps.Count - 1);
+        //print(timePerStep);
+        //availableSteps[0].ShowStep(0.5f);
+        for (int i = 0; i < availableSteps.Count; i++){
+            PathStep step = availableSteps[i];
+            if (step.isPlayerAtStep){
+                playerParent.gameObject.SetActive(false);
+                StaticVariables.WaitTimeThenCallFunction(timePerStep * i, playerParent.gameObject.SetActive, true);
+            }
+            else{
+                step.HideStep(0);
+                StaticVariables.WaitTimeThenCallFunction(timePerStep * i, availableSteps[i].ShowStep, 0.3f);
+            }
+        }
+        //print(availableSteps.Count);
     }
 
     private void UnlockNextEnemy(){

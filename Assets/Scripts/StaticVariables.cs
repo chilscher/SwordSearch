@@ -102,6 +102,12 @@ public class StaticVariables{
     static public void WaitTimeThenCallFunction(float delay, TweenCallback<string> function, string param) {
         tweenDummy.DOLocalMove(tweenDummy.localPosition, delay, false).OnComplete(()=>function(param));
     }
+    static public void WaitTimeThenCallFunction(float delay, TweenCallback<float> function, float param) {
+        tweenDummy.DOLocalMove(tweenDummy.localPosition, delay, false).OnComplete(()=>function(param));
+    }
+    static public void WaitTimeThenCallFunction(float delay, TweenCallback<bool> function, bool param) {
+        tweenDummy.DOLocalMove(tweenDummy.localPosition, delay, false).OnComplete(()=>function(param));
+    }
     static public void WaitTimeThenCallFunction(float delay, TweenCallback<GameObject> function, GameObject param){
         tweenDummy.DOLocalMove(tweenDummy.localPosition, delay, false).OnComplete(()=>function(param));
     }

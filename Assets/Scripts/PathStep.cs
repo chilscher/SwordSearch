@@ -7,6 +7,10 @@ using DG.Tweening;
 using MyBox;
 
 public class PathStep : MonoBehaviour{
+    public int worldNum = 0;
+    public bool isDestination = false;
+    [HideInInspector]
+    public bool isPlayerAtStep = false;
 
     public void HideStep(float duration){
         Image im1 = transform.GetChild(0).GetComponent<Image>();

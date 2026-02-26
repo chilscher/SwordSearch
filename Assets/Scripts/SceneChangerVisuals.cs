@@ -17,7 +17,9 @@ public class SceneChangerVisuals : MonoBehaviour {
     public RectTransform settingsPage;
     public RectTransform atlasSmall;
     public RectTransform atlasBig;
-    //[Header("Only for the Atlas Scene")]
+    public RectTransform atlasBigWorlds;
+    [Header("Overworlds and Atlas")]
+    public OverworldSceneManager overworldManager;
     [Header("Only for the Settings Scene")]
     public RectTransform settingsPaper1;
     public RectTransform settingsPaper2;
@@ -98,6 +100,9 @@ public class SceneChangerVisuals : MonoBehaviour {
             return;
         }
         else if (CheckSceneChange(null, SceneChanger.Scene.Atlas)){
+            //foreach (PathStep ps in overworldManager.pathSteps){
+            //    ps.HideStep(0);
+            //}
             //assume all settings papers are the same width (should be 1440, the min screen width)
             //float horizOffset = (settingsPaper1.rect.width / 2) + (canvasWidth / 2);
             //settingsPaper1.localPosition = new Vector2(-horizOffset, settingsPaper1.localPosition.y);
@@ -118,9 +123,9 @@ public class SceneChangerVisuals : MonoBehaviour {
             //StaticVariables.WaitTimeThenCallFunction(0.4f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveIn);
             //StaticVariables.WaitTimeThenCallFunction(0.5f, MoveObjectToX0, settingsPaper6);
             //StaticVariables.WaitTimeThenCallFunction(0.5f, AudioManager.PlaySound, AudioManager.library.settingsScrapMoveIn);
-            StaticVariables.WaitTimeThenCallFunction(0.5f, sceneHeader.SlideIn);
-            StaticVariables.WaitTimeThenCallFunction(0.5f, AudioManager.PlaySound, AudioManager.library.headerMoveIn);
-            StaticVariables.WaitTimeThenCallFunction(1f, EnableClicks);
+            StaticVariables.WaitTimeThenCallFunction(3.5f, sceneHeader.SlideIn);
+            StaticVariables.WaitTimeThenCallFunction(3.5f, AudioManager.PlaySound, AudioManager.library.headerMoveIn);
+            StaticVariables.WaitTimeThenCallFunction(4f, EnableClicks);
             return;
         }
         else if (CheckSceneChange(SceneChanger.Scene.Atlas, SceneChanger.Scene.Homepage)){
@@ -193,6 +198,9 @@ public class SceneChangerVisuals : MonoBehaviour {
         else if (CheckSceneChange(SceneChanger.Scene.Atlas, SceneChanger.Scene.Homepage)){
             sceneHeader.SlideOut();
             AudioManager.PlaySound(AudioManager.library.headerMoveOut);
+            foreach (PathStep ps in overworldManager.pathSteps)
+                ps.HideStep(0.2f);
+            overworldManager.playerParent.gameObject.SetActive(false);
             //float horizOffset = (settingsPaper1.rect.width / 2) + (canvasWidth / 2);
             //customVal1 = -horizOffset;
             //customVal2 = horizOffset;
@@ -223,6 +231,8 @@ public class SceneChangerVisuals : MonoBehaviour {
         settingsPage.localPosition = new Vector2(canvasWidth + 500, 0);
         //atlasBig.sizeDelta = new Vector2(canvasWidth + 500, canvasHeight);
         atlasBig.localPosition = new Vector2(- ((canvasWidth /2) + (atlasBig.rect.width/2)), 0);
+        for (int i = StaticVariables.highestBeatenStage.nextStage.world; i < atlasBigWorlds.childCount; i++)
+            atlasBigWorlds.GetChild(i).gameObject.SetActive(false);
     }
 
     private void MoveObjectToX0(RectTransform obj){
