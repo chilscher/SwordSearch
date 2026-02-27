@@ -188,7 +188,7 @@ public class LaunchGameSetup : MonoBehaviour {
                 previousStage.nextStage = newStage;
             previousStage = newStage;
             allStages.Add(newStage);
-            print("adding stage with index: " + newStage.index);
+            //print("adding stage with index: " + newStage.index);
         }
     }
     

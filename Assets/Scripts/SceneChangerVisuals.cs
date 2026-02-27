@@ -119,34 +119,13 @@ public class SceneChangerVisuals : MonoBehaviour {
             StaticVariables.WaitTimeThenCallFunction(1f, EnableClicks);
             return;
         }
-        else if (CheckSceneChange(null, SceneChanger.Scene.Hometown)){
+        else if (CheckSceneChange(null, SceneChanger.Scene.World)){
             StaticVariables.WaitTimeThenCallFunction(3f, sceneHeader.SlideIn);
             StaticVariables.WaitTimeThenCallFunction(3f, AudioManager.PlaySound, AudioManager.library.headerMoveIn);
             StaticVariables.WaitTimeThenCallFunction(3.5f, EnableClicks);
-            //atlasBig.gameObject.SetActive(true);
-            //float pos = atlasBig.localPosition.x;
-            //atlasBig.localPosition = new Vector2(0, atlasBig.localPosition.y);
-            //atlasBig.DOLocalMoveX(pos, 0.5f).SetEase(Ease.InSine);
-            //AudioManager.PlaySound(AudioManager.library.settingsPageMoveOut);
-            //customVal1 = atlasSmall.localPosition.x;
-            //float horizOffset = (atlasSmall.rect.width / 2) + (canvasWidth / 2);
-            //atlasSmall.localPosition = new Vector2(-horizOffset, atlasSmall.localPosition.y);
-            //StaticVariables.WaitTimeThenCallFunction(0.5f, MoveObjectToXCustom1OutSine, atlasSmall);
-            //StaticVariables.WaitTimeThenCallFunction(0.5f, AudioManager.PlaySound, AudioManager.library.settingsFolderMoveIn);
-            //StaticVariables.WaitTimeThenCallFunction(1f, EnableClicks);
             return;
         }
-        else if (CheckSceneChange(SceneChanger.Scene.Hometown, SceneChanger.Scene.Homepage)){
-            ///settingsPage.gameObject.SetActive(true);
-            //float pos = settingsPage.localPosition.x;
-            //settingsPage.localPosition = new Vector2(0, settingsPage.localPosition.y);
-            //settingsPage.DOLocalMoveX(pos, 0.5f).SetEase(Ease.InSine);
-            //AudioManager.PlaySound(AudioManager.library.settingsPageMoveOut);
-            //customVal1 = settingsFolder.localPosition.x;
-            //float horizOffset = (settingsFolder.rect.width / 2) + (canvasWidth / 2);
-            //settingsFolder.localPosition = new Vector2(horizOffset, settingsFolder.localPosition.y);
-            //StaticVariables.WaitTimeThenCallFunction(0.5f, MoveObjectToXCustom1OutSine, settingsFolder);
-            //StaticVariables.WaitTimeThenCallFunction(0.5f, AudioManager.PlaySound, AudioManager.library.settingsFolderMoveIn);
+        else if (CheckSceneChange(SceneChanger.Scene.World, SceneChanger.Scene.Homepage)){
             StaticVariables.WaitTimeThenCallFunction(0.1f, EnableClicks);
             return;
         }
@@ -214,7 +193,7 @@ public class SceneChangerVisuals : MonoBehaviour {
             StaticVariables.WaitTimeThenCallFunction(0.5f, TriggerSceneChange);
             return;
         }
-        else if (CheckSceneChange(SceneChanger.Scene.Atlas, SceneChanger.Scene.Hometown)){
+        else if (CheckSceneChange(SceneChanger.Scene.Atlas, SceneChanger.Scene.World)){
             sceneHeader.SlideOut();
             AudioManager.PlaySound(AudioManager.library.headerMoveOut);
             foreach (OverworldSpace os in overworldManager.overworldSpaces){
@@ -225,14 +204,19 @@ public class SceneChangerVisuals : MonoBehaviour {
             StaticVariables.WaitTimeThenCallFunction(0.5f, TriggerSceneChange);
             return;
         }
-        else if (CheckSceneChange(SceneChanger.Scene.Hometown, SceneChanger.Scene.Homepage)){
+        else if (CheckSceneChange(SceneChanger.Scene.World, SceneChanger.Scene.Homepage)){
             sceneHeader.SlideOut();
             AudioManager.PlaySound(AudioManager.library.headerMoveOut);
             foreach (OverworldSpace os in overworldManager.overworldSpaces){
                 foreach (PathStep ps in os.steps)
                     ps.HideStep(0.5f);
+                os.HideEnemy(0.5f);
             }
             overworldManager.FadeOutPlayer(0.5f);
+            StaticVariables.WaitTimeThenCallFunction(0.5f, TriggerSceneChange);
+            return;
+        }
+        else if (CheckSceneChange(SceneChanger.Scene.Homepage, SceneChanger.Scene.World)){
             StaticVariables.WaitTimeThenCallFunction(0.5f, TriggerSceneChange);
             return;
         }

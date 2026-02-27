@@ -1,3 +1,5 @@
+//for Sword Search, copyright Fancy Bus Games 2026
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,14 +7,13 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
 using MyBox;
+using System.Linq;
 
 public class OverworldSpace : MonoBehaviour{
 
     [HideInInspector]
     public OverworldSceneManager overworldSceneManager;
     private List<Image> enemyImages = new List<Image>();
-    private int pathFadeIndex = 0;
-    private float timeBetweenPathFadeSteps = 0.5f;
     [HideInInspector]
     public int originalSiblingIndex;
     [Header("Scene references")]
@@ -89,7 +90,20 @@ public class OverworldSpace : MonoBehaviour{
         }
     }
 
-    public void FadeInVisuals(){
+    public void RevealStepsSlowly(){ //replacing FadeInVisuals
+        HideEnemy(0);
+        button.SetActive(false);
+        foreach (PathStep ps in steps)
+            ps.HideStep(0);
+        for (int i = 0; i < steps.Length; i++){
+            StaticVariables.WaitTimeThenCallFunction(0.5f * i, steps[i].ShowStep, 0.5f);
+            if (steps[i].isDestination)
+                StaticVariables.WaitTimeThenCallFunction(0.5f * i, FadeInEnemy, 0.5f);
+        }
+        
+    }
+
+    public void HideEnemy(float duration){
         if ((type == OverworldSpaceType.Battle) || (type == OverworldSpaceType.Tutorial)){
             if (battleData.enemyPrefab.GetComponent<EnemyData>().isHorde){
                 foreach (Transform t in transform.GetChild(0).GetChild(0))
@@ -101,7 +115,7 @@ public class OverworldSpace : MonoBehaviour{
             foreach (Image im in enemyImages){
                 Color enemyImageColor = Color.white;
                 enemyImageColor.a = 0;
-                im.color = enemyImageColor;
+                im.DOColor(enemyImageColor, duration);
                 im.GetComponent<Animator>().enabled = false;
         }
 
@@ -113,40 +127,19 @@ public class OverworldSpace : MonoBehaviour{
             foreach (Image im in enemyImages){
                 Color enemyImageColor = im.color;
                 enemyImageColor.a = 0;
-                im.color = enemyImageColor;
+                im.DOColor(enemyImageColor, duration);
             }
         }
-
-        overworldPlayerSpaceIcon.GetComponent<PathStep>().HideStep(0);
-
-
-        button.SetActive(false);
-
-        foreach (Transform t in pathFromLastSpace)
-            t.GetComponent<PathStep>().HideStep(0);
-        pathFadeIndex = -1;
-        StaticVariables.WaitTimeThenCallFunction(StaticVariables.sceneFadeDuration, FadeNextStepOfPath);
+        
     }
 
-    private void FadeNextStepOfPath(){
-        pathFadeIndex ++;
-        if (pathFadeIndex >= pathFromLastSpace.childCount){
-            FadeInEnemy();
-            return;
-        }
-
-        pathFromLastSpace.GetChild(pathFadeIndex).GetComponent<PathStep>().ShowStep(timeBetweenPathFadeSteps);
-        StaticVariables.WaitTimeThenCallFunction(timeBetweenPathFadeSteps, FadeNextStepOfPath);
-    }
-
-    public void FadeInEnemy(){
+    public void FadeInEnemy(float duration){
         print("fading in enemy");
         foreach (Image im in enemyImages){
             Color c = im.color;
             c.a = 1;
-            im.DOColor(c, timeBetweenPathFadeSteps).OnComplete(TurnEnemyAniamtionsOn);
+            im.DOColor(c, duration).OnComplete(TurnEnemyAniamtionsOn);
         }
-        overworldPlayerSpaceIcon.GetComponent<PathStep>().ShowStep(timeBetweenPathFadeSteps);
     }
 
     private void TurnEnemyAniamtionsOn(){

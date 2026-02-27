@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger{
 
-    public enum Scene {None, Homepage, Settings, Credits, Atlas, Hometown}
+    public enum Scene {None, Homepage, Settings, Credits, Atlas, World}
     static public Scene goingFrom = Scene.None;
     static public Scene goingTo = Scene.None;
     static public SceneChangerVisuals visuals;
@@ -45,10 +45,20 @@ public class SceneChanger{
         visuals.AnimateLeavingScene();
     }
 
-    static public void GoHometown(){
-        nextSceneName = "World 1 - Hometown";
+    static public void GoWorld(int num){
+        nextSceneName = num switch {
+            1 => "World 1 - Hometown",
+            2 => "World 2 - Grasslands",
+            3 => "World 3 - Enchanted Forest",
+            4 => "World 4 - Sunscorched Desert",
+            5 => "World 5 - Duskvale",
+            6 => "World 6 - Frostlands",
+            7 => "World 7 - Caverns",
+            _ => "World 1 - Hometown",
+        };
+        
         goingFrom = visuals.thisScene;
-        goingTo = Scene.Hometown;
+        goingTo = Scene.World;
         visuals.AnimateLeavingScene();
     }
     /*

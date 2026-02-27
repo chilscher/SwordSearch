@@ -11,6 +11,7 @@ using MyBox;
 public class PathStep : MonoBehaviour{
     public Image backgroundImage;
     public Image arrowImage;
+    public OverworldSpace overworldSpace;
     public bool isDestination = false;
     [HideInInspector]
     public bool isPlayerAtStep = false;

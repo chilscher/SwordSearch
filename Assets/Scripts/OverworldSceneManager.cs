@@ -1,3 +1,5 @@
+//for Sword Search, copyright Fancy Bus Games 2026
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -43,6 +45,7 @@ public class OverworldSceneManager : MonoBehaviour{
     public InteractOverlayManager interactOverlayManager;
     public DialogueManager dialogueManager;
     private List<GameObject> stepsToNextSpace;
+    private bool revealLastEnemySlowly = false;
     //private bool changePlayerDirectionAtNextStep = false;
     //private bool playerDestinationIsNextStep = false;
 
@@ -60,9 +63,12 @@ public class OverworldSceneManager : MonoBehaviour{
             ShowAllWorldsProgress();
         }
         else{
+            //StaticVariables.lastVisitedStage = StaticVariables.highestBeatenStage.nextStage; //for testing fade-in for next enemy
+            //StaticVariables.hasCompletedStage = true; //for testing fade-in for next enemy
             PlacePlayerAtPosition(StaticVariables.lastVisitedStage.stage);
-            ShowPartialWorldProgress();
+            int lastStageToQuickReveal = StaticVariables.highestBeatenStage.nextStage.index;
             CheckIfCompletedStage();
+            ShowPartialWorldProgress(lastStageToQuickReveal);
         }
         interactOverlayManager.Setup();
         //generalSceneManager.FadeIn();
@@ -76,7 +82,7 @@ public class OverworldSceneManager : MonoBehaviour{
                 if (StaticVariables.highestBeatenStage.nextStage.world != thisWorldNum)
                     ImmediatelyStartNextWorld();
                 else
-                    UnlockNextEnemy();
+                    revealLastEnemySlowly = true; //UnlockNextEnemy();
                 SaveSystem.SaveGame();
             }
         }
@@ -231,11 +237,6 @@ public class OverworldSceneManager : MonoBehaviour{
         if (overworldSpaceForCurrentStep.originalSiblingIndex > overworldSpaceForNextStep.originalSiblingIndex)
             spacePlayerShouldBeOnTopOf = overworldSpaceForCurrentStep;
         playerParent.SetSiblingIndex(spacePlayerShouldBeOnTopOf.originalSiblingIndex + 1);
-
-
-
-
-        
     }
 
     private void PointPlayerTowardNextDestination(){
@@ -293,7 +294,7 @@ public class OverworldSceneManager : MonoBehaviour{
 
         if (currentPlayerSpace.type == OverworldSpace.OverworldSpaceType.Atlas){
             StaticVariables.lastVisitedStage = StaticVariables.GetStage(currentPlayerSpace.worldNumber, 1);
-            SceneChanger.GoHometown();
+            SceneChanger.GoWorld(StaticVariables.lastVisitedStage.world);
             //StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
             return;
 
@@ -320,36 +321,6 @@ public class OverworldSceneManager : MonoBehaviour{
     private void EndPlayerWalk(){
         playerAnimator.SetTrigger("WalkEnd");
         PlayerArrivedAtDestination();
-        /*
-        isPlayerMoving = false;
-        currentPlayerSpace.transform.GetChild(2).GetChild(0).gameObject.SetActive(false);
-        Vector3 s = playerParent.localScale;
-        s.x = 1;
-        playerParent.localScale = s;
-
-        if (currentPlayerSpace.type == OverworldSpace.OverworldSpaceType.Atlas){
-            StaticVariables.lastVisitedStage = StaticVariables.GetStage(currentPlayerSpace.worldNumber, 1);
-            StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
-            return;
-
-            
-        //StaticVariables.lastVisitedStage = StaticVariables.GetStage(worldNum, 1);
-        //StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
-        }
-
-        interactOverlayManager.ShowInteractOverlay();
-        if (currentPlayerSpace.type == OverworldSpace.OverworldSpaceType.Cutscene)
-            return;    
-        EnemyData ed = currentPlayerSpace.battleData.enemyPrefab.GetComponent<EnemyData>();
-        interactOverlayManager.DisplayEnemyName(ed);
-        interactOverlayManager.ConfigureInfoButton(ed);
-        interactOverlayManager.ConfigureReadButton(ed);
-        if ((IsCurrentEnemyNewestEnemy()) && (!StaticVariables.hasTalkedToNewestEnemy)){
-            if ((currentPlayerSpace.type == OverworldSpace.OverworldSpaceType.Battle) || (currentPlayerSpace.type == OverworldSpace.OverworldSpaceType.Tutorial))
-                dialogueManager.Setup(currentEnemyData.overworldDialogueSteps, currentPlayerSpace.battleData);
-
-        }
-        */
     }
 
     private bool IsCurrentEnemyNewestEnemy(){
@@ -366,11 +337,11 @@ public class OverworldSceneManager : MonoBehaviour{
         StaticVariables.FadeOutThenLoadScene(StaticVariables.battleSceneName);
     }
 
-    private void ShowPartialWorldProgress(){
+    private void ShowPartialWorldProgress(int index){
         //create a list of all path steps the player has available, and hide the unavailable spaces
         List<PathStep> availableSteps = new();
         for (int i = 0; i < overworldSpaces.Length; i++){
-            bool isUnlocked = (StaticVariables.GetStage(thisWorldNum, i + 1).index <= StaticVariables.highestBeatenStage.nextStage.index);
+            bool isUnlocked = (StaticVariables.GetStage(thisWorldNum, i + 1).index <= index);
             overworldSpaces[i].gameObject.SetActive(isUnlocked);
             if (isUnlocked){
                 foreach (PathStep ps in overworldSpaces[i].steps)
@@ -392,9 +363,13 @@ public class OverworldSceneManager : MonoBehaviour{
                 step.HideStep(0);
                 StaticVariables.WaitTimeThenCallFunction(timePerStep * i, availableSteps[i].ShowStep, 0.2f);
             }
-            //if (step.isDestination){
-            //    fade in enemy / book
-            //}
+            if (step.isDestination){
+                step.overworldSpace.HideEnemy(0);
+                StaticVariables.WaitTimeThenCallFunction(timePerStep * i, availableSteps[i].overworldSpace.FadeInEnemy, 0.2f);
+            }
+        }
+        if (revealLastEnemySlowly){
+            StaticVariables.WaitTimeThenCallFunction(totalFadeInTime + 0.5f, RevealNextEnemy);
         }
     }
 
@@ -451,11 +426,12 @@ public class OverworldSceneManager : MonoBehaviour{
         
     }
 
-    private void UnlockNextEnemy(){
+    private void RevealNextEnemy(){
         OverworldSpace nextSpace = GetFirstLockedEnemySpace();
         if (nextSpace != null){
             nextSpace.gameObject.SetActive(true);
-            nextSpace.FadeInVisuals();
+            //nextSpace.FadeInVisuals();
+            nextSpace.RevealStepsSlowly();
         }
     }
 
@@ -531,4 +507,3 @@ public class OverworldSceneManager : MonoBehaviour{
         sceneHeader.gameObject.SetActive(false);
     }
 }
-

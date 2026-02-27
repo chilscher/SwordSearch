@@ -42,15 +42,7 @@ public class HomepageManager : MonoBehaviour{
     private List<GameObject> endlessModeEnemyPrefabs;
     private int endlessModeEnemyIndex = 0;
     private readonly float endlessModeMoveDuration = 9f;
-    //public GeneralSceneManager generalSceneManager;
-
     void Start(){
-        //GetComponent<GeneralSceneManager>().Setup();
-        Setup();
-        //generalSceneManager.FadeIn();
-    }
-
-    public void Setup(){
         DisplayProgress();
         ShowEndlessModeEnemies();
     }
@@ -59,7 +51,7 @@ public class HomepageManager : MonoBehaviour{
         //some way to designate which stage to go to when the level loads
         //todo figure out what happens after you beat the last stage in the game
         StaticVariables.lastVisitedStage = StaticVariables.highestBeatenStage.nextStage;
-        StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
+        SceneChanger.GoWorld(StaticVariables.lastVisitedStage.world);
     }
 
     public void HitEndlessModeButton(){
@@ -68,13 +60,11 @@ public class HomepageManager : MonoBehaviour{
 
     public void HitSettingsButton(){
         SceneChanger.GoSettings();
-        //StaticVariables.FadeOutThenLoadScene("Settings");
     }
 
     public void HitMapButton(){
         StaticVariables.lastVisitedStage = StaticVariables.highestBeatenStage.nextStage;
         SceneChanger.GoAtlas();
-        //StaticVariables.FadeOutThenLoadScene(StaticVariables.mapName);
     }
 
     private List<GameObject> CreateEndlessModeEnemyList(){
