@@ -20,6 +20,7 @@ public class OverworldSpace : MonoBehaviour{
     public Transform pathFromLastSpace;
     public GameObject button;
     public GameObject overworldPlayerSpaceIcon;
+    public PathStep[] steps; //includes destination spot
     
 
 
@@ -138,7 +139,7 @@ public class OverworldSpace : MonoBehaviour{
         StaticVariables.WaitTimeThenCallFunction(timeBetweenPathFadeSteps, FadeNextStepOfPath);
     }
 
-    private void FadeInEnemy(){
+    public void FadeInEnemy(){
         print("fading in enemy");
         foreach (Image im in enemyImages){
             Color c = im.color;

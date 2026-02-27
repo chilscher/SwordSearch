@@ -13,7 +13,6 @@ public class OverworldSceneManager : MonoBehaviour{
     public RectTransform playerParent;
     public Animator playerAnimator;
     public OverworldSpace[] overworldSpaces;
-    public PathStep[] pathSteps;
     public RectTransform sceneHeader;
     //public GeneralSceneManager generalSceneManager;
 
@@ -61,8 +60,8 @@ public class OverworldSceneManager : MonoBehaviour{
             ShowAllWorldsProgress();
         }
         else{
-            ShowPartialWorldProgress();
             PlacePlayerAtPosition(StaticVariables.lastVisitedStage.stage);
+            ShowPartialWorldProgress();
             CheckIfCompletedStage();
         }
         interactOverlayManager.Setup();
@@ -294,7 +293,8 @@ public class OverworldSceneManager : MonoBehaviour{
 
         if (currentPlayerSpace.type == OverworldSpace.OverworldSpaceType.Atlas){
             StaticVariables.lastVisitedStage = StaticVariables.GetStage(currentPlayerSpace.worldNumber, 1);
-            StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
+            SceneChanger.GoHometown();
+            //StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
             return;
 
             
@@ -367,40 +367,88 @@ public class OverworldSceneManager : MonoBehaviour{
     }
 
     private void ShowPartialWorldProgress(){
-        if (thisWorldNum < StaticVariables.highestBeatenStage.nextStage.world)
-            return;
-        for (int i = StaticVariables.highestBeatenStage.nextStage.stage; i < overworldSpaces.Length; i++)
-            overworldSpaces[i].gameObject.SetActive(false);
+        //create a list of all path steps the player has available, and hide the unavailable spaces
+        List<PathStep> availableSteps = new();
+        for (int i = 0; i < overworldSpaces.Length; i++){
+            bool isUnlocked = (StaticVariables.GetStage(thisWorldNum, i + 1).index <= StaticVariables.highestBeatenStage.nextStage.index);
+            overworldSpaces[i].gameObject.SetActive(isUnlocked);
+            if (isUnlocked){
+                foreach (PathStep ps in overworldSpaces[i].steps)
+                    availableSteps.Add(ps);
+            }
+        }
+        print(availableSteps.Count);
+        float totalFadeInTime = 2.5f;
+        float timePerStep = 0;
+        if (availableSteps.Count > 1)
+            timePerStep = totalFadeInTime / (availableSteps.Count - 1);
+        for (int i = 0; i < availableSteps.Count; i++){
+            PathStep step = availableSteps[i];
+            if (step.isPlayerAtStep){
+                playerParent.gameObject.SetActive(false);
+                StaticVariables.WaitTimeThenCallFunction(timePerStep * i, FadeInPlayer, 0.2f);
+            }
+            else{
+                step.HideStep(0);
+                StaticVariables.WaitTimeThenCallFunction(timePerStep * i, availableSteps[i].ShowStep, 0.2f);
+            }
+            //if (step.isDestination){
+            //    fade in enemy / book
+            //}
+        }
     }
 
     private void ShowAllWorldsProgress(){
         //only used in the atlas scene to show available worlds
         for (int i = StaticVariables.highestBeatenStage.nextStage.world; i < overworldSpaces.Length; i++)
             overworldSpaces[i].gameObject.SetActive(false);
+
         //create a list of all path steps the player has available
         List<PathStep> availableSteps = new();
-        foreach (PathStep ps in pathSteps){
-            if (ps.worldNum <= StaticVariables.highestBeatenStage.nextStage.world)
-              availableSteps.Add(ps);
+        for (int i = 0; i < StaticVariables.highestBeatenStage.nextStage.world; i++){
+            OverworldSpace os = overworldSpaces[i];
+            foreach (PathStep ps in os.steps){
+                availableSteps.Add(ps);
+            }
         }
-        float totalFadeInTime = 3f;
+
+        float totalFadeInTime = 2.5f;
         float timePerStep = 0;
         if (availableSteps.Count > 1)
             timePerStep = totalFadeInTime / (availableSteps.Count - 1);
-        //print(timePerStep);
-        //availableSteps[0].ShowStep(0.5f);
         for (int i = 0; i < availableSteps.Count; i++){
             PathStep step = availableSteps[i];
             if (step.isPlayerAtStep){
                 playerParent.gameObject.SetActive(false);
-                StaticVariables.WaitTimeThenCallFunction(timePerStep * i, playerParent.gameObject.SetActive, true);
+                StaticVariables.WaitTimeThenCallFunction(timePerStep * i, FadeInPlayer, 0.2f);
             }
             else{
                 step.HideStep(0);
-                StaticVariables.WaitTimeThenCallFunction(timePerStep * i, availableSteps[i].ShowStep, 0.3f);
+                StaticVariables.WaitTimeThenCallFunction(timePerStep * i, availableSteps[i].ShowStep, 0.2f);
             }
         }
-        //print(availableSteps.Count);
+    }
+
+    private void FadeInPlayer(float duration){
+        playerParent.gameObject.SetActive(true);
+        Image im = playerAnimator.GetComponent<Image>();
+        Color c1 = im.color;
+        Color c2 = im.color;
+        c1.a = 0;
+        c2.a = 1;
+        im.color = c1;
+        im.DOColor(c2, duration);
+    }
+
+    public void FadeOutPlayer(float duration){
+        Image im = playerAnimator.GetComponent<Image>();
+        Color c1 = im.color;
+        Color c2 = im.color;
+        c1.a = 0;
+        c2.a = 1;
+        im.color = c2;
+        im.DOColor(c1, duration);
+        
     }
 
     private void UnlockNextEnemy(){

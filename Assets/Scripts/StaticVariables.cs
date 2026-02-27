@@ -202,6 +202,7 @@ public class StageData{
     public StageData previousStage = null;
     public StageData nextStage = null;
     public string worldName;
+    public int index = -10; //starts at -1 for the dummy stage set up by launchgamesetup
 
     public StageData (int worldNum, string worldName, int stageNum, GameObject enemyPrefab){
         this.world = worldNum;

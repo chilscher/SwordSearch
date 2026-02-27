@@ -142,6 +142,7 @@ public class LaunchGameSetup : MonoBehaviour {
         //create a dummy stage to represent "has not beaten any stages yet"
         StageData dummyStage = new(-1, "has not started", -1, null);
         dummyStage.previousStage = null;
+        dummyStage.index = -1;
         previousStage = dummyStage;
         allStages.Add(dummyStage);
 
@@ -152,7 +153,7 @@ public class LaunchGameSetup : MonoBehaviour {
         CreateStagesForEnemiesInWorld(5, cityEnemies);
         CreateStagesForEnemiesInWorld(6, frostlandsEnemies);
         CreateStagesForEnemiesInWorld(7, cavernsEnemies);
-        CreateStagesForEnemiesInWorld(8, dragonsDenEnemies);
+        //CreateStagesForEnemiesInWorld(8, dragonsDenEnemies);
 
         //create another dummy stage to represent "has beaten the game"
         //StageData dummyStage2 = new (99, "beat all stages", 99, null);
@@ -167,8 +168,7 @@ public class LaunchGameSetup : MonoBehaviour {
 
     private void CreateStagesForEnemiesInWorld(int worldNum, List<GameObject> enemiesInWorld) {
         int stageNum = 0;
-        string worldName = worldNum switch
-        {
+        string worldName = worldNum switch {
             1 => StaticVariables.world1Name,
             2 => StaticVariables.world2Name,
             3 => StaticVariables.world3Name,
@@ -176,18 +176,19 @@ public class LaunchGameSetup : MonoBehaviour {
             5 => StaticVariables.world5Name,
             6 => StaticVariables.world6Name,
             7 => StaticVariables.world7Name,
-            8 => StaticVariables.world8Name,
+            //8 => StaticVariables.world8Name,
             _ => StaticVariables.world1Name,
         };
-        foreach (GameObject enemyPrefab in enemiesInWorld)
-        {
+        foreach (GameObject enemyPrefab in enemiesInWorld) {
             stageNum++;
             StageData newStage = new(worldNum, worldName, stageNum, enemyPrefab);
             newStage.previousStage = previousStage;
+            newStage.index = previousStage.index + 1;
             if (previousStage != null)
                 previousStage.nextStage = newStage;
             previousStage = newStage;
             allStages.Add(newStage);
+            print("adding stage with index: " + newStage.index);
         }
     }
     
