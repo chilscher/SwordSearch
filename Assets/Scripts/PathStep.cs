@@ -22,9 +22,14 @@ public class PathStep : MonoBehaviour{
 
         im1Color.a = 0;
         im2Color.a = 0;
-
-        backgroundImage.DOColor(im1Color, duration);
-        arrowImage.DOColor(im2Color, duration);
+        if (duration == 0){
+            backgroundImage.color = im1Color;
+            arrowImage.color = im2Color;
+        }
+        else{
+            backgroundImage.DOColor(im1Color, duration);
+            arrowImage.DOColor(im2Color, duration);
+        }
     }
 
     public void ShowStep(float duration){
@@ -34,8 +39,14 @@ public class PathStep : MonoBehaviour{
         im1Color.a = 1;
         im2Color.a = 1;
 
-        backgroundImage.DOColor(im1Color, duration);
-        arrowImage.DOColor(im2Color, duration);
+        if (duration == 0){
+            backgroundImage.color = im1Color;
+            arrowImage.color = im2Color;
+        }
+        else{
+            backgroundImage.DOColor(im1Color, duration);
+            arrowImage.DOColor(im2Color, duration);
+        }
     }
 
 }

@@ -100,7 +100,7 @@ public class OverworldSpace : MonoBehaviour{
             if (steps[i].isDestination)
                 StaticVariables.WaitTimeThenCallFunction(0.5f * i, FadeInEnemy, 0.5f);
         }
-        
+        StaticVariables.WaitTimeThenCallFunction(steps.Length * 0.5f, overworldSceneManager.sceneChangerVisuals.FinishEnteringOverworld);
     }
 
     public void HideEnemy(float duration){

@@ -842,6 +842,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2769450307802171428, guid: d337f394ee351aa48bb3e18165b25f50, type: 3}
   m_PrefabInstance: {fileID: 453884014}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &453884016 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7456985050191186055, guid: d337f394ee351aa48bb3e18165b25f50, type: 3}
+  m_PrefabInstance: {fileID: 453884014}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bec2e93ebfb34b540bd5257ad43c16b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneChangerVisuals
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1608,6 +1619,7 @@ MonoBehaviour:
   overworldSpaces:
   - {fileID: 18251722}
   sceneHeader: {fileID: 968711456}
+  sceneChangerVisuals: {fileID: 453884016}
   playerStepDuration: 0.2
   thisWorldNum: 6
   powerupsPerPuzzle: 3
@@ -1623,6 +1635,7 @@ MonoBehaviour:
   currentEnemyData: {fileID: 0}
   interactOverlayManager: {fileID: 734309496}
   dialogueManager: {fileID: 1670146879}
+  revealLastEnemySlowly: 0
 --- !u!1001 &1155937713
 PrefabInstance:
   m_ObjectHideFlags: 0

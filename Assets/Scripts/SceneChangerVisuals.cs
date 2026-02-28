@@ -100,9 +100,9 @@ public class SceneChangerVisuals : MonoBehaviour {
             return;
         }
         else if (CheckSceneChange(null, SceneChanger.Scene.Atlas)){
-            StaticVariables.WaitTimeThenCallFunction(3f, sceneHeader.SlideIn);
-            StaticVariables.WaitTimeThenCallFunction(3f, AudioManager.PlaySound, AudioManager.library.headerMoveIn);
-            StaticVariables.WaitTimeThenCallFunction(3.5f, EnableClicks);
+            StaticVariables.WaitTimeThenCallFunction(1f, sceneHeader.SlideIn);
+            StaticVariables.WaitTimeThenCallFunction(1f, AudioManager.PlaySound, AudioManager.library.headerMoveIn);
+            StaticVariables.WaitTimeThenCallFunction(1.5f, EnableClicks);
             return;
         }
         else if (CheckSceneChange(SceneChanger.Scene.Atlas, SceneChanger.Scene.Homepage)){
@@ -120,9 +120,7 @@ public class SceneChangerVisuals : MonoBehaviour {
             return;
         }
         else if (CheckSceneChange(null, SceneChanger.Scene.World)){
-            StaticVariables.WaitTimeThenCallFunction(3f, sceneHeader.SlideIn);
-            StaticVariables.WaitTimeThenCallFunction(3f, AudioManager.PlaySound, AudioManager.library.headerMoveIn);
-            StaticVariables.WaitTimeThenCallFunction(3.5f, EnableClicks);
+            //overworld scene manager will call FinishEnteringOverworld when everything is finished popping in
             return;
         }
         else if (CheckSceneChange(SceneChanger.Scene.World, SceneChanger.Scene.Homepage)){
@@ -285,5 +283,11 @@ public class SceneChangerVisuals : MonoBehaviour {
         if (to == null)
             return (from == SceneChanger.goingFrom);
         return ((from == SceneChanger.goingFrom) && (to == SceneChanger.goingTo));
+    }
+
+    public void FinishEnteringOverworld(){
+        sceneHeader.SlideIn();
+        AudioManager.PlaySound(AudioManager.library.headerMoveIn);
+        StaticVariables.WaitTimeThenCallFunction(0.5f, EnableClicks);
     }
 }

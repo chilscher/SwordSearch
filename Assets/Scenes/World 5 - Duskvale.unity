@@ -1531,6 +1531,7 @@ MonoBehaviour:
   - {fileID: 18251722}
   - {fileID: 610208576}
   sceneHeader: {fileID: 2036482307}
+  sceneChangerVisuals: {fileID: 1512878522}
   playerStepDuration: 0.2
   thisWorldNum: 5
   powerupsPerPuzzle: 3
@@ -1546,6 +1547,7 @@ MonoBehaviour:
   currentEnemyData: {fileID: 0}
   interactOverlayManager: {fileID: 734309496}
   dialogueManager: {fileID: 1670146879}
+  revealLastEnemySlowly: 0
 --- !u!1 &1212579336
 GameObject:
   m_ObjectHideFlags: 0
@@ -2461,6 +2463,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2769450307802171428, guid: d337f394ee351aa48bb3e18165b25f50, type: 3}
   m_PrefabInstance: {fileID: 1512878520}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1512878522 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7456985050191186055, guid: d337f394ee351aa48bb3e18165b25f50, type: 3}
+  m_PrefabInstance: {fileID: 1512878520}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bec2e93ebfb34b540bd5257ad43c16b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneChangerVisuals
 --- !u!224 &1670146878 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8075790155026782514, guid: fd3757c0e974e264e9941b0d191b40be, type: 3}
