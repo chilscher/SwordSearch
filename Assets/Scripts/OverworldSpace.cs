@@ -22,8 +22,6 @@ public class OverworldSpace : MonoBehaviour{
     public GameObject button;
     public GameObject overworldPlayerSpaceIcon;
     public PathStep[] steps; //includes destination spot
-    
-
 
     public enum OverworldSpaceType{Battle, Cutscene, Tutorial, Atlas}
     [Header("Gameplay Stuff")]
@@ -130,11 +128,9 @@ public class OverworldSpace : MonoBehaviour{
                 im.DOColor(enemyImageColor, duration);
             }
         }
-        
     }
 
     public void FadeInEnemy(float duration){
-        print("fading in enemy");
         foreach (Image im in enemyImages){
             Color c = im.color;
             c.a = 1;

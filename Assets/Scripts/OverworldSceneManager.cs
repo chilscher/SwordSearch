@@ -56,7 +56,6 @@ public class OverworldSceneManager : MonoBehaviour{
         //generalSceneManager.Setup();
         interactOverlayManager.gameObject.SetActive(true);
         dialogueManager.gameObject.SetActive(true);
-        SetPowerupAvailability();
         SetupOverworldSpaces();
         PickReadingBookOptions();
         if (thisWorldNum == 0){
@@ -64,6 +63,7 @@ public class OverworldSceneManager : MonoBehaviour{
             ShowAtlasProgress();
         }
         else{
+            SetPowerupAvailability();
             //StaticVariables.lastVisitedStage = StaticVariables.highestBeatenStage.nextStage; //for testing fade-in for next enemy
             //StaticVariables.hasCompletedStage = true; //for testing fade-in for next enemy
             PlacePlayerAtPosition(StaticVariables.lastVisitedStage.stage);
@@ -105,39 +105,25 @@ public class OverworldSceneManager : MonoBehaviour{
         StaticVariables.swordActive = swordActive;
         StaticVariables.powerupsPerPuzzle = powerupsPerPuzzle;
 
-        //also set the buffed powerup type, if it's not set already
-        if (StaticVariables.buffedType == BattleManager.PowerupTypes.None){//if the buffed type is not selected, pick the most recent unlocked one
-            //the buffed type feature is not available for worlds 1-3
-            if (thisWorldNum == 4)
-                StaticVariables.buffedType = BattleManager.PowerupTypes.Fire;
-            if (thisWorldNum == 5)
-                StaticVariables.buffedType = BattleManager.PowerupTypes.Lightning;
-            if (thisWorldNum == 6)
-                StaticVariables.buffedType = BattleManager.PowerupTypes.Dark;
-            if (thisWorldNum == 7 || thisWorldNum == 8)
-                StaticVariables.buffedType = BattleManager.PowerupTypes.Sword;
-        }  
-        else if (StaticVariables.buffedType == BattleManager.PowerupTypes.Lightning){//if the buffed type is not available for this world, set it to the highest one available
-            if (thisWorldNum == 4)
-                StaticVariables.buffedType = BattleManager.PowerupTypes.Fire;
-        }  
-        else if (StaticVariables.buffedType == BattleManager.PowerupTypes.Dark){
-            if (thisWorldNum == 4)
-                StaticVariables.buffedType = BattleManager.PowerupTypes.Fire;
-            if (thisWorldNum == 5)
-                StaticVariables.buffedType = BattleManager.PowerupTypes.Lightning;
-        }   
-        else if (StaticVariables.buffedType == BattleManager.PowerupTypes.Sword){
-            if (thisWorldNum == 4)
-                StaticVariables.buffedType = BattleManager.PowerupTypes.Fire;
-            if (thisWorldNum == 5)
-                StaticVariables.buffedType = BattleManager.PowerupTypes.Lightning;
-            if (thisWorldNum == 6)
-                StaticVariables.buffedType = BattleManager.PowerupTypes.Dark;
-        }     
-        //clear the buffed type if on worlds 1-3
+        //clear the buffed type if it isnt available for this world
         if (thisWorldNum < 4)
             StaticVariables.buffedType = BattleManager.PowerupTypes.None;
+        if ((thisWorldNum < 5) && (StaticVariables.buffedType == BattleManager.PowerupTypes.Lightning))
+            StaticVariables.buffedType = BattleManager.PowerupTypes.None;
+        if ((thisWorldNum < 7) && (StaticVariables.buffedType == BattleManager.PowerupTypes.Sword))
+            StaticVariables.buffedType = BattleManager.PowerupTypes.None;
+
+        //also set the buffed powerup type, if it's not set already
+        if (StaticVariables.buffedType == BattleManager.PowerupTypes.None){//if the buffed type is not selected, pick the most recent unlocked one
+            if (thisWorldNum == 4)
+                StaticVariables.buffedType = BattleManager.PowerupTypes.Fire;
+            if (thisWorldNum == 5)
+                StaticVariables.buffedType = BattleManager.PowerupTypes.Lightning;
+            if (thisWorldNum == 6)
+                StaticVariables.buffedType = BattleManager.PowerupTypes.Lightning;
+            if (thisWorldNum == 7)
+                StaticVariables.buffedType = BattleManager.PowerupTypes.Sword;
+        }
     }
 
     private void PickReadingBookOptions(){
