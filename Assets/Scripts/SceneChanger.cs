@@ -56,7 +56,6 @@ public class SceneChanger{
             7 => "World 7 - Caverns",
             _ => "World 1 - Hometown",
         };
-        
         goingFrom = visuals.thisScene;
         goingTo = Scene.World;
         visuals.AnimateLeavingScene();

@@ -47,13 +47,12 @@ public class OverworldSceneManager : MonoBehaviour{
     public DialogueManager dialogueManager;
     private List<GameObject> stepsToNextSpace;
     public bool revealLastEnemySlowly = false;
+    public int stageIndexToQuickReveal = -1;
     //private bool changePlayerDirectionAtNextStep = false;
     //private bool playerDestinationIsNextStep = false;
 
 
     void Start(){
-        //GetComponent<GeneralSceneManager>().Setup();
-        //generalSceneManager.Setup();
         interactOverlayManager.gameObject.SetActive(true);
         dialogueManager.gameObject.SetActive(true);
         SetupOverworldSpaces();
@@ -67,15 +66,16 @@ public class OverworldSceneManager : MonoBehaviour{
             //StaticVariables.lastVisitedStage = StaticVariables.highestBeatenStage.nextStage; //for testing fade-in for next enemy
             //StaticVariables.hasCompletedStage = true; //for testing fade-in for next enemy
             PlacePlayerAtPosition(StaticVariables.lastVisitedStage.stage);
-            int lastStageToQuickReveal = StaticVariables.highestBeatenStage.nextStage.index;
+            stageIndexToQuickReveal = StaticVariables.highestBeatenStage.nextStage.index;
             CheckIfCompletedStage();
-            ShowOverworldProgress(lastStageToQuickReveal);
+            //showing overworld progress is handled by the scene changer visuals
+            //ShowOverworldProgress(lastStageToQuickReveal);
         }
         interactOverlayManager.Setup();
         //generalSceneManager.FadeIn();
     }
 
-    private void CheckIfCompletedStage(){
+    public void CheckIfCompletedStage(){
         if (StaticVariables.lastVisitedStage == StaticVariables.highestBeatenStage.nextStage){
             if (StaticVariables.hasCompletedStage){
                 StaticVariables.highestBeatenStage = StaticVariables.highestBeatenStage.nextStage;
@@ -323,7 +323,7 @@ public class OverworldSceneManager : MonoBehaviour{
         StaticVariables.FadeOutThenLoadScene(StaticVariables.battleSceneName);
     }
 
-    private void ShowOverworldProgress(int index){
+    public void ShowOverworldProgress(int index){
         //create a list of all path steps the player has available, and hide the unavailable spaces
         List<PathStep> availableSteps = new();
         for (int i = 0; i < overworldSpaces.Length; i++){
@@ -352,6 +352,12 @@ public class OverworldSceneManager : MonoBehaviour{
             StaticVariables.WaitTimeThenCallFunction(1.5f, RevealNextEnemy); //FinishEnteringOverworld will eventually be called by RevealNextEnemy
         else
             StaticVariables.WaitTimeThenCallFunction(1f, sceneChangerVisuals.FinishEnteringOverworld);
+    }
+
+    public void HideProgress(){
+        foreach (OverworldSpace space in overworldSpaces)
+            space.gameObject.SetActive(false);
+        playerParent.gameObject.SetActive(false);
     }
 
     private void ShowAtlasProgress(){

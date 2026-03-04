@@ -13,13 +13,33 @@ public class SceneChangerVisuals : MonoBehaviour {
     public GameObject clickBlocker;   
     public SceneHeader sceneHeader;
     [Header("Only for the Homepage Scene")]
+    public HomepageManager homepageManager;
     public RectTransform settingsFolder;
     public RectTransform settingsPage;
     public RectTransform atlasSmall;
     public RectTransform atlasBig;
     public RectTransform atlasBigWorlds;
+    public Transform hometownPreview;
+    public Transform grasslandsPreview;
+    public Transform forestPreview;
+    public Transform desertPreview;
+    public Transform duskvalePreview;
+    public Transform frostlandsPreview;
+    public Transform cavernsPreview;
+    public Transform endlessModeEnemies;
+
+    //public GameObject overworldStuff;
+    //public RectTransform homepageForeground;
+    //public GameObject hometownBackground;
+    //public GameObject grasslandsBackground;
+    //public GameObject forestBackground;
+    //public GameObject desertBackground;
+    //public GameObject duskvaleBackground;
+    //public GameObject frostlandsBackground;
+    //public GameObject cavernsBackground;
     [Header("Overworlds and Atlas")]
     public OverworldSceneManager overworldManager;
+    public RectTransform fakeHomepage;
     [Header("Only for the Settings Scene")]
     public RectTransform settingsPaper1;
     public RectTransform settingsPaper2;
@@ -40,15 +60,17 @@ public class SceneChangerVisuals : MonoBehaviour {
         SceneChanger.visuals = this;
         SetCanvasSizes();
         SetUIElementSizes();
-        if (SceneChanger.goingTo == SceneChanger.Scene.None){
+        if (SceneChanger.goingTo == SceneChanger.Scene.None){ //when launching the game for the first time
             settingsPage.gameObject.SetActive(false);
             clickBlocker.SetActive(false);
+            homepageManager.DisplayProgress();
+            homepageManager.ShowEndlessModeEnemies();
         }
         else
             AnimateComingIntoScene();
     }
 
-    public void AnimateComingIntoScene(){
+    private void AnimateComingIntoScene(){
         clickBlocker.SetActive(true);
         if (CheckSceneChange(null, SceneChanger.Scene.Settings)){
             //assume all settings papers are the same width (should be 1440, the min screen width)
@@ -119,12 +141,49 @@ public class SceneChangerVisuals : MonoBehaviour {
             StaticVariables.WaitTimeThenCallFunction(1f, EnableClicks);
             return;
         }
-        else if (CheckSceneChange(null, SceneChanger.Scene.World)){
+        else if (CheckSceneChange(SceneChanger.Scene.Homepage, SceneChanger.Scene.World)){
+            fakeHomepage.gameObject.SetActive(true);
+            overworldManager.HideProgress();
+            ScaleUpFakeHomepage();
+            //StaticVariables.WaitTimeThenCallFunction(1f, ScaleUpFakeHomepage);
+            int index = overworldManager.stageIndexToQuickReveal;
+            if (index == - 1)
+                index = StaticVariables.highestBeatenStage.nextStage.index;
+            StaticVariables.WaitTimeThenCallFunction(1f, overworldManager.ShowOverworldProgress, index);
+            //overworld scene manager will call FinishEnteringOverworld when everything is finished popping in
+            return;
+        }
+        else if (CheckSceneChange(SceneChanger.Scene.Atlas, SceneChanger.Scene.World)){
+            //fakeHomepage.gameObject.SetActive(true);
+            overworldManager.HideProgress();
+            //StaticVariables.WaitTimeThenCallFunction(1f, ScaleUpFakeHomepage);
+            int index = overworldManager.stageIndexToQuickReveal;
+            if (index == - 1)
+                index = StaticVariables.highestBeatenStage.nextStage.index;
+            StaticVariables.WaitTimeThenCallFunction(1.5f, overworldManager.ShowOverworldProgress, index);
             //overworld scene manager will call FinishEnteringOverworld when everything is finished popping in
             return;
         }
         else if (CheckSceneChange(SceneChanger.Scene.World, SceneChanger.Scene.Homepage)){
-            StaticVariables.WaitTimeThenCallFunction(0.1f, EnableClicks);
+            //print("its happening");
+            homepageManager.DisplayProgress();
+            homepageManager.ShowEndlessModeEnemies();
+            if (homepageManager.continueHometown.activeSelf)
+                FadeInChildren(hometownPreview, 0.5f);
+            if (homepageManager.continueGrasslands.activeSelf)
+                FadeInChildren(grasslandsPreview, 0.5f);
+            if (homepageManager.continueForest.activeSelf)
+                FadeInChildren(forestPreview, 0.5f);
+            if (homepageManager.continueDesert.activeSelf)
+                FadeInChildren(desertPreview, 0.5f);
+            if (homepageManager.continueCity.activeSelf)
+                FadeInChildren(duskvalePreview, 0.5f);
+            if (homepageManager.continueFrostlands.activeSelf)
+                FadeInChildren(frostlandsPreview, 0.5f);
+            if (homepageManager.continueCaverns.activeSelf)
+                FadeInChildren(cavernsPreview, 0.5f);
+            FadeInChildren(endlessModeEnemies, 0.5f);
+            StaticVariables.WaitTimeThenCallFunction(0.5f, EnableClicks);
             return;
         }
     }
@@ -211,11 +270,27 @@ public class SceneChangerVisuals : MonoBehaviour {
                 os.HideEnemy(0.5f);
             }
             overworldManager.FadeOutPlayer(0.5f);
-            StaticVariables.WaitTimeThenCallFunction(0.5f, TriggerSceneChange);
+            StaticVariables.WaitTimeThenCallFunction(0.5f, ScaleDownFakeHomepage);
+            StaticVariables.WaitTimeThenCallFunction(1f, TriggerSceneChange);
             return;
         }
         else if (CheckSceneChange(SceneChanger.Scene.Homepage, SceneChanger.Scene.World)){
-            StaticVariables.WaitTimeThenCallFunction(0.5f, TriggerSceneChange);
+            if (homepageManager.continueHometown.activeSelf)
+                FadeOutChildren(hometownPreview, 1f);
+            if (homepageManager.continueGrasslands.activeSelf)
+                FadeOutChildren(grasslandsPreview, 1f);
+            if (homepageManager.continueForest.activeSelf)
+                FadeOutChildren(forestPreview, 1f);
+            if (homepageManager.continueDesert.activeSelf)
+                FadeOutChildren(desertPreview, 1f);
+            if (homepageManager.continueCity.activeSelf)
+                FadeOutChildren(duskvalePreview, 1f);
+            if (homepageManager.continueFrostlands.activeSelf)
+                FadeOutChildren(frostlandsPreview, 1f);
+            if (homepageManager.continueCaverns.activeSelf)
+                FadeOutChildren(cavernsPreview, 1f);
+            FadeOutChildren(endlessModeEnemies, 1f);
+            StaticVariables.WaitTimeThenCallFunction(1.05f, TriggerSceneChange);
             return;
         }
     }
@@ -288,6 +363,69 @@ public class SceneChangerVisuals : MonoBehaviour {
     public void FinishEnteringOverworld(){
         sceneHeader.SlideIn();
         AudioManager.PlaySound(AudioManager.library.headerMoveIn);
+        fakeHomepage.gameObject.SetActive(false);
         StaticVariables.WaitTimeThenCallFunction(0.5f, EnableClicks);
+    }
+
+    private void FadeInChildren(Transform t, float duration){
+        foreach (Transform t2 in t)
+            FadeInSelfAndChildren(t2, duration);
+    }
+
+    private void FadeInSelfAndChildren(Transform t, float duration){
+        Image im = t.GetComponent<Image>();
+        if (im != null){
+            print(t.gameObject.name);
+            Color c1 = Color.white;
+            Color c2 = Color.white;
+            c1.a = 0;
+
+            im.color = c1;
+            im.DOColor(c2, duration);
+        }
+        Animator anim = t.GetComponent<Animator>();
+        if (anim != null){
+            anim.enabled = false;
+            StaticVariables.WaitTimeThenCallFunction(duration, EnableAnimator, anim);
+        }
+        foreach (Transform t2 in t)
+            FadeInSelfAndChildren(t2, duration);
+    }
+
+    private void FadeOutChildren(Transform t, float duration){
+        foreach (Transform t2 in t)
+            FadeOutSelfAndChildren(t2, duration);
+    }
+
+    private void FadeOutSelfAndChildren(Transform t, float duration){
+        Image im = t.GetComponent<Image>();
+        if (im != null){
+            Color c1 = Color.white;
+            Color c2 = Color.white;
+            c1.a = 0;
+
+            im.color = c2;
+            im.DOColor(c1, duration);
+        }
+        Animator anim = t.GetComponent<Animator>();
+        if (anim != null)
+            anim.enabled = false;
+        foreach (Transform t2 in t)
+            FadeOutSelfAndChildren(t2, duration);
+    }
+
+    private void ScaleUpFakeHomepage(){
+        fakeHomepage.DOScale(Vector3.one * 6.6f, 1f).SetEase(Ease.InSine);
+    }
+
+    private void EnableAnimator(Animator animator){
+        animator.enabled = true;
+    }
+
+    private void ScaleDownFakeHomepage(){
+        fakeHomepage.gameObject.SetActive(true);
+        fakeHomepage.localScale = Vector3.one * 13;
+        fakeHomepage.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutSine);
+        
     }
 }

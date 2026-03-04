@@ -43,8 +43,8 @@ public class HomepageManager : MonoBehaviour{
     private int endlessModeEnemyIndex = 0;
     private readonly float endlessModeMoveDuration = 9f;
     void Start(){
-        DisplayProgress();
-        ShowEndlessModeEnemies();
+        //DisplayProgress();
+        //ShowEndlessModeEnemies();
     }
 
     public void HitContinueAdventureButton(){
@@ -84,7 +84,7 @@ public class HomepageManager : MonoBehaviour{
         return endlessModeEnemyPrefabs;
     }
 
-    private void ShowEndlessModeEnemies(){
+    public void ShowEndlessModeEnemies(){
         endlessModeEnemyPrefabs = CreateEndlessModeEnemyList();
         endlessModeEnemyPrefabs.Shuffle();
         if (endlessModeEnemyPrefabs.Count == 0)
@@ -120,7 +120,7 @@ public class HomepageManager : MonoBehaviour{
         ShowNextEndlessModeEnemy(endlessModePosition4, endlessModeMoveDuration);
     }
 
-    private void DisplayProgress() {
+    public void DisplayProgress() {
         int nextEnemyWorldNum = StaticVariables.highestBeatenStage.nextStage.world;
         continueHometown.SetActive(nextEnemyWorldNum == 1);
         continueGrasslands.SetActive(nextEnemyWorldNum == 2);
@@ -132,8 +132,7 @@ public class HomepageManager : MonoBehaviour{
         continueDragonsDen.SetActive(nextEnemyWorldNum == 8);
 
         GameObject enemyPrefab = StaticVariables.highestBeatenStage.nextStage.enemyPrefab;
-        Transform enemySpace = nextEnemyWorldNum switch
-        {
+        Transform enemySpace = nextEnemyWorldNum switch {
             1 => hometownEnemySpace,
             2 => grasslandsEnemySpace,
             3 => forestEnemySpace,
