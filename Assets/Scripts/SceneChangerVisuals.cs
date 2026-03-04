@@ -30,6 +30,19 @@ public class SceneChangerVisuals : MonoBehaviour {
     [Header("Overworlds and Atlas")]
     public OverworldSceneManager overworldManager;
     public RectTransform fakeHomepage;
+    public RectTransform fakeAtlasHometown;
+    public RectTransform fakeAtlasGrasslands;
+    public RectTransform fakeAtlasForest;
+    public RectTransform fakeAtlasDesert;
+    public RectTransform fakeAtlasDuskvale;
+    public RectTransform fakeAtlasFrostlands;
+    public RectTransform fakeAtlasCaverns;
+    public GameObject[] fakeAtlasGrasslandsImages;
+    public GameObject[] fakeAtlasForestImages;
+    public GameObject[] fakeAtlasDesertImages;
+    public GameObject[] fakeAtlasDuskvaleImages;
+    public GameObject[] fakeAtlasFrostlandsImages;
+    public GameObject[] fakeAtlasCavernsImages;
     [Header("Only for the Settings Scene")]
     public RectTransform settingsPaper1;
     public RectTransform settingsPaper2;
@@ -112,6 +125,25 @@ public class SceneChangerVisuals : MonoBehaviour {
             return;
         }
         else if (CheckSceneChange(SceneChanger.Scene.Atlas, SceneChanger.Scene.World)){
+            fakeAtlasHometown.gameObject.SetActive(overworldManager.thisWorldNum == 1);
+            fakeAtlasGrasslands.gameObject.SetActive(overworldManager.thisWorldNum == 2);
+            fakeAtlasForest.gameObject.SetActive(overworldManager.thisWorldNum == 3);
+            fakeAtlasDesert.gameObject.SetActive(overworldManager.thisWorldNum == 4);
+            fakeAtlasDuskvale.gameObject.SetActive(overworldManager.thisWorldNum == 5);
+            fakeAtlasFrostlands.gameObject.SetActive(overworldManager.thisWorldNum == 6);
+            fakeAtlasCaverns.gameObject.SetActive(overworldManager.thisWorldNum == 7);
+            foreach (GameObject go in fakeAtlasGrasslandsImages)
+                go.SetActive(StaticVariables.highestBeatenStage.nextStage.world >= 2);
+            foreach (GameObject go in fakeAtlasForestImages)
+                go.SetActive(StaticVariables.highestBeatenStage.nextStage.world >= 3);
+            foreach (GameObject go in fakeAtlasDesertImages)
+                go.SetActive(StaticVariables.highestBeatenStage.nextStage.world >= 4);
+            foreach (GameObject go in fakeAtlasDuskvaleImages)
+                go.SetActive(StaticVariables.highestBeatenStage.nextStage.world >= 5);
+            foreach (GameObject go in fakeAtlasFrostlandsImages)
+                go.SetActive(StaticVariables.highestBeatenStage.nextStage.world >= 6);
+            foreach (GameObject go in fakeAtlasCavernsImages)
+                go.SetActive(StaticVariables.highestBeatenStage.nextStage.world >= 7);
             overworldManager.HideProgress();
             customVal1 = overworldManager.stageIndexToQuickReveal;
             if (customVal1 == - 1)
@@ -181,6 +213,7 @@ public class SceneChangerVisuals : MonoBehaviour {
             return;
         }
         else if (CheckSceneChange(SceneChanger.Scene.Atlas, SceneChanger.Scene.World)){
+            ScaleUpFakeAtlas(overworldManager.thisWorldNum);
             StaticVariables.WaitTimeThenCallFunction(1.5f, overworldManager.ShowOverworldProgress, (int)customVal1);
             //overworld scene manager will call FinishEnteringOverworld when everything is finished popping in
             return;
@@ -273,10 +306,24 @@ public class SceneChangerVisuals : MonoBehaviour {
             AudioManager.PlaySound(AudioManager.library.headerMoveOut);
             foreach (OverworldSpace os in overworldManager.overworldSpaces){
                 foreach (PathStep ps in os.steps)
-                    ps.HideStep(0.5f);
+                    ps.HideStep(1f);
             }
-            overworldManager.FadeOutPlayer(0.5f);
-            StaticVariables.WaitTimeThenCallFunction(0.5f, TriggerSceneChange);
+            overworldManager.FadeOutPlayer(1f);
+            if (StaticVariables.lastVisitedStage.world == 1)
+                FadeOutChildren(hometownPreview, 1f);
+            if (StaticVariables.lastVisitedStage.world == 2)
+                FadeOutChildren(grasslandsPreview, 1f);
+            if (StaticVariables.lastVisitedStage.world == 3)
+                FadeOutChildren(forestPreview, 1f);
+            if (StaticVariables.lastVisitedStage.world == 4)
+                FadeOutChildren(desertPreview, 1f);
+            if (StaticVariables.lastVisitedStage.world == 5)
+                FadeOutChildren(duskvalePreview, 1f);
+            if (StaticVariables.lastVisitedStage.world == 6)
+                FadeOutChildren(frostlandsPreview, 1f);
+            if (StaticVariables.lastVisitedStage.world == 7)
+                FadeOutChildren(cavernsPreview, 1f);
+            StaticVariables.WaitTimeThenCallFunction(1f, TriggerSceneChange);
             return;
         }
         else if (CheckSceneChange(SceneChanger.Scene.World, SceneChanger.Scene.Homepage)){
@@ -382,6 +429,13 @@ public class SceneChangerVisuals : MonoBehaviour {
         sceneHeader.SlideIn();
         AudioManager.PlaySound(AudioManager.library.headerMoveIn);
         fakeHomepage.gameObject.SetActive(false);
+        fakeAtlasHometown.gameObject.SetActive(false);
+        fakeAtlasGrasslands.gameObject.SetActive(false);
+        fakeAtlasForest.gameObject.SetActive(false);
+        fakeAtlasDesert.gameObject.SetActive(false);
+        fakeAtlasDuskvale.gameObject.SetActive(false);
+        fakeAtlasFrostlands.gameObject.SetActive(false);
+        fakeAtlasCaverns.gameObject.SetActive(false);
         StaticVariables.WaitTimeThenCallFunction(0.5f, EnableClicks);
     }
 
@@ -433,6 +487,32 @@ public class SceneChangerVisuals : MonoBehaviour {
 
     private void ScaleUpFakeHomepage(){
         fakeHomepage.DOScale(Vector3.one * 6.6f, 1f).SetEase(Ease.InSine);
+    }
+
+    private void ScaleUpFakeAtlas(int worldNum){
+        switch (worldNum){
+            case 1:
+                fakeAtlasHometown.DOScale(Vector3.one * 12f, 1f).SetEase(Ease.InSine);
+                break;
+            case 2:
+                fakeAtlasGrasslands.DOScale(Vector3.one * 8.8f, 1f).SetEase(Ease.InSine);
+                break;
+            case 3:
+                fakeAtlasForest.DOScale(Vector3.one * 9.2f, 1f).SetEase(Ease.InSine);
+                break;
+            case 4:
+                fakeAtlasDesert.DOScale(Vector3.one * 9.9f, 1f).SetEase(Ease.InSine);
+                break;
+            case 5:
+                fakeAtlasDuskvale.DOScale(Vector3.one * 6f, 1f).SetEase(Ease.InSine);
+                break;
+            case 6:
+                fakeAtlasFrostlands.DOScale(Vector3.one * 9.1f, 1f).SetEase(Ease.InSine);
+                break;
+            case 7:
+                fakeAtlasCaverns.DOScale(Vector3.one * 7.1f, 1f).SetEase(Ease.InSine);
+                break;
+        }
     }
 
     private void EnableAnimator(Animator animator){
