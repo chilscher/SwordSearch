@@ -59,7 +59,8 @@ public class OverworldSceneManager : MonoBehaviour{
         PickReadingBookOptions();
         if (thisWorldNum == 0){
             PlacePlayerAtPosition(StaticVariables.lastVisitedStage.world);
-            ShowAtlasProgress();
+            //showing atlas progress is handled by the scene changer visuals
+            //ShowAtlasProgress();
         }
         else{
             SetPowerupAvailability();
@@ -193,7 +194,6 @@ public class OverworldSceneManager : MonoBehaviour{
 
         if (reverse)
             stepsToNextSpace.Reverse();
-
         playerAnimator.SetTrigger("WalkStart");
         isPlayerMoving = true;
         currentPlayerSpace.transform.GetChild(2).GetChild(0).gameObject.SetActive(true);
@@ -360,11 +360,20 @@ public class OverworldSceneManager : MonoBehaviour{
         playerParent.gameObject.SetActive(false);
     }
 
-    private void ShowAtlasProgress(){
-        //only used in the atlas scene to show available worlds
+    public void HideAtlasProgress(){
+        foreach (OverworldSpace space in overworldSpaces){
+            foreach (PathStep step in space.steps)
+                step.HideStep(0);
+        }
+        playerParent.gameObject.SetActive(false);
+    }
+
+    public void ShowAtlasSpaces(){
         for (int i = StaticVariables.highestBeatenStage.nextStage.world; i < overworldSpaces.Length; i++)
             overworldSpaces[i].gameObject.SetActive(false);
+    }
 
+    public void ShowAtlasProgress(){
         //create a list of all path steps the player has available
         List<PathStep> availableSteps = new();
         for (int i = 0; i < StaticVariables.highestBeatenStage.nextStage.world; i++){

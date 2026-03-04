@@ -71247,6 +71247,7 @@ MonoBehaviour:
   interactOverlayManager: {fileID: 734309496}
   dialogueManager: {fileID: 1670146879}
   revealLastEnemySlowly: 0
+  stageIndexToQuickReveal: -1
 --- !u!1 &1117894082
 GameObject:
   m_ObjectHideFlags: 0
@@ -121681,14 +121682,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8453100293414429396, guid: b25ee683a89894f40afd395add0e63ff, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 568.906
-      objectReference: {fileID: 0}
-    - target: {fileID: 8453100293414429396, guid: b25ee683a89894f40afd395add0e63ff, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 292.236
-      objectReference: {fileID: 0}
-    - target: {fileID: 8453100293414429396, guid: b25ee683a89894f40afd395add0e63ff, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -121715,14 +121708,6 @@ PrefabInstance:
     - target: {fileID: 8453100293414429396, guid: b25ee683a89894f40afd395add0e63ff, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8453100293414429396, guid: b25ee683a89894f40afd395add0e63ff, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -3.9829102
-      objectReference: {fileID: 0}
-    - target: {fileID: 8453100293414429396, guid: b25ee683a89894f40afd395add0e63ff, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 8453100293414429396, guid: b25ee683a89894f40afd395add0e63ff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

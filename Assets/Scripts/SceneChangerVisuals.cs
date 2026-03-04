@@ -103,6 +103,8 @@ public class SceneChangerVisuals : MonoBehaviour {
             return;
         }
         else if (CheckSceneChange(null, SceneChanger.Scene.Atlas)){
+            overworldManager.ShowAtlasSpaces();
+            overworldManager.HideAtlasProgress();
             return;
         }
         else if (CheckSceneChange(SceneChanger.Scene.Atlas, SceneChanger.Scene.Homepage)){
@@ -193,9 +195,10 @@ public class SceneChangerVisuals : MonoBehaviour {
             return;
         }
         else if (CheckSceneChange(null, SceneChanger.Scene.Atlas)){
-            StaticVariables.WaitTimeThenCallFunction(1f, sceneHeader.SlideIn);
-            StaticVariables.WaitTimeThenCallFunction(1f, AudioManager.PlaySound, AudioManager.library.headerMoveIn);
-            StaticVariables.WaitTimeThenCallFunction(1.5f, EnableClicks);
+            overworldManager.ShowAtlasProgress();
+            sceneHeader.SlideIn();
+            AudioManager.PlaySound(AudioManager.library.headerMoveIn);
+            StaticVariables.WaitTimeThenCallFunction(0.5f, EnableClicks);
             return;
         }
         else if (CheckSceneChange(SceneChanger.Scene.Atlas, SceneChanger.Scene.Homepage)){
