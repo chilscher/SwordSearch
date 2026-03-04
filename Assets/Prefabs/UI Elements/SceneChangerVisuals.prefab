@@ -3301,7 +3301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Mask
-  m_ShowMaskGraphic: 1
+  m_ShowMaskGraphic: 0
 --- !u!1 &3414999294341921319
 GameObject:
   m_ObjectHideFlags: 0
@@ -7306,6 +7306,7 @@ MonoBehaviour:
   canvas: {fileID: 0}
   clickBlocker: {fileID: 4379949015854121651}
   sceneHeader: {fileID: 0}
+  homepageManager: {fileID: 0}
   settingsFolder: {fileID: 0}
   settingsPage: {fileID: 2208438894121508698}
   atlasSmall: {fileID: 0}

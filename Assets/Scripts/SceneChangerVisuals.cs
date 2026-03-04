@@ -27,16 +27,6 @@ public class SceneChangerVisuals : MonoBehaviour {
     public Transform frostlandsPreview;
     public Transform cavernsPreview;
     public Transform endlessModeEnemies;
-
-    //public GameObject overworldStuff;
-    //public RectTransform homepageForeground;
-    //public GameObject hometownBackground;
-    //public GameObject grasslandsBackground;
-    //public GameObject forestBackground;
-    //public GameObject desertBackground;
-    //public GameObject duskvaleBackground;
-    //public GameObject frostlandsBackground;
-    //public GameObject cavernsBackground;
     [Header("Overworlds and Atlas")]
     public OverworldSceneManager overworldManager;
     public RectTransform fakeHomepage;
@@ -61,16 +51,17 @@ public class SceneChangerVisuals : MonoBehaviour {
         SetCanvasSizes();
         SetUIElementSizes();
         if (SceneChanger.goingTo == SceneChanger.Scene.None){ //when launching the game for the first time
-            settingsPage.gameObject.SetActive(false);
             clickBlocker.SetActive(false);
             homepageManager.DisplayProgress();
             homepageManager.ShowEndlessModeEnemies();
         }
-        else
-            AnimateComingIntoScene();
+        else{
+            PrepComingIntoScene();
+            StaticVariables.WaitTimeThenCallFunction(0.2f, AnimateComingIntoScene);
+        }
     }
 
-    private void AnimateComingIntoScene(){
+    private void PrepComingIntoScene(){
         clickBlocker.SetActive(true);
         if (CheckSceneChange(null, SceneChanger.Scene.Settings)){
             //assume all settings papers are the same width (should be 1440, the min screen width)
@@ -81,6 +72,61 @@ public class SceneChangerVisuals : MonoBehaviour {
             settingsPaper4.localPosition = new Vector2(-horizOffset, settingsPaper4.localPosition.y);
             settingsPaper5.localPosition = new Vector2(horizOffset, settingsPaper5.localPosition.y);
             settingsPaper6.localPosition = new Vector2(-horizOffset, settingsPaper6.localPosition.y);
+            return;
+        }
+        else if (CheckSceneChange(SceneChanger.Scene.Settings, SceneChanger.Scene.Homepage)){
+            homepageManager.DisplayProgress();
+            homepageManager.ShowEndlessModeEnemies();
+            settingsPage.gameObject.SetActive(true);
+            customVal2 = settingsPage.localPosition.x;
+            settingsPage.localPosition = new Vector2(0, settingsPage.localPosition.y);
+            customVal1 = settingsFolder.localPosition.x;
+            float horizOffset = (settingsFolder.rect.width / 2) + (canvasWidth / 2);
+            settingsFolder.localPosition = new Vector2(horizOffset, settingsFolder.localPosition.y);
+            return;
+        }
+        else if (CheckSceneChange(null, SceneChanger.Scene.Credits)){
+            creditsPaper.localPosition = new Vector2(creditsPaper.localPosition.x, -creditsPaper.rect.height);
+            return;
+        }
+        else if (CheckSceneChange(null, SceneChanger.Scene.Atlas)){
+            return;
+        }
+        else if (CheckSceneChange(SceneChanger.Scene.Atlas, SceneChanger.Scene.Homepage)){
+            homepageManager.DisplayProgress();
+            homepageManager.ShowEndlessModeEnemies();
+            atlasBig.gameObject.SetActive(true);
+            customVal2 = atlasBig.localPosition.x;
+            atlasBig.localPosition = new Vector2(0, atlasBig.localPosition.y);
+            customVal1 = atlasSmall.localPosition.x;
+            float horizOffset = (atlasSmall.rect.width / 2) + (canvasWidth / 2);
+            atlasSmall.localPosition = new Vector2(-horizOffset, atlasSmall.localPosition.y);
+            return;
+        }
+        else if (CheckSceneChange(SceneChanger.Scene.Homepage, SceneChanger.Scene.World)){
+            fakeHomepage.gameObject.SetActive(true);
+            overworldManager.HideProgress();
+            customVal1 = overworldManager.stageIndexToQuickReveal;
+            if (customVal1 == - 1)
+                customVal1 = StaticVariables.highestBeatenStage.nextStage.index;
+            return;
+        }
+        else if (CheckSceneChange(SceneChanger.Scene.Atlas, SceneChanger.Scene.World)){
+            overworldManager.HideProgress();
+            customVal1 = overworldManager.stageIndexToQuickReveal;
+            if (customVal1 == - 1)
+                customVal1 = StaticVariables.highestBeatenStage.nextStage.index;
+            return;
+        }
+        else if (CheckSceneChange(SceneChanger.Scene.World, SceneChanger.Scene.Homepage)){
+            homepageManager.DisplayProgress();
+            homepageManager.ShowEndlessModeEnemies();
+            return;
+        }
+    }
+
+    private void AnimateComingIntoScene(){
+        if (CheckSceneChange(null, SceneChanger.Scene.Settings)){
             MoveObjectToX0(settingsPaper1);
             AudioManager.PlaySound(AudioManager.library.settingsScrapMoveIn);
             StaticVariables.WaitTimeThenCallFunction(0.1f, MoveObjectToX0, settingsPaper2);
@@ -99,21 +145,14 @@ public class SceneChangerVisuals : MonoBehaviour {
             return;
         }
         else if (CheckSceneChange(SceneChanger.Scene.Settings, SceneChanger.Scene.Homepage)){
-            settingsPage.gameObject.SetActive(true);
-            float pos = settingsPage.localPosition.x;
-            settingsPage.localPosition = new Vector2(0, settingsPage.localPosition.y);
-            settingsPage.DOLocalMoveX(pos, 0.5f).SetEase(Ease.InSine);
+            settingsPage.DOLocalMoveX(customVal2, 0.5f).SetEase(Ease.InSine);
             AudioManager.PlaySound(AudioManager.library.settingsPageMoveOut);
-            customVal1 = settingsFolder.localPosition.x;
-            float horizOffset = (settingsFolder.rect.width / 2) + (canvasWidth / 2);
-            settingsFolder.localPosition = new Vector2(horizOffset, settingsFolder.localPosition.y);
             StaticVariables.WaitTimeThenCallFunction(0.5f, MoveObjectToXCustom1OutSine, settingsFolder);
             StaticVariables.WaitTimeThenCallFunction(0.5f, AudioManager.PlaySound, AudioManager.library.settingsFolderMoveIn);
             StaticVariables.WaitTimeThenCallFunction(1f, EnableClicks);
             return;
         }
         else if (CheckSceneChange(null, SceneChanger.Scene.Credits)){
-            creditsPaper.localPosition = new Vector2(creditsPaper.localPosition.x, -creditsPaper.rect.height);
             creditsPaper.DOLocalMoveY(0, 0.5f).SetEase(Ease.OutSine);
             AudioManager.PlaySound(AudioManager.library.creditsPaperMoveIn);
             StaticVariables.WaitTimeThenCallFunction(0.5f, sceneHeader.SlideIn);
@@ -128,61 +167,40 @@ public class SceneChangerVisuals : MonoBehaviour {
             return;
         }
         else if (CheckSceneChange(SceneChanger.Scene.Atlas, SceneChanger.Scene.Homepage)){
-            atlasBig.gameObject.SetActive(true);
-            float pos = atlasBig.localPosition.x;
-            atlasBig.localPosition = new Vector2(0, atlasBig.localPosition.y);
-            atlasBig.DOLocalMoveX(pos, 0.5f).SetEase(Ease.InSine);
+            atlasBig.DOLocalMoveX(customVal2, 0.5f).SetEase(Ease.InSine);
             AudioManager.PlaySound(AudioManager.library.settingsPageMoveOut);
-            customVal1 = atlasSmall.localPosition.x;
-            float horizOffset = (atlasSmall.rect.width / 2) + (canvasWidth / 2);
-            atlasSmall.localPosition = new Vector2(-horizOffset, atlasSmall.localPosition.y);
             StaticVariables.WaitTimeThenCallFunction(0.5f, MoveObjectToXCustom1OutSine, atlasSmall);
             StaticVariables.WaitTimeThenCallFunction(0.5f, AudioManager.PlaySound, AudioManager.library.settingsFolderMoveIn);
             StaticVariables.WaitTimeThenCallFunction(1f, EnableClicks);
             return;
         }
         else if (CheckSceneChange(SceneChanger.Scene.Homepage, SceneChanger.Scene.World)){
-            fakeHomepage.gameObject.SetActive(true);
-            overworldManager.HideProgress();
             ScaleUpFakeHomepage();
-            //StaticVariables.WaitTimeThenCallFunction(1f, ScaleUpFakeHomepage);
-            int index = overworldManager.stageIndexToQuickReveal;
-            if (index == - 1)
-                index = StaticVariables.highestBeatenStage.nextStage.index;
-            StaticVariables.WaitTimeThenCallFunction(1f, overworldManager.ShowOverworldProgress, index);
+            StaticVariables.WaitTimeThenCallFunction(1f, overworldManager.ShowOverworldProgress, (int)customVal1);
             //overworld scene manager will call FinishEnteringOverworld when everything is finished popping in
             return;
         }
         else if (CheckSceneChange(SceneChanger.Scene.Atlas, SceneChanger.Scene.World)){
-            //fakeHomepage.gameObject.SetActive(true);
-            overworldManager.HideProgress();
-            //StaticVariables.WaitTimeThenCallFunction(1f, ScaleUpFakeHomepage);
-            int index = overworldManager.stageIndexToQuickReveal;
-            if (index == - 1)
-                index = StaticVariables.highestBeatenStage.nextStage.index;
-            StaticVariables.WaitTimeThenCallFunction(1.5f, overworldManager.ShowOverworldProgress, index);
+            StaticVariables.WaitTimeThenCallFunction(1.5f, overworldManager.ShowOverworldProgress, (int)customVal1);
             //overworld scene manager will call FinishEnteringOverworld when everything is finished popping in
             return;
         }
         else if (CheckSceneChange(SceneChanger.Scene.World, SceneChanger.Scene.Homepage)){
-            //print("its happening");
-            homepageManager.DisplayProgress();
-            homepageManager.ShowEndlessModeEnemies();
             if (homepageManager.continueHometown.activeSelf)
-                FadeInChildren(hometownPreview, 0.5f);
+                FadeInChildren(hometownPreview, 1f);
             if (homepageManager.continueGrasslands.activeSelf)
-                FadeInChildren(grasslandsPreview, 0.5f);
+                FadeInChildren(grasslandsPreview, 1f);
             if (homepageManager.continueForest.activeSelf)
-                FadeInChildren(forestPreview, 0.5f);
+                FadeInChildren(forestPreview, 1f);
             if (homepageManager.continueDesert.activeSelf)
-                FadeInChildren(desertPreview, 0.5f);
+                FadeInChildren(desertPreview, 1f);
             if (homepageManager.continueCity.activeSelf)
-                FadeInChildren(duskvalePreview, 0.5f);
+                FadeInChildren(duskvalePreview, 1f);
             if (homepageManager.continueFrostlands.activeSelf)
-                FadeInChildren(frostlandsPreview, 0.5f);
+                FadeInChildren(frostlandsPreview, 1f);
             if (homepageManager.continueCaverns.activeSelf)
-                FadeInChildren(cavernsPreview, 0.5f);
-            FadeInChildren(endlessModeEnemies, 0.5f);
+                FadeInChildren(cavernsPreview, 1f);
+            FadeInChildren(endlessModeEnemies, 1f);
             StaticVariables.WaitTimeThenCallFunction(0.5f, EnableClicks);
             return;
         }
@@ -290,7 +308,7 @@ public class SceneChangerVisuals : MonoBehaviour {
             if (homepageManager.continueCaverns.activeSelf)
                 FadeOutChildren(cavernsPreview, 1f);
             FadeOutChildren(endlessModeEnemies, 1f);
-            StaticVariables.WaitTimeThenCallFunction(1.05f, TriggerSceneChange);
+            StaticVariables.WaitTimeThenCallFunction(1f, TriggerSceneChange);
             return;
         }
     }
@@ -375,9 +393,8 @@ public class SceneChangerVisuals : MonoBehaviour {
     private void FadeInSelfAndChildren(Transform t, float duration){
         Image im = t.GetComponent<Image>();
         if (im != null){
-            print(t.gameObject.name);
-            Color c1 = Color.white;
-            Color c2 = Color.white;
+            Color c1 = im.color;
+            Color c2 = im.color;
             c1.a = 0;
 
             im.color = c1;
@@ -400,8 +417,8 @@ public class SceneChangerVisuals : MonoBehaviour {
     private void FadeOutSelfAndChildren(Transform t, float duration){
         Image im = t.GetComponent<Image>();
         if (im != null){
-            Color c1 = Color.white;
-            Color c2 = Color.white;
+            Color c1 = im.color;
+            Color c2 = im.color;
             c1.a = 0;
 
             im.color = c2;
@@ -425,7 +442,6 @@ public class SceneChangerVisuals : MonoBehaviour {
     private void ScaleDownFakeHomepage(){
         fakeHomepage.gameObject.SetActive(true);
         fakeHomepage.localScale = Vector3.one * 13;
-        fakeHomepage.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutSine);
-        
+        fakeHomepage.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutSine);  
     }
 }
