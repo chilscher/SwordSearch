@@ -199,6 +199,18 @@ public class StaticVariables{
         return IsReadingEnabledForStage(GetStage(enemyData));
     }
 
+    static public void FadeOut(Image im, float duration){
+        Color c = im.color;
+        c.a = 0;
+        im.DOColor(c, duration);
+    }
+
+    static public void FadeOut(Text txt, float duration){
+        Color c = txt.color;
+        c.a = 0;
+        txt.DOColor(c, duration);
+    }
+
 }
 
 public class StageData{

@@ -463,7 +463,7 @@ public class OverworldSceneManager : MonoBehaviour{
         if (currentPlayerSpace.type == OverworldSpace.OverworldSpaceType.Cutscene){
             StaticVariables.cutsceneID = currentPlayerSpace.cutsceneID;
             SetLastWorldStageVisited(currentPlayerSpace);
-            StaticVariables.FadeOutThenLoadScene("Cutscene");
+            SceneChanger.GoCutscene();
         }
     }
 

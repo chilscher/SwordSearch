@@ -12,7 +12,7 @@ public class SceneChangerVisuals : MonoBehaviour {
     public RectTransform canvas;
     public GameObject clickBlocker;   
     public SceneHeader sceneHeader;
-    [Header("Only for the Homepage Scene")]
+    [Header("Homepage Scene")]
     public HomepageManager homepageManager;
     public RectTransform settingsFolder;
     public RectTransform settingsPage;
@@ -43,14 +43,25 @@ public class SceneChangerVisuals : MonoBehaviour {
     public GameObject[] fakeAtlasDuskvaleImages;
     public GameObject[] fakeAtlasFrostlandsImages;
     public GameObject[] fakeAtlasCavernsImages;
-    [Header("Only for the Settings Scene")]
+    [Header("Cutscenes")]
+    public RectTransform fakeCutscene;
+    public RectTransform fakeCutsceneMask;
+    public RectTransform fakeInteractOverlayTransform;
+    public InteractOverlayManager fakeInteractOverlayManager;
+    public Image fakeCutsceneBlackBackground;
+    //public RectTransform fakeCutsceneDialogueManager;
+    //public DialogueManager fakeCutsceneDialogueManager2;
+    //public Image fakeCutsceneDMBackground;
+    //public Image fakeCutsceneDMButton;
+    //public Text fakeCutsceneDMText;
+    [Header("Settings Scene")]
     public RectTransform settingsPaper1;
     public RectTransform settingsPaper2;
     public RectTransform settingsPaper3;
     public RectTransform settingsPaper4;
     public RectTransform settingsPaper5;
     public RectTransform settingsPaper6;
-    [Header("Only for the Credits Scene")]
+    [Header("Credits Scene")]
     public RectTransform creditsPaper;
 
     private float canvasWidth;
@@ -157,6 +168,9 @@ public class SceneChangerVisuals : MonoBehaviour {
             homepageManager.ShowEndlessModeEnemies();
             return;
         }
+        else if (CheckSceneChange(SceneChanger.Scene.World, SceneChanger.Scene.Cutscene)){
+            return;
+        }
     }
 
     private void AnimateComingIntoScene(){
@@ -238,6 +252,9 @@ public class SceneChangerVisuals : MonoBehaviour {
                 FadeInChildren(cavernsPreview, 1f);
             FadeInChildren(endlessModeEnemies, 1f);
             StaticVariables.WaitTimeThenCallFunction(0.5f, EnableClicks);
+            return;
+        }
+        else if (CheckSceneChange(SceneChanger.Scene.World, SceneChanger.Scene.Cutscene)){
             return;
         }
     }
@@ -359,6 +376,27 @@ public class SceneChangerVisuals : MonoBehaviour {
                 FadeOutChildren(cavernsPreview, 1f);
             FadeOutChildren(endlessModeEnemies, 1f);
             StaticVariables.WaitTimeThenCallFunction(1f, TriggerSceneChange);
+            return;
+        }
+        else if (CheckSceneChange(SceneChanger.Scene.World, SceneChanger.Scene.Cutscene)){
+            sceneHeader.SlideOut();
+            AudioManager.PlaySound(AudioManager.library.headerMoveOut);
+            foreach (OverworldSpace os in overworldManager.overworldSpaces){
+                foreach (PathStep ps in os.steps)
+                    ps.HideStep(0.5f);
+                os.HideEnemy(0.5f);
+            }
+            overworldManager.FadeOutPlayer(0.5f);
+            fakeInteractOverlayTransform.gameObject.SetActive(true);
+            fakeCutscene.gameObject.SetActive(true);
+            fakeCutsceneMask.localScale = Vector3.one * (canvasWidth / fakeCutsceneMask.rect.width);
+            customVal1 = fakeInteractOverlayTransform.sizeDelta.x;
+            customVal2 = fakeInteractOverlayTransform.sizeDelta.y;
+            fakeInteractOverlayTransform.sizeDelta = new Vector2 (canvasWidth, canvasHeight);
+            fakeInteractOverlayManager.cutsceneTitle.text = overworldManager.interactOverlayManager.cutsceneTitle.text;
+            fakeInteractOverlayManager.cutsceneText.text = overworldManager.interactOverlayManager.cutsceneText.text;
+            StaticVariables.WaitTimeThenCallFunction(0.5f, ScaleDownFakeCutscene);
+            StaticVariables.WaitTimeThenCallFunction(1.5f, TriggerSceneChange);
             return;
         }
     }
@@ -492,6 +530,10 @@ public class SceneChangerVisuals : MonoBehaviour {
         fakeHomepage.DOScale(Vector3.one * 6.6f, 1f).SetEase(Ease.InSine);
     }
 
+    private void ScaleUpFakeCutscene(){
+        fakeCutscene.DOScale(Vector3.one * 7f, 1f).SetEase(Ease.InSine);
+    }
+
     private void ScaleUpFakeAtlas(int worldNum){
         switch (worldNum){
             case 1:
@@ -526,5 +568,12 @@ public class SceneChangerVisuals : MonoBehaviour {
         fakeHomepage.gameObject.SetActive(true);
         fakeHomepage.localScale = Vector3.one * 13;
         fakeHomepage.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutSine);  
+    }
+    private void ScaleDownFakeCutscene(){
+        overworldManager.interactOverlayManager.gameObject.SetActive(false);
+        fakeCutsceneMask.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutSine);  
+        fakeInteractOverlayTransform.DOSizeDelta(new Vector2(customVal1, customVal2), 0.5f); 
+        fakeInteractOverlayManager.FadeOutCutsceneStuff(0.5f);
+        fakeCutsceneBlackBackground.DOColor(Color.black, 1f);
     }
 }

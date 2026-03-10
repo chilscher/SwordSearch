@@ -49,8 +49,6 @@ public class CutsceneManager : MonoBehaviour{
     
 
     public void Start() {
-        GetComponent<GeneralSceneManager>().Setup();
-        //generalSceneManager.Setup();
         SetCutsceneID();
         switch (cutsceneID){
             case (Cutscene.Hometown1):

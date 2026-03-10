@@ -29,6 +29,9 @@ public class InteractOverlayManager : MonoBehaviour{
     public GameObject cutsceneStuff;
     public Text cutsceneTitle;
     public Text cutsceneText;
+    public Image cutscenePlayButtonBackground;
+    public Text cutscenePlayText;
+    public Text cutsceneBackText;
     public Text enemyNameText;
     public GameObject clickableBackground;
     public GameObject infoHighlight;
@@ -598,6 +601,14 @@ public class InteractOverlayManager : MonoBehaviour{
             cutsceneTitle.text = TextFormatter.FormatString(overworldSceneManager.currentPlayerSpace.cutsceneTitle);
             cutsceneText.text = TextFormatter.FormatString(overworldSceneManager.currentPlayerSpace.cutsceneDescription);
         }
+    }
+
+    public void FadeOutCutsceneStuff(float duration){
+        StaticVariables.FadeOut(cutsceneTitle, duration);
+        StaticVariables.FadeOut(cutsceneText, duration);
+        StaticVariables.FadeOut(cutscenePlayButtonBackground, duration);
+        StaticVariables.FadeOut(cutscenePlayText, duration);
+        StaticVariables.FadeOut(cutsceneBackText, duration);        
     }
 }
 
