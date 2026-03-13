@@ -1,3 +1,5 @@
+//for Sword Search, copyright Fancy Bus Games 2026
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,6 +32,7 @@ public class InteractOverlayManager : MonoBehaviour{
     public Text cutsceneTitle;
     public Text cutsceneText;
     public Image cutscenePlayButtonBackground;
+    public Image cutsceneBackButtonBackground;
     public Text cutscenePlayText;
     public Text cutsceneBackText;
     public Text enemyNameText;
@@ -607,6 +610,7 @@ public class InteractOverlayManager : MonoBehaviour{
         StaticVariables.FadeOut(cutsceneTitle, duration);
         StaticVariables.FadeOut(cutsceneText, duration);
         StaticVariables.FadeOut(cutscenePlayButtonBackground, duration);
+        StaticVariables.FadeOut(cutsceneBackButtonBackground, duration);
         StaticVariables.FadeOut(cutscenePlayText, duration);
         StaticVariables.FadeOut(cutsceneBackText, duration);        
     }

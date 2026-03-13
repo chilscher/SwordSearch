@@ -211,6 +211,34 @@ public class StaticVariables{
         txt.DOColor(c, duration);
     }
 
+    static public void FadeIn(Image im, float duration, bool useCurrentOpacity=true){
+        Color c1 = im.color;
+        Color c2 = im.color;
+        c1.a = 0;
+        if(!useCurrentOpacity)
+            c2.a = 1; 
+        im.color = c1;
+        im.DOColor(c2, duration);
+
+    }
+
+    static public void SetTransparent(Image im){
+        Color c = im.color;
+        c.a = 0;
+        im.color = c;
+    }
+    static public void SetTransparent(Text txt){
+        Color c = txt.color;
+        c.a = 0;
+        txt.color = c;
+    }
+
+    static public void SetOpaque(Image im){
+        Color c = im.color;
+        c.a= 1;
+        im.color = c;
+    }
+
 }
 
 public class StageData{

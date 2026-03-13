@@ -1,3 +1,5 @@
+//for Sword Search, copyright Fancy Bus Games 2026
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +18,7 @@ public class DialogueManager : MonoBehaviour{
     public Image enemyChathead;
     public GameObject realButton;
     public Text buttonText;
+    public Image buttonBackground;
     [HideInInspector]
     public BattleData enemyBattleData;
     public RectTransform fakeBattleButton;
@@ -180,7 +183,7 @@ public class DialogueManager : MonoBehaviour{
         TransitionToShowing();
     }
 
-    public void TransitionToShowing(){
+    public void TransitionToShowing(bool showNameSeparatorInstantly=false){
         overlay.DOAnchorPosY(0, transitionDuration);
 
         dialogueTextBox.gameObject.SetActive(true);
@@ -201,7 +204,10 @@ public class DialogueManager : MonoBehaviour{
         screenDarkener.color = c2;
         dialogueTextBox.DOColor(dialogueTextColor, transitionDuration);
         speakerNameTextBox.DOColor(nameTextColor, transitionDuration);
-        nameSeparator.DOColor(nameSeparatorColor, transitionDuration);
+        if (showNameSeparatorInstantly)
+            nameSeparator.color = nameSeparatorColor;
+        else
+            nameSeparator.DOColor(nameSeparatorColor, transitionDuration);
         screenDarkener.DOColor(screenDarkenerColor, transitionDuration);
         if (isInCutscene || isInTutorial)
             screenDarkener.gameObject.SetActive(false);
@@ -512,7 +518,6 @@ public class DialogueManager : MonoBehaviour{
             overlay.DOAnchorPosY(-overlay.rect.height, transitionDuration);
     }
 
-
     private void FinishedEndingTalk(){
         dialogueTextBox.gameObject.SetActive(false);
         speakerNameTextBox.gameObject.SetActive(false);
@@ -614,6 +619,12 @@ public class DialogueManager : MonoBehaviour{
         fakeBackButtonText.text = t;
     }
 
-
+    public void HideCutsceneStuff(float duration){
+        HideChatheads(duration);
+        StaticVariables.FadeOut(dialogueTextBox, duration);
+        StaticVariables.FadeOut(speakerNameTextBox, duration);
+        StaticVariables.FadeOut(buttonText, duration);
+        StaticVariables.FadeOut(buttonBackground, duration);
+        StaticVariables.FadeOut(nameSeparator, duration);
+    }
 }
-

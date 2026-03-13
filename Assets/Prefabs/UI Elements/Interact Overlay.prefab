@@ -2300,6 +2300,7 @@ MonoBehaviour:
   cutsceneTitle: {fileID: 6342744304818597672}
   cutsceneText: {fileID: 973667447023343101}
   cutscenePlayButtonBackground: {fileID: 232631542495697424}
+  cutsceneBackButtonBackground: {fileID: 8326238124020525511}
   cutscenePlayText: {fileID: 4176509327974555574}
   cutsceneBackText: {fileID: 1490126530413905853}
   enemyNameText: {fileID: 1564397932540422488}

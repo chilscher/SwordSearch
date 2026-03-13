@@ -1,3 +1,5 @@
+//for Sword Search, copyright Fancy Bus Games 2026
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,6 +26,7 @@ public class CutsceneManager : MonoBehaviour{
     public RectTransform backgroundParent;
     public GameObject emptyGameObject;
     public RectTransform screenshakeTransform;
+    public Image blackForeground;
 
     [Header("Cutscene Backgrounds")]
     public GameObject hometown1;
@@ -45,57 +48,118 @@ public class CutsceneManager : MonoBehaviour{
     public GameObject city1;
 
     private float externalTriggerParameter = 0f;
+    [HideInInspector]
+    public bool quitCutscene = false;
 
     
 
-    public void Start() {
-        SetCutsceneID();
+    public void Setup() {
+        SetBlackOverlayDark();
+        cutsceneID = StaticVariables.cutsceneID;
         switch (cutsceneID){
             case (Cutscene.Hometown1):
-                SetupHometown1();
+                SetCutsceneBackground(hometown1);
+                //SetupHometown1();
                 break;
             case (Cutscene.Hometown2):
-                SetupHometown2();
+                SetCutsceneBackground(hometown2);
+                //SetupHometown2();
                 break;
             case (Cutscene.Grasslands1):
-                SetupGrasslands1();
+                SetCutsceneBackground(grasslands1);
+                //SetupGrasslands1();
                 break;
             case (Cutscene.Grasslands2):
-                SetupGrasslands2();
+                SetCutsceneBackground(grasslands2_pt1);
+                //SetupGrasslands2();
                 break;
             case (Cutscene.Forest1):
-                SetupForest1();
+                SetCutsceneBackground(forest1);
+                //SetupForest1();
                 break;
             case (Cutscene.Forest2):
-                SetupForest2();
+                SetCutsceneBackground(forest2_pt1);
+                //SetupForest2();
                 break;
             case (Cutscene.Forest3):
-                SetupForest3();
+                SetCutsceneBackground(forest3);
+                //SetupForest3();
                 break;
             case (Cutscene.Desert1):
-                SetupDesert1();
+                SetCutsceneBackground(desert1);
+                //SetupDesert1();
                 break;
             case (Cutscene.Desert2):
-                SetupDesert2();
+                SetCutsceneBackground(desert2);
+                //SetupDesert2();
                 break;
             case (Cutscene.Desert3):
-                SetupDesert3();
+                SetCutsceneBackground(desert3_pt1);
+                //SetupDesert3();
                 break;
             case (Cutscene.City1):
-                SetupCity1();
+                SetCutsceneBackground(city1);
+                //SetupCity1();
                 break;
         }
         
         dialogueManager.SetButtonText("CONTINUE");
 
         SetupDialogueManager();
-        StaticVariables.WaitTimeThenCallFunction(StaticVariables.sceneFadeDuration, AdvanceCutsceneStep);
-        //generalSceneManager.FadeIn();
+        //StaticVariables.WaitTimeThenCallFunction(StaticVariables.sceneFadeDuration, AdvanceCutsceneStep);
     }
 
-    private void SetCutsceneID(){
-        cutsceneID = StaticVariables.cutsceneID;
+    public void StartCutscene(){
+        switch (cutsceneID){
+            case (Cutscene.Hometown1):
+                StartHometown1();
+                break;
+            case (Cutscene.Hometown2):
+                StartHometown2();
+                break;
+            case (Cutscene.Grasslands1):
+                StartGrasslands1();
+                break;
+            case (Cutscene.Grasslands2):
+                StartGrasslands2();
+                break;
+            case (Cutscene.Forest1):
+                StartForest1();
+                break;
+            case (Cutscene.Forest2):
+                StartForest2();
+                break;
+            case (Cutscene.Forest3):
+                StartForest3();
+                break;
+            case (Cutscene.Desert1):
+                StartDesert1();
+                break;
+            case (Cutscene.Desert2):
+                StartDesert2();
+                break;
+            case (Cutscene.Desert3):
+                StartDesert3();
+                break;
+            case (Cutscene.City1):
+                StartCity1();
+                break;
+        }
+        
     }
+
+    public void SetBlackOverlayDark(){
+        StaticVariables.SetOpaque(blackForeground);
+    }
+
+    public void FadeInBlackOverlay(float duration){
+        StaticVariables.FadeIn(blackForeground, duration, false);
+    }
+
+    public void FadeOutBlackOverlay(float duration){
+        StaticVariables.FadeOut(blackForeground, duration);
+    }
+
 
     private void SetupHometown1(){
         SetCutsceneBackground(hometown1);
@@ -163,8 +227,78 @@ public class CutsceneManager : MonoBehaviour{
         //cutsceneStep = 50; //for testing goblin walking
         //cutsceneStep = 79; //for testing the water spray
     }
+    
 
-    private void AdvanceCutsceneStep(){
+    private void StartHometown1(){
+        ToggleObject("Player", false);
+        //cutsceneStep = 50; //for testing goblin walking
+        //cutsceneStep = 70; //for testing player throwing books
+        //cutsceneStep = 79; //for testing the water spray
+        StaticVariables.WaitTimeThenCallFunction(0.5f, AdvanceCutsceneStep);
+    }
+
+    private void StartHometown2(){
+        PlayAnimation("Redhead Lady", "Idle Back");
+        PlayAnimation("Bartender", "Idle Front");
+        PlayAnimation("Child 1", "Idle Front");
+        PlayAnimation("Child 2", "Idle Front");
+        //cutsceneStep = 40; //for testing townspeople walking into a cirlce
+        StaticVariables.WaitTimeThenCallFunction(0.5f, AdvanceCutsceneStep);
+    }
+
+    private void StartGrasslands1(){
+        StaticVariables.WaitTimeThenCallFunction(0.5f, AdvanceCutsceneStep);
+    }
+
+    private void StartGrasslands2(){
+        PlayAnimation("Player", "Idle Holding Book");
+        StaticVariables.WaitTimeThenCallFunction(0.5f, AdvanceCutsceneStep);
+    }
+
+    private void StartForest1(){
+        StaticVariables.WaitTimeThenCallFunction(0.5f, AdvanceCutsceneStep);
+    }
+
+    private void StartForest2(){
+        PlayAnimation("Player", "Walk");
+        Transform rabbitArea = GetObjectFromName("Starting area").transform;
+        rabbitArea.DOLocalMoveX(rabbitArea.localPosition.x -3000, 2.5f).SetEase(Ease.Linear);     
+        //cutsceneStep = 28;  
+        StaticVariables.WaitTimeThenCallFunction(0.5f, AdvanceCutsceneStep);
+    }
+
+    private void StartForest3(){
+        StaticVariables.WaitTimeThenCallFunction(0.5f, AdvanceCutsceneStep);
+    }
+
+    private void StartDesert1(){
+        PlayAnimation("Player", "Walk");
+        MoveEverythingExceptPlayer(-1050, 0, 3f);
+        StaticVariables.WaitTimeThenCallFunction(0.5f, AdvanceCutsceneStep);
+    }
+
+    private void StartDesert2(){
+        //cutsceneStep = 25; //for testing horde loop
+        //cutsceneStep = 80; //for testing walk off screen
+        StaticVariables.WaitTimeThenCallFunction(0.5f, AdvanceCutsceneStep);
+    }
+
+    private void StartDesert3(){
+        PlayAnimation("Player", "Idle Holding Book");
+        //cutsceneStep = 33; //for testing oasis section
+        StaticVariables.WaitTimeThenCallFunction(0.5f, AdvanceCutsceneStep);
+    }
+
+    private void StartCity1(){
+        //ToggleObject("Player", false);
+        //cutsceneStep = 50; //for testing goblin walking
+        //cutsceneStep = 79; //for testing the water spray
+        StaticVariables.WaitTimeThenCallFunction(0.5f, AdvanceCutsceneStep);
+    }
+    
+    public void AdvanceCutsceneStep(){
+        if (quitCutscene)
+            return;
         cutsceneStep ++;
         switch (cutsceneID){
             case (Cutscene.Hometown1):
@@ -3727,7 +3861,7 @@ public class CutsceneManager : MonoBehaviour{
         dialogueManager.cutsceneManager = this;
         dialogueManager.ClearDialogue();
         dialogueManager.SetStartingValues();
-        dialogueManager.TransitionToShowing();
+        dialogueManager.TransitionToShowing(true);
         ToggleButton(false);
     }
 
@@ -3900,13 +4034,15 @@ public class CutsceneManager : MonoBehaviour{
 
     private void StartCutsceneImageTransition(GameObject bg){
         nextBackground = bg;
-        StaticVariables.StartFadeDarken(0.5f);
+        FadeInBlackOverlay(0.5f);
+        //StaticVariables.StartFadeDarken(0.5f);
         StaticVariables.WaitTimeThenCallFunction(0.5f, MidCutsceneImageTransition);
     }
 
     private void MidCutsceneImageTransition(){
         SetCutsceneBackground(nextBackground);
-        StaticVariables.StartFadeLighten(0.5f);
+        FadeOutBlackOverlay(0.5f);
+        //StaticVariables.StartFadeLighten(0.5f);
         StaticVariables.WaitTimeThenCallFunction(0.5f, EndCutsceneImageTransition);
         switch (advanceCondition){
             case (Cond.BackgroundChange):
@@ -3964,9 +4100,10 @@ public class CutsceneManager : MonoBehaviour{
         }
     }
 
-    public void ClickedBackButtonl() {
+    public void ClickedBackButton() {
         StaticVariables.hasCompletedStage = false;
-        StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
+        SceneChanger.GoWorld(StaticVariables.lastVisitedStage.world);
+        //StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
     }
     
     private void EndLastStageOfWorld(){
@@ -3977,19 +4114,22 @@ public class CutsceneManager : MonoBehaviour{
             StaticVariables.hasCompletedStage = false;
             StaticVariables.lastVisitedStage = StaticVariables.highestBeatenStage.nextStage;
             SaveSystem.SaveGame();
-            StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
+            SceneChanger.GoWorld(StaticVariables.lastVisitedStage.world);
+            //StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
         }
         else{
             StaticVariables.hasCompletedStage = true;
             SaveSystem.SaveGame();
-            StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
+            SceneChanger.GoWorld(StaticVariables.lastVisitedStage.world);
+            //StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
         }
     }
     
     private void EndNormalStage(){
         StaticVariables.hasCompletedStage = true;
         SaveSystem.SaveGame();
-        StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
+        SceneChanger.GoWorld(StaticVariables.lastVisitedStage.world);
+        //StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
     }
 }
 

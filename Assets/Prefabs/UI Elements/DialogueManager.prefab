@@ -3256,6 +3256,8 @@ MonoBehaviour:
   enemyChathead: {fileID: 8075790155621847860}
   realButton: {fileID: 8075790155463633476}
   buttonText: {fileID: 8075790155532314645}
+  buttonBackground: {fileID: 8075790154875440313}
+  nameDivider: {fileID: 8075790155380489351}
   enemyBattleData:
     enemyPrefab: {fileID: 0}
     backgroundPrefab: {fileID: 0}
