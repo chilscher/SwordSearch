@@ -508,11 +508,15 @@ public class InteractOverlayManager : MonoBehaviour{
     }
 
     private void HideInteractOverlay(){
-        interactOverlay.DOAnchorPosY(-interactOverlay.rect.height, transitionDuration);
+        MoveInteractOverlayDown(transitionDuration);
         clickableBackground.SetActive(false);
         isMovingInteractOverlay = true;
         overworldSceneManager.ShowSceneHeader(transitionDuration);
         overworldSceneManager.overworldView.DOAnchorPosY(0, transitionDuration).OnComplete(FinishedHidingInteractOverlay);
+    }
+
+    public void MoveInteractOverlayDown(float duration){
+        interactOverlay.DOAnchorPosY(-interactOverlay.rect.height, duration).SetEase(Ease.InSine);
     }
 
     private void FinishedHidingInteractOverlay(){
@@ -521,7 +525,7 @@ public class InteractOverlayManager : MonoBehaviour{
     }
 
     public void ShowInteractOverlay(){
-        interactOverlay.DOAnchorPosY(0, transitionDuration).OnComplete(FinishedShowingInteractOverlay);
+        interactOverlay.DOAnchorPosY(0, transitionDuration).OnComplete(FinishedShowingInteractOverlay).SetEase(Ease.OutSine);
         isInteractOverlayShowing = true;
         isMovingInteractOverlay = true;
         clickableBackground.SetActive(true);

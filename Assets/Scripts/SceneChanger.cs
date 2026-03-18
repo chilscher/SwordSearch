@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger{
 
-    public enum Scene {None, Homepage, Settings, Credits, Atlas, World, Cutscene}
+    public enum Scene {None, Homepage, Settings, Credits, Atlas, World, Cutscene, Battle, Tutorial}
     static public Scene goingFrom = Scene.None;
     static public Scene goingTo = Scene.None;
     static public SceneChangerVisuals visuals;
@@ -60,6 +60,7 @@ public class SceneChanger{
         goingTo = Scene.World;
         visuals.AnimateLeavingScene();
     }
+    
     static public void GoCutscene(){
         nextSceneName = "Cutscene";
         goingFrom = visuals.thisScene;
@@ -67,6 +68,20 @@ public class SceneChanger{
         visuals.AnimateLeavingScene();
     }
     
+    static public void GoBattle(){
+        nextSceneName = "Battle Scene";
+        goingFrom = visuals.thisScene;
+        goingTo = Scene.Battle;
+        visuals.AnimateLeavingScene();
+    }
+    
+    static public void GoTutorial(){
+        nextSceneName = "Tutorial";
+        goingFrom = visuals.thisScene;
+        goingTo = Scene.Tutorial;
+        visuals.AnimateLeavingScene();
+    }
+
     static public void LoadScene(){
         SceneManager.LoadScene(nextSceneName);
     }

@@ -120,7 +120,7 @@ public class UIManager : MonoBehaviour {
     public Transform backgroundParent;
     public Transform foregroundParent;
     public RectTransform book;
-    public RectTransform pauseButton;
+    public SceneHeader pauseButton;
     public GameObject puzzlePage;
     public GameObject endGameDisplay;
     public Text endGameTitleText;
@@ -130,6 +130,7 @@ public class UIManager : MonoBehaviour {
     public Animator pageTurnAnimator;
     public GameObject enemyParentPrefab;
     public DialogueManager dialogueManager;
+    public Image blackForeground;
 
     [HideInInspector]
     public BattleManager.PowerupTypes powerupType;
@@ -628,12 +629,14 @@ public class UIManager : MonoBehaviour {
         movingBook = true;
         if (IsPuzzlePageShowing()) {
             book.DOLocalMoveX((book.localPosition.x + book.rect.width), 0.5f).OnComplete(MovingBookEnded);
-            pauseButton.DOAnchorPosY(350f, 0.5f);
+            pauseButton.SlideOut();
+            //pauseButton.DOAnchorPosY(350f, 0.5f);
             battleManager.PauseEverything();
         }
         else {
             book.DOLocalMoveX((book.localPosition.x - book.rect.width), 0.5f).OnComplete(MovingBookEnded);
-            pauseButton.DOAnchorPosY(0, 0.5f);
+            pauseButton.SlideIn();
+            //pauseButton.DOAnchorPosY(0, 0.5f);
         }
     }
 
@@ -751,7 +754,8 @@ public class UIManager : MonoBehaviour {
     public void PushedQuitButton() {
         //shows up while paused
         StaticVariables.hasCompletedStage = false;
-        StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
+        SceneChanger.GoWorld(StaticVariables.lastVisitedStage.world);
+        //StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
     }
 
     public void PushedEndGameButton() {
@@ -760,13 +764,15 @@ public class UIManager : MonoBehaviour {
             dialogueManager.Setup(battleManager.enemyData.victoryDialogueSteps, StaticVariables.battleData);
         else { //you lost, quit
             StaticVariables.hasCompletedStage = false;
-            StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
+            SceneChanger.GoWorld(StaticVariables.lastVisitedStage.world);
+            //StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
         }
     }
 
     public void EndDialogue() {
         StaticVariables.hasCompletedStage = true;
-        StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
+        SceneChanger.GoWorld(StaticVariables.lastVisitedStage.world);
+        //StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
     }
 
     public void ShowVictoryPage() {
@@ -776,7 +782,8 @@ public class UIManager : MonoBehaviour {
         endGameDisplay.SetActive(true);
         endGameTitleText.text = "VICTORY";
         endGameButtonText.text = "CONTINUE";
-        pauseButton.DOAnchorPosY(350f, 0.5f);
+        pauseButton.SlideOut();
+        //pauseButton.DOAnchorPosY(350f, 0.5f);
     }
 
     public void ShowDefeatPage() {
@@ -786,7 +793,8 @@ public class UIManager : MonoBehaviour {
         endGameDisplay.SetActive(true);
         endGameTitleText.text = "DEFEAT";
         endGameButtonText.text = "BACK TO MAP";
-        pauseButton.DOAnchorPosY(350f, 0.5f);
+        pauseButton.SlideOut();
+        //pauseButton.DOAnchorPosY(350f, 0.5f);
     }
 
     public void FadeOutWaterOverlay() {

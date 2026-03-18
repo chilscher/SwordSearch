@@ -76,7 +76,7 @@ public class BattleManager : MonoBehaviour {
     //public GeneralSceneManager generalSceneManager;
 
     public virtual void Start() {
-        GetComponent<GeneralSceneManager>().Setup();
+        //GetComponent<GeneralSceneManager>().Setup();
         //generalSceneManager.Setup();
         countdownToRefresh = maxPuzzleCountdown;
         if (StaticVariables.battleData == null)
@@ -121,10 +121,15 @@ public class BattleManager : MonoBehaviour {
         uiManager.SetStartingValues();
         uiManager.DisplayHealths(playerHealth, enemyHealth);
         uiManager.DisplayWord(inProgressWord, countdownToRefresh);
-        StaticVariables.FadeIntoScene();
-        StaticVariables.WaitTimeThenCallFunction(StaticVariables.sceneFadeDuration, QueueEnemyAttack);
+        //StaticVariables.FadeIntoScene();
+        //StaticVariables.WaitTimeThenCallFunction(StaticVariables.sceneFadeDuration, QueueEnemyAttack); //scenechangervisuals calls this
         puzzleGenerator.Setup();
         //generalSceneManager.FadeIn();
+    }
+
+    public void Setup(){
+        StaticVariables.SetOpaque(uiManager.blackForeground);
+        
     }
 
     public void Update() {

@@ -53,9 +53,9 @@ public class SettingsSceneManager : MonoBehaviour{
         backgroundPage.sizeDelta = new Vector2(fullWidth + 500, fullHeight);
     }
 
-    public void HitBackButton(){
-        StaticVariables.FadeOutThenLoadScene("Homepage");
-    }
+    //public void HitBackButton(){
+    //    StaticVariables.FadeOutThenLoadScene("Homepage");
+   // }
 
     private void DisplayPlayerName(){
         playerNameInput.text = StaticVariables.playerName;

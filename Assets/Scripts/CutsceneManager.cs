@@ -3591,7 +3591,8 @@ public class CutsceneManager : MonoBehaviour{
             AdvanceConditionDialogue_NobodyTalking(true);
         }
         else if (++i == cutsceneStep){
-            StaticVariables.StartFadeDarken(0.5f);
+            FadeInBlackOverlay(0.5f);
+            //StaticVariables.StartFadeDarken(0.5f);
             AdvanceConditionWait(0.5f);
         }
         else if (++i == cutsceneStep){
@@ -3601,7 +3602,8 @@ public class CutsceneManager : MonoBehaviour{
             GetAnimatorFromName("Knight NPC").transform.parent.gameObject.SetActive(false);
             GetAnimatorFromName("Nymph - sick").transform.parent.gameObject.SetActive(false);
             GetObjectFromName("Forest people").transform.DOLocalMoveX(-250, 4f);
-            StaticVariables.StartFadeLighten(0.5f);
+            FadeOutBlackOverlay(0.5f);
+            //StaticVariables.StartFadeLighten(0.5f);
             AdvanceConditionWait(4f);
         }
         else if (++i == cutsceneStep){

@@ -294,7 +294,8 @@ public class DialogueManager : MonoBehaviour{
                 else if (dialogueSteps[currentStep].description == "Fail Battle"){
                     dialogueTextBox.text = "";
                     StaticVariables.hasCompletedStage = false;
-                    StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
+                    SceneChanger.GoWorld(StaticVariables.lastVisitedStage.world);
+                    //StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
                     return;
                 }
                 else if (dialogueSteps[currentStep].description.Contains("Wait time :")){

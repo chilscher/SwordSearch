@@ -320,7 +320,8 @@ public class OverworldSceneManager : MonoBehaviour{
     public void LoadBattleWithData(OverworldSpace space){
         StaticVariables.battleData = space.battleData;
         SetLastWorldStageVisited(space);
-        StaticVariables.FadeOutThenLoadScene(StaticVariables.battleSceneName);
+        SceneChanger.GoBattle();
+        //StaticVariables.FadeOutThenLoadScene(StaticVariables.battleSceneName);
     }
 
     public void ShowOverworldProgress(int index){
@@ -455,7 +456,8 @@ public class OverworldSceneManager : MonoBehaviour{
         else if (currentPlayerSpace.type == OverworldSpace.OverworldSpaceType.Tutorial){
             StaticVariables.battleData = currentPlayerSpace.battleData;
             SetLastWorldStageVisited(currentPlayerSpace);
-            StaticVariables.FadeOutThenLoadScene("Tutorial");
+            SceneChanger.GoTutorial();
+            //StaticVariables.FadeOutThenLoadScene("Tutorial");
         }
     }
 
@@ -467,13 +469,13 @@ public class OverworldSceneManager : MonoBehaviour{
         }
     }
 
-    public void BackToMap(){
-        StaticVariables.FadeOutThenLoadScene(StaticVariables.mapName);
-    }
+    //public void BackToMap(){
+    //    StaticVariables.FadeOutThenLoadScene(StaticVariables.mapName);
+    //}
 
-    public void BackToHomepage(){
-        StaticVariables.FadeOutThenLoadScene(StaticVariables.mainMenuName);
-    }
+    //public void BackToHomepage(){
+    //    StaticVariables.FadeOutThenLoadScene(StaticVariables.mainMenuName);
+    //}
 
     public void FinishedTalking(){
         if (IsCurrentEnemyNewestEnemy()) {

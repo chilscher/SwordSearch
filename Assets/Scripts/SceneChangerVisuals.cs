@@ -53,6 +53,11 @@ public class SceneChangerVisuals : MonoBehaviour {
     public RectTransform fakeInteractOverlay2Overlay;
     public Image fakeCutsceneBlackBackground;
     public Image fakeCutsceneNameDivider;
+    [Header("Battle and Tutorial")]
+    public BattleManager battleManager;
+    public RectTransform fakeBattle;
+    public RectTransform fakeBattleMask;
+    public Image fakeBattleBlackBackground;
     [Header("Settings Scene")]
     public RectTransform settingsPaper1;
     public RectTransform settingsPaper2;
@@ -183,6 +188,11 @@ public class SceneChangerVisuals : MonoBehaviour {
             fakeCutsceneBlackBackground.color = Color.black;
             return;
         }
+        else if (CheckSceneChange(SceneChanger.Scene.World, SceneChanger.Scene.Battle)){
+            battleManager.Setup();
+            //StaticVariables.SetOpaque(blackForeground);
+            return;
+        }
     }
 
     private void AnimateComingIntoScene(){
@@ -278,6 +288,15 @@ public class SceneChangerVisuals : MonoBehaviour {
             fakeCutsceneMask.DOScale(Vector3.one * 2.8f, 0.5f).SetEase(Ease.InSine); 
             fakeInteractOverlay2Transform.DOLocalMoveY(-fakeInteractOverlay2Overlay.rect.height, 0.5f).SetEase(Ease.InSine);
             StaticVariables.WaitTimeThenCallFunction(1f, overworldManager.ShowOverworldProgress, (int)customVal1); 
+            return;
+        }
+        else if (CheckSceneChange(SceneChanger.Scene.World, SceneChanger.Scene.Battle)){
+            //sceneHeader.SlideIn();
+            StaticVariables.FadeOut(battleManager.uiManager.blackForeground, 0.5f);
+            //cutsceneManager.FadeOutBlackOverlay(0.5f);
+            //cutsceneManager.StartCutscene();
+            StaticVariables.WaitTimeThenCallFunction(0.5f, sceneHeader.SlideIn);
+            StaticVariables.WaitTimeThenCallFunction(1f, EnableClicks);
             return;
         }
     }
@@ -430,6 +449,26 @@ public class SceneChangerVisuals : MonoBehaviour {
             cutsceneManager.dialogueManager.HideCutsceneStuff(0.5f);
             cutsceneManager.FadeInBlackOverlay(0.5f);
             StaticVariables.WaitTimeThenCallFunction(1f, TriggerSceneChange);
+            return;
+        }
+        else if (CheckSceneChange(SceneChanger.Scene.World, SceneChanger.Scene.Battle) || CheckSceneChange(SceneChanger.Scene.World, SceneChanger.Scene.Tutorial)){
+            fakeBattle.gameObject.SetActive(true);
+            //fakeBattleMask.localScale = Vector3.one * (canvasWidth / fakeBattleMask.rect.width);
+            fakeBattleMask.localScale = Vector3.one * 8;
+            overworldManager.interactOverlayManager.MoveInteractOverlayDown(0.5f);
+            foreach (OverworldSpace os in overworldManager.overworldSpaces){
+                foreach (PathStep ps in os.steps)
+                    ps.HideStep(0.5f);
+                os.HideEnemy(0.5f);
+            }
+            overworldManager.FadeOutPlayer(0.5f);
+            StaticVariables.WaitTimeThenCallFunction(0.5f, ScaleDownFakeBattle);
+            //sceneHeader.SlideOut();
+            //AudioManager.PlaySound(AudioManager.library.headerMoveOut);
+            //cutsceneManager.quitCutscene = true;
+            //cutsceneManager.dialogueManager.HideCutsceneStuff(0.5f);
+            //cutsceneManager.FadeInBlackOverlay(0.5f);
+            StaticVariables.WaitTimeThenCallFunction(1.5f, TriggerSceneChange);
             return;
         }
     }
@@ -608,5 +647,15 @@ public class SceneChangerVisuals : MonoBehaviour {
         fakeCutsceneNameDivider.gameObject.SetActive(true);
         StaticVariables.FadeIn(fakeCutsceneNameDivider, 0.5f);
         fakeCutsceneBlackBackground.DOColor(Color.black, 1f);
+    }
+
+    private void ScaleDownFakeBattle(){
+        //overworldManager.interactOverlayManager.gameObject.SetActive(false);
+        fakeBattleMask.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutSine);  
+        //fakeInteractOverlay1Transform.DOSizeDelta(new Vector2(customVal1, customVal2), 0.5f); 
+        //fakeInteractOverlay1Manager.FadeOutCutsceneStuff(0.5f);
+        //fakeCutsceneNameDivider.gameObject.SetActive(true);
+        //StaticVariables.FadeIn(fakeCutsceneNameDivider, 0.5f);
+        fakeBattleBlackBackground.DOColor(Color.black, 1f);
     }
 }

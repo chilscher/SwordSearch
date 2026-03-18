@@ -125,39 +125,39 @@ public class StaticVariables{
     }
 
 
-    static public void FadeOutThenLoadScene(string name){
-        sceneName = name;
-        StartFadeDarken(sceneFadeDuration);
-        WaitTimeThenCallFunction(sceneFadeDuration, LoadScene);
-    }
+    //static public void FadeOutThenLoadScene(string name){
+    //    sceneName = name;
+    //    StartFadeDarken(sceneFadeDuration);
+    //    WaitTimeThenCallFunction(sceneFadeDuration, LoadScene);
+    //}
 
-    static public void FadeIntoScene(){
-        StartFadeLighten(sceneFadeDuration);
-    }
+    //static public void FadeIntoScene(){
+    //    StartFadeLighten(sceneFadeDuration);
+    //}
 
-    static public void StartFadeDarken(float duration){
-        Color currentColor = Color.black;
-        currentColor.a = 0;
-        fadeImage.color = currentColor;
-        fadeImage.gameObject.SetActive(true);
-        fadeImage.DOColor(Color.black, duration);
-    }
+    //static public void StartFadeDarken(float duration){
+    //    Color currentColor = Color.black;
+    //    currentColor.a = 0;
+    //    fadeImage.color = currentColor;
+    //    fadeImage.gameObject.SetActive(true);
+    //    fadeImage.DOColor(Color.black, duration);
+    //}
 
-    static public void StartFadeLighten(float duration){
-        Color nextColor = Color.black;
-        nextColor.a = 0;
-        fadeImage.color = Color.black;
-        fadeImage.gameObject.SetActive(true);
-        fadeImage.DOColor(nextColor, duration).OnComplete(HideFadeObject);
-    }
+    //static public void StartFadeLighten(float duration){
+    //    Color nextColor = Color.black;
+    //    nextColor.a = 0;
+    //    fadeImage.color = Color.black;
+    //    fadeImage.gameObject.SetActive(true);
+    //    fadeImage.DOColor(nextColor, duration).OnComplete(HideFadeObject);
+    //}
 
-    static private void HideFadeObject(){
-        fadeImage.gameObject.SetActive(false);
-    }
+    //static private void HideFadeObject(){
+    //    fadeImage.gameObject.SetActive(false);
+    //}
 
-    static private void LoadScene(){
-        SceneManager.LoadScene(sceneName);
-    }
+    //static private void LoadScene(){
+    //    SceneManager.LoadScene(sceneName);
+    //}
 
     static public StageData GetStage(int worldNum, int stageNum){
         foreach (StageData stageData in allStages){
