@@ -43,6 +43,7 @@ public class LetterSpace : MonoBehaviour{
 
     [Header("GameObjects")]
     public TextMeshProUGUI text;
+    public TextMeshProUGUI nonInteractableText; //for showing non-interactable letters during the tutorials
     public GameObject selectedSignifier;
     public Animator selectedSignifierAnimator;
     public Image[] colorableBackgroundImages = new Image[9];
@@ -97,6 +98,17 @@ public class LetterSpace : MonoBehaviour{
     public void UpdateLetter(char letter) {
         this.letter = letter;
         text.text = "" + letter;
+        if (letter == ' ' || letter == '='){
+            int index = StaticVariables.rand.Next(StaticVariables.randomLetterPool.Length);
+            char l = StaticVariables.randomLetterPool[index];
+            UpdateNonInteractableLetter(l);
+        }
+        else
+            UpdateNonInteractableLetter(' ');
+    }
+
+    public void UpdateNonInteractableLetter(char letter){
+        nonInteractableText.text = "" + letter;
     }
 
     public void ShowAsPartOfWord(Color backgroundColor){

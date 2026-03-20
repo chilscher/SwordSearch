@@ -55,6 +55,7 @@ public class SceneChangerVisuals : MonoBehaviour {
     public Image fakeCutsceneNameDivider;
     [Header("Battle and Tutorial")]
     public BattleManager battleManager;
+    public TutorialManager tutorialManager;
     public RectTransform fakeBattle;
     public RectTransform fakeBattleMask;
     public Image fakeBattleBlackBackground;
@@ -190,7 +191,21 @@ public class SceneChangerVisuals : MonoBehaviour {
         }
         else if (CheckSceneChange(SceneChanger.Scene.World, SceneChanger.Scene.Battle)){
             battleManager.Setup();
-            //StaticVariables.SetOpaque(blackForeground);
+            return;
+        }
+        else if (CheckSceneChange(SceneChanger.Scene.World, SceneChanger.Scene.Tutorial)){
+            battleManager.Setup();
+            return;
+        }
+        else if (CheckSceneChange(SceneChanger.Scene.Battle, SceneChanger.Scene.World) || CheckSceneChange(SceneChanger.Scene.Tutorial, SceneChanger.Scene.World)){
+            fakeBattle.gameObject.SetActive(true);
+            overworldManager.HideProgress();
+            customVal1 = overworldManager.stageIndexToQuickReveal;
+            if (customVal1 == - 1)
+                customVal1 = StaticVariables.highestBeatenStage.nextStage.index;
+            fakeBattleMask.localScale = Vector3.one;
+            fakeBattleMask.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutSine);  
+            StaticVariables.SetOpaque(fakeBattleBlackBackground);
             return;
         }
     }
@@ -291,12 +306,29 @@ public class SceneChangerVisuals : MonoBehaviour {
             return;
         }
         else if (CheckSceneChange(SceneChanger.Scene.World, SceneChanger.Scene.Battle)){
-            //sceneHeader.SlideIn();
             StaticVariables.FadeOut(battleManager.uiManager.blackForeground, 0.5f);
-            //cutsceneManager.FadeOutBlackOverlay(0.5f);
-            //cutsceneManager.StartCutscene();
+            battleManager.uiManager.FadeInHealths(0.5f);
             StaticVariables.WaitTimeThenCallFunction(0.5f, sceneHeader.SlideIn);
-            StaticVariables.WaitTimeThenCallFunction(1f, EnableClicks);
+            battleManager.uiManager.ReturnBookToStartingPos(0.5f, Ease.OutSine);
+            StaticVariables.WaitTimeThenCallFunction(0.5f, battleManager.StartBattle);
+            StaticVariables.WaitTimeThenCallFunction(0.5f, EnableClicks);
+            return;
+        }
+        else if (CheckSceneChange(SceneChanger.Scene.World, SceneChanger.Scene.Tutorial)){
+            StaticVariables.FadeOut(battleManager.uiManager.blackForeground, 0.5f);
+            battleManager.uiManager.FadeInHealths(0.5f);
+            battleManager.uiManager.ReturnBookToStartingPos(0.5f, Ease.OutSine);
+            StaticVariables.WaitTimeThenCallFunction(1f, sceneHeader.SlideIn);
+            StaticVariables.WaitTimeThenCallFunction(1.5f, battleManager.uiManager.dialogueManager.TransitionToShowing, false);
+            StaticVariables.WaitTimeThenCallFunction(1.5f, tutorialManager.AdvanceTutorialStep);
+            StaticVariables.WaitTimeThenCallFunction(1.5f, EnableClicks);
+            StaticVariables.WaitTimeThenCallFunction(2f, tutorialManager.earthBuffBottom.SetActive, true);
+            return;
+        }
+        else if (CheckSceneChange(SceneChanger.Scene.Battle, SceneChanger.Scene.World) || CheckSceneChange(SceneChanger.Scene.Tutorial, SceneChanger.Scene.World)){
+            fakeBattleMask.DOScale(Vector3.one * 8, 0.5f).SetEase(Ease.InSine);  
+            StaticVariables.FadeOut(fakeBattleBlackBackground, 0.5f);
+            StaticVariables.WaitTimeThenCallFunction(0.5f, overworldManager.ShowOverworldProgress, (int)customVal1);
             return;
         }
     }
@@ -453,7 +485,6 @@ public class SceneChangerVisuals : MonoBehaviour {
         }
         else if (CheckSceneChange(SceneChanger.Scene.World, SceneChanger.Scene.Battle) || CheckSceneChange(SceneChanger.Scene.World, SceneChanger.Scene.Tutorial)){
             fakeBattle.gameObject.SetActive(true);
-            //fakeBattleMask.localScale = Vector3.one * (canvasWidth / fakeBattleMask.rect.width);
             fakeBattleMask.localScale = Vector3.one * 8;
             overworldManager.interactOverlayManager.MoveInteractOverlayDown(0.5f);
             foreach (OverworldSpace os in overworldManager.overworldSpaces){
@@ -463,12 +494,35 @@ public class SceneChangerVisuals : MonoBehaviour {
             }
             overworldManager.FadeOutPlayer(0.5f);
             StaticVariables.WaitTimeThenCallFunction(0.5f, ScaleDownFakeBattle);
-            //sceneHeader.SlideOut();
-            //AudioManager.PlaySound(AudioManager.library.headerMoveOut);
-            //cutsceneManager.quitCutscene = true;
-            //cutsceneManager.dialogueManager.HideCutsceneStuff(0.5f);
-            //cutsceneManager.FadeInBlackOverlay(0.5f);
             StaticVariables.WaitTimeThenCallFunction(1.5f, TriggerSceneChange);
+            return;
+        }
+        else if (CheckSceneChange(SceneChanger.Scene.Battle, SceneChanger.Scene.World)){
+            battleManager.uiManager.MoveBookOffScreen(0.5f);
+            battleManager.uiManager.FadeOutHealths(0.5f);
+            battleManager.uiManager.RefillEnemyAttackBarAtEndOfBattle(0.5f);
+            battleManager.uiManager.dialogueManager.HideChatheads(0.5f);
+            StaticVariables.FadeIn(battleManager.uiManager.blackForeground, 0.5f, false);
+            StaticVariables.WaitTimeThenCallFunction(0.5f, TriggerSceneChange);
+            return;
+        }
+        else if (CheckSceneChange(SceneChanger.Scene.Tutorial, SceneChanger.Scene.World)){
+            sceneHeader.SlideOut();
+            AudioManager.PlaySound(AudioManager.library.headerMoveOut);
+            if (!battleManager.inProgressWord.hasEarthBuff)
+                GameObject.Destroy(tutorialManager.earthBuffBottom);
+            battleManager.uiManager.RefillEnemyAttackBarAtEndOfBattle(0.5f);
+            battleManager.uiManager.MoveBookOffScreen(0.5f);
+            battleManager.uiManager.FadeOutHealths(0.5f);
+            tutorialManager.MoveDialogueManagerOverlayOffscreen(0.5f);
+            battleManager.uiManager.dialogueManager.HideChatheads(0.5f);
+            tutorialManager.HideTutorialShadow(0.5f);
+            tutorialManager.HideTutorialShadowForLetters(0.5f);
+            StaticVariables.FadeOut(tutorialManager.highlightEnemyTimerImage, 0.5f);
+            StaticVariables.FadeOut(tutorialManager.highlightEnemyHealthImage, 0.5f);
+            StaticVariables.FadeOut(tutorialManager.highlightPlayerHealthImage, 0.5f);
+            StaticVariables.FadeIn(battleManager.uiManager.blackForeground, 0.5f, false);
+            StaticVariables.WaitTimeThenCallFunction(0.5f, TriggerSceneChange);
             return;
         }
     }
@@ -550,6 +604,7 @@ public class SceneChangerVisuals : MonoBehaviour {
         fakeAtlasFrostlands.gameObject.SetActive(false);
         fakeAtlasCaverns.gameObject.SetActive(false);
         fakeCutscene.gameObject.SetActive(false);
+        fakeBattle.gameObject.SetActive(false);
         StaticVariables.WaitTimeThenCallFunction(0.5f, EnableClicks);
     }
 
@@ -650,12 +705,7 @@ public class SceneChangerVisuals : MonoBehaviour {
     }
 
     private void ScaleDownFakeBattle(){
-        //overworldManager.interactOverlayManager.gameObject.SetActive(false);
         fakeBattleMask.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutSine);  
-        //fakeInteractOverlay1Transform.DOSizeDelta(new Vector2(customVal1, customVal2), 0.5f); 
-        //fakeInteractOverlay1Manager.FadeOutCutsceneStuff(0.5f);
-        //fakeCutsceneNameDivider.gameObject.SetActive(true);
-        //StaticVariables.FadeIn(fakeCutsceneNameDivider, 0.5f);
         fakeBattleBlackBackground.DOColor(Color.black, 1f);
     }
 }

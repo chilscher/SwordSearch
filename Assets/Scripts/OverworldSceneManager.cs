@@ -388,10 +388,10 @@ public class OverworldSceneManager : MonoBehaviour{
                 playerParent.gameObject.SetActive(false);
                 FadeInPlayer(1f);
             }
-            else{
+            //else{
                 step.HideStep(0);
                 step.ShowStep(1f);
-            }
+            //}
         }
     }
 

@@ -44,17 +44,20 @@ public class TutorialManager : BattleManager {
     public GameObject highlightWord3;
     public GameObject highlightWordArea;
     public GameObject highlightEnemyHealth;
+    public Image highlightEnemyHealthImage;
     public GameObject highlightAttackStrength;
     public GameObject highlightEnemyTimer;
+    public Image highlightEnemyTimerImage;
     public GameObject highlightPlayerHealth;
+    public Image highlightPlayerHealthImage;
     public GameObject highlightCountdown;
     public Image tutorialShadow;
     public Image tutorialShadowForLetters;
     private float enemyTimerBarRemainder = 0f;
     private Color tutorialShadowOriginalColor;
+    public GameObject earthBuffBottom;
 
-
-    public override void Start() {
+    public override void Setup() {
         puzzleGenerator.wordCount = 4;
         puzzleGenerator.useSmallerLayout = true;
 
@@ -62,7 +65,9 @@ public class TutorialManager : BattleManager {
 
         tutorialShadowOriginalColor = tutorialShadow.color;
 
-        base.Start();
+        earthBuffBottom.SetActive(false);
+        earthBuffBottom.transform.SetParent(uiManager.earthBuffBottom);
+        base.Setup();
         SetTutorialNumber();
         switch (tutorialNumber) {
             case (1):
@@ -84,8 +89,7 @@ public class TutorialManager : BattleManager {
         SetupDialogueManager();
         UpdateSubmitVisuals();
         ButtonText("CONTINUE");
-        AdvanceTutorialStep();
-        uiManager.dialogueManager.transform.Find("Earth buff bottom").SetParent(uiManager.earthBuffBottom);
+        tutorialTextBox.gameObject.SetActive(false);
     }
 
     private void SetTutorialNumber() {
@@ -109,6 +113,7 @@ public class TutorialManager : BattleManager {
         canShowPlayerHealth = false;
         canShowEnemyHealth = false;
         canEnemyDie = true;
+        LoadCustomPuzzle(startingLayout1);
     }
     
     private void SetupTutorial2(){
@@ -122,6 +127,7 @@ public class TutorialManager : BattleManager {
         canShowPlayerHealth = false;
         canShowEnemyHealth = true;
         canEnemyDie = false;
+        LoadCustomPuzzle(startingLayout2);
     }
     
     private void SetupTutorial3(){
@@ -134,6 +140,8 @@ public class TutorialManager : BattleManager {
         canShowPlayerHealth = true;
         canShowEnemyHealth = true;
         canEnemyDie = false;
+        LoadCustomPuzzle(startingLayout4);
+        puzzleGenerator.SetCustomPowerups(startingPowerups1);
     }
 
     private void SetupTutorial4(){
@@ -150,6 +158,8 @@ public class TutorialManager : BattleManager {
         canShowEnemyHealth = true;
         canEnemyDie = false;
         uiManager.earthBuffBottom.gameObject.SetActive(true);
+        LoadCustomPuzzle(startingLayout5);
+        puzzleGenerator.SetCustomPowerups(startingPowerups2);
     }
     
     private void SetupTutorial5(){
@@ -166,6 +176,8 @@ public class TutorialManager : BattleManager {
         canShowEnemyHealth = true;
         canEnemyDie = false;
         uiManager.earthBuffBottom.gameObject.SetActive(true);
+        LoadCustomPuzzle(startingLayout6);
+        puzzleGenerator.SetCustomPowerups(startingPowerups3);
     }
 
     public override void QueueEnemyAttack(){
@@ -182,7 +194,7 @@ public class TutorialManager : BattleManager {
             HideStrength();
     }
 
-    private void AdvanceTutorialStep(){
+    public void AdvanceTutorialStep(){
         switch (tutorialNumber){
             case (1):
                 AdvanceTutorial1();
@@ -217,7 +229,6 @@ public class TutorialManager : BattleManager {
         int i = 0;
         if (++i == tutorialStep){
             DisplayText("Swipe some letters to select a word. Start by spelling the word 'DOG'.");//Tap a letter to select it. Start by selecting the letter 'D'.");
-            LoadCustomPuzzle(startingLayout1);
             highlightWord1.SetActive(true);
             advanceCondition = Cond.CompleteWord;
             requiredWord = new char[] {'D', 'O', 'G'};
@@ -301,9 +312,8 @@ public class TutorialManager : BattleManager {
         tutorialStep ++;
         int i = 0;
         if (++i == tutorialStep){
-            ShowTutorialShadow(true);
+            ShowTutorialShadow();
             DisplayText("An enemy's health is shown above, in red.");
-            LoadCustomPuzzle(startingLayout2);
             highlightEnemyHealth.SetActive(true);
             advanceCondition = Cond.Click;
         }
@@ -492,15 +502,12 @@ public class TutorialManager : BattleManager {
         }
     }
 
-
     private void AdvanceTutorial3(){
         tutorialStep ++;
         int i = 0;
         if (++i == tutorialStep){
-            ShowTutorialShadowForLetters(true);
+            ShowTutorialShadowForLetters(0.5f);
             DisplayText("The true magic within the book has awakened!");
-            LoadCustomPuzzle(startingLayout4);
-            puzzleGenerator.SetCustomPowerups(startingPowerups1);
             advanceCondition = Cond.Click;
         }
         else if (++i == tutorialStep){
@@ -529,7 +536,7 @@ public class TutorialManager : BattleManager {
             advanceCondition = Cond.PlayerGetsHealed;
         }
         else if (++i == tutorialStep){
-            ShowTutorialShadowForLetters();
+            ShowTutorialShadowForLetters(0.5f);
             DisplayPlayerTalking("Wow! I feel so refreshed!", DialogueStep.Emotion.Happy);
             advanceCondition = Cond.Click;
         }
@@ -639,15 +646,12 @@ public class TutorialManager : BattleManager {
         }
     }
 
-
     private void AdvanceTutorial4(){
         tutorialStep ++;
         int i = 0;
         if (++i == tutorialStep){
-            ShowTutorialShadowForLetters(true);
+            ShowTutorialShadowForLetters(0.5f);
             DisplayPlayerTalking("I really shouldn't use the <water>power of water<> here.", DialogueStep.Emotion.Normal);
-            LoadCustomPuzzle(startingLayout5);
-            puzzleGenerator.SetCustomPowerups(startingPowerups2);
             advanceCondition = Cond.Click;
         }
         else if (++i == tutorialStep){
@@ -731,15 +735,12 @@ public class TutorialManager : BattleManager {
         }
     }
     
-    
     private void AdvanceTutorial5(){
         tutorialStep ++;
         int i = 0;
         if (++i == tutorialStep){
             ShowTutorialShadow();
             DisplayPlayerTalking("All right! I can finally let loose with some <fire>fireballs<>!", DialogueStep.Emotion.Normal);
-            LoadCustomPuzzle(startingLayout6);
-            puzzleGenerator.SetCustomPowerups(startingPowerups3);
             advanceCondition = Cond.Click;
         }
         else if (++i == tutorialStep){
@@ -774,7 +775,7 @@ public class TutorialManager : BattleManager {
             advanceCondition = Cond.EnemyTakesDamage;
         }
         else if (++i == tutorialStep){
-            ShowTutorialShadowForLetters();
+            ShowTutorialShadowForLetters(0.5f);
             DisplayText("Using the <fire>power of fire<> does come with a downside, however.");
             advanceCondition = Cond.Click;
         }
@@ -848,7 +849,6 @@ public class TutorialManager : BattleManager {
         }
     }
 
-
     public override void TurnPageEnded(){
         switch(advanceCondition){
             case (Cond.TurnPageEnds):
@@ -885,12 +885,19 @@ public class TutorialManager : BattleManager {
     }
 
     private void SetupDialogueManager(){
-        print("setting up dialogue manager");
         uiManager.dialogueManager.tutorialManager = this;
+        MoveDialogueManagerOverlayOffscreen(0);
         uiManager.dialogueManager.HideFakeButtons();
         uiManager.dialogueManager.ClearDialogue();
         uiManager.dialogueManager.SetStartingValues();
-        uiManager.dialogueManager.TransitionToShowing();
+    }
+
+    public void MoveDialogueManagerOverlayOffscreen(float duration){
+        float newPos = -uiManager.dialogueManager.overlay.rect.height - uiManager.dialogueManager.overlay.parent.localPosition.y;
+        if (duration == 0)
+            uiManager.dialogueManager.overlay.anchoredPosition = new Vector2(uiManager.dialogueManager.overlay.anchoredPosition.x, newPos);
+        else
+            uiManager.dialogueManager.overlay.DOAnchorPosY(newPos, duration);
     }
 
     private void HideCountdown(){
@@ -1203,34 +1210,39 @@ public class TutorialManager : BattleManager {
         }
     }
     
-    private void ShowTutorialShadow(bool immediately = false){
+    private void ShowTutorialShadow(float duration = 0.5f){
         tutorialShadow.gameObject.SetActive(true);
-        if (immediately)
-            return;
-        Color c = tutorialShadowOriginalColor;
-        c.a = 0;
-        tutorialShadow.color = c;
-        tutorialShadow.DOFade(tutorialShadowOriginalColor.a, 0.5f);
+        tutorialShadow.color = tutorialShadowOriginalColor;
+        if (duration != 0)
+            StaticVariables.FadeIn(tutorialShadow, duration, true);
     }
     
-    private void HideTutorialShadow(){
+    public void HideTutorialShadow(float duration = 0.5f){
         tutorialShadow.color = tutorialShadowOriginalColor;
-        tutorialShadow.DOFade(0, 0.5f);
+        if (duration == 0)
+            tutorialShadow.gameObject.SetActive(false);
+        else{
+            StaticVariables.FadeOut(tutorialShadow, duration);
+            StaticVariables.WaitTimeThenCallFunction(duration, tutorialShadow.gameObject.SetActive, false);
+        }
     }
-    private void ShowTutorialShadowForLetters(bool immediately = false){
+    private void ShowTutorialShadowForLetters(float duration = 0.5f){
         tutorialShadowForLetters.gameObject.SetActive(true);
-        if (immediately)
-            return;
-        Color c = tutorialShadowOriginalColor;
-        c.a = 0;
-        tutorialShadow.color = c;
-        tutorialShadowForLetters.DOFade(tutorialShadowOriginalColor.a, 0.5f);
+        tutorialShadowForLetters.color = tutorialShadowOriginalColor;
+        if (duration != 0){
+            StaticVariables.FadeIn(tutorialShadowForLetters, duration, true);
+        }
         
     }
     
-    private void HideTutorialShadowForLetters(){
+    public void HideTutorialShadowForLetters(float duration = 0.5f){
         tutorialShadowForLetters.color = tutorialShadowOriginalColor;
-        tutorialShadowForLetters.DOFade(0, 0.5f);
+        if (duration == 0)
+            tutorialShadowForLetters.gameObject.SetActive(false);
+        else{
+            StaticVariables.FadeOut(tutorialShadowForLetters, duration);
+            StaticVariables.WaitTimeThenCallFunction(duration, tutorialShadowForLetters.gameObject.SetActive, false);
+        }
     }
     
     private void MoveDialogueBoxOffScreen(){
@@ -1247,25 +1259,16 @@ public class TutorialManager : BattleManager {
     }
 
     public void ClickedBackButtonInTutorial() {
-        if (puzzleGenerator.useSmallerLayout)
-            uiManager.PushedQuitButton();
-        else
-            uiManager.PushedPauseButton();
-    }
-
-    private void FillFakeLettersBehindDialogue() {
-        foreach (LetterSpace ls in puzzleGenerator.letterSpaces)
-            if ((ls.letter == '=') || (ls.letter == ' ')){
-                int index = StaticVariables.rand.Next(StaticVariables.randomLetterPool.Length);
-                char l = StaticVariables.randomLetterPool[index];
-                ls.UpdateLetter(l);
-            }
+        uiManager.PushedQuitButton();
+        //if (puzzleGenerator.useSmallerLayout)
+        //    uiManager.PushedQuitButton();
+        //else
+        //    uiManager.PushedPauseButton();
     }
     
     private void ExpandToFullPuzzle(){
         //don't call while page is full of water
         puzzleGenerator.useSmallerLayout = false;
-        FillFakeLettersBehindDialogue();
         TurnToNewPage();
         UpdateSubmitVisuals();
         MoveDialogueBoxOffScreen();

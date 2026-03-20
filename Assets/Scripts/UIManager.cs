@@ -6,6 +6,7 @@ using DG.Tweening;
 using System.Dynamic;
 using TMPro;
 using MyBox;
+using System.Linq.Expressions;
 //using System.Numerics;
 
 public class UIManager : MonoBehaviour {
@@ -134,6 +135,7 @@ public class UIManager : MonoBehaviour {
 
     [HideInInspector]
     public BattleManager.PowerupTypes powerupType;
+    private Vector2 bookStartingPos;
 
 
     public void SetStartingValues() {
@@ -149,6 +151,10 @@ public class UIManager : MonoBehaviour {
         SetOriginalPowerupBackgroundTransparencies();
         if (battleManager.enemyData.isCopycat)
             ShowCopycatBuildup();
+
+        bookStartingPos = book.localPosition;
+        MoveBookOffScreen(0);
+        //book.localPosition = new Vector2(-(book.localPosition.x + book.rect.width + 35), book.localPosition.y);
     }
 
     public void DisplayHealths(int playerHealth, int enemyHealth) {
@@ -184,6 +190,78 @@ public class UIManager : MonoBehaviour {
         enemyHP2DigitOnes.transform.parent.gameObject.SetActive((enemyHealth >= 10) && (enemyHealth <= 99));
         enemyHP3DigitOnes.transform.parent.gameObject.SetActive((enemyHealth >= 100) && (enemyHealth <= 999));
         enemyHP4DigitOnes.transform.parent.gameObject.SetActive(enemyHealth >= 1000);
+    }
+
+    public void SetHealthsTransparent(){
+        StaticVariables.SetTransparent(playerHP1DigitOnes);
+        StaticVariables.SetTransparent(playerHP2DigitOnes);
+        StaticVariables.SetTransparent(playerHP2DigitTens);
+        StaticVariables.SetTransparent(playerHP3DigitOnes);
+        StaticVariables.SetTransparent(playerHP3DigitTens);
+        StaticVariables.SetTransparent(playerHP3DigitHundreds);
+        StaticVariables.SetTransparent(playerHP4DigitOnes);
+        StaticVariables.SetTransparent(playerHP4DigitTens);
+        StaticVariables.SetTransparent(playerHP4DigitHundreds);
+        StaticVariables.SetTransparent(playerHP4DigitThousands);
+
+        StaticVariables.SetTransparent(enemyHP1DigitOnes);
+        StaticVariables.SetTransparent(enemyHP2DigitOnes);
+        StaticVariables.SetTransparent(enemyHP2DigitTens);
+        StaticVariables.SetTransparent(enemyHP3DigitOnes);
+        StaticVariables.SetTransparent(enemyHP3DigitTens);
+        StaticVariables.SetTransparent(enemyHP3DigitHundreds);
+        StaticVariables.SetTransparent(enemyHP4DigitOnes);
+        StaticVariables.SetTransparent(enemyHP4DigitTens);
+        StaticVariables.SetTransparent(enemyHP4DigitHundreds);
+        StaticVariables.SetTransparent(enemyHP4DigitThousands);
+    }
+
+    public void FadeInHealths(float duration){
+        StaticVariables.FadeIn(playerHP1DigitOnes, duration, false);
+        StaticVariables.FadeIn(playerHP2DigitOnes, duration, false);
+        StaticVariables.FadeIn(playerHP2DigitTens, duration, false);
+        StaticVariables.FadeIn(playerHP3DigitOnes, duration, false);
+        StaticVariables.FadeIn(playerHP3DigitTens, duration, false);
+        StaticVariables.FadeIn(playerHP3DigitHundreds, duration, false);
+        StaticVariables.FadeIn(playerHP4DigitOnes, duration, false);
+        StaticVariables.FadeIn(playerHP4DigitTens, duration, false);
+        StaticVariables.FadeIn(playerHP4DigitHundreds, duration, false);
+        StaticVariables.FadeIn(playerHP4DigitThousands, duration, false);
+
+        StaticVariables.FadeIn(enemyHP1DigitOnes, duration, false);
+        StaticVariables.FadeIn(enemyHP2DigitOnes, duration, false);
+        StaticVariables.FadeIn(enemyHP2DigitTens, duration, false);
+        StaticVariables.FadeIn(enemyHP3DigitOnes, duration, false);
+        StaticVariables.FadeIn(enemyHP3DigitTens, duration, false);
+        StaticVariables.FadeIn(enemyHP3DigitHundreds, duration, false);
+        StaticVariables.FadeIn(enemyHP4DigitOnes, duration, false);
+        StaticVariables.FadeIn(enemyHP4DigitTens, duration, false);
+        StaticVariables.FadeIn(enemyHP4DigitHundreds, duration, false);
+        StaticVariables.FadeIn(enemyHP4DigitThousands, duration, false);
+    }
+
+    public void FadeOutHealths(float duration){
+        StaticVariables.FadeOut(playerHP1DigitOnes, duration);
+        StaticVariables.FadeOut(playerHP2DigitOnes, duration);
+        StaticVariables.FadeOut(playerHP2DigitTens, duration);
+        StaticVariables.FadeOut(playerHP3DigitOnes, duration);
+        StaticVariables.FadeOut(playerHP3DigitTens, duration);
+        StaticVariables.FadeOut(playerHP3DigitHundreds, duration);
+        StaticVariables.FadeOut(playerHP4DigitOnes, duration);
+        StaticVariables.FadeOut(playerHP4DigitTens, duration);
+        StaticVariables.FadeOut(playerHP4DigitHundreds, duration);
+        StaticVariables.FadeOut(playerHP4DigitThousands, duration);
+
+        StaticVariables.FadeOut(enemyHP1DigitOnes, duration);
+        StaticVariables.FadeOut(enemyHP2DigitOnes, duration);
+        StaticVariables.FadeOut(enemyHP2DigitTens, duration);
+        StaticVariables.FadeOut(enemyHP3DigitOnes, duration);
+        StaticVariables.FadeOut(enemyHP3DigitTens, duration);
+        StaticVariables.FadeOut(enemyHP3DigitHundreds, duration);
+        StaticVariables.FadeOut(enemyHP4DigitOnes, duration);
+        StaticVariables.FadeOut(enemyHP4DigitTens, duration);
+        StaticVariables.FadeOut(enemyHP4DigitHundreds, duration);
+        StaticVariables.FadeOut(enemyHP4DigitThousands, duration);
     }
 
     public void ShowPlayerTakingDamage(int amount, bool stillAlive) {
@@ -433,6 +511,12 @@ public class UIManager : MonoBehaviour {
         }
     }
 
+    public void RefillEnemyAttackBarAtEndOfBattle(float duration){
+        DOTween.Kill(enemyTimerBar);
+        enemyTimerBar.DOScale(Vector3.one, duration).SetEase(Ease.Linear);
+        enemyTimerBarImage.color = defaultEnemyTimerBarColor;
+    }
+
     public void StartEnemyAttackAnimation(EnemyAttack.EnemyAttackTypes attackType = EnemyAttack.EnemyAttackTypes.None) {
         if (battleManager.enemyData.isHorde) {
             foreach (Animator anim in enemyHordeAnimators)
@@ -628,16 +712,42 @@ public class UIManager : MonoBehaviour {
             return;
         movingBook = true;
         if (IsPuzzlePageShowing()) {
-            book.DOLocalMoveX((book.localPosition.x + book.rect.width), 0.5f).OnComplete(MovingBookEnded);
+            //PushedQuitButton();
+            //return;
+            MoveBookToPausedPos(0.5f);
+            //book.DOLocalMoveX((book.localPosition.x + book.rect.width), 0.5f).OnComplete(MovingBookEnded);
             pauseButton.SlideOut();
             //pauseButton.DOAnchorPosY(350f, 0.5f);
             battleManager.PauseEverything();
         }
         else {
-            book.DOLocalMoveX((book.localPosition.x - book.rect.width), 0.5f).OnComplete(MovingBookEnded);
+            //book.DOLocalMoveX((book.localPosition.x - book.rect.width), 0.5f).OnComplete(MovingBookEnded);
+            ReturnBookToStartingPos(0.5f, Ease.InOutSine);
+            StaticVariables.WaitTimeThenCallFunction(0.5f, MovingBookEnded);
+            //book.DOLocalMoveX(bookStartingPos.x, 0.5f).OnComplete(MovingBookEnded);
             pauseButton.SlideIn();
             //pauseButton.DOAnchorPosY(0, 0.5f);
         }
+    }
+
+    private void MoveBookToPausedPos(float duration){
+        book.DOLocalMoveX(bookStartingPos.x + book.rect.width, duration);
+    }
+
+    public void ReturnBookToStartingPos(float duration, Ease ease){
+        book.DOLocalMoveX(bookStartingPos.x, duration).SetEase(ease);
+    }
+
+    public void MoveBookOffScreen(float duration){
+        float newPos;
+        if (IsPuzzlePageShowing())
+            newPos = -(bookStartingPos.x + book.rect.width + 35);
+        else
+            newPos = bookStartingPos.x + book.rect.width + book.rect.width + 50;
+        if (duration == 0)
+            book.localPosition = new Vector2 (newPos, bookStartingPos.y);
+        else
+            book.DOLocalMoveX(newPos, duration).SetEase(Ease.InSine);
     }
 
     private void MovingBookEnded() {

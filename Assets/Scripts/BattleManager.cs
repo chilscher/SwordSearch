@@ -73,11 +73,9 @@ public class BattleManager : MonoBehaviour {
     public PuzzleGenerator puzzleGenerator;
     public PlayerAnimatorFunctions playerAnimatorFunctions;
     private float enemyDifficultyHealthModifier = 1f;
-    //public GeneralSceneManager generalSceneManager;
 
-    public virtual void Start() {
-        //GetComponent<GeneralSceneManager>().Setup();
-        //generalSceneManager.Setup();
+    public virtual void Setup(){
+        StaticVariables.SetOpaque(uiManager.blackForeground);
         countdownToRefresh = maxPuzzleCountdown;
         if (StaticVariables.battleData == null)
             StaticVariables.battleData = defaultBattleData;
@@ -93,7 +91,7 @@ public class BattleManager : MonoBehaviour {
             enemyHealth = enemyData.startingHealth;
         switch (StaticVariables.difficultyMode) {
             case StaticVariables.DifficultyMode.Story:
-            //    enemyDifficultyHealthModifier = -1;
+                //enemyDifficultyHealthModifier = -1;
                 enemyHealth = 1;
                 break;
             case StaticVariables.DifficultyMode.Puzzle:
@@ -120,16 +118,13 @@ public class BattleManager : MonoBehaviour {
         inProgressWord = new(this);
         uiManager.SetStartingValues();
         uiManager.DisplayHealths(playerHealth, enemyHealth);
+        uiManager.SetHealthsTransparent();
         uiManager.DisplayWord(inProgressWord, countdownToRefresh);
-        //StaticVariables.FadeIntoScene();
-        //StaticVariables.WaitTimeThenCallFunction(StaticVariables.sceneFadeDuration, QueueEnemyAttack); //scenechangervisuals calls this
         puzzleGenerator.Setup();
-        //generalSceneManager.FadeIn();
     }
 
-    public void Setup(){
-        StaticVariables.SetOpaque(uiManager.blackForeground);
-        
+    public void StartBattle(){
+        QueueEnemyAttack();
     }
 
     public void Update() {
@@ -172,7 +167,6 @@ public class BattleManager : MonoBehaviour {
         uiManager.DisplayHealths(playerHealth, enemyHealth);
         if (enemyHealth <= 0){
             stopNextAttack = true;
-            uiManager.PauseEnemyAttackBar();
             uiManager.PauseWaterDrain();
             uiManager.FadeOutWaterOverlay();
             uiManager.RemoveRocksFromEdgeOfPuzzle();
