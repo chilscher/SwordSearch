@@ -486,7 +486,7 @@ public class SceneChangerVisuals : MonoBehaviour {
         else if (CheckSceneChange(SceneChanger.Scene.World, SceneChanger.Scene.Battle) || CheckSceneChange(SceneChanger.Scene.World, SceneChanger.Scene.Tutorial)){
             fakeBattle.gameObject.SetActive(true);
             fakeBattleMask.localScale = Vector3.one * 8;
-            overworldManager.interactOverlayManager.MoveInteractOverlayDown(0.5f);
+            overworldManager.interactOverlayManager.HideInteractOverlay(false);
             foreach (OverworldSpace os in overworldManager.overworldSpaces){
                 foreach (PathStep ps in os.steps)
                     ps.HideStep(0.5f);
@@ -501,7 +501,10 @@ public class SceneChangerVisuals : MonoBehaviour {
             battleManager.uiManager.MoveBookOffScreen(0.5f);
             battleManager.uiManager.FadeOutHealths(0.5f);
             battleManager.uiManager.RefillEnemyAttackBarAtEndOfBattle(0.5f);
-            battleManager.uiManager.dialogueManager.HideChatheads(0.5f);
+            DialogueManager dm = battleManager.uiManager.dialogueManager;
+            dm.HideChatheads(0.5f);
+            StaticVariables.FadeOut(dm.screenDarkener, 0.5f);
+            dm.overlay.DOLocalMoveY(dm.overlay.localPosition.y-dm.overlay.rect.height, 0.5f).SetEase(Ease.InSine);
             StaticVariables.FadeIn(battleManager.uiManager.blackForeground, 0.5f, false);
             StaticVariables.WaitTimeThenCallFunction(0.5f, TriggerSceneChange);
             return;

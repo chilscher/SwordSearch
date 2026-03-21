@@ -897,7 +897,7 @@ public class TutorialManager : BattleManager {
         if (duration == 0)
             uiManager.dialogueManager.overlay.anchoredPosition = new Vector2(uiManager.dialogueManager.overlay.anchoredPosition.x, newPos);
         else
-            uiManager.dialogueManager.overlay.DOAnchorPosY(newPos, duration);
+            uiManager.dialogueManager.overlay.DOAnchorPosY(newPos, duration).SetEase(Ease.InSine);
     }
 
     private void HideCountdown(){

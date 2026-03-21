@@ -125,6 +125,8 @@ public class BattleManager : MonoBehaviour {
 
     public void StartBattle(){
         QueueEnemyAttack();
+        //DamageEnemyHealth(1000); //for testing the end of a battle right away
+        //DamagePlayerHealth(1000); //for testing the end of a battle right away
     }
 
     public void Update() {

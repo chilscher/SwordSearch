@@ -507,16 +507,18 @@ public class InteractOverlayManager : MonoBehaviour{
         readOptionsParent.parent.gameObject.SetActive(false);
     }
 
-    private void HideInteractOverlay(){
+    public void HideInteractOverlay(bool showSceneHeader = true){
         MoveInteractOverlayDown(transitionDuration);
         clickableBackground.SetActive(false);
         isMovingInteractOverlay = true;
-        overworldSceneManager.ShowSceneHeader(transitionDuration);
+        if (showSceneHeader)
+            overworldSceneManager.ShowSceneHeader(transitionDuration);
         overworldSceneManager.overworldView.DOAnchorPosY(0, transitionDuration).OnComplete(FinishedHidingInteractOverlay);
     }
 
     public void MoveInteractOverlayDown(float duration){
-        interactOverlay.DOAnchorPosY(-interactOverlay.rect.height, duration).SetEase(Ease.InSine);
+        //interactOverlay.DOAnchorPosY(-interactOverlay.rect.height, duration).SetEase(Ease.InSine);
+        interactOverlay.DOAnchorPosY(-interactOverlay.rect.height, duration);
     }
 
     private void FinishedHidingInteractOverlay(){
