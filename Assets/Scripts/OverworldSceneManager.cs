@@ -338,7 +338,7 @@ public class OverworldSceneManager : MonoBehaviour{
         if (revealLastEnemySlowly)
             StaticVariables.WaitTimeThenCallFunction(1.5f, RevealNextEnemy); //FinishEnteringOverworld will eventually be called by RevealNextEnemy
         else
-            StaticVariables.WaitTimeThenCallFunction(1f, sceneChangerVisuals.FinishEnteringOverworld);
+            sceneChangerVisuals.FinishEnteringOverworld();
     }
 
     public void HideProgress(){

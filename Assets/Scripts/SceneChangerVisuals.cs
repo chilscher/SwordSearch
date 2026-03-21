@@ -688,7 +688,8 @@ public class SceneChangerVisuals : MonoBehaviour {
     }
 
     private void EnableAnimator(Animator animator){
-        animator.enabled = true;
+        if (SceneChanger.goingTo == SceneChanger.Scene.Homepage) //don't enable the animator if we are changing to another scene already
+            animator.enabled = true;
     }
 
     private void ScaleDownFakeHomepage(){

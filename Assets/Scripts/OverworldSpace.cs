@@ -98,7 +98,7 @@ public class OverworldSpace : MonoBehaviour{
             if (steps[i].isDestination)
                 StaticVariables.WaitTimeThenCallFunction(0.5f * i, FadeInEnemy, 0.5f);
         }
-        StaticVariables.WaitTimeThenCallFunction(steps.Length * 0.5f, overworldSceneManager.sceneChangerVisuals.FinishEnteringOverworld);
+        StaticVariables.WaitTimeThenCallFunction((steps.Length - 1) * 0.5f, overworldSceneManager.sceneChangerVisuals.FinishEnteringOverworld);
     }
 
     public void HideEnemy(float duration){
@@ -111,6 +111,7 @@ public class OverworldSpace : MonoBehaviour{
                 enemyImages.Add(transform.GetChild(0).GetChild(0).GetComponent<Image>());
             
             foreach (Image im in enemyImages){
+                im.DOKill();
                 StaticVariables.FadeOut(im, duration);
                 im.GetComponent<Animator>().enabled = false;
         }
