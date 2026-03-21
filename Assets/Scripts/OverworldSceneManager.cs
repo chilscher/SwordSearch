@@ -85,7 +85,7 @@ public class OverworldSceneManager : MonoBehaviour{
 
     private void ImmediatelyStartNextWorld(){
         StaticVariables.lastVisitedStage = StaticVariables.highestBeatenStage.nextStage;
-        SceneManager.LoadScene(StaticVariables.lastVisitedStage.worldName);
+        SceneChanger.GoNextWorld(StaticVariables.lastVisitedStage.world);
     }
 
     private void SetPowerupAvailability(){

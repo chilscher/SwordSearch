@@ -60,6 +60,22 @@ public class SceneChanger{
         goingTo = Scene.World;
         visuals.AnimateLeavingScene();
     }
+
+    static public void GoNextWorld(int num){
+        //only used when you complete the last level in a world, and the next world is immediately loaded
+        //the fade-in stuff should operate the same as if you came directly from the last scene, with no changes
+        nextSceneName = num switch {
+            1 => "World 1 - Hometown",
+            2 => "World 2 - Grasslands",
+            3 => "World 3 - Enchanted Forest",
+            4 => "World 4 - Sunscorched Desert",
+            5 => "World 5 - Duskvale",
+            6 => "World 6 - Frostlands",
+            7 => "World 7 - Caverns",
+            _ => "World 1 - Hometown",
+        };
+        LoadScene();
+    }
     
     static public void GoCutscene(){
         nextSceneName = "Cutscene";
