@@ -17,13 +17,10 @@ public class OverworldSceneManager : MonoBehaviour{
     public OverworldSpace[] overworldSpaces;
     public RectTransform sceneHeader;
     public SceneChangerVisuals sceneChangerVisuals;
-    //public GeneralSceneManager generalSceneManager;
 
 
     [Header("Timing Configurations")]
     public float playerStepDuration = 0.2f; //time it takes to move 1 overworld space step
-    //public float playerWalkSpeed = 500f;
-    //public float minTimeToMove = 1f;
 
     [Header("Overworld Settings")]
     public int thisWorldNum; // 0 means this is the atlas/map scene
@@ -48,8 +45,6 @@ public class OverworldSceneManager : MonoBehaviour{
     private List<GameObject> stepsToNextSpace;
     public bool revealLastEnemySlowly = false;
     public int stageIndexToQuickReveal = -1;
-    //private bool changePlayerDirectionAtNextStep = false;
-    //private bool playerDestinationIsNextStep = false;
 
 
     void Start(){
@@ -60,7 +55,6 @@ public class OverworldSceneManager : MonoBehaviour{
         if (thisWorldNum == 0){
             PlacePlayerAtPosition(StaticVariables.lastVisitedStage.world);
             //showing atlas progress is handled by the scene changer visuals
-            //ShowAtlasProgress();
         }
         else{
             SetPowerupAvailability();
@@ -70,10 +64,8 @@ public class OverworldSceneManager : MonoBehaviour{
             stageIndexToQuickReveal = StaticVariables.highestBeatenStage.nextStage.index;
             CheckIfCompletedStage();
             //showing overworld progress is handled by the scene changer visuals
-            //ShowOverworldProgress(lastStageToQuickReveal);
         }
         interactOverlayManager.Setup();
-        //generalSceneManager.FadeIn();
     }
 
     public void CheckIfCompletedStage(){
@@ -282,12 +274,7 @@ public class OverworldSceneManager : MonoBehaviour{
         if (currentPlayerSpace.type == OverworldSpace.OverworldSpaceType.Atlas){
             StaticVariables.lastVisitedStage = StaticVariables.GetStage(currentPlayerSpace.worldNumber, 1);
             SceneChanger.GoWorld(StaticVariables.lastVisitedStage.world);
-            //StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
             return;
-
-            
-        //StaticVariables.lastVisitedStage = StaticVariables.GetStage(worldNum, 1);
-        //StaticVariables.FadeOutThenLoadScene(StaticVariables.lastVisitedStage.worldName);
         }
 
         SetLastWorldStageVisited(currentPlayerSpace);
@@ -321,7 +308,6 @@ public class OverworldSceneManager : MonoBehaviour{
         StaticVariables.battleData = space.battleData;
         SetLastWorldStageVisited(space);
         SceneChanger.GoBattle();
-        //StaticVariables.FadeOutThenLoadScene(StaticVariables.battleSceneName);
     }
 
     public void ShowOverworldProgress(int index){
@@ -388,10 +374,8 @@ public class OverworldSceneManager : MonoBehaviour{
                 playerParent.gameObject.SetActive(false);
                 FadeInPlayer(1f);
             }
-            //else{
-                step.HideStep(0);
-                step.ShowStep(1f);
-            //}
+            step.HideStep(0);
+            step.ShowStep(1f);
         }
     }
 
@@ -457,7 +441,6 @@ public class OverworldSceneManager : MonoBehaviour{
             StaticVariables.battleData = currentPlayerSpace.battleData;
             SetLastWorldStageVisited(currentPlayerSpace);
             SceneChanger.GoTutorial();
-            //StaticVariables.FadeOutThenLoadScene("Tutorial");
         }
     }
 
@@ -468,14 +451,6 @@ public class OverworldSceneManager : MonoBehaviour{
             SceneChanger.GoCutscene();
         }
     }
-
-    //public void BackToMap(){
-    //    StaticVariables.FadeOutThenLoadScene(StaticVariables.mapName);
-    //}
-
-    //public void BackToHomepage(){
-    //    StaticVariables.FadeOutThenLoadScene(StaticVariables.mainMenuName);
-    //}
 
     public void FinishedTalking(){
         if (IsCurrentEnemyNewestEnemy()) {

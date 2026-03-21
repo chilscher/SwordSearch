@@ -111,9 +111,7 @@ public class OverworldSpace : MonoBehaviour{
                 enemyImages.Add(transform.GetChild(0).GetChild(0).GetComponent<Image>());
             
             foreach (Image im in enemyImages){
-                Color enemyImageColor = Color.white;
-                enemyImageColor.a = 0;
-                im.DOColor(enemyImageColor, duration);
+                StaticVariables.FadeOut(im, duration);
                 im.GetComponent<Animator>().enabled = false;
         }
 
@@ -123,9 +121,7 @@ public class OverworldSpace : MonoBehaviour{
                 enemyImages.Add(t.GetComponent<Image>());
                 
             foreach (Image im in enemyImages){
-                Color enemyImageColor = im.color;
-                enemyImageColor.a = 0;
-                im.DOColor(enemyImageColor, duration);
+                StaticVariables.FadeOut(im, duration);
             }
         }
     }

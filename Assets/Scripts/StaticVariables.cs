@@ -12,9 +12,6 @@ public class StaticVariables{
     static public Transform tweenDummy;
     static public System.Random rand = new();
     static public BattleData battleData = null;
-    static private string sceneName = "";
-    static public Image fadeImage;
-    static public float sceneFadeDuration = 0.5f;
     static public bool healActive = true;
     static public bool waterActive = true;
     static public bool fireActive = false;
@@ -44,10 +41,7 @@ public class StaticVariables{
     static public string[] words6LetterNoSwearsLibrary;
     static public string[] words7LetterLibrary;
     static public string[] words7LetterNoSwearsLibrary;
-    //static public string[] wordLibraryForChecking;
-    //static public string[] wordLibraryForGeneration;
     static public char[] randomLetterPool;
-    //static public string[] wordLibraryForGeneratingSmallerPuzzles;
 
     //stages
     static public List<StageData> allStages;
@@ -124,41 +118,6 @@ public class StaticVariables{
         tweenDummy.DOLocalMove(tweenDummy.localPosition, delay, false).OnComplete(()=>function(param));
     }
 
-
-    //static public void FadeOutThenLoadScene(string name){
-    //    sceneName = name;
-    //    StartFadeDarken(sceneFadeDuration);
-    //    WaitTimeThenCallFunction(sceneFadeDuration, LoadScene);
-    //}
-
-    //static public void FadeIntoScene(){
-    //    StartFadeLighten(sceneFadeDuration);
-    //}
-
-    //static public void StartFadeDarken(float duration){
-    //    Color currentColor = Color.black;
-    //    currentColor.a = 0;
-    //    fadeImage.color = currentColor;
-    //    fadeImage.gameObject.SetActive(true);
-    //    fadeImage.DOColor(Color.black, duration);
-    //}
-
-    //static public void StartFadeLighten(float duration){
-    //    Color nextColor = Color.black;
-    //    nextColor.a = 0;
-    //    fadeImage.color = Color.black;
-    //    fadeImage.gameObject.SetActive(true);
-    //    fadeImage.DOColor(nextColor, duration).OnComplete(HideFadeObject);
-    //}
-
-    //static private void HideFadeObject(){
-    //    fadeImage.gameObject.SetActive(false);
-    //}
-
-    //static private void LoadScene(){
-    //    SceneManager.LoadScene(sceneName);
-    //}
-
     static public StageData GetStage(int worldNum, int stageNum){
         foreach (StageData stageData in allStages){
             if (stageData.world == worldNum && stageData.stage == stageNum)
@@ -200,18 +159,30 @@ public class StaticVariables{
     }
 
     static public void FadeOut(Image im, float duration){
+        if (duration == 0){
+            SetTransparent(im);
+            return;
+        }
         Color c = im.color;
         c.a = 0;
         im.DOColor(c, duration);
     }
 
     static public void FadeOut(Text txt, float duration){
+        if (duration == 0){
+            SetTransparent(txt);
+            return;
+        }
         Color c = txt.color;
         c.a = 0;
         txt.DOColor(c, duration);
     }
 
     static public void FadeIn(Image im, float duration, bool useCurrentOpacity=true){
+        if (duration == 0){
+            SetOpaque(im);
+            return;
+        }
         Color c1 = im.color;
         Color c2 = im.color;
         c1.a = 0;
@@ -219,7 +190,6 @@ public class StaticVariables{
             c2.a = 1; 
         im.color = c1;
         im.DOColor(c2, duration);
-
     }
 
     static public void SetTransparent(Image im){
