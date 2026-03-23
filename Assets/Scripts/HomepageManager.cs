@@ -11,26 +11,24 @@ using Unity.VisualScripting;
 
 public class HomepageManager : MonoBehaviour{
 
-    //continue adventure display
-    public Text hometownContinueAdventureText;
-    public GameObject continueHometown;
-    public GameObject continueGrasslands;
-    public GameObject continueForest;
-    public GameObject continueDesert;
-    public GameObject continueCity;
-    public GameObject continueFrostlands;
-    public GameObject continueCaverns;
-    public GameObject continueDragonsDen;
-    public Transform hometownEnemySpace;
-    public Transform grasslandsEnemySpace;
-    public Transform forestEnemySpace;
-    public Transform desertEnemySpace;
-    public Transform cityEnemySpace;
-    public Transform frostlandsEnemySpace;
-    public Transform cavernsEnemySpace;
-    public Transform dragonsDenEnemySpace;
-
-    //endless mode display
+    [Header("Continue Adventure")]
+    public Text continueAdventureText;
+    public GameObject hometownBackground;
+    public GameObject hometownSceneChangeBackground;
+    public GameObject grasslandsBackground;
+    public GameObject grasslandsSceneChangeBackground;
+    public GameObject forestBackground;
+    public GameObject forestSceneChangeBackground;
+    public GameObject desertBackground;
+    public GameObject desertSceneChangeBackground;
+    public GameObject duskvaleBackground;
+    public GameObject duskvaleSceneChangeBackground;
+    public GameObject frostlandsBackground;
+    public GameObject frostlandsSceneChangeBackground;
+    public GameObject cavernsBackground;
+    public GameObject cavernsSceneChangeBackground;
+    public Transform enemySpace;
+    [Header("Endless Mode")]
     public Transform endlessModeEnemiesParent;
     public Transform endlessModeEndPosition;
     public Transform endlessModePosition1;
@@ -38,14 +36,9 @@ public class HomepageManager : MonoBehaviour{
     public Transform endlessModePosition3;
     public Transform endlessModePosition4;
     public GameObject emptyGameObject;
-
     private List<GameObject> endlessModeEnemyPrefabs;
     private int endlessModeEnemyIndex = 0;
     private readonly float endlessModeMoveDuration = 9f;
-    void Start(){
-        //DisplayProgress();
-        //ShowEndlessModeEnemies();
-    }
 
     public void HitContinueAdventureButton(){
         //some way to designate which stage to go to when the level loads
@@ -122,33 +115,31 @@ public class HomepageManager : MonoBehaviour{
 
     public void DisplayProgress() {
         int nextEnemyWorldNum = StaticVariables.highestBeatenStage.nextStage.world;
-        continueHometown.SetActive(nextEnemyWorldNum == 1);
-        continueGrasslands.SetActive(nextEnemyWorldNum == 2);
-        continueForest.SetActive(nextEnemyWorldNum == 3);
-        continueDesert.SetActive(nextEnemyWorldNum == 4);
-        continueCity.SetActive(nextEnemyWorldNum == 5);
-        continueFrostlands.SetActive(nextEnemyWorldNum == 6);
-        continueCaverns.SetActive(nextEnemyWorldNum == 7);
-        continueDragonsDen.SetActive(nextEnemyWorldNum == 8);
+        hometownBackground.SetActive(nextEnemyWorldNum == 1);
+        grasslandsBackground.SetActive(nextEnemyWorldNum == 2);
+        forestBackground.SetActive(nextEnemyWorldNum == 3);
+        desertBackground.SetActive(nextEnemyWorldNum == 4);
+        duskvaleBackground.SetActive(nextEnemyWorldNum == 5);
+        frostlandsBackground.SetActive(nextEnemyWorldNum == 6);
+        cavernsBackground.SetActive(nextEnemyWorldNum == 7);
 
         GameObject enemyPrefab = StaticVariables.highestBeatenStage.nextStage.enemyPrefab;
-        Transform enemySpace = nextEnemyWorldNum switch {
-            1 => hometownEnemySpace,
-            2 => grasslandsEnemySpace,
-            3 => forestEnemySpace,
-            4 => desertEnemySpace,
-            5 => cityEnemySpace,
-            6 => frostlandsEnemySpace,
-            7 => cavernsEnemySpace,
-            8 => dragonsDenEnemySpace,
-            _ => hometownEnemySpace,
-        };
 
         GameObject enemyParent = GameObject.Instantiate(emptyGameObject, enemySpace.parent);
         enemyParent.transform.localPosition = enemySpace.localPosition;
         GameObject enemy = GameObject.Instantiate(enemyPrefab, enemyParent.transform);
 
         if ((nextEnemyWorldNum == 1) && (StaticVariables.highestBeatenStage.nextStage.stage == 1))
-            hometownContinueAdventureText.text = "BEGIN\nADVENTURE";
+            continueAdventureText.text = "BEGIN\nADVENTURE";
+    }
+
+    public void ShowSceneChangerBackground(int worldNum){
+        hometownSceneChangeBackground.SetActive(worldNum == 1);
+        grasslandsSceneChangeBackground.SetActive(worldNum == 2);
+        forestSceneChangeBackground.SetActive(worldNum == 3);
+        desertSceneChangeBackground.SetActive(worldNum == 4);
+        duskvaleSceneChangeBackground.SetActive(worldNum == 5);
+        frostlandsSceneChangeBackground.SetActive(worldNum == 6);
+        cavernsSceneChangeBackground.SetActive(worldNum == 7);
     }
 }

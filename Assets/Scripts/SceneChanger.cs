@@ -15,6 +15,7 @@ public class SceneChanger{
     static public string nextSceneName;
     static public float waitTime = 0.2f;
     static public float animationTime = 0.5f;
+    static public int worldNum;
 
 
     static public void GoHome(){

@@ -82252,6 +82252,8 @@ MonoBehaviour:
   fakeInteractOverlay2Overlay: {fileID: 7358177976797922586}
   fakeCutsceneBlackBackground: {fileID: 5834533216012843159}
   fakeCutsceneNameDivider: {fileID: 6425817381144799650}
+  battleManager: {fileID: 0}
+  tutorialManager: {fileID: 0}
   fakeBattle: {fileID: 5677908116463556880}
   fakeBattleMask: {fileID: 969615416392506344}
   fakeBattleBlackBackground: {fileID: 8356864823005511182}

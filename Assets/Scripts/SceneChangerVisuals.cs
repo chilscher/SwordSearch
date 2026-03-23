@@ -19,6 +19,7 @@ public class SceneChangerVisuals : MonoBehaviour {
     public RectTransform atlasSmall;
     public RectTransform atlasBig;
     public RectTransform atlasBigWorlds;
+    public Transform scenePreviews;
     public Transform hometownPreview;
     public Transform grasslandsPreview;
     public Transform forestPreview;
@@ -171,6 +172,9 @@ public class SceneChangerVisuals : MonoBehaviour {
         else if (CheckSceneChange(SceneChanger.Scene.World, SceneChanger.Scene.Homepage)){
             homepageManager.DisplayProgress();
             homepageManager.ShowEndlessModeEnemies();
+            homepageManager.ShowSceneChangerBackground(SceneChanger.worldNum);
+            HideChildren(scenePreviews);
+            HideChildren(endlessModeEnemies);
             return;
         }
         else if (CheckSceneChange(SceneChanger.Scene.World, SceneChanger.Scene.Cutscene)){
@@ -273,20 +277,7 @@ public class SceneChangerVisuals : MonoBehaviour {
             return;
         }
         else if (CheckSceneChange(SceneChanger.Scene.World, SceneChanger.Scene.Homepage)){
-            if (homepageManager.continueHometown.activeSelf)
-                FadeInChildren(hometownPreview, 1f);
-            if (homepageManager.continueGrasslands.activeSelf)
-                FadeInChildren(grasslandsPreview, 1f);
-            if (homepageManager.continueForest.activeSelf)
-                FadeInChildren(forestPreview, 1f);
-            if (homepageManager.continueDesert.activeSelf)
-                FadeInChildren(desertPreview, 1f);
-            if (homepageManager.continueCity.activeSelf)
-                FadeInChildren(duskvalePreview, 1f);
-            if (homepageManager.continueFrostlands.activeSelf)
-                FadeInChildren(frostlandsPreview, 1f);
-            if (homepageManager.continueCaverns.activeSelf)
-                FadeInChildren(cavernsPreview, 1f);
+            FadeInChildren(scenePreviews, 1f);
             FadeInChildren(endlessModeEnemies, 1f);
             StaticVariables.WaitTimeThenCallFunction(0.5f, EnableClicks);
             return;
@@ -421,6 +412,7 @@ public class SceneChangerVisuals : MonoBehaviour {
             return;
         }
         else if (CheckSceneChange(SceneChanger.Scene.World, SceneChanger.Scene.Homepage)){
+            SceneChanger.worldNum = overworldManager.thisWorldNum;
             sceneHeader.SlideOut();
             AudioManager.PlaySound(AudioManager.library.headerMoveOut);
             foreach (OverworldSpace os in overworldManager.overworldSpaces){
@@ -434,20 +426,8 @@ public class SceneChangerVisuals : MonoBehaviour {
             return;
         }
         else if (CheckSceneChange(SceneChanger.Scene.Homepage, SceneChanger.Scene.World)){
-            if (homepageManager.continueHometown.activeSelf)
-                FadeOutChildren(hometownPreview, 1f);
-            if (homepageManager.continueGrasslands.activeSelf)
-                FadeOutChildren(grasslandsPreview, 1f);
-            if (homepageManager.continueForest.activeSelf)
-                FadeOutChildren(forestPreview, 1f);
-            if (homepageManager.continueDesert.activeSelf)
-                FadeOutChildren(desertPreview, 1f);
-            if (homepageManager.continueCity.activeSelf)
-                FadeOutChildren(duskvalePreview, 1f);
-            if (homepageManager.continueFrostlands.activeSelf)
-                FadeOutChildren(frostlandsPreview, 1f);
-            if (homepageManager.continueCaverns.activeSelf)
-                FadeOutChildren(cavernsPreview, 1f);
+            FadeOutChildren(scenePreviews, 1f);
+            homepageManager.ShowSceneChangerBackground(StaticVariables.highestBeatenStage.nextStage.world);
             FadeOutChildren(endlessModeEnemies, 1f);
             StaticVariables.WaitTimeThenCallFunction(1f, TriggerSceneChange);
             return;
@@ -547,28 +527,12 @@ public class SceneChangerVisuals : MonoBehaviour {
         obj.DOLocalMoveX(0, 0.5f);
     }
 
-    private void MoveObjectToY0(RectTransform obj){
-        obj.DOLocalMoveY(0, 0.5f);
-    }
-
     private void MoveObjectToX0OutSine(RectTransform obj){
         obj.DOLocalMoveX(0, 0.5f).SetEase(Ease.OutSine);
     }
 
-    private void MoveObjectToX0InSine(RectTransform obj){
-        obj.DOLocalMoveX(0, 0.5f).SetEase(Ease.InSine);
-    }
-
     private void MoveObjectToXCustom1(RectTransform obj){
         obj.DOLocalMoveX(customVal1, 0.5f);
-    }
-
-    private void MoveObjectToYCustom1(RectTransform obj){
-        obj.DOLocalMoveY(customVal1, 0.5f);
-    }
-
-    private void MoveObjectToXCustom1InSine(RectTransform obj){
-        obj.DOLocalMoveX(customVal1, 0.5f).SetEase(Ease.InSine);
     }
 
     private void MoveObjectToXCustom1OutSine(RectTransform obj){
@@ -616,16 +580,28 @@ public class SceneChangerVisuals : MonoBehaviour {
             FadeInSelfAndChildren(t2, duration);
     }
 
+    private void HideChildren(Transform t) {
+        foreach (Transform t2 in t)
+            HideSelfAndChildren(t2);
+    }
+
+    private void HideSelfAndChildren(Transform t){
+        Image im = t.GetComponent<Image>();
+        if (im != null)
+            StaticVariables.SetTransparent(im);
+        Animator anim = t.GetComponent<Animator>();
+        if (anim != null){
+            anim.enabled = false;
+        }
+        foreach (Transform t2 in t)
+            HideSelfAndChildren(t2);
+        
+    }
+
     private void FadeInSelfAndChildren(Transform t, float duration){
         Image im = t.GetComponent<Image>();
-        if (im != null){
-            Color c1 = im.color;
-            Color c2 = im.color;
-            c1.a = 0;
-
-            im.color = c1;
-            im.DOColor(c2, duration);
-        }
+        if (im != null)
+            StaticVariables.FadeIn(im, duration, false);
         Animator anim = t.GetComponent<Animator>();
         if (anim != null){
             anim.enabled = false;
@@ -642,14 +618,8 @@ public class SceneChangerVisuals : MonoBehaviour {
 
     private void FadeOutSelfAndChildren(Transform t, float duration){
         Image im = t.GetComponent<Image>();
-        if (im != null){
-            Color c1 = im.color;
-            Color c2 = im.color;
-            c1.a = 0;
-
-            im.color = c2;
-            im.DOColor(c1, duration);
-        }
+        if (im != null)
+            StaticVariables.FadeOut(im, duration);
         Animator anim = t.GetComponent<Animator>();
         if (anim != null)
             anim.enabled = false;
